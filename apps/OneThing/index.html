@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — OneThing</title>
+  <meta name="description" content="Privacy Policy for OneThing (iOS and Apple Watch)." />
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    h1 { font-size: 2rem; margin: 0 0 0.75rem; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; }
+    p { margin: 0.75rem 0; }
+    ul { margin: 0.75rem 0 0.75rem 1.25rem; }
+    li { margin: 0.4rem 0; }
+    .meta {
+      margin: 0 0 1.5rem;
+      opacity: 0.85;
+    }
+    .meta strong { display: inline-block; margin-right: 0.5rem; }
+    .card {
+      border: 1px solid rgba(127,127,127,0.25);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 1rem 0;
+      background: rgba(127,127,127,0.06);
+    }
+    a { word-break: break-word; }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+
+    <p class="meta"><strong>OneThing</strong><br />
+      <strong>Last updated:</strong> February 2025
+    </p>
+
+    <h2>Overview</h2>
+    <p>OneThing is a daily focus tracker for iOS and Apple Watch. Your privacy is important to us. This policy explains what data the app handles and how it is stored.</p>
+
+    <h2>Data Collection</h2>
+    <div class="card">
+      <p><strong>OneThing does not collect, transmit, or share any personal data.</strong> The app has no servers, no analytics, no third-party SDKs, and no advertising.</p>
+    </div>
+
+    <h2>Data Stored on Your Device</h2>
+    <p>OneThing stores the following data locally on your device using UserDefaults and App Group shared storage:</p>
+    <ul>
+      <li><strong>Daily focus text</strong> — the focus you set each day</li>
+      <li><strong>Focus history</strong> — past focuses with dates, completion status, and optional reflection notes</li>
+      <li><strong>Gamification state</strong> — XP, level, streak count, and streak freeze inventory</li>
+      <li><strong>App preferences</strong> — notification settings, animation intensity, haptics preference</li>
+      <li><strong>Notification schedule</strong> — your chosen morning reminder and evening nudge times</li>
+    </ul>
+    <p>This data never leaves your device unless you explicitly choose to export or share it.</p>
+
+    <h2>Apple Watch</h2>
+    <p>If you use the Apple Watch companion app, your focus state is synced between your iPhone and Apple Watch using Apple's WatchConnectivity framework. This is a direct, local connection between your paired devices — no data passes through external servers.</p>
+
+    <h2>Home Screen Widget</h2>
+    <p>The Home Screen and watch face widgets read your focus state from shared on-device storage (App Group). No network requests are made.</p>
+
+    <h2>iCloud Sync</h2>
+    <p>OneThing includes optional iCloud sync capability using Apple's iCloud key-value storage. When enabled, your focus history and gamification state sync across your devices through your personal iCloud account. This data is governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple's iCloud privacy policy</a>. No data is sent to any other server.</p>
+
+    <h2>Notifications</h2>
+    <p>OneThing can send local notifications (morning reminder and evening nudge). These are scheduled entirely on your device. No push notification service or external server is involved.</p>
+
+    <h2>CSV Export</h2>
+    <p>You can export your focus history as a CSV file. This file is generated locally and shared only through the iOS share sheet at your discretion. OneThing does not upload or transmit this file.</p>
+
+    <h2>Siri &amp; Shortcuts</h2>
+    <p>OneThing supports Siri Shortcuts for setting your focus and marking it complete. Voice processing is handled entirely by Apple's system. OneThing does not access or store any voice data.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>OneThing uses <strong>no</strong> third-party services, SDKs, analytics, crash reporting, or advertising frameworks.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>OneThing does not knowingly collect any information from children. The app stores no personal information and has no user accounts.</p>
+
+    <h2>Data Deletion</h2>
+    <p>All app data can be deleted by removing the app from your device. Since no data is stored on external servers, deletion is immediate and complete.</p>
+
+    <h2>App Store Privacy Labels</h2>
+    <p>In accordance with Apple's App Store requirements, OneThing declares:</p>
+    <ul>
+      <li><strong>Data Not Collected</strong> — OneThing does not collect any data from users</li>
+    </ul>
+
+    <h2>Changes to This Policy</h2>
+    <p>If this policy changes, the updated version will be included with the app and the "Last updated" date above will be revised.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy, please open an issue at:</p>
+    <p>
+      <a href="https://github.com/moonbeamalpha/OneThingPrivacyPolicy/issues" rel="noopener noreferrer">
+        https://github.com/moonbeamalpha/OneThingPrivacyPolicy/issues
+      </a>
+    </p>
+  </main>
+</body>
+</html>

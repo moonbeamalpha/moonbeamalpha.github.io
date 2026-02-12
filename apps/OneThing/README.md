@@ -72,4 +72,4 @@ If this policy changes, the updated version will be included with the app and th
 ## Contact
 
 If you have questions about this privacy policy, please open an issue at:
-[https://github.com/moonbeamalpha/OneThingPrivacyPolicy/issues](https://github.com/moonbeamalpha/OneThingPrivacyPolicy/issues)
+[https://github.com/moonbeamalpha/moonbeamalpha.github.io/issues](https://github.com/moonbeamalpha/moonbeamalpha.github.io/issues)

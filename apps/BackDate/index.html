@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy - BackDate</title>
+  <meta name="description" content="Privacy Policy for BackDate." />
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.75rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1.25rem;
+    }
+
+    p {
+      margin: 0.75rem 0;
+    }
+
+    ul {
+      margin: 0.75rem 0 0.75rem 1.25rem;
+    }
+
+    li {
+      margin: 0.4rem 0;
+    }
+
+    .meta {
+      margin: 0 0 1.5rem;
+      opacity: 0.85;
+    }
+
+    .meta strong {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+
+    a {
+      word-break: break-word;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+
+    <p class="meta">
+      <strong>BackDate</strong><br />
+      <strong>Last updated:</strong> March 2, 2026
+    </p>
+
+    <h2>Overview</h2>
+    <p>BackDate is designed with privacy as a core principle. Your goals and milestones are stored on your device and,
+      optionally, in your own iCloud account. BackDate does not have its own servers, does not collect analytics, and
+      does not share your data with third parties.</p>
+
+    <h2>Information We Collect</h2>
+
+    <h3>Information You Provide</h3>
+    <p>When you use BackDate, you create goals and milestone steps. This includes:</p>
+    <ul>
+      <li>Goal titles and descriptions</li>
+      <li>Target dates and deadlines</li>
+      <li>Step titles and completion status</li>
+      <li>Notes and context you add to steps</li>
+    </ul>
+    <p>This information is stored <strong>locally on your device</strong> using Apple's SwiftData framework.</p>
+
+    <h3>Automatically Collected Information</h3>
+    <p>BackDate stores app preferences in your device's local storage (UserDefaults), including:</p>
+    <ul>
+      <li>App appearance setting (dark, light, or system)</li>
+      <li>Notification preferences (times, lead times, digest day)</li>
+      <li>Text size preference</li>
+      <li>Whether onboarding has been completed</li>
+    </ul>
+    <p>No usage data, crash reports, or analytics are collected or transmitted.</p>
+
+    <h2>How Your Information Is Used</h2>
+    <p>Your data is used solely to provide the features of BackDate:</p>
+    <ul>
+      <li>Displaying your goals and milestone timeline</li>
+      <li>Scheduling local reminder notifications</li>
+      <li>Powering the home screen widget and Apple Watch complication</li>
+      <li>Generating calendar events or .ics export files when you request them</li>
+    </ul>
+
+    <h2>Optional Integrations</h2>
+    <p>All integrations below are <strong>opt-in</strong> and require your explicit permission. You can revoke access at
+      any time in iOS Settings.</p>
+
+    <h3>iCloud Sync</h3>
+    <p>If you enable iCloud Sync in BackDate's settings, your goals and milestones are synced through <strong>your own
+        iCloud account</strong> using Apple's CloudKit framework. This data is governed by <a
+        href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple's iCloud Privacy Policy</a>.
+      BackDate does not have access to your iCloud data - the sync occurs directly between your devices.</p>
+    <p>You can disable iCloud Sync at any time in BackDate's settings, or manage iCloud data in iOS Settings -&gt; Apple
+      ID -&gt; iCloud.</p>
+
+    <h3>Calendar Access</h3>
+    <p>If you use the Calendar Sync feature, BackDate requests access to your Apple Calendar via EventKit. With your
+      permission, it:</p>
+    <ul>
+      <li>Creates and updates all-day calendar events for your milestone steps</li>
+      <li>Reads date changes from those events back into BackDate</li>
+    </ul>
+    <p>BackDate only accesses events it has created (identified by a "Managed by BackDate" note). It does not read or
+      modify other calendar events. Calendar data never leaves your device through BackDate.</p>
+
+    <h3>Notifications</h3>
+    <p>BackDate schedules <strong>local notifications</strong> on your device - no notification server or push token is
+      involved. Notification content (your step titles and dates) is processed entirely on-device. You can disable
+      notifications at any time in iOS Settings -&gt; BackDate.</p>
+
+    <h3>Apple Watch</h3>
+    <p>If you have a paired Apple Watch, BackDate uses Apple's WatchConnectivity framework to send goal data to the
+      watch. This communication happens <strong>directly between your iPhone and Apple Watch</strong> - no server or
+      internet connection is required.</p>
+
+    <h3>Home Screen Widget</h3>
+    <p>The home screen widget displays your active goal's next step using data written to an on-device App Group
+      container shared between the app and the widget. This data never leaves your device.</p>
+
+    <h3>.ics Export</h3>
+    <p>When you export a goal as a calendar file (.ics), BackDate generates the file locally on your device and presents
+      it through iOS's system share sheet. BackDate does not transmit this file anywhere.</p>
+
+    <h2>In-App Purchases</h2>
+    <p>BackDate offers a one-time lifetime unlock purchase. Payments are processed entirely by <strong>Apple's App
+        Store</strong> using the StoreKit framework. BackDate does not have access to your payment information, Apple
+      ID, or billing details. Purchase records are managed by Apple and governed by <a
+        href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple's Privacy Policy</a>.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>BackDate does not integrate any third-party analytics, advertising, crash reporting, or tracking SDKs. No data is
+      shared with or sold to third parties.</p>
+
+    <h2>Data Retention and Deletion</h2>
+    <p>Your data exists on your device (and optionally in your iCloud account). You can delete all BackDate data by:</p>
+    <ul>
+      <li>Deleting individual goals within the app</li>
+      <li>Deleting the BackDate app from your device (this removes all local data)</li>
+      <li>Managing or deleting iCloud data in iOS Settings -&gt; Apple ID -&gt; iCloud -&gt; Manage Storage</li>
+    </ul>
+
+    <h2>Children's Privacy</h2>
+    <p>BackDate does not knowingly collect personal information from children under 13. The app contains no account
+      creation, social features, or data collection mechanisms that would implicate children's privacy regulations.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If this privacy policy changes materially, we will update the "Last updated" date at the top of this page.
+      Continued use of BackDate after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy? Contact us at:</p>
+    <p><strong><a href="mailto:moonbeamalphadev@gmail.com">moonbeamalphadev@gmail.com</a></strong></p>
+    <p>or open an issue at:</p>
+    <p>
+      <a href="https://github.com/moonbeamalpha/moonbeamalpha.github.io/issues" rel="noopener noreferrer">
+        https://github.com/moonbeamalpha/moonbeamalpha.github.io/issues
+      </a>
+    </p>
+  </main>
+</body>
+
+</html>

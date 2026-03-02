@@ -124,3 +124,7 @@ If this privacy policy changes materially, we will update the "Last updated" dat
 Questions about this privacy policy? Contact us at:
 
 **moonbeamalphadev@gmail.com**
+
+or open an issue at:
+
+[https://github.com/moonbeamalpha/moonbeamalpha.github.io/issues](https://github.com/moonbeamalpha/moonbeamalpha.github.io/issues)

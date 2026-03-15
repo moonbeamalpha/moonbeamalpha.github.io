@@ -332,7 +332,6 @@
       align-items: center;
       padding: 120px 24px 80px;
       position: relative;
-      overflow: hidden;
       background: var(--gradient-hero-bg);
     }
     .hero-bg {
@@ -436,6 +435,8 @@
       gap: 16px;
       perspective: 1200px;
       padding: 40px 0;
+      min-width: 0;
+      overflow: hidden;
     }
     .phone-wrap {
       position: relative;
@@ -1075,7 +1076,7 @@
        ══════════════════════════════════════════════ */
     @media (max-width: 768px) {
       .section-hero { min-height: auto; padding: 100px 20px 60px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 24px; overflow: hidden; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
       .hero-text { max-width: 100%; text-align: center; margin: 0 auto; }
       .hero-app-title { justify-content: center; gap: 14px; margin-bottom: 0; }
       .hero-app-icon { width: 52px; height: 52px; border-radius: 14px; }

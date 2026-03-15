@@ -14,6 +14,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
+  <link rel="preload" as="image" href="images/cap-exam-iq.webp" fetchpriority="high">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Azure Mastery">
@@ -122,7 +124,7 @@
        RESET & BASE
        ══════════════════════════════════════════════ */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { /* smooth scroll handled by GSAP ScrollToPlugin */ }
     body {
       font-family: 'DM Sans', sans-serif;
       font-size: 15px;
@@ -379,6 +381,25 @@
       max-width: 440px;
       margin-bottom: 32px;
     }
+    .hero-exam-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .hero-exam-tag {
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--tag-color);
+      background: rgba(128,128,128,0.1);
+      border: 1px solid rgba(128,128,128,0.2);
+    }
+    .hero-exam-tag--blue  { --tag-color: var(--azure-blue);   background: rgba(43,136,216,0.1);  border-color: rgba(43,136,216,0.25); }
+    .hero-exam-tag--cyan  { --tag-color: var(--azure-cyan);   background: rgba(80,230,255,0.1);  border-color: rgba(80,230,255,0.25); }
+    .hero-exam-tag--purple{ --tag-color: var(--azure-purple); background: rgba(149,120,224,0.1); border-color: rgba(149,120,224,0.25); }
     .hero-ctas {
       display: flex;
       align-items: center;
@@ -433,7 +454,6 @@
       pointer-events: none;
       z-index: -1;
     }
-    .phone-wrap:hover { transform: translateY(-8px) !important; }
     .phone-frame {
       width: 280px;
       height: 580px;
@@ -442,11 +462,22 @@
       border: 1.5px solid rgba(255,255,255,0.14);
       position: relative;
       overflow: hidden;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
       box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.18),
         inset 0 -1px 0 rgba(0,0,0,0.5),
         inset 1px 0 rgba(255,255,255,0.06),
         inset -1px 0 rgba(255,255,255,0.06);
+    }
+    /* Hover: rotate phone face toward viewer */
+    .phone-angle-left:hover .phone-frame {
+      transform: rotateY(-14deg) rotateX(2deg) scale(1.03);
+    }
+    .phone-angle-center:hover .phone-frame {
+      transform: rotateX(3deg) scale(1.04);
+    }
+    .phone-angle-right:hover .phone-frame {
+      transform: rotateY(14deg) rotateX(2deg) scale(1.03);
     }
     .phone-frame::before {
       content: '';
@@ -465,6 +496,13 @@
       overflow: hidden;
       background-size: cover;
       background-position: center top;
+    }
+    .phone-screen-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
     }
     .phone-screen::before {
       content: '';
@@ -525,14 +563,7 @@
       transform: perspective(1000px) rotateY(-12deg) rotateX(-4deg);
     }
 
-    /* Float animation */
-    @keyframes phone-float {
-      0%, 100% { transform: translateY(0px); }
-      50%      { transform: translateY(-10px); }
-    }
-    .phone-float { animation: phone-float 4s ease-in-out infinite; }
-    .phone-float:nth-child(2) { animation-delay: -1.3s; }
-    .phone-float:nth-child(3) { animation-delay: -2.6s; }
+    /* Float animation handled by GSAP to avoid transform conflicts */
 
     /* ══════════════════════════════════════════════
        FEATURES — BENTO GRID
@@ -603,6 +634,70 @@
       left: 0;
       color: var(--azure-cyan);
       font-weight: 700;
+    }
+
+    /* ══════════════════════════════════════════════
+       HOW EXAM IQ WORKS
+       ══════════════════════════════════════════════ */
+    .section-how-it-works { padding: 128px 24px; background: var(--bg-deep); }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 960px;
+      margin: 0 auto;
+      counter-reset: step;
+    }
+    .how-step {
+      text-align: center;
+      position: relative;
+    }
+    .how-step-number {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 1;
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0.25;
+      margin-bottom: 16px;
+    }
+    .how-step-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      background: rgba(80,230,255,0.08);
+      border: 1px solid rgba(80,230,255,0.15);
+      color: var(--azure-cyan);
+    }
+    .how-step h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .how-step p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    /* Connector lines between steps */
+    .how-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 80px;
+      right: -20px;
+      width: calc(100% - 56px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(80,230,255,0.2), transparent);
+      transform: translateX(50%);
     }
 
     /* ══════════════════════════════════════════════
@@ -896,6 +991,11 @@
       background: radial-gradient(ellipse, rgba(43,136,216,0.15) 0%, transparent 70%);
       pointer-events: none;
     }
+    .app-store-badge {
+      display: inline-block;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .app-store-badge:hover { opacity: 0.85; transform: scale(1.03); }
     .exam-tags {
       display: flex;
       gap: 10px;
@@ -965,7 +1065,7 @@
        ══════════════════════════════════════════════ */
     @media (prefers-reduced-motion: reduce) {
       .fade-up          { opacity: 1 !important; transform: none !important; }
-      .phone-float      { animation: none !important; }
+      /* phone-float removed — GSAP handles float */
       .screenshots-strip { transform: none !important; }
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
@@ -1003,6 +1103,9 @@
       .showcase-device .phone-wrap { transform: scale(0.85); }
       .nav-links .hide-mobile { display: none; }
       .section-showcase { padding: 80px 24px; }
+      .section-how-it-works { padding: 80px 24px; }
+      .how-steps { grid-template-columns: 1fr; gap: 48px; max-width: 400px; }
+      .how-step:not(:last-child)::after { display: none; }
       .section-features { padding: 80px 24px; }
       .section-screenshots { padding: 80px 0; }
       .section-final-cta { padding: 80px 24px; }
@@ -1035,7 +1138,7 @@
   <nav class="site-nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#" class="nav-brand">
-        <img src="images/app-icon.jpg" alt="Azure Mastery app icon" width="32" height="32">
+        <img src="images/app-icon.webp" alt="Azure Mastery app icon" width="32" height="32">
         <span>Azure Mastery</span>
       </a>
       <ul class="nav-links">
@@ -1053,7 +1156,7 @@
     <div class="hero-inner">
 
       <div class="hero-app-title">
-        <img src="images/app-icon.jpg" alt="Azure Mastery" class="hero-app-icon" width="80" height="80">
+        <img src="images/app-icon.webp" alt="Azure Mastery" class="hero-app-icon" width="80" height="80">
         <span class="hero-app-name">Azure Mastery</span>
       </div>
 
@@ -1074,6 +1177,11 @@
           decay alerts — all running on-device. The smarter way to prepare for
           Azure certification.
         </p>
+        <div class="hero-exam-tags">
+          <span class="hero-exam-tag hero-exam-tag--blue">AZ-104</span>
+          <span class="hero-exam-tag hero-exam-tag--cyan">AZ-900</span>
+          <span class="hero-exam-tag hero-exam-tag--purple">AZ-305</span>
+        </div>
         <div class="hero-ctas">
           <a href="#download" class="btn-primary" aria-label="Download Azure Mastery on the App Store">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
@@ -1089,17 +1197,17 @@
       </div>
 
       <div class="hero-devices" aria-hidden="true">
-        <div class="phone-wrap phone-float phone-angle-left" id="device-left">
+        <div class="phone-wrap phone-angle-left" id="device-left">
           <div class="phone-frame">
             <div class="phone-screen" style="background-image: url('images/cap-home-dashboard.webp');"></div>
           </div>
         </div>
-        <div class="phone-wrap phone-float phone-angle-center" id="device-center">
+        <div class="phone-wrap phone-angle-center" id="device-center">
           <div class="phone-frame">
             <div class="phone-screen" style="background-image: url('images/cap-exam-iq.webp');"></div>
           </div>
         </div>
-        <div class="phone-wrap phone-float phone-angle-right" id="device-right">
+        <div class="phone-wrap phone-angle-right" id="device-right">
           <div class="phone-frame">
             <div class="phone-screen" style="background-image: url('images/cap-question-types.webp');"></div>
           </div>
@@ -1127,8 +1235,8 @@
       </div>
       <div class="metric-divider" aria-hidden="true"></div>
       <div class="metric-item fade-up">
-        <span class="metric-number display-medium" style="color:var(--azure-purple);">0</span>
-        <span class="metric-label">Third-Party SDKs</span>
+        <span class="metric-number display-medium" style="color:var(--azure-purple);">100</span>
+        <span class="metric-label">% Offline</span>
       </div>
     </div>
   </section>
@@ -1263,8 +1371,43 @@
     </div>
   </section>
 
+  <!-- ═══════════ HOW EXAM IQ WORKS ═══════════ -->
+  <section class="section-how-it-works" aria-label="How Exam IQ works">
+    <div class="section-inner" style="text-align:center;">
+      <p class="label-eyebrow fade-up" style="margin-bottom:12px;color:var(--azure-cyan);">How It Works</p>
+      <h2 class="display-small fade-up" style="margin-bottom:56px;">Three steps to a predicted score.</h2>
+
+      <div class="how-steps">
+        <div class="how-step fade-up">
+          <div class="how-step-number">01</div>
+          <div class="how-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Answer questions</h3>
+          <p>Study from 740+ questions across AZ-104, AZ-900, and AZ-305. Each response feeds the ML model.</p>
+        </div>
+        <div class="how-step fade-up" style="--delay:0.1s">
+          <div class="how-step-number">02</div>
+          <div class="how-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>CoreML analyses on-device</h3>
+          <p>Item Response Theory scores each answer by difficulty, discrimination, and guessing. Bayesian inference updates your ability estimate in real time.</p>
+        </div>
+        <div class="how-step fade-up" style="--delay:0.2s">
+          <div class="how-step-number">03</div>
+          <div class="how-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Get your predicted score</h3>
+          <p>See your predicted exam score with confidence intervals, plus AI-driven recommendations on exactly what to study next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════ SHOWCASE 2: QUESTION TYPES ═══════════ -->
-  <section class="section-showcase">
+  <section class="section-showcase" style="background:var(--bg-deep)">
     <div class="showcase-inner showcase-inner--device-right">
       <div class="showcase-device" aria-hidden="true">
         <div class="phone-wrap phone-angle-feature-right">
@@ -1322,7 +1465,7 @@
   </section>
 
   <!-- ═══════════ SHOWCASE 4: KNOWLEDGE DECAY ═══════════ -->
-  <section class="section-showcase">
+  <section class="section-showcase" style="background:var(--bg-deep)">
     <div class="showcase-inner showcase-inner--device-right">
       <div class="showcase-device" aria-hidden="true">
         <div class="phone-wrap phone-angle-feature-right">
@@ -1387,42 +1530,42 @@
     <div class="screenshots-strip" role="region" aria-label="Scrolling screenshot gallery">
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-home-dashboard.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-home-dashboard.webp" alt="Today dashboard showing study plan, readiness score, and streak" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-exam-iq.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-exam-iq.webp" alt="Exam IQ insights with predicted score and confidence range" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-question-types.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-question-types.webp" alt="Drag-and-drop question with answer explanation" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-exam-results.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-exam-results.webp" alt="Exam simulator results with domain breakdown" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-study-plan.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-study-plan.webp" alt="Study tab with domain list and progress" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-knowledge-decay.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-knowledge-decay.webp" alt="Knowledge decay alerts showing fading topics" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-goals-profile.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-goals-profile.webp" alt="My Goals with readiness gauge, XP, and certification paths" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
       <div class="screenshot-frame">
         <div class="phone-frame">
-          <div class="phone-screen" style="background-image: url('images/cap-home-dashboard-2.webp');"></div>
+          <div class="phone-screen"><img src="images/cap-home-dashboard-2.webp" alt="Home dashboard alternative view" loading="lazy" class="phone-screen-img"></div>
         </div>
       </div>
     </div>
@@ -1538,9 +1681,19 @@
         Download Azure Mastery free on iPhone and iPad. No credit card required.
         Upgrade when you're ready for the full question bank.
       </p>
-      <a href="#" class="btn-primary btn-primary--large fade-up" aria-label="Download Azure Mastery on the App Store">
-        <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
-        Download on the App Store
+      <a href="#" class="app-store-badge fade-up" aria-label="Download Azure Mastery on the App Store">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="180" height="60" role="img" aria-label="Download on the App Store">
+          <title>Download on the App Store</title>
+          <rect width="120" height="40" rx="6" fill="#000"/>
+          <rect x="0.5" y="0.5" width="119" height="39" rx="5.5" stroke="#A6A6A6" stroke-width="1" fill="none"/>
+          <g fill="#fff">
+            <path d="M24.77 20.3a4.95 4.95 0 012.36-4.15 5.07 5.07 0 00-3.99-2.16c-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.62-.96a5.32 5.32 0 00-4.48 2.73c-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.01 2.81 3.44 2.76 1.39-.06 1.91-.88 3.59-.88 1.67 0 2.15.88 3.59.85 1.49-.03 2.43-1.33 3.33-2.67a11.04 11.04 0 001.51-3.09 4.77 4.77 0 01-2.92-4.41zM22.04 12.21a4.87 4.87 0 001.11-3.49 4.96 4.96 0 00-3.21 1.66 4.63 4.63 0 00-1.14 3.36 4.09 4.09 0 003.24-1.53z"/>
+            <g style="font-family:Helvetica,Arial,sans-serif">
+              <text x="36" y="14" font-size="5.2" fill="#fff" letter-spacing="0.04em">Download on the</text>
+              <text x="36" y="27" font-size="12" fill="#fff" font-weight="bold" letter-spacing="-0.02em">App Store</text>
+            </g>
+          </g>
+        </svg>
       </a>
       <div class="exam-tags fade-up">
         <span class="exam-tag">AZ-104 Administrator</span>
@@ -1568,12 +1721,26 @@
 
   <!-- ═══════════ ANIMATIONS ═══════════ -->
   <script>
-    // Disable browser scroll restoration so page always starts at top
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    window.scrollTo(0, 0);
+    // Reset scroll on fresh navigations only (preserve BFCache position on Back)
+    (function() {
+      try {
+        var navEntry = performance.getEntriesByType('navigation')[0];
+        if (navEntry && navEntry.type !== 'back_forward') {
+          if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+          window.scrollTo(0, 0);
+        }
+      } catch(e) { window.scrollTo(0, 0); }
+    })();
 
     window.addEventListener('load', function() {
-      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        // Fallback: reveal all hidden elements if GSAP failed to load
+        document.querySelectorAll('.fade-up, .hero-app-title, .hero-text, .showcase-text, .showcase-device').forEach(function(el) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        });
+        return;
+      }
       gsap.registerPlugin(ScrollTrigger);
 
       var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1614,6 +1781,7 @@
           '-=0.75'
         );
       })();
+
 
       // ── Fade-up elements ──
       document.querySelectorAll('.fade-up').forEach(function(el) {
@@ -1751,8 +1919,8 @@
           end: 'bottom 20%',
           onEnter: startAutoplay,
           onEnterBack: startAutoplay,
-          onLeave: function() { clearInterval(interval); },
-          onLeaveBack: function() { clearInterval(interval); }
+          onLeave: function() { clearInterval(interval); goTo(0); },
+          onLeaveBack: function() { clearInterval(interval); goTo(0); }
         });
       })();
     });

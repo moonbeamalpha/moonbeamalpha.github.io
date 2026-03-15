@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Mastery — Your Azure Certification Coach</title>
+  <meta name="description" content="AI-powered Azure certification exam prep. Adaptive questions, ML score prediction, knowledge decay alerts. AZ-104, AZ-900, AZ-305. 100% offline, no tracking.">
+  <meta name="theme-color" content="#060c18">
+  <meta property="og:title" content="Azure Mastery — Your Azure Certification Coach">
+  <meta property="og:description" content="AI-powered Azure certification exam prep with adaptive study plans, ML score prediction, and real exam simulation.">
+  <meta property="og:image" content="images/01-exam-iq.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    :root {
+      --bg-deep: #060c18;
+      --bg-card: #0d1526;
+      --bg-card-hover: #111d33;
+      --text: #f5f5f7;
+      --text-muted: #8e8e93;
+      --azure-blue: #0078d4;
+      --azure-cyan: #00d4ff;
+      --azure-purple: #7b68ee;
+      --success-green: #30d158;
+      --glow-blue: rgba(0, 120, 212, 0.35);
+      --glow-cyan: rgba(0, 212, 255, 0.25);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── Nav ──────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(6, 12, 24, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
+
+    .nav-brand span {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      background: var(--azure-blue);
+      color: white !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 980px;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: #1a8aed;
+      transform: translateY(-1px);
+    }
+
+    /* ── Hero ─────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140%;
+      height: 70%;
+      background: radial-gradient(ellipse at center, var(--glow-cyan) 0%, var(--glow-blue) 30%, transparent 70%);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .hero-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 60px rgba(0, 212, 255, 0.3), 0 0 120px rgba(0, 120, 212, 0.15);
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--azure-cyan), var(--azure-blue), var(--azure-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--azure-blue);
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 980px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #1a8aed;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 120, 212, 0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      padding: 0.9rem 2rem;
+      border-radius: 980px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success-green);
+    }
+
+    .badge-dot.cyan { background: var(--azure-cyan); }
+    .badge-dot.purple { background: var(--azure-purple); }
+
+    /* ── Phone showcase ──────────────── */
+    .hero-phone {
+      margin-top: 4rem;
+      position: relative;
+      max-width: 320px;
+    }
+
+    .hero-phone img {
+      width: 100%;
+      border-radius: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-phone::after {
+      content: '';
+      position: absolute;
+      inset: -10%;
+      background: radial-gradient(ellipse at center, var(--glow-cyan) 0%, transparent 70%);
+      opacity: 0.3;
+      z-index: 0;
+      filter: blur(40px);
+    }
+
+    /* ── Sections ────────────────────── */
+    section {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--azure-cyan);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    /* ── Feature rows ────────────────── */
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .feature-row.reverse .feature-text { order: 2; }
+    .feature-row.reverse .feature-visual { order: 1; }
+
+    .feature-text { max-width: 480px; }
+
+    .feature-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .feature-visual img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-visual::before {
+      content: '';
+      position: absolute;
+      inset: 5%;
+      background: radial-gradient(ellipse at center, var(--glow-blue) 0%, transparent 70%);
+      opacity: 0.35;
+      z-index: 0;
+      filter: blur(50px);
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .feature-list li {
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .feature-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--azure-cyan);
+      margin-top: 0.55rem;
+    }
+
+    /* ── Stats bar ───────────────────── */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--azure-cyan), var(--azure-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 0.25rem;
+    }
+
+    /* ── Divider ─────────────────────── */
+    .divider {
+      max-width: 1100px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ── Feature grid ────────────────── */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 3rem auto 0;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+    .feature-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(0, 212, 255, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .card-icon {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── Privacy banner ──────────────── */
+    .privacy-section {
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .privacy-pillars {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+
+    .pillar {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      max-width: 280px;
+    }
+
+    .pillar-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .pillar-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .pillar-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ── CTA section ─────────────────── */
+    .cta-section {
+      text-align: center;
+      padding: 6rem 2rem 8rem;
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140%;
+      height: 60%;
+      background: radial-gradient(ellipse at center bottom, var(--glow-blue) 0%, transparent 70%);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .cta-section .section-title { position: relative; }
+    .cta-section .section-desc {
+      margin: 0 auto 2.5rem;
+      position: relative;
+    }
+
+    .cta-section .btn-primary { position: relative; }
+
+    .exam-tags {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      position: relative;
+    }
+
+    .exam-tag {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 980px;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* ── Footer ──────────────────────── */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-legal {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ── Responsive ──────────────────── */
+    @media (max-width: 900px) {
+      .feature-row {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+      .feature-row.reverse .feature-text,
+      .feature-row.reverse .feature-visual { order: unset; }
+      .feature-text { max-width: 100%; margin: 0 auto; }
+      .feature-list { display: inline-block; text-align: left; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .feature-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .nav-links .hide-mobile { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 7rem 1.5rem 3rem; }
+      .hero-phone { max-width: 260px; }
+      .feature-row { padding: 3rem 1.5rem; }
+      .stats-bar { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .privacy-pillars { flex-direction: column; align-items: center; }
+      .pillar { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#" class="nav-brand">
+      <img src="images/app-icon.jpg" alt="Azure Mastery" width="36" height="36">
+      <span>Azure Mastery</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features" class="hide-mobile">Features</a></li>
+      <li><a href="#intelligence" class="hide-mobile">Intelligence</a></li>
+      <li><a href="#privacy" class="hide-mobile">Privacy</a></li>
+      <li><a href="#download" class="nav-cta">Download</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img class="hero-icon" src="images/app-icon.jpg" alt="Azure Mastery" width="96" height="96">
+    <h1>Know When<br>You're <span class="highlight">Ready</span></h1>
+    <p class="subtitle">AI-powered exam readiness for Azure certifications. Adaptive practice, ML score prediction, and knowledge decay alerts — all running on-device.</p>
+    <div class="hero-cta-group">
+      <a href="#download" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
+        Download on the App Store
+      </a>
+      <a href="#features" class="btn-secondary">See features</a>
+    </div>
+    <div class="hero-badges">
+      <span class="badge"><span class="badge-dot"></span>100% Offline</span>
+      <span class="badge"><span class="badge-dot cyan"></span>No Tracking</span>
+      <span class="badge"><span class="badge-dot purple"></span>On-Device ML</span>
+    </div>
+    <div class="hero-phone">
+      <img src="images/01-exam-iq.png" alt="Azure Mastery dashboard showing readiness score, streak, and daily challenge" width="320">
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-value">200+</div>
+      <div class="stat-label">Practice Questions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">9</div>
+      <div class="stat-label">Question Types</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">3</div>
+      <div class="stat-label">Certifications</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">0</div>
+      <div class="stat-label">Third-Party SDKs</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Feature 1: Score Prediction -->
+  <div class="feature-row" id="intelligence">
+    <div class="feature-text">
+      <p class="section-label">On-Device Intelligence</p>
+      <h2 class="section-title">Predict Your Exam Score</h2>
+      <p class="section-desc">ML-powered forecast shows your likely result before test day. No data leaves your device — ever.</p>
+      <ul class="feature-list">
+        <li>Real-time Exam IQ readiness score using Item Response Theory</li>
+        <li>Confidence range so you know when to book your exam</li>
+        <li>Personalized focus recommendations based on your weaknesses</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+      <img src="images/02-predict-score.png" alt="ML-powered exam score prediction showing 617" width="300">
+    </div>
+  </div>
+
+  <!-- Feature 2: Questions -->
+  <div class="feature-row reverse" id="features">
+    <div class="feature-text">
+      <p class="section-label">Real Exam Experience</p>
+      <h2 class="section-title">200+ Real Exam Questions</h2>
+      <p class="section-desc">Nine question types that mirror the actual Azure exam — including drag-and-drop, hot area, and case study.</p>
+      <ul class="feature-list">
+        <li>Single-select, multi-select, drag-and-drop, and more</li>
+        <li>Detailed explanations with key takeaways for every question</li>
+        <li>Flashcard mode for rapid-fire review sessions</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+      <img src="images/03-question-types.png" alt="Drag-and-drop question about Azure Application Gateway" width="300">
+    </div>
+  </div>
+
+  <!-- Feature 3: Exam Simulator -->
+  <div class="feature-row">
+    <div class="feature-text">
+      <p class="section-label">Full Exam Simulation</p>
+      <h2 class="section-title">Simulate the Real Exam</h2>
+      <p class="section-desc">Full-length timed tests with domain breakdowns and Live Activities on your Lock Screen.</p>
+      <ul class="feature-list">
+        <li>Timed exam environment matching the real test experience</li>
+        <li>Domain-by-domain performance breakdown</li>
+        <li>Review mistakes with one tap after each attempt</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+      <img src="images/04-exam-simulator.png" alt="Exam simulator results with Live Activities on Lock Screen" width="300">
+    </div>
+  </div>
+
+  <!-- Feature 4: Study Plan -->
+  <div class="feature-row reverse">
+    <div class="feature-text">
+      <p class="section-label">Adaptive Study Engine</p>
+      <h2 class="section-title">AI Builds Your Study Plan</h2>
+      <p class="section-desc">Personalized daily schedule optimized for the fastest score gain. Study the right topics, in the right order.</p>
+      <ul class="feature-list">
+        <li>Daily sessions built around your weak areas</li>
+        <li>Weekly calendar with balanced topic rotation</li>
+        <li>Recover missed questions before mistakes stick</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+      <img src="images/05-study-plan.png" alt="AI-generated personalized study plan with daily sessions" width="300">
+    </div>
+  </div>
+
+  <!-- Feature 5: Knowledge Decay -->
+  <div class="feature-row">
+    <div class="feature-text">
+      <p class="section-label">Spaced Repetition</p>
+      <h2 class="section-title">Never Forget What You Learn</h2>
+      <p class="section-desc">Knowledge decay alerts catch fading concepts before exam day. Deep coaching insights show exactly where to focus.</p>
+      <ul class="feature-list">
+        <li>Flags topics fading from memory based on review intervals</li>
+        <li>Weekly study volume, best study day, and progress insights</li>
+        <li>Critical risk alerts for topics that need immediate review</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+      <img src="images/06-knowledge-decay.png" alt="Knowledge decay detection and deep coaching insights" width="300">
+    </div>
+  </div>
+
+  <!-- Feature 6: Cert Paths -->
+  <div class="feature-row reverse">
+    <div class="feature-text">
+      <p class="section-label">Multi-Certification</p>
+      <h2 class="section-title">One App. Three Certifications.</h2>
+      <p class="section-desc">AZ-104, AZ-900, AZ-305 — track your path from Fundamentals to Solutions Architect with goal-based progression.</p>
+      <ul class="feature-list">
+        <li>Certification path tracking from beginner to expert</li>
+        <li>Readiness gauge, XP, badges, and streaks</li>
+        <li>Set target exam dates with countdown notifications</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+      <img src="images/07-cert-paths.png" alt="Certification path tracking with readiness gauge and badges" width="300">
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- More features grid -->
+  <section style="max-width: 1100px; margin: 0 auto;">
+    <div style="text-align: center;">
+      <p class="section-label">Everything You Need</p>
+      <h2 class="section-title">Built for Serious Prep</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="card-icon">&#x1F4F1;</span>
+        <h3 class="card-title">100% Offline</h3>
+        <p class="card-desc">Study on the train, in the cloud, or off the grid. No internet connection required.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-icon">&#x231A;</span>
+        <h3 class="card-title">Apple Watch</h3>
+        <p class="card-desc">Glance at your readiness score, streak, and daily progress right from your wrist.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-icon">&#x1F4CA;</span>
+        <h3 class="card-title">Home Screen Widgets</h3>
+        <p class="card-desc">Stay motivated with at-a-glance widgets showing streaks, XP, and study goals.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-icon">&#x2601;&#xFE0F;</span>
+        <h3 class="card-title">iCloud Sync</h3>
+        <p class="card-desc">Optionally sync progress across all your Apple devices through your private iCloud account.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-icon">&#x1F3AF;</span>
+        <h3 class="card-title">Daily Challenges</h3>
+        <p class="card-desc">Quick daily sessions to maintain momentum and protect your study streak.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-icon">&#x1F916;</span>
+        <h3 class="card-title">On-Device AI Coach</h3>
+        <p class="card-desc">Brief coaching explanations powered by Apple Intelligence. Completely on-device.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" style="margin-top: 5rem;">
+
+  <!-- Privacy -->
+  <section class="privacy-section" id="privacy">
+    <p class="section-label">Privacy First</p>
+    <h2 class="section-title">Your Data Stays Yours</h2>
+    <p class="section-desc" style="margin: 0 auto;">Zero third-party SDKs. No analytics. No ads. No tracking. Everything runs on your device.</p>
+    <div class="privacy-pillars">
+      <div class="pillar">
+        <span class="pillar-icon">&#x1F6E1;&#xFE0F;</span>
+        <h3 class="pillar-title">No Data Collected</h3>
+        <p class="pillar-desc">We don't collect personal info, device IDs, or usage analytics.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">&#x1F512;</span>
+        <h3 class="pillar-title">On-Device Only</h3>
+        <p class="pillar-desc">All study data, ML models, and preferences stay on your device.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">&#x1F6AB;</span>
+        <h3 class="pillar-title">No Tracking</h3>
+        <p class="pillar-desc">No advertising frameworks, no IDFA, no third-party libraries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offline / Multiplatform visual -->
+  <div class="feature-row" style="padding-bottom: 2rem;">
+    <div class="feature-text">
+      <p class="section-label">Study Anywhere</p>
+      <h2 class="section-title">Available Offline. Anytime, Anywhere.</h2>
+      <p class="section-desc">iPhone, iPad, Apple Watch, widgets — your study companion is always with you, no internet required.</p>
+    </div>
+    <div class="feature-visual">
+      <img src="images/08-offline-multiplatform.png" alt="Azure Mastery on iPhone with Apple Watch companion and widgets" width="300">
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CTA -->
+  <section class="cta-section" id="download">
+    <h2 class="section-title">Start Studying Today</h2>
+    <p class="section-desc">Free to start. Upgrade for full access to all questions, exams, and AI features.</p>
+    <a href="#" class="btn-primary">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
+      Download on the App Store
+    </a>
+    <div class="exam-tags">
+      <span class="exam-tag">AZ-104</span>
+      <span class="exam-tag">AZ-900</span>
+      <span class="exam-tag">AZ-305</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="./">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="mailto:support@moonbeamalpha.atlassian.net">Contact</a>
+    </div>
+    <p class="footer-legal">Azure Mastery is an independent product and is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Microsoft, Azure, and related certification names are trademarks of Microsoft Corporation.</p>
+  </footer>
+
+</body>
+</html>

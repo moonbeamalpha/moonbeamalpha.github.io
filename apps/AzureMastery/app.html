@@ -1073,6 +1073,10 @@
     /* ══════════════════════════════════════════════
        RESPONSIVE
        ══════════════════════════════════════════════ */
+    @media (min-width: 769px) and (max-width: 1099px) {
+      .phone-angle-left, .phone-angle-right { display: none; }
+      .hero-devices { gap: 0; }
+    }
     @media (max-width: 768px) {
       .section-hero { min-height: auto; padding: 100px 20px 60px; }
       .hero-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -1765,21 +1769,26 @@
           { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' },
           '-=0.3'
         );
-        tl.fromTo('#device-left',
-          { opacity: 0, y: 80, rotateY: 35, rotateX: -10 },
-          { opacity: 0.85, y: 0, rotateY: 22, rotateX: -5, duration: 0.9, ease: 'power3.out' },
-          '-=0.4'
-        );
+        var showSidePhones = window.innerWidth >= 1100 || window.innerWidth <= 768;
+        if (showSidePhones) {
+          tl.fromTo('#device-left',
+            { opacity: 0, y: 80, rotateY: 35, rotateX: -10 },
+            { opacity: 0.85, y: 0, rotateY: 22, rotateX: -5, duration: 0.9, ease: 'power3.out' },
+            '-=0.4'
+          );
+        }
         tl.fromTo('#device-center',
           { opacity: 0, y: 100, rotateY: 0, scale: 0.9 },
           { opacity: 1, y: -24, rotateY: 0, rotateX: -3, scale: 1.0, duration: 1.0, ease: 'back.out(1.3)' },
-          '-=0.75'
+          showSidePhones ? '-=0.75' : '-=0.4'
         );
-        tl.fromTo('#device-right',
-          { opacity: 0, y: 80, rotateY: -35, rotateX: -10 },
-          { opacity: 0.85, y: 0, rotateY: -22, rotateX: -5, duration: 0.9, ease: 'power3.out' },
-          '-=0.75'
-        );
+        if (showSidePhones) {
+          tl.fromTo('#device-right',
+            { opacity: 0, y: 80, rotateY: -35, rotateX: -10 },
+            { opacity: 0.85, y: 0, rotateY: -22, rotateX: -5, duration: 0.9, ease: 'power3.out' },
+            '-=0.75'
+          );
+        }
       })();
 
 
@@ -1862,15 +1871,18 @@
 
       // ── Hero depth tilt ──
       if (window.innerWidth >= 768) {
+        var tiltSidePhones = window.innerWidth >= 1100;
         ScrollTrigger.create({
           trigger: '.section-hero',
           start: 'top top', end: 'bottom top',
           scrub: true,
           onUpdate: function(self) {
             var p = self.progress;
-            gsap.set('#device-left',   { rotateY: 22 + p * 12, opacity: 0.85 - p * 0.4 });
+            if (tiltSidePhones) {
+              gsap.set('#device-left',   { rotateY: 22 + p * 12, opacity: 0.85 - p * 0.4 });
+              gsap.set('#device-right',  { rotateY: -22 - p * 12, opacity: 0.85 - p * 0.4 });
+            }
             gsap.set('#device-center', { rotateX: -3 - p * 6, y: -24 - p * 30 });
-            gsap.set('#device-right',  { rotateY: -22 - p * 12, opacity: 0.85 - p * 0.4 });
           }
         });
       }

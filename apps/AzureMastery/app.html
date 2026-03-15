@@ -974,17 +974,23 @@
        RESPONSIVE
        ══════════════════════════════════════════════ */
     @media (max-width: 768px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .section-hero { min-height: auto; padding: 100px 20px 60px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; overflow: hidden; }
       .hero-text { max-width: 100%; text-align: center; margin: 0 auto; }
-      .hero-app-title { justify-content: center; }
+      .hero-app-title { justify-content: center; gap: 14px; margin-bottom: 0; }
+      .hero-app-icon { width: 52px; height: 52px; border-radius: 14px; }
+      .hero-app-name { font-size: clamp(28px, 7vw, 38px); }
       .hero-subline { margin-left: auto; margin-right: auto; }
-      .hero-ctas { justify-content: center; }
-      .hero-badges { justify-content: center; }
+      .hero-ctas { justify-content: center; flex-wrap: wrap; }
+      .hero-badges { justify-content: center; flex-wrap: wrap; }
       .hero-devices {
-        order: -1;
-        transform: scale(0.65);
+        order: 1;
+        transform: scale(0.55);
         transform-origin: top center;
-        margin-bottom: -100px;
+        margin-bottom: -160px;
+        margin-top: -20px;
+        min-width: 0;
+        justify-self: center;
       }
       .bento-grid { grid-template-columns: 1fr 1fr; }
       .bento-wide { grid-column: span 2; }
@@ -1012,7 +1018,7 @@
       .metrics-inner { gap: 20px; }
       .bento-grid { grid-template-columns: 1fr; }
       .bento-wide { grid-column: span 1; }
-      .hero-devices { transform: scale(0.5); margin-bottom: -140px; }
+      .hero-devices { transform: scale(0.45); margin-bottom: -180px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .ipad-frame { width: 280px; height: 388px; border-radius: 20px; }
       .ipad-screen { border-radius: 16px; }
@@ -1052,7 +1058,7 @@
       </div>
 
       <div class="hero-text">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;margin-top:0;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;margin-top:0;flex-wrap:wrap;justify-content:center;">
           <p class="label-eyebrow" style="margin:0;">Microsoft Azure Certification</p>
           <span class="badge-exam-iq">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9.937 3.823l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29zM18.06 6.06l-.72 1.58-1.58.72 1.58.72.72 1.58.72-1.58 1.58-.72-1.58-.72-.72-1.58zM9.937 13.49l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29"/></svg>

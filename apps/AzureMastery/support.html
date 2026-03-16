@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Azure Mastery</title>
+  <meta name="description" content="Get help with Azure Mastery — your AI-powered Azure certification exam prep app.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --border: #d2d2d7;
+      --accent: #0071e3;
+      --section-bg: #f5f5f7;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1c1e;
+        --text: #f5f5f7;
+        --muted: #98989d;
+        --border: #38383a;
+        --accent: #2997ff;
+        --section-bg: #2c2c2e;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .intro {
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Action cards ─────────────────────────────── */
+    .support-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 2.5rem;
+    }
+
+    .support-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--section-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .support-card:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .support-card:hover {
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .support-card:active {
+      transform: translateY(0);
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+    }
+
+    .card-icon--portal {
+      background: rgba(0, 113, 227, 0.10);
+    }
+
+    .card-icon--email {
+      background: rgba(52, 199, 89, 0.10);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .card-icon--portal { background: rgba(41, 151, 255, 0.15); }
+      .card-icon--email { background: rgba(48, 209, 88, 0.15); }
+    }
+
+    .card-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card-arrow {
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      color: var(--muted);
+      transition: transform 0.15s ease;
+    }
+
+    .support-card:hover .card-arrow {
+      transform: translateX(3px);
+    }
+
+    /* ── Tips section ──────────────────────────────── */
+    .tips {
+      background: var(--section-bg);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tips h2 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .tips ul {
+      margin-bottom: 0;
+    }
+
+    .tips li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Footer nav ───────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-nav a {
+      color: var(--muted);
+    }
+
+    .footer-nav a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Support</h1>
+    <p class="meta"><strong>Azure Mastery</strong></p>
+
+    <p class="intro">Having trouble with Azure Mastery or have a question? We're here to help. Use the support portal for the fastest response, or reach out via email.</p>
+
+    <div class="support-cards">
+      <a href="https://moonbeamalpha.atlassian.net/servicedesk/customer/portal/34" class="support-card">
+        <div class="card-icon card-icon--portal">&#x1F3AB;</div>
+        <div class="card-body">
+          <div class="card-title">Support Portal</div>
+          <div class="card-desc">Submit a request and track its progress</div>
+        </div>
+        <span class="card-arrow">&#x203A;</span>
+      </a>
+
+      <a href="mailto:support@moonbeamalpha.atlassian.net" class="support-card">
+        <div class="card-icon card-icon--email">&#x2709;&#xFE0F;</div>
+        <div class="card-body">
+          <div class="card-title">Email Support</div>
+          <div class="card-desc">support@moonbeamalpha.atlassian.net</div>
+        </div>
+        <span class="card-arrow">&#x203A;</span>
+      </a>
+    </div>
+
+    <div class="tips">
+      <h2>Before You Reach Out</h2>
+      <ul>
+        <li>Make sure you're running the latest version from the App Store.</li>
+        <li>If progress isn't syncing between devices, check that iCloud sync is enabled in the app's Settings.</li>
+        <li>For purchase or subscription issues, try restoring purchases from Settings first.</li>
+      </ul>
+    </div>
+
+    <h2>What We Can Help With</h2>
+    <ul>
+      <li>App functionality and technical issues</li>
+      <li>Questions about subscriptions and purchases</li>
+      <li>Reporting incorrect exam questions or answers</li>
+      <li>Feature requests and feedback</li>
+      <li>Account and data enquiries</li>
+    </ul>
+
+    <hr>
+
+    <nav class="footer-nav">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="index.html">Azure Mastery</a>
+    </nav>
+    <p class="copyright">&copy; 2026 Moonbeam Alpha Ltd. All rights reserved.</p>
+  </div>
+</body>
+</html>

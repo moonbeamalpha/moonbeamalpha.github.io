@@ -899,6 +899,88 @@
       transform: scale(1.25);
     }
 
+    /* ── macOS Frame ── */
+    .mac-wrap {
+      position: relative;
+      transform-style: preserve-3d;
+      filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6))
+              drop-shadow(0 0 60px rgba(80,230,255,0.15))
+              drop-shadow(0 0 120px rgba(43,136,216,0.10));
+    }
+    .mac-frame {
+      width: 520px;
+      aspect-ratio: 3024 / 1964;
+      border-radius: 12px;
+      background: linear-gradient(160deg,
+        #2a2a2e 0%, #1c1c1f 30%, #111113 60%, #232325 85%, #2a2a2e 100%);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -1px 0 rgba(0,0,0,0.5),
+        inset 1px 0 rgba(255,255,255,0.06),
+        inset -1px 0 rgba(255,255,255,0.06);
+    }
+    .mac-frame::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.5);
+      pointer-events: none;
+      z-index: 10;
+    }
+    .mac-screen {
+      position: absolute;
+      inset: 5px;
+      border-radius: 8px;
+      background-size: cover;
+      background-position: center top;
+      overflow: hidden;
+    }
+    /* Screen glare */
+    .mac-screen::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+        rgba(255,255,255,0.04) 0%, transparent 50%, rgba(255,255,255,0.01) 100%);
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 15;
+    }
+    /* MacBook hinge/base bar */
+    .mac-base {
+      width: calc(100% + 40px);
+      height: 16px;
+      margin: 0 auto;
+      margin-left: -20px;
+      background: linear-gradient(180deg, #3a3a3e 0%, #222226 40%, #1a1a1e 100%);
+      border-radius: 0 0 8px 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(0,0,0,0.6);
+      position: relative;
+    }
+    .mac-base::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.06);
+    }
+    .mac-label {
+      font-family: var(--font-text);
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 14px;
+      text-align: center;
+    }
+
     /* ── Apple Watch Frame ── */
     .watch-wrap {
       position: relative;
@@ -1118,6 +1200,8 @@
       .section-final-cta { padding: 80px 24px; }
       .section-devices { padding: 80px 24px; }
       .devices-showcase { flex-direction: column; align-items: center; gap: 40px; }
+      .mac-frame { width: 380px; }
+      .mac-base { height: 14px; }
       .ipad-frame { width: 340px; height: 472px; border-radius: 22px; }
       .ipad-screen { border-radius: 18px; }
       .ipad-frame::before { border-radius: 20px; }
@@ -1130,6 +1214,8 @@
       .bento-wide { grid-column: span 1; }
       .hero-devices { transform: scale(0.45); margin-bottom: -180px; }
       .footer-inner { flex-direction: column; text-align: center; }
+      .mac-frame { width: 300px; }
+      .mac-base { height: 12px; }
       .ipad-frame { width: 280px; height: 388px; border-radius: 20px; }
       .ipad-screen { border-radius: 16px; }
       .ipad-frame::before { border-radius: 18px; }
@@ -1584,8 +1670,18 @@
       <p class="label-eyebrow fade-up" style="margin-bottom:12px;">Multi-Platform</p>
       <h2 class="display-small fade-up" style="margin-bottom:16px;">Beautiful on every screen.</h2>
       <p class="body-large fade-up" style="color:var(--text-secondary);max-width:520px;margin:0 auto;">
-        Study on iPad with a spacious layout, or check your readiness from your wrist.
+        Study on Mac, iPad, or iPhone — or check your readiness from your wrist.
       </p>
+
+      <div class="mac-showcase fade-up" style="display:flex;justify-content:center;margin-top:56px;">
+        <div class="mac-wrap">
+          <div class="mac-frame">
+            <div class="mac-screen" style="background-image: url('images/cap-macos.webp');"></div>
+          </div>
+          <div class="mac-base"></div>
+          <p class="mac-label">Mac</p>
+        </div>
+      </div>
 
       <div class="devices-showcase">
         <div class="ipad-wrap fade-up">

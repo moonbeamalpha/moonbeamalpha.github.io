@@ -1157,13 +1157,27 @@
     /* ══════════════════════════════════════════════
        ANIMATIONS — Initial States
        ══════════════════════════════════════════════ */
-    .fade-up { opacity: 0; }
+    .fade-up,
+    .hero-app-title,
+    .hero-text,
+    .showcase-text,
+    .showcase-device,
+    #device-left,
+    #device-center,
+    #device-right { opacity: 0; }
 
     /* ══════════════════════════════════════════════
        ACCESSIBILITY — Reduced Motion
        ══════════════════════════════════════════════ */
     @media (prefers-reduced-motion: reduce) {
-      .fade-up          { opacity: 1 !important; transform: none !important; }
+      .fade-up,
+      .hero-app-title,
+      .hero-text,
+      .showcase-text,
+      .showcase-device,
+      #device-left,
+      #device-center,
+      #device-right     { opacity: 1 !important; transform: none !important; }
       /* phone-float removed — GSAP handles float */
       .screenshots-strip { transform: none !important; }
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -1846,7 +1860,7 @@
     window.addEventListener('load', function() {
       if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
         // Fallback: reveal all hidden elements if GSAP failed to load
-        document.querySelectorAll('.fade-up, .hero-app-title, .hero-text, .showcase-text, .showcase-device').forEach(function(el) {
+        document.querySelectorAll('.fade-up, .hero-app-title, .hero-text, .showcase-text, .showcase-device, #device-left, #device-center, #device-right').forEach(function(el) {
           el.style.opacity = '1';
           el.style.transform = 'none';
         });

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azure Mastery — AI-Powered Azure Certification Exam Prep | AZ-104, AZ-900, AZ-305</title>
-  <meta name="description" content="Pass your Azure certification with confidence. Azure Mastery uses on-device AI to predict your exam score, build adaptive study plans, and track knowledge decay. 740+ questions across AZ-104, AZ-900, and AZ-305. 100% offline, no tracking.">
+  <meta name="description" content="Pass your Azure certification with confidence. Azure Mastery uses on-device AI to predict your exam score and build adaptive study plans. 740+ questions across AZ-104, AZ-900, and AZ-305.">
   <meta name="keywords" content="Azure certification, AZ-104 exam prep, AZ-900 study guide, AZ-305 practice questions, Microsoft Azure exam, Azure Administrator, Azure Fundamentals, Azure Solutions Architect, exam preparation app, iOS study app, Exam IQ, AI exam prep">
   <meta name="theme-color" content="#050810">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="canonical" href="https://moonbeamalpha.github.io/apps/AzureMastery/app.html">
+  <link rel="canonical" href="https://azuremastery.app/apps/AzureMastery/">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -21,14 +21,17 @@
   <meta property="og:site_name" content="Azure Mastery">
   <meta property="og:title" content="Azure Mastery — Know When You're Ready to Pass">
   <meta property="og:description" content="AI-powered Azure certification exam prep. Adaptive questions, ML score prediction, knowledge decay alerts. AZ-104, AZ-900, AZ-305. 100% offline, no tracking.">
-  <meta property="og:image" content="https://moonbeamalpha.github.io/apps/AzureMastery/images/cap-exam-iq.webp">
-  <meta property="og:url" content="https://moonbeamalpha.github.io/apps/AzureMastery/app.html">
+  <meta property="og:image" content="https://azuremastery.app/apps/AzureMastery/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://azuremastery.app/apps/AzureMastery/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Azure Mastery — AI-Powered Azure Certification Exam Prep">
   <meta name="twitter:description" content="On-device AI predicts your exam score, builds adaptive study plans, and catches knowledge decay before exam day. 740+ questions. 100% offline.">
-  <meta name="twitter:image" content="https://moonbeamalpha.github.io/apps/AzureMastery/images/cap-exam-iq.webp">
+  <meta name="twitter:image" content="https://azuremastery.app/apps/AzureMastery/images/og-image.png">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -36,9 +39,18 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Azure Mastery",
+    "url": "https://azuremastery.app/apps/AzureMastery/",
+    "downloadUrl": "https://apps.apple.com/gb/app/azure-mastery/id6760594569",
     "operatingSystem": "iOS",
     "applicationCategory": "EducationApplication",
+    "applicationSubCategory": "Exam Preparation",
     "description": "AI-powered Azure certification exam prep with adaptive study plans, ML score prediction, and real exam simulation. Covers AZ-104, AZ-900, and AZ-305.",
+    "image": "https://azuremastery.app/apps/AzureMastery/images/azure-mastery.png",
+    "screenshot": [
+      "https://azuremastery.app/apps/AzureMastery/images/cap-exam-iq.webp",
+      "https://azuremastery.app/apps/AzureMastery/images/cap-home-dashboard.webp",
+      "https://azuremastery.app/apps/AzureMastery/images/cap-study-plan.webp"
+    ],
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -48,12 +60,6 @@
     "author": {
       "@type": "Organization",
       "name": "Moonbeam Alpha Ltd"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "bestRating": "5",
-      "ratingCount": "50"
     }
   }
   </script>
@@ -61,6 +67,7 @@
   <!-- Google Fonts: Outfit + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- GSAP + ScrollTrigger -->
@@ -1077,8 +1084,15 @@
       pointer-events: none;
     }
     .app-store-badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
       transition: opacity 0.2s, transform 0.2s;
+    }
+    .app-store-badge .cta-app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
     }
     .app-store-badge:hover { opacity: 0.85; transform: scale(1.03); }
     .exam-tags {
@@ -1230,18 +1244,20 @@
   <!-- ═══════════ NAV ═══════════ -->
   <nav class="site-nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-brand">
-        <img src="images/app-icon.webp" alt="Azure Mastery app icon" width="32" height="32">
+      <a href="https://azuremastery.app/apps/AzureMastery/" class="nav-brand">
+        <img src="images/azure-mastery.png" alt="Azure Mastery app icon" width="32" height="32">
         <span>Azure Mastery</span>
       </a>
       <ul class="nav-links">
         <li><a href="#exam-iq" class="hide-mobile">Exam IQ</a></li>
         <li><a href="#features" class="hide-mobile">Features</a></li>
         <li><a href="#screenshots" class="hide-mobile">Screenshots</a></li>
-        <li><a href="#download" class="btn-nav-cta">Download Free</a></li>
+        <li><a href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" class="btn-nav-cta" rel="noopener noreferrer">Download Free</a></li>
       </ul>
     </div>
   </nav>
+
+  <main>
 
   <!-- ═══════════ HERO ═══════════ -->
   <section class="section-hero" id="hero">
@@ -1249,7 +1265,7 @@
     <div class="hero-inner">
 
       <div class="hero-app-title">
-        <img src="images/app-icon.webp" alt="Azure Mastery" class="hero-app-icon" width="80" height="80">
+        <img src="images/azure-mastery.png" alt="Azure Mastery" class="hero-app-icon" width="80" height="80">
         <span class="hero-app-name">Azure Mastery</span>
       </div>
 
@@ -1276,7 +1292,7 @@
           <span class="hero-exam-tag hero-exam-tag--purple">AZ-305</span>
         </div>
         <div class="hero-ctas">
-          <a href="#download" class="btn-primary" aria-label="Download Azure Mastery on the App Store">
+          <a href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" class="btn-primary" rel="noopener noreferrer" aria-label="Download Azure Mastery on the App Store">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
             Download Free
           </a>
@@ -1784,19 +1800,9 @@
         Download Azure Mastery free on iPhone and iPad. No credit card required.
         Upgrade when you're ready for the full question bank.
       </p>
-      <a href="#" class="app-store-badge fade-up" aria-label="Download Azure Mastery on the App Store">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="180" height="60" role="img" aria-label="Download on the App Store">
-          <title>Download on the App Store</title>
-          <rect width="120" height="40" rx="6" fill="#000"/>
-          <rect x="0.5" y="0.5" width="119" height="39" rx="5.5" stroke="#A6A6A6" stroke-width="1" fill="none"/>
-          <g fill="#fff">
-            <path d="M24.77 20.3a4.95 4.95 0 012.36-4.15 5.07 5.07 0 00-3.99-2.16c-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.62-.96a5.32 5.32 0 00-4.48 2.73c-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.01 2.81 3.44 2.76 1.39-.06 1.91-.88 3.59-.88 1.67 0 2.15.88 3.59.85 1.49-.03 2.43-1.33 3.33-2.67a11.04 11.04 0 001.51-3.09 4.77 4.77 0 01-2.92-4.41zM22.04 12.21a4.87 4.87 0 001.11-3.49 4.96 4.96 0 00-3.21 1.66 4.63 4.63 0 00-1.14 3.36 4.09 4.09 0 003.24-1.53z"/>
-            <g style="font-family:Helvetica,Arial,sans-serif">
-              <text x="36" y="14" font-size="5.2" fill="#fff" letter-spacing="0.04em">Download on the</text>
-              <text x="36" y="27" font-size="12" fill="#fff" font-weight="bold" letter-spacing="-0.02em">App Store</text>
-            </g>
-          </g>
-        </svg>
+      <a href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" class="app-store-badge fade-up" rel="noopener noreferrer" aria-label="Download Azure Mastery on the App Store">
+        <img src="images/azure-mastery.png" alt="Azure Mastery" class="cta-app-icon" width="60" height="60">
+        <img src="images/white.svg" alt="Download on the App Store" height="60">
       </a>
       <div class="exam-tags fade-up">
         <span class="exam-tag">AZ-104 Administrator</span>
@@ -1805,6 +1811,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="site-footer">

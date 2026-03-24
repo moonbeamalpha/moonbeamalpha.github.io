@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>OG Image — Azure Mastery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Screenshot this at 1200 × 630 to produce og-image.png ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #F0F0F0;
+      background: #050810;
+      position: relative;
+    }
+
+    /* Background glow */
+    .bg-glow {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 30% 40%, rgba(43,136,216,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 75% 50%, rgba(80,230,255,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 85% 80%, rgba(149,120,224,0.10) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 72px;
+      gap: 56px;
+    }
+
+    /* Left column — text */
+    .text-col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #50E6FF;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+    }
+    .accent {
+      background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #8B95A5;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      max-width: 440px;
+    }
+
+    /* Exam tags */
+    .exam-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .tag {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid;
+    }
+    .tag--blue   { color: #2B88D8; background: rgba(43,136,216,0.12); border-color: rgba(43,136,216,0.3); }
+    .tag--cyan   { color: #50E6FF; background: rgba(80,230,255,0.12); border-color: rgba(80,230,255,0.3); }
+    .tag--purple { color: #9578E0; background: rgba(149,120,224,0.12);border-color: rgba(149,120,224,0.3); }
+    .tag--gold   { color: #FFB900; background: rgba(255,185,0,0.12);  border-color: rgba(255,185,0,0.3); }
+    .tag--green  { color: #20C020; background: rgba(32,192,32,0.12);  border-color: rgba(32,192,32,0.3); }
+    .tag--orange { color: #F7630C; background: rgba(247,99,12,0.12);  border-color: rgba(247,99,12,0.3); }
+
+    /* Stats row */
+    .stats {
+      display: flex;
+      gap: 32px;
+    }
+    .stat-value {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1;
+    }
+    .stat-value--cyan   { color: #50E6FF; }
+    .stat-value--gold   { color: #FFB900; }
+    .stat-value--green  { color: #20C020; }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #808A96;
+      margin-top: 4px;
+    }
+
+    /* Right column — phones */
+    .phones-col {
+      flex: 0 0 420px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 14px;
+      perspective: 1000px;
+      padding: 24px 0;
+    }
+
+    .phone {
+      border-radius: 36px;
+      background: linear-gradient(160deg, #2a2a2e 0%, #1c1c1f 30%, #111113 60%, #232325 85%, #2a2a2e 100%);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 30px 60px rgba(0,0,0,0.5),
+        0 0 40px rgba(80,230,255,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -1px 0 rgba(0,0,0,0.5);
+    }
+    .phone--main {
+      width: 200px;
+      height: 420px;
+      z-index: 2;
+      transform: translateY(-16px);
+    }
+    .phone--side {
+      width: 170px;
+      height: 358px;
+      opacity: 0.8;
+    }
+    .phone--left  { transform: perspective(800px) rotateY(18deg) rotateX(-4deg) translateX(-8px); }
+    .phone--right { transform: perspective(800px) rotateY(-18deg) rotateX(-4deg) translateX(8px); }
+
+    .phone-screen {
+      position: absolute;
+      inset: 6px;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    .phone-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    /* Notch */
+    .phone-screen::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 20px;
+      border-radius: 10px;
+      background: #000;
+      z-index: 20;
+    }
+    /* Glare */
+    .phone-screen::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%);
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    /* App icon + name cluster */
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .app-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      box-shadow: 0 0 20px rgba(80,230,255,0.2);
+    }
+    .app-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <div class="container">
+    <div class="text-col">
+      <div class="app-brand">
+        <img src="images/azure-mastery.png" alt="Azure Mastery" class="app-icon">
+        <span class="app-name">Azure Mastery</span>
+      </div>
+
+      <p class="eyebrow">Microsoft Azure Certification</p>
+      <h1>Know When<br>You're <span class="accent">Ready.</span></h1>
+      <p class="subtitle">AI-powered exam readiness scoring, adaptive study plans, and knowledge decay alerts — all running on-device.</p>
+
+      <div class="exam-tags">
+        <span class="tag tag--blue">AZ-104</span>
+        <span class="tag tag--cyan">AZ-900</span>
+        <span class="tag tag--purple">AZ-305</span>
+        <span class="tag tag--blue">AZ-204</span>
+        <span class="tag tag--purple">AZ-400</span>
+        <span class="tag tag--orange">AZ-500</span>
+        <span class="tag tag--blue">AZ-700</span>
+        <span class="tag tag--gold">AI-102</span>
+        <span class="tag tag--cyan">AI-900</span>
+        <span class="tag tag--green">DP-100</span>
+        <span class="tag tag--cyan">DP-900</span>
+        <span class="tag tag--orange">SC-900</span>
+      </div>
+
+      <div class="stats">
+        <div>
+          <div class="stat-value stat-value--cyan">3,900+</div>
+          <div class="stat-label">Questions</div>
+        </div>
+        <div>
+          <div class="stat-value stat-value--gold">12</div>
+          <div class="stat-label">Azure Exams</div>
+        </div>
+        <div>
+          <div class="stat-value stat-value--green">100%</div>
+          <div class="stat-label">Offline</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phones-col">
+      <div class="phone phone--side phone--left">
+        <div class="phone-screen">
+          <img src="images/cap-home-dashboard.webp" alt="Dashboard">
+        </div>
+      </div>
+      <div class="phone phone--main">
+        <div class="phone-screen">
+          <img src="images/cap-exam-iq.webp" alt="Exam IQ">
+        </div>
+      </div>
+      <div class="phone phone--side phone--right">
+        <div class="phone-screen">
+          <img src="images/cap-question-types.webp" alt="Question types">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

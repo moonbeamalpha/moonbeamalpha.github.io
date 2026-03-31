@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Mastery — LinkedIn Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1a1a2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .banner {
+      width: 1584px;
+      height: 396px;
+      background: #050810;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── Background glow effects ── */
+    .banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 45% 90% at 40% 50%, rgba(43,136,216,0.13) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 70% at 80% 25%, rgba(80,230,255,0.07) 0%, transparent 55%),
+        radial-gradient(ellipse 30% 60% at 65% 85%, rgba(149,120,224,0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 100% at 55% 50%, rgba(43,136,216,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Subtle grid pattern ── */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(80,230,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(80,230,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 60% 70% at 55% 50%, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 60% 70% at 55% 50%, black 30%, transparent 80%);
+    }
+
+    /* ── Floating glow orbs ── */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .orb--cyan {
+      width: 220px;
+      height: 220px;
+      background: rgba(80,230,255,0.06);
+      top: -70px;
+      right: 350px;
+    }
+    .orb--blue {
+      width: 280px;
+      height: 280px;
+      background: rgba(43,136,216,0.06);
+      bottom: -80px;
+      left: 350px;
+    }
+    .orb--purple {
+      width: 180px;
+      height: 180px;
+      background: rgba(149,120,224,0.05);
+      top: 40px;
+      right: 80px;
+    }
+
+    /* ── Layout ── */
+    .banner-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      /* ~360px left padding clears the profile photo */
+      padding: 0 80px 0 370px;
+      gap: 56px;
+    }
+
+    /* ── Main content area ── */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* ── Brand row: icon + name inline ── */
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .app-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow:
+        0 0 24px rgba(80,230,255,0.15),
+        0 0 48px rgba(43,136,216,0.08),
+        0 8px 20px rgba(0,0,0,0.3);
+    }
+    .app-icon-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .app-icon-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 19.5px;
+      border: 1.5px solid rgba(80,230,255,0.18);
+      pointer-events: none;
+    }
+
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+    }
+
+    .badge-exam-iq {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #9578E0 0%, #2B88D8 100%);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .divider-h {
+      width: 1px;
+      height: 24px;
+      background: rgba(80,230,255,0.2);
+      margin-left: 4px;
+    }
+
+    .eyebrow-text {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(80,230,255,0.6);
+      margin-left: 8px;
+    }
+
+    /* ── Headline ── */
+    .headline {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      color: #F0F0F0;
+    }
+    .headline-accent {
+      background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Subline ── */
+    .subline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px;
+      line-height: 1.45;
+      color: #8B95A5;
+      max-width: 580px;
+    }
+
+    /* ── Exam tags ── */
+    .exam-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-width: 600px;
+    }
+    .exam-tag {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--tag-color);
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      white-space: nowrap;
+    }
+    .exam-tag--blue   { --tag-color: #2B88D8; --tag-bg: rgba(43,136,216,0.12);  --tag-border: rgba(43,136,216,0.3); }
+    .exam-tag--cyan   { --tag-color: #50E6FF; --tag-bg: rgba(80,230,255,0.12);  --tag-border: rgba(80,230,255,0.3); }
+    .exam-tag--purple { --tag-color: #9578E0; --tag-bg: rgba(149,120,224,0.12); --tag-border: rgba(149,120,224,0.3); }
+    .exam-tag--gold   { --tag-color: #FFB900; --tag-bg: rgba(255,185,0,0.12);   --tag-border: rgba(255,185,0,0.3); }
+    .exam-tag--green  { --tag-color: #20C020; --tag-bg: rgba(32,192,32,0.12);   --tag-border: rgba(32,192,32,0.3); }
+    .exam-tag--orange { --tag-color: #F7630C; --tag-bg: rgba(247,99,12,0.12);   --tag-border: rgba(247,99,12,0.3); }
+
+    /* ── Right: Stats ── */
+    .stats-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-shrink: 0;
+      align-items: flex-end;
+    }
+
+    .stat {
+      text-align: right;
+    }
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .stat-number--cyan {
+      color: #50E6FF;
+    }
+    .stat-number--purple {
+      color: #9578E0;
+    }
+    .stat-number--gold {
+      color: #FFB900;
+    }
+    .stat-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: #808A96;
+      margin-top: 3px;
+    }
+
+    /* ── Vertical divider before stats ── */
+    .divider-v {
+      width: 1px;
+      height: 220px;
+      background: linear-gradient(180deg, transparent, rgba(80,230,255,0.18), rgba(43,136,216,0.12), transparent);
+      flex-shrink: 0;
+    }
+
+    /* ── Bottom accent line ── */
+    .bottom-accent {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg,
+        transparent 5%,
+        #2B88D8 25%,
+        #50E6FF 45%,
+        #9578E0 65%,
+        #2B88D8 85%,
+        transparent 95%
+      );
+      opacity: 0.5;
+    }
+
+    /* ── Top accent line ── */
+    .top-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 10%,
+        rgba(80,230,255,0.12) 30%,
+        rgba(43,136,216,0.18) 50%,
+        rgba(149,120,224,0.12) 70%,
+        transparent 90%
+      );
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <!-- Background effects -->
+    <div class="grid-overlay"></div>
+    <div class="orb orb--cyan"></div>
+    <div class="orb orb--blue"></div>
+    <div class="orb orb--purple"></div>
+    <div class="top-accent"></div>
+    <div class="bottom-accent"></div>
+
+    <!-- Content -->
+    <div class="banner-content">
+
+      <!-- Main content (icon + headline + tags) -->
+      <div class="main-content">
+        <div class="brand-row">
+          <div class="app-icon-wrap">
+            <img src="images/app-icon.jpg" alt="Azure Mastery">
+          </div>
+          <span class="brand-name">Azure Mastery</span>
+          <span class="badge-exam-iq">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9.937 3.823l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29zM18.06 6.06l-.72 1.58-1.58.72 1.58.72.72 1.58.72-1.58 1.58-.72-1.58-.72-.72-1.58zM9.937 13.49l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29"/></svg>
+            EXAM IQ
+          </span>
+          <div class="divider-h"></div>
+          <span class="eyebrow-text">Microsoft Azure Certification</span>
+        </div>
+
+        <h1 class="headline">
+          Know When You're <span class="headline-accent">Ready.</span>
+        </h1>
+
+        <p class="subline">
+          AI-powered exam prep with on-device ML score prediction, adaptive study plans, and knowledge decay alerts.
+        </p>
+
+        <div class="exam-tags">
+          <span class="exam-tag exam-tag--blue">AZ-104</span>
+          <span class="exam-tag exam-tag--cyan">AZ-900</span>
+          <span class="exam-tag exam-tag--purple">AZ-305</span>
+          <span class="exam-tag exam-tag--blue">AZ-204</span>
+          <span class="exam-tag exam-tag--purple">AZ-400</span>
+          <span class="exam-tag exam-tag--orange">AZ-500</span>
+          <span class="exam-tag exam-tag--blue">AZ-700</span>
+          <span class="exam-tag exam-tag--gold">AI-102</span>
+          <span class="exam-tag exam-tag--cyan">AI-900</span>
+          <span class="exam-tag exam-tag--green">DP-100</span>
+          <span class="exam-tag exam-tag--cyan">DP-900</span>
+          <span class="exam-tag exam-tag--orange">SC-900</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider-v"></div>
+
+      <!-- Right: Stats -->
+      <div class="stats-group">
+        <div class="stat">
+          <div class="stat-number stat-number--cyan">4,000+</div>
+          <div class="stat-label">Practice Questions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number stat-number--purple">12</div>
+          <div class="stat-label">Azure Exams</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number stat-number--gold">100%</div>
+          <div class="stat-label">Offline &amp; Private</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

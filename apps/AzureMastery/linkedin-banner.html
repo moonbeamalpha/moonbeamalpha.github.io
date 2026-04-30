@@ -10,12 +10,13 @@
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+    html, body {
+      width: 1584px;
+      height: 396px;
+      overflow: hidden;
+    }
     body {
-      background: #1a1a2e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      background: #050810;
       font-family: 'DM Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
@@ -36,9 +37,10 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 45% 90% at 40% 50%, rgba(43,136,216,0.13) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 70% at 80% 25%, rgba(80,230,255,0.07) 0%, transparent 55%),
-        radial-gradient(ellipse 30% 60% at 65% 85%, rgba(149,120,224,0.05) 0%, transparent 50%);
+        radial-gradient(ellipse 45% 110% at 40% 50%, rgba(43,136,216,0.16) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 70% at 80% 25%, rgba(80,230,255,0.09) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 80% at 50% 105%, rgba(43,136,216,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 35% 70% at 65% 90%, rgba(149,120,224,0.07) 0%, transparent 55%);
       pointer-events: none;
     }
     .banner::after {
@@ -46,7 +48,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 100% at 55% 50%, rgba(43,136,216,0.04) 0%, transparent 70%);
+        radial-gradient(ellipse 60% 100% at 55% 50%, rgba(43,136,216,0.05) 0%, transparent 70%),
+        linear-gradient(180deg, transparent 60%, rgba(43,136,216,0.06) 100%);
       pointer-events: none;
     }
 
@@ -73,23 +76,23 @@
     .orb--cyan {
       width: 220px;
       height: 220px;
-      background: rgba(80,230,255,0.06);
+      background: rgba(80,230,255,0.08);
       top: -70px;
       right: 350px;
     }
     .orb--blue {
-      width: 280px;
-      height: 280px;
-      background: rgba(43,136,216,0.06);
-      bottom: -80px;
+      width: 360px;
+      height: 360px;
+      background: rgba(43,136,216,0.10);
+      bottom: -120px;
       left: 350px;
     }
     .orb--purple {
-      width: 180px;
-      height: 180px;
-      background: rgba(149,120,224,0.05);
-      top: 40px;
-      right: 80px;
+      width: 240px;
+      height: 240px;
+      background: rgba(149,120,224,0.08);
+      bottom: -60px;
+      right: 280px;
     }
 
     /* ── Layout ── */
@@ -97,33 +100,43 @@
       position: relative;
       z-index: 10;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       width: 100%;
       height: 100%;
-      /* ~360px left padding clears the profile photo */
-      padding: 0 72px 0 350px;
-      gap: 44px;
+      /* Left padding keeps the LinkedIn profile photo area clear. */
+      padding: 30px 58px 26px 368px;
+      gap: 16px;
+    }
+
+    .top-row {
+      flex: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 610px) 270px 214px;
+      gap: 26px;
+      align-items: stretch;
+      min-height: 0;
     }
 
     /* ── Main content area ── */
     .main-content {
-      flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      justify-content: center;
+      gap: 14px;
+      min-width: 0;
     }
 
     /* ── Brand row: icon + name inline ── */
     .brand-row {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
     .app-icon-wrap {
-      width: 72px;
-      height: 72px;
-      border-radius: 18px;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
       position: relative;
       overflow: hidden;
       flex-shrink: 0;
@@ -142,7 +155,7 @@
       content: '';
       position: absolute;
       inset: -1.5px;
-      border-radius: 19.5px;
+      border-radius: 15.5px;
       border: 1.5px solid rgba(80,230,255,0.18);
       pointer-events: none;
     }
@@ -150,7 +163,7 @@
     .brand-name {
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
-      font-size: 26px;
+      font-size: 24px;
       letter-spacing: -0.02em;
       background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
       -webkit-background-clip: text;
@@ -196,10 +209,11 @@
     .headline {
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
-      font-size: 72px;
-      line-height: 1.0;
+      font-size: 64px;
+      line-height: 0.94;
       letter-spacing: -0.035em;
       color: #F0F0F0;
+      max-width: 640px;
     }
     .headline-accent {
       background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
@@ -212,23 +226,86 @@
     .subline {
       font-family: 'DM Sans', sans-serif;
       font-size: 18px;
-      line-height: 1.4;
+      line-height: 1.35;
       color: #8B95A5;
-      max-width: 580px;
+      max-width: 590px;
+    }
+
+    /* ── Exam IQ panel ── */
+    .feature-panel {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, rgba(14, 28, 48, 0.72), rgba(8, 15, 28, 0.52)),
+        radial-gradient(ellipse 100% 120% at 50% 0%, rgba(80,230,255,0.10), transparent 62%);
+      border: 1px solid rgba(80,230,255,0.16);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 20px 45px rgba(0,0,0,0.18);
+    }
+    .feature-panel-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      color: #F0F0F0;
+      letter-spacing: 0.01em;
+    }
+    .signal {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .signal-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: rgba(80,230,255,0.12);
+      color: #50E6FF;
+      border: 1px solid rgba(80,230,255,0.18);
+    }
+    .signal-icon svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+    }
+    .signal-copy {
+      min-width: 0;
+    }
+    .signal-label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: #DDE7F5;
+      line-height: 1.15;
+    }
+    .signal-detail {
+      font-size: 12px;
+      color: #7F8A9A;
+      line-height: 1.2;
+      margin-top: 2px;
+      white-space: nowrap;
     }
 
     /* ── Exam tags ── */
     .exam-tags {
       display: flex;
-      gap: 6px;
+      gap: 7px;
       flex-wrap: wrap;
-      max-width: 850px;
+      max-width: none;
+      min-height: 62px;
+      align-content: flex-end;
     }
     .exam-tag {
-      padding: 4px 10px;
+      padding: 5px 11px;
       border-radius: 999px;
       font-family: 'Outfit', sans-serif;
-      font-size: 11.5px;
+      font-size: 12.5px;
       font-weight: 600;
       color: var(--tag-color);
       background: var(--tag-bg);
@@ -246,9 +323,9 @@
     .stats-group {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      flex-shrink: 0;
+      justify-content: space-between;
       align-items: flex-end;
+      padding: 18px 0;
     }
 
     .stat {
@@ -257,7 +334,7 @@
     .stat-number {
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
-      font-size: 44px;
+      font-size: 50px;
       line-height: 1;
       letter-spacing: -0.02em;
     }
@@ -275,14 +352,6 @@
       font-size: 15px;
       color: #808A96;
       margin-top: 3px;
-    }
-
-    /* ── Vertical divider before stats ── */
-    .divider-v {
-      width: 1px;
-      height: 220px;
-      background: linear-gradient(180deg, transparent, rgba(80,230,255,0.18), rgba(43,136,216,0.12), transparent);
-      flex-shrink: 0;
     }
 
     /* ── Bottom accent line ── */
@@ -333,70 +402,105 @@
     <!-- Content -->
     <div class="banner-content">
 
-      <!-- Main content (icon + headline + tags) -->
-      <div class="main-content">
-        <div class="brand-row">
-          <div class="app-icon-wrap">
-            <img src="images/app-icon.jpg" alt="Azure Mastery">
+      <div class="top-row">
+
+        <!-- Main content -->
+        <div class="main-content">
+          <div class="brand-row">
+            <div class="app-icon-wrap">
+              <img src="images/app-icon.jpg" alt="Azure Mastery">
+            </div>
+            <span class="brand-name">Azure Mastery</span>
+            <span class="badge-exam-iq">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9.937 3.823l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29zM18.06 6.06l-.72 1.58-1.58.72 1.58.72.72 1.58.72-1.58 1.58-.72-1.58-.72-.72-1.58zM9.937 13.49l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29"/></svg>
+              EXAM IQ
+            </span>
           </div>
-          <span class="brand-name">Azure Mastery</span>
-          <span class="badge-exam-iq">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9.937 3.823l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29zM18.06 6.06l-.72 1.58-1.58.72 1.58.72.72 1.58.72-1.58 1.58-.72-1.58-.72-.72-1.58zM9.937 13.49l-1.04 2.29-2.29 1.04 2.29 1.04 1.04 2.29 1.04-2.29 2.29-1.04-2.29-1.04-1.04-2.29"/></svg>
-            EXAM IQ
-          </span>
-          <div class="divider-h"></div>
-          <span class="eyebrow-text">Microsoft Azure Certification Prep</span>
+
+          <div>
+            <div class="eyebrow-text">Microsoft Azure Certification Prep</div>
+            <h1 class="headline">
+              Know when you're <span class="headline-accent">ready.</span>
+            </h1>
+          </div>
+
+          <p class="subline">
+            AI-powered exam prep with on-device score prediction, adaptive study plans, and knowledge decay alerts.
+          </p>
         </div>
 
-        <h1 class="headline">
-          Know When You're <span class="headline-accent">Ready.</span>
-        </h1>
+        <!-- Center: Exam IQ features -->
+        <div class="feature-panel">
+          <div class="feature-panel-title">Exam IQ signals</div>
+          <div class="signal">
+            <div class="signal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 5-7"/></svg>
+            </div>
+            <div class="signal-copy">
+              <div class="signal-label">Predict readiness</div>
+              <div class="signal-detail">Score forecast after every session</div>
+            </div>
+          </div>
+          <div class="signal">
+            <div class="signal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.75V16h8v-1.25A7 7 0 0 0 12 2z"/></svg>
+            </div>
+            <div class="signal-copy">
+              <div class="signal-label">Study what matters</div>
+              <div class="signal-detail">Adaptive plans by weak domain</div>
+            </div>
+          </div>
+          <div class="signal">
+            <div class="signal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 8v5l3 2"/><path d="M3.5 12a8.5 8.5 0 1 0 3-6.5"/><path d="M3 4v5h5"/></svg>
+            </div>
+            <div class="signal-copy">
+              <div class="signal-label">Catch decay early</div>
+              <div class="signal-detail">Review before knowledge fades</div>
+            </div>
+          </div>
+        </div>
 
-        <p class="subline">
-          AI-powered exam prep with on-device ML score prediction, adaptive study plans, and knowledge decay alerts.
-        </p>
-
-        <div class="exam-tags">
-          <span class="exam-tag exam-tag--blue">AZ-104</span>
-          <span class="exam-tag exam-tag--cyan">AZ-900</span>
-          <span class="exam-tag exam-tag--purple">AZ-305</span>
-          <span class="exam-tag exam-tag--blue">AZ-204</span>
-          <span class="exam-tag exam-tag--purple">AZ-400</span>
-          <span class="exam-tag exam-tag--orange">AZ-500</span>
-          <span class="exam-tag exam-tag--blue">AZ-700</span>
-          <span class="exam-tag exam-tag--gold">AI-102</span>
-          <span class="exam-tag exam-tag--gold">AI-103</span>
-          <span class="exam-tag exam-tag--gold">AI-200</span>
-          <span class="exam-tag exam-tag--gold">AI-300</span>
-          <span class="exam-tag exam-tag--cyan">AI-900</span>
-          <span class="exam-tag exam-tag--cyan">AI-901</span>
-          <span class="exam-tag exam-tag--green">DP-100</span>
-          <span class="exam-tag exam-tag--green">DP-300</span>
-          <span class="exam-tag exam-tag--cyan">DP-900</span>
-          <span class="exam-tag exam-tag--purple">SC-100</span>
-          <span class="exam-tag exam-tag--orange">SC-200</span>
-          <span class="exam-tag exam-tag--orange">SC-300</span>
-          <span class="exam-tag exam-tag--orange">SC-900</span>
+        <!-- Right: Stats -->
+        <div class="stats-group">
+          <div class="stat">
+            <div class="stat-number stat-number--cyan">7,200+</div>
+            <div class="stat-label">Practice Questions</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number stat-number--purple">22</div>
+            <div class="stat-label">Exams</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number stat-number--gold">100%</div>
+            <div class="stat-label">Offline &amp; Private</div>
+          </div>
         </div>
       </div>
 
-      <!-- Divider -->
-      <div class="divider-v"></div>
-
-      <!-- Right: Stats -->
-      <div class="stats-group">
-        <div class="stat">
-          <div class="stat-number stat-number--cyan">6,500+</div>
-          <div class="stat-label">Practice Questions</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number stat-number--purple">20</div>
-          <div class="stat-label">Azure Exams</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number stat-number--gold">100%</div>
-          <div class="stat-label">Offline &amp; Private</div>
-        </div>
+      <div class="exam-tags">
+        <span class="exam-tag exam-tag--blue">AZ-104</span>
+        <span class="exam-tag exam-tag--cyan">AZ-900</span>
+        <span class="exam-tag exam-tag--purple">AZ-305</span>
+        <span class="exam-tag exam-tag--blue">AZ-204</span>
+        <span class="exam-tag exam-tag--purple">AZ-400</span>
+        <span class="exam-tag exam-tag--orange">AZ-500</span>
+        <span class="exam-tag exam-tag--blue">AZ-700</span>
+        <span class="exam-tag exam-tag--gold">AI-102</span>
+        <span class="exam-tag exam-tag--gold">AI-103</span>
+        <span class="exam-tag exam-tag--gold">AI-200</span>
+        <span class="exam-tag exam-tag--gold">AI-300</span>
+        <span class="exam-tag exam-tag--cyan">AI-900</span>
+        <span class="exam-tag exam-tag--cyan">AI-901</span>
+        <span class="exam-tag exam-tag--gold">AB-620</span>
+        <span class="exam-tag exam-tag--green">DP-100</span>
+        <span class="exam-tag exam-tag--green">DP-300</span>
+        <span class="exam-tag exam-tag--cyan">DP-900</span>
+        <span class="exam-tag exam-tag--green">PL-300</span>
+        <span class="exam-tag exam-tag--purple">SC-100</span>
+        <span class="exam-tag exam-tag--orange">SC-200</span>
+        <span class="exam-tag exam-tag--orange">SC-300</span>
+        <span class="exam-tag exam-tag--orange">SC-900</span>
       </div>
 
     </div>

@@ -49,6 +49,7 @@
   <meta name="twitter:image" content="https://azuremastery.app/apps/AzureMastery/images/og-image.png">
 
   <!-- Structured Data -->
+  <!-- aggregateRating removed 2026-05-08: re-add when App Store Connect shows ≥3 real ratings (sourced, not fabricated). -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -86,13 +87,7 @@
       "Real exam simulation mode",
       "24 certification paths",
       "100% offline — no tracking"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "ratingCount": "1",
-      "bestRating": "5"
-    }
+    ]
   }
   </script>
 
@@ -190,6 +185,19 @@
     .body-medium    { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 15px; line-height: 1.6; }
     .body-small     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 13px; line-height: 1.55; }
     .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+
+    /* Visually hidden but accessible to screen readers and search engines. */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
     /* ══════════════════════════════════════════════
        COMPONENTS
@@ -1327,10 +1335,13 @@
             EXAM IQ
           </span>
         </div>
-        <h1 class="display-large hero-headline">
+        <h1 class="sr-only">
+          Azure Mastery — AI-Powered Exam Prep for AZ-104, AZ-900, AZ-305, AZ-204, AZ-400, and 17 More Microsoft Azure Certifications on iOS
+        </h1>
+        <h2 class="display-large hero-headline">
           Know When<br>
           You're <span class="headline-accent">Ready.</span>
-        </h1>
+        </h2>
         <p class="body-large hero-subline">
           AI-powered exam readiness scoring, adaptive study plans, and knowledge
           decay alerts — all running on-device. The smarter way to prepare for

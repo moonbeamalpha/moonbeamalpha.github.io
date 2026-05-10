@@ -2,6 +2,47 @@
 User-agent: *
 Allow: /
 
+# ─── Social-card scrapers (link-preview generators) ───
+# Some platforms only honour their own explicit user-agent block,
+# not the wildcard above. Listing them explicitly avoids 403s in
+# debuggers like Facebook's Sharing Debugger and Twitter's Card Validator.
+
+# Facebook + Instagram + Threads link-preview scraper.
+User-agent: facebookexternalhit
+Allow: /
+
+# Facebook catalog crawler (used for Facebook Catalog and Marketplace).
+User-agent: facebookcatalog
+Allow: /
+
+# Twitter / X link-preview scraper.
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn link-preview scraper.
+User-agent: LinkedInBot
+Allow: /
+
+# Slack link-preview scraper.
+User-agent: Slackbot
+Allow: /
+
+# Discord embed scraper.
+User-agent: Discordbot
+Allow: /
+
+# WhatsApp link-preview scraper.
+User-agent: WhatsApp
+Allow: /
+
+# Apple iMessage / Mail link previews.
+User-agent: Applebot
+Allow: /
+
+# Telegram link-preview scraper.
+User-agent: TelegramBot
+Allow: /
+
 # ─── AI crawlers (training corpora + retrieval-augmented search) ───
 # Each named user-agent gets its own block because most agents apply
 # only the most-specific match, not the union with `*`.
@@ -55,6 +96,43 @@ User-agent: Meta-ExternalAgent
 Allow: /
 
 User-agent: FacebookBot
+Allow: /
+
+# ─── Social / link-preview scrapers (NOT AI training) ───
+# These fetch the page when a user pastes a link, to render the
+# OG / Twitter / LinkedIn / Slack / Discord card. They are not AI
+# crawlers but live in the same robots.txt for clarity.
+
+# Facebook + Instagram link preview (pastes, shares, OG card).
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# X / Twitter card scraper.
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn share preview.
+User-agent: LinkedInBot
+Allow: /
+
+# Slack / Discord / Telegram unfurl.
+User-agent: Slackbot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# WhatsApp link preview.
+User-agent: WhatsApp
 Allow: /
 
 # ByteDance / TikTok AI.

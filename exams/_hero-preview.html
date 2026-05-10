@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Hero block preview — Azure Mastery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-app: #050810;
+      --bg-deep: #0A0E1A;
+      --text-primary: #F0F0F0;
+      --text-secondary: #8B95A5;
+      --azure-cyan: #50E6FF;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+    }
+    .preview-meta {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 24px 0;
+    }
+    .preview-meta h1 {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .preview-meta p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin: 0 0 4px;
+      line-height: 1.55;
+    }
+    .preview-meta code {
+      background: rgba(80,230,255,0.08);
+      color: var(--azure-cyan);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .preview-divider {
+      max-width: 1080px;
+      margin: 64px auto 0;
+      padding: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--text-secondary);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-meta">
+    <h1>Hero block preview</h1>
+    <p>Source fragment: <code>exams/_hero.html</code> — copy entire <code>&lt;style&gt;</code> + <code>&lt;section&gt;</code> into the top of <code>&lt;main&gt;</code> on each cert page, swap cert code in two places.</p>
+    <p>Instances below render the same fragment with different cert codes injected via JavaScript (preview only — cert pages will hard-code the code).</p>
+  </div>
+
+  <!-- Mount slot 1: AZ-104 -->
+  <div data-cert-code="AZ-104" data-cert-name="Microsoft Azure Administrator" data-q-count="343"></div>
+
+  <div class="preview-divider">AZ-900 ──────────────────────────────────────</div>
+
+  <!-- Mount slot 2: AZ-900 -->
+  <div data-cert-code="AZ-900" data-cert-name="Microsoft Azure Fundamentals" data-q-count="302"></div>
+
+  <div class="preview-divider">AZ-305 ──────────────────────────────────────</div>
+
+  <!-- Mount slot 3: AZ-305 -->
+  <div data-cert-code="AZ-305" data-cert-name="Microsoft Azure Solutions Architect Expert" data-q-count="304"></div>
+
+  <div class="preview-divider">AZ-204 ──────────────────────────────────────</div>
+
+  <!-- Mount slot 4: AZ-204 -->
+  <div data-cert-code="AZ-204" data-cert-name="Microsoft Azure Developer Associate" data-q-count="318"></div>
+
+  <div class="preview-divider">AZ-400 ──────────────────────────────────────</div>
+
+  <!-- Mount slot 5: AZ-400 -->
+  <div data-cert-code="AZ-400" data-cert-name="Microsoft Azure DevOps Engineer Expert" data-q-count="444"></div>
+
+  <script>
+    // Local preview only: fetch the source HTML fragment and inject each instance,
+    // swapping the cert code in the eyebrow + badge. Cert pages inline the fragment
+    // directly, so this loader code never ships.
+    (function () {
+      const slots = document.querySelectorAll('[data-cert-code]');
+      if (!slots.length) return;
+
+      fetch('./_hero.html')
+        .then(function (r) { return r.text(); })
+        .then(function (text) {
+          // Strip leading documentation comment(s), then split into <style> and <section>.
+          // We use indexOf rather than a regex literal to avoid IDE confusion over
+          // the embedded "<" + "!--" sequence inside a <script> tag.
+          let body = text;
+          const COMMENT_OPEN = '<' + '!--';
+          const COMMENT_CLOSE = '--' + '>';
+          while (body.replace(/^\s+/, '').indexOf(COMMENT_OPEN) === 0) {
+            body = body.replace(/^\s+/, '');
+            const closeIdx = body.indexOf(COMMENT_CLOSE);
+            if (closeIdx < 0) break;
+            body = body.slice(closeIdx + COMMENT_CLOSE.length);
+          }
+
+          const doc = new DOMParser().parseFromString(body, 'text/html');
+          const styleEl = doc.querySelector('style');
+          const sectionEl = doc.querySelector('section.am-cert-hero');
+          if (!styleEl || !sectionEl) {
+            throw new Error('Could not find <style> or <section.am-cert-hero> in fragment');
+          }
+
+          // Inject <style> once at the document head — same selectors apply to every instance.
+          if (!document.getElementById('am-cert-hero-style')) {
+            const s = document.createElement('style');
+            s.id = 'am-cert-hero-style';
+            s.textContent = styleEl.textContent;
+            document.head.appendChild(s);
+          }
+
+          slots.forEach(function (slot) {
+            const clone = sectionEl.cloneNode(true);
+            const code = slot.dataset.certCode || 'AZ-104';
+            const name = slot.dataset.certName || 'Microsoft Azure Administrator';
+            const qCount = slot.dataset.qCount || '800';
+            const eyebrowCode = clone.querySelector('.am-cert-hero__eyebrow-code');
+            const badgeCode = clone.querySelector('.am-cert-hero__badge-code');
+            const badgeName = clone.querySelector('.am-cert-hero__badge-name');
+            const statCount = clone.querySelector('.am-cert-hero__stat-count');
+            if (eyebrowCode) eyebrowCode.textContent = code;
+            if (badgeCode) badgeCode.textContent = code;
+            if (badgeName) badgeName.textContent = name;
+            if (statCount) statCount.textContent = qCount;
+
+            // Replace the placeholder div so the section becomes a top-level child.
+            slot.replaceWith(clone);
+          });
+        })
+        .catch(function (err) {
+          console.error(err);
+          slots.forEach(function (s) {
+            s.textContent = 'Failed to load _hero.html — open this preview from the same folder via a local static server.';
+            s.style.color = '#F05050';
+            s.style.padding = '24px';
+          });
+        });
+    })();
+  </script>
+
+</body>
+</html>

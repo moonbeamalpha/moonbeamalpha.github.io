@@ -1,0 +1,592 @@
+<!--
+  Azure Mastery cert-page hero block.
+
+  Copy this entire block (the <style> + <section>) into the top of <main>
+  on each /exams/<cert>/index.html, ABOVE the page's <h1>. Then change
+  FOUR per-cert text nodes:
+    1. <span class="am-cert-hero__eyebrow-code">AZ-104</span>             ← top-of-file eyebrow
+    2. <span class="am-cert-hero__badge-code">AZ-104</span>               ← floating badge: cert code line
+    3. <span class="am-cert-hero__badge-name">Microsoft Azure …</span>    ← floating badge: cert name line
+    4. <span class="am-cert-hero__stat-count">800</span>                  ← cert-specific question count
+
+  The cert code appears in 2 nodes (eyebrow + badge code line); the cert
+  name appears in 1 node (badge name line); the question count appears
+  in 1 node. Everything else (copy, screenshot, CTA, animations) stays
+  identical across all 5 cert pages.
+
+  Design vocabulary borrowed from .claude/skills/ios-app-marketing-page
+  (device-frames.md angle presets, drop-shadows, glow), adapted to a
+  single hero block that inlines into a cert page (no GSAP — pure CSS
+  keyframes for float and entrance). Total weight ~6KB CSS + the markup.
+  Screenshot reuses /images/cap-home-dashboard.webp,
+  refreshed earlier this session.
+
+  Accessibility:
+    - Image has explicit alt text describing the home dashboard.
+    - prefers-reduced-motion disables the float and entrance animations.
+    - Cert badge is plain text inside an <h1>'s sibling — screen readers
+      get the cert code via the page's <h1> regardless.
+-->
+<style>
+  /* Scoped to .am-cert-hero so the block can be dropped into any page
+     without colliding with the host stylesheet. All token references use
+     the homepage's :root vars where present, with hex fallbacks. */
+  .am-cert-hero {
+    --amh-cyan:   #50E6FF;
+    --amh-blue:   #2B88D8;
+    --amh-purple: #9578E0;
+    --amh-gold:   #FFB900;
+    --amh-bg:     #050810;
+    --amh-card:   #111827;
+    --amh-text:   #F0F0F0;
+    --amh-muted:  #8B95A5;
+    --amh-border: rgba(255,255,255,0.08);
+
+    position: relative;
+    isolation: isolate;
+    padding: clamp(48px, 8vw, 96px) 24px clamp(40px, 6vw, 72px);
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    color: var(--amh-text);
+    overflow: hidden;
+  }
+  /* Soft hero glow behind the device — radial, drifts off the right edge */
+  .am-cert-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 56% 48% at 72% 38%, rgba(80,230,255,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 32% at 28% 70%, rgba(149,120,224,0.10) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .am-cert-hero__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (min-width: 880px) {
+    .am-cert-hero__inner {
+      grid-template-columns: 1.05fr 1fr;
+      gap: 48px;
+    }
+  }
+
+  /* ── Copy column ── */
+  .am-cert-hero__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 560px;
+  }
+
+  /* Brand chip — Azure Mastery app icon + name, links back to homepage.
+     Sized like an App Store hero header (48px icon, 20px name) so the
+     brand registers immediately above the cert eyebrow. */
+  .am-cert-hero__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 8px 18px 8px 8px;
+    margin-bottom: -4px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--amh-border);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .am-cert-hero__brand:hover {
+    background: rgba(80,230,255,0.06);
+    border-color: rgba(80,230,255,0.30);
+    transform: translateY(-1px);
+  }
+  .am-cert-hero__brand-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 11px;
+    flex-shrink: 0;
+    box-shadow:
+      0 4px 12px rgba(0,0,0,0.45),
+      0 0 0 1px rgba(255,255,255,0.08) inset;
+  }
+  .am-cert-hero__brand-name {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: var(--amh-text);
+  }
+  .am-cert-hero__eyebrow {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amh-muted);
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .am-cert-hero__eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--amh-cyan);
+  }
+  .am-cert-hero__eyebrow-code {
+    color: var(--amh-cyan);
+    letter-spacing: 0.12em;
+  }
+
+  .am-cert-hero__lead {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(28px, 4.4vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--amh-text);
+    margin: 0;
+  }
+  .am-cert-hero__lead-accent {
+    background: linear-gradient(135deg, var(--amh-cyan) 0%, var(--amh-blue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .am-cert-hero__sub {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.55;
+    color: var(--amh-muted);
+    margin: 0;
+  }
+
+  /* ── Quick stats row ── */
+  .am-cert-hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 4px;
+  }
+  .am-cert-hero__stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--amh-border);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--amh-text);
+  }
+  .am-cert-hero__stat-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amh-cyan);
+    box-shadow: 0 0 8px rgba(80,230,255,0.7);
+  }
+  .am-cert-hero__stat--gold .am-cert-hero__stat-dot { background: var(--amh-gold); box-shadow: 0 0 8px rgba(255,185,0,0.6); }
+  .am-cert-hero__stat--purple .am-cert-hero__stat-dot { background: var(--amh-purple); box-shadow: 0 0 8px rgba(149,120,224,0.6); }
+
+  /* ── CTA row ── */
+  .am-cert-hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 16px;
+    align-items: center;
+  }
+  .am-cert-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    color: #050810;
+    background: linear-gradient(135deg, var(--amh-cyan) 0%, var(--amh-blue) 100%);
+    text-decoration: none;
+    box-shadow:
+      0 10px 24px rgba(43,136,216,0.35),
+      0 0 0 1px rgba(80,230,255,0.4) inset;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .am-cert-hero__cta:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 14px 32px rgba(43,136,216,0.45),
+      0 0 0 1px rgba(80,230,255,0.6) inset;
+  }
+  .am-cert-hero__cta-icon {
+    flex-shrink: 0;
+  }
+  .am-cert-hero__small {
+    font-size: 12px;
+    color: var(--amh-muted);
+  }
+
+  /* ── Device column ── */
+  .am-cert-hero__device {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1600px;
+    min-height: 580px;
+  }
+
+  /* Floating cert badge — positioned over the phone on a separate plane */
+  .am-cert-hero__badge {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(17, 24, 39, 0.86);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(80,230,255,0.45);
+    border-radius: 999px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 24px rgba(80,230,255,0.16);
+    animation: am-cert-hero-badge-float 5.4s ease-in-out infinite;
+  }
+  .am-cert-hero__badge-glyph {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  .am-cert-hero__badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+    min-width: 0;
+  }
+  .am-cert-hero__badge-code {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--amh-cyan);
+    letter-spacing: 0.06em;
+  }
+  .am-cert-hero__badge-name {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--amh-text);
+    margin-top: 2px;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Floating "Predicted Score" pill — bottom-right of phone */
+  .am-cert-hero__score-pill {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 14px 20px;
+    background: rgba(17, 24, 39, 0.92);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--amh-border);
+    border-radius: 16px;
+    box-shadow: 0 14px 36px rgba(0,0,0,0.55), 0 0 28px rgba(80,230,255,0.12);
+    animation: am-cert-hero-pill-float 6.2s ease-in-out infinite;
+    animation-delay: -2.1s;
+  }
+  .am-cert-hero__score-pill-label {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amh-muted);
+  }
+  .am-cert-hero__score-pill-value {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--amh-cyan);
+    letter-spacing: -0.01em;
+  }
+  .am-cert-hero__score-pill-margin {
+    font-size: 13px;
+    color: var(--amh-muted);
+    font-weight: 500;
+    margin-left: 2px;
+  }
+  .am-cert-hero__score-pill-delta {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 11px;
+    color: #20C020;
+  }
+
+  /* iPhone frame (geometry from skill device-frames.md, scaled to 320×660) */
+  .am-cert-hero__phone-wrap {
+    position: relative;
+    transform-style: preserve-3d;
+    transform:
+      perspective(1400px)
+      rotateY(-12deg)
+      rotateX(-3deg);
+    filter:
+      drop-shadow(0 50px 70px rgba(0,0,0,0.6))
+      drop-shadow(0 0 40px rgba(80,230,255,0.10));
+    animation: am-cert-hero-float 6s ease-in-out infinite;
+  }
+  .am-cert-hero__phone-frame {
+    width: 280px;
+    height: 580px;
+    border-radius: 50px;
+    background: linear-gradient(160deg,
+      #2a2a2e 0%,
+      #1c1c1f 30%,
+      #111113 60%,
+      #232325 85%,
+      #2a2a2e 100%);
+    border: 1.5px solid rgba(255,255,255,0.14);
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.18),
+      inset 0 -1px 0 rgba(0,0,0,0.5),
+      inset 1px 0 rgba(255,255,255,0.06),
+      inset -1px 0 rgba(255,255,255,0.06);
+  }
+  @media (min-width: 880px) {
+    .am-cert-hero__phone-frame {
+      width: 320px;
+      height: 660px;
+      border-radius: 54px;
+    }
+  }
+  /* Inner chamfer */
+  .am-cert-hero__phone-frame::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 44px;
+    border: 1px solid rgba(0,0,0,0.5);
+    pointer-events: none;
+    z-index: 10;
+  }
+  @media (min-width: 880px) {
+    .am-cert-hero__phone-frame::before { border-radius: 48px; }
+  }
+  /* Side button chrome (volume + power) */
+  .am-cert-hero__phone-frame::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 110px;
+    width: 3px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 2px 0 0 2px;
+    box-shadow:
+      0 48px 0 rgba(255,255,255,0.15),
+      0 -48px 0 rgba(255,255,255,0.10);
+  }
+
+  /* Screen — holds the actual screenshot */
+  .am-cert-hero__phone-screen {
+    position: absolute;
+    inset: 8px;
+    border-radius: 42px;
+    background-color: #0A0E1A;
+    background-image: url('/images/cap-home-dashboard.webp');
+    background-size: cover;
+    background-position: center top;
+    overflow: hidden;
+  }
+  @media (min-width: 880px) {
+    .am-cert-hero__phone-screen { border-radius: 46px; }
+  }
+  /* Dynamic island */
+  .am-cert-hero__phone-screen::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94px;
+    height: 28px;
+    border-radius: 14px;
+    background: #000;
+    z-index: 20;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+  }
+  @media (min-width: 880px) {
+    .am-cert-hero__phone-screen::before { width: 108px; height: 32px; border-radius: 16px; }
+  }
+  /* Glare overlay */
+  .am-cert-hero__phone-screen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+      rgba(255,255,255,0.08) 0%,
+      transparent 45%,
+      rgba(255,255,255,0.03) 100%);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 15;
+  }
+
+  /* Animations */
+  @keyframes am-cert-hero-float {
+    0%, 100% { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(0); }
+    50%      { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(-10px); }
+  }
+  @keyframes am-cert-hero-badge-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-4px); }
+  }
+  @keyframes am-cert-hero-pill-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+  @keyframes am-cert-hero-fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .am-cert-hero__copy > * {
+    opacity: 0;
+    animation: am-cert-hero-fade-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  .am-cert-hero__copy > *:nth-child(1) { animation-delay: 0.00s; }   /* brand chip   */
+  .am-cert-hero__copy > *:nth-child(2) { animation-delay: 0.08s; }   /* eyebrow      */
+  .am-cert-hero__copy > *:nth-child(3) { animation-delay: 0.18s; }   /* headline     */
+  .am-cert-hero__copy > *:nth-child(4) { animation-delay: 0.28s; }   /* sub line     */
+  .am-cert-hero__copy > *:nth-child(5) { animation-delay: 0.38s; }   /* stats        */
+  .am-cert-hero__copy > *:nth-child(6) { animation-delay: 0.48s; }   /* CTA          */
+  .am-cert-hero__device {
+    opacity: 0;
+    animation: am-cert-hero-fade-in 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .am-cert-hero__phone-wrap,
+    .am-cert-hero__badge,
+    .am-cert-hero__score-pill { animation: none; }
+    .am-cert-hero__copy > *,
+    .am-cert-hero__device { opacity: 1; animation: none; }
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 879px) {
+    .am-cert-hero__device { min-height: 620px; padding-top: 24px; }
+    .am-cert-hero__phone-wrap {
+      transform: perspective(1400px) rotateY(-6deg) rotateX(-2deg);
+    }
+    @keyframes am-cert-hero-float {
+      0%, 100% { transform: perspective(1400px) rotateY(-6deg) rotateX(-2deg) translateY(0); }
+      50%      { transform: perspective(1400px) rotateY(-6deg) rotateX(-2deg) translateY(-8px); }
+    }
+    .am-cert-hero__badge { top: 4%; left: 4%; }
+    .am-cert-hero__score-pill { bottom: 4%; right: 4%; }
+  }
+</style>
+
+<section class="am-cert-hero" aria-labelledby="am-cert-hero-lead">
+  <div class="am-cert-hero__inner">
+    <div class="am-cert-hero__copy">
+      <a class="am-cert-hero__brand" href="/apps/AzureMastery/" aria-label="Azure Mastery — back to home">
+        <img class="am-cert-hero__brand-icon"
+             src="/images/app-icon.webp"
+             alt=""
+             width="32" height="32"
+             loading="eager" decoding="async" />
+        <span class="am-cert-hero__brand-name">Azure Mastery</span>
+      </a>
+      <p class="am-cert-hero__eyebrow">
+        Microsoft Certification
+        <span class="am-cert-hero__eyebrow-code">AZ-104</span>
+      </p>
+      <h2 id="am-cert-hero-lead" class="am-cert-hero__lead">
+        Predict your score.
+        <span class="am-cert-hero__lead-accent">Pass with proof.</span>
+      </h2>
+      <p class="am-cert-hero__sub">
+        On-device AI scores your readiness, builds an adaptive study plan, and flags topics fading from memory — before they cost you the exam.
+      </p>
+      <div class="am-cert-hero__stats">
+        <span class="am-cert-hero__stat">
+          <span class="am-cert-hero__stat-dot"></span><span class="am-cert-hero__stat-count">800</span>&nbsp;practice questions
+        </span>
+        <span class="am-cert-hero__stat am-cert-hero__stat--gold">
+          <span class="am-cert-hero__stat-dot"></span>AI score prediction
+        </span>
+        <span class="am-cert-hero__stat am-cert-hero__stat--purple">
+          <span class="am-cert-hero__stat-dot"></span>100% offline
+        </span>
+      </div>
+      <div class="am-cert-hero__ctas">
+        <a class="am-cert-hero__cta"
+           href="https://apps.apple.com/gb/app/azure-mastery/id6760594569"
+           rel="noopener noreferrer">
+          <svg class="am-cert-hero__cta-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+          </svg>
+          Download free
+        </a>
+        <span class="am-cert-hero__small">iPhone &amp; iPad · Free to start</span>
+      </div>
+    </div>
+
+    <div class="am-cert-hero__device">
+      <div class="am-cert-hero__badge" aria-hidden="true">
+        <svg class="am-cert-hero__badge-glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2 L3 6 V12 C3 17 7 21 12 22 C17 21 21 17 21 12 V6 Z"
+                fill="rgba(80,230,255,0.16)"
+                stroke="#50E6FF" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M8 12 l3 3 l5-6"
+                fill="none"
+                stroke="#50E6FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="am-cert-hero__badge-text">
+          <span class="am-cert-hero__badge-code">AZ-104</span>
+          <span class="am-cert-hero__badge-name">Microsoft Azure Administrator</span>
+        </span>
+      </div>
+
+      <div class="am-cert-hero__phone-wrap">
+        <div class="am-cert-hero__phone-frame">
+          <div class="am-cert-hero__phone-screen"
+               role="img"
+               aria-label="Azure Mastery home dashboard showing today's plan, predicted score, and readiness gauge">
+          </div>
+        </div>
+      </div>
+
+      <div class="am-cert-hero__score-pill" aria-hidden="true">
+        <span class="am-cert-hero__score-pill-label">PREDICTED</span>
+        <span class="am-cert-hero__score-pill-value">708 <small class="am-cert-hero__score-pill-margin">±60</small></span>
+        <span class="am-cert-hero__score-pill-delta">▲ 14 days to ready</span>
+      </div>
+    </div>
+  </div>
+</section>

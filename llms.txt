@@ -1,0 +1,95 @@
+# Azure Mastery
+
+> Azure Mastery is an iOS and iPadOS app for Microsoft Azure certification exam preparation. It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 7,200+ practice questions cover 22 Azure exams. The app runs 100% offline with no tracking and no data collection.
+
+Publisher: Moonbeam Alpha Ltd
+Platform: iOS 17+, iPadOS 17+
+Pricing: Free to download, with optional in-app purchases for full per-exam question banks. No subscription required for core study features.
+App Store: https://apps.apple.com/gb/app/azure-mastery/id6760594569
+
+## Primary pages
+
+- [Home — Azure Mastery](https://azuremastery.app/): Product overview, feature list, screenshots, and App Store link. Canonical entry point.
+- [Support](https://azuremastery.app/apps/AzureMastery/support.html): User support, contact, and FAQ.
+- [Privacy Policy](https://azuremastery.app/apps/AzureMastery/privacy.html): Data handling — none collected; everything runs on-device.
+- [Terms of Use](https://azuremastery.app/apps/AzureMastery/terms.html): Standard EULA for in-app purchases.
+
+## Per-exam landing pages
+
+Each Tier 1 Azure cert has a dedicated landing page describing the exam, the in-app question count for that cert, the official Microsoft Learn skills outline, a suggested study plan, and cert-specific FAQs. Question counts are extracted directly from the app's bundled question banks. Each page ships a single `@graph` JSON-LD block linking 6 entities (WebPage, BreadcrumbList, EducationalOccupationalCredential, SoftwareApplication, FAQPage, HowTo) for AI/AEO discoverability.
+
+- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 302 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills outline updated 14 January 2026.
+
+- [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 343 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
+
+- [AZ-305 — Designing Microsoft Azure Infrastructure Solutions](https://azuremastery.app/exams/az-305/): 304 in-app practice questions. Expert-tier solution architect cert (single exam earns the Microsoft Certified: Azure Solutions Architect Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions plus case studies. Four design domains: identity/governance/monitoring (25–30%), data storage (20–25%), business continuity (15–20%), infrastructure (30–35%). Recommended Associate prerequisite: AZ-104. Skills outline updated 17 April 2026.
+
+- [AZ-204 — Developing Solutions for Microsoft Azure](https://azuremastery.app/exams/az-204/): 318 in-app practice questions. Associate-tier developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. **⚠ Exam retires 31 July 2026.** Five developer domains: compute (25–30%), storage (15–20%), security (15–20%), monitor/troubleshoot/optimize (5–10%), connect/consume services (20–25%). Heavy on SDK code samples in C#/Python/JavaScript. Skills outline updated 14 January 2026.
+
+- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 444 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 OR AZ-204. Skills outline updated 24 April 2026.
+
+## Exams covered (22)
+
+The app covers the following Microsoft Azure certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine.
+
+### Azure infrastructure & solutions
+- AZ-900 — Microsoft Azure Fundamentals
+- AZ-104 — Microsoft Azure Administrator Associate
+- AZ-204 — Developing Solutions for Microsoft Azure (Developer Associate)
+- AZ-305 — Designing Microsoft Azure Infrastructure Solutions (Solutions Architect Expert)
+- AZ-400 — Designing and Implementing Microsoft DevOps Solutions (DevOps Engineer Expert)
+- AZ-500 — Microsoft Azure Security Technologies (Security Engineer Associate)
+- AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions
+
+### AI & Machine Learning
+- AI-900 — Microsoft Azure AI Fundamentals
+- AI-901 — Microsoft Azure AI Foundations
+- AI-102 — Designing and Implementing a Microsoft Azure AI Solution
+- AI-103 — Microsoft Azure AI Cloud Developer
+- AI-200 — Microsoft Azure AI App Agent Developer
+- AI-300 — Microsoft Azure AI Engineer
+- AB-620 — AI Agent Builder Associate
+
+### Data
+- DP-900 — Microsoft Azure Data Fundamentals
+- DP-100 — Designing and Implementing a Data Science Solution on Azure
+- DP-300 — Administering Microsoft Azure SQL Solutions
+
+### Security, Compliance & Identity
+- SC-900 — Microsoft Security, Compliance, and Identity Fundamentals
+- SC-100 — Microsoft Cybersecurity Architect Expert
+- SC-200 — Microsoft Security Operations Analyst
+- SC-300 — Microsoft Identity and Access Administrator
+
+### Power Platform
+- PL-300 — Microsoft Power BI Data Analyst Associate
+
+## Core capabilities
+
+- **Exam IQ**: On-device CoreML model that predicts your exam-day score with confidence intervals, using Item Response Theory (IRT) and Bayesian inference over your answer history.
+- **Adaptive study plans**: The app picks your next session — weak-spot drills, knowledge-decay refreshes, mock exams — based on your current ability estimate per domain.
+- **Exam simulator**: Full-length mock exams under real timing and question distribution for each Microsoft exam.
+- **Knowledge decay tracking**: Spaced-repetition signals flag topics where your retention has dropped before exam day, with targeted refresher sessions.
+- **Question types**: Multiple choice, multi-select, drag-and-drop ordering, hotspot, case studies — matching the formats Microsoft uses on the real exams.
+- **Why Wrong**: For incorrect answers, on-device Apple Foundation Model generates targeted explanations grounded in the question's correct rationale.
+- **Offline-first**: Works fully without a network. No telemetry, no analytics on user behavior, no account required.
+- **Apple ecosystem**: Native SwiftUI on iPhone and iPad; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
+
+## Differentiation
+
+Azure Mastery is built for serious certification candidates who want to know *when they're ready* rather than just drilling questions. It is differentiated from generic flashcard apps by:
+
+1. ML score prediction calibrated to Microsoft's pass thresholds, not a raw % correct.
+2. Per-domain ability estimation — you see exactly which of an exam's domains is dragging your predicted score down.
+3. Knowledge decay alerts so you don't lose old material while learning new domains.
+4. 100% on-device computation — Exam IQ, Why Wrong explanations, and study plan generation never leave the device.
+
+## Social
+
+- [TikTok — @azuremastery](https://www.tiktok.com/@azuremastery): Short-form video tips and exam study walkthroughs.
+- [Facebook — Azure Mastery](https://www.facebook.com/profile.php?id=61578421530035): App announcements and community.
+
+## Optional resources
+
+- [Sitemap](https://azuremastery.app/sitemap.xml)
+- [robots.txt](https://azuremastery.app/robots.txt)

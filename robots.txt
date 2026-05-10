@@ -1,4 +1,76 @@
+# Default: allow everything for traditional search and crawlers.
 User-agent: *
+Allow: /
+
+# ─── AI crawlers (training corpora + retrieval-augmented search) ───
+# Each named user-agent gets its own block because most agents apply
+# only the most-specific match, not the union with `*`.
+
+# OpenAI: ChatGPT browsing + GPTBot training crawler.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic: Claude live retrieval + training crawlers.
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity (live retrieval for citations).
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google: Gemini / Vertex AI training. Distinct from Googlebot search.
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence + Spotlight Suggestions AI use.
+# Applebot-Extended must be explicitly allowed to opt IN.
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (corpus used by many open LLM training pipelines).
+User-agent: CCBot
+Allow: /
+
+# Amazon (Alexa AI / Q).
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI training crawler.
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ByteDance / TikTok AI.
+User-agent: Bytespider
+Allow: /
+
+# DuckAssist / DuckDuckGo AI.
+User-agent: DuckAssistBot
+Allow: /
+
+# Cohere training crawler.
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot (used by Perplexity, You.com, others as a knowledge graph layer).
+User-agent: Diffbot
 Allow: /
 
 Sitemap: https://azuremastery.app/sitemap.xml

@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>AZ-500 Study App for iOS — Microsoft Azure Security Engineer Practice Questions | Azure Mastery</title>
+  <meta name="description" content="Pass AZ-500 (Microsoft Azure Security Engineer) with confidence. Azure Mastery is an iOS app with 326 AZ-500 practice questions across all 5 domains, AI score prediction, adaptive study plans, and a full-length exam simulator. Free to start.">
+  <meta name="keywords" content="AZ-500, AZ-500 study app, AZ-500 practice questions, AZ-500 exam prep, AZ-500 mock exam, AZ-500 revision, Microsoft Azure Security Engineer, Azure Fundamentals exam, Azure certification, Microsoft certification, iOS study app, exam preparation, Exam IQ, AI score prediction, adaptive study plan">
+  <link rel="canonical" href="https://azuremastery.app/exams/az-500/">
+
+  <!-- Crawler directives — explicitly allow rich results, full snippet length, large image previews.
+       Helps both classical SEO (Google rich snippets) and AI/AEO answer engines (ChatGPT, Perplexity,
+       Google AI Overviews, Gemini) extract substantive content blocks. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+
+  <!-- Theme + favicons (consistent with /apps/AzureMastery/) -->
+  <meta name="theme-color" content="#050810">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- Preload the hero screenshot (LCP candidate) -->
+  <link rel="preload" as="image" href="/images/cap-home-dashboard.webp" fetchpriority="high">
+
+  <!-- OpenGraph / Twitter (cert-scoped title + description; reuses homepage OG image) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://azuremastery.app/exams/az-500/">
+  <meta property="og:title" content="AZ-500 Study App for iOS — Microsoft Azure Security Engineer">
+  <meta property="og:description" content="326 AZ-500 practice questions, on-device AI score prediction, adaptive study plans, knowledge decay alerts. iPhone &amp; iPad. Free to start.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — AI-powered AZ-500 (Microsoft Azure Security Engineer) practice on iPhone and iPad.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AZ-500 Study App for iOS — Microsoft Azure Security Engineer">
+  <meta name="twitter:description" content="326 AZ-500 practice questions, on-device AI score prediction, adaptive study plans. iPhone &amp; iPad. Free to start.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking 6 entities by @id.
+       Modern best practice for both classical SEO (Google) AND AI/AEO answer
+       engines (Perplexity, ChatGPT search, Google AI Overviews, Gemini, Claude),
+       which prefer linked, type-rich graphs over flat schemas:
+         · WebPage                       — page-level metadata + speakable
+         · BreadcrumbList                — site hierarchy
+         · EducationalOccupationalCredential — formal AZ-500 cert entity
+         · SoftwareApplication           — Azure Mastery app
+         · FAQPage                       — visible FAQ section, cert-specific Qs only
+         · HowTo                         — visible 2-week study plan
+       NO aggregateRating per Phase 1 decision (re-add when ≥3 real ratings exist). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/exams/az-500/#webpage",
+        "url": "https://azuremastery.app/exams/az-500/",
+        "name": "AZ-500 Study App for iOS — Microsoft Azure Security Engineer Practice Questions",
+        "description": "Pass AZ-500 (Microsoft Azure Security Engineer) with confidence. Azure Mastery is an iOS app with 326 AZ-500 practice questions, AI score prediction, and adaptive study plans.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-05-09",
+        "dateModified": "2026-05-09",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "about": { "@id": "https://azuremastery.app/exams/az-500/#credential" },
+        "mainEntity": { "@id": "https://azuremastery.app/exams/az-500/#app" },
+        "breadcrumb": { "@id": "https://azuremastery.app/exams/az-500/#breadcrumbs" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".section-lede", ".am-cert-hero__sub", "#what-is p", "#how-helps p"]
+        },
+        "primaryImageOfPage": "https://azuremastery.app/images/cap-home-dashboard.webp",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/exams/az-500/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "AZ-500 Microsoft Azure Security Engineer" }
+        ]
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "@id": "https://azuremastery.app/exams/az-500/#credential",
+        "name": "Microsoft Certified: Azure Security Engineer Associate",
+        "alternateName": "AZ-500",
+        "credentialCategory": "Certification",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/",
+        "educationalLevel": "Intermediate",
+        "competencyRequired": [
+          "Secure identity and access (15–20%)",
+          "Secure networking (20–25%)",
+          "Secure compute, storage, and databases (20–25%)",
+          "Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel (30–35%)"
+        ],
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Microsoft",
+          "url": "https://learn.microsoft.com/"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://azuremastery.app/exams/az-500/#app",
+        "name": "Azure Mastery — AZ-500 Practice",
+        "url": "https://azuremastery.app/exams/az-500/",
+        "downloadUrl": "https://apps.apple.com/gb/app/azure-mastery/id6760594569",
+        "operatingSystem": "iOS 18+, iPadOS 18+",
+        "applicationCategory": "EducationApplication",
+        "applicationSubCategory": "Exam Preparation",
+        "description": "AZ-500 Microsoft Azure Security Engineer practice on iPhone and iPad. 326 cert-specific questions with on-device AI score prediction and adaptive study plans.",
+        "image": "https://azuremastery.app/images/cap-home-dashboard.webp",
+        "screenshot": [
+          "https://azuremastery.app/images/cap-home-dashboard.webp",
+          "https://azuremastery.app/images/cap-exam-iq.webp",
+          "https://azuremastery.app/images/cap-study-plan.webp"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free to start. In-app purchases unlock the full AZ-500 question bank."
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "keywords": "AZ-500, Microsoft Azure Security Engineer Associate, Azure sysadmin, Azure certification, exam prep, practice questions, mock exam, revision, iOS study app, AI score prediction, Bicep, ARM templates, Azure RBAC, NSG, Azure Backup",
+        "featureList": [
+          "326 AZ-500 practice questions written against the January 2026 skills outline",
+          "AI-powered Exam IQ readiness score with confidence interval",
+          "Adaptive study plan that targets your weakest domains",
+          "Knowledge decay tracking — flags topics fading from memory",
+          "Real exam simulation at AZ-500 length and time pressure",
+          "100% on-device — no tracking, no account required to start"
+        ],
+        "about": { "@id": "https://azuremastery.app/exams/az-500/#credential" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://azuremastery.app/exams/az-500/#faqs",
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does the AZ-500 exam cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The AZ-500 voucher is USD $165 in the United States. Pricing varies by region — in the UK it is typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AZ-500 also requires annual renewal (free, online), so factor that into long-term cost planning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the AZ-500 certification expire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Microsoft Associate certifications including AZ-500 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. Fundamentals certifications such as AZ-900 are different — those don't expire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the AZ-500 retake policy if I fail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long should I study for AZ-500?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most candidates pass AZ-500 after four to eight weeks of focused study, assuming some prior IT or cloud experience. If Azure is genuinely new to you, plan for two to three months — the exam expects you to know specific PowerShell and Azure CLI commands, not just describe concepts. Azure Mastery's readiness gauge tells you when you are at exam-ready — do not book until it shows roughly 720 or higher with reasonable confidence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AZ-500 vs AZ-900 — which should I take first?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you have less than six months of hands-on Azure experience, take AZ-900 (Microsoft Azure Fundamentals) first. It builds the conceptual map AZ-500 assumes you already have. If you have a year or more of practical Azure work, you can skip AZ-900 and go straight to AZ-500 — most hiring managers care about AZ-500 specifically. AZ-900 is often dropped from CVs once AZ-500 is on it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AZ-500 vs AZ-305 — which next?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pass AZ-500 first. AZ-500 is the Associate-level operational cert; AZ-305 is the Expert-level architectural cert. AZ-305 assumes you already understand Azure operations (the AZ-500 material) and adds requirements gathering, capacity planning, governance design, and choosing between competing service options. Most architects hold both — AZ-500 to prove they have done the work, AZ-305 to prove they can design it."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://azuremastery.app/exams/az-500/#study-plan",
+        "name": "How to study for AZ-500 (Microsoft Azure Security Engineer) in 6 weeks",
+        "description": "A six-week study plan mapped to the AZ-500 skills outline (January 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "totalTime": "P42D",
+        "supply": [
+          { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
+          { "@type": "HowToSupply", "name": "AZ-500 exam voucher (USD $165 / approx. £128)" }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Identity and networking foundations (Weeks 1–2)",
+            "text": "Week 1: cover 'Secure identity and access' — Microsoft Entra identity types, MFA and passwordless authentication, Conditional Access, Privileged Identity Management, Microsoft Entra ID Protection, RBAC and Azure ABAC. Week 2: cover 'Secure networking' — Azure Firewall, DDoS Protection, Web Application Firewall on App Gateway and Front Door, NSGs and ASGs, Azure Bastion, Private Link and Private Endpoints.",
+            "url": "https://azuremastery.app/exams/az-500/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Workload protection and Key Vault (Weeks 3–4)",
+            "text": "Week 3: cover 'Secure compute, storage, and databases' — VM disk encryption, AKS network policies and Microsoft Entra integration, App Service network restrictions, Container Registry signing/scanning. Storage SAS tokens, customer-managed keys, immutable storage. Database TDE, Always Encrypted, Defender for SQL. Week 4: deep dive on Azure Key Vault — keys, secrets, certificates, access policies vs RBAC, soft-delete and purge protection.",
+            "url": "https://azuremastery.app/exams/az-500/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Defender for Cloud, Sentinel, simulate (Weeks 5–6)",
+            "text": "Week 5: cover 'Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel' — the largest domain (30–35%). Defender for Cloud Secure Score, regulatory compliance, workload protection plans. Microsoft Sentinel data connectors, analytics rules, KQL hunting, Logic App playbooks, workbooks. Week 6: switch to Focus Weak Spots sessions every morning, then two full-length 100-minute Exam Simulator runs in the second half. Schedule the exam when you are scoring 750+ with confidence.",
+            "url": "https://azuremastery.app/exams/az-500/#study-plan"
+          }
+        ],
+        "about": { "@id": "https://azuremastery.app/exams/az-500/#credential" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as homepage -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — CERT PAGE TOKENS + TYPOGRAPHY
+       Subset of /apps/AzureMastery/index.html :root + display-* / body-*
+       so the cert page matches the homepage visual without re-bundling
+       the full 80KB design system.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Visually-hidden utility — same definition as homepage */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (homepage parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .heading-small  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.4; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Top sticky-on-scroll site nav (minimal) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section {
+      padding-block: clamp(56px, 6vw, 96px);
+    }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    /* Right-rail "On this page" TOC — desktop only */
+    .page-toc { display: none; }
+    @media (min-width: 1280px) {
+      .page-toc {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        z-index: 40;
+        width: 152px;
+        padding: 16px 10px;
+        background: rgba(5, 8, 16, 0.55);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+      }
+      .page-toc__title {
+        margin: 0 0 10px;
+        padding-inline-start: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--azure-cyan);
+      }
+      .page-toc__list { list-style: none; margin: 0; padding: 0; }
+      .page-toc__item { margin: 0; }
+      .page-toc__link {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        border-radius: 0 6px 6px 0;
+        transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      }
+      .page-toc__link:hover {
+        color: var(--text-primary);
+        background: rgba(80, 230, 255, 0.06);
+        text-decoration: none;
+      }
+      .page-toc__link[aria-current="true"] {
+        color: var(--azure-cyan);
+        border-left-color: var(--azure-cyan);
+        background: rgba(80, 230, 255, 0.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    .section-eyebrow { margin: 0 0 18px; }
+    .section-title { margin: 0 0 36px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 40px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 64ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+
+    /* Page-level H1 — sits below the hero, sets the SEO target */
+    .page-h1 {
+      margin: 0 0 16px;
+      color: var(--text-primary);
+    }
+    .page-h1-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Exam-format facts list */
+    .exam-format {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .exam-format { grid-template-columns: repeat(2, 1fr); }
+    }
+    .exam-format li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .exam-format__label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 96px;
+    }
+    .exam-format__value {
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+
+    /* Domain card grid (objectives) */
+    .domains {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .domain {
+      padding: 24px 26px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .domain h3 {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 0 0 12px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 1.3;
+    }
+    .domain__weight {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.10);
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(80,230,255,0.25);
+      white-space: nowrap;
+    }
+    .domain p { margin: 0; max-width: 60ch; }
+
+    /* Study plan as ordered list with week labels */
+    .study-plan {
+      list-style: none;
+      counter-reset: weeks;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 18px;
+    }
+    .study-plan > li {
+      counter-increment: weeks;
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      position: relative;
+    }
+    .study-plan > li::before {
+      content: 'Week ' counter(weeks);
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+      margin-bottom: 8px;
+    }
+    .study-plan h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+    }
+    .study-plan ul { margin: 0; padding-left: 20px; color: var(--text-secondary); }
+    .study-plan li li { margin-bottom: 4px; }
+
+    /* FAQ items */
+    .faqs { display: grid; gap: 14px; margin-top: 16px; }
+    .faq {
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .faq h3 {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .faq p { margin: 0; }
+
+    /* Question types — visualisations of each format */
+    .question-types {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 16px;
+    }
+    @media (min-width: 640px) { .question-types { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .question-types { grid-template-columns: repeat(3, 1fr); } }
+    .qt {
+      padding: 20px 22px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+    }
+    .qt__viz {
+      background: rgba(10,14,26,0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      margin-bottom: 18px;
+      font-family: 'DM Sans', sans-serif;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    .qt__viz-q {
+      margin: 0 0 12px;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .qt__viz-options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px;
+    }
+    .qt__viz-options li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      font-size: 11px;
+      line-height: 1.3;
+    }
+    .qt__viz-options li.is-selected {
+      background: rgba(80,230,255,0.10);
+      border-color: rgba(80,230,255,0.32);
+      color: var(--text-primary);
+    }
+    .qt__viz-radio {
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      border: 1.5px solid var(--text-muted);
+      flex-shrink: 0;
+      position: relative;
+    }
+    .is-selected .qt__viz-radio {
+      border-color: var(--azure-cyan);
+      background: var(--azure-cyan);
+      box-shadow: 0 0 8px rgba(80,230,255,0.45);
+    }
+    .is-selected .qt__viz-radio::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border-radius: 50%;
+      background: #050810;
+    }
+    .qt__viz-checkbox {
+      width: 13px; height: 13px;
+      border-radius: 3px;
+      border: 1.5px solid var(--text-muted);
+      flex-shrink: 0;
+      position: relative;
+    }
+    .is-selected .qt__viz-checkbox {
+      background: var(--azure-cyan);
+      border-color: var(--azure-cyan);
+      box-shadow: 0 0 8px rgba(80,230,255,0.4);
+    }
+    .is-selected .qt__viz-checkbox::after {
+      content: '';
+      position: absolute;
+      top: 2px; left: 4px;
+      width: 4px; height: 7px;
+      border-right: 1.8px solid #050810;
+      border-bottom: 1.8px solid #050810;
+      transform: rotate(45deg);
+    }
+
+    /* Drag-and-drop visualisation */
+    .qt__viz-drag {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 5px;
+    }
+    .qt__viz-drag li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px 7px 6px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      color: var(--text-primary);
+      font-size: 11px;
+      cursor: grab;
+    }
+    .qt__viz-drag-handle {
+      color: var(--text-muted);
+      font-size: 12px;
+      letter-spacing: -2px;
+      flex-shrink: 0;
+    }
+    .qt__viz-drag-num {
+      display: inline-flex;
+      width: 18px; height: 18px;
+      align-items: center;
+      justify-content: center;
+      background: rgba(80,230,255,0.12);
+      color: var(--azure-cyan);
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      flex-shrink: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Hotspot — mock UI with a target highlight */
+    .qt__viz-hotspot {
+      position: relative;
+      flex-grow: 1;
+      min-height: 140px;
+      background: linear-gradient(135deg, #182033 0%, #0a0e1a 100%);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .qt__viz-hotspot::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(transparent 22%, rgba(255,255,255,0.05) 22%, rgba(255,255,255,0.05) 23%, transparent 23%),
+        linear-gradient(transparent 44%, rgba(255,255,255,0.05) 44%, rgba(255,255,255,0.05) 45%, transparent 45%),
+        linear-gradient(transparent 66%, rgba(255,255,255,0.05) 66%, rgba(255,255,255,0.05) 67%, transparent 67%),
+        linear-gradient(transparent 88%, rgba(255,255,255,0.05) 88%, rgba(255,255,255,0.05) 89%, transparent 89%);
+    }
+    .qt__viz-hotspot-mock-row {
+      position: absolute;
+      left: 12px;
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+    }
+    .qt__viz-hotspot-mock-row--1 { top: 18%; width: 60%; }
+    .qt__viz-hotspot-mock-row--2 { top: 32%; width: 80%; }
+    .qt__viz-hotspot-mock-row--3 { top: 46%; width: 50%; }
+    .qt__viz-hotspot-mock-row--4 { top: 60%; width: 70%; }
+    .qt__viz-hotspot-mock-row--5 { top: 74%; width: 55%; }
+    .qt__viz-target {
+      position: absolute;
+      width: 28px; height: 28px;
+      border: 2px solid var(--azure-cyan);
+      border-radius: 50%;
+      top: 28%; left: 62%;
+      box-shadow: 0 0 18px rgba(80,230,255,0.6), inset 0 0 8px rgba(80,230,255,0.2);
+      transform: translate(-50%, -50%);
+    }
+    .qt__viz-target::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      background: var(--azure-cyan);
+      border-radius: 50%;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .qt__viz-target { animation: qt-pulse 2.4s ease-in-out infinite; }
+    }
+    @keyframes qt-pulse {
+      0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 1; }
+      50% { transform: translate(-50%,-50%) scale(1.18); opacity: 0.85; }
+    }
+
+    /* Case studies */
+    .qt__viz-case {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .qt__viz-case-scenario {
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.03);
+      border-left: 2px solid var(--azure-cyan);
+      border-radius: 0 4px 4px 0;
+      color: var(--text-secondary);
+      font-size: 10px;
+      line-height: 1.45;
+    }
+    .qt__viz-case-scenario strong { color: var(--text-primary); font-weight: 600; }
+    .qt__viz-case-questions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 5px;
+    }
+    .qt__viz-case-questions li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 9px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      font-size: 10px;
+    }
+    .qt__viz-case-num {
+      display: inline-flex;
+      width: 16px; height: 16px;
+      align-items: center;
+      justify-content: center;
+      background: rgba(80,230,255,0.10);
+      color: var(--azure-cyan);
+      border-radius: 50%;
+      font-size: 9px;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      flex-shrink: 0;
+    }
+
+    /* Why Wrong AI */
+    .qt__viz-ai-wrong {
+      padding: 7px 10px;
+      background: rgba(240,80,80,0.08);
+      border: 1px solid rgba(240,80,80,0.25);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      font-size: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .qt__viz-ai-wrong-mark { color: #F05050; font-weight: 700; font-size: 12px; }
+    .qt__viz-ai-explain {
+      padding: 9px 11px;
+      background: linear-gradient(135deg, rgba(80,230,255,0.06) 0%, rgba(149,120,224,0.06) 100%);
+      border: 1px solid rgba(80,230,255,0.22);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      font-size: 10px;
+      line-height: 1.45;
+      flex-grow: 1;
+    }
+    .qt__viz-ai-explain-mark {
+      color: var(--azure-cyan);
+      font-weight: 700;
+      margin-right: 4px;
+    }
+    .qt__viz-ai-source {
+      display: block;
+      margin-top: 8px;
+      font-size: 9px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Card text */
+    .qt h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .qt p { margin: 0 0 12px; color: var(--text-secondary); font-size: 14px; line-height: 1.55; flex-grow: 1; }
+    .qt__hint {
+      display: inline-block;
+      align-self: flex-start;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+      padding: 4px 10px;
+      background: rgba(80,230,255,0.08);
+      border: 1px solid rgba(80,230,255,0.18);
+      border-radius: 999px;
+    }
+    .qt__hint--gold { color: var(--xp-gold); background: rgba(255,185,0,0.10); border-color: rgba(255,185,0,0.22); }
+    .qt__hint--purple { color: var(--azure-purple); background: rgba(149,120,224,0.10); border-color: rgba(149,120,224,0.22); }
+
+    /* Certification paths visualisation */
+    .cert-paths { display: grid; gap: 18px; margin-top: 16px; }
+    .cert-path {
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .cert-path__header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .cert-path__name {
+      margin: 0;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .cert-path__tag {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+      padding: 3px 9px;
+      background: rgba(80,230,255,0.08);
+      border: 1px solid rgba(80,230,255,0.22);
+      border-radius: 999px;
+    }
+    .cert-path__tag--terminal { color: var(--success-green); background: rgba(32,192,32,0.08); border-color: rgba(32,192,32,0.25); }
+    .cert-path__stations {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 10px;
+    }
+    .cert-path__station {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cert-path__station + .cert-path__station::before {
+      content: '→';
+      color: var(--text-muted);
+      font-size: 18px;
+      align-self: center;
+    }
+    .cert-path__chip {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-subtle);
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      min-width: 0;
+    }
+    a.cert-path__chip:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.30);
+      transform: translateY(-1px);
+    }
+    .cert-path__chip-code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+    .cert-path__chip-role {
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+    .cert-path__chip--current {
+      background: linear-gradient(135deg, rgba(80,230,255,0.18) 0%, rgba(43,136,216,0.18) 100%);
+      border-color: rgba(80,230,255,0.50);
+      box-shadow: 0 0 18px rgba(80,230,255,0.20);
+    }
+    .cert-path__chip--current .cert-path__chip-code { color: var(--azure-cyan); }
+    .cert-path__chip--target {
+      background: rgba(255,185,0,0.10);
+      border-color: rgba(255,185,0,0.32);
+    }
+    .cert-path__chip--target .cert-path__chip-code { color: var(--xp-gold); }
+    .cert-path__or {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0 4px;
+    }
+
+    /* Related certifications grid */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    @media (min-width: 640px) {
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .related-card {
+      display: block;
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .related-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .related-card__code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--azure-cyan);
+      letter-spacing: 0.04em;
+    }
+    .related-card__name {
+      display: block;
+      margin-top: 6px;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+    .related-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(60px, 9vw, 120px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 28px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow:
+        0 12px 28px rgba(43,136,216,0.40),
+        0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+    .cta-small {
+      display: block;
+      margin-top: 14px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+
+    /* ==============================================================
+       HERO BLOCK — scoped to .am-cert-hero
+       Mirror of /exams/_hero.html. Will move to /exams/styles.css
+       in the page-3 (az-305) refactor PR per plan §2.6 step 9.
+       ============================================================== */
+    .am-cert-hero {
+      --amh-cyan:   #50E6FF;
+      --amh-blue:   #2B88D8;
+      --amh-purple: #9578E0;
+      --amh-gold:   #FFB900;
+      --amh-bg:     #050810;
+      --amh-card:   #111827;
+      --amh-text:   #F0F0F0;
+      --amh-muted:  #8B95A5;
+      --amh-border: rgba(255,255,255,0.08);
+      position: relative;
+      isolation: isolate;
+      padding: clamp(48px, 8vw, 96px) 24px clamp(40px, 6vw, 72px);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      color: var(--amh-text);
+      overflow: hidden;
+    }
+    .am-cert-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 56% 48% at 72% 38%, rgba(80,230,255,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 32% at 28% 70%, rgba(149,120,224,0.10) 0%, transparent 60%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .am-cert-hero__inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (min-width: 880px) {
+      .am-cert-hero__inner { grid-template-columns: 1.05fr 1fr; gap: 48px; }
+    }
+    .am-cert-hero__copy { display: flex; flex-direction: column; gap: 20px; max-width: 560px; }
+    .am-cert-hero__brand {
+      display: inline-flex; align-items: center; gap: 14px;
+      text-decoration: none;
+      width: -moz-fit-content; width: fit-content;
+      padding: 8px 18px 8px 8px;
+      margin-bottom: -4px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--amh-border);
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .am-cert-hero__brand:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.30);
+      transform: translateY(-1px);
+    }
+    .am-cert-hero__brand-icon {
+      width: 48px; height: 48px;
+      border-radius: 11px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.08) inset;
+    }
+    .am-cert-hero__brand-name {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.015em;
+      color: var(--amh-text);
+    }
+    .am-cert-hero__eyebrow {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amh-muted);
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .am-cert-hero__eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px; height: 1px;
+      background: var(--amh-cyan);
+    }
+    .am-cert-hero__eyebrow-code { color: var(--amh-cyan); letter-spacing: 0.12em; }
+    .am-cert-hero__lead {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(28px, 4.4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--amh-text);
+      margin: 0;
+    }
+    .am-cert-hero__lead-accent {
+      background: linear-gradient(135deg, var(--amh-cyan) 0%, var(--amh-blue) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .am-cert-hero__sub {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: clamp(15px, 1.4vw, 17px);
+      line-height: 1.55;
+      color: var(--amh-muted);
+      margin: 0;
+    }
+    .am-cert-hero__stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px; }
+    .am-cert-hero__stat {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--amh-border);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--amh-text);
+    }
+    .am-cert-hero__stat-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--amh-cyan);
+      box-shadow: 0 0 8px rgba(80,230,255,0.7);
+    }
+    .am-cert-hero__stat--gold .am-cert-hero__stat-dot { background: var(--amh-gold); box-shadow: 0 0 8px rgba(255,185,0,0.6); }
+    .am-cert-hero__stat--purple .am-cert-hero__stat-dot { background: var(--amh-purple); box-shadow: 0 0 8px rgba(149,120,224,0.6); }
+    .am-cert-hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 16px; align-items: center; }
+    .am-cert-hero__cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1;
+      color: #050810;
+      background: linear-gradient(135deg, var(--amh-cyan) 0%, var(--amh-blue) 100%);
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.4) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .am-cert-hero__cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(43,136,216,0.45), 0 0 0 1px rgba(80,230,255,0.6) inset;
+    }
+    .am-cert-hero__cta-icon { flex-shrink: 0; }
+    .am-cert-hero__small { font-size: 12px; color: var(--amh-muted); }
+    .am-cert-hero__device {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1600px;
+      min-height: 580px;
+    }
+    .am-cert-hero__badge {
+      position: absolute;
+      top: 8%; left: 8%;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      background: rgba(17, 24, 39, 0.86);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(80,230,255,0.45);
+      border-radius: 999px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 24px rgba(80,230,255,0.16);
+      animation: am-cert-hero-badge-float 5.4s ease-in-out infinite;
+    }
+    .am-cert-hero__badge-glyph { width: 22px; height: 22px; flex-shrink: 0; }
+    .am-cert-hero__badge-text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+    .am-cert-hero__badge-code {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--amh-cyan);
+      letter-spacing: 0.06em;
+    }
+    .am-cert-hero__badge-name {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      color: var(--amh-text);
+      margin-top: 2px;
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .am-cert-hero__score-pill {
+      position: absolute;
+      bottom: 10%; right: 5%;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 14px 20px;
+      background: rgba(17, 24, 39, 0.92);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--amh-border);
+      border-radius: 16px;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.55), 0 0 28px rgba(80,230,255,0.12);
+      animation: am-cert-hero-pill-float 6.2s ease-in-out infinite;
+      animation-delay: -2.1s;
+    }
+    .am-cert-hero__score-pill-label {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amh-muted);
+    }
+    .am-cert-hero__score-pill-value {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--amh-cyan);
+      letter-spacing: -0.01em;
+    }
+    .am-cert-hero__score-pill-margin { font-size: 13px; color: var(--amh-muted); font-weight: 500; margin-left: 2px; }
+    .am-cert-hero__score-pill-delta { font-family: 'DM Sans', system-ui, sans-serif; font-size: 11px; color: #20C020; }
+    .am-cert-hero__phone-wrap {
+      position: relative;
+      transform-style: preserve-3d;
+      transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg);
+      filter: drop-shadow(0 50px 70px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(80,230,255,0.10));
+      animation: am-cert-hero-float 6s ease-in-out infinite;
+    }
+    .am-cert-hero__phone-frame {
+      width: 280px; height: 580px;
+      border-radius: 50px;
+      background: linear-gradient(160deg, #2a2a2e 0%, #1c1c1f 30%, #111113 60%, #232325 85%, #2a2a2e 100%);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -1px 0 rgba(0,0,0,0.5),
+        inset 1px 0 rgba(255,255,255,0.06),
+        inset -1px 0 rgba(255,255,255,0.06);
+    }
+    @media (min-width: 880px) {
+      .am-cert-hero__phone-frame { width: 320px; height: 660px; border-radius: 54px; }
+    }
+    .am-cert-hero__phone-frame::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border-radius: 44px;
+      border: 1px solid rgba(0,0,0,0.5);
+      pointer-events: none;
+      z-index: 10;
+    }
+    @media (min-width: 880px) {
+      .am-cert-hero__phone-frame::before { border-radius: 48px; }
+    }
+    .am-cert-hero__phone-frame::after {
+      content: '';
+      position: absolute;
+      left: -2px; top: 110px;
+      width: 3px; height: 36px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 2px 0 0 2px;
+      box-shadow: 0 48px 0 rgba(255,255,255,0.15), 0 -48px 0 rgba(255,255,255,0.10);
+    }
+    .am-cert-hero__phone-screen {
+      position: absolute;
+      inset: 8px;
+      border-radius: 42px;
+      background-color: #0A0E1A;
+      background-image: url('/images/cap-home-dashboard.webp');
+      background-size: cover;
+      background-position: center top;
+      overflow: hidden;
+    }
+    @media (min-width: 880px) {
+      .am-cert-hero__phone-screen { border-radius: 46px; }
+    }
+    .am-cert-hero__phone-screen::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 94px; height: 28px;
+      border-radius: 14px;
+      background: #000;
+      z-index: 20;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+    }
+    @media (min-width: 880px) {
+      .am-cert-hero__phone-screen::before { width: 108px; height: 32px; border-radius: 16px; }
+    }
+    .am-cert-hero__phone-screen::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 45%, rgba(255,255,255,0.03) 100%);
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 15;
+    }
+    @keyframes am-cert-hero-float {
+      0%, 100% { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(0); }
+      50%      { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(-10px); }
+    }
+    @keyframes am-cert-hero-badge-float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-4px); }
+    }
+    @keyframes am-cert-hero-pill-float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-6px); }
+    }
+    @keyframes am-cert-hero-fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .am-cert-hero__copy > * {
+      opacity: 0;
+      animation: am-cert-hero-fade-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+    .am-cert-hero__copy > *:nth-child(1) { animation-delay: 0.00s; }
+    .am-cert-hero__copy > *:nth-child(2) { animation-delay: 0.08s; }
+    .am-cert-hero__copy > *:nth-child(3) { animation-delay: 0.18s; }
+    .am-cert-hero__copy > *:nth-child(4) { animation-delay: 0.28s; }
+    .am-cert-hero__copy > *:nth-child(5) { animation-delay: 0.38s; }
+    .am-cert-hero__copy > *:nth-child(6) { animation-delay: 0.48s; }
+    .am-cert-hero__device {
+      opacity: 0;
+      animation: am-cert-hero-fade-in 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+    }
+
+    @media (max-width: 879px) {
+      .am-cert-hero__device { min-height: 620px; padding-top: 24px; }
+      .am-cert-hero__phone-wrap { transform: perspective(1400px) rotateY(-6deg) rotateX(-2deg); }
+      @keyframes am-cert-hero-float {
+        0%, 100% { transform: perspective(1400px) rotateY(-6deg) rotateX(-2deg) translateY(0); }
+        50%      { transform: perspective(1400px) rotateY(-6deg) rotateX(-2deg) translateY(-8px); }
+      }
+      .am-cert-hero__badge { top: 4%; left: 4%; }
+      .am-cert-hero__score-pill { bottom: 4%; right: 4%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .am-cert-hero__phone-wrap,
+      .am-cert-hero__badge,
+      .am-cert-hero__score-pill { animation: none; }
+      .am-cert-hero__copy > *,
+      .am-cert-hero__device { opacity: 1; animation: none; }
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <a class="site-nav__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc__title">On this page</p>
+      <ol class="page-toc__list">
+        <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#faqs">FAQs</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#cert-paths">Cert paths</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#related">Related</a></li>
+      </ol>
+    </nav>
+
+    <!-- ============================================================
+         HERO BLOCK — mirrors /exams/_hero.html.
+         Per-cert text-node swaps for AZ-500:
+           .am-cert-hero__eyebrow-code  →  AZ-500
+           .am-cert-hero__badge-code    →  AZ-500
+           .am-cert-hero__badge-name    →  Microsoft Azure Security Engineer
+           .am-cert-hero__stat-count    →  326
+         ============================================================ -->
+    <section class="am-cert-hero" aria-labelledby="am-cert-hero-lead">
+      <div class="am-cert-hero__inner">
+        <div class="am-cert-hero__copy">
+          <a class="am-cert-hero__brand" href="/" aria-label="Azure Mastery — back to home">
+            <img class="am-cert-hero__brand-icon"
+                 src="/images/app-icon.webp"
+                 alt=""
+                 width="32" height="32"
+                 loading="eager" decoding="async">
+            <span class="am-cert-hero__brand-name">Azure Mastery</span>
+          </a>
+          <p class="am-cert-hero__eyebrow">
+            Microsoft Certification
+            <span class="am-cert-hero__eyebrow-code">AZ-500</span>
+          </p>
+          <h2 id="am-cert-hero-lead" class="am-cert-hero__lead">
+            Predict your score.
+            <span class="am-cert-hero__lead-accent">Pass with proof.</span>
+          </h2>
+          <p class="am-cert-hero__sub">
+            On-device AI scores your readiness, builds an adaptive study plan, and flags topics fading from memory — before they cost you the exam.
+          </p>
+          <div class="am-cert-hero__stats">
+            <span class="am-cert-hero__stat">
+              <span class="am-cert-hero__stat-dot"></span><span class="am-cert-hero__stat-count">326</span>&nbsp;practice questions
+            </span>
+            <span class="am-cert-hero__stat am-cert-hero__stat--gold">
+              <span class="am-cert-hero__stat-dot"></span>AI score prediction
+            </span>
+            <span class="am-cert-hero__stat am-cert-hero__stat--purple">
+              <span class="am-cert-hero__stat-dot"></span>100% offline
+            </span>
+          </div>
+          <div class="am-cert-hero__ctas">
+            <a class="am-cert-hero__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+              <svg class="am-cert-hero__cta-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+              </svg>
+              Download free
+            </a>
+            <span class="am-cert-hero__small">iPhone &amp; iPad · Free to start</span>
+          </div>
+        </div>
+
+        <div class="am-cert-hero__device">
+          <div class="am-cert-hero__badge" aria-hidden="true">
+            <svg class="am-cert-hero__badge-glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2 L3 6 V12 C3 17 7 21 12 22 C17 21 21 17 21 12 V6 Z" fill="rgba(80,230,255,0.16)" stroke="#50E6FF" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M8 12 l3 3 l5-6" fill="none" stroke="#50E6FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="am-cert-hero__badge-text">
+              <span class="am-cert-hero__badge-code">AZ-500</span>
+              <span class="am-cert-hero__badge-name">Microsoft Azure Security Engineer</span>
+            </span>
+          </div>
+          <div class="am-cert-hero__phone-wrap">
+            <div class="am-cert-hero__phone-frame">
+              <div class="am-cert-hero__phone-screen"
+                   role="img"
+                   aria-label="Azure Mastery home dashboard showing today's plan, predicted score, and readiness gauge">
+              </div>
+            </div>
+          </div>
+          <div class="am-cert-hero__score-pill" aria-hidden="true">
+            <span class="am-cert-hero__score-pill-label">PREDICTED</span>
+            <span class="am-cert-hero__score-pill-value">708 <small class="am-cert-hero__score-pill-margin">±60</small></span>
+            <span class="am-cert-hero__score-pill-delta">▲ 14 days to ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PAGE H1 + LEAD — sits below hero. The H1 is the SEO target.
+         ============================================================ -->
+    <section class="container">
+      <h1 class="display-large page-h1">
+        AZ-500 Study App for iOS — <span class="page-h1-accent">Microsoft Azure Security Engineer</span>
+      </h1>
+      <p class="body-large section-lede">
+        Get exam-ready for AZ-500 (Microsoft Azure Security Engineer) on iPhone or iPad. Azure Mastery uses on-device AI to predict your readiness score across all four AZ-500 domains, build a personalised study plan from your weak spots, and surface topics you're forgetting — all without sending a single byte off your device.
+      </p>
+    </section>
+
+    <!-- What is the AZ-500 exam? -->
+    <section id="what-is" class="container">
+      <p class="label-eyebrow section-eyebrow">The exam</p>
+      <h2 class="display-small section-title">What is the AZ-500 exam?</h2>
+      <p>
+        AZ-500 is the <strong>Microsoft Certified: Azure Security Engineer Associate</strong> exam — the credential hiring managers expect when posting "Cloud Security Engineer", "Azure Security Specialist", or "Cloud Security Operations" roles. It's the natural next step after <a href="/exams/az-104/">AZ-104</a> for anyone administering Azure environments who's now responsible for the security posture of those environments. It also pairs with <a href="/exams/sc-900/">SC-900</a> on the way up to the SC-100 Cybersecurity Architect Expert credential.
+      </p>
+      <p>
+        AZ-500 is <strong>hands-on and operational</strong>. It validates that you can manage identity and access (Microsoft Entra ID, Conditional Access, PIM, application access); secure networking (NSGs, Azure Firewall, DDoS Protection, Private Link); secure compute, storage, and databases (encryption, key management, Defender plans for SQL / Storage / Containers); and run a live security operation using Microsoft Defender for Cloud and Microsoft Sentinel — including KQL queries, analytics rules, and incident triage. Expect scenario questions that show you a config snippet or attack signal and ask what you'd do next.
+      </p>
+      <p>
+        Microsoft updated the AZ-500 skills outline on <strong>22 January 2026</strong>. Every question in Azure Mastery's AZ-500 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-500" rel="noopener">learn.microsoft.com</a>.
+      </p>
+      <ul class="exam-format" aria-label="AZ-500 exam format facts">
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
+        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
+        <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
+        <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
+        <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew annually (Associate)</span></li>
+        <li><span class="exam-format__label">Format</span><span class="exam-format__value">Online or test centre</span></li>
+      </ul>
+    </section>
+
+    <!-- AZ-500 exam objectives -->
+    <section id="objectives" class="container">
+      <p class="label-eyebrow section-eyebrow">Skills measured · January 2026</p>
+      <h2 class="display-small section-title">AZ-500 exam objectives</h2>
+      <p class="section-lede">
+        Four domains, with weights set by Microsoft's January 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-500" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+      </p>
+      <div class="domains">
+        <article class="domain">
+          <h3>Secure identity and access<span class="domain__weight">15–20%</span></h3>
+          <p>
+            The Microsoft Entra surface end-to-end. Cover identity types (members, guests, hybrid identities), authentication (passwordless, MFA, password protection), <em>Conditional Access</em> design (named locations, sign-in risk, session controls), <em>Privileged Identity Management</em> (just-in-time activation, access reviews, eligibility), and Microsoft Entra ID Protection (risky users, risky sign-ins). Plus securing access to Azure resources via RBAC, Azure ABAC, custom roles, and managed identities. Around 6–12 questions per sitting.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Secure networking<span class="domain__weight">20–25%</span></h3>
+          <p>
+            Defence-in-depth at the network layer. Configure perimeter security with <em>Azure Firewall</em> (rules, threat intelligence, hierarchies via Firewall Manager), <em>Azure DDoS Protection</em>, <em>Web Application Firewall</em> on Application Gateway and Front Door. Network segmentation with NSGs, application security groups, service tags. Private connectivity via <em>Private Link</em>, <em>Private Endpoints</em>, and service endpoints. Plus <em>Azure Bastion</em>, JIT VM access, ExpressRoute and VPN security. Around 8–15 questions.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Secure compute, storage, and databases<span class="domain__weight">20–25%</span></h3>
+          <p>
+            Harden the workload tier. Compute: VM updates and disk encryption (host encryption, ADE, customer-managed keys), Azure Kubernetes Service security (network policies, Microsoft Entra integration, secrets), App Service network restrictions and authentication, container registry signing and scanning. Storage: SAS tokens, stored access policies, customer-managed keys, immutable storage. Databases: SQL TDE, Always Encrypted, dynamic data masking, Microsoft Defender for SQL. Plus <em>Azure Key Vault</em> as the cross-cutting story — keys, secrets, certificates, access policies vs RBAC. Around 8–15 questions.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel<span class="domain__weight">30–35%</span></h3>
+          <p>
+            The largest domain by weight, and the operational core of the role. <em>Microsoft Defender for Cloud</em>: Secure Score, regulatory compliance (Azure Security Benchmark, custom standards), workload protection plans (Servers, App Service, Storage, SQL, Containers), security recommendations and exemptions, and the Cloud Security Posture Management surface. <em>Microsoft Sentinel</em>: data connectors (Azure activity, Microsoft 365, Defender XDR), analytics rules and watchlists, incident investigation, hunting with KQL, automation via playbooks (Logic Apps), workbooks. Plus security alert lifecycle and Defender for Cloud → Sentinel integration. Around 12–20 questions.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- How Azure Mastery helps -->
+    <section id="how-helps" class="container">
+      <p class="label-eyebrow section-eyebrow">Designed for AZ-500</p>
+      <h2 class="display-small section-title">How Azure Mastery helps you pass AZ-500</h2>
+      <p>
+        Azure Mastery ships with <strong>326 AZ-500 practice questions</strong>, every one written specifically against the current (January 2026) skills outline — not generic security trivia. Each question carries a domain tag mapped to the official four domains (identity and access, networking, compute/storage/databases, Defender for Cloud + Sentinel), so you always know which area you're being tested on and where your weak spots are clustered. KQL snippets, Conditional Access JSON, and Defender plan scenarios appear in roughly a third of the questions — matching the format of the live exam.
+      </p>
+      <p>
+        The on-device <strong>Exam IQ</strong> engine predicts your AZ-500 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "708 ±60, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+      </p>
+      <p>
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a Conditional Access scenario wrong? You'll see another Entra access-management question in the next session. Master "Defender for SQL vs Defender for Storage" three sessions running and the engine backs off, surfacing fresh Sentinel KQL or Key Vault scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+      </p>
+      <p>
+        <strong>Knowledge decay tracking</strong> matters more for AZ-500 than for foundational exams — four security domains span a lot of surface area, and the topic you mastered three weeks into your study window is the topic you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
+      </p>
+      <p>
+        <strong>Real exam simulation mode</strong> runs at AZ-500's actual length and time pressure: a randomised 40–60-question set drawn from the full 326-question bank, weighted by domain percentages from the January 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It's the closest you can get to the live Pearson VUE / online-proctored experience without sitting the exam.
+      </p>
+      <p>
+        Everything runs <strong>on-device</strong>. Your answer history, your readiness gauge, your decay alerts — none of it leaves your iPhone or iPad. No account required to start, no tracking, no sync server. Privacy-first by design.
+      </p>
+    </section>
+
+    <!-- Suggested study plan -->
+    <section id="study-plan" class="container">
+      <p class="label-eyebrow section-eyebrow">6-week study plan</p>
+      <h2 class="display-small section-title">Suggested AZ-500 study plan</h2>
+      <p class="section-lede">
+        Most candidates pass AZ-500 after four to eight weeks of focused study, depending on prior Azure security experience. The six-week plan below maps onto the four AZ-500 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
+      </p>
+      <ol class="study-plan">
+        <li>
+          <h3>Identity and networking foundations</h3>
+          <ul>
+            <li><strong>Days 1–3:</strong> Microsoft Entra identity types, authentication methods, password protection, MFA, passwordless. Conditional Access rules — named locations, sign-in risk, session controls.</li>
+            <li><strong>Days 4–6:</strong> Privileged Identity Management (eligibility, activation, access reviews), Microsoft Entra ID Protection (risky users, risky sign-ins), application access (enterprise apps, app registrations, app proxy).</li>
+            <li><strong>Days 7–10:</strong> Azure RBAC, custom roles, Azure ABAC, managed identities. Then network segmentation: NSGs, ASGs, service tags. Azure Bastion, JIT VM access.</li>
+            <li><strong>Days 11–14:</strong> Azure Firewall (rules, threat intelligence, Firewall Manager), DDoS Protection, Web Application Firewall on App Gateway and Front Door. Private Link / Private Endpoints / service endpoints.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Workload protection and Key Vault</h3>
+          <ul>
+            <li><strong>Days 15–17:</strong> Compute hardening — VM updates, disk encryption (host encryption, ADE, customer-managed keys), AKS security (network policies, Microsoft Entra integration, secrets management).</li>
+            <li><strong>Days 18–20:</strong> App Service security (network restrictions, authentication, custom domains/TLS), Container Registry (signing, scanning), Container Apps and Container Instances security.</li>
+            <li><strong>Days 21–23:</strong> Storage security — SAS tokens, stored access policies, customer-managed keys, immutable storage. Database security — TDE, Always Encrypted, dynamic data masking, Defender for SQL.</li>
+            <li><strong>Days 24–28:</strong> <em>Azure Key Vault</em> end-to-end — keys, secrets, certificates, access policies vs RBAC, soft-delete and purge protection. The cross-cutting story — every other workload depends on it.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Defender for Cloud, Sentinel, simulate</h3>
+          <ul>
+            <li><strong>Days 29–32:</strong> <em>Microsoft Defender for Cloud</em> — Secure Score, regulatory compliance, workload protection plans (Servers, App Service, Storage, SQL, Containers), recommendations and exemptions, just-in-time VM access.</li>
+            <li><strong>Days 33–37:</strong> <em>Microsoft Sentinel</em> — data connectors, analytics rules and watchlists, KQL hunting queries, incident investigation, automation via Logic App playbooks, workbooks.</li>
+            <li><strong>Days 38–40:</strong> Run <em>Focus Weak Spots</em> every morning — the app surfaces the highest-leverage questions for your weakest domains. Defender + Sentinel is 30–35% of the exam, so weight your time accordingly.</li>
+            <li><strong>Days 41–42:</strong> Two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Review carefully after each. If readiness gauge is 750+ with reasonable confidence, schedule the exam.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Question types — visualisations of every Microsoft format the app supports -->
+    <section id="question-types" class="container">
+      <p class="label-eyebrow section-eyebrow">Inside the app</p>
+      <h2 class="display-small section-title">Every Microsoft question type, on iPhone</h2>
+      <p class="section-lede">
+        AZ-500's question bank uses the same formats Microsoft puts on the live exam — not just multiple choice. Each visualisation below is a faithful mock of how the type renders inside Azure Mastery on iPhone and iPad. Exam-simulator mode runs all of them at full 100-minute length with no flag-and-review jumps, mirroring Pearson VUE.
+      </p>
+      <div class="question-types">
+
+        <article class="qt">
+          <div class="qt__viz" aria-hidden="true">
+            <p class="qt__viz-q">Which Azure compute service is best for event-driven container workloads?</p>
+            <ul class="qt__viz-options">
+              <li><span class="qt__viz-radio"></span>Azure Functions</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>Azure Container Apps</li>
+              <li><span class="qt__viz-radio"></span>Azure Service Bus</li>
+              <li><span class="qt__viz-radio"></span>Azure App Service</li>
+            </ul>
+          </div>
+          <h3>Multiple choice</h3>
+          <p>One correct answer from four to six options. The most common type on every Azure exam — practical recall of services, settings, and limits.</p>
+          <span class="qt__hint">~50% of questions</span>
+        </article>
+
+        <article class="qt">
+          <div class="qt__viz" aria-hidden="true">
+            <p class="qt__viz-q">Select <strong>two</strong> services that support point-in-time restore.</p>
+            <ul class="qt__viz-options">
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Azure SQL Database</li>
+              <li><span class="qt__viz-checkbox"></span>Azure Service Bus</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Azure Cosmos DB</li>
+              <li><span class="qt__viz-checkbox"></span>Azure Functions</li>
+            </ul>
+          </div>
+          <h3>Multi-select</h3>
+          <p>Pick two or more correct answers from a list. Microsoft tells you exactly how many to choose. <strong>Partial credit not awarded</strong> — you need every selection right.</p>
+          <span class="qt__hint">All-or-nothing</span>
+        </article>
+
+        <article class="qt">
+          <div class="qt__viz" aria-hidden="true">
+            <p class="qt__viz-q">Order the steps to deploy a Bicep template.</p>
+            <ul class="qt__viz-drag">
+              <li><span class="qt__viz-drag-handle">⋮⋮</span><span class="qt__viz-drag-num">1</span>Create resource group</li>
+              <li><span class="qt__viz-drag-handle">⋮⋮</span><span class="qt__viz-drag-num">2</span>az bicep build</li>
+              <li><span class="qt__viz-drag-handle">⋮⋮</span><span class="qt__viz-drag-num">3</span>az deployment group create</li>
+              <li><span class="qt__viz-drag-handle">⋮⋮</span><span class="qt__viz-drag-num">4</span>Verify outputs</li>
+            </ul>
+          </div>
+          <h3>Drag-and-drop</h3>
+          <p>Arrange items into the correct sequence — deployment steps, the order operations occur in a pipeline, troubleshooting flows. Long-press to drag on touch.</p>
+          <span class="qt__hint">Order matters</span>
+        </article>
+
+        <article class="qt">
+          <div class="qt__viz" aria-hidden="true">
+            <p class="qt__viz-q">Tap the setting that enables soft delete on this storage account.</p>
+            <div class="qt__viz-hotspot">
+              <span class="qt__viz-hotspot-mock-row qt__viz-hotspot-mock-row--1"></span>
+              <span class="qt__viz-hotspot-mock-row qt__viz-hotspot-mock-row--2"></span>
+              <span class="qt__viz-hotspot-mock-row qt__viz-hotspot-mock-row--3"></span>
+              <span class="qt__viz-hotspot-mock-row qt__viz-hotspot-mock-row--4"></span>
+              <span class="qt__viz-hotspot-mock-row qt__viz-hotspot-mock-row--5"></span>
+              <span class="qt__viz-target"></span>
+            </div>
+          </div>
+          <h3>Hotspot</h3>
+          <p>Tap the correct area of an image — the right setting in a portal screenshot, the right resource in a topology diagram. Practical visual recall under time pressure.</p>
+          <span class="qt__hint">Tap target</span>
+        </article>
+
+        <article class="qt">
+          <div class="qt__viz" aria-hidden="true">
+            <div class="qt__viz-case">
+              <div class="qt__viz-case-scenario">
+                <strong>Contoso Ltd</strong> needs to migrate 40 VMs from on-premises to Azure with an RTO of four hours and zero data loss…
+              </div>
+              <ul class="qt__viz-case-questions">
+                <li><span class="qt__viz-case-num">1</span>Which migration tool meets the RTO?</li>
+                <li><span class="qt__viz-case-num">2</span>What backup tier is required?</li>
+                <li><span class="qt__viz-case-num">3</span>Which network design supports failover?</li>
+                <li><span class="qt__viz-case-num">4</span>How should they configure RBAC?</li>
+              </ul>
+            </div>
+          </div>
+          <h3>Case studies</h3>
+          <p>A multi-paragraph scenario followed by 4–6 linked questions. Common on AZ-500 in the storage and identity domains; dominant on AZ-305 and AZ-400.</p>
+          <span class="qt__hint">Multi-question</span>
+        </article>
+
+        <article class="qt">
+          <div class="qt__viz" aria-hidden="true">
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Azure Service Bus</div>
+            <div class="qt__viz-ai-explain">
+              <span class="qt__viz-ai-explain-mark">✨ Why wrong:</span>Service Bus is for enterprise messaging with FIFO &amp; transactions. The scenario specifies massive event ingestion at high throughput — Event Hubs is the right primitive…
+              <span class="qt__viz-ai-source">— generated on-device by Apple Foundation Model</span>
+            </div>
+          </div>
+          <h3>Why Wrong AI</h3>
+          <p>An Azure Mastery exclusive. When you answer incorrectly, an on-device Apple Foundation Model writes a targeted explanation grounded in the correct rationale. Never leaves your device.</p>
+          <span class="qt__hint qt__hint--purple">App exclusive</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="container">
+      <p class="label-eyebrow section-eyebrow">Frequently asked</p>
+      <h2 class="display-small section-title">AZ-500 FAQs</h2>
+      <div class="faqs">
+        <article class="faq">
+          <h3>How much does the AZ-500 exam cost?</h3>
+          <p>The AZ-500 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AZ-500 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+        </article>
+        <article class="faq">
+          <h3>Does the AZ-500 certification expire?</h3>
+          <p>Yes. Microsoft Associate certifications including AZ-500 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+        </article>
+        <article class="faq">
+          <h3>What is the AZ-500 retake policy if I fail?</h3>
+          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+        </article>
+        <article class="faq">
+          <h3>How long should I study for AZ-500?</h3>
+          <p>Most candidates pass AZ-500 after four to eight weeks of focused study, assuming some prior IT or cloud experience. If Azure is genuinely new to you, plan for two to three months — the exam expects you to know specific PowerShell and Azure CLI commands, not just describe concepts. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.</p>
+        </article>
+        <article class="faq">
+          <h3>AZ-500 vs AZ-104 — should I do AZ-104 first?</h3>
+          <p>Microsoft strongly recommends AZ-104 first, and it shows. AZ-500 assumes you already know how Azure compute, networking, and storage work day-to-day — it's the security overlay on top of that knowledge. If you've never deployed a VM or configured a VNet outside of fundamentals, take <a href="/exams/az-104/">AZ-104 (Microsoft Azure Administrator)</a> first; you'll save weeks on AZ-500 prep. If you have a year or more of hands-on Azure ops, you can skip AZ-104 and go straight in. Some employers want both anyway.</p>
+        </article>
+        <article class="faq">
+          <h3>AZ-500 vs SC-200 — which next on the security track?</h3>
+          <p>Different roles. AZ-500 is the <em>Azure</em> Security Engineer cert — it's about hardening Azure resources end-to-end. SC-200 is the <em>Security Operations Analyst</em> cert — it's about running Microsoft Defender XDR and Sentinel as a SOC analyst, with much heavier focus on M365 and incident triage workflows. If your day job is securing Azure workloads, AZ-500. If it's running detection-and-response across the Microsoft estate, SC-200. Many Cybersecurity Architect Expert candidates hold both, with <a href="/exams/sc-900/">SC-900</a> as the connective fundamentals.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certification paths visualisation — where AZ-500 fits in the Microsoft security track -->
+    <section id="cert-paths" class="container">
+      <p class="label-eyebrow section-eyebrow">Where AZ-500 fits</p>
+      <h2 class="display-small section-title">Certification paths that include AZ-500</h2>
+      <p class="section-lede">
+        AZ-500 is the Azure-specific security Associate cert. It pairs with <a href="/exams/sc-900/">SC-900</a> on the way into security work, and feeds into the SC-100 Cybersecurity Architect Expert credential alongside SC-200 / SC-300. Tap any linked exam below to see its dedicated study app page.
+      </p>
+      <div class="cert-paths">
+
+        <article class="cert-path">
+          <div class="cert-path__header">
+            <h3 class="cert-path__name">Azure Security Engineer Associate path</h3>
+            <span class="cert-path__tag cert-path__tag--terminal">Terminal at Associate</span>
+          </div>
+          <ol class="cert-path__stations">
+            <li class="cert-path__station">
+              <a class="cert-path__chip" href="/exams/az-900/">
+                <span class="cert-path__chip-code">AZ-900</span>
+                <span class="cert-path__chip-role">Fundamentals (optional)</span>
+              </a>
+            </li>
+            <li class="cert-path__station">
+              <a class="cert-path__chip" href="/exams/az-104/">
+                <span class="cert-path__chip-code">AZ-104</span>
+                <span class="cert-path__chip-role">recommended prereq</span>
+              </a>
+            </li>
+            <li class="cert-path__station">
+              <span class="cert-path__chip cert-path__chip--current">
+                <span class="cert-path__chip-code">AZ-500</span>
+                <span class="cert-path__chip-role">Security Engineer Associate</span>
+              </span>
+            </li>
+          </ol>
+        </article>
+
+        <article class="cert-path">
+          <div class="cert-path__header">
+            <h3 class="cert-path__name">Cybersecurity Architect Expert path</h3>
+            <span class="cert-path__tag">Expert tier</span>
+          </div>
+          <ol class="cert-path__stations">
+            <li class="cert-path__station">
+              <a class="cert-path__chip" href="/exams/sc-900/">
+                <span class="cert-path__chip-code">SC-900</span>
+                <span class="cert-path__chip-role">Fundamentals (optional)</span>
+              </a>
+            </li>
+            <li class="cert-path__station">
+              <span class="cert-path__chip cert-path__chip--current">
+                <span class="cert-path__chip-code">AZ-500</span>
+                <span class="cert-path__chip-role">prereq option</span>
+              </span>
+            </li>
+            <li class="cert-path__station">
+              <span class="cert-path__or">or</span>
+              <span class="cert-path__chip">
+                <span class="cert-path__chip-code">SC-200</span>
+                <span class="cert-path__chip-role">prereq option</span>
+              </span>
+            </li>
+            <li class="cert-path__station">
+              <span class="cert-path__chip">
+                <span class="cert-path__chip-code">SC-100</span>
+                <span class="cert-path__chip-role">Cybersecurity Architect exam</span>
+              </span>
+            </li>
+            <li class="cert-path__station">
+              <span class="cert-path__chip cert-path__chip--target">
+                <span class="cert-path__chip-code">Cybersecurity Architect Expert</span>
+                <span class="cert-path__chip-role">credential</span>
+              </span>
+            </li>
+          </ol>
+        </article>
+
+        <article class="cert-path">
+          <div class="cert-path__header">
+            <h3 class="cert-path__name">Sibling: Network Engineer track</h3>
+            <span class="cert-path__tag">Associate tier</span>
+          </div>
+          <ol class="cert-path__stations">
+            <li class="cert-path__station">
+              <a class="cert-path__chip" href="/exams/az-900/">
+                <span class="cert-path__chip-code">AZ-900</span>
+                <span class="cert-path__chip-role">Fundamentals</span>
+              </a>
+            </li>
+            <li class="cert-path__station">
+              <a class="cert-path__chip" href="/exams/az-104/">
+                <span class="cert-path__chip-code">AZ-104</span>
+                <span class="cert-path__chip-role">recommended prereq</span>
+              </a>
+            </li>
+            <li class="cert-path__station">
+              <span class="cert-path__chip">
+                <span class="cert-path__chip-code">AZ-700</span>
+                <span class="cert-path__chip-role">Network Engineer Associate</span>
+              </span>
+            </li>
+          </ol>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Related certifications -->
+    <section id="related" class="container">
+      <p class="label-eyebrow section-eyebrow">Before / after AZ-500</p>
+      <h2 class="display-small section-title">Related Azure certifications</h2>
+      <p class="section-lede">
+        AZ-500 sits in the middle of the security cert path. AZ-104 builds the operational base it assumes; SC-900 introduces the cross-cutting Microsoft security model. Pair AZ-500 with one or both for the strongest foundation.
+      </p>
+      <nav class="related-grid" aria-label="Related certifications">
+        <a class="related-card" href="/exams/az-104/">
+          <span class="related-card__code">AZ-104</span>
+          <span class="related-card__name">Microsoft Azure Administrator</span>
+          <span class="related-card__hint">Recommended prerequisite. AZ-500 assumes you can administer Azure compute, networking, and storage. 343 practice questions.</span>
+        </a>
+        <a class="related-card" href="/exams/sc-900/">
+          <span class="related-card__code">SC-900</span>
+          <span class="related-card__name">Microsoft Security, Compliance, and Identity Fundamentals</span>
+          <span class="related-card__hint">Sibling fundamentals. Adds the cross-cutting Microsoft Defender and Microsoft Purview surface AZ-500 leans on. 322 practice questions.</span>
+        </a>
+      </nav>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Ready to pass AZ-500?</h2>
+      <p>Download Azure Mastery free. 326 AZ-500 practice questions across all four domains, AI score prediction, full-length exam simulator, adaptive study plan. iPhone &amp; iPad.</p>
+      <a class="cta-button" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      AZ-500, Microsoft Azure, and Microsoft are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      var links = document.querySelectorAll('.page-toc__link');
+      if (!links.length || !('IntersectionObserver' in window)) return;
+      var map = new Map();
+      links.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        var sec = document.getElementById(id);
+        if (sec) map.set(sec, a);
+      });
+      var active = new Set();
+      function setActive(link) {
+        links.forEach(function (a) { a.removeAttribute('aria-current'); });
+        if (link) link.setAttribute('aria-current', 'true');
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) active.add(e.target); else active.delete(e.target);
+        });
+        var topSec = null, topY = Infinity;
+        active.forEach(function (sec) {
+          var y = sec.getBoundingClientRect().top;
+          if (y < topY) { topY = y; topSec = sec; }
+        });
+        setActive(topSec ? map.get(topSec) : null);
+      }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+      map.forEach(function (_, sec) { io.observe(sec); });
+    })();
+  </script>
+
+</body>
+</html>

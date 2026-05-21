@@ -88,7 +88,7 @@
         "description": "Pass AI-300 (Microsoft ML Operations Engineer) with confidence. Azure Mastery is an iOS app with 320 AI-300 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -587,6 +587,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1708,21 +1711,21 @@
         Most candidates pass AI-300 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AI-300 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>MLOps infrastructure and lifecycle</h3>
           <ul>
             <li><strong>Week 1:</strong> Design and implement an MLOps infrastructure — CI/CD for ML, environment management (Conda, Docker), feature stores, model registries, governance, reproducibility, lineage.</li>
             <li><strong>Week 2:</strong> Implement machine learning model lifecycle and operations (largest domain, 25–30%) — training pipelines, AutoML, deployment to managed online and batch endpoints, A/B traffic, drift monitoring, retraining triggers.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>GenAIOps and quality assurance</h3>
           <ul>
             <li><strong>Week 3:</strong> Design and implement a GenAIOps infrastructure — prompt versioning and registries, evaluation pipelines, deployment patterns for LLM apps, feature-flag prompt rollouts, observability for tokens and cost.</li>
             <li><strong>Week 4:</strong> Implement generative AI quality assurance and observability — groundedness checks, hallucination detection, content-safety telemetry, drift on prompts/RAG, distributed tracing.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Optimisation, sharpen, simulate</h3>
           <ul>
             <li><strong>Week 5:</strong> Optimize generative AI systems and model performance — semantic and embedding caches, batching, model-selection trade-offs (small vs large), fine-tuning vs few-shot vs RAG, token budget management, capacity planning.</li>

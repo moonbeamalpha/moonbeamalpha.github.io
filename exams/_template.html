@@ -638,6 +638,9 @@
       color: var(--azure-cyan);
       margin-bottom: 8px;
     }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
+    }
     .study-plan h3 {
       margin: 0 0 8px;
       color: var(--text-primary);

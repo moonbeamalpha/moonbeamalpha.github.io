@@ -88,7 +88,7 @@
         "description": "Pass AI-103 (Microsoft AI App and Agent Developer) with confidence. Azure Mastery is an iOS app with 320 AI-103 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -587,6 +587,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1709,21 +1712,21 @@
         Most candidates pass AI-103 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AI-103 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Plan, design, and generative AI</h3>
           <ul>
             <li><strong>Week 1:</strong> Plan and design AI app solutions — architecture patterns, scalability and latency, model selection, integration points, Responsible AI constraints.</li>
             <li><strong>Week 2:</strong> Implement generative AI solutions — Azure OpenAI and Azure AI Foundry, model deployment, prompt engineering (system prompts, few-shot, chain-of-thought, structured outputs), streaming, content filters, fine-tuning, evaluation.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Agents and knowledge integration</h3>
           <ul>
             <li><strong>Week 3:</strong> Agentic AI solutions (largest domain, 25–30%) — Azure AI Foundry agents, tool calling and function specifications, knowledge grounding, memory and state, multi-agent orchestration, safety guardrails, tracing.</li>
             <li><strong>Week 4:</strong> Knowledge and data integration — RAG end-to-end with Azure AI Search (indexers, indexes, skillsets, semantic, vector, hybrid), chunking strategies, metadata filtering, source citation.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Production concerns, sharpen, simulate</h3>
           <ul>
             <li><strong>Week 5:</strong> Secure, monitor, and optimise AI solutions — authentication (managed identities, Microsoft Entra), network security (Private Link, VNet integration), content safety, cost management (token budgets, caching), observability (Application Insights, traces), evaluation pipelines.</li>

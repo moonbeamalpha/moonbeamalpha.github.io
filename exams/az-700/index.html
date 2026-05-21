@@ -88,7 +88,7 @@
         "description": "Pass AZ-700 (Microsoft Azure Network Engineer) with confidence. Azure Mastery is an iOS app with 383 AZ-700 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -587,6 +587,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1708,7 +1711,7 @@
         Most candidates pass AZ-700 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AZ-700 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Core infrastructure and DNS</h3>
           <ul>
             <li><strong>Days 1–3:</strong> VNets, subnets, IP addressing strategy (RFC1918, public IP SKUs, IPv6). Then VNet peering — regional, global, gateway transit, hub-and-spoke topology design.</li>
@@ -1717,7 +1720,7 @@
             <li><strong>Days 10–14:</strong> Hybrid connectivity foundations — VPN Gateway (S2S, P2S, V2V, BGP), ExpressRoute (circuits, peerings, FastPath, ER Direct), Virtual WAN (secured hubs, branch connections).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Application delivery and private access</h3>
           <ul>
             <li><strong>Days 15–17:</strong> Azure Load Balancer — public, internal, Standard SKU, backend pools, health probes, NAT rules.</li>
@@ -1726,7 +1729,7 @@
             <li><strong>Days 25–28:</strong> Private Link, Private Endpoints, service endpoints, VNet integration for App Service / Functions, Private Link Service for cross-tenant private exposure.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Network security, sharpen, simulate</h3>
           <ul>
             <li><strong>Days 29–32:</strong> Azure Firewall — rules, threat intelligence, Premium-tier IDPS and TLS inspection, Firewall Manager hierarchies. Plus NSGs and ASGs (effective rules, flow logs).</li>

@@ -88,7 +88,7 @@
         "description": "Pass PL-300 (Microsoft Power BI Data Analyst) with confidence. Azure Mastery is an iOS app with 325 PL-300 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -586,6 +586,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1701,7 +1704,7 @@
         Most candidates pass PL-300 after four to eight weeks of focused study, depending on prior Power BI / DAX experience. The six-week plan below maps onto the four PL-300 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Prepare and model the data</h3>
           <ul>
             <li><strong>Days 1–3:</strong> Connecting to data sources (SQL Server, Excel, Microsoft Fabric, OData), DirectLake vs DirectQuery vs Import storage modes, parameters, Power Query Editor basics.</li>
@@ -1710,7 +1713,7 @@
             <li><strong>Days 10–14:</strong> Star-schema design — relationships, cardinality, role-playing dimensions, calculated columns vs measures, DAX time intelligence (CALCULATE, SAMEPERIODLASTYEAR, DATEADD), USERELATIONSHIP for inactive joins.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Visualize and analyze</h3>
           <ul>
             <li><strong>Days 15–17:</strong> Visual selection — bar/column/line/area, scatter and bubble, KPIs, gauges, maps, treemap, decomposition tree, key influencers.</li>
@@ -1719,7 +1722,7 @@
             <li><strong>Days 25–28:</strong> Paginated reports vs Power BI reports, mobile layouts, Performance Analyzer, DAX Studio, model and visual optimisation.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Manage, secure, sharpen, simulate</h3>
           <ul>
             <li><strong>Days 29–32:</strong> Workspaces and roles (Admin, Member, Contributor, Viewer), apps and direct sharing, deployment pipelines (Dev → Test → Prod), gateways and dataset refresh.</li>

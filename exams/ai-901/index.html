@@ -88,7 +88,7 @@
         "description": "Pass AI-901 (Microsoft AI Fundamentals) with confidence. Azure Mastery is an iOS app with 319 AI-901 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -587,6 +587,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1708,21 +1711,21 @@
         Most candidates pass AI-901 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AI-901 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>AI concepts and ML principles</h3>
           <ul>
             <li><strong>Days 1–3:</strong> AI workloads and considerations — workload identification (computer vision, NLP, document processing, generative AI) and the six responsible-AI principles.</li>
             <li><strong>Days 4–6:</strong> Fundamental principles of machine learning on Azure — regression, classification, clustering, Transformer basics, Azure Machine Learning capabilities (AutoML, model management).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Computer vision and NLP</h3>
           <ul>
             <li><strong>Days 7–8:</strong> Computer vision workloads — image classification vs object detection vs OCR vs facial detection; Azure AI Vision and Face.</li>
             <li><strong>Days 9–10:</strong> NLP workloads — Azure AI Language (entity recognition, sentiment, summarisation, CLU), Azure AI Speech (STT, TTS).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Generative AI and exam sharpening</h3>
           <ul>
             <li><strong>Days 11–12:</strong> Generative AI workloads — generative-AI model scenarios, Microsoft Foundry, Azure OpenAI Service, GenAI-specific responsible-AI considerations.</li>

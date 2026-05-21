@@ -88,7 +88,7 @@
         "description": "Pass DP-300 (Microsoft Azure Database Administrator) with confidence. Azure Mastery is an iOS app with 350 DP-300 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -587,6 +587,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1708,7 +1711,7 @@
         Most candidates pass DP-300 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five DP-300 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Platform, deployment, security</h3>
           <ul>
             <li><strong>Days 1–3:</strong> Choose between Azure SQL Database (single, elastic pool, hyperscale), Azure SQL Managed Instance, and SQL Server on VMs. Compute, storage, scaling, deployment via portal/PowerShell/CLI/Bicep.</li>
@@ -1717,7 +1720,7 @@
             <li><strong>Days 11–14:</strong> Encryption (TDE, Always Encrypted with secure enclaves, dynamic data masking, row-level security), auditing, Microsoft Defender for SQL, network restrictions (firewall rules, virtual network rules, Private Link).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Performance and automation</h3>
           <ul>
             <li><strong>Days 15–17:</strong> Query Store, automatic tuning, Intelligent Insights, Performance Monitor, dynamic management views (DMVs).</li>
@@ -1726,7 +1729,7 @@
             <li><strong>Days 24–28:</strong> Automation — SQL Agent jobs (Managed Instance, SQL VM), elastic jobs (Azure SQL DB), PowerShell, Azure CLI, Logic Apps, Automation runbooks, ARM/Bicep templates, alerts via Azure Monitor.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>HA/DR, sharpen, simulate</h3>
           <ul>
             <li><strong>Days 29–32:</strong> Always On availability groups on SQL VM (synchronous vs asynchronous, read-only routing, listener configuration), failover cluster instances.</li>

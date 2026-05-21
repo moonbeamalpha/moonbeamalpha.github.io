@@ -88,7 +88,7 @@
         "description": "Pass AZ-400 (Designing and Implementing Microsoft DevOps Solutions) with confidence. Azure Mastery is an iOS app with 444 AZ-400 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -603,6 +603,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1724,14 +1727,14 @@
         AZ-400 has the broadest service surface of any Azure exam. Plan eight to twelve weeks even if you already hold AZ-104 or AZ-204. The ten-week plan below front-loads the small process and source-control domains, then spends three full weeks on the 50–55% build/release pipelines domain, before security and instrumentation in the second half.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Process, communications, source control</h3>
           <ul>
             <li><strong>Week 1:</strong> GitHub Flow, Azure Boards, dashboards, DevOps metrics (cycle time, lead time, time to recovery), wikis (Markdown + Mermaid), webhook integrations, Microsoft Teams hooks.</li>
             <li><strong>Week 2:</strong> Branching strategies (trunk-based, feature, release), pull request workflow, branch protection rules, Git LFS, repo scaling, recovering data via Git commands, removing data from history.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Build pipelines + package management</h3>
           <ul>
             <li><strong>Week 3:</strong> Package management (GitHub Packages, Azure Artifacts, SemVer, CalVer), feeds, dependency versioning, pipeline artifact versioning. Quality and release gates.</li>
@@ -1739,20 +1742,20 @@
             <li><strong>Week 5:</strong> Testing strategy — unit, integration, load tests; configuring test tasks/agents/results integration; code coverage analysis.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Deployments + IaC + maintenance</h3>
           <ul>
             <li><strong>Week 6:</strong> Deployment strategies (blue-green, canary, ring, progressive exposure, feature flags via Azure App Configuration, A/B testing), hotfix paths, deployment slots, container deployments, database deployments.</li>
             <li><strong>Week 7:</strong> IaC — Bicep, ARM templates, Azure Automation State Configuration, Azure Machine Configuration, Azure Deployment Environments. Plus pipeline maintenance — health monitoring, optimisation for cost/time/performance, retention strategy, classic-to-YAML migration.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 7–8">
           <h3>Security and compliance</h3>
           <ul>
             <li><strong>Week 8:</strong> Auth — service principals vs Managed Identities (system vs user), GitHub Apps + GITHUB_TOKEN + PATs, Azure DevOps service connections, GitHub permissions and roles, Azure DevOps permissions/security groups, projects/teams configuration. Sensitive info — Azure Key Vault for secrets/keys/certs, OpenID Connect/workload identity federation in GitHub Actions and Azure Pipelines, secure files. Scanning — Microsoft Defender for DevOps, GitHub Advanced Security, Dependabot, container scanning, CodeQL.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 9–10">
           <h3>Instrumentation + sharpen + simulate</h3>
           <ul>
             <li><strong>Week 9:</strong> Azure Monitor + Logs integration with DevOps tools, Application Insights, VM/Container/Storage/Network Insights, GitHub Insights, alerts on Actions/Pipelines events. Analyse infra metrics, distributed tracing, basic KQL queries.</li>

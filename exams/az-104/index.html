@@ -88,7 +88,7 @@
         "description": "Pass AZ-104 (Microsoft Azure Administrator) with confidence. Azure Mastery is an iOS app with 343 AZ-104 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -587,6 +587,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1708,7 +1711,7 @@
         Most candidates pass AZ-104 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AZ-104 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Identity, governance, storage</h3>
           <ul>
             <li><strong>Days 1–2:</strong> Microsoft Entra ID — users, groups, licences, external users, SSPR.</li>
@@ -1718,7 +1721,7 @@
             <li><strong>Days 11–14:</strong> Azure Files (shares, snapshots, soft delete) and Azure Blob Storage (tiers, lifecycle, versioning).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Compute and networking</h3>
           <ul>
             <li><strong>Days 15–17:</strong> ARM templates and Bicep — read, modify, deploy, convert. Azure Mastery has dedicated drills for reading Bicep snippets.</li>
@@ -1727,7 +1730,7 @@
             <li><strong>Days 25–28:</strong> Virtual networking — VNets, subnets, peering, NSGs, application security groups, Azure Bastion, service and private endpoints, Azure DNS, load balancers.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Monitor, backup, sharpen, simulate</h3>
           <ul>
             <li><strong>Days 29–31:</strong> Azure Monitor — metrics, logs, log queries, alert rules and action groups, Insights, Network Watcher.</li>

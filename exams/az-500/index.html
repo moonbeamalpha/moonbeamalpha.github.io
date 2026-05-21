@@ -88,7 +88,7 @@
         "description": "Pass AZ-500 (Microsoft Azure Security Engineer) with confidence. Azure Mastery is an iOS app with 326 AZ-500 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -586,6 +586,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1701,7 +1704,7 @@
         Most candidates pass AZ-500 after four to eight weeks of focused study, depending on prior Azure security experience. The six-week plan below maps onto the four AZ-500 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Identity and networking foundations</h3>
           <ul>
             <li><strong>Days 1–3:</strong> Microsoft Entra identity types, authentication methods, password protection, MFA, passwordless. Conditional Access rules — named locations, sign-in risk, session controls.</li>
@@ -1710,7 +1713,7 @@
             <li><strong>Days 11–14:</strong> Azure Firewall (rules, threat intelligence, Firewall Manager), DDoS Protection, Web Application Firewall on App Gateway and Front Door. Private Link / Private Endpoints / service endpoints.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Workload protection and Key Vault</h3>
           <ul>
             <li><strong>Days 15–17:</strong> Compute hardening — VM updates, disk encryption (host encryption, ADE, customer-managed keys), AKS security (network policies, Microsoft Entra integration, secrets management).</li>
@@ -1719,7 +1722,7 @@
             <li><strong>Days 24–28:</strong> <em>Azure Key Vault</em> end-to-end — keys, secrets, certificates, access policies vs RBAC, soft-delete and purge protection. The cross-cutting story — every other workload depends on it.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Defender for Cloud, Sentinel, simulate</h3>
           <ul>
             <li><strong>Days 29–32:</strong> <em>Microsoft Defender for Cloud</em> — Secure Score, regulatory compliance, workload protection plans (Servers, App Service, Storage, SQL, Containers), recommendations and exemptions, just-in-time VM access.</li>

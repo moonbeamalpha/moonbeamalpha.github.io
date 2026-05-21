@@ -88,7 +88,7 @@
         "description": "Pass AI-200 (Microsoft AI Cloud Developer) with confidence. Azure Mastery is an iOS app with 310 AI-200 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -587,6 +587,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1708,21 +1711,21 @@
         Most candidates pass AI-200 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AI-200 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Compute and vector storage</h3>
           <ul>
             <li><strong>Week 1:</strong> Develop AI-powered compute solutions — Azure Functions, Container Apps, AKS GPU pools, ACR, autoscaling, cold-start mitigation.</li>
             <li><strong>Week 2:</strong> Develop for vector-enabled storage and data — Azure Cosmos DB vector indexes, Azure SQL vector capabilities, Azure AI Search vector vs hybrid search, embedding generation and chunking strategies.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Pipelines and security</h3>
           <ul>
             <li><strong>Week 3:</strong> Implement AI pipelines and integration — Azure Data Factory, Synapse pipelines, Logic Apps, Power Automate, Azure Functions with event triggers, retry and idempotency patterns.</li>
             <li><strong>Week 4:</strong> Implement security and identity for AI — managed identities, Microsoft Entra app registrations, Private Link, customer-managed keys, content filters, Azure Key Vault, RBAC for Foundry projects.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Monitor, optimise, sharpen, simulate</h3>
           <ul>
             <li><strong>Week 5:</strong> Monitor and optimize AI solutions — Application Insights for AI calls, custom telemetry for tokens and latency, distributed tracing, cost dashboards, caching and batching strategies, capacity planning.</li>

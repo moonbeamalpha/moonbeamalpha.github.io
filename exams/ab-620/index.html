@@ -88,7 +88,7 @@
         "description": "Pass AB-620 (Microsoft AI Agent Builder) with confidence. Azure Mastery is an iOS app with 315 AB-620 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -585,6 +585,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1694,21 +1697,21 @@
         Most candidates pass AB-620 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AB-620 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Plan and configure</h3>
           <ul>
             <li><strong>Week 1:</strong> Plan and configure agent solutions — identify use cases, choose between custom agents and pre-built templates, plan environments (Dataverse), pick channels (Teams, M365, web, voice).</li>
             <li><strong>Week 2:</strong> Continue with conversational design (entry points, fallback, escalation), and environment-level governance (DLP, sharing, security roles).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Integrate and extend</h3>
           <ul>
             <li><strong>Week 3:</strong> Integrate and extend agents in Copilot Studio (largest domain, 40–45%) — topics with trigger phrases, conversation nodes, variables and branching, generative orchestration for dynamic responses.</li>
             <li><strong>Week 4:</strong> Continue with knowledge sources (SharePoint, Dataverse, websites, files, Azure AI Search), tools and connectors (Power Platform, Power Automate, MCP, AI Builder prompts), authentication (Microsoft Entra, OAuth).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Test, manage, sharpen, simulate</h3>
           <ul>
             <li><strong>Week 5:</strong> Test and manage agents — test pane (variable inspection, topic tracing, generative orchestration debugging), publish to channels, monitor via analytics dashboard, agent lifecycle (versions, environments, ALM via solutions), governance and security policies.</li>

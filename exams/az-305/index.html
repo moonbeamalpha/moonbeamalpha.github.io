@@ -88,7 +88,7 @@
         "description": "Pass AZ-305 (Designing Microsoft Azure Infrastructure Solutions) with confidence. Azure Mastery is an iOS app with 304 AZ-305 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-05-09",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -595,6 +595,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1710,7 +1713,7 @@
         Plan eight to twelve weeks for AZ-305, even if you already hold AZ-104. The eight-week plan below maps onto the four design domains, Azure Mastery's case-study mode, and the in-app exam simulator. AZ-305 rewards judgement over recall — most of the work is internalising "which Azure service for which requirement", not memorising commands.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–2">
           <h3>Identity, governance, monitoring</h3>
           <ul>
             <li><strong>Days 1–4:</strong> Authentication and authorisation design — Microsoft Entra ID, B2B/B2C, Conditional Access, Privileged Identity Management; authorising access to Azure and on-premises resources; managing secrets, certificates, and keys with Azure Key Vault.</li>
@@ -1718,21 +1721,21 @@
             <li><strong>Days 10–14:</strong> Logging and monitoring solution design — Azure Monitor, Log Analytics workspaces, log routing, monitoring at the estate level.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 3–4">
           <h3>Data storage</h3>
           <ul>
             <li><strong>Days 15–21:</strong> Relational data — SQL Database, SQL Managed Instance, MySQL, PostgreSQL, Synapse SQL — service tier and compute tier selection, scalability, data protection.</li>
             <li><strong>Days 22–28:</strong> Semi-structured + unstructured — Cosmos DB, Blob, Files, Disks. Balance features, performance, cost. Plus data integration (Data Factory, Synapse pipelines, Event Hubs, Stream Analytics) and data analysis (Synapse, Microsoft Fabric).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 5–6">
           <h3>Business continuity + infrastructure</h3>
           <ul>
             <li><strong>Days 29–35:</strong> Backup and disaster recovery — recovery solutions for Azure and hybrid workloads against specific RTO/RPO targets, Azure Backup, Azure Site Recovery, multi-region failover. High-availability design across compute and data tiers.</li>
             <li><strong>Days 36–42:</strong> The largest domain — infrastructure design. Compute solutions (VMs vs containers vs serverless vs batch), application architecture (messaging, event-driven, API integration, caching, configuration management, automated deployment), migrations via the Cloud Adoption Framework, and network solutions (connectivity, performance, security, load balancing, Azure Firewall, WAF).</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 7–8">
           <h3>Case studies and simulator</h3>
           <ul>
             <li><strong>Days 43–49:</strong> Case-study mode every day. AZ-305 leans heavily on multi-paragraph scenarios — practise reading them quickly, identifying the constraints, and ruling out wrong answers.</li>

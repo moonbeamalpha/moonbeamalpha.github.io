@@ -88,7 +88,7 @@
         "description": "Pass AB-100 (Microsoft Agentic AI Business Solutions Architect) with confidence. Azure Mastery is an iOS app with 342 AB-100 practice questions, AI score prediction, and adaptive study plans.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-18",
-        "dateModified": "2026-05-18",
+        "dateModified": "2026-05-20",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -592,6 +592,9 @@
       text-transform: uppercase;
       color: var(--azure-cyan);
       margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
     }
     .study-plan h3 {
       margin: 0 0 8px;
@@ -1701,7 +1704,7 @@
         Most candidates pass AB-100 after eight to twelve weeks of focused study, depending on hands-on experience with Copilot Studio, Microsoft Foundry, and Dynamics 365 Copilot. The ten-week plan below maps onto the three AB-100 domains (weighted toward Deploy at 40–45%), Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
       </p>
       <ol class="study-plan">
-        <li>
+        <li data-period-label="Weeks 1–3">
           <h3>Plan AI-powered business solutions</h3>
           <ul>
             <li><strong>Week 1:</strong> Requirements analysis — agent use cases for task automation, data analytics, and decision-making; grounding-data review (accuracy, relevance, timeliness); organising business data for AI consumption.</li>
@@ -1709,7 +1712,7 @@
             <li><strong>Week 3:</strong> ROI analysis — total cost of ownership, build/buy/extend trade-offs, Dynamics 365 multi-app AI scenarios.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 4–6">
           <h3>Design AI-powered business solutions</h3>
           <ul>
             <li><strong>Week 4:</strong> Design agents and AI — Dynamics 365 customer experience/service Copilot customisations, task / autonomous / prompt-and-response agents, Foundry Tools, topics with fallback in Copilot Studio.</li>
@@ -1717,7 +1720,7 @@
             <li><strong>Week 6:</strong> Orchestrate prebuilt agents — Dynamics 365 finance/supply chain, customer experience/service, Microsoft 365 Copilot for Sales / Service, Power Platform AI Hub, model routing.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Weeks 7–9">
           <h3>Deploy AI-powered business solutions</h3>
           <ul>
             <li><strong>Week 7:</strong> Analyse, monitor, and tune — agent-monitoring tools, backlog and user-feedback analysis, telemetry interpretation, model-performance metrics.</li>
@@ -1725,7 +1728,7 @@
             <li><strong>Week 9:</strong> ALM, responsible AI, security, governance — ALM for data / Copilot Studio agents / Foundry agents / custom AI models / Dynamics 365 AI; agent and model security; prompt-manipulation mitigations; responsible-AI review; data-residency compliance; access controls; audit trails.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Week 10">
           <h3>Sharpen, simulate, schedule</h3>
           <ul>
             <li><strong>Week 10:</strong> Run <em>Focus Weak Spots</em> every morning, then two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Schedule the exam when readiness gauge is 740+ with reasonable confidence — AB-100 punishes a single weak domain.</li>

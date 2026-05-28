@@ -15,25 +15,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* ── Screenshot this at 1200 × 630 to produce og-image.png ── */
+    /* ── Rendered at 1200 × 630 (deviceScaleFactor 2 → 2400 × 1260 final PNG) ── */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 1200px; height: 630px; overflow: hidden; }
 
     body {
       font-family: 'DM Sans', sans-serif;
       color: #F0F0F0;
-      background: #050810;
+      background:
+        linear-gradient(160deg,
+          #050810 0%,
+          #0A0E1A 30%,
+          #0F1525 60%,
+          #050810 100%);
       position: relative;
     }
 
-    /* Background glow */
-    .bg-glow {
+    /* Ambient glows — mirrored from 00-hero.html for visual continuity */
+    .glow-primary {
       position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 70% 55% at 30% 40%, rgba(43,136,216,0.18) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 50% at 75% 50%, rgba(80,230,255,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 85% 80%, rgba(149,120,224,0.10) 0%, transparent 50%);
+      top: -8%;
+      left: -4%;
+      width: 60%;
+      height: 70%;
+      background: radial-gradient(ellipse at center,
+        rgba(43,136,216,0.20) 0%,
+        rgba(43,136,216,0.06) 40%,
+        transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .glow-secondary {
+      position: absolute;
+      top: -10%;
+      right: -10%;
+      width: 60%;
+      height: 80%;
+      background: radial-gradient(ellipse at center,
+        rgba(180,155,239,0.16) 0%,
+        rgba(80,230,255,0.06) 40%,
+        transparent 70%);
+      filter: blur(60px);
       pointer-events: none;
     }
 
@@ -43,108 +65,159 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 28px 72px;
-      gap: 56px;
+      padding: 26px 48px 26px 64px;
+      gap: 32px;
     }
 
-    /* Left column — text */
+    /* ── Left column: text + grouped exam pills + stats ── */
     .text-col {
       flex: 1;
       min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
     }
 
-    .eyebrow {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      font-size: 13px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #50E6FF;
-      margin-bottom: 12px;
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
     }
-
-    h1 {
+    .app-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      box-shadow: 0 0 16px rgba(80,230,255,0.20);
+    }
+    .app-name {
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
-      font-size: 50px;
-      line-height: 1.05;
-      letter-spacing: -0.025em;
-      margin-bottom: 14px;
-    }
-    .accent {
+      font-size: 22px;
       background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .subtitle {
-      font-size: 16px;
-      color: #8B95A5;
-      line-height: 1.4;
-      margin-bottom: 14px;
-      max-width: 440px;
+    .eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #50E6FF;
     }
 
-    /* Exam tags */
-    .exam-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 14px;
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+    }
+    .accent {
+      background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 50%, #B49BEF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #8B95A5;
+      line-height: 1.4;
       max-width: 600px;
     }
-    .tag {
-      padding: 3px 9px;
-      border-radius: 999px;
+
+    /* ── Grouped exam pills ── */
+    .categories {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 2px;
+    }
+    .category {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cat-label {
       font-family: 'Outfit', sans-serif;
       font-size: 10px;
       font-weight: 600;
-      border: 1px solid;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      min-width: 72px;
+      flex-shrink: 0;
     }
-    .tag--blue   { color: #2B88D8; background: rgba(43,136,216,0.12); border-color: rgba(43,136,216,0.3); }
-    .tag--cyan   { color: #50E6FF; background: rgba(80,230,255,0.12); border-color: rgba(80,230,255,0.3); }
-    .tag--purple { color: #9578E0; background: rgba(149,120,224,0.12);border-color: rgba(149,120,224,0.3); }
-    .tag--gold   { color: #FFB900; background: rgba(255,185,0,0.12);  border-color: rgba(255,185,0,0.3); }
-    .tag--green  { color: #20C020; background: rgba(32,192,32,0.12);  border-color: rgba(32,192,32,0.3); }
-    .tag--orange { color: #F7630C; background: rgba(247,99,12,0.12);  border-color: rgba(247,99,12,0.3); }
+    .cat-azure    .cat-label { color: #50E6FF; }
+    .cat-ai       .cat-label { color: #B49BEF; }
+    .cat-data     .cat-label { color: #F2C811; }
+    .cat-security .cat-label { color: #4ADE80; }
 
-    /* Stats row */
-    .stats {
+    .cat-pills {
       display: flex;
-      gap: 32px;
+      flex-wrap: wrap;
+      gap: 4px;
     }
-    .stat-value {
+    .pill {
       font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 1;
-    }
-    .stat-value--cyan   { color: #50E6FF; }
-    .stat-value--gold   { color: #FFB900; }
-    .stat-value--green  { color: #20C020; }
-    .stat-label {
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #808A96;
-      margin-top: 4px;
+      letter-spacing: 0.02em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid;
+      line-height: 1.3;
     }
+    .pill-azure    { color: #50E6FF; background: rgba(80,230,255,0.10);  border-color: rgba(80,230,255,0.32); }
+    .pill-ai       { color: #B49BEF; background: rgba(180,155,239,0.10); border-color: rgba(180,155,239,0.32); }
+    .pill-data     { color: #F2C811; background: rgba(242,200,17,0.10);  border-color: rgba(242,200,17,0.32); }
+    .pill-security { color: #4ADE80; background: rgba(74,222,128,0.10);  border-color: rgba(74,222,128,0.32); }
 
-    /* Right column — phones */
-    .phones-col {
-      flex: 0 0 420px;
+    /* ── Stats bar (matches 00-hero "Exams • Questions • Cert Paths") ── */
+    .stats {
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
+      align-items: center;
       gap: 14px;
-      perspective: 1000px;
-      padding: 24px 0;
+      margin-top: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+    }
+    .stat-num {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      margin-right: 4px;
+    }
+    .stat-num--cyan  { color: #50E6FF; }
+    .stat-num--gold  { color: #F2C811; }
+    .stat-num--green { color: #4ADE80; }
+    .stat-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.32);
     }
 
+    /* ── Right column: 3 phones ── */
+    .phones-col {
+      flex: 0 0 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      perspective: 1100px;
+      padding: 12px 0;
+    }
     .phone {
-      border-radius: 36px;
+      border-radius: 32px;
       background: linear-gradient(160deg, #2a2a2e 0%, #1c1c1f 30%, #111113 60%, #232325 85%, #2a2a2e 100%);
       border: 1.5px solid rgba(255,255,255,0.14);
       position: relative;
@@ -156,23 +229,23 @@
         inset 0 -1px 0 rgba(0,0,0,0.5);
     }
     .phone--main {
-      width: 200px;
-      height: 420px;
+      width: 180px;
+      height: 386px;
       z-index: 2;
-      transform: translateY(-16px);
+      transform: translateY(-12px);
     }
     .phone--side {
-      width: 170px;
-      height: 358px;
-      opacity: 0.8;
+      width: 156px;
+      height: 334px;
+      opacity: 0.88;
     }
-    .phone--left  { transform: perspective(800px) rotateY(18deg) rotateX(-4deg) translateX(-8px); }
-    .phone--right { transform: perspective(800px) rotateY(-18deg) rotateX(-4deg) translateX(8px); }
+    .phone--left  { transform: perspective(800px) rotateY(16deg) rotateX(-3deg) translateX(-6px); }
+    .phone--right { transform: perspective(800px) rotateY(-16deg) rotateX(-3deg) translateX(6px); }
 
     .phone-screen {
       position: absolute;
-      inset: 6px;
-      border-radius: 30px;
+      inset: 5px;
+      border-radius: 26px;
       overflow: hidden;
     }
     .phone-screen img {
@@ -181,21 +254,22 @@
       object-fit: cover;
       object-position: center top;
       display: block;
+      image-rendering: -webkit-optimize-contrast;
     }
-    /* Notch */
+    /* Dynamic Island */
     .phone-screen::before {
       content: '';
       position: absolute;
-      top: 8px;
+      top: 7px;
       left: 50%;
       transform: translateX(-50%);
-      width: 64px;
-      height: 20px;
-      border-radius: 10px;
+      width: 58px;
+      height: 18px;
+      border-radius: 9px;
       background: #000;
       z-index: 20;
     }
-    /* Glare */
+    /* Subtle glare */
     .phone-screen::after {
       content: '';
       position: absolute;
@@ -205,29 +279,6 @@
       pointer-events: none;
       z-index: 15;
     }
-
-    /* App icon + name cluster */
-    .app-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .app-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
-      box-shadow: 0 0 20px rgba(80,230,255,0.2);
-    }
-    .app-name {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 24px;
-      background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
   </style>
 </head>
 <body>
@@ -235,73 +286,94 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK79R26R"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div class="bg-glow"></div>
+  <div class="glow-primary"></div>
+  <div class="glow-secondary"></div>
+
   <div class="container">
     <div class="text-col">
       <div class="app-brand">
-        <img src="/images/azure-mastery.png" alt="Azure Mastery" class="app-icon">
+        <img src="../../images/azure-mastery.png" alt="Azure Mastery" class="app-icon">
         <span class="app-name">Azure Mastery</span>
       </div>
 
       <p class="eyebrow">Microsoft Azure Certification Prep</p>
+
       <h1>Know When<br>You're <span class="accent">Ready.</span></h1>
+
       <p class="subtitle">AI-powered exam readiness scoring, adaptive study plans, and knowledge decay alerts — all running on-device.</p>
 
-      <div class="exam-tags">
-        <span class="tag tag--blue">AZ-104</span>
-        <span class="tag tag--cyan">AZ-900</span>
-        <span class="tag tag--purple">AZ-305</span>
-        <span class="tag tag--blue">AZ-204</span>
-        <span class="tag tag--purple">AZ-400</span>
-        <span class="tag tag--orange">AZ-500</span>
-        <span class="tag tag--blue">AZ-700</span>
-        <span class="tag tag--gold">AI-102</span>
-        <span class="tag tag--gold">AI-103</span>
-        <span class="tag tag--gold">AI-200</span>
-        <span class="tag tag--gold">AI-300</span>
-        <span class="tag tag--cyan">AI-900</span>
-        <span class="tag tag--cyan">AI-901</span>
-        <span class="tag tag--gold">AB-620</span>
-        <span class="tag tag--green">DP-100</span>
-        <span class="tag tag--green">DP-300</span>
-        <span class="tag tag--cyan">DP-900</span>
-        <span class="tag tag--green">PL-300</span>
-        <span class="tag tag--purple">SC-100</span>
-        <span class="tag tag--orange">SC-200</span>
-        <span class="tag tag--orange">SC-300</span>
-        <span class="tag tag--orange">SC-900</span>
+      <div class="categories">
+        <div class="category cat-azure">
+          <span class="cat-label">Azure</span>
+          <div class="cat-pills">
+            <span class="pill pill-azure">AZ-900</span>
+            <span class="pill pill-azure">AZ-104</span>
+            <span class="pill pill-azure">AZ-204</span>
+            <span class="pill pill-azure">AZ-305</span>
+            <span class="pill pill-azure">AZ-400</span>
+            <span class="pill pill-azure">AZ-500</span>
+            <span class="pill pill-azure">AZ-700</span>
+          </div>
+        </div>
+        <div class="category cat-ai">
+          <span class="cat-label">AI &amp; Agents</span>
+          <div class="cat-pills">
+            <span class="pill pill-ai">AI-900</span>
+            <span class="pill pill-ai">AI-901</span>
+            <span class="pill pill-ai">AI-102</span>
+            <span class="pill pill-ai">AI-103</span>
+            <span class="pill pill-ai">AI-200</span>
+            <span class="pill pill-ai">AI-300</span>
+            <span class="pill pill-ai">AB-620</span>
+            <span class="pill pill-ai">AB-731</span>
+            <span class="pill pill-ai">AB-900</span>
+            <span class="pill pill-ai">AB-100</span>
+          </div>
+        </div>
+        <div class="category cat-data">
+          <span class="cat-label">Data</span>
+          <div class="cat-pills">
+            <span class="pill pill-data">DP-900</span>
+            <span class="pill pill-data">DP-100</span>
+            <span class="pill pill-data">DP-300</span>
+            <span class="pill pill-data">DP-800</span>
+            <span class="pill pill-data">PL-300</span>
+          </div>
+        </div>
+        <div class="category cat-security">
+          <span class="cat-label">Security</span>
+          <div class="cat-pills">
+            <span class="pill pill-security">SC-900</span>
+            <span class="pill pill-security">SC-100</span>
+            <span class="pill pill-security">SC-200</span>
+            <span class="pill pill-security">SC-300</span>
+          </div>
+        </div>
       </div>
 
       <div class="stats">
-        <div>
-          <div class="stat-value stat-value--cyan">7,200+</div>
-          <div class="stat-label">Questions</div>
-        </div>
-        <div>
-          <div class="stat-value stat-value--gold">22</div>
-          <div class="stat-label">Exams</div>
-        </div>
-        <div>
-          <div class="stat-value stat-value--green">100%</div>
-          <div class="stat-label">Offline</div>
-        </div>
+        <span><span class="stat-num stat-num--cyan">26</span>Exams</span>
+        <span class="stat-dot"></span>
+        <span><span class="stat-num stat-num--gold">9,000+</span>Questions</span>
+        <span class="stat-dot"></span>
+        <span><span class="stat-num stat-num--green">28</span>Cert Paths</span>
       </div>
     </div>
 
     <div class="phones-col">
       <div class="phone phone--side phone--left">
         <div class="phone-screen">
-          <img src="/images/cap-home-dashboard.webp" alt="Dashboard">
+          <img src="../../images/cap-home-dashboard.webp" alt="Today dashboard">
         </div>
       </div>
       <div class="phone phone--main">
         <div class="phone-screen">
-          <img src="/images/cap-exam-iq.webp" alt="Exam IQ">
+          <img src="../../images/cap-exam-iq.webp" alt="Exam IQ predicted score">
         </div>
       </div>
       <div class="phone phone--side phone--right">
         <div class="phone-screen">
-          <img src="/images/cap-question-types.webp" alt="Question types">
+          <img src="../../images/cap-question-types.webp" alt="Question types">
         </div>
       </div>
     </div>

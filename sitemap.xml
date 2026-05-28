@@ -151,6 +151,18 @@
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
+    <loc>https://azuremastery.app/exams/ab-731/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-27</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/exams/dp-800/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-27</lastmod>
+  </url>
+  <url>
     <loc>https://azuremastery.app/apps/AzureMastery/support.html</loc>
     <priority>0.4</priority>
   </url>

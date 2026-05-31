@@ -279,7 +279,12 @@
        RESET & BASE
        ══════════════════════════════════════════════ */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { /* smooth scroll handled by GSAP ScrollToPlugin */ }
+    html {
+      /* smooth scroll handled by GSAP ScrollToPlugin */
+      /* Stop iOS Safari from inflating text in portrait, which wrapped the nav brand/CTA onto two lines */
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
     body {
       font-family: 'DM Sans', sans-serif;
       font-size: 15px;
@@ -457,6 +462,8 @@
       font-size: 18px;
       color: var(--text-primary);
       text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-brand img {
       width: 32px;
@@ -488,6 +495,8 @@
       border: 1px solid rgba(80,230,255,0.35);
       border-radius: var(--radius-md);
       transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .btn-nav-cta:hover { background: rgba(80,230,255,0.1); }
 
@@ -1717,7 +1726,9 @@
       }
       .showcase-inner--device-right .showcase-device { order: -1; }
       .showcase-device .phone-wrap { transform: scale(0.85); }
-      .nav-links .hide-mobile { display: none; }
+      /* Collapse the whole <li>, not just the <a>, so the flex `gap` between
+         hidden nav links doesn't reserve phantom width and shove the CTA off-screen. */
+      .nav-links li:has(.hide-mobile) { display: none; }
       .section-showcase { padding: 80px 24px; }
       .section-how-it-works { padding: 80px 24px; }
       .how-steps { grid-template-columns: 1fr; gap: 48px; max-width: 400px; }

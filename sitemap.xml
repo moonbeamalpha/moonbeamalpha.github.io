@@ -58,7 +58,13 @@
     <loc>https://azuremastery.app/exams/az-500/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/exams/sc-500/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-700/</loc>

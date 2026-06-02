@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, and Power Platform). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 9,000+ practice questions cover 26 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, and Power Platform). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 9,000+ practice questions cover 27 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 17+, iPadOS 17+
@@ -75,6 +75,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 - [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 315 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills outline updated 16 April 2026.
 
 - [SC-300 — Microsoft Identity and Access Administrator](https://azuremastery.app/exams/sc-300/): 311 in-app practice questions. Associate-tier identity admin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates implementing identities in Microsoft Entra ID, implementing authentication and access management (conditional access, MFA, PIM, passwordless), implementing access management for apps, and planning/implementing identity governance. Skills outline updated 27 April 2026.
+- [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 310 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The successor to AZ-500 (which retires 31 August 2026); beta from May 2026, exam expected July 2026. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Skills outline published May 2026.
 
 ### Power Platform (1)
 
@@ -116,6 +117,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 - SC-100 — Microsoft Cybersecurity Architect Expert
 - SC-200 — Microsoft Security Operations Analyst
 - SC-300 — Microsoft Identity and Access Administrator
+- SC-500 — Implementing End-to-End Security Controls for Cloud and AI Workloads (Cloud and AI Security Engineer Associate)
 
 ### Power Platform (1)
 - PL-300 — Microsoft Power BI Data Analyst Associate

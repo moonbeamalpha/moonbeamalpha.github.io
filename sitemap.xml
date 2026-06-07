@@ -67,6 +67,12 @@
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
+    <loc>https://azuremastery.app/exams/gh-900/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-07</lastmod>
+  </url>
+  <url>
     <loc>https://azuremastery.app/exams/az-700/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>

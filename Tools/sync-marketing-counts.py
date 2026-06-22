@@ -23,28 +23,53 @@ Aggregates shown on the homepage follow the app's own marketing rule
 parses leading digits only (regex ^(\\d+)(.*)), so commas would break it — the
 metric stays comma-less ("10000") while prose uses the formatted "10,000+".
 
+Two standalone social images (the LinkedIn banner and the OpenGraph card) bake
+those same aggregates into pixels, so text-patching their HTML is not enough —
+this script also re-renders them to PNG via headless Chrome. Their exam-pill
+lists are NOT auto-generated (each pill is hand-coloured and grouped); instead
+the script warns when the pills shown drift from the catalogue so a human can
+add or remove the one that changed.
+
 Usage:
-  python3 Tools/sync-marketing-counts.py --refresh   # re-read app repo -> data file
-  python3 Tools/sync-marketing-counts.py             # patch HTML from data file
-  python3 Tools/sync-marketing-counts.py --check      # report drift, change nothing
+  python3 Tools/sync-marketing-counts.py --refresh      # re-read app repo -> data file
+  python3 Tools/sync-marketing-counts.py                # patch HTML + render social PNGs
+  python3 Tools/sync-marketing-counts.py --check        # report drift, change nothing
+  python3 Tools/sync-marketing-counts.py --social-only  # only the banner + og-image
+  python3 Tools/sync-marketing-counts.py --no-render    # patch HTML/counts, skip PNG render
 
 App repo location defaults to the sibling "../AZ-104 Mastery"; override with
-env AZURE_MASTERY_APP_REPO.
+env AZURE_MASTERY_APP_REPO. Rendering needs Google Chrome (or Chromium); override
+the binary with env CHROME.
 """
 
 from __future__ import annotations
 
 import argparse
+import functools
+import http.server
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
+import threading
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(ROOT, "data", "exam-counts.json")
 EXAMS_DIR = os.path.join(ROOT, "exams")
 INDEX_HTML = os.path.join(ROOT, "index.html")
 LLMS_TXT = os.path.join(ROOT, "llms.txt")
+
+# Standalone social images: hand-built HTML rendered to PNG (the aggregates are
+# baked into pixels, so these must be re-rendered, not just text-patched).
+BANNER_HTML = os.path.join(ROOT, "apps", "AzureMastery", "linkedin-banner.html")
+BANNER_PNG = os.path.join(ROOT, "images", "linkedin-banner.png")
+OG_HTML = os.path.join(ROOT, "apps", "AzureMastery", "og-image.html")
+OG_PNG = os.path.join(ROOT, "images", "og-image.png")
+# Codes shown as styled exam pills in each image (e.g. "AZ-104"). Hand-coloured,
+# so we only warn on drift rather than regenerate them.
+PILL_RE = re.compile(r'class="(?:exam-tag exam-tag--|pill pill-)[a-z]+">([A-Z]{2}-\d{3})<')
 
 DEFAULT_APP_REPO = os.environ.get(
     "AZURE_MASTERY_APP_REPO",
@@ -245,6 +270,143 @@ def llms_edits(counts: dict, total_label: str, exam_count: int):
     return edits
 
 
+# ── social images (banner + og-image) ──────────────────────────────────────
+
+def banner_edits(total_label: str, exam_count: int):
+    """Anchored aggregate edits for linkedin-banner.html. Keyed off the stat-label
+    text so only the two headline numbers (Questions, Exams) are ever touched."""
+    return [
+        (r'(stat-number stat-number--cyan">)[\d,]+\+?'
+         r'(</div>\s*<div class="stat-label">Practice Questions)',
+         r'\g<1>' + total_label + r'\g<2>'),
+        (r'(stat-number stat-number--purple">)\d+'
+         r'(</div>\s*<div class="stat-label">Exams)',
+         r'\g<1>' + str(exam_count) + r'\g<2>'),
+    ]
+
+
+def og_edits(total_label: str, exam_count: int, cert_paths: int):
+    """Anchored aggregate edits for og-image.html's stats bar (Exams • Questions •
+    Cert Paths). Each number is keyed off its trailing label span."""
+    return [
+        (r'(stat-num stat-num--cyan">)\d+(</span>Exams)',
+         r'\g<1>' + str(exam_count) + r'\g<2>'),
+        (r'(stat-num stat-num--gold">)[\d,]+\+?(</span>Questions)',
+         r'\g<1>' + total_label + r'\g<2>'),
+        (r'(stat-num stat-num--green">)\d+(</span>Cert Paths)',
+         r'\g<1>' + str(cert_paths) + r'\g<2>'),
+    ]
+
+
+def warn_pill_drift(path: str, counts: dict, exam_count: int) -> None:
+    """Print a warning if the exam pills shown on an image drift from the catalogue.
+    Pills are hand-coloured/grouped, so this only reports — it never rewrites them."""
+    if not os.path.exists(path):
+        return
+    shown = set(PILL_RE.findall(open(path).read()))
+    rel = os.path.relpath(path, ROOT)
+    missing = sorted(set(counts) - shown)   # in catalogue, absent from image
+    extra = sorted(shown - set(counts))     # on image, absent from catalogue
+    if not missing and not extra and len(shown) == exam_count:
+        print(f"  pills ok  {rel}: all {exam_count} exams shown")
+        return
+    print(f"  PILLS     {rel}: shows {len(shown)}, catalogue has {exam_count}")
+    if missing:
+        print(f"            add by hand:    {', '.join(missing)}")
+    if extra:
+        print(f"            remove by hand: {', '.join(extra)}")
+
+
+def find_chrome() -> str | None:
+    """Locate a Chrome/Chromium binary (env CHROME wins)."""
+    env = os.environ.get("CHROME")
+    if env and os.path.exists(env):
+        return env
+    mac = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    if os.path.exists(mac):
+        return mac
+    chromium = "/Applications/Chromium.app/Contents/MacOS/Chromium"
+    if os.path.exists(chromium):
+        return chromium
+    for name in ("google-chrome", "google-chrome-stable", "chromium",
+                 "chromium-browser", "chrome"):
+        found = shutil.which(name)
+        if found:
+            return found
+    return None
+
+
+def html_dimensions(path: str) -> tuple[int, int] | None:
+    """Pull the CSS pixel size out of the `html, body { width:Npx; height:Mpx }`
+    rule so the screenshot matches whatever the HTML declares."""
+    m = re.search(r'html,\s*body\s*\{[^}]*?width:\s*(\d+)px[^}]*?height:\s*(\d+)px',
+                  open(path).read())
+    return (int(m.group(1)), int(m.group(2))) if m else None
+
+
+def render_png(chrome: str, port: int, html_path: str, png_path: str) -> bool:
+    """Screenshot html_path -> png_path via headless Chrome at 2x device scale.
+    Served over HTTP (not file://) so the banner's root-absolute /images/ paths
+    and the Google Fonts both resolve. Writes atomically; keeps the old PNG on
+    failure."""
+    dims = html_dimensions(html_path)
+    if not dims:
+        print(f"  render SKIP {os.path.relpath(png_path, ROOT)}: no html/body size")
+        return False
+    w, h = dims
+    url = f"http://127.0.0.1:{port}/{os.path.relpath(html_path, ROOT)}"
+    tmp = png_path + ".tmp.png"
+    cmd = [chrome, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+           "--force-device-scale-factor=2", f"--window-size={w},{h}",
+           "--default-background-color=00000000", "--virtual-time-budget=10000",
+           f"--screenshot={tmp}", url]
+    try:
+        subprocess.run(cmd, check=True, timeout=120,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+        print(f"  render FAIL {os.path.relpath(png_path, ROOT)}: {exc}")
+        return False
+    os.replace(tmp, png_path)
+    print(f"  rendered    {os.path.relpath(png_path, ROOT)} ({w * 2}x{h * 2})")
+    return True
+
+
+def _serve_root() -> tuple[http.server.ThreadingHTTPServer, int]:
+    """Serve ROOT on an ephemeral localhost port in a daemon thread."""
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, *args):  # silence per-request logging
+            pass
+    handler = functools.partial(Quiet, directory=ROOT)
+    httpd = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+    return httpd, httpd.server_address[1]
+
+
+def sync_social_images(p: "Patcher", counts: dict, total_label: str,
+                       exam_count: int, cert_paths: int, render: bool) -> None:
+    print("social images:")
+    p.apply(BANNER_HTML, banner_edits(total_label, exam_count))
+    p.apply(OG_HTML, og_edits(total_label, exam_count, cert_paths))
+    warn_pill_drift(BANNER_HTML, counts, exam_count)
+    warn_pill_drift(OG_HTML, counts, exam_count)
+
+    if p.check_only or not render:
+        return
+    chrome = find_chrome()
+    if not chrome:
+        print("  render SKIP: no Chrome/Chromium found "
+              "(install Google Chrome or set env CHROME); PNGs left unchanged")
+        return
+    httpd, port = _serve_root()
+    try:
+        render_png(chrome, port, BANNER_HTML, BANNER_PNG)
+        render_png(chrome, port, OG_HTML, OG_PNG)
+    finally:
+        httpd.shutdown()
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -252,6 +414,10 @@ def main() -> None:
                     help="re-read counts from the app repo into data/exam-counts.json")
     ap.add_argument("--check", action="store_true",
                     help="report files that would change; write nothing")
+    ap.add_argument("--social-only", action="store_true",
+                    help="only sync the social images (banner + og-image)")
+    ap.add_argument("--no-render", action="store_true",
+                    help="patch HTML/counts but skip rendering the social PNGs")
     ap.add_argument("--app-repo", default=DEFAULT_APP_REPO,
                     help=f"path to the AZ-104 Mastery checkout (default: {DEFAULT_APP_REPO})")
     args = ap.parse_args()
@@ -271,33 +437,37 @@ def main() -> None:
 
     p = Patcher(check_only=args.check)
 
-    print("exam pages:")
-    for code, n in sorted(counts.items()):
-        page = os.path.join(EXAMS_DIR, code_to_dir(code), "index.html")
-        if not os.path.exists(page):
-            print(f"  skip (missing): exams/{code_to_dir(code)}/index.html")
-            continue
-        # own-exam anchored edits
-        original = open(page).read()
-        text = original
-        for pat, rep in exam_page_edits(code, n):
-            text = re.sub(pat, rep, text)
-        # cross-referenced related cards (any exam -> its count)
-        text, _ = patch_related_cards(text, counts)
-        rel = os.path.relpath(page, ROOT)
-        if text != original:
-            p.changed_files += 1
-            if args.check:
-                print(f"  DRIFT  {rel}")
-            else:
-                open(page, "w").write(text)
-                print(f"  synced {rel}")
+    if not args.social_only:
+        print("exam pages:")
+        for code, n in sorted(counts.items()):
+            page = os.path.join(EXAMS_DIR, code_to_dir(code), "index.html")
+            if not os.path.exists(page):
+                print(f"  skip (missing): exams/{code_to_dir(code)}/index.html")
+                continue
+            # own-exam anchored edits
+            original = open(page).read()
+            text = original
+            for pat, rep in exam_page_edits(code, n):
+                text = re.sub(pat, rep, text)
+            # cross-referenced related cards (any exam -> its count)
+            text, _ = patch_related_cards(text, counts)
+            rel = os.path.relpath(page, ROOT)
+            if text != original:
+                p.changed_files += 1
+                if args.check:
+                    print(f"  DRIFT  {rel}")
+                else:
+                    open(page, "w").write(text)
+                    print(f"  synced {rel}")
 
-    print("homepage:")
-    p.apply(INDEX_HTML, homepage_edits(total_label, metric_total, exam_count, cert_paths))
+        print("homepage:")
+        p.apply(INDEX_HTML, homepage_edits(total_label, metric_total, exam_count, cert_paths))
 
-    print("llms.txt:")
-    p.apply(LLMS_TXT, llms_edits(counts, total_label, exam_count))
+        print("llms.txt:")
+        p.apply(LLMS_TXT, llms_edits(counts, total_label, exam_count))
+
+    sync_social_images(p, counts, total_label, exam_count, cert_paths,
+                       render=not args.no_render)
 
     verb = "would change" if args.check else "changed"
     print(f"\n{p.changed_files} file(s) {verb}.")

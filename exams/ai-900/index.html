@@ -1456,6 +1456,36 @@
     @media (max-width: 879px) {
       .am-cert-hero__cta-overlay { font-size: 10.5px; top: 50.4%; gap: 3px; }
     }
+    /* Exam retirement notice (revealed by JS within the 30-day window) */
+    .am-retire-banner {
+      max-width: 1080px;
+      margin: 24px auto 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 14px 20px;
+      background: linear-gradient(90deg, rgba(247,99,12,0.16) 0%, rgba(247,99,12,0.05) 100%);
+      border: 1px solid rgba(247,99,12,0.34);
+      border-left: 4px solid var(--warning-orange);
+      border-radius: var(--radius-lg);
+    }
+    .am-retire-banner[hidden] { display: none; }
+    .am-retire-banner__icon { flex: 0 0 auto; width: 26px; height: 26px; color: var(--warning-orange); }
+    .am-retire-banner__text { margin: 0; flex: 1 1 320px; font-size: 15px; line-height: 1.45; color: var(--text-secondary); }
+    .am-retire-banner__text strong { color: var(--text-primary); font-weight: 600; }
+    .am-retire-banner__cta {
+      flex: 0 0 auto; display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 17px; border-radius: 999px;
+      background: var(--warning-orange); color: #1c0a00;
+      font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap;
+      transition: filter .15s ease, transform .15s ease;
+    }
+    .am-retire-banner__cta:hover { filter: brightness(1.07); transform: translateY(-1px); }
+    @media (max-width: 700px) {
+      .am-retire-banner { margin: 16px; padding: 13px 16px; }
+      .am-retire-banner__cta { width: 100%; justify-content: center; }
+    }
     @keyframes am-cert-hero-float {
       0%, 100% { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(0); }
       50%      { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(-10px); }
@@ -1523,6 +1553,12 @@
   </header>
 
   <main>
+    <aside class="am-retire-banner" role="note" aria-label="Exam retirement notice"
+           data-retire-date="2026-06-30" data-cert="AI-900" hidden>
+      <svg class="am-retire-banner__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 9v4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.2" fill="currentColor"/><path d="M10.28 4.1 2.52 18.3A1.96 1.96 0 0 0 4.24 21.2h15.52a1.96 1.96 0 0 0 1.72-2.9L13.72 4.1a1.97 1.97 0 0 0-3.44 0Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      <p class="am-retire-banner__text"></p>
+      <a class="am-retire-banner__cta" href="/exams/ai-901/">Study the replacement, AI-901 <span aria-hidden="true">&rarr;</span></a>
+    </aside>
 
     <nav class="page-toc" aria-label="On this page">
       <p class="page-toc__title">On this page</p>
@@ -2053,5 +2089,23 @@
     })();
   </script>
 
+  <script>
+    /* Show the retirement banner only when the exam is retired or retires within 30 days. */
+    (function () {
+      var b = document.querySelector('.am-retire-banner[data-retire-date]');
+      if (!b) return;
+      var d = new Date(b.getAttribute('data-retire-date') + 'T00:00:00');
+      if (isNaN(d.getTime())) return;
+      var days = Math.ceil((d - new Date()) / 86400000);
+      if (days > 30) return; // outside the window — leave hidden
+      var cert = b.getAttribute('data-cert');
+      var when = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      var t = b.querySelector('.am-retire-banner__text');
+      t.innerHTML = days <= 0
+        ? '<strong>' + cert + ' was retired by Microsoft on ' + when + '.</strong> Microsoft no longer offers this exam.'
+        : '<strong>Microsoft retires ' + cert + ' on ' + when + '.</strong> It won\u2019t be available to book after that date.';
+      b.hidden = false;
+    })();
+  </script>
 </body>
 </html>

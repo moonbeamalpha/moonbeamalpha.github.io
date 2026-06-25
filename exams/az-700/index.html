@@ -1441,6 +1441,31 @@
       pointer-events: none;
       z-index: 15;
     }
+    /* Exam-specific CTA masking the baked-in "Book your AZ-104 exam" button so each cert page shows its own code */
+    .am-cert-hero__cta-overlay {
+      position: absolute;
+      left: 11.2%;
+      right: 6.4%;
+      top: 50.7%;
+      height: 5.0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 999px;
+      background: linear-gradient(95deg, #1FBE43 0%, #33D2A0 50%, #4FE6FC 100%);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.1px;
+      line-height: 1;
+      white-space: nowrap;
+      z-index: 5;
+    }
+    .am-cert-hero__cta-overlay-arrow { font-size: 0.9em; font-weight: 600; }
+    @media (max-width: 879px) {
+      .am-cert-hero__cta-overlay { font-size: 10.5px; top: 50.4%; gap: 3px; }
+    }
     @keyframes am-cert-hero-float {
       0%, 100% { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(0); }
       50%      { transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg) translateY(-10px); }
@@ -1591,13 +1616,14 @@
               <div class="am-cert-hero__phone-screen"
                    role="img"
                    aria-label="Azure Mastery home dashboard showing today's plan, predicted score, and readiness gauge">
+                <span class="am-cert-hero__cta-overlay" aria-hidden="true">Book your AZ-700 exam<span class="am-cert-hero__cta-overlay-arrow">↗</span></span>
               </div>
             </div>
           </div>
           <div class="am-cert-hero__score-pill" aria-hidden="true">
             <span class="am-cert-hero__score-pill-label">PREDICTED</span>
-            <span class="am-cert-hero__score-pill-value">708 <small class="am-cert-hero__score-pill-margin">±60</small></span>
-            <span class="am-cert-hero__score-pill-delta">▲ 14 days to ready</span>
+            <span class="am-cert-hero__score-pill-value">786 <small class="am-cert-hero__score-pill-margin">±37</small></span>
+            <span class="am-cert-hero__score-pill-delta">▲ 3 days to ready</span>
           </div>
         </div>
       </div>
@@ -1687,7 +1713,7 @@
         Azure Mastery ships with <strong>391 AZ-700 practice questions</strong> — the largest cert-specific bank we ship — every one written specifically against the current (April 2026) skills outline. Each question carries a domain tag mapped to the official five domains (core infrastructure, connectivity, application delivery, private access, network security), so you always know which area you're being tested on and where your weak spots are clustered. Bicep snippets, route tables, BGP configs, and CLI commands appear in roughly a third of the questions — matching the format of the live exam.
       </p>
       <p>
-        The on-device <strong>Exam IQ</strong> engine predicts your AZ-700 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "708 ±60, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+        The on-device <strong>Exam IQ</strong> engine predicts your AZ-700 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
         The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a hub-and-spoke routing question wrong? You'll see another VNet-peering scenario in the next session. Master "Application Gateway vs Front Door" three sessions running and the engine backs off, surfacing fresh ExpressRoute or Private Link scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.

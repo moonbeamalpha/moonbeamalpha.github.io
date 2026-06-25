@@ -455,6 +455,31 @@
     pointer-events: none;
     z-index: 15;
   }
+    /* Exam-specific CTA masking the baked-in "Book your AZ-104 exam" button so each cert page shows its own code */
+    .am-cert-hero__cta-overlay {
+      position: absolute;
+      left: 11.2%;
+      right: 6.4%;
+      top: 50.7%;
+      height: 5.0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 999px;
+      background: linear-gradient(95deg, #1FBE43 0%, #33D2A0 50%, #4FE6FC 100%);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.1px;
+      line-height: 1;
+      white-space: nowrap;
+      z-index: 5;
+    }
+    .am-cert-hero__cta-overlay-arrow { font-size: 0.9em; font-weight: 600; }
+    @media (max-width: 879px) {
+      .am-cert-hero__cta-overlay { font-size: 10.5px; top: 50.4%; gap: 3px; }
+    }
 
   /* Animations */
   @keyframes am-cert-hero-float {
@@ -578,14 +603,15 @@
           <div class="am-cert-hero__phone-screen"
                role="img"
                aria-label="Azure Mastery home dashboard showing today's plan, predicted score, and readiness gauge">
-          </div>
+                <span class="am-cert-hero__cta-overlay" aria-hidden="true">Book your AZ-104 exam<span class="am-cert-hero__cta-overlay-arrow">↗</span></span>
+              </div>
         </div>
       </div>
 
       <div class="am-cert-hero__score-pill" aria-hidden="true">
         <span class="am-cert-hero__score-pill-label">PREDICTED</span>
-        <span class="am-cert-hero__score-pill-value">708 <small class="am-cert-hero__score-pill-margin">±60</small></span>
-        <span class="am-cert-hero__score-pill-delta">▲ 14 days to ready</span>
+        <span class="am-cert-hero__score-pill-value">786 <small class="am-cert-hero__score-pill-margin">±37</small></span>
+        <span class="am-cert-hero__score-pill-delta">▲ 3 days to ready</span>
       </div>
     </div>
   </div>

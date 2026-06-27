@@ -1632,6 +1632,27 @@
     }
     a.exam-mini__tag:focus-visible { outline: 2px solid var(--group-color); outline-offset: 2px; }
 
+    /* Carousel mode (added by JS; static stacked fallback when JS is off).
+       All groups share one grid cell so the card height stays fixed to the tallest family. */
+    .exam-mini.is-carousel { display: grid; margin-top: 14px; }
+    .exam-mini.is-carousel > .exam-mini__group {
+      grid-area: 1 / 1;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.45s ease;
+    }
+    .exam-mini.is-carousel > .exam-mini__group.is-active { opacity: 1; visibility: visible; }
+    .exam-mini.is-reduced > .exam-mini__group { transition: none; }
+    .exam-mini__dots { display: flex; gap: 7px; margin-top: 16px; }
+    .exam-mini__dot {
+      width: 7px; height: 7px; padding: 0; border: 0; border-radius: 999px;
+      background: rgba(255,255,255,0.2); cursor: pointer;
+      transition: background 0.25s ease, width 0.25s ease;
+    }
+    .exam-mini__dot:hover { background: rgba(255,255,255,0.4); }
+    .exam-mini__dot.is-active { width: 20px; background: var(--group-color, var(--text-secondary)); }
+    .exam-mini__dot:focus-visible { outline: 2px solid var(--group-color, var(--azure-cyan)); outline-offset: 2px; }
+
     /* ══════════════════════════════════════════════
        FOOTER
        ══════════════════════════════════════════════ */
@@ -2996,6 +3017,63 @@
         });
       })();
     });
+  </script>
+
+  <script>
+    /* "28 Microsoft Exams" card — rotate the family groups as an auto-advancing carousel.
+       Progressive enhancement: without JS the groups stay stacked (all visible). */
+    (function () {
+      var mini = document.querySelector('.exam-mini');
+      if (!mini) return;
+      var groups = Array.prototype.slice.call(mini.querySelectorAll(':scope > .exam-mini__group'));
+      if (groups.length < 2) return;
+
+      var dotsWrap = document.createElement('div');
+      dotsWrap.className = 'exam-mini__dots';
+      dotsWrap.setAttribute('role', 'tablist');
+      dotsWrap.setAttribute('aria-label', 'Exam families');
+      var dots = groups.map(function (g, idx) {
+        var titleEl = g.querySelector('.exam-mini__title');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'exam-mini__dot';
+        var mod = (g.className.match(/exam-tags__group--[\w-]+/) || [])[0];
+        if (mod) b.classList.add(mod);
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', titleEl ? titleEl.textContent.trim() : ('Family ' + (idx + 1)));
+        b.addEventListener('click', function () { show(idx); restart(); });
+        dotsWrap.appendChild(b);
+        return b;
+      });
+      mini.parentNode.insertBefore(dotsWrap, mini.nextSibling);
+
+      mini.classList.add('is-carousel');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) mini.classList.add('is-reduced');
+
+      var i = -1, timer = null, DELAY = 5000;
+      function show(n) {
+        if (i >= 0) {
+          groups[i].classList.remove('is-active');
+          dots[i].classList.remove('is-active');
+          dots[i].setAttribute('aria-selected', 'false');
+        }
+        i = (n + groups.length) % groups.length;
+        groups[i].classList.add('is-active');
+        dots[i].classList.add('is-active');
+        dots[i].setAttribute('aria-selected', 'true');
+      }
+      function next() { show(i + 1); }
+      function start() { if (!timer) timer = setInterval(next, DELAY); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function restart() { stop(); start(); }
+
+      show(0);
+      start();
+      // Pause while the visitor is reading or interacting anywhere on the card
+      var card = mini.closest('.app-card') || mini;
+      ['mouseenter', 'focusin'].forEach(function (e) { card.addEventListener(e, stop); });
+      ['mouseleave', 'focusout'].forEach(function (e) { card.addEventListener(e, start); });
+    })();
   </script>
 
 </body>

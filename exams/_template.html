@@ -772,6 +772,8 @@
       --amh-blue:   #2B88D8;
       --amh-purple: #9578E0;
       --amh-gold:   #FFB900;
+      --amh-accent:   #50E6FF;
+      --amh-accent-2: #2B88D8;
       --amh-bg:     #050810;
       --amh-card:   #111827;
       --amh-text:   #F0F0F0;
@@ -851,9 +853,9 @@
       content: '';
       display: inline-block;
       width: 24px; height: 1px;
-      background: var(--amh-cyan);
+      background: var(--amh-accent);
     }
-    .am-cert-hero__eyebrow-code { color: var(--amh-cyan); letter-spacing: 0.12em; }
+    .am-cert-hero__eyebrow-code { color: var(--amh-accent); letter-spacing: 0.12em; }
     .am-cert-hero__lead {
       font-family: 'Outfit', system-ui, sans-serif;
       font-weight: 700;
@@ -864,7 +866,7 @@
       margin: 0;
     }
     .am-cert-hero__lead-accent {
-      background: linear-gradient(135deg, var(--amh-cyan) 0%, var(--amh-blue) 100%);
+      background: linear-gradient(135deg, var(--amh-accent) 0%, var(--amh-accent-2) 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -907,7 +909,7 @@
       font-size: 16px;
       line-height: 1;
       color: #050810;
-      background: linear-gradient(135deg, var(--amh-cyan) 0%, var(--amh-blue) 100%);
+      background: linear-gradient(135deg, var(--amh-accent) 0%, var(--amh-accent-2) 100%);
       text-decoration: none;
       box-shadow: 0 10px 24px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.4) inset;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -943,12 +945,13 @@
       animation: am-cert-hero-badge-float 5.4s ease-in-out infinite;
     }
     .am-cert-hero__badge-glyph { width: 22px; height: 22px; flex-shrink: 0; }
+    .am-cert-hero__badge-glyph path { stroke: var(--amh-accent); }
     .am-cert-hero__badge-text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
     .am-cert-hero__badge-code {
       font-family: 'Outfit', system-ui, sans-serif;
       font-weight: 700;
       font-size: 15px;
-      color: var(--amh-cyan);
+      color: var(--amh-accent);
       letter-spacing: 0.06em;
     }
     .am-cert-hero__badge-name {
@@ -991,7 +994,7 @@
       font-family: 'Outfit', system-ui, sans-serif;
       font-weight: 700;
       font-size: 22px;
-      color: var(--amh-cyan);
+      color: var(--amh-accent);
       letter-spacing: -0.01em;
     }
     .am-cert-hero__score-pill-margin { font-size: 13px; color: var(--amh-muted); font-weight: 500; margin-left: 2px; }

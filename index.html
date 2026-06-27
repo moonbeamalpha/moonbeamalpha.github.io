@@ -800,6 +800,8 @@
     }
     .bento-wide { grid-column: span 2; }
     .bento-tall { grid-row: span 2; display: flex; flex-direction: column; }
+    /* Standard feature cards size to their content (don't stretch to a tall sibling like the exams card) */
+    .bento-grid > .app-card.fade-up { align-self: start; }
     .feature-icon {
       width: 44px;
       height: 44px;
@@ -1597,6 +1599,39 @@
       outline-offset: 2px;
     }
 
+    /* Compact family-grouped exam chips (feature card) */
+    .exam-mini { display: flex; flex-direction: column; gap: 11px; margin-top: 14px; }
+    .exam-mini__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--group-color, var(--text-muted));
+      margin: 0 0 6px;
+    }
+    .exam-mini__list { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
+    .exam-mini__tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--group-color, var(--text-secondary));
+      background: var(--group-bg, rgba(255,255,255,0.05));
+      border: 1px solid var(--group-border, rgba(255,255,255,0.08));
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+    }
+    a.exam-mini__tag:hover,
+    a.exam-mini__tag:focus-visible {
+      background: var(--group-bg-hover, rgba(80,230,255,0.12));
+      border-color: var(--group-border-hover, rgba(80,230,255,0.40));
+      transform: translateY(-1px);
+    }
+    a.exam-mini__tag:focus-visible { outline: 2px solid var(--group-color); outline-offset: 2px; }
+
     /* ══════════════════════════════════════════════
        FOOTER
        ══════════════════════════════════════════════ */
@@ -1996,9 +2031,62 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M8 7h8M8 12h8M8 17h4"/></svg>
           </div>
           <h3 class="heading-medium" style="margin:16px 0 8px;">28 Microsoft Exams</h3>
-          <p class="body-medium" style="color:var(--text-secondary);">
-            From Fundamentals to Expert — AZ-104, AZ-900, AZ-305, AZ-204, AZ-400, AZ-500, AZ-700, AI-102, AI-103, AI-200, AI-300, AI-900, AI-901, AB-100, AB-620, AB-731, AB-900, DP-100, DP-300, DP-800, DP-900, PL-300, SC-100, SC-200, SC-300, SC-500, and SC-900.
-          </p>
+          <p class="body-medium" style="color:var(--text-secondary);margin:0;">From Fundamentals to Expert, across every track.</p>
+          <div class="exam-mini">
+            <div class="exam-mini__group exam-tags__group--azure">
+              <p class="exam-mini__title">Azure</p>
+              <ul class="exam-mini__list">
+                <li><a href="/exams/az-900/" class="exam-mini__tag">AZ-900</a></li>
+                <li><a href="/exams/az-104/" class="exam-mini__tag">AZ-104</a></li>
+                <li><a href="/exams/az-204/" class="exam-mini__tag">AZ-204</a></li>
+                <li><a href="/exams/az-305/" class="exam-mini__tag">AZ-305</a></li>
+                <li><a href="/exams/az-400/" class="exam-mini__tag">AZ-400</a></li>
+                <li><a href="/exams/az-500/" class="exam-mini__tag">AZ-500</a></li>
+                <li><a href="/exams/az-700/" class="exam-mini__tag">AZ-700</a></li>
+              </ul>
+            </div>
+            <div class="exam-mini__group exam-tags__group--ai">
+              <p class="exam-mini__title">AI &amp; Agents</p>
+              <ul class="exam-mini__list">
+                <li><a href="/exams/ai-900/" class="exam-mini__tag">AI-900</a></li>
+                <li><a href="/exams/ai-901/" class="exam-mini__tag">AI-901</a></li>
+                <li><a href="/exams/ai-102/" class="exam-mini__tag">AI-102</a></li>
+                <li><a href="/exams/ai-103/" class="exam-mini__tag">AI-103</a></li>
+                <li><a href="/exams/ai-200/" class="exam-mini__tag">AI-200</a></li>
+                <li><a href="/exams/ai-300/" class="exam-mini__tag">AI-300</a></li>
+                <li><a href="/exams/ab-620/" class="exam-mini__tag">AB-620</a></li>
+                <li><a href="/exams/ab-731/" class="exam-mini__tag">AB-731</a></li>
+                <li><a href="/exams/ab-900/" class="exam-mini__tag">AB-900</a></li>
+                <li><a href="/exams/ab-100/" class="exam-mini__tag">AB-100</a></li>
+              </ul>
+            </div>
+            <div class="exam-mini__group exam-tags__group--data">
+              <p class="exam-mini__title">Data</p>
+              <ul class="exam-mini__list">
+                <li><a href="/exams/dp-900/" class="exam-mini__tag">DP-900</a></li>
+                <li><a href="/exams/dp-100/" class="exam-mini__tag">DP-100</a></li>
+                <li><a href="/exams/dp-300/" class="exam-mini__tag">DP-300</a></li>
+                <li><a href="/exams/dp-800/" class="exam-mini__tag">DP-800</a></li>
+                <li><a href="/exams/pl-300/" class="exam-mini__tag">PL-300</a></li>
+              </ul>
+            </div>
+            <div class="exam-mini__group exam-tags__group--security">
+              <p class="exam-mini__title">Security</p>
+              <ul class="exam-mini__list">
+                <li><a href="/exams/sc-900/" class="exam-mini__tag">SC-900</a></li>
+                <li><a href="/exams/sc-100/" class="exam-mini__tag">SC-100</a></li>
+                <li><a href="/exams/sc-200/" class="exam-mini__tag">SC-200</a></li>
+                <li><a href="/exams/sc-300/" class="exam-mini__tag">SC-300</a></li>
+                <li><a href="/exams/sc-500/" class="exam-mini__tag">SC-500</a></li>
+              </ul>
+            </div>
+            <div class="exam-mini__group exam-tags__group--github">
+              <p class="exam-mini__title">GitHub</p>
+              <ul class="exam-mini__list">
+                <li><a href="/exams/gh-900/" class="exam-mini__tag">GH-900</a></li>
+              </ul>
+            </div>
+          </div>
         </article>
 
         <article class="app-card fade-up" style="--delay:0.2s">

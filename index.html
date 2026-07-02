@@ -785,6 +785,126 @@
     /* Float animation handled by GSAP to avoid transform conflicts */
 
     /* ══════════════════════════════════════════════
+       AURA — study-buddy mascot
+       ══════════════════════════════════════════════ */
+    /* Hero companion (stands beside the phone fan) */
+    .hero-visual { position: relative; display: flex; justify-content: center; align-items: center; min-width: 0; }
+    .hero-aura {
+      position: absolute;
+      left: 1%;
+      bottom: 4px;
+      z-index: 12;
+      width: clamp(128px, 12vw, 172px);
+      pointer-events: none;
+    }
+    .aura-img { display: block; width: 100%; height: auto;
+      filter: drop-shadow(0 18px 26px rgba(0,0,0,0.45)) drop-shadow(0 0 26px rgba(80,230,255,0.22)); }
+    .aura-img--float { animation: aura-float 6s ease-in-out infinite; }
+    .aura-glow {
+      position: absolute; left: 50%; bottom: 4%;
+      width: 82%; aspect-ratio: 1 / 1; transform: translateX(-50%);
+      background: radial-gradient(circle at 50% 55%, rgba(80,230,255,0.26) 0%, rgba(43,136,216,0.09) 46%, transparent 72%);
+      z-index: -1; pointer-events: none;
+    }
+
+    /* Speech pill — shared glass chrome (cloned from the exam-page floating badge) */
+    .aura-pill {
+      max-width: 230px;
+      padding: 10px 15px;
+      background: rgba(17,24,39,0.86);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(80,230,255,0.45);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 24px rgba(80,230,255,0.16);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 13px; line-height: 1.35;
+      color: var(--text-primary);
+      pointer-events: auto;
+    }
+    .aura-pill strong { color: var(--azure-cyan); font-weight: 600; }
+    .hero-aura .aura-pill {
+      position: absolute; bottom: 90%; left: 50%;
+      width: max-content;
+      transform: translateX(-44%);
+      border-radius: 16px 16px 16px 4px;
+      animation: aura-pill-float-hero 6.2s ease-in-out infinite;
+      animation-delay: -2.1s;
+    }
+
+    /* Meet Aura section portrait */
+    .aura-portrait { position: relative; display: flex; justify-content: center; align-items: flex-end; }
+    .aura-portrait-img {
+      position: relative; z-index: 2;
+      display: block; width: clamp(220px, 30vw, 320px); height: auto;
+      filter: drop-shadow(0 30px 50px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(80,230,255,0.2));
+    }
+    .aura-portrait-glow {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -46%);
+      width: 92%; aspect-ratio: 1 / 1; z-index: 1; pointer-events: none;
+      background: radial-gradient(circle at 50% 50%, rgba(80,230,255,0.22) 0%, rgba(43,136,216,0.09) 46%, transparent 70%);
+    }
+    .aura-traits { display: flex; flex-wrap: wrap; gap: 10px; }
+    .aura-trait {
+      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 13px;
+      letter-spacing: 0.03em; padding: 7px 16px; border-radius: 999px;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border-strong);
+      color: var(--text-primary);
+    }
+    .aura-trait--blue   { border-color: rgba(43,136,216,0.5);  color: #7db8ff; }
+    .aura-trait--purple { border-color: rgba(149,120,224,0.5); color: #b9a6f0; }
+    .aura-trait--cyan   { border-color: rgba(80,230,255,0.45); color: var(--azure-cyan); }
+
+    /* How It Works coaching chip */
+    .how-aura {
+      display: inline-flex; align-items: center; gap: 14px;
+      margin-bottom: 44px; padding: 10px 22px 10px 12px;
+      background: rgba(17,24,39,0.72);
+      border: 1px solid var(--border-accent);
+      border-radius: 999px;
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      text-align: left;
+    }
+    .how-aura-img { width: 60px; height: auto; flex-shrink: 0;
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,0.4)); }
+    .how-aura-line {
+      font-family: 'DM Sans', sans-serif; font-size: 15px; font-style: italic;
+      color: var(--text-secondary); max-width: 430px; margin: 0;
+    }
+
+    /* Final CTA celebration */
+    .cta-aura { position: relative; display: inline-block; margin-bottom: 8px; }
+    .cta-aura-img { display: block; width: clamp(112px, 16vw, 146px); height: auto; margin: 0 auto;
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,0.45)) drop-shadow(0 0 30px rgba(80,230,255,0.22)); }
+    .cta-aura .aura-pill {
+      position: absolute; bottom: 86%; left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      border-radius: 16px 16px 16px 4px;
+      animation: aura-pill-float-cta 6.2s ease-in-out infinite;
+      animation-delay: -2.1s;
+    }
+
+    @keyframes aura-float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+    @keyframes aura-pill-float-hero {
+      0%, 100% { transform: translateX(-44%) translateY(0); }
+      50%      { transform: translateX(-44%) translateY(-7px); }
+    }
+    @keyframes aura-pill-float-cta {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(-6px); }
+    }
+    @media (max-width: 1199px) {
+      .hero-aura { display: none; }
+    }
+    @media (max-width: 700px) {
+      .how-aura { flex-direction: column; text-align: center; border-radius: 20px; padding: 16px 20px; }
+      .how-aura-line { text-align: center; }
+    }
+
+    /* ══════════════════════════════════════════════
        FEATURES — BENTO GRID
        ══════════════════════════════════════════════ */
     .section-features {
@@ -1748,9 +1868,14 @@
     /* ══════════════════════════════════════════════
        RESPONSIVE
        ══════════════════════════════════════════════ */
-    @media (min-width: 769px) and (max-width: 1099px) {
+    @media (min-width: 769px) and (max-width: 1199px) {
       .phone-angle-left, .phone-angle-right { display: none; }
       .hero-devices { gap: 0; }
+    }
+    /* Wide screens: rebalance so the 3-phone fan doesn't crush the headline */
+    @media (min-width: 1200px) {
+      .hero-inner { grid-template-columns: minmax(0, 500px) minmax(0, 1fr); }
+      .hero-devices { transform: scale(0.82); transform-origin: center; }
     }
     @media (min-width: 769px) and (max-width: 980px) {
       .section-roadmap { padding: 96px 24px; }
@@ -1965,21 +2090,28 @@
         </div>
       </div>
 
-      <div class="hero-devices" aria-hidden="true">
-        <div class="phone-wrap phone-angle-left" id="device-left">
-          <div class="phone-frame">
-            <div class="phone-screen" style="background-image: url('images/cap-home-dashboard.webp');"></div>
+      <div class="hero-visual">
+        <div class="hero-devices" aria-hidden="true">
+          <div class="phone-wrap phone-angle-left" id="device-left">
+            <div class="phone-frame">
+              <div class="phone-screen" style="background-image: url('images/cap-home-dashboard.webp');"></div>
+            </div>
+          </div>
+          <div class="phone-wrap phone-angle-center" id="device-center">
+            <div class="phone-frame">
+              <div class="phone-screen" style="background-image: url('images/cap-exam-iq.webp');"></div>
+            </div>
+          </div>
+          <div class="phone-wrap phone-angle-right" id="device-right">
+            <div class="phone-frame">
+              <div class="phone-screen" style="background-image: url('images/cap-question-types.webp');"></div>
+            </div>
           </div>
         </div>
-        <div class="phone-wrap phone-angle-center" id="device-center">
-          <div class="phone-frame">
-            <div class="phone-screen" style="background-image: url('images/cap-exam-iq.webp');"></div>
-          </div>
-        </div>
-        <div class="phone-wrap phone-angle-right" id="device-right">
-          <div class="phone-frame">
-            <div class="phone-screen" style="background-image: url('images/cap-question-types.webp');"></div>
-          </div>
+        <div class="hero-aura fade-up">
+          <span class="aura-pill">Know when you're <strong>ready</strong> — I'll help you get there.</span>
+          <img src="images/aura-hero-guide.webp" alt="" class="aura-img aura-img--float" width="172" height="258" loading="eager" decoding="async">
+          <span class="aura-glow" aria-hidden="true"></span>
         </div>
       </div>
     </div>
@@ -2365,7 +2497,12 @@
   <section class="section-how-it-works" aria-label="How Exam IQ works">
     <div class="section-inner" style="text-align:center;">
       <p class="label-eyebrow fade-up" style="margin-bottom:12px;color:var(--azure-cyan);">How It Works</p>
-      <h2 class="display-small fade-up" style="margin-bottom:56px;">Three steps to a predicted score.</h2>
+      <h2 class="display-small fade-up" style="margin-bottom:28px;">Three steps to a predicted score.</h2>
+
+      <div class="how-aura fade-up" style="--delay:0.05s">
+        <img src="images/aura-coach.webp" alt="" class="how-aura-img" width="60" height="90" loading="lazy" decoding="async">
+        <p class="how-aura-line">"Answer a few, and I'll show you exactly where you stand — then what to study next."</p>
+      </div>
 
       <div class="how-steps">
         <div class="how-step fade-up">
@@ -2391,6 +2528,39 @@
           </div>
           <h3>Get your predicted score</h3>
           <p>See your predicted exam score with confidence intervals, plus AI-driven recommendations on exactly what to study next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ MEET AURA ═══════════ -->
+  <section class="section-showcase section-meet-aura" id="meet-aura" aria-label="Meet Aura, your study buddy">
+    <div class="showcase-inner showcase-inner--device-left">
+      <div class="showcase-device" aria-hidden="true">
+        <div class="aura-portrait">
+          <span class="aura-portrait-glow"></span>
+          <img src="images/aura-meet.webp" alt="" class="aura-portrait-img aura-img--float" width="320" height="480" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="showcase-text fade-up">
+        <p class="label-eyebrow" style="margin:0 0 4px;color:var(--azure-cyan);">Your study buddy</p>
+        <h2 class="display-small" style="margin:12px 0 20px;">
+          Meet <span class="headline-accent">Aura.</span>
+        </h2>
+        <p class="body-large" style="color:var(--text-secondary);margin-bottom:28px;">
+          Aura is your friendly study buddy — here from your very first session to celebrate
+          wins, encourage the tricky moments, and share quick tips. Warm, never pushy, and
+          always in your corner on the way to exam day.
+        </p>
+        <ul class="showcase-bullets" style="margin-bottom:28px;">
+          <li>Celebrates milestones, streaks, and every exam you pass</li>
+          <li>Turns a tough question into a quick, judgement-free lesson</li>
+          <li>Points you to the highest-value thing to study next</li>
+        </ul>
+        <div class="aura-traits">
+          <span class="aura-trait aura-trait--blue">Playful</span>
+          <span class="aura-trait aura-trait--purple">Smart</span>
+          <span class="aura-trait aura-trait--cyan">Supportive</span>
         </div>
       </div>
     </div>
@@ -2671,6 +2841,10 @@
   <section class="section-final-cta" id="download">
     <div class="final-cta-inner">
       <div class="final-cta-glow" aria-hidden="true"></div>
+      <div class="cta-aura fade-up">
+        <span class="aura-pill">Let's get you <strong>certified.</strong></span>
+        <img src="images/aura-celebrate.webp" alt="" class="cta-aura-img aura-img--float" width="132" height="132" loading="lazy" decoding="async">
+      </div>
       <p class="label-eyebrow fade-up" style="margin-bottom:16px;">Start for Free Today</p>
       <h2 class="display-medium fade-up" style="margin-bottom:20px;">
         Your Microsoft certification<br>

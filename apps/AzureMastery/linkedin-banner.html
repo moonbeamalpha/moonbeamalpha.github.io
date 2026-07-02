@@ -394,6 +394,17 @@
         transparent 90%
       );
     }
+    .banner-aura {
+      position: absolute;
+      left: 24px;
+      bottom: 0;
+      height: 322px;
+      width: auto;
+      z-index: 5;
+      transform: scaleX(-1);
+      filter: drop-shadow(0 12px 22px rgba(0,0,0,0.45)) drop-shadow(0 0 24px rgba(80,230,255,0.20));
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -409,6 +420,8 @@
     <div class="orb orb--purple"></div>
     <div class="top-accent"></div>
     <div class="bottom-accent"></div>
+
+    <img src="/images/aura-banner.webp" alt="" class="banner-aura">
 
     <!-- Content -->
     <div class="banner-content">

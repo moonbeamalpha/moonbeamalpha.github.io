@@ -1,2 +1,5 @@
 .DS_Store
 *.log
+
+# Aura mascot source renders — only the optimized .webp are used on the site
+images/aura-*.png

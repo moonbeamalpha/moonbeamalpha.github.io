@@ -118,8 +118,8 @@
     .top-row {
       flex: 1;
       display: grid;
-      grid-template-columns: minmax(0, 610px) 270px 214px;
-      gap: 26px;
+      grid-template-columns: minmax(0, 610px) 288px 214px;
+      gap: 22px;
       align-items: stretch;
       min-height: 0;
     }
@@ -243,9 +243,9 @@
       align-self: stretch;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-      padding: 18px;
+      justify-content: flex-start;
+      gap: 16px;
+      padding: 22px 20px;
       border-radius: 24px;
       background:
         linear-gradient(180deg, rgba(14, 28, 48, 0.72), rgba(8, 15, 28, 0.52)),
@@ -256,19 +256,26 @@
     .feature-panel-title {
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
-      font-size: 17px;
+      font-size: 20px;
       color: #F0F0F0;
       letter-spacing: 0.01em;
+    }
+    .signals {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 0;
     }
     .signal {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 13px;
     }
     .signal-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
       flex-shrink: 0;
@@ -277,8 +284,8 @@
       border: 1px solid rgba(80,230,255,0.18);
     }
     .signal-icon svg {
-      width: 15px;
-      height: 15px;
+      width: 19px;
+      height: 19px;
       display: block;
     }
     .signal-copy {
@@ -287,15 +294,15 @@
     .signal-label {
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 16.5px;
       color: #DDE7F5;
       line-height: 1.15;
     }
     .signal-detail {
-      font-size: 12px;
-      color: #7F8A9A;
+      font-size: 13px;
+      color: #8996A8;
       line-height: 1.2;
-      margin-top: 2px;
+      margin-top: 3px;
       white-space: nowrap;
     }
 
@@ -396,7 +403,7 @@
     }
     .banner-aura {
       position: absolute;
-      left: 24px;
+      left: -32px;
       bottom: 0;
       height: 322px;
       width: auto;
@@ -442,7 +449,7 @@
           </div>
 
           <div>
-            <div class="eyebrow-text">Microsoft Azure Certification Prep</div>
+            <div class="eyebrow-text">Microsoft Certification Prep</div>
             <h1 class="headline">
               Know when you're <span class="headline-accent">ready.</span>
             </h1>
@@ -456,31 +463,33 @@
         <!-- Center: Exam IQ features -->
         <div class="feature-panel">
           <div class="feature-panel-title">Exam IQ signals</div>
-          <div class="signal">
-            <div class="signal-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 5-7"/></svg>
+          <div class="signals">
+            <div class="signal">
+              <div class="signal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 5-7"/></svg>
+              </div>
+              <div class="signal-copy">
+                <div class="signal-label">Predict readiness</div>
+                <div class="signal-detail">Score forecast after every session</div>
+              </div>
             </div>
-            <div class="signal-copy">
-              <div class="signal-label">Predict readiness</div>
-              <div class="signal-detail">Score forecast after every session</div>
+            <div class="signal">
+              <div class="signal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.75V16h8v-1.25A7 7 0 0 0 12 2z"/></svg>
+              </div>
+              <div class="signal-copy">
+                <div class="signal-label">Study what matters</div>
+                <div class="signal-detail">Adaptive plans by weak domain</div>
+              </div>
             </div>
-          </div>
-          <div class="signal">
-            <div class="signal-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.75V16h8v-1.25A7 7 0 0 0 12 2z"/></svg>
-            </div>
-            <div class="signal-copy">
-              <div class="signal-label">Study what matters</div>
-              <div class="signal-detail">Adaptive plans by weak domain</div>
-            </div>
-          </div>
-          <div class="signal">
-            <div class="signal-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 8v5l3 2"/><path d="M3.5 12a8.5 8.5 0 1 0 3-6.5"/><path d="M3 4v5h5"/></svg>
-            </div>
-            <div class="signal-copy">
-              <div class="signal-label">Catch decay early</div>
-              <div class="signal-detail">Review before knowledge fades</div>
+            <div class="signal">
+              <div class="signal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 8v5l3 2"/><path d="M3.5 12a8.5 8.5 0 1 0 3-6.5"/><path d="M3 4v5h5"/></svg>
+              </div>
+              <div class="signal-copy">
+                <div class="signal-label">Catch decay early</div>
+                <div class="signal-detail">Review before knowledge fades</div>
+              </div>
             </div>
           </div>
         </div>

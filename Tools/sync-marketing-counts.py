@@ -17,9 +17,9 @@ Source of truth (the app repo, a sibling checkout):
 A snapshot is committed to data/exam-counts.json so the marketing repo is
 self-contained (re-runnable without the app checkout). Refresh it with --refresh.
 
-Aggregates shown on the homepage follow the app's own marketing rule
-(CertPathRegistry.totalQuestionCountLabel): round the total DOWN to the nearest
-500 and append "+".  e.g. 10,139 -> "10,000+".  The animated metric counter
+Aggregates shown on the homepage use the current App Store marketing rule:
+round the total DOWN to the nearest 100 and append "+".  e.g. 11,728 ->
+"11,700+".  The animated metric counter
 parses leading digits only (regex ^(\\d+)(.*)), so commas would break it — the
 metric stays comma-less ("10000") while prose uses the formatted "10,000+".
 
@@ -428,7 +428,7 @@ def main() -> None:
     total = sum(counts.values())
     exam_count = len(counts)
     cert_paths = data.get("cert_path_count") or 0
-    rounded = (total // 500) * 500
+    rounded = (total // 100) * 100
     total_label = f"{rounded:,}+"      # prose, e.g. "10,000+"
     metric_total = str(rounded)        # comma-less for the count-up animation
 

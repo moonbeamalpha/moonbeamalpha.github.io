@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 11,000+ practice questions cover 31 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 11,700+ practice questions cover 32 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 17+, iPadOS 17+
@@ -28,11 +28,11 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-204 — Developing Solutions for Microsoft Azure](https://azuremastery.app/exams/az-204/): 318 in-app practice questions. Associate-tier developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. **⚠ Exam retires 31 July 2026.** Five developer domains: compute (25–30%), storage (15–20%), security (15–20%), monitor/troubleshoot/optimize (5–10%), connect/consume services (20–25%). Heavy on SDK code samples in C#/Python/JavaScript. Skills outline updated 14 January 2026.
 
-- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 462 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 OR AZ-204. Skills outline updated 24 April 2026.
+- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 463 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 OR AZ-204. Skills outline updated 24 April 2026.
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
-- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 391 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
+- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 396 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
 
 ### AI, Machine Learning & Copilot Agents (10)
 
@@ -56,7 +56,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AB-100 — Microsoft Agentic AI Business Solutions Architect](https://azuremastery.app/exams/ab-100/): 345 in-app practice questions. Expert-tier architect cert, renews annually, USD $165 voucher. 100-min duration, 40–60 mixed-format questions, pass score 700/1000. Validates architecting multi-agent enterprise solutions with the Microsoft 365 Copilot extensibility framework, Microsoft Agent Framework, MCP extensibility, Computer Use, agent feed, and DSPM for AI. Skills outline published May 2026.
 
-### Data (4)
+### Data (6)
 
 - [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 360 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills outline updated 1 November 2024.
 
@@ -64,13 +64,17 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [DP-300 — Administering Microsoft Azure SQL Solutions](https://azuremastery.app/exams/dp-300/): 384 in-app practice questions. Associate-tier database administrator cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Five domains: plan/implement data platform resources (15–20%), implement secure environment (20–25%), monitor/configure/optimize (20–25%), automation (15–20%), HA/DR (20–25%). Skills outline updated 24 April 2026.
 
+- [DP-700 — Implementing Data Engineering Solutions Using Microsoft Fabric](https://azuremastery.app/exams/dp-700/): 368 in-app practice questions. Associate-tier Microsoft Fabric data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Three domains each weighted 30–35%: implement and manage an analytics solution (Fabric workspaces, Git and deployment pipelines, OneLake security, orchestration), ingest and transform data (full/incremental loads, Dataflows Gen2, notebooks, PySpark, T-SQL, KQL, OneLake shortcuts, mirroring, Eventstream and Spark Structured Streaming), and monitor and optimize an analytics solution (alerts, error resolution, Lakehouse/Warehouse/Spark tuning). Requires SQL, PySpark, or KQL. Skills outline updated 21 July 2026.
+
+- [DP-750 — Implementing Data Engineering Solutions Using Azure Databricks](https://azuremastery.app/exams/dp-750/): 408 in-app practice questions. Associate-tier Azure Databricks data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: set up and configure an Azure Databricks environment (15–20%), secure and govern Unity Catalog objects (15–20%), prepare and process data (30–35%), deploy and maintain data pipelines and workloads (30–35%). Covers compute selection, Unity Catalog objects and governance (grants, row/column security, ABAC, lineage, Delta Sharing), Delta modelling and Lakeflow/Auto Loader ingestion, Spark optimisation (OPTIMIZE, VACUUM), and CI/CD with Databricks Asset Bundles. Requires SQL and Python. Skills outline updated 11 March 2026.
+
 - [DP-800 — Microsoft Certified: SQL AI Developer Associate](https://azuremastery.app/exams/dp-800/): 364 in-app practice questions. Associate-tier SQL developer cert focused on AI-enabled SQL workloads (exam title: "Developing AI-Enabled Database Solutions"), renews annually, USD $165 voucher. 100-min duration (120-min seat), 40–60 mixed-format questions, pass score 700/1000. Three domains: design and develop database solutions (35–40%) — advanced T-SQL, JSON, regex, fuzzy matching, graph queries, AI-assisted dev; secure/optimize/deploy (35–40%); implement AI capabilities in database solutions (25–30%) — embeddings, vector indexes, RAG with `sp_invoke_external_rest_endpoint`. Skills outline published 12 March 2026.
 
 ### Security, Compliance & Identity (4)
 
-- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 322 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills outline updated 7 November 2025.
+- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 324 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills outline updated 7 November 2025.
 
-- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 346 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills outline updated 27 April 2026.
+- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 348 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills outline updated 27 April 2026.
 
 - [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 351 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills outline updated 16 April 2026.
 
@@ -111,10 +115,12 @@ The app covers the following Microsoft certification exams. All are taught with 
 - AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals
 - AB-100 — Microsoft Agentic AI Business Solutions Architect (Expert)
 
-### Data (4)
+### Data (6)
 - DP-900 — Microsoft Azure Data Fundamentals
 - DP-100 — Designing and Implementing a Data Science Solution on Azure (Data Scientist Associate)
 - DP-300 — Administering Microsoft Azure SQL Solutions (Database Administrator Associate)
+- DP-700 — Implementing Data Engineering Solutions Using Microsoft Fabric (Fabric Data Engineer Associate)
+- DP-750 — Implementing Data Engineering Solutions Using Azure Databricks (Azure Databricks Data Engineer Associate)
 - DP-800 — Developing AI-Enabled Database Solutions (SQL AI Developer Associate)
 
 ### Security, Compliance & Identity (4)

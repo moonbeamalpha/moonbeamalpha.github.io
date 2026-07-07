@@ -181,6 +181,18 @@
     <lastmod>2026-05-27</lastmod>
   </url>
   <url>
+    <loc>https://azuremastery.app/exams/dp-700/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-05</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/exams/dp-750/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-05</lastmod>
+  </url>
+  <url>
     <loc>https://azuremastery.app/exams/dp-800/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>

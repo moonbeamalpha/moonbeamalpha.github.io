@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+
+<!-- GH-300 GitHub Copilot cert page — generated from exams/_template.html -->
+
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TK79R26R');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>GH-300 Study App for iOS — GitHub Copilot Practice Questions | Azure Mastery</title>
+  <meta name="description" content="Pass GH-300 (GitHub Copilot) with confidence. Azure Mastery is an iOS app with 355 GH-300 practice questions, AI score prediction, and adaptive study plans. Free download.">
+  <meta name="keywords" content="GH-300, GH-300 study app, GH-300 practice questions, GH-300 exam prep, GH-300 mock exam, GH-300 revision, GitHub Copilot, GitHub Copilot certification, Copilot Chat, Copilot CLI, Agent Mode, MCP, prompt engineering, responsible AI, content exclusions">
+  <link rel="canonical" href="https://azuremastery.app/exams/gh-300/">
+
+  <!-- Crawler directives — explicitly allow rich results, full snippet length, large image previews.
+       Helps both classical SEO (Google rich snippets) and AI/AEO answer engines (ChatGPT, Perplexity,
+       Google AI Overviews, Gemini) extract substantive content blocks. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+
+  <!-- Theme + favicons (consistent with /apps/AzureMastery/) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- Preload the hero screenshot (LCP candidate) -->
+  <link rel="preload" as="image" href="/images/cap-home-dashboard.webp" fetchpriority="high">
+
+  <!-- OpenGraph / Twitter (cert-scoped title + description; reuses homepage OG image) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://azuremastery.app/exams/gh-300/">
+  <meta property="og:title" content="GH-300 Study App for iOS — GitHub Copilot">
+  <meta property="og:description" content="355 GH-300 practice questions, on-device AI score prediction, adaptive study plans, knowledge decay alerts. iPhone &amp; iPad. Free to start.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — AI-powered GH-300 (GitHub Copilot) practice on iPhone and iPad.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GH-300 Study App for iOS — GitHub Copilot">
+  <meta name="twitter:description" content="355 GH-300 practice questions, on-device AI score prediction, adaptive study plans. iPhone &amp; iPad. Free to start.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking 6 entities by @id.
+       Modern best practice for both classical SEO (Google) AND AI/AEO answer
+       engines (Perplexity, ChatGPT search, Google AI Overviews, Gemini, Claude),
+       which prefer linked, type-rich graphs over flat schemas:
+         · WebPage                       — page-level metadata + speakable
+         · BreadcrumbList                — site hierarchy
+         · EducationalOccupationalCredential — formal GH-300 cert entity
+         · SoftwareApplication           — Azure Mastery app
+         · FAQPage                       — visible FAQ section, cert-specific Qs only
+         · HowTo                         — visible 2-week study plan
+       NO aggregateRating per Phase 1 decision (re-add when ≥3 real ratings exist). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/exams/gh-300/#webpage",
+        "url": "https://azuremastery.app/exams/gh-300/",
+        "name": "GH-300 Study App for iOS — GitHub Copilot Practice Questions",
+        "description": "Pass GH-300 (GitHub Copilot) with confidence. Azure Mastery is an iOS app with 355 GH-300 practice questions, AI score prediction, and adaptive study plans.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-07-04",
+        "dateModified": "2026-07-04",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "about": { "@id": "https://azuremastery.app/exams/gh-300/#credential" },
+        "mainEntity": { "@id": "https://azuremastery.app/exams/gh-300/#app" },
+        "breadcrumb": { "@id": "https://azuremastery.app/exams/gh-300/#breadcrumbs" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".section-lede", ".am-cert-hero__sub", "#what-is p", "#how-helps p"]
+        },
+        "primaryImageOfPage": "https://azuremastery.app/images/cap-home-dashboard.webp",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/exams/gh-300/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "GH-300 GitHub Copilot" }
+        ]
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "@id": "https://azuremastery.app/exams/gh-300/#credential",
+        "name": "GitHub Copilot",
+        "alternateName": "GH-300",
+        "credentialCategory": "Certification",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/",
+        "educationalLevel": "Intermediate",
+        "competencyRequired": [
+          "Use GitHub Copilot Responsibly (15–20%)",
+          "Use GitHub Copilot Features (25–30%)",
+          "Understand GitHub Copilot Data and Architecture (10–15%)",
+          "Apply Prompt Engineering and Context Crafting (10–15%)",
+          "Improve Developer Productivity with GitHub Copilot (10–15%)",
+          "Configure Privacy, Content Exclusions, and Safeguards (10–15%)"
+        ],
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "GitHub",
+          "url": "https://github.com/"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://azuremastery.app/exams/gh-300/#app",
+        "name": "Azure Mastery — GH-300 Practice",
+        "url": "https://azuremastery.app/exams/gh-300/",
+        "downloadUrl": "https://apps.apple.com/gb/app/azure-mastery/id6760594569",
+        "operatingSystem": "iOS 18+, iPadOS 18+",
+        "applicationCategory": "EducationApplication",
+        "applicationSubCategory": "Exam Preparation",
+        "description": "GH-300 GitHub Copilot practice on iPhone and iPad. 355 cert-specific questions with on-device AI score prediction and adaptive study plans.",
+        "image": "https://azuremastery.app/images/cap-home-dashboard.webp",
+        "screenshot": [
+          "https://azuremastery.app/images/cap-home-dashboard.webp",
+          "https://azuremastery.app/images/cap-exam-iq.webp",
+          "https://azuremastery.app/images/cap-study-plan.webp"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free to start. In-app purchases unlock the full GH-300 question bank."
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "keywords": "GH-300, GitHub Copilot, Microsoft certification, exam prep, practice questions, mock exam, revision, iOS study app, AI score prediction",
+        "featureList": [
+          "355 GH-300 practice questions written against the January 2026 skills outline",
+          "AI-powered Exam IQ readiness score with confidence interval",
+          "Adaptive study plan that targets your weakest domains",
+          "Knowledge decay tracking — flags topics fading from memory",
+          "Real exam simulation at GH-300 length and time pressure",
+          "100% on-device — no tracking, no account required to start"
+        ],
+        "about": { "@id": "https://azuremastery.app/exams/gh-300/#credential" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://azuremastery.app/exams/gh-300/#faqs",
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does the GH-300 exam cost, and how long is it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The GitHub Copilot exam is roughly USD $99, though the exact price varies by region. GH-300 runs about 90 minutes and you need 700 out of 1000 to pass. It is delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official GitHub Copilot page on Microsoft Learn for current pricing and any active promotions before you book."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the GH-300 GitHub Copilot certification expire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GitHub credentials are valid for two years and are renewed by re-examination — so once you pass GH-300 you stay certified for two years, then re-take the exam to keep the credential current. The certification is delivered by Microsoft but owned and maintained by GitHub, which sets this two-year validity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the GH-300 GitHub Copilot exam for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GH-300 is an intermediate-level certification for developers and technical team members who already use GitHub Copilot day to day and want to prove real, applied expertise. It assumes GitHub fundamentals and experience in at least one programming language. This is not a beginner exam — it validates working knowledge of Copilot's features, data flows, prompt engineering, and responsible-use practices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does GH-300 cover using GitHub Copilot responsibly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 'Use GitHub Copilot Responsibly' is the first domain, weighted 15–20%. It tests the risks and limitations of generative AI, ethical and responsible AI use, how to identify potential harms and their mitigations, and — critically — why you must validate Copilot's output before trusting it. Expect scenario questions about biased or insecure suggestions and how a professional handles them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much of GH-300 is prompt engineering?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prompt engineering and context crafting is its own domain, weighted 10–15%. GH-300 tests how you structure a prompt, how Copilot determines context, the difference between zero-shot and few-shot prompting, and the core principles of writing prompts that produce useful, relevant suggestions. It pairs closely with the data-and-architecture domain, which explains how your prompt is processed and turned into a suggestion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many GH-300 practice questions does Azure Mastery include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Azure Mastery ships with 355 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Everything runs on-device: your answer history and readiness gauge never leave your iPhone or iPad."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://azuremastery.app/exams/gh-300/#study-plan",
+        "name": "How to study for GH-300 (GitHub Copilot) in 2 weeks",
+        "description": "A two-week revision plan mapped to the GH-300 skills outline (January 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "totalTime": "P14D",
+        "supply": [
+          { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
+          { "@type": "HowToSupply", "name": "GH-300 exam booking (about USD $99, varies by region)" },
+          { "@type": "HowToSupply", "name": "A GitHub Copilot licence in your IDE for hands-on practice" }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Master the core domains (Days 1–7)",
+            "text": "Days 1–3: cover 'Use GitHub Copilot Features' — inline suggestions, Copilot Chat, the Copilot CLI, Plan Mode, Agent Mode and Edit Mode, MCP, code review, Spaces and Spark, and organization policy management. This is the largest domain at 25–30%. Days 4–5: work through 'Use GitHub Copilot Responsibly' — the risks and limitations of generative AI, ethical and responsible use, identifying harms and mitigations, and validating output before you trust it (15–20%). Days 6–7: cover 'Understand GitHub Copilot Data and Architecture' — how data flows, input processing and prompt building, proxy filtering, post-processing, the code-suggestion lifecycle, and LLM limitations.",
+            "url": "https://azuremastery.app/exams/gh-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Sharpen and simulate (Days 8–14)",
+            "text": "Days 8–9: cover 'Apply Prompt Engineering and Context Crafting' (prompt structure, how context is determined, zero-shot and few-shot prompting) and 'Improve Developer Productivity with GitHub Copilot' (code generation, refactoring, documentation, generating tests and edge cases, security and performance). Days 10–11: cover 'Configure Privacy, Content Exclusions, and Safeguards' (content exclusions, editor settings, output ownership and limitations, duplication detection, security warnings), then run Focus Weak Spots every morning — the app surfaces the questions most likely to move your readiness score. Days 12–13: run the Exam Simulator end-to-end at the full 90-minute length, twice; if scoring 750+ consistently, book the exam. Day 14: light review only, sleep well, sit the exam.",
+            "url": "https://azuremastery.app/exams/gh-300/#study-plan"
+          }
+        ],
+        "about": { "@id": "https://azuremastery.app/exams/gh-300/#credential" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as homepage -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/exams/hero.css">
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — CERT PAGE TOKENS + TYPOGRAPHY
+       Subset of /apps/AzureMastery/index.html :root + display-* / body-*
+       so the cert page matches the homepage visual without re-bundling
+       the full 80KB design system.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Visually-hidden utility — same definition as homepage */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (homepage parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .heading-small  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.4; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Top sticky-on-scroll site nav (minimal) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section {
+      padding-block: clamp(48px, 7vw, 88px);
+    }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    /* Right-rail "On this page" TOC — desktop only */
+    .page-toc { display: none; }
+    @media (min-width: 1280px) {
+      .page-toc {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        z-index: 40;
+        width: 152px;
+        padding: 16px 10px;
+        background: rgba(5, 8, 16, 0.55);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+      }
+      .page-toc__title {
+        margin: 0 0 10px;
+        padding-inline-start: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--azure-cyan);
+      }
+      .page-toc__list { list-style: none; margin: 0; padding: 0; }
+      .page-toc__item { margin: 0; }
+      .page-toc__link {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        border-radius: 0 6px 6px 0;
+        transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      }
+      .page-toc__link:hover {
+        color: var(--text-primary);
+        background: rgba(80, 230, 255, 0.06);
+        text-decoration: none;
+      }
+      .page-toc__link[aria-current="true"] {
+        color: var(--azure-cyan);
+        border-left-color: var(--azure-cyan);
+        background: rgba(80, 230, 255, 0.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    .section-eyebrow { margin: 0 0 12px; }
+    .section-title { margin: 0 0 24px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 28px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 64ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+
+    /* Page-level H1 — sits below the hero, sets the SEO target */
+    .page-h1 {
+      margin: 0 0 16px;
+      color: var(--text-primary);
+    }
+    .page-h1-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Exam-format facts list */
+    .exam-format {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .exam-format { grid-template-columns: repeat(2, 1fr); }
+    }
+    .exam-format li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .exam-format__label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 96px;
+    }
+    .exam-format__value {
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+
+    /* Domain card grid (objectives) */
+    .domains {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .domain {
+      padding: 24px 26px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .domain h3 {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 0 0 12px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 1.3;
+    }
+    .domain__weight {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.10);
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(80,230,255,0.25);
+      white-space: nowrap;
+    }
+    .domain p { margin: 0; max-width: 60ch; }
+
+    /* Study plan as ordered list with week labels */
+    .study-plan {
+      list-style: none;
+      counter-reset: weeks;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 18px;
+    }
+    .study-plan > li {
+      counter-increment: weeks;
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      position: relative;
+    }
+    .study-plan > li::before {
+      content: 'Week ' counter(weeks);
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+      margin-bottom: 8px;
+    }
+    .study-plan > li[data-period-label]::before {
+      content: attr(data-period-label);
+    }
+    .study-plan h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+    }
+    .study-plan ul { margin: 0; padding-left: 20px; color: var(--text-secondary); }
+    .study-plan li li { margin-bottom: 4px; }
+
+    /* FAQ items */
+    .faqs { display: grid; gap: 14px; margin-top: 16px; }
+    .faq {
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .faq h3 {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .faq p { margin: 0; }
+
+    /* Related certifications grid */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    @media (min-width: 640px) {
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .related-card {
+      display: block;
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .related-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .related-card__code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--azure-cyan);
+      letter-spacing: 0.04em;
+    }
+    .related-card__name {
+      display: block;
+      margin-top: 6px;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+    .related-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(60px, 9vw, 120px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 28px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow:
+        0 12px 28px rgba(43,136,216,0.40),
+        0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+    .cta-small {
+      display: block;
+      margin-top: 14px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+
+    /* Hero styles: /exams/hero.css — per-page family accent only */
+    .am-cert-hero { --amh-accent: #F7630C; --amh-accent-2: #C44E08; }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK79R26R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/apps/AzureMastery/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <a class="site-nav__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc__title">On this page</p>
+      <ol class="page-toc__list">
+        <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#faqs">FAQs</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#related">Related</a></li>
+      </ol>
+    </nav>
+
+    <!-- ============================================================
+         HERO BLOCK — mirrors /exams/_hero.html.
+         ============================================================ -->
+    <section class="am-cert-hero" aria-labelledby="am-cert-hero-lead">
+      <div class="am-cert-hero__inner">
+        <div class="am-cert-hero__copy">
+          <a class="am-cert-hero__brand" href="/apps/AzureMastery/" aria-label="Azure Mastery — back to home">
+            <img class="am-cert-hero__brand-icon"
+                 src="/images/app-icon.webp"
+                 alt=""
+                 width="32" height="32"
+                 loading="eager" decoding="async">
+            <span class="am-cert-hero__brand-name">Azure Mastery</span>
+          </a>
+          <p class="am-cert-hero__eyebrow">
+            Microsoft Certification
+            <span class="am-cert-hero__eyebrow-code">GH-300</span>
+          </p>
+          <h2 id="am-cert-hero-lead" class="am-cert-hero__lead">
+            Predict your score.
+            <span class="am-cert-hero__lead-accent">Pass with proof.</span>
+          </h2>
+          <p class="am-cert-hero__sub">
+            On-device AI scores your readiness, builds an adaptive study plan, and flags topics fading from memory — before they cost you the exam.
+          </p>
+          <div class="am-cert-hero__stats">
+            <span class="am-cert-hero__stat">
+              <span class="am-cert-hero__stat-dot"></span><span class="am-cert-hero__stat-count">355</span>practice questions
+            </span>
+            <span class="am-cert-hero__stat am-cert-hero__stat--gold">
+              <span class="am-cert-hero__stat-dot"></span>AI score prediction
+            </span>
+            <span class="am-cert-hero__stat am-cert-hero__stat--purple">
+              <span class="am-cert-hero__stat-dot"></span>100% offline
+            </span>
+          </div>
+          <div class="am-cert-hero__ctas">
+            <a class="am-cert-hero__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+              <svg class="am-cert-hero__cta-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+              </svg>
+              Download free
+            </a>
+            <span class="am-cert-hero__small">iPhone &amp; iPad · Free to start</span>
+          </div>
+        </div>
+
+        <div class="am-cert-hero__device">
+          <div class="am-cert-hero__badge" aria-hidden="true">
+            <svg class="am-cert-hero__badge-glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2 L3 6 V12 C3 17 7 21 12 22 C17 21 21 17 21 12 V6 Z" fill="rgba(80,230,255,0.16)" stroke="#50E6FF" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M8 12 l3 3 l5-6" fill="none" stroke="#50E6FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="am-cert-hero__badge-text">
+              <span class="am-cert-hero__badge-code">GH-300</span>
+              <span class="am-cert-hero__badge-name">GitHub Copilot</span>
+            </span>
+          </div>
+          <div class="am-cert-hero__phone-wrap">
+            <div class="am-cert-hero__phone-frame">
+              <div class="am-cert-hero__phone-screen"
+                   role="img"
+                   aria-label="Azure Mastery home dashboard showing today's plan, predicted score, and readiness gauge">
+                <span class="am-cert-hero__cta-overlay" aria-hidden="true">Book your GH-300 exam<span class="am-cert-hero__cta-overlay-arrow">↗</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="am-cert-hero__score-pill" aria-hidden="true">
+            <span class="am-cert-hero__score-pill-label">PREDICTED</span>
+            <span class="am-cert-hero__score-pill-value">786 <small class="am-cert-hero__score-pill-margin">±37</small></span>
+            <span class="am-cert-hero__score-pill-delta">▲ 3 days to ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PAGE H1 + LEAD — sits below hero. The H1 is the SEO target.
+         ============================================================ -->
+    <section class="container">
+      <h1 class="display-large page-h1">
+        GH-300 Study App for iOS — <span class="page-h1-accent">GitHub Copilot</span>
+      </h1>
+      <p class="body-large section-lede">
+        Get exam-ready for GH-300 (GitHub Copilot) on iPhone or iPad. Azure Mastery uses on-device AI to predict your readiness score, build a personalised study plan around the six GitHub Copilot domains, and surface topics you're forgetting — all without sending a single byte off your device.
+      </p>
+    </section>
+
+    <!-- What is the GH-300 exam? -->
+    <section id="what-is" class="container">
+      <p class="label-eyebrow section-eyebrow">The exam</p>
+      <h2 class="display-small section-title">What is the GH-300 exam?</h2>
+      <p>
+        GH-300 is the GitHub Copilot certification — an <strong>intermediate</strong> credential for developers and technical team members who already use Copilot and want to prove real, applied expertise. It's owned and maintained by GitHub but delivered through Microsoft's exam platform, and it assumes you already have GitHub fundamentals and experience in at least one programming language. This is not a beginner exam: it validates that you can use <strong>GitHub Copilot responsibly</strong>, work fluently with <strong>Copilot's features</strong> across the IDE, CLI and beyond, understand how Copilot <strong>processes your data</strong>, craft effective <strong>prompts</strong>, and configure the right <strong>privacy and safeguards</strong>.
+      </p>
+      <p>
+        GH-300 is applied rather than purely conceptual — it expects a working model of how Copilot fits into a real development workflow: inline suggestions and <strong>Copilot Chat</strong>, the <strong>Copilot CLI</strong>, <strong>Agent Mode</strong>, <strong>Edit Mode</strong> and <strong>MCP</strong>, code review, and organization-wide policy management. It also tests the judgement around the tool: why you must <strong>validate AI output</strong> before trusting it, how prompt context is determined, when duplication detection and content exclusions matter, and how to read the security warnings Copilot surfaces.
+      </p>
+      <p>
+        The GH-300 skills outline was last updated as of <strong>January 2026</strong>. Every question in Azure Mastery's GH-300 bank is mapped to the current six-domain outline — including newer surfaces such as Plan Mode, Agent Mode, MCP, and Spaces and Spark — with no leftover questions on retired features. Read the official study guide at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/gh-300" rel="noopener">learn.microsoft.com</a>.
+      </p>
+      <ul class="exam-format" aria-label="GH-300 exam format facts">
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">Multiple choice &amp; multiple response</span></li>
+        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">~90 minutes</span></li>
+        <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
+        <li><span class="exam-format__label">Cost</span><span class="exam-format__value">~USD $99 (varies by region)</span></li>
+        <li><span class="exam-format__label">Level</span><span class="exam-format__value">Intermediate · valid 2 years</span></li>
+        <li><span class="exam-format__label">Format</span><span class="exam-format__value">Online or test centre</span></li>
+      </ul>
+    </section>
+
+    <!-- GH-300 exam objectives -->
+    <section id="objectives" class="container">
+      <p class="label-eyebrow section-eyebrow">Skills measured · January 2026</p>
+      <h2 class="display-small section-title">GH-300 exam objectives</h2>
+      <p class="section-lede">
+        Six domains, with weights from GitHub's skills outline as of January 2026. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/gh-300" rel="noopener">official study guide</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
+      </p>
+      <div class="domains">
+        <article class="domain">
+          <h3>Use GitHub Copilot Responsibly<span class="domain__weight">15–20%</span></h3>
+          <p>
+            The judgement domain. Covers the risks and limitations of generative AI, ethical and responsible AI use, and how to identify potential harms and their mitigations. Most importantly, it tests why you must validate Copilot's output before you trust it — recognising biased, insecure, or simply wrong suggestions, and knowing how a professional responds. Get this mindset right and the rest of the exam makes sense.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Use GitHub Copilot Features<span class="domain__weight">25–30%</span></h3>
+          <p>
+            The largest domain. Copilot inside the IDE — inline suggestions, Copilot Chat, the Copilot CLI, and Plan Mode — plus Agent Mode, Edit Mode, and MCP for tool-connected workflows. Also covers using Copilot in code review, Spaces and Spark, and organization-wide policy management. Expect scenario questions on which feature fits which task and how they combine.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Understand GitHub Copilot Data and Architecture<span class="domain__weight">10–15%</span></h3>
+          <p>
+            What happens under the hood: how your data is used, flows, and is shared; input processing and prompt building; the proxy service that handles filtering and post-processing; and the full code-suggestion lifecycle from keystroke to accepted suggestion. Also covers the limitations of the underlying large language models so you know what Copilot can and cannot do.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Apply Prompt Engineering and Context Crafting<span class="domain__weight">10–15%</span></h3>
+          <p>
+            Getting better suggestions on purpose: prompt structure and the role of context, how Copilot determines the context it uses, and the difference between zero-shot and few-shot prompting. Rounds out with the core principles of prompt engineering — being specific, giving examples, and iterating — so you can steer Copilot rather than accept whatever it offers first.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Improve Developer Productivity with GitHub Copilot<span class="domain__weight">10–15%</span></h3>
+          <p>
+            Copilot applied to real work: generating code, refactoring, and writing documentation; accelerating how you learn a new codebase or language; generating tests and finding edge cases; and using Copilot to improve the security and performance of existing code. This domain is about outcomes — turning Copilot from an autocomplete into a genuine productivity multiplier.
+          </p>
+        </article>
+        <article class="domain">
+          <h3>Configure Privacy, Content Exclusions, and Safeguards<span class="domain__weight">10–15%</span></h3>
+          <p>
+            The controls that keep Copilot safe to use: content exclusions and editor settings, the ownership and limitations of Copilot's outputs, duplication detection to avoid matching public code, and the security warnings Copilot raises. Expect questions on configuring exclusions at the repository and organization level and what each safeguard actually protects.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- How Azure Mastery helps -->
+    <section id="how-helps" class="container">
+      <p class="label-eyebrow section-eyebrow">Designed for GH-300</p>
+      <h2 class="display-small section-title">How Azure Mastery helps you pass GH-300</h2>
+      <p>
+        Azure Mastery ships with <strong>355 GH-300 practice questions</strong>, every one written specifically against the current GitHub Copilot skills outline — not generic Copilot trivia. Each question carries a domain tag mapped to the official six domains, so you always know which area you're being tested on and where your weak spots are clustered.
+      </p>
+      <p>
+        The on-device <strong>Exam IQ</strong> engine predicts your GH-300 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+      </p>
+      <p>
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get something wrong on content exclusions? You'll see another content-exclusion question in the next session. Nail "when to use Agent Mode vs Edit Mode" three sessions running and the engine backs off, surfacing newer material such as the code-suggestion lifecycle or few-shot prompting. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+      </p>
+      <p>
+        <strong>Knowledge decay tracking</strong> is the secret weapon for a broad, applied exam like GH-300. The same domain you mastered six weeks ago is the domain you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry — the padlock icon on the Today screen is your "revisit before you forget" cue.
+      </p>
+      <p>
+        <strong>Real exam simulation mode</strong> runs at GH-300's actual length and time pressure: a randomised question set drawn from the full 355-question bank, a ~90-minute timer, no jumping back to flag-and-review. It's the closest you can get to the test centre experience without sitting the exam.
+      </p>
+      <p>
+        Everything runs <strong>on-device</strong>. Your answer history, your readiness gauge, your decay alerts — none of it leaves your iPhone or iPad. No account required to start, no tracking, no sync server. Privacy-first by design.
+      </p>
+    </section>
+
+    <!-- Suggested study plan -->
+    <section id="study-plan" class="container">
+      <p class="label-eyebrow section-eyebrow">2-week revision plan</p>
+      <h2 class="display-small section-title">Suggested GH-300 study plan</h2>
+      <p class="section-lede">
+        If you already use GitHub Copilot day to day, most candidates pass GH-300 after one to two weeks of focused revision. Below is a two-week plan that maps onto Azure Mastery's six domains, simulator, and decay alerts. Adjust pace to taste — the readiness gauge tells you when you're done, not the calendar.
+      </p>
+      <ol class="study-plan">
+        <li>
+          <h3>Master the core domains</h3>
+          <ul>
+            <li><strong>Days 1–3:</strong> Tackle <em>Use GitHub Copilot Features</em> first. It's the largest domain (25–30%): inline suggestions, Copilot Chat, the Copilot CLI, Plan Mode, Agent Mode, Edit Mode, MCP, code review, Spaces and Spark, and org policy management. 30 questions per session, two sessions per day.</li>
+            <li><strong>Days 4–5:</strong> Work through <em>Use GitHub Copilot Responsibly</em> (15–20%). Risks and limitations of generative AI, ethical use, identifying harms and mitigations, and validating output before you trust it.</li>
+            <li><strong>Days 6–7:</strong> Cover <em>Understand GitHub Copilot Data and Architecture</em>. Data flow, input processing and prompt building, proxy filtering and post-processing, the code-suggestion lifecycle, and LLM limitations.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Sharpen and simulate</h3>
+          <ul>
+            <li><strong>Days 8–9:</strong> Cover <em>Apply Prompt Engineering and Context Crafting</em> (prompt structure, how context is determined, zero-shot and few-shot prompting) and <em>Improve Developer Productivity with GitHub Copilot</em> (code generation, refactoring, documentation, tests and edge cases, security and performance).</li>
+            <li><strong>Days 10–11:</strong> Cover <em>Configure Privacy, Content Exclusions, and Safeguards</em> (content exclusions, editor settings, output ownership, duplication detection, security warnings), then run the <em>Focus Weak Spots</em> session every morning. The app surfaces the 5–10 questions most likely to move your readiness score.</li>
+            <li><strong>Days 12–13:</strong> Run the <em>Exam Simulator</em> end-to-end at full ~90-minute length, twice. Review carefully after each. If you're scoring 750+ consistently, book the exam.</li>
+            <li><strong>Day 14:</strong> Light review only. Sleep well. Sit the exam.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="container">
+      <p class="label-eyebrow section-eyebrow">Frequently asked</p>
+      <h2 class="display-small section-title">GH-300 FAQs</h2>
+      <div class="faqs">
+        <article class="faq">
+          <h3>How much does the GH-300 exam cost, and how long is it?</h3>
+          <p>The GitHub Copilot exam is roughly USD $99, though the exact price varies by region. GH-300 runs about 90 minutes and you need 700 out of 1000 to pass. It's delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/" rel="noopener">GitHub Copilot page</a> for current pricing and any active promotions before you book.</p>
+        </article>
+        <article class="faq">
+          <h3>Does the GH-300 GitHub Copilot certification expire?</h3>
+          <p>GitHub credentials are valid for two years and are renewed by re-examination — so once you pass GH-300 you stay certified for two years, then re-take the exam to keep the credential current. The certification is delivered by Microsoft but owned and maintained by GitHub, which sets this two-year validity.</p>
+        </article>
+        <article class="faq">
+          <h3>Who is the GH-300 GitHub Copilot exam for?</h3>
+          <p>GH-300 is an intermediate-level certification for developers and technical team members who already use GitHub Copilot day to day and want to prove real, applied expertise. It assumes GitHub fundamentals and experience in at least one programming language. This is not a beginner exam — it validates working knowledge of Copilot's features, data flows, prompt engineering, and responsible-use practices.</p>
+        </article>
+        <article class="faq">
+          <h3>Does GH-300 cover using GitHub Copilot responsibly?</h3>
+          <p>Yes. "Use GitHub Copilot Responsibly" is the first domain, weighted 15–20%. It tests the risks and limitations of generative AI, ethical and responsible AI use, how to identify potential harms and their mitigations, and — critically — why you must validate Copilot's output before trusting it. Expect scenario questions about biased or insecure suggestions and how a professional handles them.</p>
+        </article>
+        <article class="faq">
+          <h3>How much of GH-300 is prompt engineering?</h3>
+          <p>Prompt engineering and context crafting is its own domain, weighted 10–15%. GH-300 tests how you structure a prompt, how Copilot determines context, the difference between zero-shot and few-shot prompting, and the core principles of writing prompts that produce useful, relevant suggestions. It pairs closely with the data-and-architecture domain, which explains how your prompt is processed and turned into a suggestion.</p>
+        </article>
+        <article class="faq">
+          <h3>How many GH-300 practice questions does Azure Mastery include?</h3>
+          <p>Azure Mastery ships with 355 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Everything runs on-device: your answer history and readiness gauge never leave your iPhone or iPad.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Related certifications -->
+    <section id="related" class="container">
+      <p class="label-eyebrow section-eyebrow">After GH-300</p>
+      <h2 class="display-small section-title">Related certifications</h2>
+      <p class="section-lede">
+        GH-300 is an intermediate GitHub Copilot credential, but it pairs naturally with GitHub's entry-level exam and Microsoft's AI Fundamentals. If you're building broad GitHub and AI expertise, these two are the most popular companions — and Azure Mastery covers both.
+      </p>
+      <nav class="related-grid" aria-label="Related certifications">
+        <a class="related-card" href="/exams/gh-900/">
+          <span class="related-card__code">GH-900</span>
+          <span class="related-card__name">GitHub Foundations</span>
+          <span class="related-card__hint">The entry-level GitHub credential and a natural precursor to GH-300. 367 practice questions.</span>
+        </a>
+        <a class="related-card" href="/exams/ai-900/">
+          <span class="related-card__code">AI-900</span>
+          <span class="related-card__name">Microsoft Azure AI Fundamentals</span>
+          <span class="related-card__hint">Grounds the generative-AI concepts GH-300 builds on. 340 practice questions.</span>
+        </a>
+      </nav>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Ready to pass GH-300?</h2>
+      <p>Download Azure Mastery free. 355 GH-300 practice questions, AI score prediction, and a personalised study plan that adapts to your weak spots. iPhone &amp; iPad.</p>
+      <a class="cta-button" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/apps/AzureMastery/">Azure Mastery</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      GH-300, GitHub Copilot, and GitHub are trademarks of GitHub, Inc.; Microsoft is a trademark of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by GitHub or Microsoft.
+    </p>
+  </footer>
+
+
+  <script src="/exams/exam.js" defer></script>
+</body>
+</html>

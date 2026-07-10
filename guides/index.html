@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TK79R26R');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>Azure certification guides | Azure Mastery</title>
+  <meta name="description" content="Free guides to Microsoft's Azure certifications: which exam to sit first, how to pass AZ-900, AZ-104, SC-900, DP-900, and AI-901, plus head-to-head exam comparisons.">
+  <meta name="keywords" content="Azure certification guides, which Azure certification first, how to pass AZ-900, how to pass AZ-104, how to pass SC-900, how to pass DP-900, how to pass AI-901, AZ-900 vs AZ-104, SC-900 vs AZ-900">
+  <link rel="canonical" href="https://azuremastery.app/guides/">
+
+  <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+  <meta name="application-name" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-title" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Theme + favicons (consistent with the exam pages) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://azuremastery.app/guides/">
+  <meta property="og:title" content="Azure certification guides">
+  <meta property="og:description" content="Free guides to Microsoft's Azure certifications: which exam to sit first, how to pass AZ-900, AZ-104, SC-900, DP-900, and AI-901, plus head-to-head comparisons.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — free guides to Microsoft's Azure certifications.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Azure certification guides">
+  <meta name="twitter:description" content="Which Azure exam to sit first, how to pass AZ-900, AZ-104, SC-900, DP-900, and AI-901, plus head-to-head comparisons.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking entities by @id.
+       · WebPage      — page-level metadata + speakable
+       · BreadcrumbList — site hierarchy (Azure Mastery → Guides)
+       · ItemList     — the guide library itself, mirroring the two card grids below -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/guides/#webpage",
+        "url": "https://azuremastery.app/guides/",
+        "name": "Azure certification guides",
+        "description": "Free guides to Microsoft's Azure certifications: which exam to sit first, how to pass AZ-900, AZ-104, SC-900, DP-900, and AI-901, plus head-to-head exam comparisons.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-07-10",
+        "dateModified": "2026-07-10",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "mainEntity": { "@id": "https://azuremastery.app/guides/#guide-list" },
+        "breadcrumb": { "@id": "https://azuremastery.app/guides/#breadcrumbs" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".guide-hero__title", ".guide-hero__dek"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/guides/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://azuremastery.app/guides/#guide-list",
+        "name": "Azure Mastery certification guides",
+        "description": "Every guide in the Azure Mastery guides library: how to choose a certification, and how to pass AZ-900, AZ-104, SC-900, DP-900, and AI-901.",
+        "numberOfItems": 8,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "url": "https://azuremastery.app/guides/which-azure-certification-first/", "name": "Which Microsoft certification should you get first?" },
+          { "@type": "ListItem", "position": 2, "url": "https://azuremastery.app/guides/az-900-vs-az-104/", "name": "AZ-900 vs AZ-104: which Azure cert is right for you?" },
+          { "@type": "ListItem", "position": 3, "url": "https://azuremastery.app/guides/sc-900-vs-az-900/", "name": "SC-900 vs AZ-900: security or cloud first?" },
+          { "@type": "ListItem", "position": 4, "url": "https://azuremastery.app/guides/how-to-pass-az-900/", "name": "How to pass AZ-900 Azure Fundamentals" },
+          { "@type": "ListItem", "position": 5, "url": "https://azuremastery.app/guides/how-to-pass-az-104/", "name": "How to pass AZ-104 Azure Administrator" },
+          { "@type": "ListItem", "position": 6, "url": "https://azuremastery.app/guides/how-to-pass-sc-900/", "name": "How to pass SC-900 Security Fundamentals" },
+          { "@type": "ListItem", "position": 7, "url": "https://azuremastery.app/guides/how-to-pass-dp-900/", "name": "How to pass DP-900 Data Fundamentals" },
+          { "@type": "ListItem", "position": 8, "url": "https://azuremastery.app/guides/how-to-pass-ai-901/", "name": "How to pass AI-901 AI Fundamentals" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as the exam pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — GUIDES ARTICLE TOKENS + TYPOGRAPHY + COMPONENTS
+       Token block + typography copied verbatim from guides/how-to-pass-az-104
+       so this index page matches the site visual. Every colour outside
+       :root is a token or a semi-transparent tint that reads on both
+       themes, keeping the page theme-ready.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (site parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 64px); line-height: 1.06; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Sticky site nav (exam-page pattern) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section { padding-block: clamp(44px, 5vw, 72px); }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    .section-eyebrow { margin: 0 0 14px; }
+    .section-title { margin: 0 0 24px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 28px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 66ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    .section-note { margin-top: 22px; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---- Guide article components (shared across the /guides/ wave) ---- */
+
+    /* Text hero — no phone mockup; eyebrow, headline, dek, meta line */
+    .guide-hero { padding-block: clamp(40px, 6vw, 72px) clamp(28px, 4vw, 44px); }
+    .guide-hero__eyebrow { margin: 0 0 18px; }
+    .guide-hero__title { margin: 0 0 20px; color: var(--text-primary); }
+    .guide-hero__dek {
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .guide-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .guide-meta__dot { color: var(--border-strong); }
+
+    /* Guide library cards — adapted from the exam pages' .related-grid pattern,
+       with a group heading per row and room for 3 or 5 cards per section. */
+    .guides-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    @media (min-width: 640px) { .guides-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 900px) { .guides-grid--wide { grid-template-columns: repeat(3, 1fr); } }
+
+    .guide-card {
+      display: block;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .guide-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .guide-card__kicker {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+    }
+    .guide-card__name {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+    .guide-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(52px, 8vw, 104px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 26px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+    .cta-final .cta-button { font-size: 17px; padding: 16px 32px; }
+    .cta-small { display: block; margin-top: 14px; color: var(--text-muted); font-size: 13px; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK79R26R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <a class="site-nav__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <!-- HERO — text-only, no phone mockup -->
+    <section class="guide-hero container">
+      <p class="label-eyebrow guide-hero__eyebrow">Guides</p>
+      <h1 class="display-large guide-hero__title">
+        Azure <span class="headline-accent">certification</span> guides
+      </h1>
+      <p class="guide-hero__dek">
+        Free, practical guides to Microsoft's Azure certifications: which exam to sit first, how to actually pass AZ-900, AZ-104, SC-900, DP-900, and AI-901, and straight comparisons when two Fundamentals exams look alike. Every guide is grounded in the current Microsoft Learn skills outline, not recycled filler.
+      </p>
+      <p class="guide-meta">
+        <span>Updated July 2026</span>
+        <span class="guide-meta__dot">·</span>
+        <span>8 guides</span>
+      </p>
+    </section>
+
+    <!-- Choosing your certification -->
+    <section id="choosing" class="container">
+      <p class="label-eyebrow section-eyebrow">Start here</p>
+      <h2 class="display-small section-title">Choosing your certification</h2>
+      <p class="section-lede">
+        Not sure which exam matches your job or your goals? Start with the pillar guide below, then use the head-to-head comparisons if you are stuck between two Fundamentals exams.
+      </p>
+      <nav class="guides-grid guides-grid--wide" aria-label="Guides for choosing a certification">
+        <a class="guide-card" href="/guides/which-azure-certification-first/">
+          <span class="guide-card__kicker">Pillar guide</span>
+          <span class="guide-card__name">Which Microsoft certification should you get first?</span>
+          <span class="guide-card__hint">A walk through the Azure, security, data, and AI Fundamentals exams, and how to pick the one that matches your role and experience.</span>
+        </a>
+        <a class="guide-card" href="/guides/az-900-vs-az-104/">
+          <span class="guide-card__kicker">Comparison</span>
+          <span class="guide-card__name">AZ-900 vs AZ-104</span>
+          <span class="guide-card__hint">Fundamentals or Associate first? What each exam actually tests, and which credential hiring managers look for.</span>
+        </a>
+        <a class="guide-card" href="/guides/sc-900-vs-az-900/">
+          <span class="guide-card__kicker">Comparison</span>
+          <span class="guide-card__name">SC-900 vs AZ-900</span>
+          <span class="guide-card__hint">Security or cloud fundamentals first? How the two Fundamentals exams differ and which one suits your next role.</span>
+        </a>
+      </nav>
+    </section>
+
+    <!-- How to pass -->
+    <section id="how-to-pass" class="container">
+      <p class="label-eyebrow section-eyebrow">Exam guides</p>
+      <h2 class="display-small section-title">How to pass, one exam at a time</h2>
+      <p class="section-lede">
+        Each guide covers the exam format, the official skills domains and their weights, a realistic study plan, the topics that trip candidates up, and exam-day tactics.
+      </p>
+      <nav class="guides-grid guides-grid--wide" aria-label="How-to-pass exam guides">
+        <a class="guide-card" href="/guides/how-to-pass-az-900/">
+          <span class="guide-card__kicker">AZ-900</span>
+          <span class="guide-card__name">How to pass AZ-900 Azure Fundamentals</span>
+          <span class="guide-card__hint">The conceptual groundwork behind every other Azure certification: cloud concepts, core Azure services, and management and governance.</span>
+        </a>
+        <a class="guide-card" href="/guides/how-to-pass-az-104/">
+          <span class="guide-card__kicker">AZ-104</span>
+          <span class="guide-card__name">How to pass AZ-104 Azure Administrator</span>
+          <span class="guide-card__hint">The hands-on exam that proves you can run Azure day to day: identities and governance, storage, compute, networking, and monitoring.</span>
+        </a>
+        <a class="guide-card" href="/guides/how-to-pass-sc-900/">
+          <span class="guide-card__kicker">SC-900</span>
+          <span class="guide-card__name">How to pass SC-900 Security Fundamentals</span>
+          <span class="guide-card__hint">Security, compliance, and identity concepts, Microsoft Entra capabilities, and Microsoft's security and compliance solutions.</span>
+        </a>
+        <a class="guide-card" href="/guides/how-to-pass-dp-900/">
+          <span class="guide-card__kicker">DP-900</span>
+          <span class="guide-card__name">How to pass DP-900 Data Fundamentals</span>
+          <span class="guide-card__hint">Core data concepts, then how they map onto relational, non-relational, and analytics workloads on Azure.</span>
+        </a>
+        <a class="guide-card" href="/guides/how-to-pass-ai-901/">
+          <span class="guide-card__kicker">AI-901</span>
+          <span class="guide-card__name">How to pass AI-901 AI Fundamentals</span>
+          <span class="guide-card__hint">AI workloads and considerations, machine learning, computer vision, natural language processing, and generative AI on Azure.</span>
+        </a>
+      </nav>
+      <p class="section-note">
+        Deciding whether AZ-900 or AZ-104 is your next step? Read the <a href="/guides/az-900-vs-az-104/">AZ-900 vs AZ-104 comparison</a> first.
+      </p>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Study on your phone, not just the page</h2>
+      <p>Azure Mastery pairs these guides with an iOS app: exam-style questions for every exam above, an on-device readiness score, adaptive study plans that target your weak spots, and a full-length exam simulator. Free to start, works offline, no account required.</p>
+      <a class="cta-button" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      Azure, Microsoft Entra, and Microsoft are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+
+</body>
+</html>

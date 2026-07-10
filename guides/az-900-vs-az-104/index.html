@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TK79R26R');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>AZ-900 vs AZ-104: Which Azure Cert Is Right? | Azure Mastery</title>
+  <meta name="description" content="Comparing AZ-900 and AZ-104? See exam format, domains, difficulty, and prep time side by side, and find out whether you need Fundamentals before Administrator.">
+  <meta name="keywords" content="AZ-900 vs AZ-104, AZ-900 or AZ-104, Azure Fundamentals vs Azure Administrator, which Azure certification first, AZ-900 AZ-104 comparison, Azure certification path 2026">
+  <link rel="canonical" href="https://azuremastery.app/guides/az-900-vs-az-104/">
+
+  <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+  <meta name="application-name" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-title" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Theme + favicons (consistent with the exam pages) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- OpenGraph / Twitter (guide-scoped title + description; reuses homepage OG image) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://azuremastery.app/guides/az-900-vs-az-104/">
+  <meta property="og:title" content="AZ-900 vs AZ-104: Which Azure Cert Is Right for You?">
+  <meta property="og:description" content="Exam format, domains, difficulty, and prep time for AZ-900 and AZ-104 compared side by side, plus whether you need Fundamentals before Administrator.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — comparing AZ-900 and AZ-104 to help you choose your next Microsoft Azure certification.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AZ-900 vs AZ-104: Which Azure Cert Is Right for You?">
+  <meta name="twitter:description" content="Exam format, domains, difficulty, and prep time for AZ-900 and AZ-104, side by side.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking entities by @id.
+       Modern best practice for both classical SEO (Google) AND AI/AEO answer engines
+       (Perplexity, ChatGPT search, Google AI Overviews, Gemini, Claude), which prefer
+       linked, type-rich graphs over flat schemas:
+         · WebPage        — page-level metadata + speakable
+         · BreadcrumbList  — site hierarchy (Azure Mastery → Guides → this guide)
+         · TechArticle     — the comparison article itself
+         · FAQPage         — visible FAQ section (mirrors on-page text)
+       No HowTo block on this page — it is a comparison, not a study plan;
+       the two how-to-pass guides carry their own HowTo blocks. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/guides/az-900-vs-az-104/#webpage",
+        "url": "https://azuremastery.app/guides/az-900-vs-az-104/",
+        "name": "AZ-900 vs AZ-104: which Azure cert is right for you?",
+        "description": "A side-by-side comparison of AZ-900 and AZ-104: audience, domains, exam format, difficulty, and prep time, plus whether you need Fundamentals before Administrator and how to decide which one to sit first.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-07-10",
+        "dateModified": "2026-07-10",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "mainEntity": { "@id": "https://azuremastery.app/guides/az-900-vs-az-104/#article" },
+        "breadcrumb": { "@id": "https://azuremastery.app/guides/az-900-vs-az-104/#breadcrumbs" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".guide-hero__title", ".guide-hero__dek"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/guides/az-900-vs-az-104/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://azuremastery.app/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "AZ-900 vs AZ-104: which Azure cert is right for you?" }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://azuremastery.app/guides/az-900-vs-az-104/#article",
+        "headline": "AZ-900 vs AZ-104: which Azure cert is right for you?",
+        "description": "Exam format, domains, difficulty, and prep time for AZ-900 and AZ-104 compared side by side, plus whether you need Fundamentals before Administrator and honest guidance on taking both.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-07-10",
+        "dateModified": "2026-07-10",
+        "image": "https://azuremastery.app/images/og-image.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "about": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: Azure Fundamentals",
+            "alternateName": "AZ-900"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: Azure Administrator Associate",
+            "alternateName": "AZ-104"
+          }
+        ],
+        "mainEntityOfPage": { "@id": "https://azuremastery.app/guides/az-900-vs-az-104/#webpage" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://azuremastery.app/guides/az-900-vs-az-104/#faqs",
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I skip AZ-900 and go straight to AZ-104?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. AZ-900 is not a prerequisite for AZ-104, and Microsoft does not check for it before you book. If you already work with Azure subscriptions, virtual machines, or storage in your job, going straight to AZ-104 is the more efficient route, because much of AZ-900's conceptual content will already be familiar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which exam should I take first if I'm new to IT or cloud entirely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AZ-900. It is built for people without hands-on experience and covers cloud concepts, Azure's service model, and governance basics before you are expected to configure anything. Passing it first also builds the habit of studying with an exam simulator, which pays off when you move on to AZ-104's harder, hands-on format."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is AZ-104 harder than AZ-900?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, noticeably. AZ-900 tests whether you can describe cloud concepts and name Azure services; AZ-104 tests whether you can configure them. AZ-104 also runs longer, 100 minutes against AZ-900's 45, and adds drag-and-drop, hotspot, and case-study questions on top of multiple choice, along with Bicep and Azure CLI reading that AZ-900 does not touch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do AZ-900 and AZ-104 expire in the same way?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. AZ-900 is a Fundamentals certification and does not expire. AZ-104 is an Associate certification, and Microsoft requires you to renew it every year with a free online assessment on Microsoft Learn. Budget a little ongoing time for AZ-104 even after you pass it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I take AZ-900 and AZ-104 close together?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no cooling-off period between different exams, only between repeat attempts at the same one. Some candidates sit AZ-900 after one to two weeks of study and move straight into AZ-104 preparation, carrying over the momentum and the exam-simulator habit they have just built. Just do not rush AZ-104's much larger domain list to hit an arbitrary deadline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does passing AZ-900 give me credit toward AZ-104?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. There is no formal credit, exemption, or reduced fee for having passed AZ-900 first. What you gain is conceptual groundwork and, for many people, more confidence going into a harder exam, rather than a shortcut through AZ-104's content."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as the exam pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — GUIDES ARTICLE TOKENS + TYPOGRAPHY + COMPONENTS
+       Token block + typography + components copied verbatim from
+       guides/how-to-pass-az-104/index.html (the wave-1 exemplar) so this
+       comparison page matches the site visual with no new tokens.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (site parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 64px); line-height: 1.06; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Sticky site nav (exam-page pattern) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section { padding-block: clamp(44px, 5vw, 72px); }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    .section-eyebrow { margin: 0 0 14px; }
+    .section-title { margin: 0 0 24px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 28px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 66ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    .section-note { margin-top: 22px; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+
+    /* Right-rail "On this page" TOC — desktop only (exam-page pattern) */
+    .page-toc { display: none; }
+    @media (min-width: 1280px) {
+      .page-toc {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        z-index: 40;
+        width: 156px;
+        padding: 16px 10px;
+        background: rgba(5, 8, 16, 0.55);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+      }
+      .page-toc__title {
+        margin: 0 0 10px;
+        padding-inline-start: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--azure-cyan);
+      }
+      .page-toc__list { list-style: none; margin: 0; padding: 0; }
+      .page-toc__item { margin: 0; }
+      .page-toc__link {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        border-radius: 0 6px 6px 0;
+        transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      }
+      .page-toc__link:hover {
+        color: var(--text-primary);
+        background: rgba(80, 230, 255, 0.06);
+        text-decoration: none;
+      }
+      .page-toc__link[aria-current="true"] {
+        color: var(--azure-cyan);
+        border-left-color: var(--azure-cyan);
+        background: rgba(80, 230, 255, 0.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---- Guide article components (reusable across the /guides/ wave) ---- */
+
+    /* Text hero — no phone mockup; eyebrow, headline, dek, meta line */
+    .guide-hero { padding-block: clamp(40px, 6vw, 72px) clamp(28px, 4vw, 44px); }
+    .guide-hero__eyebrow { margin: 0 0 18px; }
+    .guide-hero__title { margin: 0 0 20px; color: var(--text-primary); }
+    .guide-hero__dek {
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .guide-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .guide-meta__dot { color: var(--border-strong); }
+
+    /* Domain / weight / comparison table */
+    .guide-table-wrap { overflow-x: auto; margin-top: 8px; }
+    .guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 460px;
+    }
+    .guide-table caption {
+      text-align: left;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding-bottom: 10px;
+    }
+    .guide-table th, .guide-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .guide-table thead th {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .guide-table tbody th {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .guide-table td { color: var(--text-secondary); }
+    .guide-table__weight {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      white-space: nowrap;
+    }
+    .guide-table tbody tr:last-child th,
+    .guide-table tbody tr:last-child td { border-bottom: 0; }
+
+    /* Quick-facts list (exam format at a glance) */
+    .fact-grid {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 620px) { .fact-grid { grid-template-columns: repeat(2, 1fr); } }
+    .fact-grid li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .fact-grid__label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 92px;
+    }
+    .fact-grid__value { color: var(--text-primary); font-size: 15px; }
+
+    /* Callout / topic cards (verdict, career value) */
+    .topic-cards { display: grid; gap: 16px; margin-top: 8px; }
+    .topic-card {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+    }
+    .topic-card h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .topic-card p { margin: 0; max-width: none; }
+
+    /* CTA panel (in-article, honest features-forward) */
+    .cta-panel {
+      margin-top: 30px;
+      padding: 26px 28px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(ellipse 80% 120% at 0% 0%, rgba(43,136,216,0.16) 0%, transparent 60%),
+        rgba(255,255,255,0.025);
+      border: 1px solid var(--border-accent);
+    }
+    .cta-panel h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+    }
+    .cta-panel p { margin: 0 0 18px; color: var(--text-secondary); max-width: 58ch; }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+
+    /* FAQ items */
+    .faqs { display: grid; gap: 14px; margin-top: 8px; }
+    .faq {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .faq h3 {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .faq p { margin: 0; max-width: none; }
+
+    /* Related grid (exam-page pattern) */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    @media (min-width: 640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    .related-card {
+      display: block;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .related-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .related-card__code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--azure-cyan);
+      letter-spacing: 0.03em;
+    }
+    .related-card__name {
+      display: block;
+      margin-top: 6px;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+    .related-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(52px, 8vw, 104px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 26px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-final .cta-button { font-size: 17px; padding: 16px 32px; }
+    .cta-small { display: block; margin-top: 14px; color: var(--text-muted); font-size: 13px; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK79R26R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <a class="site-nav__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc__title">On this page</p>
+      <ol class="page-toc__list">
+        <li class="page-toc__item"><a class="page-toc__link" href="#verdict">Quick answer</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#comparison">Side by side</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#az-900-tests">What AZ-900 tests</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#az-104-tests">What AZ-104 tests</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#prerequisite">Prerequisite?</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#career-value">Career value</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#take-both">Take both?</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#faqs">FAQs</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#related">Related guides</a></li>
+      </ol>
+    </nav>
+
+    <!-- HERO — text-only article hero (no phone mockup) -->
+    <section class="guide-hero container">
+      <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
+      <h1 class="display-large guide-hero__title">
+        <span class="headline-accent">AZ-900</span> vs <span class="headline-accent">AZ-104</span>: which Azure cert is right for you?
+      </h1>
+      <p class="guide-hero__dek">
+        AZ-900 and AZ-104 are both Microsoft Azure certifications, but they exist for different people at different stages. This guide compares what each exam actually tests, how the formats and difficulty differ, how long each takes to prepare for, and whether you need one before the other, so you can pick the one that matches where you actually are today.
+      </p>
+      <p class="guide-meta">
+        <span>Updated July 2026</span>
+        <span class="guide-meta__dot">·</span>
+        <span>~8 min read</span>
+      </p>
+    </section>
+
+    <!-- Quick-answer verdict -->
+    <section id="verdict" class="container">
+      <p class="label-eyebrow section-eyebrow">Quick answer</p>
+      <h2 class="display-small section-title">AZ-900 or AZ-104: the short version</h2>
+      <p class="section-lede">
+        If you only read one section, read this one. The right exam depends on what you already do with Azure day to day, not on which certification looks more impressive on a CV.
+      </p>
+      <div class="topic-cards">
+        <div class="topic-card">
+          <h3>Choose AZ-900 if you're new to cloud</h3>
+          <p>
+            AZ-900 (Microsoft Azure Fundamentals) is the right starting point if you have never worked hands-on in Azure, if your role sits adjacent to cloud rather than inside it (sales, project management, support), or if you want to validate that you understand core cloud concepts before committing weeks to a harder exam. It is conceptual, it does not expire, and most people with some IT background pass it after one to two weeks of study.
+          </p>
+        </div>
+        <div class="topic-card">
+          <h3>Choose AZ-104 if you administer Azure day to day</h3>
+          <p>
+            AZ-104 (Microsoft Azure Administrator Associate) is the right exam if you already manage subscriptions, identities, storage, virtual machines, or networks in Azure, or if a job description specifically asks for it. It is the credential most hiring managers mean when they say "Azure administrator", and it proves practical skill rather than conceptual awareness. Plan for four to eight weeks of focused study.
+          </p>
+        </div>
+      </div>
+      <p class="section-note">
+        There is no rule that says you must pass AZ-900 before AZ-104. See <a href="#prerequisite">"Do you need AZ-900 before AZ-104?"</a> below for when skipping it makes sense and when it does not.
+      </p>
+    </section>
+
+    <!-- Side-by-side comparison table -->
+    <section id="comparison" class="container">
+      <p class="label-eyebrow section-eyebrow">Side by side</p>
+      <h2 class="display-small section-title">AZ-900 vs AZ-104 at a glance</h2>
+      <p class="section-lede">
+        Both columns below come from the current Microsoft skills outlines and Azure Mastery's own exam pages, not estimates.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AZ-900 and AZ-104 compared</caption>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">AZ-900</th><th scope="col">AZ-104</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Credential</th><td>Microsoft Certified: Azure Fundamentals</td><td>Microsoft Certified: Azure Administrator Associate</td></tr>
+            <tr><th scope="row">Best for</th><td>New to cloud, non-technical roles, first Microsoft cert</td><td>Hands-on Azure administrators, IT pros moving into cloud operations</td></tr>
+            <tr><th scope="row">Domains</th><td>3: cloud concepts; Azure architecture &amp; services; management &amp; governance</td><td>5: identity &amp; governance; storage; compute; networking; monitoring</td></tr>
+            <tr><th scope="row">Format</th><td>40–60 questions, 45 minutes (65-minute seat)</td><td>40–60 questions, 100 minutes (120-minute seat)</td></tr>
+            <tr><th scope="row">Question style</th><td>Mostly conceptual multiple choice and multi-select</td><td>Multiple choice, multi-select, drag-and-drop, hotspot, and case studies, plus Bicep/CLI reading</td></tr>
+            <tr><th scope="row">Pass score</th><td>700 / 1000</td><td>700 / 1000</td></tr>
+            <tr><th scope="row">Typical prep time</th><td>One to two weeks with some IT background</td><td>Four to eight weeks with some Azure experience</td></tr>
+            <tr><th scope="row">Renewal</th><td>Doesn't expire</td><td>Renew free every year</td></tr>
+            <tr><th scope="row">Skills outline</th><td>Updated 14 January 2026</td><td>Updated 17 April 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Exam fees vary by country for both exams, so check Microsoft's own pages for the price where you live: the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-900" rel="noopener">AZ-900 study guide</a> and the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-104" rel="noopener">AZ-104 study guide</a> both link through to registration and current pricing.
+      </p>
+    </section>
+
+    <!-- What AZ-900 actually tests -->
+    <section id="az-900-tests" class="container">
+      <p class="label-eyebrow section-eyebrow">What AZ-900 actually tests</p>
+      <h2 class="display-small section-title">What AZ-900 actually tests</h2>
+      <p class="section-lede">
+        AZ-900 is deliberately conceptual. It checks that you can explain cloud computing and Azure's service model rather than configure anything, and there is no Azure CLI, PowerShell, or Bicep on this exam at all.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AZ-900 skills measured (January 2026 outline)</caption>
+          <thead>
+            <tr><th scope="col">Domain</th><th scope="col">Weight</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Describe cloud concepts</th><td class="guide-table__weight">25–30%</td></tr>
+            <tr><th scope="row">Describe Azure architecture and services</th><td class="guide-table__weight">35–40%</td></tr>
+            <tr><th scope="row">Describe Azure management and governance</th><td class="guide-table__weight">30–35%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        The first domain covers the shared responsibility model, public versus private versus hybrid cloud, consumption-based pricing, and the IaaS/PaaS/SaaS service types. The largest domain, Azure architecture and services, covers the regions-to-resource-groups hierarchy, compute and networking basics, storage tiers, and identity fundamentals such as Microsoft Entra ID, multi-factor authentication, and Azure RBAC. The third domain covers cost management, Azure Policy, resource locks, and monitoring tools such as Azure Monitor and Microsoft Defender for Cloud. Every question is about recognising the right concept or service, not configuring one.
+      </p>
+    </section>
+
+    <!-- What AZ-104 actually tests -->
+    <section id="az-104-tests" class="container">
+      <p class="label-eyebrow section-eyebrow">What AZ-104 actually tests</p>
+      <h2 class="display-small section-title">What AZ-104 actually tests</h2>
+      <p class="section-lede">
+        AZ-104 is hands-on and practical. Roughly a third of its questions include a Bicep snippet, an Azure CLI command, or a PowerShell cmdlet, and you are expected to predict what it does or spot what is wrong with it, not just recognise the service name.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AZ-104 skills measured (April 2026 outline)</caption>
+          <thead>
+            <tr><th scope="col">Domain</th><th scope="col">Weight</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Manage Azure identities and governance</th><td class="guide-table__weight">20–25%</td></tr>
+            <tr><th scope="row">Implement and manage storage</th><td class="guide-table__weight">15–20%</td></tr>
+            <tr><th scope="row">Deploy and manage Azure compute resources</th><td class="guide-table__weight">20–25%</td></tr>
+            <tr><th scope="row">Implement and manage virtual networking</th><td class="guide-table__weight">15–20%</td></tr>
+            <tr><th scope="row">Monitor and maintain Azure resources</th><td class="guide-table__weight">10–15%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Identity and governance covers Microsoft Entra ID user and group management and Azure RBAC assigned at management group, subscription, resource group, and resource scope. Storage covers redundancy options, SAS tokens, access keys, and identity-based access for Azure Files. Compute covers reading and deploying ARM templates and Bicep, virtual machine sizing and disks, and containers through Azure Container Registry and Container Apps. Networking covers network security groups, Azure Bastion, private endpoints, and load balancers. Monitoring covers Azure Monitor, Network Watcher, Azure Backup, and Azure Site Recovery. Five domains is a wider surface than AZ-900's three, and each one goes deeper.
+      </p>
+    </section>
+
+    <!-- Do you need AZ-900 before AZ-104? -->
+    <section id="prerequisite" class="container">
+      <p class="label-eyebrow section-eyebrow">Prerequisite question</p>
+      <h2 class="display-small section-title">Do you need AZ-900 before AZ-104?</h2>
+      <p>
+        No. AZ-900 is not a formal prerequisite for AZ-104, and Microsoft's booking system will not stop you sitting AZ-104 first, or as your only Azure exam. Plenty of people go straight to AZ-104, particularly if they already touch Azure at work.
+      </p>
+      <p>
+        Where AZ-900 genuinely helps is when Azure is new to you. If you have less than six months of hands-on experience with the platform, AZ-104's domains assume a conceptual map you have not built yet: what a region pair is, how subscriptions and management groups nest, what "shared responsibility" actually means for security. AZ-900 builds that map in one to two weeks, and it makes the AZ-104 material land faster because you are not learning the vocabulary and the configuration at the same time.
+      </p>
+      <p>
+        If you already administer Azure resources, even informally, you can usually skip AZ-900 without a gap. The conceptual content will be familiar from doing the job, and going straight to AZ-104 gets you to the credential that hiring managers actually screen for. Sitting AZ-900 afterwards, once you already hold AZ-104, adds little beyond a second line on a CV.
+      </p>
+    </section>
+
+    <!-- Career value framing (no invented numbers) -->
+    <section id="career-value" class="container">
+      <p class="label-eyebrow section-eyebrow">Career value</p>
+      <h2 class="display-small section-title">How each certification helps your career</h2>
+      <p>
+        AZ-900 signals baseline cloud literacy. It is common for organisations to ask non-technical staff, new graduate hires, or people transferring into IT to hold it, because it proves someone can talk about cloud concepts and Azure's shape without needing to be an administrator. It is a reasonable box to tick before an internal move into a cloud-adjacent role, and a low-risk way to test whether Azure work interests you before committing serious study time.
+      </p>
+      <p>
+        AZ-104 signals that you can actually run an Azure environment. It is the certification job adverts mean when they list "Azure Administrator" as a requirement, and it is the assumed groundwork for expert-level architecture certifications such as AZ-305, and for specialist security and networking tracks. Holding it demonstrates operational competence, not just familiarity.
+      </p>
+      <p>
+        Neither certification guarantees a job offer or a pay rise on its own. What both exams reliably do is give you a structured way to close a specific knowledge gap and something concrete to point to when a role or a promotion asks for it.
+      </p>
+    </section>
+
+    <!-- Take both? -->
+    <section id="take-both" class="container">
+      <p class="label-eyebrow section-eyebrow">Take both?</p>
+      <h2 class="display-small section-title">Should you take both AZ-900 and AZ-104?</h2>
+      <p>
+        For complete beginners, taking both in sequence is a sound plan. AZ-900's one-to-two-week timeline builds study momentum and confidence with the exam format before you take on AZ-104's much larger domain list, and you carry the exam-simulator habit straight into the harder exam.
+      </p>
+      <p>
+        For anyone already administering Azure, taking both is optional rather than necessary. Sitting AZ-104 directly gets you the credential that matters most for the role, and AZ-900 can wait, or simply be skipped, without holding your career back.
+      </p>
+      <p>
+        Where the two do work well together is on a CV that needs to show range: AZ-900 demonstrates that you understand the platform conceptually, and AZ-104 demonstrates that you can operate it. If you have the time, sitting AZ-900 first and rolling straight into AZ-104 preparation is a realistic six-to-ten-week combined project. The <a href="/guides/how-to-pass-az-900/">AZ-900 study guide</a> and the <a href="/guides/how-to-pass-az-104/">AZ-104 study guide</a> each lay out a week-by-week plan you can chain together.
+      </p>
+      <div class="cta-panel">
+        <h3>Prepare for either exam, or both, in one app</h3>
+        <p>
+          Azure Mastery carries both question banks: over 300 AZ-900 questions across its three domains and over 600 AZ-104 questions across all five. Each bank gets its own on-device Exam IQ readiness score, its own adaptive study plan, and its own full-length exam simulator, so switching from one certification to the other does not mean switching apps. It works offline and needs no account to start.
+        </p>
+        <a class="cta-button" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+          </svg>
+          Download Azure Mastery — free
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="container">
+      <p class="label-eyebrow section-eyebrow">Frequently asked</p>
+      <h2 class="display-small section-title">AZ-900 vs AZ-104 FAQs</h2>
+      <div class="faqs">
+        <article class="faq">
+          <h3>Can I skip AZ-900 and go straight to AZ-104?</h3>
+          <p>Yes. AZ-900 is not a prerequisite for AZ-104, and Microsoft does not check for it before you book. If you already work with Azure subscriptions, virtual machines, or storage in your job, going straight to AZ-104 is the more efficient route, because much of AZ-900's conceptual content will already be familiar.</p>
+        </article>
+        <article class="faq">
+          <h3>Which exam should I take first if I'm new to IT or cloud entirely?</h3>
+          <p>AZ-900. It is built for people without hands-on experience and covers cloud concepts, Azure's service model, and governance basics before you are expected to configure anything. Passing it first also builds the habit of studying with an exam simulator, which pays off when you move on to AZ-104's harder, hands-on format.</p>
+        </article>
+        <article class="faq">
+          <h3>Is AZ-104 harder than AZ-900?</h3>
+          <p>Yes, noticeably. AZ-900 tests whether you can describe cloud concepts and name Azure services; AZ-104 tests whether you can configure them. AZ-104 also runs longer, 100 minutes against AZ-900's 45, and adds drag-and-drop, hotspot, and case-study questions on top of multiple choice, along with Bicep and Azure CLI reading that AZ-900 does not touch.</p>
+        </article>
+        <article class="faq">
+          <h3>Do AZ-900 and AZ-104 expire in the same way?</h3>
+          <p>No. AZ-900 is a Fundamentals certification and does not expire. AZ-104 is an Associate certification, and Microsoft requires you to renew it every year with a free online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>. Budget a little ongoing time for AZ-104 even after you pass it.</p>
+        </article>
+        <article class="faq">
+          <h3>Can I take AZ-900 and AZ-104 close together?</h3>
+          <p>There is no cooling-off period between different exams, only between repeat attempts at the same one. Some candidates sit AZ-900 after one to two weeks of study and move straight into AZ-104 preparation, carrying over the momentum and the exam-simulator habit they have just built. Just do not rush AZ-104's much larger domain list to hit an arbitrary deadline.</p>
+        </article>
+        <article class="faq">
+          <h3>Does passing AZ-900 give me credit toward AZ-104?</h3>
+          <p>No. There is no formal credit, exemption, or reduced fee for having passed AZ-900 first. What you gain is conceptual groundwork and, for many people, more confidence going into a harder exam, rather than a shortcut through AZ-104's content.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Related guides -->
+    <section id="related" class="container">
+      <p class="label-eyebrow section-eyebrow">Keep reading</p>
+      <h2 class="display-small section-title">Related guides</h2>
+      <p class="section-lede">
+        Once you have picked a side, these guides carry you through the study plan.
+      </p>
+      <nav class="related-grid" aria-label="Related guides">
+        <a class="related-card" href="/exams/az-900/">
+          <span class="related-card__code">AZ-900</span>
+          <span class="related-card__name">AZ-900 study app &amp; question bank</span>
+          <span class="related-card__hint">The full app page: domains, question types, and the Exam IQ readiness score for Azure Fundamentals.</span>
+        </a>
+        <a class="related-card" href="/exams/az-104/">
+          <span class="related-card__code">AZ-104</span>
+          <span class="related-card__name">AZ-104 study app &amp; question bank</span>
+          <span class="related-card__hint">The full app page: every question type, the readiness score, and the adaptive study plan for Azure Administrator.</span>
+        </a>
+        <a class="related-card" href="/guides/how-to-pass-az-900/">
+          <span class="related-card__code">AZ-900</span>
+          <span class="related-card__name">How to pass AZ-900 Azure Fundamentals</span>
+          <span class="related-card__hint">A two-week study plan, the hardest topics, and exam-day tactics.</span>
+        </a>
+        <a class="related-card" href="/guides/how-to-pass-az-104/">
+          <span class="related-card__code">AZ-104</span>
+          <span class="related-card__name">How to pass AZ-104 Azure Administrator</span>
+          <span class="related-card__hint">A six-week study plan mapped to all five domains, plus exam-day tactics.</span>
+        </a>
+        <a class="related-card" href="/guides/which-azure-certification-first/">
+          <span class="related-card__code">Start here</span>
+          <span class="related-card__name">Which Microsoft certification first?</span>
+          <span class="related-card__hint">A guided walk through the Azure, security, and data tracks if you are not sure AZ-900 or AZ-104 is even the right track.</span>
+        </a>
+      </nav>
+      <p class="section-note">
+        Browse the full library on the <a href="/guides/">Azure certification guides</a> index.
+      </p>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Ready to start on AZ-900 or AZ-104?</h2>
+      <p>Practise with over 300 AZ-900 questions or over 600 AZ-104 questions in Azure Mastery, each with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <a class="cta-button" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      AZ-900, AZ-104, Microsoft Azure, and Microsoft are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+
+  <script src="/exams/exam.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TK79R26R');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>SC-900 vs AZ-900: security or cloud first? | Azure Mastery</title>
+  <meta name="description" content="SC-900 vs AZ-900 compared: exam format, skills domains, question counts, where they overlap, and which Microsoft Fundamentals exam to sit first.">
+  <meta name="keywords" content="SC-900 vs AZ-900, SC-900 or AZ-900, Microsoft Fundamentals certifications, which Microsoft certification first, Security Compliance and Identity Fundamentals, Azure Fundamentals, SC-900 study app, AZ-900 study app">
+  <link rel="canonical" href="https://azuremastery.app/guides/sc-900-vs-az-900/">
+
+  <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+  <meta name="application-name" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-title" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Theme + favicons (consistent with the exam pages) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- OpenGraph / Twitter (guide-scoped title + description; reuses homepage OG image) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://azuremastery.app/guides/sc-900-vs-az-900/">
+  <meta property="og:title" content="SC-900 vs AZ-900: security or cloud first?">
+  <meta property="og:description" content="Exam format, skills domains, question counts, real overlap, and which Microsoft Fundamentals exam to sit first — SC-900 or AZ-900.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — a comparison guide to the SC-900 and AZ-900 Microsoft Fundamentals exams.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SC-900 vs AZ-900: security or cloud first?">
+  <meta name="twitter:description" content="Exam format, skills domains, question counts, real overlap, and which Microsoft Fundamentals exam to sit first.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking entities by @id.
+       Modern best practice for both classical SEO (Google) AND AI/AEO answer engines
+       (Perplexity, ChatGPT search, Google AI Overviews, Gemini, Claude), which prefer
+       linked, type-rich graphs over flat schemas:
+         · WebPage        — page-level metadata + speakable
+         · BreadcrumbList  — site hierarchy (Azure Mastery → Guides → this guide)
+         · TechArticle     — the guide article itself (about: both credentials)
+         · FAQPage         — visible FAQ section (mirrors on-page text)
+       NO HowTo — this is a comparison page, not a study-plan how-to. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/guides/sc-900-vs-az-900/#webpage",
+        "url": "https://azuremastery.app/guides/sc-900-vs-az-900/",
+        "name": "SC-900 vs AZ-900: security or cloud first?",
+        "description": "SC-900 vs AZ-900 compared: exam format, skills domains, question counts, where they overlap, and which Microsoft Fundamentals exam to sit first.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-07-10",
+        "dateModified": "2026-07-10",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "mainEntity": { "@id": "https://azuremastery.app/guides/sc-900-vs-az-900/#article" },
+        "breadcrumb": { "@id": "https://azuremastery.app/guides/sc-900-vs-az-900/#breadcrumbs" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".guide-hero__title", ".guide-hero__dek"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/guides/sc-900-vs-az-900/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://azuremastery.app/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "SC-900 vs AZ-900: security or cloud first?" }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://azuremastery.app/guides/sc-900-vs-az-900/#article",
+        "headline": "SC-900 vs AZ-900: security or cloud first?",
+        "description": "A side-by-side comparison of SC-900 (Security, Compliance, and Identity Fundamentals) and AZ-900 (Azure Fundamentals): exam format, skills domains, real overlap, and which to sit first.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-07-10",
+        "dateModified": "2026-07-10",
+        "image": "https://azuremastery.app/images/og-image.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "about": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+            "alternateName": "SC-900"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: Azure Fundamentals",
+            "alternateName": "AZ-900"
+          }
+        ],
+        "mainEntityOfPage": { "@id": "https://azuremastery.app/guides/sc-900-vs-az-900/#webpage" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://azuremastery.app/guides/sc-900-vs-az-900/#faqs",
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is SC-900 harder than AZ-900?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Neither is harder in a general sense — they are both Fundamentals-level exams with the same format: 40–60 multiple-choice questions in 45 minutes, passing at 700 out of 1000. Difficulty comes down to your background. SC-900 feels harder if security and identity terminology (Conditional Access, Microsoft Purview, Zero Trust) is new to you. AZ-900 feels harder if you have never touched cloud infrastructure concepts like regions, subscriptions, or the shared responsibility model."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need AZ-900 before I can sit SC-900, or the other way round?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Neither exam is a formal prerequisite for the other. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 does touch identity and security topics briefly inside its architecture and services domain, and SC-900 assumes you already have a general sense of what 'the cloud' is, but neither exam expects you to have passed the other first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which certification do employers actually ask for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends entirely on the role. Job adverts for general IT, cloud support, or infrastructure roles more often reference AZ-900 or its associate-level next step AZ-104. Adverts for security analyst, identity administrator, or compliance-adjacent roles more often reference SC-900 or its associate-level follow-ons SC-200 and SC-300. Fundamentals certifications rarely appear as a hard requirement either way — they signal that you have done the groundwork, not that you are job-ready on their own."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I study for SC-900 and AZ-900 at the same time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can, but sitting them back to back in the same week or two is usually a mistake. The two skills outlines only overlap on a handful of concepts — the shared responsibility model, Zero Trust, and the basics of Microsoft Entra ID — so most of your revision time for each exam is spent on material unique to that exam. Finish and sit one, then start the other, rather than trying to hold both domain lists in your head at once."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do SC-900 and AZ-900 expire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Microsoft Fundamentals certifications, including SC-900 and AZ-900, do not expire once you pass. This is different from Associate and Expert certifications such as SC-200, SC-300, AZ-104, or SC-500, which require a free annual renewal assessment on Microsoft Learn."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I already know I want to work in security — should I skip AZ-900 entirely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can go straight to SC-900 without ever sitting AZ-900. SC-900 does not require Azure operational knowledge, only conceptual awareness. That said, a lot of Microsoft security tooling sits on top of Azure infrastructure, so if terms like resource group, subscription, or region genuinely mean nothing to you, an hour or two with AZ-900's cloud-concepts material first will make SC-900's Microsoft Entra and Defender content easier to place in context."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as the exam pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — GUIDES ARTICLE TOKENS + TYPOGRAPHY + COMPONENTS
+       Token block + typography copied verbatim from guides/how-to-pass-az-104
+       so guides match the site visual. Every colour outside :root is a
+       token or a semi-transparent tint that reads on both themes, keeping
+       the page theme-ready.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (site parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 64px); line-height: 1.06; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Sticky site nav (exam-page pattern) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section { padding-block: clamp(44px, 5vw, 72px); }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    .section-eyebrow { margin: 0 0 14px; }
+    .section-title { margin: 0 0 24px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 28px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 66ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    .section-note { margin-top: 22px; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+    section h3 { color: var(--text-primary); font-family: 'Outfit', sans-serif; font-weight: 600; }
+
+    /* Right-rail "On this page" TOC — desktop only (exam-page pattern) */
+    .page-toc { display: none; }
+    @media (min-width: 1280px) {
+      .page-toc {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        z-index: 40;
+        width: 156px;
+        padding: 16px 10px;
+        background: rgba(5, 8, 16, 0.55);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+      }
+      .page-toc__title {
+        margin: 0 0 10px;
+        padding-inline-start: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--azure-cyan);
+      }
+      .page-toc__list { list-style: none; margin: 0; padding: 0; }
+      .page-toc__item { margin: 0; }
+      .page-toc__link {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        border-radius: 0 6px 6px 0;
+        transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      }
+      .page-toc__link:hover {
+        color: var(--text-primary);
+        background: rgba(80, 230, 255, 0.06);
+        text-decoration: none;
+      }
+      .page-toc__link[aria-current="true"] {
+        color: var(--azure-cyan);
+        border-left-color: var(--azure-cyan);
+        background: rgba(80, 230, 255, 0.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---- Guide article components (reusable across the /guides/ wave) ---- */
+
+    /* Text hero — no phone mockup; eyebrow, headline, dek, meta line */
+    .guide-hero { padding-block: clamp(40px, 6vw, 72px) clamp(28px, 4vw, 44px); }
+    .guide-hero__eyebrow { margin: 0 0 18px; }
+    .guide-hero__title { margin: 0 0 20px; color: var(--text-primary); }
+    .guide-hero__dek {
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .guide-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .guide-meta__dot { color: var(--border-strong); }
+
+    /* Domain / weight / comparison table */
+    .guide-table-wrap { overflow-x: auto; margin-top: 8px; }
+    .guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 460px;
+    }
+    .guide-table caption {
+      text-align: left;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding-bottom: 10px;
+    }
+    .guide-table th, .guide-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .guide-table thead th {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .guide-table tbody th {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .guide-table td { color: var(--text-secondary); }
+    .guide-table__weight {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      white-space: nowrap;
+    }
+    .guide-table tbody tr:last-child th,
+    .guide-table tbody tr:last-child td { border-bottom: 0; }
+
+    /* Quick-facts list */
+    .fact-grid {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 620px) { .fact-grid { grid-template-columns: repeat(2, 1fr); } }
+    .fact-grid li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .fact-grid__label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 92px;
+    }
+    .fact-grid__value { color: var(--text-primary); font-size: 15px; }
+
+    /* Callout / topic cards (verdict, hardest-topics style) */
+    .topic-cards { display: grid; gap: 16px; margin-top: 8px; }
+    @media (min-width: 640px) { .topic-cards--pair { grid-template-columns: repeat(2, 1fr); } }
+    .topic-card {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+    }
+    .topic-card h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .topic-card p { margin: 0; max-width: none; }
+
+    /* CTA panel (in-article, honest features-forward) */
+    .cta-panel {
+      margin-top: 30px;
+      padding: 26px 28px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(ellipse 80% 120% at 0% 0%, rgba(43,136,216,0.16) 0%, transparent 60%),
+        rgba(255,255,255,0.025);
+      border: 1px solid var(--border-accent);
+    }
+    .cta-panel h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+    }
+    .cta-panel p { margin: 0 0 18px; color: var(--text-secondary); max-width: 58ch; }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+
+    /* FAQ items */
+    .faqs { display: grid; gap: 14px; margin-top: 8px; }
+    .faq {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .faq h3 {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .faq p { margin: 0; max-width: none; }
+
+    /* Related grid (exam-page pattern) */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    @media (min-width: 640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    .related-card {
+      display: block;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .related-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .related-card__code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--azure-cyan);
+      letter-spacing: 0.03em;
+    }
+    .related-card__name {
+      display: block;
+      margin-top: 6px;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+    .related-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(52px, 8vw, 104px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 26px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-final .cta-button { font-size: 17px; padding: 16px 32px; }
+    .cta-small { display: block; margin-top: 14px; color: var(--text-muted); font-size: 13px; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK79R26R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <a class="site-nav__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc__title">On this page</p>
+      <ol class="page-toc__list">
+        <li class="page-toc__item"><a class="page-toc__link" href="#verdict">Quick answer</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#compare">Side by side</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#what-they-test">What each tests</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#overlap">Where they overlap</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#which-first">Which first</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#career-paths">Career paths</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#faqs">FAQs</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#related">Related guides</a></li>
+      </ol>
+    </nav>
+
+    <!-- HERO — text-only article hero (no phone mockup) -->
+    <section class="guide-hero container">
+      <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
+      <h1 class="display-large guide-hero__title">
+        <span class="headline-accent">SC-900 vs AZ-900</span>: security or cloud first?
+      </h1>
+      <p class="guide-hero__dek">
+        Both are Microsoft Fundamentals exams, both take a week or two of focused study, and both stay on your CV forever without expiring. But they teach genuinely different material. Here's what each one actually tests, where the two overlap, and how to pick.
+      </p>
+      <p class="guide-meta">
+        <span>Updated July 2026</span>
+        <span class="guide-meta__dot">·</span>
+        <span>~8 min read</span>
+      </p>
+    </section>
+
+    <!-- Quick answer / verdict -->
+    <section id="verdict" class="container">
+      <p class="label-eyebrow section-eyebrow">Quick answer</p>
+      <h2 class="display-small section-title">Which one should you sit first?</h2>
+      <p class="section-lede">
+        If you only have time to prepare for one Fundamentals exam right now, the short version comes down to what your next role actually needs.
+      </p>
+      <div class="topic-cards topic-cards--pair">
+        <div class="topic-card">
+          <h3>Pick AZ-900 if…</h3>
+          <p>You want the broad grounding: cloud service models, Azure's region and subscription structure, core compute and storage services, and how cost management and governance work. It's the standard on-ramp toward Azure Administrator (<a href="/exams/az-104/">AZ-104</a>) and most general infrastructure roles.</p>
+        </div>
+        <div class="topic-card">
+          <h3>Pick SC-900 if…</h3>
+          <p>Your near-term work touches identity, compliance, or the security stack — Microsoft Entra ID, Microsoft Defender products, Microsoft Purview, or Microsoft Sentinel. It's the on-ramp toward the security-analyst and identity-administrator associate tracks.</p>
+        </div>
+      </div>
+      <p class="section-note">
+        Neither is a formal prerequisite for the other, and neither certification expires once you pass, so there's no real penalty for choosing the "wrong" one first if your role changes direction later. The distinction that actually matters is what your next job needs: general cloud administration, or security, compliance, and identity.
+      </p>
+    </section>
+
+    <!-- Side-by-side comparison table -->
+    <section id="compare" class="container">
+      <p class="label-eyebrow section-eyebrow">Side by side</p>
+      <h2 class="display-small section-title">SC-900 and AZ-900 compared</h2>
+      <p class="section-lede">
+        Strip away the domain content and the two exams are built on the same skeleton: both are online-proctorable, both run to the same length, and both use the same 700-out-of-1000 passing bar. The difference is entirely in what they ask you to know.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>SC-900 vs AZ-900 at a glance</caption>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">SC-900</th><th scope="col">AZ-900</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Full name</th><td>Microsoft Certified: Security, Compliance, and Identity Fundamentals</td><td>Microsoft Certified: Azure Fundamentals</td></tr>
+            <tr><th scope="row">Focus</th><td>Security, compliance, and identity concepts across Azure and Microsoft 365</td><td>General cloud computing concepts and core Azure services</td></tr>
+            <tr><th scope="row">Skills domains</th><td>4 domains</td><td>3 domains</td></tr>
+            <tr><th scope="row">Largest domain</th><td class="guide-table__weight">Microsoft security solutions (35–40%)</td><td class="guide-table__weight">Azure architecture and services (35–40%)</td></tr>
+            <tr><th scope="row">Questions</th><td>40–60, multiple choice</td><td>40–60, multiple choice</td></tr>
+            <tr><th scope="row">Duration</th><td>45 minutes (65-minute seat time)</td><td>45 minutes (65-minute seat time)</td></tr>
+            <tr><th scope="row">Pass score</th><td>700 / 1000</td><td>700 / 1000</td></tr>
+            <tr><th scope="row">Validity</th><td>Doesn't expire</td><td>Doesn't expire</td></tr>
+            <tr><th scope="row">Delivery</th><td>Online or a test centre</td><td>Online or a test centre</td></tr>
+            <tr><th scope="row">Typical next step</th><td><a href="/exams/sc-200/">SC-200</a> or <a href="/exams/sc-300/">SC-300</a> (Associate)</td><td><a href="/exams/az-104/">AZ-104</a> (Associate)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Exam pricing varies by country for both, so check Microsoft's <a href="https://learn.microsoft.com/credentials/certifications/security-compliance-and-identity-fundamentals/" rel="noopener">SC-900</a> and <a href="https://learn.microsoft.com/credentials/certifications/azure-fundamentals/" rel="noopener">AZ-900</a> certification pages for the fee where you live rather than trusting a number you read elsewhere.
+      </p>
+    </section>
+
+    <!-- What each exam actually tests -->
+    <section id="what-they-test" class="container">
+      <p class="label-eyebrow section-eyebrow">Under the hood</p>
+      <h2 class="display-small section-title">What each exam actually tests</h2>
+      <p class="section-lede">
+        The domain lists below are what really separates the two exams. Read them side by side and it's obvious these are built for different jobs, even though both sit at the Fundamentals level.
+      </p>
+
+      <h3>AZ-900: cloud concepts, architecture, governance</h3>
+      <p>
+        AZ-900 spends its first domain on <em>why</em> cloud computing exists at all — the shared responsibility model, public versus private versus hybrid cloud, consumption-based pricing, and the IaaS/PaaS/SaaS service models. Its largest domain then covers Azure's actual architecture: regions, availability zones, subscriptions, and management groups, plus compute, networking, and storage services. Identity and security get one section inside that domain — Microsoft Entra ID basics, MFA, Conditional Access, Azure RBAC, Zero Trust, and a mention of Microsoft Defender for Cloud — but it stays at "what is this and when would you use it," not implementation detail. The final domain covers cost management, Azure Policy, resource locks, and monitoring tools such as Azure Monitor.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AZ-900 skills measured</caption>
+          <thead><tr><th scope="col">Domain</th><th scope="col">Weight</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Describe cloud concepts</th><td class="guide-table__weight">25–30%</td></tr>
+            <tr><th scope="row">Describe Azure architecture and services</th><td class="guide-table__weight">35–40%</td></tr>
+            <tr><th scope="row">Describe Azure management and governance</th><td class="guide-table__weight">30–35%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-note">SC-900: security, compliance, and identity capabilities</h3>
+      <p>
+        SC-900 opens with the concepts domain everything else leans on: the shared responsibility model again, paired with defence-in-depth, Zero Trust, and the difference between authentication and authorisation. From there it goes deep rather than wide. A quarter to nearly a third of the exam is Microsoft Entra alone — identity types, authentication methods, Conditional Access, Microsoft Entra roles, Identity Protection, and Privileged Identity Management. The largest domain, Microsoft security solutions, covers Azure network security tools (NSGs, Azure Firewall, DDoS Protection), the whole Microsoft Defender family, and Microsoft Sentinel for SIEM and SOAR. The final domain is compliance: Microsoft Purview, sensitivity labels and data lifecycle management, insider risk management, and Microsoft Priva.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>SC-900 skills measured</caption>
+          <thead><tr><th scope="col">Domain</th><th scope="col">Weight</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Concepts of security, compliance, and identity</th><td class="guide-table__weight">10–15%</td></tr>
+            <tr><th scope="row">Capabilities of Microsoft Entra</th><td class="guide-table__weight">25–30%</td></tr>
+            <tr><th scope="row">Capabilities of Microsoft security solutions</th><td class="guide-table__weight">35–40%</td></tr>
+            <tr><th scope="row">Capabilities of Microsoft compliance solutions</th><td class="guide-table__weight">20–25%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Overlap -->
+    <section id="overlap" class="container">
+      <p class="label-eyebrow section-eyebrow">The overlap</p>
+      <h2 class="display-small section-title">Where SC-900 and AZ-900 actually overlap</h2>
+      <p>
+        The two exams share more conceptual ground than their domain lists suggest, even though neither is a prerequisite for the other. Both introduce the <strong>shared responsibility model</strong> early: AZ-900 treats it as the baseline distinction between what Microsoft manages and what you manage, and SC-900 builds its own opening domain directly on the same idea. Both also introduce <strong>Zero Trust</strong> and <strong>defence-in-depth</strong> — AZ-900 mentions them briefly inside its architecture domain, while SC-900 treats them as core concepts from the first domain onward.
+      </p>
+      <p>
+        <strong>Microsoft Entra ID</strong> is the clearest shared thread. AZ-900 introduces it at a glance — authentication basics, MFA, single sign-on, Conditional Access, and Azure RBAC — inside a broader "identity, access, and security" section. SC-900 dedicates a quarter to nearly a third of the exam to the same product, going into identity types, access management, and identity governance in real depth. The pattern repeats with <strong>Microsoft Defender for Cloud</strong>: AZ-900 name-checks it once, while SC-900 treats it as one entry point into a much larger Microsoft security solutions domain covering the whole Defender family plus Microsoft Sentinel.
+      </p>
+      <p class="section-note">
+        The short version: AZ-900 gives you the vocabulary for these topics, SC-900 gives you the depth. If you've already passed one, expect a handful of familiar terms in the other — not a free pass on study time.
+      </p>
+    </section>
+
+    <!-- Which one first if you want both -->
+    <section id="which-first" class="container">
+      <p class="label-eyebrow section-eyebrow">Doing both</p>
+      <h2 class="display-small section-title">Which one first, if you want both eventually</h2>
+      <p>
+        Plenty of people end up sitting both exams over time, especially in roles that straddle infrastructure and security. If your day job is, or will soon be, general Azure administration, take AZ-900 first — it establishes the resource-hierarchy vocabulary that SC-900 assumes lightly rather than teaches. If security, compliance, or identity is the actual target role, SC-900 first is fine too: it's self-contained and needs only conceptual awareness of what the cloud is, not Azure operational knowledge.
+      </p>
+      <p>
+        If you're genuinely undecided, most people study AZ-900 first because it's the broader on-ramp — more of Microsoft's other Fundamentals and Associate certifications assume the vocabulary it introduces. Either way, avoid sitting both in the same fortnight; the two outlines only overlap on a handful of concepts, so cramming both into one short study block blurs the material rather than reinforcing it. Still not sure which certification or order fits your goals? <a href="/guides/which-azure-certification-first/">Which Microsoft certification first?</a> walks through the wider decision.
+      </p>
+    </section>
+
+    <!-- Career paths -->
+    <section id="career-paths" class="container">
+      <p class="label-eyebrow section-eyebrow">Career paths</p>
+      <h2 class="display-small section-title">Where each path leads next</h2>
+      <p>
+        After AZ-900, the associate-level credential most job postings actually mean is <a href="/exams/az-104/">AZ-104</a> (Azure Administrator Associate) — hands-on subscription, identity, storage, compute, and networking administration. From there, the expert tracks branch out toward architecture or DevOps engineering.
+      </p>
+      <p>
+        After SC-900, there are two natural associate-level branches depending on which half of the exam interested you more. If the Microsoft security solutions domain — Defender, Sentinel — was the more engaging half, <a href="/exams/sc-200/">SC-200</a> (Security Operations Analyst Associate) is the next step. If the Microsoft Entra domain was more your speed, <a href="/exams/sc-300/">SC-300</a> (Identity and Access Administrator Associate) fits better. Both feed into <a href="/exams/sc-100/">SC-100</a> (Cybersecurity Architect Expert) further up the security track.
+      </p>
+      <p class="section-note">
+        Worth knowing if security engineering specifically is the goal: AZ-500 (Azure Security Engineer Associate) is being retired on 31 August 2026 and replaced by <a href="/exams/sc-500/">SC-500</a> (Cloud and AI Security Engineer Associate), which also pairs with SC-900 on the way in. So the security-track landing point to aim for now is SC-500, SC-200, or SC-300 depending on the specific role — not the retiring AZ-500.
+      </p>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="container">
+      <p class="label-eyebrow section-eyebrow">Frequently asked</p>
+      <h2 class="display-small section-title">SC-900 vs AZ-900 FAQs</h2>
+      <div class="faqs">
+        <article class="faq">
+          <h3>Is SC-900 harder than AZ-900?</h3>
+          <p>Neither is harder in a general sense — both are Fundamentals-level exams with the same format: 40–60 multiple-choice questions in 45 minutes, passing at 700 out of 1000. Difficulty comes down to your background. SC-900 feels harder if security and identity terminology (Conditional Access, Microsoft Purview, Zero Trust) is new to you. AZ-900 feels harder if you have never touched cloud infrastructure concepts like regions, subscriptions, or the shared responsibility model.</p>
+        </article>
+        <article class="faq">
+          <h3>Do I need AZ-900 before I can sit SC-900, or the other way round?</h3>
+          <p>No. Neither exam is a formal prerequisite for the other. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 touches identity and security topics briefly inside its architecture and services domain, and SC-900 assumes you already have a general sense of what "the cloud" is, but neither exam expects you to have passed the other first.</p>
+        </article>
+        <article class="faq">
+          <h3>Which certification do employers actually ask for?</h3>
+          <p>It depends entirely on the role. Job adverts for general IT, cloud support, or infrastructure roles more often reference AZ-900 or its associate-level next step <a href="/exams/az-104/">AZ-104</a>. Adverts for security analyst, identity administrator, or compliance-adjacent roles more often reference SC-900 or its associate-level follow-ons <a href="/exams/sc-200/">SC-200</a> and <a href="/exams/sc-300/">SC-300</a>. Fundamentals certifications rarely appear as a hard requirement either way — they signal that you have done the groundwork, not that you are job-ready on their own.</p>
+        </article>
+        <article class="faq">
+          <h3>Can I study for SC-900 and AZ-900 at the same time?</h3>
+          <p>You can, but sitting them back to back in the same week or two is usually a mistake. The two skills outlines only overlap on a handful of concepts — the shared responsibility model, Zero Trust, and the basics of Microsoft Entra ID — so most of your revision time for each exam is spent on material unique to that exam. Finish and sit one, then start the other, rather than trying to hold both domain lists in your head at once.</p>
+        </article>
+        <article class="faq">
+          <h3>Do SC-900 and AZ-900 expire?</h3>
+          <p>No. Microsoft Fundamentals certifications, including SC-900 and AZ-900, do not expire once you pass. This is different from Associate and Expert certifications such as SC-200, SC-300, AZ-104, or SC-500, which require a free annual renewal assessment on Microsoft Learn.</p>
+        </article>
+        <article class="faq">
+          <h3>I already know I want to work in security — should I skip AZ-900 entirely?</h3>
+          <p>You can go straight to SC-900 without ever sitting AZ-900. SC-900 does not require Azure operational knowledge, only conceptual awareness. That said, a lot of Microsoft security tooling sits on top of Azure infrastructure, so if terms like resource group, subscription, or region genuinely mean nothing to you, an hour or two with AZ-900's cloud-concepts material first will make SC-900's Microsoft Entra and Defender content easier to place in context.</p>
+        </article>
+      </div>
+      <div class="cta-panel">
+        <h3>Practise for either exam, or both, in one app</h3>
+        <p>
+          Azure Mastery covers both exams from a single download. Practise with over 300 SC-900 questions or over 300 AZ-900 questions, each mapped to their own skills outline, with an on-device Exam IQ readiness score, an adaptive study plan that targets your weak spots, and a timed Practice run built to each exam's own length and question count. Works offline, no account required to start.
+        </p>
+        <a class="cta-button" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+          </svg>
+          Download Azure Mastery — free
+        </a>
+      </div>
+    </section>
+
+    <!-- Related guides -->
+    <section id="related" class="container">
+      <p class="label-eyebrow section-eyebrow">Keep reading</p>
+      <h2 class="display-small section-title">Related guides</h2>
+      <p class="section-lede">
+        Want the full study plan for whichever exam you pick, or a wider view of the whole certification landscape? Start here.
+      </p>
+      <nav class="related-grid" aria-label="Related guides">
+        <a class="related-card" href="/exams/az-900/">
+          <span class="related-card__code">AZ-900 app page</span>
+          <span class="related-card__name">AZ-900 study app &amp; question bank</span>
+          <span class="related-card__hint">Every question type, the Exam IQ readiness score, and the adaptive study plan for AZ-900.</span>
+        </a>
+        <a class="related-card" href="/exams/sc-900/">
+          <span class="related-card__code">SC-900 app page</span>
+          <span class="related-card__name">SC-900 study app &amp; question bank</span>
+          <span class="related-card__hint">Every question type, the Exam IQ readiness score, and the adaptive study plan for SC-900.</span>
+        </a>
+        <a class="related-card" href="/guides/how-to-pass-az-900/">
+          <span class="related-card__code">Guide</span>
+          <span class="related-card__name">How to pass AZ-900 Azure Fundamentals</span>
+          <span class="related-card__hint">Exam format, domain weights, a study plan, and exam-day tactics for AZ-900.</span>
+        </a>
+        <a class="related-card" href="/guides/how-to-pass-sc-900/">
+          <span class="related-card__code">Guide</span>
+          <span class="related-card__name">How to pass SC-900 Security Fundamentals</span>
+          <span class="related-card__hint">Exam format, domain weights, a study plan, and exam-day tactics for SC-900.</span>
+        </a>
+        <a class="related-card" href="/guides/which-azure-certification-first/">
+          <span class="related-card__code">Start here</span>
+          <span class="related-card__name">Which Microsoft certification first?</span>
+          <span class="related-card__hint">A guided walk through the Azure, security, and data tracks to pick your first exam.</span>
+        </a>
+      </nav>
+      <p class="section-note">
+        Browse the full library on the <a href="/guides/">Azure certification guides</a> index.
+      </p>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Ready to start on SC-900 or AZ-900?</h2>
+      <p>Practise with over 300 exam-style questions for either certification, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <a class="cta-button" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      SC-900, AZ-900, Microsoft Azure, and Microsoft are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+
+  <script src="/exams/exam.js" defer></script>
+</body>
+</html>

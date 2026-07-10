@@ -21,6 +21,7 @@
   <meta name="apple-itunes-app" content="app-id=6760594569">
   <meta name="theme-color" content="#050810">
   <meta name="color-scheme" content="dark">
+  <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F5F7FA';}}catch(e){}})()</script>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Azure Mastery">
@@ -225,6 +226,7 @@
   <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="/theme.js" defer></script>
 
   <style>
     /* ══════════════════════════════════════════════
@@ -1968,6 +1970,7 @@
       .watch-frame::before { border-radius: 32px; }
     }
   </style>
+  <link rel="stylesheet" href="/theme-light.css">
 </head>
 <body>
 
@@ -1983,6 +1986,10 @@
         <li><a href="#features" class="hide-mobile">Features</a></li>
         <li><a href="#exam-roadmap" class="hide-mobile">Exams</a></li>
         <li><a href="#screenshots" class="hide-mobile">Screenshots</a></li>
+        <li><button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button></li>
         <li><a href="https://apps.apple.com/gb/app/azure-mastery/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569" class="btn-nav-cta" rel="noopener noreferrer">Download Free</a></li>
       </ul>
     </div>

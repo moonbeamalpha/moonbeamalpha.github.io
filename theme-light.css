@@ -1,0 +1,266 @@
+/* ══════════════════════════════════════════════
+   AZURE MASTERY — LIGHT THEME
+   Everything here is gated behind html[data-theme="light"],
+   set by the inline head snippet (from localStorage) and /theme.js.
+   Dark remains the default: with no stored preference this file is inert
+   apart from the .theme-toggle base styles at the bottom.
+   Loaded AFTER each page's inline <style> block so equal-specificity
+   rules still win via source order.
+   ══════════════════════════════════════════════ */
+
+/* ── 1. Design-system token remap (homepage + exam pages share names) ── */
+html[data-theme="light"] {
+  color-scheme: light;
+
+  /* Accents darkened for text/border use on light surfaces (WCAG AA).
+     Decorative gradients (--gradient-cyan-blue etc.) embed raw hexes,
+     so brand-bright cyan survives where it is background art. */
+  --azure-cyan:      #0E7490;
+  --azure-blue:      #1D6FB8;
+  --azure-purple:    #6C4EC9;
+  --xp-gold:         #946300;
+  --success-green:   #15803D;
+  --error-red:       #C0392B;
+  --warning-orange:  #B54708;
+
+  --bg-app:          #F5F7FA;
+  --bg-deep:         #ECF1F7;
+  --bg-card:         #FFFFFF;
+  --bg-surface:      #F8FAFD;
+  --bg-elevated:     #FFFFFF;
+  --bg-overlay:      #EDF2F9;
+  --bg-soft-blue:    #E1EEFA;
+
+  --text-primary:    #14202E;
+  --text-secondary:  #46566A;
+  --text-muted:      #5B6B7D;
+
+  --border-subtle:   rgba(13,30,55,0.09);
+  --border-strong:   rgba(13,30,55,0.18);
+  --border-accent:   rgba(0,110,170,0.35);
+
+  --shadow-flat:     0 3px 6px rgba(15,30,60,0.08);
+  --shadow-raised:   0 5px 9px rgba(15,30,60,0.10), 0 2px 8px rgba(15,30,60,0.06);
+  --shadow-floating: 0 8px 12px rgba(15,30,60,0.12), 0 6px 16px rgba(15,30,60,0.10);
+  --shadow-device:   0 40px 80px rgba(15,30,60,0.25);
+
+  --gradient-hero-bg:    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(43,136,216,0.14) 0%, transparent 65%),
+                         radial-gradient(ellipse 50% 40% at 80% 20%, rgba(80,230,255,0.10) 0%, transparent 55%),
+                         var(--bg-app);
+  --gradient-section-bg: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+}
+
+/* ── 2. hero.css --amh-* namespace (scoped to .am-cert-hero) ── */
+html[data-theme="light"] .am-cert-hero {
+  --amh-bg:     #F5F7FA;
+  --amh-card:   #FFFFFF;
+  --amh-text:   #14202E;
+  --amh-muted:  #46566A;
+  --amh-border: rgba(13,30,55,0.12);
+  /* Per-family bright accent, darkened enough to act as ink on light */
+  --amh-ink: color-mix(in srgb, var(--amh-accent) 42%, #10243A);
+}
+html[data-theme="light"] .am-cert-hero__eyebrow-code,
+html[data-theme="light"] .am-cert-hero__badge-code,
+html[data-theme="light"] .am-cert-hero__score-pill-value { color: var(--amh-ink); }
+html[data-theme="light"] .am-cert-hero__badge-glyph path { stroke: var(--amh-ink); }
+html[data-theme="light"] .am-cert-hero__lead-accent {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--amh-accent) 55%, #10243A) 0%,
+    color-mix(in srgb, var(--amh-accent-2) 70%, #10243A) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+html[data-theme="light"] .am-cert-hero__brand:hover { background: rgba(0,110,170,0.06); border-color: rgba(0,110,170,0.30); }
+html[data-theme="light"] .am-cert-hero__brand-icon { box-shadow: 0 4px 12px rgba(15,30,60,0.20), 0 0 0 1px rgba(13,30,55,0.08) inset; }
+html[data-theme="light"] .am-cert-hero__stat { background: rgba(13,30,55,0.03); }
+html[data-theme="light"] .am-cert-hero__badge {
+  background: rgba(255,255,255,0.90);
+  border-color: rgba(0,110,170,0.40);
+  box-shadow: 0 12px 32px rgba(15,30,60,0.18), 0 0 24px rgba(43,136,216,0.10);
+}
+html[data-theme="light"] .am-cert-hero__score-pill {
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 14px 36px rgba(15,30,60,0.20), 0 0 28px rgba(43,136,216,0.08);
+}
+html[data-theme="light"] .am-cert-hero__score-pill-delta { color: #15803D; }
+html[data-theme="light"] .am-cert-hero__phone-wrap {
+  filter: drop-shadow(0 50px 70px rgba(15,30,60,0.28)) drop-shadow(0 0 40px rgba(43,136,216,0.10));
+}
+html[data-theme="light"] .am-retire-banner__cta { color: #fff; }
+
+/* ── 3. Homepage component overrides ── */
+/* Gradient-painted text: the dark theme's bright cyan reads at ~1.5:1 on a
+   light background, so remap the text gradients to AA-safe deep variants.
+   (Gradient *backgrounds* — buttons, chips — keep the bright brand hexes.) */
+html[data-theme="light"] .headline-accent,
+html[data-theme="light"] .page-h1-accent,
+html[data-theme="light"] .hero-app-name,
+html[data-theme="light"] .how-step-num {
+  background: linear-gradient(135deg, #0891B2 0%, #1D6FB8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+html[data-theme="light"] .headline-accent--purple {
+  background: linear-gradient(135deg, #1D6FB8 0%, #6C4EC9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+html[data-theme="light"] .site-nav { background: rgba(245,247,250,0.80); }
+html[data-theme="light"] .site-nav--scrolled { background: rgba(245,247,250,0.94); }
+html[data-theme="light"] .btn-nav-cta { border-color: rgba(0,110,170,0.45); }
+html[data-theme="light"] .btn-nav-cta:hover { background: rgba(0,110,170,0.08); }
+html[data-theme="light"] .badge-exam-iq { color: #fff; } /* gradient bg darkens via tokens; keep white text */
+html[data-theme="light"] .hero-app-icon { box-shadow: 0 0 24px rgba(43,136,216,0.25), 0 0 48px rgba(43,136,216,0.12); }
+
+html[data-theme="light"] .phone-wrap {
+  filter: drop-shadow(0 40px 60px rgba(15,30,60,0.28)) drop-shadow(0 0 30px rgba(43,136,216,0.10));
+}
+html[data-theme="light"] .phone-wrap::before {
+  background: radial-gradient(ellipse at 50% 40%, rgba(43,136,216,0.10) 0%, rgba(43,136,216,0.05) 40%, transparent 70%);
+}
+html[data-theme="light"] .phone-angle-center {
+  filter: drop-shadow(0 60px 80px rgba(15,30,60,0.32)) drop-shadow(0 0 50px rgba(43,136,216,0.12));
+}
+html[data-theme="light"] .screenshot-frame { filter: drop-shadow(0 24px 40px rgba(15,30,60,0.22)); }
+html[data-theme="light"] .ipad-wrap,
+html[data-theme="light"] .mac-wrap {
+  filter: drop-shadow(0 40px 80px rgba(15,30,60,0.28)) drop-shadow(0 0 60px rgba(43,136,216,0.10));
+}
+html[data-theme="light"] .watch-wrap {
+  filter: drop-shadow(0 30px 50px rgba(15,30,60,0.25)) drop-shadow(0 0 40px rgba(43,136,216,0.10));
+}
+
+html[data-theme="light"] .aura-img { filter: drop-shadow(0 18px 26px rgba(15,30,60,0.22)) drop-shadow(0 0 26px rgba(43,136,216,0.14)); }
+html[data-theme="light"] .aura-glow { background: radial-gradient(circle at 50% 55%, rgba(80,230,255,0.16) 0%, rgba(43,136,216,0.06) 46%, transparent 72%); }
+html[data-theme="light"] .aura-pill {
+  background: rgba(255,255,255,0.90);
+  border-color: rgba(0,110,170,0.40);
+  box-shadow: 0 12px 32px rgba(15,30,60,0.16), 0 0 24px rgba(43,136,216,0.10);
+}
+html[data-theme="light"] .aura-portrait-img { filter: drop-shadow(0 30px 50px rgba(15,30,60,0.24)) drop-shadow(0 0 40px rgba(43,136,216,0.12)); }
+html[data-theme="light"] .aura-portrait-glow { background: radial-gradient(circle at 50% 50%, rgba(80,230,255,0.14) 0%, rgba(43,136,216,0.06) 46%, transparent 70%); }
+html[data-theme="light"] .aura-trait { background: rgba(13,30,55,0.04); }
+html[data-theme="light"] .aura-trait--blue { color: #1D6FB8; }
+html[data-theme="light"] .aura-trait--purple { color: #6C4EC9; }
+html[data-theme="light"] .how-aura { background: rgba(255,255,255,0.75); }
+html[data-theme="light"] .how-aura-img { filter: drop-shadow(0 8px 14px rgba(15,30,60,0.20)); }
+html[data-theme="light"] .cta-aura-img { filter: drop-shadow(0 18px 28px rgba(15,30,60,0.22)) drop-shadow(0 0 30px rgba(43,136,216,0.14)); }
+
+html[data-theme="light"] .roadmap-filter__button {
+  border-color: rgba(13,30,55,0.15);
+  background: rgba(13,30,55,0.04);
+}
+html[data-theme="light"] .roadmap-filter__button:hover,
+html[data-theme="light"] .roadmap-filter__button:focus-visible { border-color: rgba(0,110,170,0.40); }
+html[data-theme="light"] .roadmap-filter__button[aria-pressed="true"] {
+  color: #fff;
+  background: linear-gradient(135deg, #1D6FB8, #6C4EC9);
+  border-color: transparent;
+  box-shadow: 0 0 24px rgba(29,111,184,0.25);
+}
+html[data-theme="light"] .roadmap-shell {
+  border-color: rgba(13,30,55,0.12);
+  background: rgba(255,255,255,0.75);
+}
+html[data-theme="light"] .roadmap-axis,
+html[data-theme="light"] .roadmap-category,
+html[data-theme="light"] .roadmap-level,
+html[data-theme="light"] .roadmap-cell {
+  border-right-color: rgba(13,30,55,0.08);
+  border-bottom-color: rgba(13,30,55,0.08);
+}
+html[data-theme="light"] .roadmap-axis,
+html[data-theme="light"] .roadmap-level { background: rgba(13,30,55,0.03); }
+html[data-theme="light"] .roadmap-cell { background: rgba(13,30,55,0.02); }
+html[data-theme="light"] .roadmap-category {
+  background: linear-gradient(180deg, var(--pillar-bg), rgba(13,30,55,0.02)), rgba(13,30,55,0.03);
+}
+html[data-theme="light"] .roadmap-pill { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35); }
+html[data-theme="light"] .roadmap-pill--featured::after { background: rgba(13,30,55,0.25); }
+html[data-theme="light"] .roadmap-pill:focus-visible { box-shadow: 0 0 0 3px rgba(0,110,170,0.30); }
+
+html[data-theme="light"] .exam-mini__dot { background: rgba(13,30,55,0.22); }
+html[data-theme="light"] .exam-mini__dot:hover { background: rgba(13,30,55,0.42); }
+
+/* ── 4. Exam-page component overrides ── */
+html[data-theme="light"] .site-nav__cta { background: rgba(0,110,170,0.07); border-color: rgba(0,110,170,0.40); }
+html[data-theme="light"] .site-nav__cta:hover { background: rgba(0,110,170,0.12); }
+html[data-theme="light"] .page-toc { background: rgba(245,247,250,0.85); }
+html[data-theme="light"] .page-toc__link:hover { background: rgba(0,110,170,0.07); }
+html[data-theme="light"] .page-toc__link[aria-current="true"] { background: rgba(0,110,170,0.09); }
+
+html[data-theme="light"] .exam-format li,
+html[data-theme="light"] .domain,
+html[data-theme="light"] .study-plan > li,
+html[data-theme="light"] .faq,
+html[data-theme="light"] .qt,
+html[data-theme="light"] .cert-path,
+html[data-theme="light"] .related-card { background: rgba(13,30,55,0.03); }
+
+html[data-theme="light"] .domain__weight { background: rgba(0,110,170,0.10); border-color: rgba(0,110,170,0.30); }
+html[data-theme="light"] .qt__hint { background: rgba(0,110,170,0.08); border-color: rgba(0,110,170,0.25); }
+
+/* The question-type visualizations are miniature mock-ups of the app's
+   dark UI. Keep them dark in light mode (like a screenshot) by re-pinning
+   the dark palette inside the viz container. */
+html[data-theme="light"] .qt__viz {
+  --azure-cyan:     #50E6FF;
+  --azure-blue:     #2B88D8;
+  --azure-purple:   #9578E0;
+  --xp-gold:        #FFB900;
+  --success-green:  #20C020;
+  --error-red:      #F05050;
+  --warning-orange: #F7630C;
+  --text-primary:   #F0F0F0;
+  --text-secondary: #8B95A5;
+  --text-muted:     #808A96;
+  --border-subtle:  rgba(255,255,255,0.06);
+  --border-strong:  rgba(255,255,255,0.12);
+  background: #0F1525;
+  border-color: rgba(13,30,55,0.14);
+}
+
+html[data-theme="light"] .cert-path__chip { background: rgba(13,30,55,0.04); }
+html[data-theme="light"] a.cert-path__chip:hover { background: rgba(0,110,170,0.07); border-color: rgba(0,110,170,0.35); }
+html[data-theme="light"] .related-card:hover { background: rgba(0,110,170,0.05); border-color: rgba(0,110,170,0.30); }
+
+/* ── 5. Theme toggle button (both themes — lives here as theme infra) ── */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--border-strong, rgba(255,255,255,0.12));
+  border-radius: 999px;
+  color: var(--text-secondary, #8B95A5);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.theme-toggle:hover {
+  color: var(--text-primary, #F0F0F0);
+  border-color: var(--border-accent, rgba(80,230,255,0.25));
+  background: rgba(128,160,200,0.10);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--azure-cyan, #50E6FF);
+  outline-offset: 2px;
+}
+.theme-toggle svg { width: 20px; height: 20px; }
+/* Exam pages: header is flex space-between (brand | cta); pull the toggle
+   right so it groups with the CTA. On the homepage the toggle sits inside
+   .nav-links li, so this direct-child selector never matches there. */
+.site-nav > .theme-toggle { margin-left: auto; margin-right: 12px; }
+.theme-toggle__moon { display: none; }
+html[data-theme="light"] .theme-toggle__sun { display: none; }
+html[data-theme="light"] .theme-toggle__moon { display: block; }
+
+/* Suppress every transition for the single frame around a theme swap
+   so long-running transform transitions don't shimmer mid-recolor. */
+.theme-lock *,
+.theme-lock *::before,
+.theme-lock *::after { transition: none !important; }

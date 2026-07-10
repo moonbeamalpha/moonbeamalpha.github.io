@@ -43,6 +43,7 @@
   <!-- Theme + favicons (consistent with /apps/AzureMastery/) -->
   <meta name="theme-color" content="#050810">
   <meta name="color-scheme" content="dark">
+  <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F5F7FA';}}catch(e){}})()</script>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -710,6 +711,7 @@
     /* Hero styles: /exams/hero.css — per-page family accent only */
     .am-cert-hero { --amh-accent: #F7630C; --amh-accent-2: #C44E08; }
   </style>
+  <link rel="stylesheet" href="/theme-light.css">
 </head>
 <body>
 
@@ -722,6 +724,10 @@
       <img src="/images/app-icon.webp" alt="" width="28" height="28">
       <span>Azure Mastery</span>
     </a>
+    <button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
     <a class="site-nav__cta" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569" rel="noopener noreferrer">Download</a>
   </header>
 
@@ -1032,5 +1038,6 @@
 
 
   <script src="/exams/exam.js" defer></script>
+  <script src="/theme.js" defer></script>
 </body>
 </html>

@@ -18,10 +18,10 @@ html[data-theme="light"] {
   --azure-cyan:      #0E7490;
   --azure-blue:      #1D6FB8;
   --azure-purple:    #6C4EC9;
-  --xp-gold:         #946300;
+  --xp-gold:         #B45309;
   --success-green:   #15803D;
-  --error-red:       #C0392B;
-  --warning-orange:  #B54708;
+  --error-red:       #D03030;
+  --warning-orange:  #C2410C;
 
   --bg-app:          #F5F7FA;
   --bg-deep:         #ECF1F7;
@@ -57,8 +57,16 @@ html[data-theme="light"] .am-cert-hero {
   --amh-text:   #14202E;
   --amh-muted:  #46566A;
   --amh-border: rgba(13,30,55,0.12);
-  /* Per-family bright accent, darkened enough to act as ink on light */
-  --amh-ink: color-mix(in srgb, var(--amh-accent) 42%, #10243A);
+  /* Per-family bright accent, darkened enough to act as ink on light.
+     Mix toward BLACK (not navy) so warm hues darken without going muddy;
+     the @supports block below upgrades to OKLCH, which pins lightness
+     while keeping the family's full hue and chroma. */
+  --amh-ink: color-mix(in srgb, var(--amh-accent) 55%, #000);
+}
+@supports (color: oklch(from red 0.5 c h)) {
+  html[data-theme="light"] .am-cert-hero {
+    --amh-ink: oklch(from var(--amh-accent) 0.47 c h);
+  }
 }
 html[data-theme="light"] .am-cert-hero__eyebrow-code,
 html[data-theme="light"] .am-cert-hero__badge-code,
@@ -66,10 +74,20 @@ html[data-theme="light"] .am-cert-hero__score-pill-value { color: var(--amh-ink)
 html[data-theme="light"] .am-cert-hero__badge-glyph path { stroke: var(--amh-ink); }
 html[data-theme="light"] .am-cert-hero__lead-accent {
   background: linear-gradient(135deg,
-    color-mix(in srgb, var(--amh-accent) 55%, #10243A) 0%,
-    color-mix(in srgb, var(--amh-accent-2) 70%, #10243A) 100%);
+    color-mix(in srgb, var(--amh-accent) 65%, #000) 0%,
+    color-mix(in srgb, var(--amh-accent-2) 78%, #000) 100%);
   -webkit-background-clip: text;
   background-clip: text;
+}
+@supports (color: oklch(from red 0.5 c h)) {
+  /* Large display text (3:1 floor) — keep lightness higher for extra pop */
+  html[data-theme="light"] .am-cert-hero__lead-accent {
+    background: linear-gradient(135deg,
+      oklch(from var(--amh-accent) 0.55 c h) 0%,
+      oklch(from var(--amh-accent-2) 0.5 c h) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
 html[data-theme="light"] .am-cert-hero__brand:hover { background: rgba(0,110,170,0.06); border-color: rgba(0,110,170,0.30); }
 html[data-theme="light"] .am-cert-hero__brand-icon { box-shadow: 0 4px 12px rgba(15,30,60,0.20), 0 0 0 1px rgba(13,30,55,0.08) inset; }

@@ -199,6 +199,60 @@
     <lastmod>2026-05-27</lastmod>
   </url>
   <url>
+    <loc>https://azuremastery.app/guides/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/which-azure-certification-first/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/how-to-pass-az-900/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/how-to-pass-az-104/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/how-to-pass-sc-900/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/how-to-pass-dp-900/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/how-to-pass-ai-901/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/az-900-vs-az-104/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/guides/sc-900-vs-az-900/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
     <loc>https://azuremastery.app/apps/AzureMastery/support.html</loc>
     <priority>0.4</priority>
   </url>

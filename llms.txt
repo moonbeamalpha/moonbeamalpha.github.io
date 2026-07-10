@@ -90,6 +90,19 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 - [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 355 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
 - [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 367 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community.
 
+## Guides
+
+Free long-form study guides — exam-neutral advice grounded in the official Microsoft Learn skills outlines, with FAQ and study-plan structured data on every page. Index: [Azure certification guides](https://azuremastery.app/guides/).
+
+- [Which Microsoft certification should you get first?](https://azuremastery.app/guides/which-azure-certification-first/): Decision guide mapping roles (IT ops, security, data, AI, business) to the right entry certification and its associate-level follow-on.
+- [How to pass AZ-900 Azure Fundamentals](https://azuremastery.app/guides/how-to-pass-az-900/): Study plan, domain breakdown, hardest topics, and what to do after passing.
+- [How to pass AZ-104 Azure Administrator](https://azuremastery.app/guides/how-to-pass-az-104/): Six-week study plan, domain weights, hardest topics (networking, RBAC), and exam-day tactics.
+- [How to pass SC-900 Security Fundamentals](https://azuremastery.app/guides/how-to-pass-sc-900/): Security, compliance, and identity fundamentals prep with next steps into SC-500/SC-200.
+- [How to pass DP-900 Data Fundamentals](https://azuremastery.app/guides/how-to-pass-dp-900/): Core data concepts, relational vs non-relational, analytics, and the data career path.
+- [How to pass AI-901 AI Fundamentals](https://azuremastery.app/guides/how-to-pass-ai-901/): The AI-900 successor — AI workloads, generative AI, responsible AI, and the AI-103 path.
+- [AZ-900 vs AZ-104](https://azuremastery.app/guides/az-900-vs-az-104/): Which Azure certification fits, whether you need both, and in what order.
+- [SC-900 vs AZ-900](https://azuremastery.app/guides/sc-900-vs-az-900/): Security-first or cloud-first — how the two fundamentals exams differ and which to sit first.
+
 ## Exams covered (28)
 
 The app covers the following Microsoft certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine.

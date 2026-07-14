@@ -160,12 +160,33 @@ html[data-theme="light"] .phone-angle-center {
   filter: drop-shadow(0 60px 80px rgba(15,30,60,0.32)) drop-shadow(0 0 50px rgba(43,136,216,0.12));
 }
 html[data-theme="light"] .screenshot-frame { filter: drop-shadow(0 24px 40px rgba(15,30,60,0.22)); }
-html[data-theme="light"] .ipad-wrap,
 html[data-theme="light"] .mac-wrap {
   filter: drop-shadow(0 40px 80px rgba(15,30,60,0.28)) drop-shadow(0 0 60px rgba(43,136,216,0.10));
 }
+/* Safari can briefly expose the rectangular filter-compositing surface while
+   child carousel slides cross-fade. Keep the same depth on the actual shells
+   so there is no filtered wrapper layer to flash during the transition. */
+html[data-theme="light"] .ipad-wrap,
 html[data-theme="light"] .watch-wrap {
-  filter: drop-shadow(0 30px 50px rgba(15,30,60,0.25)) drop-shadow(0 0 40px rgba(43,136,216,0.10));
+  filter: none;
+}
+html[data-theme="light"] .ipad-frame {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    inset 1px 0 rgba(255,255,255,0.06),
+    inset -1px 0 rgba(255,255,255,0.06),
+    0 40px 80px rgba(15,30,60,0.28),
+    0 0 60px rgba(43,136,216,0.10);
+}
+html[data-theme="light"] .watch-frame {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    inset 1px 0 rgba(255,255,255,0.06),
+    inset -1px 0 rgba(255,255,255,0.06),
+    0 30px 50px rgba(15,30,60,0.25),
+    0 0 40px rgba(43,136,216,0.10);
 }
 
 html[data-theme="light"] .aura-img { filter: drop-shadow(0 18px 26px rgba(15,30,60,0.22)) drop-shadow(0 0 26px rgba(43,136,216,0.14)); }

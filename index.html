@@ -738,6 +738,8 @@
       z-index: 20;
       box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
     }
+    /* The supplied app captures already contain their own Dynamic Island. */
+    .phone-screen.themed-screenshot::before { content: none; }
     .phone-screen::after {
       content: '';
       position: absolute;
@@ -1764,6 +1766,40 @@
     }
     a.exam-mini__tag:focus-visible { outline: 2px solid var(--group-color); outline-offset: 2px; }
 
+    /* Retired banks remain available as historical reference, but should not
+       read as currently bookable exams anywhere on the homepage. */
+    .exam-link--retired {
+      --group-color: var(--text-muted);
+      --group-bg: rgba(128,138,150,0.08);
+      --group-border: rgba(128,138,150,0.24);
+      --group-bg-hover: rgba(128,138,150,0.14);
+      --group-border-hover: rgba(128,138,150,0.42);
+      --pillar-color: var(--text-muted);
+      --pillar-bg: rgba(128,138,150,0.08);
+      --pillar-border: rgba(128,138,150,0.24);
+      opacity: 0.72;
+      filter: saturate(0.2);
+    }
+    .exam-link--retired::after {
+      content: 'Retired';
+      margin-left: 0.6em;
+      padding: 2px 5px;
+      border: 1px solid rgba(128,138,150,0.30);
+      border-radius: 999px;
+      background: rgba(128,138,150,0.12);
+      color: var(--text-muted);
+      font-size: 0.62em;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .exam-link--retired:hover,
+    .exam-link--retired:focus-visible {
+      opacity: 1;
+      filter: saturate(0.35);
+    }
+
     /* Carousel mode (added by JS; static stacked fallback when JS is off).
        All groups share one grid cell so the card height stays fixed to the tallest family. */
     .exam-mini.is-carousel { display: grid; margin-top: 14px; }
@@ -2053,9 +2089,9 @@
           <div class="hero-exam-group hero-exam-group--ai" role="group" aria-labelledby="hero-grp-ai">
             <p class="hero-exam-group__title" id="hero-grp-ai">AI &amp; Agents</p>
             <ul class="hero-exam-group__list">
-              <li><a href="/exams/ai-900/" class="hero-exam-tag" aria-label="AI-900 study app — Microsoft Azure AI Fundamentals">AI-900</a></li>
+              <li><a href="/exams/ai-900/" class="hero-exam-tag exam-link--retired" aria-label="AI-900 retired exam reference — Microsoft Azure AI Fundamentals">AI-900</a></li>
               <li><a href="/exams/ai-901/" class="hero-exam-tag" aria-label="AI-901 study app — Microsoft AI Fundamentals">AI-901</a></li>
-              <li><a href="/exams/ai-102/" class="hero-exam-tag" aria-label="AI-102 study app — Microsoft Azure AI Engineer">AI-102</a></li>
+              <li><a href="/exams/ai-102/" class="hero-exam-tag exam-link--retired" aria-label="AI-102 retired exam reference — Microsoft Azure AI Engineer">AI-102</a></li>
               <li><a href="/exams/ai-103/" class="hero-exam-tag" aria-label="AI-103 study app — Microsoft AI App and Agent Developer">AI-103</a></li>
               <li><a href="/exams/ai-200/" class="hero-exam-tag" aria-label="AI-200 study app — Microsoft AI Cloud Developer">AI-200</a></li>
               <li><a href="/exams/ai-300/" class="hero-exam-tag" aria-label="AI-300 study app — Microsoft ML Operations Engineer">AI-300</a></li>
@@ -2069,7 +2105,7 @@
             <p class="hero-exam-group__title" id="hero-grp-data">Data</p>
             <ul class="hero-exam-group__list">
               <li><a href="/exams/dp-900/" class="hero-exam-tag" aria-label="DP-900 study app — Microsoft Azure Data Fundamentals">DP-900</a></li>
-              <li><a href="/exams/dp-100/" class="hero-exam-tag" aria-label="DP-100 study app — Microsoft Azure Data Scientist">DP-100</a></li>
+              <li><a href="/exams/dp-100/" class="hero-exam-tag exam-link--retired" aria-label="DP-100 retired exam reference — Microsoft Azure Data Scientist">DP-100</a></li>
               <li><a href="/exams/dp-300/" class="hero-exam-tag" aria-label="DP-300 study app — Microsoft Azure Database Administrator">DP-300</a></li>
               <li><a href="/exams/dp-700/" class="hero-exam-tag" aria-label="DP-700 study app — Microsoft Fabric Data Engineer">DP-700</a></li>
               <li><a href="/exams/dp-750/" class="hero-exam-tag" aria-label="DP-750 study app — Microsoft Azure Databricks Data Engineer">DP-750</a></li>
@@ -2222,9 +2258,9 @@
             <div class="exam-mini__group exam-tags__group--ai">
               <p class="exam-mini__title">AI &amp; Agents</p>
               <ul class="exam-mini__list">
-                <li><a href="/exams/ai-900/" class="exam-mini__tag">AI-900</a></li>
+                <li><a href="/exams/ai-900/" class="exam-mini__tag exam-link--retired" aria-label="AI-900 retired exam reference">AI-900</a></li>
                 <li><a href="/exams/ai-901/" class="exam-mini__tag">AI-901</a></li>
-                <li><a href="/exams/ai-102/" class="exam-mini__tag">AI-102</a></li>
+                <li><a href="/exams/ai-102/" class="exam-mini__tag exam-link--retired" aria-label="AI-102 retired exam reference">AI-102</a></li>
                 <li><a href="/exams/ai-103/" class="exam-mini__tag">AI-103</a></li>
                 <li><a href="/exams/ai-200/" class="exam-mini__tag">AI-200</a></li>
                 <li><a href="/exams/ai-300/" class="exam-mini__tag">AI-300</a></li>
@@ -2238,7 +2274,7 @@
               <p class="exam-mini__title">Data</p>
               <ul class="exam-mini__list">
                 <li><a href="/exams/dp-900/" class="exam-mini__tag">DP-900</a></li>
-                <li><a href="/exams/dp-100/" class="exam-mini__tag">DP-100</a></li>
+                <li><a href="/exams/dp-100/" class="exam-mini__tag exam-link--retired" aria-label="DP-100 retired exam reference">DP-100</a></li>
                 <li><a href="/exams/dp-300/" class="exam-mini__tag">DP-300</a></li>
                 <li><a href="/exams/dp-700/" class="exam-mini__tag">DP-700</a></li>
                 <li><a href="/exams/dp-750/" class="exam-mini__tag">DP-750</a></li>
@@ -2375,7 +2411,7 @@
           </div>
           <div class="roadmap-cell" data-category="data-ai">
             <ul class="roadmap-pill-list">
-              <li><a class="roadmap-pill" href="/exams/ai-900/" aria-label="Open AI-900 Azure AI Fundamentals exam page">AI-900</a></li>
+              <li><a class="roadmap-pill exam-link--retired" href="/exams/ai-900/" aria-label="Open retired AI-900 Azure AI Fundamentals reference page">AI-900</a></li>
               <li><a class="roadmap-pill" href="/exams/ai-901/" aria-label="Open AI-901 AI Fundamentals exam page">AI-901</a></li>
               <li><a class="roadmap-pill" href="/exams/dp-900/" aria-label="Open DP-900 Azure Data Fundamentals exam page">DP-900</a></li>
             </ul>
@@ -2410,11 +2446,11 @@
           </div>
           <div class="roadmap-cell" data-category="data-ai">
             <ul class="roadmap-pill-list">
-              <li><a class="roadmap-pill" href="/exams/ai-102/" aria-label="Open AI-102 Azure AI Engineer exam page">AI-102</a></li>
+              <li><a class="roadmap-pill exam-link--retired" href="/exams/ai-102/" aria-label="Open retired AI-102 Azure AI Engineer reference page">AI-102</a></li>
               <li><a class="roadmap-pill" href="/exams/ai-103/" aria-label="Open AI-103 AI App and Agent Developer exam page">AI-103</a></li>
               <li><a class="roadmap-pill" href="/exams/ai-200/" aria-label="Open AI-200 AI Cloud Developer exam page">AI-200</a></li>
               <li><a class="roadmap-pill" href="/exams/ai-300/" aria-label="Open AI-300 ML Operations Engineer exam page">AI-300</a></li>
-              <li><a class="roadmap-pill" href="/exams/dp-100/" aria-label="Open DP-100 Azure Data Scientist exam page">DP-100</a></li>
+              <li><a class="roadmap-pill exam-link--retired" href="/exams/dp-100/" aria-label="Open retired DP-100 Azure Data Scientist reference page">DP-100</a></li>
               <li><a class="roadmap-pill" href="/exams/dp-300/" aria-label="Open DP-300 Azure Database Administrator exam page">DP-300</a></li>
               <li><a class="roadmap-pill roadmap-pill--featured" href="/exams/dp-800/" aria-label="Open DP-800 SQL AI Developer exam page">DP-800</a></li>
               <li><a class="roadmap-pill" href="/exams/dp-750/" aria-label="Open DP-750 Azure Databricks Data Engineer exam page">DP-750</a></li>
@@ -2900,9 +2936,9 @@
         <div class="exam-tags__group exam-tags__group--ai" role="group" aria-labelledby="cta-grp-ai">
           <p class="exam-tags__group-title" id="cta-grp-ai">AI &amp; Agents</p>
           <ul class="exam-tags__list">
-            <li><a href="/exams/ai-900/" class="exam-tag">AI-900 AI Fundamentals</a></li>
+            <li><a href="/exams/ai-900/" class="exam-tag exam-link--retired" aria-label="AI-900 retired exam reference — AI Fundamentals">AI-900 AI Fundamentals</a></li>
             <li><a href="/exams/ai-901/" class="exam-tag">AI-901 AI Fundamentals</a></li>
-            <li><a href="/exams/ai-102/" class="exam-tag">AI-102 AI Engineer</a></li>
+            <li><a href="/exams/ai-102/" class="exam-tag exam-link--retired" aria-label="AI-102 retired exam reference — AI Engineer">AI-102 AI Engineer</a></li>
             <li><a href="/exams/ai-103/" class="exam-tag">AI-103 AI App &amp; Agent Developer</a></li>
             <li><a href="/exams/ai-200/" class="exam-tag">AI-200 AI Cloud Developer</a></li>
             <li><a href="/exams/ai-300/" class="exam-tag">AI-300 ML Operations Engineer</a></li>
@@ -2916,7 +2952,7 @@
           <p class="exam-tags__group-title" id="cta-grp-data">Data</p>
           <ul class="exam-tags__list">
             <li><a href="/exams/dp-900/" class="exam-tag">DP-900 Data Fundamentals</a></li>
-            <li><a href="/exams/dp-100/" class="exam-tag">DP-100 Data Scientist</a></li>
+            <li><a href="/exams/dp-100/" class="exam-tag exam-link--retired" aria-label="DP-100 retired exam reference — Data Scientist">DP-100 Data Scientist</a></li>
             <li><a href="/exams/dp-300/" class="exam-tag">DP-300 Database Administrator</a></li>
             <li><a href="/exams/dp-700/" class="exam-tag">DP-700 Fabric Data Engineer</a></li>
             <li><a href="/exams/dp-750/" class="exam-tag">DP-750 Azure Databricks Data Engineer</a></li>

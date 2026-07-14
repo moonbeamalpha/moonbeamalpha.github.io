@@ -6,6 +6,7 @@
 (function () {
   var KEY = 'am-theme';
   var root = document.documentElement;
+  var transitioning = false;
 
   function stored() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
@@ -42,15 +43,49 @@
     }
   }
 
-  function onToggle() {
-    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    root.classList.add('theme-lock');
+  function commit(theme) {
+    apply(theme);
+    persist(theme);
+  }
+
+  function fallbackFade(theme) {
+    transitioning = true;
+    root.classList.add('theme-fade-ready');
     void root.offsetWidth;
-    apply(next);
-    persist(next);
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () { root.classList.remove('theme-lock'); });
-    });
+    root.classList.add('theme-fade-out');
+    window.setTimeout(function () {
+      commit(theme);
+      root.classList.remove('theme-fade-out');
+      root.classList.add('theme-fade-in');
+      window.setTimeout(function () {
+        root.classList.remove('theme-fade-ready', 'theme-fade-in');
+        transitioning = false;
+      }, 170);
+    }, 150);
+  }
+
+  function onToggle() {
+    if (transitioning) { return; }
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      commit(next);
+      return;
+    }
+
+    if (document.startViewTransition) {
+      transitioning = true;
+      try {
+        var transition = document.startViewTransition(function () { commit(next); });
+        transition.finished.then(function () { transitioning = false; }, function () { transitioning = false; });
+      } catch (e) {
+        transitioning = false;
+        fallbackFade(next);
+      }
+      return;
+    }
+
+    fallbackFade(next);
   }
 
   function init() {

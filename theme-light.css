@@ -109,6 +109,14 @@ html[data-theme="light"] .am-cert-hero__phone-screen {
   background-color: #F5F7FA;
   background-image: url('/images/cap-home-dashboard-light.webp');
 }
+/* The light capture's baked-in exam CTA sits lower and spans more of the
+   card than the dark capture. Align the per-exam mask to cover it exactly. */
+html[data-theme="light"] .am-cert-hero__cta-overlay {
+  left: 6.8%;
+  right: 6.8%;
+  top: 56%;
+  height: 4.8%;
+}
 html[data-theme="light"] .am-retire-banner__cta { color: #fff; }
 
 /* ── 3. Homepage component overrides ── */
@@ -209,6 +217,25 @@ html[data-theme="light"] .roadmap-pill { box-shadow: inset 0 1px 0 rgba(255,255,
 html[data-theme="light"] .roadmap-pill--featured::after { background: rgba(13,30,55,0.25); }
 html[data-theme="light"] .roadmap-pill:focus-visible { box-shadow: 0 0 0 3px rgba(0,110,170,0.30); }
 
+/* Brightness makes pale chips recede on light surfaces, so use a denser
+   family tint and a small coloured lift for a clear pointer/focus state. */
+html[data-theme="light"] a.hero-exam-tag:hover,
+html[data-theme="light"] a.hero-exam-tag:focus-visible,
+html[data-theme="light"] a.exam-tag:hover,
+html[data-theme="light"] a.exam-tag:focus-visible,
+html[data-theme="light"] a.exam-mini__tag:hover,
+html[data-theme="light"] a.exam-mini__tag:focus-visible,
+html[data-theme="light"] .roadmap-pill:hover,
+html[data-theme="light"] .roadmap-pill:focus-visible {
+  background: color-mix(in srgb, var(--group-color, var(--pillar-color)) 18%, #fff);
+  border-color: var(--group-color, var(--pillar-color));
+  filter: saturate(1.12);
+  transform: translateY(-2px) scale(1.025);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.72),
+    0 7px 16px color-mix(in srgb, var(--group-color, var(--pillar-color)) 20%, transparent);
+}
+
 html[data-theme="light"] .exam-mini__dot { background: rgba(13,30,55,0.22); }
 html[data-theme="light"] .exam-mini__dot:hover { background: rgba(13,30,55,0.42); }
 
@@ -230,24 +257,78 @@ html[data-theme="light"] .related-card { background: rgba(13,30,55,0.03); }
 html[data-theme="light"] .domain__weight { background: rgba(0,110,170,0.10); border-color: rgba(0,110,170,0.30); }
 html[data-theme="light"] .qt__hint { background: rgba(0,110,170,0.08); border-color: rgba(0,110,170,0.25); }
 
-/* The question-type visualizations are miniature mock-ups of the app's
-   dark UI. Keep them dark in light mode (like a screenshot) by re-pinning
-   the dark palette inside the viz container. */
+/* Question-type visualizations mirror the app's light surfaces while
+   retaining clear selected, drag, hotspot, and coaching states. */
+html[data-theme="light"] .qt {
+  background: rgba(255,255,255,0.58);
+  border-color: rgba(13,30,55,0.12);
+  box-shadow: 0 8px 24px rgba(15,30,60,0.07);
+}
 html[data-theme="light"] .qt__viz {
-  --azure-cyan:     #50E6FF;
-  --azure-blue:     #2B88D8;
-  --azure-purple:   #9578E0;
-  --xp-gold:        #FFB900;
-  --success-green:  #20C020;
-  --error-red:      #F05050;
-  --warning-orange: #F7630C;
-  --text-primary:   #F0F0F0;
-  --text-secondary: #8B95A5;
-  --text-muted:     #808A96;
-  --border-subtle:  rgba(255,255,255,0.06);
-  --border-strong:  rgba(255,255,255,0.12);
-  background: #0F1525;
-  border-color: rgba(13,30,55,0.14);
+  background: linear-gradient(145deg, #FFFFFF 0%, #F1F6FB 100%);
+  border-color: rgba(13,30,55,0.12);
+  box-shadow: inset 0 1px 0 #FFFFFF, 0 8px 20px rgba(15,30,60,0.08);
+}
+html[data-theme="light"] .qt__viz-options li,
+html[data-theme="light"] .qt__viz-drag li,
+html[data-theme="light"] .qt__viz-case-questions li {
+  background: rgba(255,255,255,0.78);
+  border-color: rgba(13,30,55,0.11);
+  box-shadow: 0 1px 2px rgba(15,30,60,0.04);
+}
+html[data-theme="light"] .qt__viz-options li.is-selected {
+  background: rgba(14,116,144,0.10);
+  border-color: rgba(14,116,144,0.42);
+  box-shadow: 0 0 0 1px rgba(14,116,144,0.05), 0 4px 12px rgba(14,116,144,0.08);
+}
+html[data-theme="light"] .is-selected .qt__viz-radio,
+html[data-theme="light"] .is-selected .qt__viz-checkbox {
+  box-shadow: 0 0 0 3px rgba(14,116,144,0.12);
+}
+html[data-theme="light"] .is-selected .qt__viz-radio::after { background: #FFFFFF; }
+html[data-theme="light"] .is-selected .qt__viz-checkbox::after {
+  border-right-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+html[data-theme="light"] .qt__viz-drag-num,
+html[data-theme="light"] .qt__viz-case-num {
+  background: rgba(14,116,144,0.12);
+  color: #0E7490;
+}
+html[data-theme="light"] .qt__viz-hotspot {
+  background: linear-gradient(145deg, #F8FBFE 0%, #E7EFF7 100%);
+  border: 1px solid rgba(13,30,55,0.10);
+}
+html[data-theme="light"] .qt__viz-hotspot::before {
+  background:
+    linear-gradient(transparent 22%, rgba(13,30,55,0.06) 22%, rgba(13,30,55,0.06) 23%, transparent 23%),
+    linear-gradient(transparent 44%, rgba(13,30,55,0.06) 44%, rgba(13,30,55,0.06) 45%, transparent 45%),
+    linear-gradient(transparent 66%, rgba(13,30,55,0.06) 66%, rgba(13,30,55,0.06) 67%, transparent 67%),
+    linear-gradient(transparent 88%, rgba(13,30,55,0.06) 88%, rgba(13,30,55,0.06) 89%, transparent 89%);
+}
+html[data-theme="light"] .qt__viz-hotspot-mock-row { background: rgba(13,30,55,0.12); }
+html[data-theme="light"] .qt__viz-target {
+  box-shadow: 0 0 0 5px rgba(14,116,144,0.10), 0 0 18px rgba(14,116,144,0.25);
+}
+html[data-theme="light"] .qt__viz-case-scenario {
+  background: rgba(14,116,144,0.06);
+  border-left-color: #0E7490;
+}
+html[data-theme="light"] .qt__viz-ai-wrong {
+  background: rgba(208,48,48,0.07);
+  border-color: rgba(208,48,48,0.22);
+}
+html[data-theme="light"] .qt__viz-ai-wrong-mark { color: #D03030; }
+html[data-theme="light"] .qt__viz-ai-explain {
+  background: linear-gradient(135deg, rgba(14,116,144,0.06), rgba(108,78,201,0.06));
+  border-color: rgba(14,116,144,0.24);
+}
+html[data-theme="light"] .qt__viz-ai-explain-mark { color: #0E7490; }
+html[data-theme="light"] .qt__viz-drag-handle,
+html[data-theme="light"] .qt__viz-radio,
+html[data-theme="light"] .qt__viz-checkbox {
+  border-color: #718096;
+  color: #718096;
 }
 
 html[data-theme="light"] .cert-path__chip { background: rgba(13,30,55,0.04); }
@@ -288,8 +369,30 @@ html[data-theme="light"] .related-card:hover { background: rgba(0,110,170,0.05);
 html[data-theme="light"] .theme-toggle__sun { display: none; }
 html[data-theme="light"] .theme-toggle__moon { display: block; }
 
-/* Suppress every transition for the single frame around a theme swap
-   so long-running transform transitions don't shimmer mid-recolor. */
-.theme-lock *,
-.theme-lock *::before,
-.theme-lock *::after { transition: none !important; }
+/* Cross-fade the complete rendered page so token, image, and surface changes
+   move together. The class-based path covers browsers without View Transitions. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 340ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) { animation-name: theme-view-out; }
+::view-transition-new(root) { animation-name: theme-view-in; }
+@keyframes theme-view-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes theme-view-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.theme-fade-ready body { transition: opacity 150ms ease; }
+.theme-fade-out body { opacity: 0.72; }
+.theme-fade-in body { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation-duration: 0.01ms; }
+  .theme-fade-ready body { transition: none; }
+}

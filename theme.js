@@ -14,9 +14,23 @@
     try { localStorage.setItem(KEY, value); } catch (e) { /* private mode: theme still applies for this pageview */ }
   }
 
+  function applyScreenshotSources(light) {
+    var images = document.querySelectorAll('[data-theme-src-light]');
+    for (var i = 0; i < images.length; i++) {
+      var image = images[i];
+      var darkSource = image.getAttribute('data-theme-src-dark');
+      if (!darkSource) {
+        darkSource = image.getAttribute('src');
+        image.setAttribute('data-theme-src-dark', darkSource);
+      }
+      image.setAttribute('src', light ? image.getAttribute('data-theme-src-light') : darkSource);
+    }
+  }
+
   function apply(theme) {
     var light = theme === 'light';
     if (light) { root.setAttribute('data-theme', 'light'); } else { root.removeAttribute('data-theme'); }
+    applyScreenshotSources(light);
     var scheme = document.querySelector('meta[name="color-scheme"]');
     if (scheme) { scheme.content = light ? 'light' : 'dark'; }
     var tint = document.querySelector('meta[name="theme-color"]');

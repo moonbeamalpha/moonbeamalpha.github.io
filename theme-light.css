@@ -105,6 +105,10 @@ html[data-theme="light"] .am-cert-hero__score-pill-delta { color: #15803D; }
 html[data-theme="light"] .am-cert-hero__phone-wrap {
   filter: drop-shadow(0 50px 70px rgba(15,30,60,0.28)) drop-shadow(0 0 40px rgba(43,136,216,0.10));
 }
+html[data-theme="light"] .am-cert-hero__phone-screen {
+  background-color: #F5F7FA;
+  background-image: url('/images/cap-home-dashboard-light.webp');
+}
 html[data-theme="light"] .am-retire-banner__cta { color: #fff; }
 
 /* ── 3. Homepage component overrides ── */
@@ -130,6 +134,13 @@ html[data-theme="light"] .btn-nav-cta { border-color: rgba(0,110,170,0.45); }
 html[data-theme="light"] .btn-nav-cta:hover { background: rgba(0,110,170,0.08); }
 html[data-theme="light"] .badge-exam-iq { color: #fff; } /* gradient bg darkens via tokens; keep white text */
 html[data-theme="light"] .hero-app-icon { box-shadow: 0 0 24px rgba(43,136,216,0.25), 0 0 48px rgba(43,136,216,0.12); }
+
+/* Device screenshots use CSS variables so the stored light preference is
+   honoured before first paint. Missing light captures fall back to dark. */
+.themed-screenshot { background-image: var(--screenshot-dark); }
+html[data-theme="light"] .themed-screenshot {
+  background-image: var(--screenshot-light, var(--screenshot-dark));
+}
 
 html[data-theme="light"] .phone-wrap {
   filter: drop-shadow(0 40px 60px rgba(15,30,60,0.28)) drop-shadow(0 0 30px rgba(43,136,216,0.10));

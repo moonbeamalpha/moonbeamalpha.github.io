@@ -3,7 +3,7 @@
 > Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 11,700+ practice questions cover 32 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
-Platform: iOS 17+, iPadOS 17+
+Platform: iOS 18+, iPadOS 18+
 Pricing: Free to download, with optional in-app purchases for full per-exam question banks. No subscription required for core study features.
 App Store: https://apps.apple.com/gb/app/azure-mastery/id6760594569
 
@@ -36,19 +36,19 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### AI, Machine Learning & Copilot Agents (10)
 
-- [AI-900 — Microsoft Azure AI Fundamentals](https://azuremastery.app/exams/ai-900/): 340 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates AI workloads and considerations, fundamentals of ML, computer vision, natural language processing, and generative AI on Azure. Skills outline updated 2 May 2025.
+- [AI-900 — Microsoft Azure AI Fundamentals (retired)](https://azuremastery.app/exams/ai-900/): 340 in-app practice questions retained for reference. Microsoft retired AI-900 on 30 June 2026 and replaced it with AI-901; AI-900 can no longer be scheduled.
 
-- [AI-901 — Microsoft Azure AI Foundations](https://azuremastery.app/exams/ai-901/): 385 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. The agentic-AI-focused fundamentals counterpart to AI-900, covering generative AI primitives, prompts, RAG concepts, and responsible AI for agent builders. Skills outline updated March 2026.
+- [AI-901 — Microsoft Azure AI Fundamentals](https://azuremastery.app/exams/ai-901/): 385 in-app practice questions. Current replacement for retired AI-900; the Fundamentals credential does not expire and local exam pricing varies. 45-min duration, pass score 700/1000. Two assessed areas: identify AI concepts and responsibilities (40–45%); implement AI solutions by using Microsoft Foundry (55–60%). Requires foundational cloud/Azure knowledge and understanding Python examples. English exam updated 15 April 2026.
 
-- [AI-102 — Designing and Implementing a Microsoft Azure AI Solution](https://azuremastery.app/exams/ai-102/): 334 in-app practice questions. Associate-tier AI engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates building Azure AI Service solutions, planning and managing AI solutions, computer vision, natural language processing, knowledge mining, document intelligence, and **implementing agentic solutions** (added December 2025). Skills outline updated 23 December 2025.
+- [AI-102 — Designing and Implementing a Microsoft Azure AI Solution (retired)](https://azuremastery.app/exams/ai-102/): 334 in-app practice questions retained for reference. Microsoft retired AI-102 on 30 June 2026; the current role-based Azure AI apps and agents route is AI-103.
 
-- [AI-103 — Microsoft AI App and Agent Developer](https://azuremastery.app/exams/ai-103/): 352 in-app practice questions. Associate-tier AI app and agent developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing AI-enabled apps and agents, integrating Azure OpenAI Service, building with Microsoft Agent Framework, and shipping production agents with telemetry and governance. Skills outline updated 1 June 2026.
+- [AI-103 — Developing AI Apps and Agents on Azure](https://azuremastery.app/exams/ai-103/): 352 in-app practice questions for the Azure AI Apps and Agents Developer Associate credential. 100-min duration, pass score 700/1000. Five domains: plan/manage an Azure AI solution (25–30%), generative and agentic solutions (30–35%), computer vision (10–15%), text analysis (10–15%), and information extraction (10–15%). Requires Python and Microsoft Foundry experience. Skills measured as of 16 April 2026.
 
 - [AI-200 — Microsoft Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 437 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Skills outline updated March 2026.
 
 - [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 327 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
 
-- [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 347 in-app practice questions. Associate-tier maker cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates building low-code agents in Microsoft Copilot Studio — topics, generative answers, knowledge sources, custom connectors, channel deployment, and Microsoft 365 Copilot extensibility (declarative agents, plug-ins). Skills outline updated March 2026.
+- [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 347 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
 
 - [AB-731 — Microsoft AI Transformation Leader](https://azuremastery.app/exams/ab-731/): 352 in-app practice questions. Beginner-tier leadership cert (no-code), does not expire, USD $99 voucher. 45-min duration (65-min seat), 30–40 mixed-format questions, pass score 700/1000. Three domains: identify the business value of generative AI solutions (35–40%), identify benefits/capabilities of Microsoft's AI apps and services (35–40%), identify an implementation and adoption strategy (20–25%). For business decision-makers, programme leads, and AI champions — not builders. Skills outline 2026.
 
@@ -60,7 +60,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 360 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills outline updated 1 November 2024.
 
-- [DP-100 — Designing and Implementing a Data Science Solution on Azure](https://azuremastery.app/exams/dp-100/): 350 in-app practice questions. Associate-tier data scientist cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Five domains including the new **Optimize language models for AI applications** (25–30%) added April 2025 — covers Azure ML workspace design, data preparation, model training (including responsible AI), deployment to managed/Kubernetes endpoints, and LLM optimisation (fine-tuning, prompt flow, RAG evaluation). Skills outline updated 11 April 2025.
+- [DP-100 — Designing and Implementing a Data Science Solution on Azure (retired)](https://azuremastery.app/exams/dp-100/): 350 in-app practice questions retained for reference. Microsoft retired DP-100 on 1 June 2026; it can no longer be scheduled.
 
 - [DP-300 — Administering Microsoft Azure SQL Solutions](https://azuremastery.app/exams/dp-300/): 384 in-app practice questions. Associate-tier database administrator cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Five domains: plan/implement data platform resources (15–20%), implement secure environment (20–25%), monitor/configure/optimize (20–25%), automation (15–20%), HA/DR (20–25%). Skills outline updated 24 April 2026.
 
@@ -90,7 +90,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 - [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 355 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
 - [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 367 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community.
 
-## Exams covered (28)
+## Exams covered (32)
 
 The app covers the following Microsoft certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine.
 
@@ -104,10 +104,10 @@ The app covers the following Microsoft certification exams. All are taught with 
 - AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions
 
 ### AI, Machine Learning & Copilot Agents (10)
-- AI-900 — Microsoft Azure AI Fundamentals
-- AI-901 — Microsoft Azure AI Foundations
-- AI-102 — Designing and Implementing a Microsoft Azure AI Solution (AI Engineer Associate)
-- AI-103 — Microsoft AI App and Agent Developer
+- AI-900 — Microsoft Azure AI Fundamentals (retired 30 June 2026; replaced by AI-901)
+- AI-901 — Microsoft Azure AI Fundamentals
+- AI-102 — Designing and Implementing a Microsoft Azure AI Solution (retired 30 June 2026; current route is AI-103)
+- AI-103 — Developing AI Apps and Agents on Azure
 - AI-200 — Microsoft Azure AI Cloud Developer
 - AI-300 — Microsoft Azure ML Operations Engineer
 - AB-620 — Microsoft AI Agent Builder Associate
@@ -117,7 +117,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 
 ### Data (6)
 - DP-900 — Microsoft Azure Data Fundamentals
-- DP-100 — Designing and Implementing a Data Science Solution on Azure (Data Scientist Associate)
+- DP-100 — Designing and Implementing a Data Science Solution on Azure (retired 1 June 2026)
 - DP-300 — Administering Microsoft Azure SQL Solutions (Database Administrator Associate)
 - DP-700 — Implementing Data Engineering Solutions Using Microsoft Fabric (Fabric Data Engineer Associate)
 - DP-750 — Implementing Data Engineering Solutions Using Azure Databricks (Azure Databricks Data Engineer Associate)

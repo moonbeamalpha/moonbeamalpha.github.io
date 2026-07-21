@@ -142,10 +142,11 @@ The app covers the following Microsoft certification exams. All are taught with 
 
 - **Exam IQ**: On-device CoreML model that predicts your exam-day score with confidence intervals, using Item Response Theory (IRT) and Bayesian inference over your answer history.
 - **Adaptive study plans**: The app picks your next session — weak-spot drills, knowledge-decay refreshes, mock exams — based on your current ability estimate per domain.
+- **Aura first-week guidance**: Aura adapts the learner's next step throughout the first week and closes every study block with a concise, evidence-led recap.
 - **Exam simulator**: Full-length mock exams under real timing and question distribution for each Microsoft exam.
 - **Knowledge decay tracking**: Spaced-repetition signals flag topics where your retention has dropped before exam day, with targeted refresher sessions.
 - **Question types**: Multiple choice, multi-select, drag-and-drop ordering, hotspot, case studies — matching the formats Microsoft uses on the real exams.
-- **Why Wrong**: For incorrect answers, on-device Apple Foundation Model generates targeted explanations grounded in the question's correct rationale.
+- **Answer Coach**: For incorrect answers, authored certification guidance explains the misconception, key distinction, and rule to remember. On supported devices, an optional on-device model may rewrite the note only when it passes grounding checks.
 - **Offline-first**: Works fully without a network. No telemetry, no analytics on user behavior, no account required.
 - **Apple ecosystem**: Native SwiftUI on iPhone and iPad; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
 
@@ -156,7 +157,7 @@ Azure Mastery is built for serious certification candidates who want to know *wh
 1. ML score prediction calibrated to Microsoft's pass thresholds, not a raw % correct.
 2. Per-domain ability estimation — you see exactly which of an exam's domains is dragging your predicted score down.
 3. Knowledge decay alerts so you don't lose old material while learning new domains.
-4. 100% on-device computation — Exam IQ, Why Wrong explanations, and study plan generation never leave the device.
+4. Privacy-first computation — Exam IQ, Answer Coach, and study-plan generation run on-device; optional sync uses the learner's private iCloud account.
 
 ## Social
 

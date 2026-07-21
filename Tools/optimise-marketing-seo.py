@@ -7,6 +7,7 @@ This performs the repeatable, site-wide parts of the Search Console cleanup:
 * accurate question counts in metadata, schema and body copy;
 * useful, exam-specific question previews sourced from the in-app banks;
 * clean SoftwareApplication keywords and evergreen feature claims;
+* consistent Answer Coach naming and privacy-safe provenance;
 * matching JSON-LD and sitemap modification dates.
 
 The exam-specific editorial copy remains in each HTML page. Run this after
@@ -33,7 +34,7 @@ ROOT = Path(__file__).resolve().parent.parent
 EXAMS_DIR = ROOT / "exams"
 DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
-SEO_UPDATED = "2026-07-13"
+SEO_UPDATED = "2026-07-21"
 RETIRED_EXAMS = {
     "AI-900": {
         "date": "30 June 2026",
@@ -252,12 +253,12 @@ def preview_articles(code: str, questions: list[dict]) -> str:
           <div class="qt__viz" aria-hidden="true">
             <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: {clean_text(wrong.get("text", ""), 72)}</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Why wrong:</span>{clean_text(rationale, 210)}
-              <span class="qt__viz-ai-source">— generated on-device by Apple Foundation Model</span>
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>{clean_text(rationale, 210)}
+              <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>
-          <h3>Why Wrong AI</h3>
-          <p>When you answer incorrectly, on-device AI explains the distractor against the bank's verified rationale.</p>
+          <h3>Answer Coach</h3>
+          <p>Answer Coach uses the bank's authored rationale to explain the misconception, key distinction, and rule to remember. On supported devices, an optional on-device model may rewrite the note only when it passes grounding checks.</p>
           <span class="qt__hint qt__hint--purple">App exclusive</span>
         </article>
 
@@ -289,12 +290,12 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
     else:
         title = f"{code} Practice Questions & Exam Prep | Azure Mastery"
         description = (
-            f"Prepare for the {code} exam with {count} practice questions, adaptive study plans, "
-            "an exam simulator, and private on-device readiness insights for iPhone and iPad."
+            f"Prepare for {code} with {count} practice questions, private Answer Coach, adaptive "
+            "study plans, and an exam simulator for iPhone and iPad."
         )
         social_description = (
-            f"{count} {code} practice questions, adaptive study plans, and a full exam simulator "
-            "for iPhone and iPad. Free to start."
+            f"{count} {code} practice questions, private Answer Coach, adaptive study plans, "
+            "and a full exam simulator. Free to start."
         )
         h1 = f"{code} Practice Questions &amp; Exam Prep"
         feature_claim = f"{count} {code} practice questions mapped to the current Microsoft skills outline"
@@ -304,7 +305,7 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
     )
     schema_keywords = (
         f"{code}, {code} practice questions, {code} exam prep, {code} mock exam, "
-        "Microsoft certification, iOS study app, adaptive study plan, exam score prediction"
+        "Microsoft certification, iOS study app, Answer Coach, adaptive study plan, exam score prediction"
     )
 
     text = replace_once(text, r"<title>.*?</title>", f"<title>{title}</title>", "title")
@@ -355,6 +356,48 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
         "featureList question claim",
         flags=re.S,
     )
+    if '"Private Answer Coach grounded in authored rationales"' not in text:
+        text = replace_once(
+            text,
+            r'(\n\s*)("Knowledge decay tracking)',
+            r'\1"Private Answer Coach grounded in authored rationales",\1\2',
+            "Answer Coach feature claim",
+            flags=re.S,
+        )
+
+    if "<strong>Answer Coach</strong>" not in text:
+        answer_coach_copy = '''      <p>
+        <strong>Answer Coach</strong> turns each missed answer into a private, grounded lesson: the misconception, key distinction, and rule to remember. It always uses authored certification guidance; on supported devices, an optional on-device model may rewrite the note only when it passes grounding checks.
+      </p>
+      <p>
+        During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
+      </p>
+'''
+        text = replace_once(
+            text,
+            r'(      <p>\s*Everything runs <strong>on-device</strong>\.)',
+            answer_coach_copy + r'\1',
+            "Answer Coach and Aura product copy",
+            flags=re.S,
+        )
+
+    text = text.replace(
+        "Everything runs <strong>on-device</strong>. Your answer history, your readiness gauge, your decay alerts — none of it leaves your iPhone or iPad. No account required to start, no tracking, no sync server. Privacy-first by design.",
+        "Everything essential runs <strong>on-device</strong>. Your answer history, readiness gauge, and coaching stay private. Optional sync uses your private iCloud account; there is no Azure Mastery account, tracking, or external processing server.",
+    )
+    text = text.replace(
+        " — all without sending a single byte off your device.",
+        ". Core study stays on-device and works offline; optional sync uses your private iCloud account.",
+    )
+    text = text.replace(
+        " All without sending a single byte off your device.",
+        " Core study stays on-device and works offline; optional sync uses your private iCloud account.",
+    )
+    text = text.replace(
+        "Everything runs on-device: your answer history and readiness gauge never leave your iPhone or iPad.",
+        "Core study runs on-device and works offline; optional sync uses your private iCloud account.",
+    )
+    text = text.replace("/* Why Wrong AI */", "/* Answer Coach */")
 
     # Count corrections not covered by the existing sync script.
     text = re.sub(r"(full\s+)\d+(-question\s+bank)", rf"\g<1>{count}\2", text)

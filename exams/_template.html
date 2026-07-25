@@ -53,7 +53,7 @@
     · UK English in copy ("personalised", "optimised", "behaviour")
     · Single <h1> per page
     · NO `aggregateRating` field anywhere in JSON-LD
-    · `<meta name="apple-itunes-app">` is mandatory
+    · `<meta name="apple-itunes-app">` is mandatory and routes to this exam
     · gtag.js block matches the homepage exactly (G-YTN7LFS04Y)
     · Every FAQ question must contain the cert code; required types: cost,
       validity, retake, study time, comparison to a sibling cert
@@ -98,7 +98,7 @@
   <link rel="alternate" type="application/llms.txt" href="/llms.txt">
 
   <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
-  <meta name="apple-itunes-app" content="app-id=6760594569">
+  <meta name="apple-itunes-app" content="app-id=6760594569, app-argument=azuremastery://exam/{{CERT_CODE_LOWER}}">
 
   <!-- Theme + favicons (consistent with /apps/AzureMastery/) -->
   <meta name="theme-color" content="#050810">

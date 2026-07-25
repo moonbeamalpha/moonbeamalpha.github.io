@@ -14,6 +14,16 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 COUNTS = json.loads((ROOT / "data" / "exam-counts.json").read_text())["exams"]
 RETIRED = {"AI-900": "30 June 2026", "AI-102": "30 June 2026", "DP-100": "1 June 2026"}
+RETIRING = {
+    "AZ-204": ("31 July 2026", "AI-200"),
+    "AZ-500": ("31 August 2026", "SC-500"),
+}
+SUCCESSOR_ROUTES = {
+    "AI-900": "AI-901",
+    "AI-102": "AI-103",
+    "DP-100": "AI-300",
+    **{code: successor for code, (_, successor) in RETIRING.items()},
+}
 
 
 def matches_once(pattern: str, text: str, label: str, page: Path, errors: list[str], flags: int = 0) -> str:
@@ -44,6 +54,13 @@ def main() -> None:
         canonical = matches_once(
             r'<link rel="canonical" href="([^"]+)">', text, "canonical", page, errors
         )
+        smart_banner = matches_once(
+            r'<meta name="apple-itunes-app" content="([^"]+)">',
+            text,
+            "Smart App Banner",
+            page,
+            errors,
+        )
         matches_once(r"<h1\b[^>]*>.*?</h1>", text, "H1", page, errors, re.S)
 
         schemas = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', text, re.S)
@@ -62,10 +79,25 @@ def main() -> None:
         expected_canonical = f"https://azuremastery.app/exams/{code.lower()}/"
         if canonical != expected_canonical:
             errors.append(f"{page.relative_to(ROOT)}: canonical is {canonical}, expected {expected_canonical}")
+        expected_banner = (
+            f"app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}"
+        )
+        if smart_banner != expected_banner:
+            errors.append(
+                f"{page.relative_to(ROOT)}: Smart App Banner is {smart_banner}, expected {expected_banner}"
+            )
         if code not in {"GH-300", "GH-900"} and f"full {count}-question bank" not in text:
             errors.append(f"{page.relative_to(ROOT)}: full-bank count is not {count}")
         if code in RETIRED and ("Retired Exam" not in title or RETIRED[code] not in description):
             errors.append(f"{page.relative_to(ROOT)}: retired-exam metadata is missing")
+        if code in RETIRING:
+            retirement_date, successor = RETIRING[code]
+            if successor not in title or retirement_date not in description:
+                errors.append(f"{page.relative_to(ROOT)}: retiring-exam metadata is missing")
+        if code in SUCCESSOR_ROUTES:
+            successor = SUCCESSOR_ROUTES[code]
+            if f'href="/exams/{successor.lower()}/"' not in text:
+                errors.append(f"{page.relative_to(ROOT)}: successor route to {successor} is missing")
         if "Answer Coach" not in text:
             errors.append(f"{page.relative_to(ROOT)}: Answer Coach product naming is missing")
         if re.search(r"Why Wrong|Why Was I Wrong", text, re.I):

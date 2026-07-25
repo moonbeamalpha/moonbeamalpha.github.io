@@ -52,6 +52,18 @@ RETIRED_EXAMS = {
         "replacement_label": "a current machine-learning operations option",
     },
 }
+RETIRING_EXAMS = {
+    "AZ-204": {
+        "date": "31 July 2026",
+        "replacement": "AI-200",
+        "replacement_label": "Microsoft's replacement developer course and current AI cloud route",
+    },
+    "AZ-500": {
+        "date": "31 August 2026",
+        "replacement": "SC-500",
+        "replacement_label": "Microsoft's Cloud and AI Security Engineer successor",
+    },
+}
 DEFAULT_APP_REPO = Path(
     os.environ.get("AZURE_MASTERY_APP_REPO", ROOT.parent / "AZ-104 Mastery")
 )
@@ -274,6 +286,7 @@ def replace_once(text: str, pattern: str, replacement: str, label: str, *, flags
 
 def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
     retired = RETIRED_EXAMS.get(code)
+    retiring = RETIRING_EXAMS.get(code)
     if retired:
         replacement = retired["replacement"]
         title = f"{code} Retired Exam & {replacement} Next Step | Azure Mastery"
@@ -287,6 +300,19 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
         )
         h1 = f"{code} Retired Exam Practice &amp; Next Steps"
         feature_claim = f"{count} {code} reference practice questions mapped to the final Microsoft skills outline"
+    elif retiring:
+        replacement = retiring["replacement"]
+        title = f"{code} Retirement & {replacement} Next Step | Azure Mastery"
+        description = (
+            f"{code} retires {retiring['date']}. Review {count} current practice questions or "
+            f"move to {replacement}, {retiring['replacement_label']}."
+        )
+        social_description = (
+            f"{code} retires {retiring['date']}. Prepare with {count} final-outline questions "
+            f"or continue with {replacement}."
+        )
+        h1 = f"{code} Practice Questions &amp; {replacement} Next Step"
+        feature_claim = f"{count} {code} practice questions mapped to the final Microsoft skills outline"
     else:
         title = f"{code} Practice Questions & Exam Prep | Azure Mastery"
         description = (
@@ -316,6 +342,14 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
     text = replace_once(
         text, r'<meta name="keywords" content="[^"]*">',
         f'<meta name="keywords" content="{keywords}">', "meta keywords",
+    )
+    text = replace_once(
+        text, r'<meta name="apple-itunes-app" content="[^"]*">',
+        (
+            '<meta name="apple-itunes-app" '
+            f'content="app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}">'
+        ),
+        "exam-scoped Smart App Banner",
     )
     text = replace_once(
         text, r'<meta property="og:title" content="[^"]*">',

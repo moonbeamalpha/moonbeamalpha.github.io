@@ -5,7 +5,7 @@
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
 Pricing: Free to download, with optional in-app purchases for full per-exam question banks. No subscription required for core study features.
-App Store: https://apps.apple.com/gb/app/azure-mastery/id6760594569
+App Store: https://apps.apple.com/app/apple-store/id6760594569
 
 ## Primary pages
 

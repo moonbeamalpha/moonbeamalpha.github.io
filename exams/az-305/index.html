@@ -89,7 +89,7 @@
         "description": "Prepare for AZ-305 with 315 practice questions, private Answer Coach, adaptive study plans, and an exam simulator for iPhone and iPad.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-07-21",
+        "dateModified": "2026-07-25",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -219,7 +219,7 @@
             "name": "AZ-305 vs AZ-104 — which should I take first?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AZ-104 first, almost always. AZ-104 is the Associate-level operational cert; AZ-305 is the Expert-level design cert that assumes you already know Azure operations. Most architects sit AZ-305 a year or more after AZ-104, with practical solution-design experience in between. Microsoft formally requires an Associate-level prerequisite (typically AZ-104) for the Solutions Architect Expert certification anyway."
+              "text": "AZ-104 first. AZ-104 is the Associate-level operational certification required alongside AZ-305 to earn Azure Solutions Architect Expert. AZ-305 is the expert-level design exam and assumes you already understand Azure operations."
             }
           },
           {
@@ -227,7 +227,7 @@
             "name": "Do I need other exams alongside AZ-305?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No — AZ-305 is the only exam needed for the Microsoft Certified: Azure Solutions Architect Expert credential. (The predecessor exams AZ-303 and AZ-304 were retired in March 2022 in favour of a single AZ-305 exam.) You do, however, need an Associate-level prerequisite — typically AZ-104 — to earn the Expert tier. Without AZ-104, passing AZ-305 alone does not award the Solutions Architect Expert certification."
+              "text": "AZ-305 is the expert-level exam for Microsoft Certified: Azure Solutions Architect Expert. You must also hold Microsoft Certified: Azure Administrator Associate, earned through AZ-104. Passing AZ-305 alone does not award the expert credential."
             }
           }
         ]
@@ -241,7 +241,7 @@
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
           { "@type": "HowToSupply", "name": "AZ-305 exam voucher (USD $165 / approx. £128)" },
-          { "@type": "HowToSupply", "name": "AZ-104 already passed (recommended prerequisite)" }
+          { "@type": "HowToSupply", "name": "Microsoft Certified: Azure Administrator Associate already earned (required)" }
         ],
         "step": [
           {
@@ -1409,12 +1409,12 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <p class="qt__viz-q">Which Azure service should you use for the order history workload?</p>
+            <p class="qt__viz-q">Which policy effect should the region restriction use to satisfy the regulator?</p>
             <ul class="qt__viz-options">
-              <li><span class="qt__viz-radio"></span>Azure Cosmos DB for NoSQL</li>
-              <li class="is-selected"><span class="qt__viz-radio"></span>Azure SQL Database</li>
-              <li><span class="qt__viz-radio"></span>Azure Cache for Redis</li>
-              <li><span class="qt__viz-radio"></span>Azure Table Storage</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>Deny</li>
+              <li><span class="qt__viz-radio"></span>Audit</li>
+              <li><span class="qt__viz-radio"></span>AuditIfNotExists</li>
+              <li><span class="qt__viz-radio"></span>Modify</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -1424,12 +1424,13 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <p class="qt__viz-q">A company is designing connectivity between Azure VNets in different regions. Which two options provide connectivity between VNets in different Azure regions? Select two.</p>
+            <p class="qt__viz-q">An architect must design phishing-resistant authentication for administrators. Which two methods satisfy that requirement? Select two.</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Global VNet peering</li>
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>VNet-to-VNet VPN Gateway connection</li>
-              <li><span class="qt__viz-checkbox"></span>NSG peering rules</li>
-              <li><span class="qt__viz-checkbox"></span>Azure ExpressRoute Global Reach</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>FIDO2 security keys</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Windows Hello for Business</li>
+              <li><span class="qt__viz-checkbox"></span>SMS one-time passcodes</li>
+              <li><span class="qt__viz-checkbox"></span>Voice call approval</li>
+              <li><span class="qt__viz-checkbox"></span>Email one-time passcodes</li>
             </ul>
           </div>
           <h3>Multi-select</h3>
@@ -1488,9 +1489,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Azure Cosmos DB for NoSQL</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Audit</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>Cosmos DB for NoSQL does not support server-side joins across documents and is not optimized for complex relational reporting queries.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>This effect lets the deployment succeed and records the breach afterwards, which is the report-after-the-fact behaviour the regulator explicitly ruled out.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>
@@ -1525,11 +1526,11 @@
         </article>
         <article class="faq">
           <h3>AZ-305 vs AZ-104 — which should I take first?</h3>
-          <p>AZ-104 first, almost always. <a href="/exams/az-104/">AZ-104</a> is the Associate-level operational cert; AZ-305 is the Expert-level design cert that assumes you already know Azure operations. Most architects sit AZ-305 a year or more after AZ-104, with practical solution-design experience in between. Microsoft formally requires an Associate-level prerequisite (typically AZ-104) for the Solutions Architect Expert certification anyway.</p>
+          <p>AZ-104 first. <a href="/exams/az-104/">Azure Administrator Associate (AZ-104)</a> is the operational certification required alongside AZ-305 to earn Azure Solutions Architect Expert. AZ-305 is the expert-level design exam and assumes you already understand Azure operations.</p>
         </article>
         <article class="faq">
           <h3>Do I need other exams alongside AZ-305?</h3>
-          <p>No — AZ-305 is the only exam needed for the Microsoft Certified: Azure Solutions Architect Expert credential. (The predecessor exams AZ-303 and AZ-304 were retired in March 2022 in favour of a single AZ-305 exam.) You do, however, need an Associate-level prerequisite — typically <a href="/exams/az-104/">AZ-104</a> — to earn the Expert tier. Without AZ-104, passing AZ-305 alone does not award the Solutions Architect Expert certification.</p>
+          <p>AZ-305 is the expert-level exam for Microsoft Certified: Azure Solutions Architect Expert. You must also hold <a href="/exams/az-104/">Microsoft Certified: Azure Administrator Associate</a>, earned through AZ-104. Passing AZ-305 alone does not award the expert credential.</p>
         </article>
       </div>
     </section>
@@ -1539,7 +1540,7 @@
       <p class="label-eyebrow section-eyebrow">Where AZ-305 fits</p>
       <h2 class="display-small section-title">Certification path that includes AZ-305</h2>
       <p class="section-lede">
-        AZ-305 is the single exam required for the Microsoft Certified: Azure Solutions Architect Expert credential. The Expert tier requires an Associate-level prerequisite — most candidates pass <a href="/exams/az-104/">AZ-104</a>, though <a href="/exams/az-204/">AZ-204</a> works as well for developers moving into architecture.
+        AZ-305 is the single expert-level exam required for the Microsoft Certified: Azure Solutions Architect Expert credential. To earn the credential, you must also hold <a href="/exams/az-104/">Azure Administrator Associate (AZ-104)</a>; AZ-204 is not an alternative prerequisite.
       </p>
       <div class="cert-paths">
 
@@ -1559,13 +1560,6 @@
               <a class="cert-path__chip" href="/exams/az-104/">
                 <span class="cert-path__chip-code">AZ-104</span>
                 <span class="cert-path__chip-role">Associate prereq</span>
-              </a>
-            </li>
-            <li class="cert-path__station">
-              <span class="cert-path__or">or</span>
-              <a class="cert-path__chip" href="/exams/az-204/">
-                <span class="cert-path__chip-code">AZ-204</span>
-                <span class="cert-path__chip-role">Associate prereq (alt)</span>
               </a>
             </li>
             <li class="cert-path__station">
@@ -1591,7 +1585,7 @@
       <p class="label-eyebrow section-eyebrow">Before / alongside AZ-305</p>
       <h2 class="display-small section-title">Related certifications</h2>
       <p class="section-lede">
-        AZ-305 sits at the Expert tier and requires an Associate-level prerequisite. Most candidates pass <a href="/exams/az-104/">AZ-104</a> first; developer-track architects may also hold <a href="/exams/az-204/">AZ-204</a>, while infrastructure architects often add <a href="/exams/az-700/">AZ-700</a> for deeper networking design.
+        AZ-305 sits at the Expert tier and requires the <a href="/exams/az-104/">Azure Administrator Associate (AZ-104)</a> credential. Infrastructure architects often add <a href="/exams/az-700/">AZ-700</a> for deeper networking design.
       </p>
       <nav class="related-grid" aria-label="Related certifications">
         <a class="related-card" href="/exams/az-104/">
@@ -1599,10 +1593,10 @@
           <span class="related-card__name">Microsoft Azure Administrator</span>
           <span class="related-card__hint">Recommended Associate-tier prerequisite. Pass before sitting AZ-305. 612 practice questions.</span>
         </a>
-        <a class="related-card" href="/exams/az-204/">
-          <span class="related-card__code">AZ-204</span>
-          <span class="related-card__name">Developing Solutions for Microsoft Azure</span>
-          <span class="related-card__hint">Alternative Associate prerequisite for developer-track architects. Many AZ-305 candidates hold both AZ-104 and AZ-204. 318 practice questions.</span>
+        <a class="related-card" href="/exams/az-900/">
+          <span class="related-card__code">AZ-900</span>
+          <span class="related-card__name">Microsoft Azure Fundamentals</span>
+          <span class="related-card__hint">Optional foundation for candidates who need Azure concepts and service vocabulary before AZ-104 and AZ-305.</span>
         </a>
         <a class="related-card" href="/exams/az-700/">
           <span class="related-card__code">AZ-700</span>

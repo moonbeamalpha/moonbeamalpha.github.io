@@ -89,7 +89,7 @@
         "description": "Prepare for AZ-700 with 396 practice questions, private Answer Coach, adaptive study plans, and an exam simulator for iPhone and iPad.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-07-21",
+        "dateModified": "2026-07-25",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -211,7 +211,7 @@
             "name": "How long should I study for AZ-700?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most candidates pass AZ-700 after four to eight weeks of focused study, assuming some prior IT or cloud experience. If Azure is genuinely new to you, plan for two to three months — the exam expects you to know specific PowerShell and Azure CLI commands, not just describe concepts. Azure Mastery's readiness gauge tells you when you are at exam-ready — do not book until it shows roughly 720 or higher with reasonable confidence."
+              "text": "Most candidates plan four to eight weeks with prior Azure networking experience. Build and troubleshoot virtual networks, hybrid connectivity, routing, private access, application delivery, and network security in a lab; know when to choose services such as Virtual WAN, ExpressRoute, Application Gateway, Front Door, Azure Firewall, and Private Link. Azure Mastery's readiness gauge tells you when you are exam-ready."
             }
           },
           {
@@ -1266,7 +1266,7 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AZ-700 exam?</h2>
       <p>
-        AZ-700 is the <strong>Microsoft Certified: Azure Network Engineer Associate</strong> exam — the credential hiring managers expect when posting "Cloud Network Engineer", "Azure Networking Specialist", or "Cloud Connectivity Architect" roles. It's the natural next step after <a href="/exams/az-104/">AZ-104</a> for anyone whose day job has shifted from generalist administration into network-specific design and operation. AZ-700 also pairs with <a href="/exams/az-500/">AZ-500</a> for the network-security overlap (Azure Firewall, Private Link, DDoS Protection, WAF) and feeds the AZ-305 architect track when networking is a candidate's specialty area.
+        AZ-700 is the <strong>Microsoft Certified: Azure Network Engineer Associate</strong> exam — the credential hiring managers expect when posting "Cloud Network Engineer", "Azure Networking Specialist", or "Cloud Connectivity Architect" roles. It's the natural next step after <a href="/exams/az-104/">AZ-104</a> for anyone whose day job has shifted from generalist administration into network-specific design and operation. AZ-700 also pairs with <a href="/exams/sc-500/">SC-500</a> for cloud-network security and feeds the AZ-305 architect track when networking is a candidate's specialty area.
       </p>
       <p>
         AZ-700 is <strong>hands-on and design-oriented</strong>. It validates that you can plan and implement Azure network infrastructure (VNets, subnets, IP plans, route tables); hybrid connectivity (VPN Gateway, ExpressRoute, Virtual WAN); application delivery (Azure Load Balancer, Application Gateway, Front Door, Traffic Manager); private access to PaaS (Private Link, Private Endpoints, service endpoints); and network security (Azure Firewall, Firewall Manager, NSGs, DDoS Protection, WAF). Expect scenario questions where a customer has a constraint — "spoke VNets must reach an on-prem subnet without traversing the hub" — and you pick the right service combination.
@@ -1519,15 +1519,15 @@
         </article>
         <article class="faq">
           <h3>How long should I study for AZ-700?</h3>
-          <p>Most candidates pass AZ-700 after four to eight weeks of focused study, assuming some prior IT or cloud experience. If Azure is genuinely new to you, plan for two to three months — the exam expects you to know specific PowerShell and Azure CLI commands, not just describe concepts. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.</p>
+          <p>Most candidates plan four to eight weeks with prior Azure networking experience. Build and troubleshoot virtual networks, hybrid connectivity, routing, private access, application delivery, and network security in a lab; know when to choose services such as Virtual WAN, ExpressRoute, Application Gateway, Front Door, Azure Firewall, and Private Link. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
         </article>
         <article class="faq">
           <h3>AZ-700 vs AZ-104 — should I do AZ-104 first?</h3>
           <p>Microsoft strongly recommends AZ-104 first, and it shows. AZ-700 assumes you already know how Azure compute, storage, and the basic VNet model work day-to-day — it's the deep-network specialism on top of that knowledge. If you've never deployed a VM with a public IP or set up a basic NSG outside of fundamentals, take <a href="/exams/az-104/">AZ-104 (Microsoft Azure Administrator)</a> first; you'll save weeks on AZ-700 prep. If you're already a working network engineer crossing into Azure, you can skip AZ-104 and go straight in.</p>
         </article>
         <article class="faq">
-          <h3>AZ-700 vs AZ-500 — which is the right network/security pairing?</h3>
-          <p>They overlap significantly — Azure Firewall, Private Link, NSGs, DDoS Protection, and WAF appear in both. The difference is depth and angle. AZ-700 expects you to <em>design</em> connectivity (hub-and-spoke vs Virtual WAN, ExpressRoute peering choices, Application Gateway vs Front Door routing) — networking is the lens. <a href="/exams/az-500/">AZ-500</a> expects you to <em>secure</em> workloads end-to-end including identity, compute, storage, and Defender / Sentinel — security is the lens. Many candidates hold both for cloud architect or security engineer roles where the boundary blurs.</p>
+          <h3>AZ-700 vs SC-500 — which is the right network/security pairing?</h3>
+          <p>They overlap around cloud-network protection, but the roles differ. AZ-700 expects you to design and operate connectivity, including hybrid networks, routing, private access, and application delivery. <a href="/exams/sc-500/">SC-500</a> applies security controls across cloud and AI workloads, including identity, posture, threat protection, and workload security. Take AZ-700 for network engineering depth; add SC-500 when your remit includes end-to-end cloud security.</p>
         </article>
       </div>
     </section>
@@ -1603,7 +1603,7 @@
 
         <article class="cert-path">
           <div class="cert-path__header">
-            <h3 class="cert-path__name">Sibling: Security Engineer track</h3>
+            <h3 class="cert-path__name">Sibling: Cloud and AI Security track</h3>
             <span class="cert-path__tag">Associate tier</span>
           </div>
           <ol class="cert-path__stations">
@@ -1620,9 +1620,9 @@
               </a>
             </li>
             <li class="cert-path__station">
-              <a class="cert-path__chip" href="/exams/az-500/">
-                <span class="cert-path__chip-code">AZ-500</span>
-                <span class="cert-path__chip-role">Security Engineer Associate</span>
+              <a class="cert-path__chip" href="/exams/sc-500/">
+                <span class="cert-path__chip-code">SC-500</span>
+                <span class="cert-path__chip-role">Cloud and AI Security Engineer</span>
               </a>
             </li>
           </ol>
@@ -1636,7 +1636,7 @@
       <p class="label-eyebrow section-eyebrow">Before / after AZ-700</p>
       <h2 class="display-small section-title">Related certifications</h2>
       <p class="section-lede">
-        AZ-700 sits in the middle of the network-engineer cert path. AZ-104 builds the operational base it assumes; AZ-500 covers the security overlap (Firewall, Private Link, DDoS, WAF) from a security-engineering angle. Pair AZ-700 with one or both for a complete cloud-networking story.
+        AZ-700 sits in the middle of the network-engineer cert path. AZ-104 builds the operational base it assumes; SC-500 adds current cloud and AI security coverage. Pair AZ-700 with one or both for a broader cloud-networking story.
       </p>
       <nav class="related-grid" aria-label="Related certifications">
         <a class="related-card" href="/exams/az-104/">
@@ -1644,10 +1644,10 @@
           <span class="related-card__name">Microsoft Azure Administrator</span>
           <span class="related-card__hint">Recommended prerequisite. AZ-700 assumes you already know how Azure compute, storage, and basic networking work. 612 practice questions.</span>
         </a>
-        <a class="related-card" href="/exams/az-500/">
-          <span class="related-card__code">AZ-500</span>
-          <span class="related-card__name">Microsoft Azure Security Engineer</span>
-          <span class="related-card__hint">Sibling Associate. Covers the network-security overlap (Firewall, Private Link, WAF, DDoS) from the security angle. 346 practice questions.</span>
+        <a class="related-card" href="/exams/sc-500/">
+          <span class="related-card__code">SC-500</span>
+          <span class="related-card__name">Microsoft Cloud and AI Security Engineer</span>
+          <span class="related-card__hint">Current security pairing for cloud-network protection, identity, posture, threat protection, and AI workload security.</span>
         </a>
       </nav>
     </section>

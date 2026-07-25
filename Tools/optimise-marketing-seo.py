@@ -34,7 +34,8 @@ ROOT = Path(__file__).resolve().parent.parent
 EXAMS_DIR = ROOT / "exams"
 DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
-SEO_UPDATED = "2026-07-21"
+SEO_UPDATED = "2026-07-25"
+SEO_UPDATED_OVERRIDES = {}
 RETIRED_EXAMS = {
     "AI-900": {
         "date": "30 June 2026",
@@ -62,6 +63,39 @@ RETIRING_EXAMS = {
         "date": "31 August 2026",
         "replacement": "SC-500",
         "replacement_label": "Microsoft's Cloud and AI Security Engineer successor",
+    },
+}
+ACTIVE_SEO = {
+    "AI-103": {
+        "description": (
+            "{count} AI-103 practice questions for Developing AI Apps and Agents on Azure. "
+            "Study Microsoft Foundry, RAG, agents, and Python on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AI-103 practice questions for Microsoft Foundry, RAG, agents, and Python. "
+            "Adaptive exam prep for iPhone and iPad."
+        ),
+    },
+    "AB-620": {
+        "description": (
+            "{count} AB-620 practice questions for the Copilot Studio AI Agent Builder exam. "
+            "Study agents, Power Platform, integrations, and governance on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AB-620 practice questions for Copilot Studio, Power Platform integrations, "
+            "and agent governance. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
+    "AI-901": {
+        "title": "AI-901 Practice Questions | Azure AI Fundamentals Exam",
+        "description": (
+            "{count} AI-901 practice questions for the current Azure AI Fundamentals exam. "
+            "Study AI concepts, Microsoft Foundry, and Python on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AI-901 practice questions for the current Azure AI Fundamentals exam, "
+            "including Microsoft Foundry and Python. Free to start."
+        ),
     },
 }
 DEFAULT_APP_REPO = Path(
@@ -314,15 +348,22 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
         h1 = f"{code} Practice Questions &amp; {replacement} Next Step"
         feature_claim = f"{count} {code} practice questions mapped to the final Microsoft skills outline"
     else:
-        title = f"{code} Practice Questions & Exam Prep | Azure Mastery"
-        description = (
-            f"Prepare for {code} with {count} practice questions, private Answer Coach, adaptive "
-            "study plans, and an exam simulator for iPhone and iPad."
-        )
-        social_description = (
-            f"{count} {code} practice questions, private Answer Coach, adaptive study plans, "
-            "and a full exam simulator. Free to start."
-        )
+        active_seo = ACTIVE_SEO.get(code, {})
+        title = active_seo.get("title", f"{code} Practice Questions & Exam Prep | Azure Mastery")
+        description = active_seo.get(
+            "description",
+            (
+                f"Prepare for {code} with {count} practice questions, private Answer Coach, adaptive "
+                "study plans, and an exam simulator for iPhone and iPad."
+            ),
+        ).format(count=count)
+        social_description = active_seo.get(
+            "social_description",
+            (
+                f"{count} {code} practice questions, private Answer Coach, adaptive study plans, "
+                "and a full exam simulator. Free to start."
+            ),
+        ).format(count=count)
         h1 = f"{code} Practice Questions &amp; Exam Prep"
         feature_claim = f"{count} {code} practice questions mapped to the current Microsoft skills outline"
     keywords = (
@@ -374,9 +415,18 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
         "WebPage name and description",
         flags=re.S,
     )
+    if code in ACTIVE_SEO:
+        text = replace_once(
+            text,
+            r'("applicationSubCategory": "Exam Preparation",\s*"description": ")[^"]*(")',
+            lambda m: m.group(1) + description + m.group(2),
+            "SoftwareApplication description",
+            flags=re.S,
+        )
+    updated_date = SEO_UPDATED_OVERRIDES.get(code, SEO_UPDATED)
     text = replace_once(
         text, r'("dateModified": ")\d{4}-\d{2}-\d{2}("\s*,)',
-        rf'\g<1>{SEO_UPDATED}\2', "dateModified",
+        rf'\g<1>{updated_date}\2', "dateModified",
     )
     text = replace_once(
         text, r'("keywords": ")[^"]*("\s*,\s*"featureList")',
@@ -461,11 +511,12 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
 def update_sitemap(text: str, codes: list[str]) -> str:
     for code in codes:
         slug = code.lower()
+        updated_date = SEO_UPDATED_OVERRIDES.get(code, SEO_UPDATED)
         pattern = (
             rf'(<url>\s*<loc>https://azuremastery\.app/exams/{re.escape(slug)}/</loc>'
             rf'.*?<lastmod>)\d{{4}}-\d{{2}}-\d{{2}}(</lastmod>\s*</url>)'
         )
-        text, count = re.subn(pattern, rf'\g<1>{SEO_UPDATED}\2', text, flags=re.S)
+        text, count = re.subn(pattern, rf'\g<1>{updated_date}\2', text, flags=re.S)
         if count != 1:
             raise ValueError(f"expected one sitemap entry for {code}, found {count}")
     return text

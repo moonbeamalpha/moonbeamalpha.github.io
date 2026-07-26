@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 """Add light-theme support (head snippet, stylesheet link, theme.js, nav toggle)
-to every exam page + _template.html. Idempotent: pages that already contain the
-snippet are skipped. Asserts exactly one match per anchor per file so clone
-drift (e.g. the gh-300/gh-900 slim variants) fails loudly instead of silently.
+to a section of the site. Idempotent: pages that already contain the snippet are
+skipped. Asserts exactly one match per anchor per file so clone drift (e.g. the
+gh-300/gh-900 slim variants) fails loudly instead of silently.
+
+    python3 Tools/add-theme-support.py            # exams/ (default)
+    python3 Tools/add-theme-support.py guides     # any other section
+
+Sections other than exams/ have no _template.html, so it is only included when
+it exists.
 """
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent / "exams"
+SITE = Path(__file__).resolve().parent.parent
+ROOT = SITE / (sys.argv[1] if len(sys.argv) > 1 else "exams")
 
 SNIPPET = (
     '  <meta name="color-scheme" content="dark">\n'
@@ -50,7 +57,13 @@ def process(path: Path) -> str:
 
 
 def main() -> int:
-    targets = sorted(ROOT.glob('*/index.html')) + [ROOT / '_template.html']
+    targets = sorted(ROOT.glob('*/index.html'))
+    template = ROOT / '_template.html'
+    if template.exists():
+        targets.append(template)
+    index = ROOT / 'index.html'
+    if index.exists() and index not in targets:
+        targets.insert(0, index)
     failures = []
     for path in targets:
         try:

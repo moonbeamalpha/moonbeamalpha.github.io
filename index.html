@@ -1829,6 +1829,47 @@
 
     /* Retired banks remain available as historical reference, but should not
        read as currently bookable exams anywhere on the homepage. */
+    /* Retired exams sit behind a disclosure so they do not compete with the
+       exams people can actually sit. The pages stay reachable — candidates who
+       passed pre-retirement still own those packs — they are just not the first
+       thing a visitor reads. */
+    .exam-retired-disclosure { margin: 0; }
+    .exam-retired-disclosure__summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      list-style: none;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border: 1px dashed rgba(128,138,150,0.32);
+      border-radius: 999px;
+      transition: color 160ms ease, border-color 160ms ease;
+    }
+    .exam-retired-disclosure__summary::-webkit-details-marker { display: none; }
+    .exam-retired-disclosure__summary::after {
+      content: '';
+      width: 6px; height: 6px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg) translate(-1px,-1px);
+      transition: transform 160ms ease;
+    }
+    .exam-retired-disclosure[open] .exam-retired-disclosure__summary::after {
+      transform: rotate(-135deg) translate(-1px,-1px);
+    }
+    .exam-retired-disclosure__summary:hover,
+    .exam-retired-disclosure__summary:focus-visible {
+      color: var(--text-secondary);
+      border-color: rgba(128,138,150,0.55);
+    }
+    .exam-retired-disclosure > ul { margin-top: 12px; }
+    /* The group is already labelled "Retired", so the per-pill badge is noise. */
+    .exam-retired-disclosure .exam-link--retired::after { content: none; }
+
     .exam-link--retired {
       --group-color: var(--text-muted);
       --group-bg: rgba(128,138,150,0.08);
@@ -2151,9 +2192,7 @@
           <div class="hero-exam-group hero-exam-group--ai" role="group" aria-labelledby="hero-grp-ai">
             <p class="hero-exam-group__title" id="hero-grp-ai">AI &amp; Agents</p>
             <ul class="hero-exam-group__list">
-              <li><a href="/exams/ai-900/" class="hero-exam-tag exam-link--retired" aria-label="AI-900 retired exam reference — Microsoft Azure AI Fundamentals">AI-900</a></li>
               <li><a href="/exams/ai-901/" class="hero-exam-tag" aria-label="AI-901 study app — Microsoft AI Fundamentals">AI-901</a></li>
-              <li><a href="/exams/ai-102/" class="hero-exam-tag exam-link--retired" aria-label="AI-102 retired exam reference — Microsoft Azure AI Engineer">AI-102</a></li>
               <li><a href="/exams/ai-103/" class="hero-exam-tag" aria-label="AI-103 study app — Microsoft AI App and Agent Developer">AI-103</a></li>
               <li><a href="/exams/ai-200/" class="hero-exam-tag" aria-label="AI-200 study app — Microsoft AI Cloud Developer">AI-200</a></li>
               <li><a href="/exams/ai-300/" class="hero-exam-tag" aria-label="AI-300 study app — Microsoft ML Operations Engineer">AI-300</a></li>
@@ -2167,7 +2206,6 @@
             <p class="hero-exam-group__title" id="hero-grp-data">Data</p>
             <ul class="hero-exam-group__list">
               <li><a href="/exams/dp-900/" class="hero-exam-tag" aria-label="DP-900 study app — Microsoft Azure Data Fundamentals">DP-900</a></li>
-              <li><a href="/exams/dp-100/" class="hero-exam-tag exam-link--retired" aria-label="DP-100 retired exam reference — Microsoft Azure Data Scientist">DP-100</a></li>
               <li><a href="/exams/dp-300/" class="hero-exam-tag" aria-label="DP-300 study app — Microsoft Azure Database Administrator">DP-300</a></li>
               <li><a href="/exams/dp-700/" class="hero-exam-tag" aria-label="DP-700 study app — Microsoft Fabric Data Engineer">DP-700</a></li>
               <li><a href="/exams/dp-750/" class="hero-exam-tag" aria-label="DP-750 study app — Microsoft Azure Databricks Data Engineer">DP-750</a></li>
@@ -2193,7 +2231,17 @@
               <li><a href="/exams/gh-900/" class="hero-exam-tag" aria-label="GH-900 study app — GitHub Foundations">GH-900</a></li>
             </ul>
           </div>
-        </nav>
+                  <div class="hero-exam-group hero-exam-group--retired" role="group">
+            <details class="exam-retired-disclosure">
+              <summary class="exam-retired-disclosure__summary">Retired exams (3)</summary>
+              <ul class="hero-exam-group__list">
+    <li><a href="/exams/ai-900/" class="hero-exam-tag exam-link--retired" aria-label="AI-900 retired exam reference — Microsoft Azure AI Fundamentals">AI-900</a></li>
+    <li><a href="/exams/ai-102/" class="hero-exam-tag exam-link--retired" aria-label="AI-102 retired exam reference — Microsoft Azure AI Engineer">AI-102</a></li>
+    <li><a href="/exams/dp-100/" class="hero-exam-tag exam-link--retired" aria-label="DP-100 retired exam reference — Microsoft Azure Data Scientist">DP-100</a></li>
+              </ul>
+            </details>
+          </div>
+</nav>
         <div class="hero-ctas">
           <a href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-home&pt=128558698&mt=8" class="btn-primary" rel="noopener noreferrer" aria-label="Download Azure Mastery on the App Store">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
@@ -3006,9 +3054,7 @@
         <div class="exam-tags__group exam-tags__group--ai" role="group" aria-labelledby="cta-grp-ai">
           <p class="exam-tags__group-title" id="cta-grp-ai">AI &amp; Agents</p>
           <ul class="exam-tags__list">
-            <li><a href="/exams/ai-900/" class="exam-tag exam-link--retired" aria-label="AI-900 retired exam reference — AI Fundamentals">AI-900 AI Fundamentals</a></li>
             <li><a href="/exams/ai-901/" class="exam-tag">AI-901 AI Fundamentals</a></li>
-            <li><a href="/exams/ai-102/" class="exam-tag exam-link--retired" aria-label="AI-102 retired exam reference — AI Engineer">AI-102 AI Engineer</a></li>
             <li><a href="/exams/ai-103/" class="exam-tag">AI-103 AI App &amp; Agent Developer</a></li>
             <li><a href="/exams/ai-200/" class="exam-tag">AI-200 AI Cloud Developer</a></li>
             <li><a href="/exams/ai-300/" class="exam-tag">AI-300 ML Operations Engineer</a></li>
@@ -3022,7 +3068,6 @@
           <p class="exam-tags__group-title" id="cta-grp-data">Data</p>
           <ul class="exam-tags__list">
             <li><a href="/exams/dp-900/" class="exam-tag">DP-900 Data Fundamentals</a></li>
-            <li><a href="/exams/dp-100/" class="exam-tag exam-link--retired" aria-label="DP-100 retired exam reference — Data Scientist">DP-100 Data Scientist</a></li>
             <li><a href="/exams/dp-300/" class="exam-tag">DP-300 Database Administrator</a></li>
             <li><a href="/exams/dp-700/" class="exam-tag">DP-700 Fabric Data Engineer</a></li>
             <li><a href="/exams/dp-750/" class="exam-tag">DP-750 Azure Databricks Data Engineer</a></li>
@@ -3048,7 +3093,17 @@
             <li><a href="/exams/gh-900/" class="exam-tag">GH-900 GitHub Foundations</a></li>
           </ul>
         </div>
-      </nav>
+              <div class="exam-tags__group exam-tags__group--retired" role="group">
+          <details class="exam-retired-disclosure">
+            <summary class="exam-retired-disclosure__summary">Retired exams (3)</summary>
+            <ul class="exam-tags__list">
+  <li><a href="/exams/ai-900/" class="exam-tag exam-link--retired" aria-label="AI-900 retired exam reference — AI Fundamentals">AI-900 AI Fundamentals</a></li>
+  <li><a href="/exams/ai-102/" class="exam-tag exam-link--retired" aria-label="AI-102 retired exam reference — AI Engineer">AI-102 AI Engineer</a></li>
+  <li><a href="/exams/dp-100/" class="exam-tag exam-link--retired" aria-label="DP-100 retired exam reference — Data Scientist">DP-100 Data Scientist</a></li>
+            </ul>
+          </details>
+        </div>
+</nav>
     </div>
   </section>
 

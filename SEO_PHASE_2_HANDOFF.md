@@ -131,7 +131,7 @@ Skeleton (full template should look like this):
     </section>
 
     <section id="cta">
-      <a class="btn-primary" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569">Download Azure Mastery — Free</a>
+      <a class="btn-primary" href="https://apps.apple.com/app/apple-store/id6760594569">Download Azure Mastery — Free</a>
     </section>
 
     <nav id="related" aria-label="Related certifications">

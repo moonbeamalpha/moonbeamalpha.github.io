@@ -191,6 +191,8 @@ def exam_page_edits(code: str, count: int):
         (r'\b\d+(\s+cert-specific\s+questions)', c + r'\1'),
         # "with <n> AZ-900 practice" (meta/JSON-LD lead-ins without the word "questions" adjacent)
         (rf'\b\d+(\s+{re.escape(code)}\s+practice\b)', c + r'\1'),
+        # "full <n>-question bank" in the exam simulator copy
+        (r'(full\s+)\d+(-question\s+bank)', r'\g<1>' + c + r'\2'),
     ]
 
 
@@ -259,6 +261,7 @@ def llms_edits(counts: dict, total_label: str, exam_count: int):
         # header: "9,000+ practice questions cover 27 Microsoft certification exams"
         (r'\b[\d,]+\+?(\s+practice\s+questions\s+cover)', total_label + r'\1'),
         (r'cover\s+\d+(\s+Microsoft\s+certification\s+exams)', 'cover ' + ec + r'\1'),
+        (r'## Exams covered \(\d+\)', f'## Exams covered ({ec})'),
     ]
     for code, n in counts.items():
         dir_ = code_to_dir(code)

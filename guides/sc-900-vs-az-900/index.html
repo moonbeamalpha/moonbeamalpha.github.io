@@ -645,6 +645,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -681,20 +682,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         <span class="headline-accent">SC-900 vs AZ-900</span>: security or cloud first?
       </h1>
       <p class="guide-hero__dek">
-        Both are Microsoft Fundamentals exams, both take a week or two of focused study, and both stay on your CV forever without expiring. But they teach genuinely different material. Here's what each one actually tests, where the two overlap, and how to pick.
+        Compare cloud fundamentals with security fundamentals and choose the first exam that fits your role.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~8 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/exam-choice-dark.webp"
+          data-theme-src-light="/guides/images/exam-choice-light.webp"
+          alt="Aura points to two valid learning routes representing cloud fundamentals and security fundamentals."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Pick the right lens</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Cloud</span><span>Security</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- Quick answer / verdict -->
@@ -840,30 +856,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">SC-900 vs AZ-900 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Is SC-900 harder than AZ-900?</h3>
-          <p>Neither is harder in a general sense — both are Fundamentals-level exams with the same format: 40–60 multiple-choice questions in 45 minutes, passing at 700 out of 1000. Difficulty comes down to your background. SC-900 feels harder if security and identity terminology (Conditional Access, Microsoft Purview, Zero Trust) is new to you. AZ-900 feels harder if you have never touched cloud infrastructure concepts like regions, subscriptions, or the shared responsibility model.</p>
-        </article>
-        <article class="faq">
-          <h3>Do I need AZ-900 before I can sit SC-900, or the other way round?</h3>
-          <p>No. Neither exam is a formal prerequisite for the other. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 touches identity and security topics briefly inside its architecture and services domain, and SC-900 assumes you already have a general sense of what "the cloud" is, but neither exam expects you to have passed the other first.</p>
-        </article>
-        <article class="faq">
-          <h3>Which certification do employers actually ask for?</h3>
-          <p>It depends entirely on the role. Job adverts for general IT, cloud support, or infrastructure roles more often reference AZ-900 or its associate-level next step <a href="/exams/az-104/">AZ-104</a>. Adverts for security analyst, identity administrator, or compliance-adjacent roles more often reference SC-900 or its associate-level follow-ons <a href="/exams/sc-200/">SC-200</a> and <a href="/exams/sc-300/">SC-300</a>. Fundamentals certifications rarely appear as a hard requirement either way — they signal that you have done the groundwork, not that you are job-ready on their own.</p>
-        </article>
-        <article class="faq">
-          <h3>Can I study for SC-900 and AZ-900 at the same time?</h3>
-          <p>You can, but sitting them back to back in the same week or two is usually a mistake. The two skills outlines only overlap on a handful of concepts — the shared responsibility model, Zero Trust, and the basics of Microsoft Entra ID — so most of your revision time for each exam is spent on material unique to that exam. Finish and sit one, then start the other, rather than trying to hold both domain lists in your head at once.</p>
-        </article>
-        <article class="faq">
-          <h3>Do SC-900 and AZ-900 expire?</h3>
-          <p>No. Microsoft Fundamentals certifications, including SC-900 and AZ-900, do not expire once you pass. This is different from Associate and Expert certifications such as SC-200, SC-300, AZ-104, or SC-500, which require a free annual renewal assessment on Microsoft Learn.</p>
-        </article>
-        <article class="faq">
-          <h3>I already know I want to work in security — should I skip AZ-900 entirely?</h3>
-          <p>You can go straight to SC-900 without ever sitting AZ-900. SC-900 does not require Azure operational knowledge, only conceptual awareness. That said, a lot of Microsoft security tooling sits on top of Azure infrastructure, so if terms like resource group, subscription, or region genuinely mean nothing to you, an hour or two with AZ-900's cloud-concepts material first will make SC-900's Microsoft Entra and Defender content easier to place in context.</p>
-        </article>
+        <details class="faq">
+          <summary>Is SC-900 harder than AZ-900?</summary>
+          <div class="faq__answer"><p>Neither is harder in a general sense — both are Fundamentals-level exams with the same format: 40–60 multiple-choice questions in 45 minutes, passing at 700 out of 1000. Difficulty comes down to your background. SC-900 feels harder if security and identity terminology (Conditional Access, Microsoft Purview, Zero Trust) is new to you. AZ-900 feels harder if you have never touched cloud infrastructure concepts like regions, subscriptions, or the shared responsibility model.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do I need AZ-900 before I can sit SC-900, or the other way round?</summary>
+          <div class="faq__answer"><p>No. Neither exam is a formal prerequisite for the other. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 touches identity and security topics briefly inside its architecture and services domain, and SC-900 assumes you already have a general sense of what "the cloud" is, but neither exam expects you to have passed the other first.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which certification do employers actually ask for?</summary>
+          <div class="faq__answer"><p>It depends entirely on the role. Job adverts for general IT, cloud support, or infrastructure roles more often reference AZ-900 or its associate-level next step <a href="/exams/az-104/">AZ-104</a>. Adverts for security analyst, identity administrator, or compliance-adjacent roles more often reference SC-900 or its associate-level follow-ons <a href="/exams/sc-200/">SC-200</a> and <a href="/exams/sc-300/">SC-300</a>. Fundamentals certifications rarely appear as a hard requirement either way — they signal that you have done the groundwork, not that you are job-ready on their own.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can I study for SC-900 and AZ-900 at the same time?</summary>
+          <div class="faq__answer"><p>You can, but sitting them back to back in the same week or two is usually a mistake. The two skills outlines only overlap on a handful of concepts — the shared responsibility model, Zero Trust, and the basics of Microsoft Entra ID — so most of your revision time for each exam is spent on material unique to that exam. Finish and sit one, then start the other, rather than trying to hold both domain lists in your head at once.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do SC-900 and AZ-900 expire?</summary>
+          <div class="faq__answer"><p>No. Microsoft Fundamentals certifications, including SC-900 and AZ-900, do not expire once you pass. This is different from Associate and Expert certifications such as SC-200, SC-300, AZ-104, or SC-500, which require a free annual renewal assessment on Microsoft Learn.</p></div>
+        </details>
+        <details class="faq">
+          <summary>I already know I want to work in security — should I skip AZ-900 entirely?</summary>
+          <div class="faq__answer"><p>You can go straight to SC-900 without ever sitting AZ-900. SC-900 does not require Azure operational knowledge, only conceptual awareness. That said, a lot of Microsoft security tooling sits on top of Azure infrastructure, so if terms like resource group, subscription, or region genuinely mean nothing to you, an hour or two with AZ-900's cloud-concepts material first will make SC-900's Microsoft Entra and Defender content easier to place in context.</p></div>
+        </details>
       </div>
       <div class="cta-panel">
         <h3>Practise for either exam, or both, in one app</h3>

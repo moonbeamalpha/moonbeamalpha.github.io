@@ -730,6 +730,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -766,20 +767,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         How to pass <span class="headline-accent">DP-900</span> Data Fundamentals
       </h1>
       <p class="guide-hero__dek">
-        A practical route through Microsoft Azure Data Fundamentals: what the exam actually tests, the four skills domains and their weights, a realistic four-week study plan, the topics that trip people up, and where to go once you have it.
+        A four-week route from core data concepts to relational, NoSQL, analytics workloads, and exam-day tactics.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~8 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/study-loop-dark.webp"
+          data-theme-src-light="/guides/images/study-loop-light.webp"
+          alt="Aura presents a four-step visual study cycle: learn, connect, practise, and prove readiness."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Your study loop</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Learn</span><span>Connect</span><span>Practise</span><span>Prove</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- What is DP-900 -->
@@ -946,30 +962,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">DP-900 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How hard is the DP-900 exam?</h3>
-          <p>DP-900 is one of the more approachable Microsoft Fundamentals exams because it stays conceptual rather than hands-on. It expects you to recognise scenarios — structured versus semi-structured data, OLTP versus OLAP, which Azure SQL service fits a migration, which storage tier fits an access pattern — rather than write SQL or configure a live resource. Most candidates with some IT background pass after one to two weeks of focused study; if data concepts are genuinely new, three to four weeks is more realistic.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for DP-900?</h3>
-          <p>Plan for one to two weeks of focused study if you already work in IT or software. If data and cloud concepts are new to you, allow three to four weeks, and lean on the four-week plan on this page. The exam rewards recognising the right service for a scenario over memorising definitions, so spend your time on comparisons — Azure SQL Database versus Managed Instance, Cosmos DB API choice, Microsoft Fabric versus Azure Synapse Analytics — rather than flashcards.</p>
-        </article>
-        <article class="faq">
-          <h3>Do I need DP-900 before DP-300, DP-700, or DP-750?</h3>
-          <p>DP-900 is not a formal prerequisite for any of them, but it is a genuinely useful on-ramp if the data vocabulary is new to you. <a href="/exams/dp-300/">DP-300 (Azure Database Administrator Associate)</a>, <a href="/exams/dp-700/">DP-700 (Fabric Data Engineer Associate)</a>, and <a href="/exams/dp-750/">DP-750 (Azure Databricks Data Engineer Associate)</a> are all hands-on, role-based exams that assume you already know terms such as OLTP versus OLAP and the relational-versus-non-relational split. If you already work with data day to day, you can skip straight to whichever of the three matches your role.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the passing score for DP-900?</h3>
-          <p>You need 700 out of 1000 to pass. The score is scaled, not a raw percentage, so it does not translate directly to a fixed number of correct answers out of the roughly 40 to 60 questions. Treat 700 as a comfortable target rather than a line to scrape over, since a handful of unfamiliar questions will not sink an otherwise solid attempt.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the DP-900 certification expire?</h3>
-          <p>No. Microsoft Fundamentals certifications, including <a href="/exams/az-900/">AZ-900</a>, DP-900, <a href="/exams/ai-901/">AI-901</a>, MS-900, and PL-900, do not expire once you pass. This is different from Associate and Expert certifications such as DP-300 or DP-700, which require a free renewal assessment on Microsoft Learn every year.</p>
-        </article>
-        <article class="faq">
-          <h3>How much does DP-900 cost and can I retake it if I fail?</h3>
-          <p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-data-fundamentals/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. If the result does not go your way, you can re-sit after 24 hours, then wait 14 days before each of the two attempts after that, with Microsoft's ceiling set at five sittings in any twelve-month window. You book and pay for each attempt separately.</p>
-        </article>
+        <details class="faq">
+          <summary>How hard is the DP-900 exam?</summary>
+          <div class="faq__answer"><p>DP-900 is one of the more approachable Microsoft Fundamentals exams because it stays conceptual rather than hands-on. It expects you to recognise scenarios — structured versus semi-structured data, OLTP versus OLAP, which Azure SQL service fits a migration, which storage tier fits an access pattern — rather than write SQL or configure a live resource. Most candidates with some IT background pass after one to two weeks of focused study; if data concepts are genuinely new, three to four weeks is more realistic.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for DP-900?</summary>
+          <div class="faq__answer"><p>Plan for one to two weeks of focused study if you already work in IT or software. If data and cloud concepts are new to you, allow three to four weeks, and lean on the four-week plan on this page. The exam rewards recognising the right service for a scenario over memorising definitions, so spend your time on comparisons — Azure SQL Database versus Managed Instance, Cosmos DB API choice, Microsoft Fabric versus Azure Synapse Analytics — rather than flashcards.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do I need DP-900 before DP-300, DP-700, or DP-750?</summary>
+          <div class="faq__answer"><p>DP-900 is not a formal prerequisite for any of them, but it is a genuinely useful on-ramp if the data vocabulary is new to you. <a href="/exams/dp-300/">DP-300 (Azure Database Administrator Associate)</a>, <a href="/exams/dp-700/">DP-700 (Fabric Data Engineer Associate)</a>, and <a href="/exams/dp-750/">DP-750 (Azure Databricks Data Engineer Associate)</a> are all hands-on, role-based exams that assume you already know terms such as OLTP versus OLAP and the relational-versus-non-relational split. If you already work with data day to day, you can skip straight to whichever of the three matches your role.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What is the passing score for DP-900?</summary>
+          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled, not a raw percentage, so it does not translate directly to a fixed number of correct answers out of the roughly 40 to 60 questions. Treat 700 as a comfortable target rather than a line to scrape over, since a handful of unfamiliar questions will not sink an otherwise solid attempt.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does the DP-900 certification expire?</summary>
+          <div class="faq__answer"><p>No. Microsoft Fundamentals certifications, including <a href="/exams/az-900/">AZ-900</a>, DP-900, <a href="/exams/ai-901/">AI-901</a>, MS-900, and PL-900, do not expire once you pass. This is different from Associate and Expert certifications such as DP-300 or DP-700, which require a free renewal assessment on Microsoft Learn every year.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How much does DP-900 cost and can I retake it if I fail?</summary>
+          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-data-fundamentals/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. If the result does not go your way, you can re-sit after 24 hours, then wait 14 days before each of the two attempts after that, with Microsoft's ceiling set at five sittings in any twelve-month window. You book and pay for each attempt separately.</p></div>
+        </details>
       </div>
     </section>
 

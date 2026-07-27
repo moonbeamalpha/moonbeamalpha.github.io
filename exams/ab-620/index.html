@@ -1131,6 +1131,7 @@
     .am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1289,30 +1290,60 @@
       <p class="section-lede">
         Three domains from Microsoft's current outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-620" rel="noopener">official study guide</a>; Azure Mastery tags each question so you can see where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--ai">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/ai-skills-dark.webp"
+            data-theme-src-light="/exams/images/ai-skills-light.webp"
+            alt="Aura presents a visual map of data, models, agents, and responsible AI skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">AI & agent skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Models</span><span>Agents</span><span>Responsible AI</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Plan and configure agent solutions<span class="domain__weight">30–35%</span></h3>
-          <p>
-            The design and setup layer. Identify use cases for Copilot Studio agents, choose between custom agents and pre-built templates, plan environments (Dataverse), pick channels (Microsoft 365, Teams, web, voice), design conversational structure (entry points, fallback, escalation paths), and configure environment-level governance (DLP, sharing, security roles). Around 12–20 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The design and setup layer. Identify use cases for Copilot Studio agents, choose between custom agents and pre-built templates, plan environments (Dataverse), pick channels (Microsoft 365, Teams, web, voice), design conversational structure (entry points, fallback, escalation paths), and configure environment-level governance (DLP, sharing, security roles). Around 12–20 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Integrate and extend agents in Copilot Studio<span class="domain__weight">40–45%</span></h3>
-          <p>
-            Largest domain by far. Build <em>topics</em> (trigger phrases, conversation nodes, variables, branching), implement <em>generative orchestration</em> for dynamic responses, integrate <em>knowledge sources</em> (SharePoint, Dataverse, public websites, custom files, Azure AI Search), extend with <em>tools and connectors</em> (Power Platform connectors, custom Power Automate flows, MCP integrations, AI Builder prompts), and configure authentication (Microsoft Entra, OAuth providers). Around 16–27 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Largest domain by far. Build <em>topics</em> (trigger phrases, conversation nodes, variables, branching), implement <em>generative orchestration</em> for dynamic responses, integrate <em>knowledge sources</em> (SharePoint, Dataverse, public websites, custom files, Azure AI Search), extend with <em>tools and connectors</em> (Power Platform connectors, custom Power Automate flows, MCP integrations, AI Builder prompts), and configure authentication (Microsoft Entra, OAuth providers). Around 16–27 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Test and manage agents<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The production layer. Test agents in the <em>test pane</em> (variable inspection, topic tracing, generative orchestration debugging), publish to channels, monitor via the <em>analytics dashboard</em> (sessions, resolution rate, escalations, customer satisfaction), manage agent lifecycle (versions, environments, ALM via solutions), and apply governance and security policies. Around 8–14 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The production layer. Test agents in the <em>test pane</em> (variable inspection, topic tracing, generative orchestration debugging), publish to channels, monitor via the <em>analytics dashboard</em> (sessions, resolution rate, escalations, customer satisfaction), manage agent lifecycle (versions, environments, ALM via solutions), and apply governance and security policies. Around 8–14 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AB-620</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AB-620</h2>
       <p>
@@ -1484,30 +1515,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AB-620 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the AB-620 exam cost?</h3>
-          <p>The AB-620 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AB-620 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AB-620 certification expire?</h3>
-          <p>Yes. Microsoft Associate certifications including AB-620 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AB-620 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AB-620?</h3>
-          <p>Allow four to eight weeks of focused study if you already build with Copilot Studio or Power Platform. Spend longer if Power Fx, Dataverse, Microsoft 365 Copilot, authentication, adaptive cards, or agent lifecycle management are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
-        </article>
-        <article class="faq">
-          <h3>AB-620 vs AI-103 — different agent roles?</h3>
-          <p>Different platforms. AB-620 is the AI Agent Builder cert focused on <em>Microsoft Copilot Studio</em> — a low-code platform for building agents with topics, generative answers, and Power Platform integrations. <a href="/exams/ai-103/">AI-103</a> is the AI Apps and Agents Developer Associate cert focused on <em>Microsoft Foundry</em> — a code-first platform for custom agentic apps with Python, tool calling, retrieval, and multi-agent orchestration. AB-620 is for Copilot Studio builders; AI-103 is for app developers. Many enterprises use both.</p>
-        </article>
-        <article class="faq">
-          <h3>AB-620 vs AI-901 — which should I take first?</h3>
-          <p><a href="/exams/ai-901/">AI-901</a> first if AI concepts are new to you. AI-901 is the current Azure AI Fundamentals exam and covers AI concepts, responsible AI, Microsoft Foundry, and introductory Python. AB-620 is the role-based exam for designing, integrating, testing, and governing agents in Copilot Studio. Candidates new to AI can use AI-901 as a foundation before AB-620.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the AB-620 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The AB-620 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AB-620 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AB-620 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Associate certifications including AB-620 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AB-620 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AB-620?</summary>
+          <div class="faq__answer">
+            <p>Allow four to eight weeks of focused study if you already build with Copilot Studio or Power Platform. Spend longer if Power Fx, Dataverse, Microsoft 365 Copilot, authentication, adaptive cards, or agent lifecycle management are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AB-620 vs AI-103 — different agent roles?</summary>
+          <div class="faq__answer">
+            <p>Different platforms. AB-620 is the AI Agent Builder cert focused on <em>Microsoft Copilot Studio</em> — a low-code platform for building agents with topics, generative answers, and Power Platform integrations. <a href="/exams/ai-103/">AI-103</a> is the AI Apps and Agents Developer Associate cert focused on <em>Microsoft Foundry</em> — a code-first platform for custom agentic apps with Python, tool calling, retrieval, and multi-agent orchestration. AB-620 is for Copilot Studio builders; AI-103 is for app developers. Many enterprises use both.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AB-620 vs AI-901 — which should I take first?</summary>
+          <div class="faq__answer">
+            <p><a href="/exams/ai-901/">AI-901</a> first if AI concepts are new to you. AI-901 is the current Azure AI Fundamentals exam and covers AI concepts, responsible AI, Microsoft Foundry, and introductory Python. AB-620 is the role-based exam for designing, integrating, testing, and governing agents in Copilot Studio. Candidates new to AI can use AI-901 as a foundation before AB-620.</p>
+          </div>
+        </details>
       </div>
     </section>
 

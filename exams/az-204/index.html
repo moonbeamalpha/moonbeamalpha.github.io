@@ -1139,6 +1139,7 @@
     .am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1303,42 +1304,82 @@
       <p class="section-lede">
         Five developer-focused domains, with weights set by Microsoft's January 2026 update — the final outline before the 31 July 2026 retirement. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-204" rel="noopener">official skills outline</a>. Bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
       </p>
+      <figure class="exam-family-visual exam-family-visual--azure">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/azure-skills-dark.webp"
+            data-theme-src-light="/exams/images/azure-skills-light.webp"
+            alt="Aura presents a visual map of identity, compute, networking, and Azure operations skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Azure skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Identity</span><span>Compute</span><span>Network</span><span>Operations</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Develop Azure compute solutions<span class="domain__weight">25–30%</span></h3>
-          <p>
-            The largest domain. Containerised solutions — creating and managing container images, publishing to Azure Container Registry (ACR), running containers via Azure Container Instances (ACI) and Azure Container Apps (ACA). Azure App Service Web Apps — provisioning, diagnostics and logging, deploying code/containers, configuring TLS and API settings, autoscaling, and deployment slots. Azure Functions — function apps, input/output bindings, triggers from data ops, timers, and webhooks. Around 10–18 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The largest domain. Containerised solutions — creating and managing container images, publishing to Azure Container Registry (ACR), running containers via Azure Container Instances (ACI) and Azure Container Apps (ACA). Azure App Service Web Apps — provisioning, diagnostics and logging, deploying code/containers, configuring TLS and API settings, autoscaling, and deployment slots. Azure Functions — function apps, input/output bindings, triggers from data ops, timers, and webhooks. Around 10–18 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Develop for Azure storage<span class="domain__weight">15–20%</span></h3>
-          <p>
-            Develop solutions that use <strong>Azure Cosmos DB</strong> — perform operations on containers and items via the SDK, set the appropriate consistency level for operations, implement change feed notifications. Develop solutions that use <strong>Azure Blob Storage</strong> — set and retrieve properties and metadata, perform data operations via the appropriate SDK, implement storage policies and data lifecycle management. Heavy on SDK code samples — expect to read C# / Python / JavaScript snippets. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Develop solutions that use <strong>Azure Cosmos DB</strong> — perform operations on containers and items via the SDK, set the appropriate consistency level for operations, implement change feed notifications. Develop solutions that use <strong>Azure Blob Storage</strong> — set and retrieve properties and metadata, perform data operations via the appropriate SDK, implement storage policies and data lifecycle management. Heavy on SDK code samples — expect to read C# / Python / JavaScript snippets. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement Azure security<span class="domain__weight">15–20%</span></h3>
-          <p>
-            User authentication and authorisation via the Microsoft Identity platform and Microsoft Entra ID, plus shared access signatures. Secure app configuration with <strong>Azure App Configuration</strong> or <strong>Azure Key Vault</strong>. Develop code that uses keys, secrets, and certificates stored in Key Vault — including <strong>Managed Identities</strong> for Azure resources to avoid storing credentials in code. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                User authentication and authorisation via the Microsoft Identity platform and Microsoft Entra ID, plus shared access signatures. Secure app configuration with <strong>Azure App Configuration</strong> or <strong>Azure Key Vault</strong>. Develop code that uses keys, secrets, and certificates stored in Key Vault — including <strong>Managed Identities</strong> for Azure resources to avoid storing credentials in code. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Monitor, troubleshoot, and optimize Azure solutions<span class="domain__weight">5–10%</span></h3>
-          <p>
-            The smallest domain — but easy marks if you know it. Monitor and troubleshoot solutions using <strong>Azure Monitor Application Insights</strong> — metrics, logs, traces, availability tests, alerts, and instrumenting an app or service to use Application Insights. Around 2–6 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The smallest domain — but easy marks if you know it. Monitor and troubleshoot solutions using <strong>Azure Monitor Application Insights</strong> — metrics, logs, traces, availability tests, alerts, and instrumenting an app or service to use Application Insights. Around 2–6 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Connect to and consume Azure services and third-party services<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Implement <strong>Azure API Management</strong> — create instances, document APIs, configure access, implement policies. Develop event-based solutions using <strong>Azure Event Grid</strong> and <strong>Event Hubs</strong>. Develop message-based solutions using <strong>Azure Service Bus</strong> and <strong>Queue Storage</strong>. Implement solutions that interact with <strong>Microsoft Graph</strong>. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Implement <strong>Azure API Management</strong> — create instances, document APIs, configure access, implement policies. Develop event-based solutions using <strong>Azure Event Grid</strong> and <strong>Event Hubs</strong>. Develop message-based solutions using <strong>Azure Service Bus</strong> and <strong>Queue Storage</strong>. Implement solutions that interact with <strong>Microsoft Graph</strong>. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AZ-204</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AZ-204</h2>
       <p>
@@ -1527,30 +1568,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AZ-204 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>When does AZ-204 retire?</h3>
-          <p><strong>AZ-204 retires on 31 July 2026 at 11:59 PM Central Standard Time.</strong> Microsoft lists <a href="/exams/ai-200/">AI-200</a> courseware as the replacement for AZ-204 courseware, but AI-200 earns a different credential. If you want Azure Developer Associate, sit AZ-204 before retirement; already-earned certifications remain valid afterward.</p>
-        </article>
-        <article class="faq">
-          <h3>How much does the AZ-204 exam cost?</h3>
-          <p>The AZ-204 voucher is USD $165 in the United States, with regional pricing. Only book if you can prepare and pass before <strong>31 July 2026</strong>; the exam and Azure Developer Associate certification retire on that date.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AZ-204 certification expire?</h3>
-          <p>The AZ-204 exam and Azure Developer Associate certification retire on <strong>31 July 2026</strong>. Microsoft states that renewal assessments are no longer available after a certification retires. Already-earned credentials remain on your transcript, subject to their existing expiration date.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AZ-204 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. Plan retakes carefully against the 31 July 2026 retirement — a fail on day 1 plus two 14-day waits eats four weeks.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AZ-204?</h3>
-          <p>Most candidates pass AZ-204 after four to six weeks of focused study, assuming professional .NET, Python, or Node experience. If you're new to writing against Azure SDKs (Cosmos DB, Blob, Service Bus, Functions bindings), plan eight to ten weeks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.</p>
-        </article>
-        <article class="faq">
-          <h3>AZ-204 vs AZ-104 — which should I take first?</h3>
-          <p>Take whichever matches your day job. <a href="/exams/az-104/">AZ-104</a> (Microsoft Azure Administrator) is for sysadmins and platform engineers; AZ-204 is for application developers. They cover overlapping infrastructure (App Service, Functions, Storage, Key Vault) but from different angles — AZ-104 asks "how do I configure X in the portal"; AZ-204 asks "how do I call X from the C# / Python SDK". With AZ-204 retiring 31 July 2026, the deadline pressure may push it ahead of AZ-104 in your queue.</p>
-        </article>
+        <details class="faq">
+          <summary>When does AZ-204 retire?</summary>
+          <div class="faq__answer">
+            <p><strong>AZ-204 retires on 31 July 2026 at 11:59 PM Central Standard Time.</strong> Microsoft lists <a href="/exams/ai-200/">AI-200</a> courseware as the replacement for AZ-204 courseware, but AI-200 earns a different credential. If you want Azure Developer Associate, sit AZ-204 before retirement; already-earned certifications remain valid afterward.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How much does the AZ-204 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The AZ-204 voucher is USD $165 in the United States, with regional pricing. Only book if you can prepare and pass before <strong>31 July 2026</strong>; the exam and Azure Developer Associate certification retire on that date.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AZ-204 certification expire?</summary>
+          <div class="faq__answer">
+            <p>The AZ-204 exam and Azure Developer Associate certification retire on <strong>31 July 2026</strong>. Microsoft states that renewal assessments are no longer available after a certification retires. Already-earned credentials remain on your transcript, subject to their existing expiration date.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AZ-204 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. Plan retakes carefully against the 31 July 2026 retirement — a fail on day 1 plus two 14-day waits eats four weeks.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AZ-204?</summary>
+          <div class="faq__answer">
+            <p>Most candidates pass AZ-204 after four to six weeks of focused study, assuming professional .NET, Python, or Node experience. If you're new to writing against Azure SDKs (Cosmos DB, Blob, Service Bus, Functions bindings), plan eight to ten weeks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AZ-204 vs AZ-104 — which should I take first?</summary>
+          <div class="faq__answer">
+            <p>Take whichever matches your day job. <a href="/exams/az-104/">AZ-104</a> (Microsoft Azure Administrator) is for sysadmins and platform engineers; AZ-204 is for application developers. They cover overlapping infrastructure (App Service, Functions, Storage, Key Vault) but from different angles — AZ-104 asks "how do I configure X in the portal"; AZ-204 asks "how do I call X from the C# / Python SDK". With AZ-204 retiring 31 July 2026, the deadline pressure may push it ahead of AZ-104 in your queue.</p>
+          </div>
+        </details>
       </div>
     </section>
 

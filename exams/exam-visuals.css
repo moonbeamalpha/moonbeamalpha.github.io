@@ -1,0 +1,436 @@
+/* Exam-page visual system
+   Shared by every certification page. Loaded after theme-light.css. */
+
+.exam-family-visual {
+  --exam-visual-accent: var(--azure-cyan);
+  --exam-visual-accent-rgb: 80, 230, 255;
+  margin: 36px 0 28px;
+  overflow: hidden;
+  border: 1px solid rgba(var(--exam-visual-accent-rgb), 0.24);
+  border-radius: clamp(18px, 3vw, 28px);
+  background: #07111f;
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.24),
+    0 0 42px rgba(var(--exam-visual-accent-rgb), 0.08);
+}
+
+.exam-family-visual--ai {
+  --exam-visual-accent: #b9a2ff;
+  --exam-visual-accent-rgb: 185, 162, 255;
+}
+
+.exam-family-visual--data,
+.exam-family-visual--power {
+  --exam-visual-accent: #ffc44d;
+  --exam-visual-accent-rgb: 255, 196, 77;
+}
+
+.exam-family-visual--security {
+  --exam-visual-accent: #4de39a;
+  --exam-visual-accent-rgb: 77, 227, 154;
+}
+
+.exam-family-visual--github {
+  --exam-visual-accent: #ff9a4c;
+  --exam-visual-accent-rgb: 255, 154, 76;
+}
+
+.exam-family-visual__media {
+  overflow: hidden;
+  background: #07111f;
+}
+
+.exam-family-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 788;
+  object-fit: cover;
+}
+
+.exam-family-visual__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px 18px;
+  border-top: 1px solid rgba(var(--exam-visual-accent-rgb), 0.18);
+  background:
+    linear-gradient(110deg, rgba(var(--exam-visual-accent-rgb), 0.08), transparent 55%),
+    rgba(5, 8, 16, 0.92);
+}
+
+.exam-family-visual__title {
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.exam-family-visual__legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.exam-family-visual__legend span {
+  padding: 5px 9px;
+  border: 1px solid rgba(var(--exam-visual-accent-rgb), 0.24);
+  border-radius: 999px;
+  background: rgba(var(--exam-visual-accent-rgb), 0.08);
+  color: var(--exam-visual-accent);
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Turn long objective summaries into a scannable grid with optional depth. */
+#objectives .domains {
+  gap: 14px;
+  margin-top: 0;
+}
+
+#objectives .domain {
+  overflow: hidden;
+  padding: 0;
+  background:
+    linear-gradient(145deg, rgba(80, 230, 255, 0.035), transparent 45%),
+    rgba(255, 255, 255, 0.025);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+#objectives .domain:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+}
+
+#objectives .domain h3 {
+  min-height: 78px;
+  margin: 0;
+  padding: 20px 22px 16px;
+}
+
+.domain__details {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.domain__details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 22px 15px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.domain__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.domain__details summary::after {
+  content: '+';
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  place-items: center;
+  border: 1px solid rgba(80, 230, 255, 0.24);
+  border-radius: 50%;
+  color: var(--azure-cyan);
+  font-size: 17px;
+  line-height: 1;
+}
+
+.domain__details[open] summary::after {
+  content: '−';
+}
+
+.domain__details summary:hover,
+.domain__details summary:focus-visible {
+  color: var(--text-primary);
+}
+
+.domain__details summary:focus-visible,
+.faq summary:focus-visible {
+  outline: 2px solid var(--azure-cyan);
+  outline-offset: -3px;
+}
+
+.domain__body {
+  padding: 0 22px 20px;
+}
+
+.domain__body p {
+  margin: 0;
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* App benefits become visual numbered cards instead of a wall of paragraphs. */
+#how-helps.exam-feature-grid {
+  counter-reset: exam-benefits;
+  display: grid;
+  gap: 14px;
+}
+
+#how-helps.exam-feature-grid > .section-eyebrow,
+#how-helps.exam-feature-grid > .section-title,
+#how-helps.exam-feature-grid > .section-lede,
+#how-helps.exam-feature-grid > figure,
+#how-helps.exam-feature-grid > .guide-figure {
+  grid-column: 1 / -1;
+}
+
+#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow) {
+  counter-increment: exam-benefits;
+  position: relative;
+  margin: 0;
+  padding: 56px 22px 22px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(80, 230, 255, 0.09), transparent 42%),
+    rgba(255, 255, 255, 0.025);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow)::before {
+  content: counter(exam-benefits, decimal-leading-zero);
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  color: var(--azure-cyan);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow)::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 55px;
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--azure-cyan), transparent);
+}
+
+#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow) strong {
+  color: var(--text-primary);
+}
+
+/* Make study plans feel like a timeline of focused sprints. */
+.study-plan {
+  align-items: stretch;
+}
+
+.study-plan > li {
+  overflow: hidden;
+  padding-top: 54px;
+  background:
+    linear-gradient(145deg, rgba(185, 162, 255, 0.06), transparent 48%),
+    rgba(255, 255, 255, 0.025);
+}
+
+.study-plan > li::before {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  margin: 0;
+  padding: 5px 9px;
+  border: 1px solid rgba(80, 230, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(80, 230, 255, 0.08);
+}
+
+.study-plan > li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 0 0 0 100%;
+  background: radial-gradient(circle at 100% 0%, rgba(80, 230, 255, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.study-plan > li h3 {
+  font-size: 19px;
+}
+
+.study-plan > li ul {
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* Native disclosure FAQs: fast to scan, keyboard-friendly, no extra JS. */
+.faqs {
+  gap: 10px;
+}
+
+.faq {
+  overflow: hidden;
+  padding: 0;
+  transition: border-color 180ms ease;
+}
+
+.faq[open] {
+  border-color: var(--border-accent);
+}
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 19px 22px;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: '+';
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 1px solid rgba(80, 230, 255, 0.24);
+  border-radius: 50%;
+  color: var(--azure-cyan);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.faq[open] summary::after {
+  content: '−';
+}
+
+.faq__answer {
+  padding: 0 22px 20px;
+}
+
+.faq__answer p {
+  margin: 0;
+  max-width: 72ch;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@media (min-width: 700px) {
+  #objectives .domains,
+  #how-helps.exam-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .study-plan {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .study-plan > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 699px) {
+  .exam-family-visual {
+    margin-top: 28px;
+  }
+
+  .exam-family-visual__caption {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 16px 16px;
+  }
+
+  .exam-family-visual__legend {
+    justify-content: flex-start;
+  }
+
+  #objectives .domain h3 {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .exam-family-visual__legend span {
+    padding: 4px 7px;
+    font-size: 9px;
+  }
+
+  .faq summary {
+    padding: 17px 18px;
+    font-size: 15px;
+  }
+
+  .faq__answer,
+  .domain__body {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #objectives .domain {
+    transition: none;
+  }
+}
+
+/* Light mode keeps the same depth while using true light assets and surfaces. */
+html[data-theme="light"] .exam-family-visual {
+  background: #f4f8fc;
+  border-color: rgba(var(--exam-visual-accent-rgb), 0.30);
+  box-shadow:
+    0 20px 46px rgba(15, 30, 60, 0.12),
+    0 0 36px rgba(var(--exam-visual-accent-rgb), 0.07);
+}
+
+html[data-theme="light"] .exam-family-visual__media {
+  background: #f4f8fc;
+}
+
+html[data-theme="light"] .exam-family-visual__caption {
+  border-top-color: rgba(13, 30, 55, 0.08);
+  background:
+    linear-gradient(110deg, rgba(var(--exam-visual-accent-rgb), 0.09), transparent 55%),
+    #ffffff;
+}
+
+html[data-theme="light"] .exam-family-visual__legend span {
+  color: color-mix(in srgb, var(--exam-visual-accent) 62%, #000);
+  background: rgba(var(--exam-visual-accent-rgb), 0.10);
+}
+
+html[data-theme="light"] #objectives .domain,
+html[data-theme="light"] #how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow),
+html[data-theme="light"] .study-plan > li,
+html[data-theme="light"] .faq {
+  background-color: var(--bg-card);
+  box-shadow: 0 8px 24px rgba(15, 30, 60, 0.06);
+}

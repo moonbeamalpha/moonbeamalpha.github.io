@@ -1133,6 +1133,7 @@
     .am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1291,42 +1292,82 @@
       <p class="section-lede">
         Five domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--data">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/data-skills-dark.webp"
+            data-theme-src-light="/exams/images/data-skills-light.webp"
+            alt="Aura presents a visual map of data sources, transformation, storage, and analysis skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Data skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Sources</span><span>Transform</span><span>Store</span><span>Analyse</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Plan and implement data platform resources<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The deployment foundation. Choose between <em>Azure SQL Database</em> (single, elastic pool, hyperscale), <em>Azure SQL Managed Instance</em>, and <em>SQL Server on Azure VMs</em>. Plan for compute and storage requirements, deployment via portal/PowerShell/CLI/Bicep, scaling and elastic pools. Plus migration paths via <em>Azure Database Migration Service</em> and <em>Azure Migrate</em>, including online vs offline approaches. Around 6–12 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The deployment foundation. Choose between <em>Azure SQL Database</em> (single, elastic pool, hyperscale), <em>Azure SQL Managed Instance</em>, and <em>SQL Server on Azure VMs</em>. Plan for compute and storage requirements, deployment via portal/PowerShell/CLI/Bicep, scaling and elastic pools. Plus migration paths via <em>Azure Database Migration Service</em> and <em>Azure Migrate</em>, including online vs offline approaches. Around 6–12 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement a secure environment<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The compliance and access surface. Microsoft Entra and SQL authentication, contained users, RBAC and role mappings, server roles, database roles. Encryption — <em>Transparent Data Encryption (TDE)</em>, <em>Always Encrypted</em>, dynamic data masking, row-level security. Auditing, threat detection via <em>Microsoft Defender for SQL</em>, network restrictions (firewall rules, virtual network rules, Private Link). Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The compliance and access surface. Microsoft Entra and SQL authentication, contained users, RBAC and role mappings, server roles, database roles. Encryption — <em>Transparent Data Encryption (TDE)</em>, <em>Always Encrypted</em>, dynamic data masking, row-level security. Auditing, threat detection via <em>Microsoft Defender for SQL</em>, network restrictions (firewall rules, virtual network rules, Private Link). Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Monitor, configure, and optimize database resources<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The performance angle. <em>Query Store</em> for query and plan history, automatic tuning, manual index tuning (clustered, non-clustered, columnstore, filtered, included columns), statistics, partitioning, In-Memory OLTP, Resource Governor, query plan analysis. <em>Dynamic management views (DMVs)</em>, Intelligent Insights, Performance Monitor, blocking and deadlock troubleshooting. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The performance angle. <em>Query Store</em> for query and plan history, automatic tuning, manual index tuning (clustered, non-clustered, columnstore, filtered, included columns), statistics, partitioning, In-Memory OLTP, Resource Governor, query plan analysis. <em>Dynamic management views (DMVs)</em>, Intelligent Insights, Performance Monitor, blocking and deadlock troubleshooting. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Configure and manage automation of tasks<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The DBA-as-code layer. SQL Server Agent jobs (steps, schedules, alerts, operators) on Managed Instance and SQL VM. <em>Elastic jobs</em> on Azure SQL Database. PowerShell, Azure CLI, Logic Apps, and Azure Automation runbooks for routine maintenance. ARM/Bicep templates for repeatable deployment. Alerts via Azure Monitor and Action Groups. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The DBA-as-code layer. SQL Server Agent jobs (steps, schedules, alerts, operators) on Managed Instance and SQL VM. <em>Elastic jobs</em> on Azure SQL Database. PowerShell, Azure CLI, Logic Apps, and Azure Automation runbooks for routine maintenance. ARM/Bicep templates for repeatable deployment. Alerts via Azure Monitor and Action Groups. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Plan and configure HA/DR environment<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The resilience story. <em>Always On availability groups</em> on SQL VM (synchronous vs asynchronous, read-only routing, listener configuration), <em>failover cluster instances</em>. For Azure SQL Database and Managed Instance: active geo-replication, <em>auto-failover groups</em>, business-critical and zone-redundant tiers. Backup strategies — point-in-time restore, long-term retention, geo-restore, RPO/RTO planning. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The resilience story. <em>Always On availability groups</em> on SQL VM (synchronous vs asynchronous, read-only routing, listener configuration), <em>failover cluster instances</em>. For Azure SQL Database and Managed Instance: active geo-replication, <em>auto-failover groups</em>, business-critical and zone-redundant tiers. Backup strategies — point-in-time restore, long-term retention, geo-restore, RPO/RTO planning. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for DP-300</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass DP-300</h2>
       <p>
@@ -1504,30 +1545,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">DP-300 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the DP-300 exam cost?</h3>
-          <p>The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the DP-300 certification expire?</h3>
-          <p>Yes. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the DP-300 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for DP-300?</h3>
-          <p>Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
-        </article>
-        <article class="faq">
-          <h3>DP-300 vs DP-900 — which should I take first?</h3>
-          <p>DP-900 first if databases aren't already your day job. <a href="/exams/dp-900/">DP-900 (Microsoft Azure Data Fundamentals)</a> teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.</p>
-        </article>
-        <article class="faq">
-          <h3>DP-300 vs AI-300 — different data roles?</h3>
-          <p>They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. <a href="/exams/ai-300/">AI-300</a> is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the DP-300 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the DP-300 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the DP-300 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for DP-300?</summary>
+          <div class="faq__answer">
+            <p>Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>DP-300 vs DP-900 — which should I take first?</summary>
+          <div class="faq__answer">
+            <p>DP-900 first if databases aren't already your day job. <a href="/exams/dp-900/">DP-900 (Microsoft Azure Data Fundamentals)</a> teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>DP-300 vs AI-300 — different data roles?</summary>
+          <div class="faq__answer">
+            <p>They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. <a href="/exams/ai-300/">AI-300</a> is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role.</p>
+          </div>
+        </details>
       </div>
     </section>
 

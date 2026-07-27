@@ -1135,6 +1135,7 @@
     .am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1293,30 +1294,60 @@
       <p class="section-lede">
         Three domains, weighted by Microsoft's current skills outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-731" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--ai">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/ai-skills-dark.webp"
+            data-theme-src-light="/exams/images/ai-skills-light.webp"
+            alt="Aura presents a visual map of data, models, agents, and responsible AI skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">AI & agent skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Models</span><span>Agents</span><span>Responsible AI</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Identify the business value of generative AI solutions<span class="domain__weight">35–40%</span></h3>
-          <p>
-            The strategy foundation. Distinguish generative AI from discriminative, classical machine learning, and rule-based automation — and know when each adds business value. Cost drivers: tokens, prompt size, response size, model selection, ROI framing. Risks: fabrications (hallucinations), reliability, bias, supply-chain security. Prompt-engineering patterns at a leadership level (instruction clarity, few-shot, role/persona, chain-of-thought, system instructions, grounding). Retrieval-augmented generation (RAG) as a grounding strategy. Responsible AI: fairness, reliability and safety, privacy and security, inclusiveness, transparency, accountability. The machine-learning lifecycle (data → train → evaluate → deploy → monitor → retire). Around 11–16 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The strategy foundation. Distinguish generative AI from discriminative, classical machine learning, and rule-based automation — and know when each adds business value. Cost drivers: tokens, prompt size, response size, model selection, ROI framing. Risks: fabrications (hallucinations), reliability, bias, supply-chain security. Prompt-engineering patterns at a leadership level (instruction clarity, few-shot, role/persona, chain-of-thought, system instructions, grounding). Retrieval-augmented generation (RAG) as a grounding strategy. Responsible AI: fairness, reliability and safety, privacy and security, inclusiveness, transparency, accountability. The machine-learning lifecycle (data → train → evaluate → deploy → monitor → retire). Around 11–16 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Identify benefits, capabilities, and opportunities for Microsoft's AI apps and services<span class="domain__weight">35–40%</span></h3>
-          <p>
-            The Microsoft product landscape. Map business processes to Microsoft 365 Copilot, Copilot in Word/Excel/PowerPoint/Outlook/Teams, Microsoft Copilot Studio, and Microsoft Graph as the tenant-resident grounding source. Differences between Microsoft Copilot (free, web-grounded), Microsoft 365 Copilot Chat (entitlement, enterprise data protection), and Microsoft 365 Copilot (full Graph integration). Researcher and Analyst use cases. Foundry Tools — Azure AI Vision, Azure AI Search, and Microsoft Foundry as the unified AI development platform. Match an AI model to a business need (Phi vs GPT family vs fine-tuned vs specialised vision/speech). Around 11–16 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The Microsoft product landscape. Map business processes to Microsoft 365 Copilot, Copilot in Word/Excel/PowerPoint/Outlook/Teams, Microsoft Copilot Studio, and Microsoft Graph as the tenant-resident grounding source. Differences between Microsoft Copilot (free, web-grounded), Microsoft 365 Copilot Chat (entitlement, enterprise data protection), and Microsoft 365 Copilot (full Graph integration). Researcher and Analyst use cases. Foundry Tools — Azure AI Vision, Azure AI Search, and Microsoft Foundry as the unified AI development platform. Match an AI model to a business need (Phi vs GPT family vs fine-tuned vs specialised vision/speech). Around 11–16 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Identify an implementation and adoption strategy for Microsoft's AI apps and services<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The transformation programme. Build/buy/extend trade-offs and the Microsoft 365 Copilot extensibility framework (declarative agents, plug-ins, connectors, custom-engine agents). Licensing models — pay-as-you-go, per-user monthly, included with Microsoft 365. Azure AI subscription options (pay-as-you-go and prepaid). Governance structures: AI council, adoption team, AI champions programme, barrier-removal tactics. Change-management for rollout. Adoption metrics through the Microsoft Copilot Dashboard and Copilot Analytics. Around 6–10 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The transformation programme. Build/buy/extend trade-offs and the Microsoft 365 Copilot extensibility framework (declarative agents, plug-ins, connectors, custom-engine agents). Licensing models — pay-as-you-go, per-user monthly, included with Microsoft 365. Azure AI subscription options (pay-as-you-go and prepaid). Governance structures: AI council, adoption team, AI champions programme, barrier-removal tactics. Change-management for rollout. Adoption metrics through the Microsoft Copilot Dashboard and Copilot Analytics. Around 6–10 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AB-731</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AB-731</h2>
       <p>
@@ -1492,30 +1523,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AB-731 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the AB-731 exam cost?</h3>
-          <p>AB-731 is a Beginner-tier credential. The voucher is USD $99 in the United States; in the UK it's typically around £77. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events, so check your Microsoft Learn profile for active offers before booking. Pricing is subject to change and varies by country/region — see the <a href="https://learn.microsoft.com/credentials/certifications/ai-transformation-leader/" rel="noopener">AB-731 certification page</a> for current local pricing.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AB-731 certification expire?</h3>
-          <p>No. AB-731 is a Beginner-tier credential and, like other Beginner-tier Microsoft credentials (<a href="/exams/ai-901/">AI-901</a>, <a href="/exams/ab-900/">AB-900</a>, <a href="/exams/sc-900/">SC-900</a>), it does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate, Expert, and Specialty certifications, which require annual renewal on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AB-731 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-731 retake failures usually come from underestimating the strategy and governance domain — most candidates over-study Copilot product features and under-study ROI framing, licensing models, and adoption frameworks.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AB-731?</h3>
-          <p>Most business decision-makers pass AB-731 after three to five weeks of focused study, assuming working familiarity with Microsoft 365 and basic generative-AI concepts. AB-731 is a no-code leadership exam — you do not need to build agents — but you do need to articulate ROI, licensing models, responsible-AI principles, and adoption frameworks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.</p>
-        </article>
-        <article class="faq">
-          <h3>AB-731 vs AB-620 — which is right for me?</h3>
-          <p>Different jobs entirely. AB-731 is the <strong>leadership</strong> credential — for business decision-makers driving AI transformation across teams: framing ROI, choosing between build/buy/extend, championing responsible AI, and running adoption programmes. <a href="/exams/ab-620/">AB-620 (AI Agent Builder Associate)</a> is the <strong>maker</strong> credential — for low-code builders shipping agents in Microsoft Copilot Studio with topics, generative answers, knowledge sources, and channel deployments. Pick AB-731 if your job is to lead change; pick AB-620 if your job is to build. Many programme leads take both.</p>
-        </article>
-        <article class="faq">
-          <h3>AB-731 vs AB-900 — what's the difference?</h3>
-          <p>Different audiences. <a href="/exams/ab-900/">AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals)</a> is the IT admin's Fundamentals exam — admin centres, Purview governance, licensing, agent approval flows. AB-731 (AI Transformation Leader) is the business leader's exam — ROI, adoption strategy, responsible AI, build/buy/extend decisions, AI council governance. AB-900 administers Copilot; AB-731 leads the AI transformation. Programme leads sometimes take both for full coverage of admin governance and business strategy.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the AB-731 exam cost?</summary>
+          <div class="faq__answer">
+            <p>AB-731 is a Beginner-tier credential. The voucher is USD $99 in the United States; in the UK it's typically around £77. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events, so check your Microsoft Learn profile for active offers before booking. Pricing is subject to change and varies by country/region — see the <a href="https://learn.microsoft.com/credentials/certifications/ai-transformation-leader/" rel="noopener">AB-731 certification page</a> for current local pricing.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AB-731 certification expire?</summary>
+          <div class="faq__answer">
+            <p>No. AB-731 is a Beginner-tier credential and, like other Beginner-tier Microsoft credentials (<a href="/exams/ai-901/">AI-901</a>, <a href="/exams/ab-900/">AB-900</a>, <a href="/exams/sc-900/">SC-900</a>), it does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate, Expert, and Specialty certifications, which require annual renewal on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AB-731 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-731 retake failures usually come from underestimating the strategy and governance domain — most candidates over-study Copilot product features and under-study ROI framing, licensing models, and adoption frameworks.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AB-731?</summary>
+          <div class="faq__answer">
+            <p>Most business decision-makers pass AB-731 after three to five weeks of focused study, assuming working familiarity with Microsoft 365 and basic generative-AI concepts. AB-731 is a no-code leadership exam — you do not need to build agents — but you do need to articulate ROI, licensing models, responsible-AI principles, and adoption frameworks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AB-731 vs AB-620 — which is right for me?</summary>
+          <div class="faq__answer">
+            <p>Different jobs entirely. AB-731 is the <strong>leadership</strong> credential — for business decision-makers driving AI transformation across teams: framing ROI, choosing between build/buy/extend, championing responsible AI, and running adoption programmes. <a href="/exams/ab-620/">AB-620 (AI Agent Builder Associate)</a> is the <strong>maker</strong> credential — for low-code builders shipping agents in Microsoft Copilot Studio with topics, generative answers, knowledge sources, and channel deployments. Pick AB-731 if your job is to lead change; pick AB-620 if your job is to build. Many programme leads take both.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AB-731 vs AB-900 — what's the difference?</summary>
+          <div class="faq__answer">
+            <p>Different audiences. <a href="/exams/ab-900/">AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals)</a> is the IT admin's Fundamentals exam — admin centres, Purview governance, licensing, agent approval flows. AB-731 (AI Transformation Leader) is the business leader's exam — ROI, adoption strategy, responsible AI, build/buy/extend decisions, AI council governance. AB-900 administers Copilot; AB-731 leads the AI transformation. Programme leads sometimes take both for full coverage of admin governance and business strategy.</p>
+          </div>
+        </details>
       </div>
     </section>
 

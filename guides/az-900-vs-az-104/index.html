@@ -643,6 +643,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -680,20 +681,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         <span class="headline-accent">AZ-900</span> vs <span class="headline-accent">AZ-104</span>: which Azure cert is right for you?
       </h1>
       <p class="guide-hero__dek">
-        AZ-900 and AZ-104 are both Microsoft Azure certifications, but they exist for different people at different stages. This guide compares what each exam actually tests, how the formats and difficulty differ, how long each takes to prepare for, and whether you need one before the other, so you can pick the one that matches where you actually are today.
+        See the conceptual and hands-on routes side by side, then choose the exam that matches what you do today.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~8 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/exam-choice-dark.webp"
+          data-theme-src-light="/guides/images/exam-choice-light.webp"
+          alt="Aura points to a fork between a cloud fundamentals route and a hands-on Azure administration route."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Pick the right depth</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Cloud map</span><span>Hands-on control</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- Quick-answer verdict -->
@@ -867,30 +883,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AZ-900 vs AZ-104 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Can I skip AZ-900 and go straight to AZ-104?</h3>
-          <p>Yes. AZ-900 is not a prerequisite for AZ-104, and Microsoft does not check for it before you book. If you already work with Azure subscriptions, virtual machines, or storage in your job, going straight to AZ-104 is the more efficient route, because much of AZ-900's conceptual content will already be familiar.</p>
-        </article>
-        <article class="faq">
-          <h3>Which exam should I take first if I'm new to IT or cloud entirely?</h3>
-          <p>AZ-900. It is built for people without hands-on experience and covers cloud concepts, Azure's service model, and governance basics before you are expected to configure anything. Passing it first also builds the habit of studying with an exam simulator, which pays off when you move on to AZ-104's harder, hands-on format.</p>
-        </article>
-        <article class="faq">
-          <h3>Is AZ-104 harder than AZ-900?</h3>
-          <p>Yes, noticeably. AZ-900 tests whether you can describe cloud concepts and name Azure services; AZ-104 tests whether you can configure them. AZ-104 also runs longer, 100 minutes against AZ-900's 45, and adds drag-and-drop, hotspot, and case-study questions on top of multiple choice, along with Bicep and Azure CLI reading that AZ-900 does not touch.</p>
-        </article>
-        <article class="faq">
-          <h3>Do AZ-900 and AZ-104 expire in the same way?</h3>
-          <p>No. AZ-900 is a Fundamentals certification and does not expire. AZ-104 is an Associate certification, and Microsoft requires you to renew it every year with a free online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>. Budget a little ongoing time for AZ-104 even after you pass it.</p>
-        </article>
-        <article class="faq">
-          <h3>Can I take AZ-900 and AZ-104 close together?</h3>
-          <p>There is no cooling-off period between different exams, only between repeat attempts at the same one. Some candidates sit AZ-900 after one to two weeks of study and move straight into AZ-104 preparation, carrying over the momentum and the exam-simulator habit they have just built. Just do not rush AZ-104's much larger domain list to hit an arbitrary deadline.</p>
-        </article>
-        <article class="faq">
-          <h3>Does passing AZ-900 give me credit toward AZ-104?</h3>
-          <p>No. There is no formal credit, exemption, or reduced fee for having passed AZ-900 first. What you gain is conceptual groundwork and, for many people, more confidence going into a harder exam, rather than a shortcut through AZ-104's content.</p>
-        </article>
+        <details class="faq">
+          <summary>Can I skip AZ-900 and go straight to AZ-104?</summary>
+          <div class="faq__answer"><p>Yes. AZ-900 is not a prerequisite for AZ-104, and Microsoft does not check for it before you book. If you already work with Azure subscriptions, virtual machines, or storage in your job, going straight to AZ-104 is the more efficient route, because much of AZ-900's conceptual content will already be familiar.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which exam should I take first if I'm new to IT or cloud entirely?</summary>
+          <div class="faq__answer"><p>AZ-900. It is built for people without hands-on experience and covers cloud concepts, Azure's service model, and governance basics before you are expected to configure anything. Passing it first also builds the habit of studying with an exam simulator, which pays off when you move on to AZ-104's harder, hands-on format.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Is AZ-104 harder than AZ-900?</summary>
+          <div class="faq__answer"><p>Yes, noticeably. AZ-900 tests whether you can describe cloud concepts and name Azure services; AZ-104 tests whether you can configure them. AZ-104 also runs longer, 100 minutes against AZ-900's 45, and adds drag-and-drop, hotspot, and case-study questions on top of multiple choice, along with Bicep and Azure CLI reading that AZ-900 does not touch.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do AZ-900 and AZ-104 expire in the same way?</summary>
+          <div class="faq__answer"><p>No. AZ-900 is a Fundamentals certification and does not expire. AZ-104 is an Associate certification, and Microsoft requires you to renew it every year with a free online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>. Budget a little ongoing time for AZ-104 even after you pass it.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can I take AZ-900 and AZ-104 close together?</summary>
+          <div class="faq__answer"><p>There is no cooling-off period between different exams, only between repeat attempts at the same one. Some candidates sit AZ-900 after one to two weeks of study and move straight into AZ-104 preparation, carrying over the momentum and the exam-simulator habit they have just built. Just do not rush AZ-104's much larger domain list to hit an arbitrary deadline.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does passing AZ-900 give me credit toward AZ-104?</summary>
+          <div class="faq__answer"><p>No. There is no formal credit, exemption, or reduced fee for having passed AZ-900 first. What you gain is conceptual groundwork and, for many people, more confidence going into a harder exam, rather than a shortcut through AZ-104's content.</p></div>
+        </details>
       </div>
     </section>
 

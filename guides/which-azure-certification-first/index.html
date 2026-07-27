@@ -637,6 +637,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -672,20 +673,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         Which <span class="headline-accent">Microsoft certification</span> should you get first?
       </h1>
       <p class="guide-hero__dek">
-        There are dozens of Microsoft certifications, and the right first one depends on where you are heading rather than on some universal ranking. This guide sorts the entry points by role, explains why AZ-900 is the usual starting line, and shows you when to skip it and go straight to an associate exam.
+        Match Azure, security, data, AI, analytics, or development to your role — then see the next credential on each path.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~8 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/cert-pathways-dark.webp"
+          data-theme-src-light="/guides/images/cert-pathways-light.webp"
+          alt="Aura presents four visual certification pathways for cloud, security, data, and AI."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Choose by destination</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Cloud</span><span>Security</span><span>Data</span><span>AI</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- Start here -->
@@ -852,30 +868,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">First-certification FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Which Microsoft certification should I get first?</h3>
-          <p>For most people the best first exam is <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a>. It gives you the shared vocabulary the rest of the Azure catalogue assumes, it does not expire, and it is short enough to sit within a couple of weeks. If you already know which direction you are heading, start with the Fundamentals exam for that track instead: SC-900 for security, DP-900 for data, or AI-901 for artificial intelligence.</p>
-        </article>
-        <article class="faq">
-          <h3>Should I take a Fundamentals exam or go straight to an associate?</h3>
-          <p>If you already work with Azure day to day, you can skip Fundamentals and go straight to an associate exam such as <a href="/exams/az-104/">AZ-104 (Azure Administrator)</a>, which is the credential most hiring managers actually look for. Take a Fundamentals exam first if the platform is new to you, if you want a low-pressure win to confirm the field is for you, or if you need the shared concepts before the deeper material makes sense.</p>
-        </article>
-        <article class="faq">
-          <h3>Is AZ-900 worth it, or a waste of time?</h3>
-          <p>AZ-900 is worth it as a starting point and a confidence builder, not as a career goal. It proves you understand cloud and Azure concepts, and it never expires, so it is a cheap, permanent foundation. It will not, on its own, get you an Azure job. Treat it as the on-ramp to an associate certification like AZ-104, not the destination.</p>
-        </article>
-        <article class="faq">
-          <h3>Do I need to take the exams in order?</h3>
-          <p>No. Microsoft Fundamentals exams are not formal prerequisites for the associate exams, so nothing stops you booking AZ-104 or SC-200 first. The recommended order exists because each Fundamentals exam builds the mental model its associate assumes. Skipping ahead is a question of your existing experience, not of the rules.</p>
-        </article>
-        <article class="faq">
-          <h3>Which first certification is best for a career change into cloud?</h3>
-          <p>Start with AZ-900 to confirm cloud work suits you and to build the vocabulary, then move to <a href="/exams/az-104/">AZ-104 (Azure Administrator)</a>, which maps to real operations roles that hiring managers recruit for. If you are drawn to a specific field, swap the Fundamentals step for SC-900, DP-900, or AI-901 and follow that track's associate. Employers care far more about the associate credential and any hands-on evidence than about which Fundamentals badge you hold.</p>
-        </article>
-        <article class="faq">
-          <h3>How much do the exams cost, and do they expire?</h3>
-          <p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/" rel="noopener">Microsoft's certification page</a> for the fee where you live rather than trusting a figure you read elsewhere. Fundamentals certifications such as AZ-900, SC-900, DP-900, and AI-901 do not expire. Associate and expert certifications expire annually, but renewal is free through a short online assessment on Microsoft Learn.</p>
-        </article>
+        <details class="faq">
+          <summary>Which Microsoft certification should I get first?</summary>
+          <div class="faq__answer"><p>For most people the best first exam is <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a>. It gives you the shared vocabulary the rest of the Azure catalogue assumes, it does not expire, and it is short enough to sit within a couple of weeks. If you already know which direction you are heading, start with the Fundamentals exam for that track instead: SC-900 for security, DP-900 for data, or AI-901 for artificial intelligence.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Should I take a Fundamentals exam or go straight to an associate?</summary>
+          <div class="faq__answer"><p>If you already work with Azure day to day, you can skip Fundamentals and go straight to an associate exam such as <a href="/exams/az-104/">AZ-104 (Azure Administrator)</a>, which is the credential most hiring managers actually look for. Take a Fundamentals exam first if the platform is new to you, if you want a low-pressure win to confirm the field is for you, or if you need the shared concepts before the deeper material makes sense.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Is AZ-900 worth it, or a waste of time?</summary>
+          <div class="faq__answer"><p>AZ-900 is worth it as a starting point and a confidence builder, not as a career goal. It proves you understand cloud and Azure concepts, and it never expires, so it is a cheap, permanent foundation. It will not, on its own, get you an Azure job. Treat it as the on-ramp to an associate certification like AZ-104, not the destination.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do I need to take the exams in order?</summary>
+          <div class="faq__answer"><p>No. Microsoft Fundamentals exams are not formal prerequisites for the associate exams, so nothing stops you booking AZ-104 or SC-200 first. The recommended order exists because each Fundamentals exam builds the mental model its associate assumes. Skipping ahead is a question of your existing experience, not of the rules.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which first certification is best for a career change into cloud?</summary>
+          <div class="faq__answer"><p>Start with AZ-900 to confirm cloud work suits you and to build the vocabulary, then move to <a href="/exams/az-104/">AZ-104 (Azure Administrator)</a>, which maps to real operations roles that hiring managers recruit for. If you are drawn to a specific field, swap the Fundamentals step for SC-900, DP-900, or AI-901 and follow that track's associate. Employers care far more about the associate credential and any hands-on evidence than about which Fundamentals badge you hold.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How much do the exams cost, and do they expire?</summary>
+          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/" rel="noopener">Microsoft's certification page</a> for the fee where you live rather than trusting a figure you read elsewhere. Fundamentals certifications such as AZ-900, SC-900, DP-900, and AI-901 do not expire. Associate and expert certifications expire annually, but renewal is free through a short online assessment on Microsoft Learn.</p></div>
+        </details>
       </div>
     </section>
 

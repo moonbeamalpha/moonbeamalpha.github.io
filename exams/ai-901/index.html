@@ -1130,6 +1130,7 @@
     .am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1291,24 +1292,49 @@
       <p class="section-lede">
         Microsoft groups the current exam into two assessed areas. The summaries below are paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/" rel="noopener">official exam page</a>; Azure Mastery's finer topic tags help you pinpoint weak spots inside each area.
       </p>
+      <figure class="exam-family-visual exam-family-visual--ai">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/ai-skills-dark.webp"
+            data-theme-src-light="/exams/images/ai-skills-light.webp"
+            alt="Aura presents a visual map of data, models, agents, and responsible AI skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">AI & agent skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Models</span><span>Agents</span><span>Responsible AI</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Identify AI concepts and responsibilities<span class="domain__weight">40–45%</span></h3>
-          <p>
-            Understand common AI capabilities and workloads, machine-learning concepts, generative AI and agents, prompts and grounding, and the responsibilities involved in building safe, reliable, transparent, and accountable AI solutions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Understand common AI capabilities and workloads, machine-learning concepts, generative AI and agents, prompts and grounding, and the responsibilities involved in building safe, reliable, transparent, and accountable AI solutions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement AI solutions by using Microsoft Foundry<span class="domain__weight">55–60%</span></h3>
-          <p>
-            Use Foundry to explore and deploy models, understand projects, endpoints and authentication, build prompts, implement single-agent solutions, and recognise how language, vision, and generative AI capabilities are integrated into client applications. Be ready to interpret foundational Python examples.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Use Foundry to explore and deploy models, understand projects, endpoints and authentication, build prompts, implement single-agent solutions, and recognise how language, vision, and generative AI capabilities are integrated into client applications. Be ready to interpret foundational Python examples.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AI-901</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AI-901</h2>
       <p>
@@ -1481,30 +1507,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AI-901 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the AI-901 exam cost?</h3>
-          <p>Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/" rel="noopener">official scheduling page</a> for the current local price before booking.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AI-901 certification expire?</h3>
-          <p>No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AI-901 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AI-901?</h3>
-          <p>Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
-        </article>
-        <article class="faq">
-          <h3>AI-901 vs AI-900 — different exams?</h3>
-          <p>AI-901 replaced <a href="/exams/ai-900/">AI-900</a> on 1 July 2026. AI-900 retired on 30 June 2026 and can no longer be scheduled. AI-901 remains the route to the Azure AI Fundamentals credential and adds a more implementation-oriented focus on Microsoft Foundry and Python examples.</p>
-        </article>
-        <article class="faq">
-          <h3>What should I take after AI-901?</h3>
-          <p>Choose the role-based exam that matches how you build agents. <a href="/exams/ai-103/">AI-103</a> covers code-first AI apps and agents with Python and Microsoft Foundry. <a href="/exams/ab-620/">AB-620</a> covers integrated agents built with Copilot Studio, Power Platform, and Microsoft 365. Both build on the foundations assessed by AI-901.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the AI-901 exam cost?</summary>
+          <div class="faq__answer">
+            <p>Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/" rel="noopener">official scheduling page</a> for the current local price before booking.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AI-901 certification expire?</summary>
+          <div class="faq__answer">
+            <p>No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AI-901 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AI-901?</summary>
+          <div class="faq__answer">
+            <p>Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AI-901 vs AI-900 — different exams?</summary>
+          <div class="faq__answer">
+            <p>AI-901 replaced <a href="/exams/ai-900/">AI-900</a> on 1 July 2026. AI-900 retired on 30 June 2026 and can no longer be scheduled. AI-901 remains the route to the Azure AI Fundamentals credential and adds a more implementation-oriented focus on Microsoft Foundry and Python examples.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What should I take after AI-901?</summary>
+          <div class="faq__answer">
+            <p>Choose the role-based exam that matches how you build agents. <a href="/exams/ai-103/">AI-103</a> covers code-first AI apps and agents with Python and Microsoft Foundry. <a href="/exams/ab-620/">AB-620</a> covers integrated agents built with Copilot Studio, Power Platform, and Microsoft 365. Both build on the foundations assessed by AI-901.</p>
+          </div>
+        </details>
       </div>
     </section>
 

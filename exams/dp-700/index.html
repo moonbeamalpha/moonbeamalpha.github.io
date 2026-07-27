@@ -1123,6 +1123,7 @@
     .am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1281,30 +1282,60 @@
       <p class="section-lede">
         Three domains, each weighted 30–35% in Microsoft's July 2026 update — there's no "easy" domain to coast on. Every summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-700" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
       </p>
+      <figure class="exam-family-visual exam-family-visual--data">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/data-skills-dark.webp"
+            data-theme-src-light="/exams/images/data-skills-light.webp"
+            alt="Aura presents a visual map of data sources, transformation, storage, and analysis skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Data skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Sources</span><span>Transform</span><span>Store</span><span>Analyse</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Implement and manage an analytics solution<span class="domain__weight">30–35%</span></h3>
-          <p>
-            The platform-engineering domain. Configuring <em>Fabric workspace settings</em> (Spark, domains, OneLake, Apache Airflow); lifecycle management with <em>Git version control</em>, database projects, and <em>deployment pipelines</em>; security and governance — workspace- and item-level access, <em>row-, column-, object-, and folder/file-level</em> controls, dynamic data masking, sensitivity labels, audit logs, and <em>OneLake security</em>; and orchestration — choosing between <em>Dataflow Gen2, pipelines, and notebooks</em> and designing schedule- and event-based triggers.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The platform-engineering domain. Configuring <em>Fabric workspace settings</em> (Spark, domains, OneLake, Apache Airflow); lifecycle management with <em>Git version control</em>, database projects, and <em>deployment pipelines</em>; security and governance — workspace- and item-level access, <em>row-, column-, object-, and folder/file-level</em> controls, dynamic data masking, sensitivity labels, audit logs, and <em>OneLake security</em>; and orchestration — choosing between <em>Dataflow Gen2, pipelines, and notebooks</em> and designing schedule- and event-based triggers.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Ingest and transform data<span class="domain__weight">30–35%</span></h3>
-          <p>
-            The hands-on heart of the exam. Designing <em>full and incremental load</em> patterns and preparing data for a dimensional model; batch ingest and transform with <em>Dataflows Gen2, notebooks, KQL, T-SQL, and PySpark</em>, plus <em>OneLake shortcuts</em>, <em>mirroring</em>, and pipelines; denormalising, grouping, aggregating, and handling duplicate, missing, and late-arriving data; and streaming ingestion with <em>Eventstream, Spark Structured Streaming, KQL</em>, and windowing functions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The hands-on heart of the exam. Designing <em>full and incremental load</em> patterns and preparing data for a dimensional model; batch ingest and transform with <em>Dataflows Gen2, notebooks, KQL, T-SQL, and PySpark</em>, plus <em>OneLake shortcuts</em>, <em>mirroring</em>, and pipelines; denormalising, grouping, aggregating, and handling duplicate, missing, and late-arriving data; and streaming ingestion with <em>Eventstream, Spark Structured Streaming, KQL</em>, and windowing functions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Monitor and optimize an analytics solution<span class="domain__weight">30–35%</span></h3>
-          <p>
-            The operations domain. Monitoring data ingestion, transformation, and semantic-model refresh and configuring <em>alerts</em>; identifying and resolving errors across <em>pipelines, Dataflow Gen2, notebooks, Eventhouse, Eventstream, T-SQL, and OneLake shortcuts</em>; and optimising performance of the <em>Lakehouse table, pipeline, data warehouse, Eventstreams/Eventhouses, Spark</em>, and individual queries.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The operations domain. Monitoring data ingestion, transformation, and semantic-model refresh and configuring <em>alerts</em>; identifying and resolving errors across <em>pipelines, Dataflow Gen2, notebooks, Eventhouse, Eventstream, T-SQL, and OneLake shortcuts</em>; and optimising performance of the <em>Lakehouse table, pipeline, data warehouse, Eventstreams/Eventhouses, Spark</em>, and individual queries.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for DP-700</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass DP-700</h2>
       <p>
@@ -1474,30 +1505,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">DP-700 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the DP-700 exam cost?</h3>
-          <p>The DP-700 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the DP-700 certification expire?</h3>
-          <p>Yes. DP-700 earns the Microsoft Certified: Fabric Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as <a href="/exams/dp-900/">DP-900</a>, which never expire.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the DP-700 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for DP-700?</h3>
-          <p>DP-700 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL, PySpark, or KQL before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
-        </article>
-        <article class="faq">
-          <h3>DP-700 vs DP-600 — which should I take?</h3>
-          <p>Both are Microsoft Fabric associate certifications, and your role should decide. DP-600 (Fabric Analytics Engineer) leans toward analytics — semantic models, Power BI, DAX, and serving data for reporting. DP-700 (Fabric Data Engineer) leans toward data engineering — ingestion and transformation with pipelines, Dataflows Gen2, notebooks and PySpark, real-time streaming with Eventstream and KQL, plus Lakehouse and Warehouse optimisation. If you build the pipelines that load and shape data, take DP-700; if you model and serve it for analytics, take DP-600. Many engineers eventually earn both.</p>
-        </article>
-        <article class="faq">
-          <h3>Is DP-700 a technical, hands-on exam?</h3>
-          <p>Yes. DP-700 expects you to reason about real data-engineering work in Microsoft Fabric — writing and debugging T-SQL, PySpark, and KQL; designing full and incremental load patterns; working with Delta tables, OneLake shortcuts, mirroring, and pipelines; and optimising Lakehouse, Warehouse, and Spark performance. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at <a href="/exams/dp-900/">DP-900</a> (Azure Data Fundamentals) as an on-ramp.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the DP-700 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The DP-700 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the DP-700 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. DP-700 earns the Microsoft Certified: Fabric Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as <a href="/exams/dp-900/">DP-900</a>, which never expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the DP-700 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for DP-700?</summary>
+          <div class="faq__answer">
+            <p>DP-700 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL, PySpark, or KQL before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>DP-700 vs DP-600 — which should I take?</summary>
+          <div class="faq__answer">
+            <p>Both are Microsoft Fabric associate certifications, and your role should decide. DP-600 (Fabric Analytics Engineer) leans toward analytics — semantic models, Power BI, DAX, and serving data for reporting. DP-700 (Fabric Data Engineer) leans toward data engineering — ingestion and transformation with pipelines, Dataflows Gen2, notebooks and PySpark, real-time streaming with Eventstream and KQL, plus Lakehouse and Warehouse optimisation. If you build the pipelines that load and shape data, take DP-700; if you model and serve it for analytics, take DP-600. Many engineers eventually earn both.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is DP-700 a technical, hands-on exam?</summary>
+          <div class="faq__answer">
+            <p>Yes. DP-700 expects you to reason about real data-engineering work in Microsoft Fabric — writing and debugging T-SQL, PySpark, and KQL; designing full and incremental load patterns; working with Delta tables, OneLake shortcuts, mirroring, and pipelines; and optimising Lakehouse, Warehouse, and Spark performance. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at <a href="/exams/dp-900/">DP-900</a> (Azure Data Fundamentals) as an on-ramp.</p>
+          </div>
+        </details>
       </div>
     </section>
 

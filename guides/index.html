@@ -392,6 +392,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -414,20 +415,35 @@
 
   <main>
 
-    <!-- HERO — text-only, no phone mockup -->
-    <section class="guide-hero container">
+    <!-- HERO — visual guide finder -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guides</p>
       <h1 class="display-large guide-hero__title">
         Azure <span class="headline-accent">certification</span> guides
       </h1>
       <p class="guide-hero__dek">
-        Free, practical guides to Microsoft's Azure certifications: which exam to sit first, how to actually pass AZ-900, AZ-104, SC-900, DP-900, and AI-901, and straight comparisons when two Fundamentals exams look alike. Every guide is grounded in the current Microsoft Learn skills outline, not recycled filler.
+        Choose your route, see what matters, and turn the official exam outline into a practical plan. Every guide is written against the current Microsoft Learn skills outline.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>8 guides</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/cert-pathways-dark.webp"
+          data-theme-src-light="/guides/images/cert-pathways-light.webp"
+          alt="Aura presents four visual certification pathways for cloud, security, data, and AI."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Find your route</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Cloud</span><span>Security</span><span>Data</span><span>AI</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- Choosing your certification -->
@@ -441,17 +457,17 @@
         <a class="guide-card" href="/guides/which-azure-certification-first/">
           <span class="guide-card__kicker">Pillar guide</span>
           <span class="guide-card__name">Which Microsoft certification should you get first?</span>
-          <span class="guide-card__hint">A walk through the Azure, security, data, and AI Fundamentals exams, and how to pick the one that matches your role and experience.</span>
+          <span class="guide-card__hint">Match Azure, security, data, or AI to your role and experience.</span>
         </a>
         <a class="guide-card" href="/guides/az-900-vs-az-104/">
           <span class="guide-card__kicker">Comparison</span>
           <span class="guide-card__name">AZ-900 vs AZ-104</span>
-          <span class="guide-card__hint">Fundamentals or Associate first? What each exam actually tests, and which credential hiring managers look for.</span>
+          <span class="guide-card__hint">See when Fundamentals helps — and when to go straight to hands-on.</span>
         </a>
         <a class="guide-card" href="/guides/sc-900-vs-az-900/">
           <span class="guide-card__kicker">Comparison</span>
           <span class="guide-card__name">SC-900 vs AZ-900</span>
-          <span class="guide-card__hint">Security or cloud fundamentals first? How the two Fundamentals exams differ and which one suits your next role.</span>
+          <span class="guide-card__hint">Choose a security-first or cloud-first starting point.</span>
         </a>
       </nav>
     </section>
@@ -467,27 +483,27 @@
         <a class="guide-card" href="/guides/how-to-pass-az-900/">
           <span class="guide-card__kicker">AZ-900</span>
           <span class="guide-card__name">How to pass AZ-900 Azure Fundamentals</span>
-          <span class="guide-card__hint">The conceptual groundwork behind every other Azure certification: cloud concepts, core Azure services, and management and governance.</span>
+          <span class="guide-card__hint">Cloud concepts, core services, and governance in a focused plan.</span>
         </a>
         <a class="guide-card" href="/guides/how-to-pass-az-104/">
           <span class="guide-card__kicker">AZ-104</span>
           <span class="guide-card__name">How to pass AZ-104 Azure Administrator</span>
-          <span class="guide-card__hint">The hands-on exam that proves you can run Azure day to day: identities and governance, storage, compute, networking, and monitoring.</span>
+          <span class="guide-card__hint">A six-week route through identity, storage, compute, networking, and monitoring.</span>
         </a>
         <a class="guide-card" href="/guides/how-to-pass-sc-900/">
           <span class="guide-card__kicker">SC-900</span>
           <span class="guide-card__name">How to pass SC-900 Security Fundamentals</span>
-          <span class="guide-card__hint">Security, compliance, and identity concepts, Microsoft Entra capabilities, and Microsoft's security and compliance solutions.</span>
+          <span class="guide-card__hint">Four weeks across security, Entra, compliance, and Defender.</span>
         </a>
         <a class="guide-card" href="/guides/how-to-pass-dp-900/">
           <span class="guide-card__kicker">DP-900</span>
           <span class="guide-card__name">How to pass DP-900 Data Fundamentals</span>
-          <span class="guide-card__hint">Core data concepts, then how they map onto relational, non-relational, and analytics workloads on Azure.</span>
+          <span class="guide-card__hint">Data concepts mapped to relational, NoSQL, and analytics workloads.</span>
         </a>
         <a class="guide-card" href="/guides/how-to-pass-ai-901/">
           <span class="guide-card__kicker">AI-901</span>
           <span class="guide-card__name">How to pass AI-901 AI Fundamentals</span>
-          <span class="guide-card__hint">AI workloads and considerations, machine learning, computer vision, natural language processing, and generative AI on Azure.</span>
+          <span class="guide-card__hint">AI workloads, machine learning, vision, language, and generative AI.</span>
         </a>
       </nav>
       <p class="section-note">

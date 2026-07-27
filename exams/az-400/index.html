@@ -1149,6 +1149,7 @@
     .am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1307,42 +1308,82 @@
       <p class="section-lede">
         Five DevOps domains, with weights set by Microsoft's April 2026 update. The build/release pipelines domain alone is weighted at 50–55% — more than the other four combined. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-400" rel="noopener">official skills outline</a>.
       </p>
+      <figure class="exam-family-visual exam-family-visual--azure">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/azure-skills-dark.webp"
+            data-theme-src-light="/exams/images/azure-skills-light.webp"
+            alt="Aura presents a visual map of identity, compute, networking, and Azure operations skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Azure skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Identity</span><span>Compute</span><span>Network</span><span>Operations</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Design and implement processes and communications<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Traceability and flow of work — GitHub Flow, feedback cycles, GitHub Issues, GitHub Projects integration with Azure Boards. Metrics and queries for the full DevOps lifecycle (cycle time, time to recovery, lead time) plus project planning, development, testing, security, delivery, and operations. Configure collaboration: wikis with Markdown and Mermaid syntax, release notes, automated docs from Git history, webhook integrations, Microsoft Teams integration. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Traceability and flow of work — GitHub Flow, feedback cycles, GitHub Issues, GitHub Projects integration with Azure Boards. Metrics and queries for the full DevOps lifecycle (cycle time, time to recovery, lead time) plus project planning, development, testing, security, delivery, and operations. Configure collaboration: wikis with Markdown and Mermaid syntax, release notes, automated docs from Git history, webhook integrations, Microsoft Teams integration. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Design and implement a source control strategy<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Branching strategies — trunk-based, feature branch, release branch — plus pull request workflows, branch policies and protection rules. Repository management at scale — Git Large File Storage (LFS), Scalar, cross-repository sharing, permissions, tags. Recovering specific data via Git commands and removing data from history. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Branching strategies — trunk-based, feature branch, release branch — plus pull request workflows, branch policies and protection rules. Repository management at scale — Git Large File Storage (LFS), Scalar, cross-repository sharing, permissions, tags. Recovering specific data via Git commands and removing data from history. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Design and implement build and release pipelines<span class="domain__weight">50–55%</span></h3>
-          <p>
-            <strong>The largest domain by far.</strong> Package management (GitHub Packages, Azure Artifacts, SemVer, CalVer); testing strategy (unit, integration, load, code coverage, quality gates); pipeline implementation (YAML in Azure Pipelines AND GitHub Actions, agent/runner infrastructure, triggers, multi-stage pipelines, reusable templates, environment checks/approvals); deployment strategies (blue-green, canary, ring, progressive exposure, feature flags via Azure App Configuration, A/B testing, hotfix paths, deployment slots); IaC (Bicep, ARM, Azure Automation State Configuration, Azure Machine Configuration, Azure Deployment Environments); pipeline maintenance (health, optimisation, classic-to-YAML migration). Around 20–33 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                <strong>The largest domain by far.</strong> Package management (GitHub Packages, Azure Artifacts, SemVer, CalVer); testing strategy (unit, integration, load, code coverage, quality gates); pipeline implementation (YAML in Azure Pipelines AND GitHub Actions, agent/runner infrastructure, triggers, multi-stage pipelines, reusable templates, environment checks/approvals); deployment strategies (blue-green, canary, ring, progressive exposure, feature flags via Azure App Configuration, A/B testing, hotfix paths, deployment slots); IaC (Bicep, ARM, Azure Automation State Configuration, Azure Machine Configuration, Azure Deployment Environments); pipeline maintenance (health, optimisation, classic-to-YAML migration). Around 20–33 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Develop a security and compliance plan<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Authentication and authorisation — service principals vs Managed Identities (system-assigned vs user-assigned), GitHub Apps, GITHUB_TOKEN, personal access tokens, Azure DevOps service connections, GitHub permissions and roles, Azure DevOps permissions and security groups. Sensitive information management — Azure Key Vault, GitHub Secrets, OpenID Connect / workload identity federation. Security and compliance scanning — Microsoft Defender for Cloud DevOps Security, GitHub Advanced Security, container scanning, CodeQL, Dependabot. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Authentication and authorisation — service principals vs Managed Identities (system-assigned vs user-assigned), GitHub Apps, GITHUB_TOKEN, personal access tokens, Azure DevOps service connections, GitHub permissions and roles, Azure DevOps permissions and security groups. Sensitive information management — Azure Key Vault, GitHub Secrets, OpenID Connect / workload identity federation. Security and compliance scanning — Microsoft Defender for Cloud DevOps Security, GitHub Advanced Security, container scanning, CodeQL, Dependabot. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement an instrumentation strategy<span class="domain__weight">5–10%</span></h3>
-          <p>
-            The smallest domain. Configure Azure Monitor and Azure Monitor Logs to integrate with DevOps tools; collect telemetry via Application Insights, VM Insights, Container Insights, and storage/network monitoring. Configure GitHub monitoring (insights, charts, alerts on Actions and Pipelines events). Analyse metrics — infrastructure indicators (CPU, memory, disk, network), application performance, distributed tracing, and basic Kusto Query Language (KQL) queries. Around 2–6 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The smallest domain. Configure Azure Monitor and Azure Monitor Logs to integrate with DevOps tools; collect telemetry via Application Insights, VM Insights, Container Insights, and storage/network monitoring. Configure GitHub monitoring (insights, charts, alerts on Actions and Pipelines events). Analyse metrics — infrastructure indicators (CPU, memory, disk, network), application performance, distributed tracing, and basic Kusto Query Language (KQL) queries. Around 2–6 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AZ-400</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AZ-400</h2>
       <p>
@@ -1528,30 +1569,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AZ-400 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>What prerequisite do I need for AZ-400?</h3>
-          <p>Microsoft currently accepts either <a href="/exams/az-104/">Azure Administrator Associate (AZ-104)</a> or <a href="/exams/az-204/">Azure Developer Associate (AZ-204)</a> alongside AZ-400. Azure Developer Associate retires on <strong>31 July 2026</strong>, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page.</p>
-        </article>
-        <article class="faq">
-          <h3>How much does the AZ-400 exam cost?</h3>
-          <p>The AZ-400 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during Microsoft Build or Microsoft Ignite — worth checking your Microsoft Learn profile for active offers. The DevOps Engineer Expert tier also requires annual renewal (free, online via <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>) once earned.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AZ-400 certification expire?</h3>
-          <p>Yes. Microsoft Expert certifications — including DevOps Engineer Expert (which AZ-400 unlocks) — expire annually. Renewal is free: a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in DevOps work.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AZ-400 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Later attempts require longer waits under Microsoft's exam retake policy, with a maximum of five attempts in a 12-month period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AZ-400?</h3>
-          <p>Plan eight to twelve weeks for AZ-400, even if you already hold <a href="/exams/az-104/">AZ-104</a> or <a href="/exams/az-204/">AZ-204</a>. AZ-400 covers an enormous service surface — Azure Pipelines AND GitHub Actions, both Azure DevOps AND GitHub repositories, Bicep AND ARM templates, Azure Key Vault AND GitHub Secrets, plus security scanning, monitoring, branching strategies, and progressive deployment patterns. The build/release pipelines domain alone is 50–55% of the exam. Don't book until Azure Mastery's readiness gauge shows roughly 730 or higher with reasonable confidence.</p>
-        </article>
-        <article class="faq">
-          <h3>AZ-400 vs AZ-305 — which Expert cert should I take?</h3>
-          <p>Pick the one that matches your role. AZ-400 is for SREs, platform engineers, and developers who own CI/CD; <a href="/exams/az-305/">AZ-305</a> is for architects designing the systems those pipelines deploy. They are complementary and both can use <a href="/exams/az-104/">Azure Administrator Associate</a> as a prerequisite. AZ-305 does not accept Azure Developer Associate as an alternative.</p>
-        </article>
+        <details class="faq">
+          <summary>What prerequisite do I need for AZ-400?</summary>
+          <div class="faq__answer">
+            <p>Microsoft currently accepts either <a href="/exams/az-104/">Azure Administrator Associate (AZ-104)</a> or <a href="/exams/az-204/">Azure Developer Associate (AZ-204)</a> alongside AZ-400. Azure Developer Associate retires on <strong>31 July 2026</strong>, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How much does the AZ-400 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The AZ-400 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during Microsoft Build or Microsoft Ignite — worth checking your Microsoft Learn profile for active offers. The DevOps Engineer Expert tier also requires annual renewal (free, online via <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>) once earned.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AZ-400 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Expert certifications — including DevOps Engineer Expert (which AZ-400 unlocks) — expire annually. Renewal is free: a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in DevOps work.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AZ-400 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Later attempts require longer waits under Microsoft's exam retake policy, with a maximum of five attempts in a 12-month period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AZ-400?</summary>
+          <div class="faq__answer">
+            <p>Plan eight to twelve weeks for AZ-400, even if you already hold <a href="/exams/az-104/">AZ-104</a> or <a href="/exams/az-204/">AZ-204</a>. AZ-400 covers an enormous service surface — Azure Pipelines AND GitHub Actions, both Azure DevOps AND GitHub repositories, Bicep AND ARM templates, Azure Key Vault AND GitHub Secrets, plus security scanning, monitoring, branching strategies, and progressive deployment patterns. The build/release pipelines domain alone is 50–55% of the exam. Don't book until Azure Mastery's readiness gauge shows roughly 730 or higher with reasonable confidence.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AZ-400 vs AZ-305 — which Expert cert should I take?</summary>
+          <div class="faq__answer">
+            <p>Pick the one that matches your role. AZ-400 is for SREs, platform engineers, and developers who own CI/CD; <a href="/exams/az-305/">AZ-305</a> is for architects designing the systems those pipelines deploy. They are complementary and both can use <a href="/exams/az-104/">Azure Administrator Associate</a> as a prerequisite. AZ-305 does not accept Azure Developer Associate as an alternative.</p>
+          </div>
+        </details>
       </div>
     </section>
 

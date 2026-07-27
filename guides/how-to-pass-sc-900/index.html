@@ -730,6 +730,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -766,20 +767,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         How to pass <span class="headline-accent">SC-900</span> Security Fundamentals
       </h1>
       <p class="guide-hero__dek">
-        A beginner-friendly route through Microsoft's Security, Compliance, and Identity Fundamentals exam: what it actually tests, the four skills domains and their weights, a realistic four-week study plan, the concepts that trip people up, and how to walk into exam day settled.
+        A four-week route through security, Entra, Microsoft security and compliance solutions, plus exam-day tactics.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~9 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/study-loop-dark.webp"
+          data-theme-src-light="/guides/images/study-loop-light.webp"
+          alt="Aura presents a four-step visual study cycle: learn, connect, practise, and prove readiness."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Your study loop</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Learn</span><span>Connect</span><span>Practise</span><span>Prove</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- What is SC-900 -->
@@ -932,30 +948,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">SC-900 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How hard is the SC-900 exam?</h3>
-          <p>SC-900 is a conceptual exam, not a hands-on one. You are not asked to configure a Conditional Access policy or write a KQL query; you are asked to recognise which Microsoft service or concept fits a described scenario. That makes it approachable for beginners, but the breadth catches people out — four domains span identity, several Defender products, Sentinel, and the whole Purview compliance surface. Most newcomers to security pass after two to four weeks of focused study.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for SC-900?</h3>
-          <p>If you already work in IT, one to two weeks of focused revision is usually enough. If security and cloud concepts are genuinely new to you, plan for three to four weeks, because the exam expects you to hold several unfamiliar product families in your head at once. The four-week plan on this page is a comfortable pace for a first Fundamentals exam; compress it if terms like Zero Trust and Conditional Access already feel familiar.</p>
-        </article>
-        <article class="faq">
-          <h3>Do I need any other certification before SC-900?</h3>
-          <p>No. SC-900 has no formal prerequisites and is designed as an entry point — Microsoft pitches it at business stakeholders, IT professionals moving toward security, and students, not just existing administrators. If cloud concepts alongside security concepts feel unfamiliar, pairing it with <a href="/exams/az-900/">AZ-900 (Azure Fundamentals)</a> rounds out the picture, but you can sit SC-900 on its own.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the passing score for SC-900?</h3>
-          <p>You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map to a fixed number of correct answers, and question difficulty is weighted. Treat 700 as a comfortable target to clear rather than a line to scrape over, especially since the exam gives no partial credit on multi-select questions.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the SC-900 certification expire?</h3>
-          <p>No. Microsoft Fundamentals certifications, including SC-900, AZ-900, DP-900, and AI-901, do not expire once earned. That is different from Associate and Expert certifications such as SC-200 or SC-300, which require a free annual renewal assessment on Microsoft Learn to stay current.</p>
-        </article>
-        <article class="faq">
-          <h3>What should I take after SC-900 — SC-200 or SC-500?</h3>
-          <p>It depends on the role you want. SC-200 (Security Operations Analyst Associate) is the day-to-day defender path: investigating incidents in Microsoft Sentinel, triaging alerts, and working inside Defender XDR. SC-500 is Microsoft's newer cloud and AI security engineering credential, replacing AZ-500 when it retires on 2026-08-31, and suits engineers who build and secure the platform rather than monitor it. Read both exam pages and the comparison guide linked below before committing to a direction.</p>
-        </article>
+        <details class="faq">
+          <summary>How hard is the SC-900 exam?</summary>
+          <div class="faq__answer"><p>SC-900 is a conceptual exam, not a hands-on one. You are not asked to configure a Conditional Access policy or write a KQL query; you are asked to recognise which Microsoft service or concept fits a described scenario. That makes it approachable for beginners, but the breadth catches people out — four domains span identity, several Defender products, Sentinel, and the whole Purview compliance surface. Most newcomers to security pass after two to four weeks of focused study.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for SC-900?</summary>
+          <div class="faq__answer"><p>If you already work in IT, one to two weeks of focused revision is usually enough. If security and cloud concepts are genuinely new to you, plan for three to four weeks, because the exam expects you to hold several unfamiliar product families in your head at once. The four-week plan on this page is a comfortable pace for a first Fundamentals exam; compress it if terms like Zero Trust and Conditional Access already feel familiar.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do I need any other certification before SC-900?</summary>
+          <div class="faq__answer"><p>No. SC-900 has no formal prerequisites and is designed as an entry point — Microsoft pitches it at business stakeholders, IT professionals moving toward security, and students, not just existing administrators. If cloud concepts alongside security concepts feel unfamiliar, pairing it with <a href="/exams/az-900/">AZ-900 (Azure Fundamentals)</a> rounds out the picture, but you can sit SC-900 on its own.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What is the passing score for SC-900?</summary>
+          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map to a fixed number of correct answers, and question difficulty is weighted. Treat 700 as a comfortable target to clear rather than a line to scrape over, especially since the exam gives no partial credit on multi-select questions.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does the SC-900 certification expire?</summary>
+          <div class="faq__answer"><p>No. Microsoft Fundamentals certifications, including SC-900, AZ-900, DP-900, and AI-901, do not expire once earned. That is different from Associate and Expert certifications such as SC-200 or SC-300, which require a free annual renewal assessment on Microsoft Learn to stay current.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What should I take after SC-900 — SC-200 or SC-500?</summary>
+          <div class="faq__answer"><p>It depends on the role you want. SC-200 (Security Operations Analyst Associate) is the day-to-day defender path: investigating incidents in Microsoft Sentinel, triaging alerts, and working inside Defender XDR. SC-500 is Microsoft's newer cloud and AI security engineering credential, replacing AZ-500 when it retires on 2026-08-31, and suits engineers who build and secure the platform rather than monitor it. Read both exam pages and the comparison guide linked below before committing to a direction.</p></div>
+        </details>
       </div>
     </section>
 

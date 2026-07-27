@@ -744,6 +744,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -780,20 +781,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         How to pass <span class="headline-accent">AZ-104</span> Azure Administrator
       </h1>
       <p class="guide-hero__dek">
-        A practical route through the Microsoft Azure Administrator exam: what it actually tests, the five skills domains and their weights, a realistic six-week study plan, the topics that trip people up, and how to keep your head on exam day.
+        A practical six-week route through five skills domains, the topics that trip candidates up, and exam-day tactics.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~9 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/study-loop-dark.webp"
+          data-theme-src-light="/guides/images/study-loop-light.webp"
+          alt="Aura presents a four-step visual study cycle: learn, connect, practise, and prove readiness."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Your study loop</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Learn</span><span>Connect</span><span>Practise</span><span>Prove</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- What is AZ-104 -->
@@ -966,30 +982,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AZ-104 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How hard is the AZ-104 exam?</h3>
-          <p>AZ-104 is harder than a Fundamentals exam because it is practical rather than conceptual. It expects you to manage identities and RBAC at scale, choose the right storage redundancy and access model, deploy virtual machines and containers, configure virtual networks, and read Bicep and Azure CLI. Expect questions that show you a snippet and ask you to predict the outcome. Most candidates with some IT or cloud background pass after four to eight weeks of focused study.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AZ-104?</h3>
-          <p>Plan for four to eight weeks of focused study if you already have some IT or cloud experience. If Azure is genuinely new to you, allow two to three months, because the exam expects you to know specific PowerShell and Azure CLI behaviour rather than just describe concepts. The six-week plan on this page is a realistic middle path you can compress or stretch to fit your background.</p>
-        </article>
-        <article class="faq">
-          <h3>Do I need AZ-900 before AZ-104?</h3>
-          <p>AZ-900 is not a formal prerequisite. If you have less than six months of hands-on Azure experience, taking <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> first builds the conceptual map AZ-104 assumes you already have. If you already work with Azure day to day, you can go straight to AZ-104, which is the credential most hiring managers actually look for.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the passing score for AZ-104?</h3>
-          <p>You need 700 out of 1000 to pass. The score is scaled, not a raw percentage, so it does not translate directly to a fixed number of correct answers. Harder questions carry more weight, and multi-select questions award no partial credit, so treat 700 as a comfortable target rather than a line to scrape over.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AZ-104 certification expire?</h3>
-          <p>Yes. Microsoft Associate certifications including AZ-104 expire annually, and renewal is free. It is a short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> that you can take within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain active in the role. Fundamentals certifications such as AZ-900 do not expire.</p>
-        </article>
-        <article class="faq">
-          <h3>How much does AZ-104 cost and can I retake it if I fail?</h3>
-          <p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-administrator/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt requires a new booking.</p>
-        </article>
+        <details class="faq">
+          <summary>How hard is the AZ-104 exam?</summary>
+          <div class="faq__answer"><p>AZ-104 is harder than a Fundamentals exam because it is practical rather than conceptual. It expects you to manage identities and RBAC at scale, choose the right storage redundancy and access model, deploy virtual machines and containers, configure virtual networks, and read Bicep and Azure CLI. Expect questions that show you a snippet and ask you to predict the outcome. Most candidates with some IT or cloud background pass after four to eight weeks of focused study.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AZ-104?</summary>
+          <div class="faq__answer"><p>Plan for four to eight weeks of focused study if you already have some IT or cloud experience. If Azure is genuinely new to you, allow two to three months, because the exam expects you to know specific PowerShell and Azure CLI behaviour rather than just describe concepts. The six-week plan on this page is a realistic middle path you can compress or stretch to fit your background.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do I need AZ-900 before AZ-104?</summary>
+          <div class="faq__answer"><p>AZ-900 is not a formal prerequisite. If you have less than six months of hands-on Azure experience, taking <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> first builds the conceptual map AZ-104 assumes you already have. If you already work with Azure day to day, you can go straight to AZ-104, which is the credential most hiring managers actually look for.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What is the passing score for AZ-104?</summary>
+          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled, not a raw percentage, so it does not translate directly to a fixed number of correct answers. Harder questions carry more weight, and multi-select questions award no partial credit, so treat 700 as a comfortable target rather than a line to scrape over.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does the AZ-104 certification expire?</summary>
+          <div class="faq__answer"><p>Yes. Microsoft Associate certifications including AZ-104 expire annually, and renewal is free. It is a short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> that you can take within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain active in the role. Fundamentals certifications such as AZ-900 do not expire.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How much does AZ-104 cost and can I retake it if I fail?</summary>
+          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-administrator/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt requires a new booking.</p></div>
+        </details>
       </div>
     </section>
 

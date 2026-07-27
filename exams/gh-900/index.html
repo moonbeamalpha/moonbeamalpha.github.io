@@ -714,6 +714,7 @@
     .am-cert-hero { --amh-accent: #F7630C; --amh-accent-2: #C44E08; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -865,54 +866,104 @@
       <p class="section-lede">
         Seven domains, with weights set by GitHub's January 2026 skills-outline update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/gh-900" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
       </p>
+      <figure class="exam-family-visual exam-family-visual--github">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/github-skills-dark.webp"
+            data-theme-src-light="/exams/images/github-skills-light.webp"
+            alt="Aura presents a visual map of planning, coding, secure delivery, and deployment skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Developer skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Plan</span><span>Code</span><span>Secure</span><span>Ship</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Understand Git and GitHub Basics<span class="domain__weight">25–30%</span></h3>
-          <p>
-            The largest and most foundational domain. Covers version control fundamentals — the purpose and benefits of version control, the difference between Git and GitHub, and core Git concepts such as repositories, commits, and branches. Also covers GitHub accounts, organizations, and enterprise options, the GitHub Flow, using Markdown to communicate clearly in issues and pull requests, and when to reach for GitHub Desktop or GitHub Mobile. Get this domain solid and everything else falls into place.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The largest and most foundational domain. Covers version control fundamentals — the purpose and benefits of version control, the difference between Git and GitHub, and core Git concepts such as repositories, commits, and branches. Also covers GitHub accounts, organizations, and enterprise options, the GitHub Flow, using Markdown to communicate clearly in issues and pull requests, and when to reach for GitHub Desktop or GitHub Mobile. Get this domain solid and everything else falls into place.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Work with GitHub Repositories<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Repository management end to end: the structure and key files of a repository (README, LICENSE, CONTRIBUTING, CODEOWNERS, SECURITY); creating, organizing, and maintaining repositories with templates and branches; adding and managing files; and reading repository insights, stars, feature previews, metrics dashboards, and dependency insights for visibility. Expect questions on best practices for repository maintenance and collaboration.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Repository management end to end: the structure and key files of a repository (README, LICENSE, CONTRIBUTING, CODEOWNERS, SECURITY); creating, organizing, and maintaining repositories with templates and branches; adding and managing files; and reading repository insights, stars, feature previews, metrics dashboards, and dependency insights for visibility. Expect questions on best practices for repository maintenance and collaboration.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Collaborate Using GitHub<span class="domain__weight">10–15%</span></h3>
-          <p>
-            The collaboration toolkit: using issues, pull requests, and discussions to work together; linking pull requests to issues and managing templates, filters, and assignments; configuring notifications for workflow management; and using Gists, Wikis, and GitHub Pages to document and share information.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The collaboration toolkit: using issues, pull requests, and discussions to work together; linking pull requests to issues and managing templates, filters, and assignments; configuring notifications for workflow management; and using Gists, Wikis, and GitHub Pages to document and share information.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Apply Modern Development Practices<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Automation and AI tooling: the purpose and capabilities of GitHub Actions; how GitHub Copilot assists with AI-powered code suggestions, including Copilot agents, Agent Mode, and multi-model support; the differences between Copilot for Individuals, Business, and Enterprise; GitHub Codespaces and dev containers; and when to use the github.dev editor versus Codespaces.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Automation and AI tooling: the purpose and capabilities of GitHub Actions; how GitHub Copilot assists with AI-powered code suggestions, including Copilot agents, Agent Mode, and multi-model support; the differences between Copilot for Individuals, Business, and Enterprise; GitHub Codespaces and dev containers; and when to use the github.dev editor versus Codespaces.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Manage Projects with GitHub<span class="domain__weight">5–10%</span></h3>
-          <p>
-            Project tracking and organization: GitHub Projects and their layout options; configuring projects, labels, milestones, and workflows; using saved replies and assignees to streamline communication; and reading project insights to track progress and productivity. One of the smaller domains — a few well-targeted questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Project tracking and organization: GitHub Projects and their layout options; configuring projects, labels, milestones, and workflows; using saved replies and assignees to streamline communication; and reading project insights to track progress and productivity. One of the smaller domains — a few well-targeted questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Understand Privacy, Security, and Administration<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Security and access management: securing accounts with two-factor authentication (2FA) and passkeys; access permissions and roles for repositories and organizations; Enterprise Managed Users (EMUs) and organization-wide Copilot policy management; repository privacy and visibility settings and branch protection rules; and managing organization settings, teams, and roles.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Security and access management: securing accounts with two-factor authentication (2FA) and passkeys; access permissions and roles for repositories and organizations; Enterprise Managed Users (EMUs) and organization-wide Copilot policy management; repository privacy and visibility settings and branch protection rules; and managing organization settings, teams, and roles.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Explore the GitHub Community<span class="domain__weight">5–10%</span></h3>
-          <p>
-            Open-source engagement: the benefits of open source and GitHub Sponsors; how GitHub supports and advances open-source projects; following users and organizations; the GitHub Marketplace and its purpose; how InnerSource applies open-source principles inside organizations; and when to use forks, templates, and discoverable repositories to promote collaboration.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Open-source engagement: the benefits of open source and GitHub Sponsors; how GitHub supports and advances open-source projects; following users and organizations; the GitHub Marketplace and its purpose; how InnerSource applies open-source principles inside organizations; and when to use forks, templates, and discoverable repositories to promote collaboration.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for GH-900</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass GH-900</h2>
       <p>
@@ -974,30 +1025,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">GH-900 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the GH-900 exam cost?</h3>
-          <p>The GitHub Foundations exam is USD $99, a price set by GitHub rather than Microsoft's standard certification pricing. GH-900 is delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/" rel="noopener">GitHub Foundations page</a> for current pricing and any active promotions before you book.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the GH-900 GitHub Foundations certification expire?</h3>
-          <p>Yes. Unlike Microsoft's own Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> or <a href="/exams/ai-901/">AI-901</a>, which never expire, GitHub Foundations is valid for two years from the date you pass. To stay certified after that, you re-take the GH-900 exam. This two-year validity is set by GitHub, which owns and maintains the certification.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the GH-900 retake policy if I fail?</h3>
-          <p>GH-900 follows the standard Microsoft exam-delivery retake policy. The first retake is allowed after a 24-hour wait. Second, third, fourth, and fifth retakes each require a 14-day wait, with a cap of five attempts in any 12-month rolling period. Each attempt requires a new exam booking.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for GH-900?</h3>
-          <p>If you already use GitHub day to day — opening pull requests, reviewing branches, working with issues — one to two weeks of focused revision is usually enough. If GitHub is new to you, plan for three to four weeks so the seven domains, from Git basics to GitHub Actions and security, have time to stick. Azure Mastery's readiness gauge tells you when you're exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
-        </article>
-        <article class="faq">
-          <h3>GH-900 vs AZ-900 — what's the difference?</h3>
-          <p>GH-900 (GitHub Foundations) validates collaboration on GitHub: Git, repositories, pull requests, branches, GitHub Actions, Issues and Projects, security features, and the open-source community. <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> validates cloud concepts and core Azure services. They're independent credentials in different product families — GH-900 is owned by GitHub and is valid for two years, while AZ-900 is owned by Microsoft and never expires. Many DevOps-minded candidates earn both.</p>
-        </article>
-        <article class="faq">
-          <h3>Is GH-900 worth taking if I'm not a developer?</h3>
-          <p>Yes — GH-900 is explicitly designed for non-developers as well as developers. Project managers, technical writers, product owners, and team leads all sit GH-900 to prove they can collaborate effectively on GitHub. The exam doesn't ask you to write code. It expects you to explain concepts such as the GitHub Flow, how pull requests link to issues, what branch protection rules do, and when to use a fork versus a template.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the GH-900 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The GitHub Foundations exam is USD $99, a price set by GitHub rather than Microsoft's standard certification pricing. GH-900 is delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/" rel="noopener">GitHub Foundations page</a> for current pricing and any active promotions before you book.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the GH-900 GitHub Foundations certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. Unlike Microsoft's own Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> or <a href="/exams/ai-901/">AI-901</a>, which never expire, GitHub Foundations is valid for two years from the date you pass. To stay certified after that, you re-take the GH-900 exam. This two-year validity is set by GitHub, which owns and maintains the certification.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the GH-900 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>GH-900 follows the standard Microsoft exam-delivery retake policy. The first retake is allowed after a 24-hour wait. Second, third, fourth, and fifth retakes each require a 14-day wait, with a cap of five attempts in any 12-month rolling period. Each attempt requires a new exam booking.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for GH-900?</summary>
+          <div class="faq__answer">
+            <p>If you already use GitHub day to day — opening pull requests, reviewing branches, working with issues — one to two weeks of focused revision is usually enough. If GitHub is new to you, plan for three to four weeks so the seven domains, from Git basics to GitHub Actions and security, have time to stick. Azure Mastery's readiness gauge tells you when you're exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>GH-900 vs AZ-900 — what's the difference?</summary>
+          <div class="faq__answer">
+            <p>GH-900 (GitHub Foundations) validates collaboration on GitHub: Git, repositories, pull requests, branches, GitHub Actions, Issues and Projects, security features, and the open-source community. <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> validates cloud concepts and core Azure services. They're independent credentials in different product families — GH-900 is owned by GitHub and is valid for two years, while AZ-900 is owned by Microsoft and never expires. Many DevOps-minded candidates earn both.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is GH-900 worth taking if I'm not a developer?</summary>
+          <div class="faq__answer">
+            <p>Yes — GH-900 is explicitly designed for non-developers as well as developers. Project managers, technical writers, product owners, and team leads all sit GH-900 to prove they can collaborate effectively on GitHub. The exam doesn't ask you to write code. It expects you to explain concepts such as the GitHub Flow, how pull requests link to issues, what branch protection rules do, and when to use a fork versus a template.</p>
+          </div>
+        </details>
       </div>
     </section>
 

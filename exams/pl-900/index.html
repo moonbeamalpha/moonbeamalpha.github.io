@@ -1123,6 +1123,7 @@
     .am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1281,42 +1282,82 @@
       <p class="section-lede">
         Five domains, with weights set by Microsoft's 24 July 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/pl-900" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
       </p>
+      <figure class="exam-family-visual exam-family-visual--power">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/power-skills-dark.webp"
+            data-theme-src-light="/exams/images/power-skills-light.webp"
+            alt="Aura presents a visual map of connected business data, automation, low-code apps, and analytics skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Business solutions skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Automate</span><span>Build</span><span>Analyse</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Business value of Power Platform<span class="domain__weight">5–10%</span></h3>
-          <p>
-            The lightest domain, but the framing for everything else. The value of <em>Power Apps</em> (build apps), <em>Power Automate</em> (automate processes), <em>Dataverse</em> (organise business data), and <em>connectors</em> (integrate services); the value of <em>generative AI</em> features across the platform; and how <em>Copilot Studio</em> creates agents. Around 2–6 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The lightest domain, but the framing for everything else. The value of <em>Power Apps</em> (build apps), <em>Power Automate</em> (automate processes), <em>Dataverse</em> (organise business data), and <em>connectors</em> (integrate services); the value of <em>generative AI</em> features across the platform; and how <em>Copilot Studio</em> creates agents. Around 2–6 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Manage the Power Platform environment<span class="domain__weight">20–25%</span></h3>
-          <p>
-            <em>Dataverse</em> — how it differs from a traditional database, tables/columns/relationships, forms and views, business logic including <em>Power Fx</em>, and using AI to create tables. Plus administration and governance: environments, the security model, data privacy and accessibility, monitoring and analytics, and application lifecycle management (ALM) with Power Platform pipelines. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                <em>Dataverse</em> — how it differs from a traditional database, tables/columns/relationships, forms and views, business logic including <em>Power Fx</em>, and using AI to create tables. Plus administration and governance: environments, the security model, data privacy and accessibility, monitoring and analytics, and application lifecycle management (ALM) with Power Platform pipelines. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Demonstrate the capabilities of Power Apps<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Use cases for <em>canvas apps</em>, <em>model-driven apps</em>, the <em>Plan designer</em>, and <em>code apps</em>; and building basic apps — including using AI and the "vibe" experience to generate canvas and model-driven apps. Expect "which app type for this scenario?" questions. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Use cases for <em>canvas apps</em>, <em>model-driven apps</em>, the <em>Plan designer</em>, and <em>code apps</em>; and building basic apps — including using AI and the "vibe" experience to generate canvas and model-driven apps. Expect "which app type for this scenario?" questions. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Demonstrate the capabilities of Power Automate<span class="domain__weight">20–25%</span></h3>
-          <p>
-            <em>Cloud</em> vs <em>desktop</em> flows and their use cases — approvals, Microsoft Teams, Outlook, SharePoint, Forms, and document automation; connector triggers and actions; and building or modifying flows with AI. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                <em>Cloud</em> vs <em>desktop</em> flows and their use cases — approvals, Microsoft Teams, Outlook, SharePoint, Forms, and document automation; connector triggers and actions; and building or modifying flows with AI. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Agents in Microsoft Copilot Studio<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The newest domain (added July 2026). Building agents — conversation paths via <em>topics</em>, <em>knowledge sources</em>, tools including <em>MCP servers</em> and agent flows, and publishing via channels; and managing agents — <em>Microsoft Agent 365</em>, monitoring adoption, and agent evaluations. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The newest domain (added July 2026). Building agents — conversation paths via <em>topics</em>, <em>knowledge sources</em>, tools including <em>MCP servers</em> and agent flows, and publishing via channels; and managing agents — <em>Microsoft Agent 365</em>, monitoring adoption, and agent evaluations. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for PL-900</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass PL-900</h2>
       <p>
@@ -1484,30 +1525,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">PL-900 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the PL-900 exam cost?</h3>
-          <p>The PL-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the PL-900 certification expire?</h3>
-          <p>No. Microsoft Fundamentals certifications — including AZ-900, PL-900, AI-901, MS-900, and DP-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as <a href="/exams/pl-300/">PL-300</a> or <a href="/exams/az-104/">AZ-104</a>, which require an annual free renewal assessment on Microsoft Learn.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the PL-900 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for PL-900?</h3>
-          <p>Most candidates with prior IT or business-apps experience pass after one to two weeks of focused revision. If Power Platform is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
-        </article>
-        <article class="faq">
-          <h3>PL-900 vs <a href="/exams/pl-300/">PL-300</a> — which should I take first?</h3>
-          <p>PL-900 first if low-code Power Platform is new to you. PL-900 teaches the platform vocabulary (Power Apps vs Power Automate, what Dataverse is, cloud vs desktop flows, Copilot Studio agents) without expecting you to build production solutions. PL-300 is the role-based Power BI Data Analyst Associate exam — it expects hands-on Power Query, DAX modelling, and report design. Most candidates pass PL-900 in a week or two, then spend two to three months on PL-300.</p>
-        </article>
-        <article class="faq">
-          <h3>Is PL-900 worth taking if I'm not a developer?</h3>
-          <p>Yes — Microsoft positions PL-900 squarely for both technical and non-technical candidates. Business analysts, "citizen developers" and makers, project managers, and IT pros evaluating low-code all sit PL-900. The exam doesn't ask you to write production code. It asks you to recognise scenarios — "canvas or model-driven app for this case?" or "cloud or desktop flow?" — and pick the correct option. It's the natural first step before building real apps and flows.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the PL-900 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The PL-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the PL-900 certification expire?</summary>
+          <div class="faq__answer">
+            <p>No. Microsoft Fundamentals certifications — including AZ-900, PL-900, AI-901, MS-900, and DP-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as <a href="/exams/pl-300/">PL-300</a> or <a href="/exams/az-104/">AZ-104</a>, which require an annual free renewal assessment on Microsoft Learn.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the PL-900 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for PL-900?</summary>
+          <div class="faq__answer">
+            <p>Most candidates with prior IT or business-apps experience pass after one to two weeks of focused revision. If Power Platform is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>PL-900 vs <a href="/exams/pl-300/">PL-300</a> — which should I take first?</summary>
+          <div class="faq__answer">
+            <p>PL-900 first if low-code Power Platform is new to you. PL-900 teaches the platform vocabulary (Power Apps vs Power Automate, what Dataverse is, cloud vs desktop flows, Copilot Studio agents) without expecting you to build production solutions. PL-300 is the role-based Power BI Data Analyst Associate exam — it expects hands-on Power Query, DAX modelling, and report design. Most candidates pass PL-900 in a week or two, then spend two to three months on PL-300.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is PL-900 worth taking if I'm not a developer?</summary>
+          <div class="faq__answer">
+            <p>Yes — Microsoft positions PL-900 squarely for both technical and non-technical candidates. Business analysts, "citizen developers" and makers, project managers, and IT pros evaluating low-code all sit PL-900. The exam doesn't ask you to write production code. It asks you to recognise scenarios — "canvas or model-driven app for this case?" or "cloud or desktop flow?" — and pick the correct option. It's the natural first step before building real apps and flows.</p>
+          </div>
+        </details>
       </div>
     </section>
 

@@ -713,6 +713,7 @@
     .am-cert-hero { --amh-accent: #F7630C; --amh-accent-2: #C44E08; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -864,48 +865,93 @@
       <p class="section-lede">
         Six domains, with weights from GitHub's skills outline as of January 2026. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/gh-300" rel="noopener">official study guide</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
       </p>
+      <figure class="exam-family-visual exam-family-visual--github">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/github-skills-dark.webp"
+            data-theme-src-light="/exams/images/github-skills-light.webp"
+            alt="Aura presents a visual map of planning, coding, secure delivery, and deployment skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Developer skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Plan</span><span>Code</span><span>Secure</span><span>Ship</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Use GitHub Copilot Responsibly<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The judgement domain. Covers the risks and limitations of generative AI, ethical and responsible AI use, and how to identify potential harms and their mitigations. Most importantly, it tests why you must validate Copilot's output before you trust it — recognising biased, insecure, or simply wrong suggestions, and knowing how a professional responds. Get this mindset right and the rest of the exam makes sense.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The judgement domain. Covers the risks and limitations of generative AI, ethical and responsible AI use, and how to identify potential harms and their mitigations. Most importantly, it tests why you must validate Copilot's output before you trust it — recognising biased, insecure, or simply wrong suggestions, and knowing how a professional responds. Get this mindset right and the rest of the exam makes sense.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Use GitHub Copilot Features<span class="domain__weight">25–30%</span></h3>
-          <p>
-            The largest domain. Copilot inside the IDE — inline suggestions, Copilot Chat, the Copilot CLI, and Plan Mode — plus Agent Mode, Edit Mode, and MCP for tool-connected workflows. Also covers using Copilot in code review, Spaces and Spark, and organization-wide policy management. Expect scenario questions on which feature fits which task and how they combine.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The largest domain. Copilot inside the IDE — inline suggestions, Copilot Chat, the Copilot CLI, and Plan Mode — plus Agent Mode, Edit Mode, and MCP for tool-connected workflows. Also covers using Copilot in code review, Spaces and Spark, and organization-wide policy management. Expect scenario questions on which feature fits which task and how they combine.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Understand GitHub Copilot Data and Architecture<span class="domain__weight">10–15%</span></h3>
-          <p>
-            What happens under the hood: how your data is used, flows, and is shared; input processing and prompt building; the proxy service that handles filtering and post-processing; and the full code-suggestion lifecycle from keystroke to accepted suggestion. Also covers the limitations of the underlying large language models so you know what Copilot can and cannot do.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                What happens under the hood: how your data is used, flows, and is shared; input processing and prompt building; the proxy service that handles filtering and post-processing; and the full code-suggestion lifecycle from keystroke to accepted suggestion. Also covers the limitations of the underlying large language models so you know what Copilot can and cannot do.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Apply Prompt Engineering and Context Crafting<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Getting better suggestions on purpose: prompt structure and the role of context, how Copilot determines the context it uses, and the difference between zero-shot and few-shot prompting. Rounds out with the core principles of prompt engineering — being specific, giving examples, and iterating — so you can steer Copilot rather than accept whatever it offers first.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Getting better suggestions on purpose: prompt structure and the role of context, how Copilot determines the context it uses, and the difference between zero-shot and few-shot prompting. Rounds out with the core principles of prompt engineering — being specific, giving examples, and iterating — so you can steer Copilot rather than accept whatever it offers first.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Improve Developer Productivity with GitHub Copilot<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Copilot applied to real work: generating code, refactoring, and writing documentation; accelerating how you learn a new codebase or language; generating tests and finding edge cases; and using Copilot to improve the security and performance of existing code. This domain is about outcomes — turning Copilot from an autocomplete into a genuine productivity multiplier.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Copilot applied to real work: generating code, refactoring, and writing documentation; accelerating how you learn a new codebase or language; generating tests and finding edge cases; and using Copilot to improve the security and performance of existing code. This domain is about outcomes — turning Copilot from an autocomplete into a genuine productivity multiplier.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Configure Privacy, Content Exclusions, and Safeguards<span class="domain__weight">10–15%</span></h3>
-          <p>
-            The controls that keep Copilot safe to use: content exclusions and editor settings, the ownership and limitations of Copilot's outputs, duplication detection to avoid matching public code, and the security warnings Copilot raises. Expect questions on configuring exclusions at the repository and organization level and what each safeguard actually protects.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The controls that keep Copilot safe to use: content exclusions and editor settings, the ownership and limitations of Copilot's outputs, duplication detection to avoid matching public code, and the security warnings Copilot raises. Expect questions on configuring exclusions at the repository and organization level and what each safeguard actually protects.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for GH-300</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass GH-300</h2>
       <p>
@@ -967,30 +1013,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">GH-300 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the GH-300 exam cost, and how long is it?</h3>
-          <p>The GitHub Copilot exam is roughly USD $99, though the exact price varies by region. GH-300 runs about 90 minutes and you need 700 out of 1000 to pass. It's delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/" rel="noopener">GitHub Copilot page</a> for current pricing and any active promotions before you book.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the GH-300 GitHub Copilot certification expire?</h3>
-          <p>GitHub credentials are valid for two years and are renewed by re-examination — so once you pass GH-300 you stay certified for two years, then re-take the exam to keep the credential current. The certification is delivered by Microsoft but owned and maintained by GitHub, which sets this two-year validity.</p>
-        </article>
-        <article class="faq">
-          <h3>Who is the GH-300 GitHub Copilot exam for?</h3>
-          <p>GH-300 is an intermediate-level certification for developers and technical team members who already use GitHub Copilot day to day and want to prove real, applied expertise. It assumes GitHub fundamentals and experience in at least one programming language. This is not a beginner exam — it validates working knowledge of Copilot's features, data flows, prompt engineering, and responsible-use practices.</p>
-        </article>
-        <article class="faq">
-          <h3>Does GH-300 cover using GitHub Copilot responsibly?</h3>
-          <p>Yes. "Use GitHub Copilot Responsibly" is the first domain, weighted 15–20%. It tests the risks and limitations of generative AI, ethical and responsible AI use, how to identify potential harms and their mitigations, and — critically — why you must validate Copilot's output before trusting it. Expect scenario questions about biased or insecure suggestions and how a professional handles them.</p>
-        </article>
-        <article class="faq">
-          <h3>How much of GH-300 is prompt engineering?</h3>
-          <p>Prompt engineering and context crafting is its own domain, weighted 10–15%. GH-300 tests how you structure a prompt, how Copilot determines context, the difference between zero-shot and few-shot prompting, and the core principles of writing prompts that produce useful, relevant suggestions. It pairs closely with the data-and-architecture domain, which explains how your prompt is processed and turned into a suggestion.</p>
-        </article>
-        <article class="faq">
-          <h3>How many GH-300 practice questions does Azure Mastery include?</h3>
-          <p>Azure Mastery ships with 355 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Core study runs on-device and works offline; optional sync uses your private iCloud account.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the GH-300 exam cost, and how long is it?</summary>
+          <div class="faq__answer">
+            <p>The GitHub Copilot exam is roughly USD $99, though the exact price varies by region. GH-300 runs about 90 minutes and you need 700 out of 1000 to pass. It's delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/" rel="noopener">GitHub Copilot page</a> for current pricing and any active promotions before you book.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the GH-300 GitHub Copilot certification expire?</summary>
+          <div class="faq__answer">
+            <p>GitHub credentials are valid for two years and are renewed by re-examination — so once you pass GH-300 you stay certified for two years, then re-take the exam to keep the credential current. The certification is delivered by Microsoft but owned and maintained by GitHub, which sets this two-year validity.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Who is the GH-300 GitHub Copilot exam for?</summary>
+          <div class="faq__answer">
+            <p>GH-300 is an intermediate-level certification for developers and technical team members who already use GitHub Copilot day to day and want to prove real, applied expertise. It assumes GitHub fundamentals and experience in at least one programming language. This is not a beginner exam — it validates working knowledge of Copilot's features, data flows, prompt engineering, and responsible-use practices.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does GH-300 cover using GitHub Copilot responsibly?</summary>
+          <div class="faq__answer">
+            <p>Yes. "Use GitHub Copilot Responsibly" is the first domain, weighted 15–20%. It tests the risks and limitations of generative AI, ethical and responsible AI use, how to identify potential harms and their mitigations, and — critically — why you must validate Copilot's output before trusting it. Expect scenario questions about biased or insecure suggestions and how a professional handles them.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How much of GH-300 is prompt engineering?</summary>
+          <div class="faq__answer">
+            <p>Prompt engineering and context crafting is its own domain, weighted 10–15%. GH-300 tests how you structure a prompt, how Copilot determines context, the difference between zero-shot and few-shot prompting, and the core principles of writing prompts that produce useful, relevant suggestions. It pairs closely with the data-and-architecture domain, which explains how your prompt is processed and turned into a suggestion.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How many GH-300 practice questions does Azure Mastery include?</summary>
+          <div class="faq__answer">
+            <p>Azure Mastery ships with 355 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Core study runs on-device and works offline; optional sync uses your private iCloud account.</p>
+          </div>
+        </details>
       </div>
     </section>
 

@@ -1,0 +1,294 @@
+/* Azure Mastery guide visual layer.
+   Loaded after the page-local styles and theme-light.css so the article
+   experience can evolve without duplicating the same rules across eight pages. */
+
+.guide-hero--visual {
+  max-width: 1180px;
+}
+
+.guide-visual {
+  margin: 30px 0 0;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(80, 230, 255, 0.04) inset;
+}
+
+.guide-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: cover;
+}
+
+.guide-visual__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 18px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.guide-visual__title {
+  flex: 0 0 auto;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.guide-visual__legend {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.guide-visual__legend span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--text-secondary);
+  background: rgba(80, 230, 255, 0.06);
+  border: 1px solid var(--border-accent);
+  border-radius: 999px;
+}
+
+@media (min-width: 900px) {
+  .guide-hero--visual {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1.1fr);
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
+    column-gap: clamp(42px, 6vw, 84px);
+  }
+
+  .guide-hero--visual > .guide-hero__eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .guide-hero--visual > .guide-hero__title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .guide-hero--visual > .guide-hero__dek {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .guide-hero--visual > .guide-meta {
+    grid-column: 1;
+    grid-row: 4;
+    align-self: start;
+  }
+
+  .guide-hero--visual > .guide-visual {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    margin: 0;
+  }
+}
+
+/* The original article rail was sized around a 780px text column. The new
+   visual hero is wider, so wait until there is genuinely enough room before
+   bringing the fixed rail back. */
+@media (min-width: 1280px) and (max-width: 1539px) {
+  .page-toc {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .guide-visual__caption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .guide-visual__legend {
+    justify-content: flex-start;
+  }
+}
+
+/* Turn long-form blocks into an intentional scan path. */
+main > section[id] {
+  position: relative;
+}
+
+main > section[id]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 24px;
+  left: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+}
+
+.guide-plan {
+  gap: 14px;
+}
+
+.guide-plan > li {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 22px 22px;
+  background:
+    linear-gradient(135deg, rgba(80, 230, 255, 0.055), transparent 55%),
+    var(--bg-card);
+  border-color: var(--border-strong);
+}
+
+.guide-plan > li::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--gradient-cyan-blue);
+}
+
+@media (min-width: 640px) {
+  .guide-plan {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topic-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.topic-card {
+  background: var(--bg-card);
+  border-color: var(--border-strong);
+  border-left-color: var(--azure-cyan);
+}
+
+.guide-table-wrap {
+  overflow: hidden;
+  overflow-x: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+
+.guide-table tbody tr:nth-child(even) {
+  background: rgba(80, 230, 255, 0.025);
+}
+
+/* Progressive disclosure keeps the useful FAQ copy without presenting
+   six full answers as another wall of text. */
+.faqs {
+  gap: 10px;
+}
+
+.faq {
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg-card);
+  border-color: var(--border-strong);
+}
+
+.faq summary {
+  padding: 18px 22px;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+.faq summary::marker {
+  color: var(--azure-cyan);
+}
+
+.faq summary:hover,
+.faq summary:focus-visible {
+  color: var(--azure-cyan);
+}
+
+.faq summary:focus-visible {
+  outline: 2px solid var(--azure-cyan);
+  outline-offset: -4px;
+}
+
+.faq[open] summary {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.faq__answer {
+  padding: 17px 22px 20px;
+}
+
+.faq__answer p {
+  margin: 0;
+}
+
+/* The guide library is a visual menu first and a description second. */
+.guide-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 176px;
+  padding-top: 24px;
+  background:
+    linear-gradient(145deg, rgba(80, 230, 255, 0.05), transparent 48%),
+    var(--bg-card);
+  border-color: var(--border-strong);
+}
+
+.guide-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--gradient-blue-purple);
+  opacity: 0.8;
+}
+
+.guide-card__hint {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+html[data-theme="light"] .guide-visual,
+html[data-theme="light"] .guide-plan > li,
+html[data-theme="light"] .topic-card,
+html[data-theme="light"] .guide-table-wrap,
+html[data-theme="light"] .faq,
+html[data-theme="light"] .guide-card {
+  box-shadow: 0 16px 42px rgba(15, 30, 60, 0.08);
+}
+
+html[data-theme="light"] .guide-visual__legend span {
+  background: rgba(14, 116, 144, 0.07);
+}
+
+html[data-theme="light"] .guide-table tbody tr:nth-child(even) {
+  background: rgba(14, 116, 144, 0.035);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide-card,
+  .topic-card,
+  .faq summary {
+    transition: none;
+  }
+}

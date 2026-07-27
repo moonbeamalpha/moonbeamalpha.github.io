@@ -1123,6 +1123,7 @@
     .am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1287,42 +1288,82 @@
       <p class="section-lede">
         Five domains, with weights set by Microsoft's May 2025 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-900" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
       </p>
+      <figure class="exam-family-visual exam-family-visual--ai">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/ai-skills-dark.webp"
+            data-theme-src-light="/exams/images/ai-skills-light.webp"
+            alt="Aura presents a visual map of data, models, agents, and responsible AI skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">AI & agent skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Models</span><span>Agents</span><span>Responsible AI</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>AI workloads and considerations<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The conceptual foundation. Identifies the four common AI workload types (computer vision, natural language processing, document processing, generative AI) with example scenarios for each, and walks through Microsoft's six guiding principles for responsible AI — fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Expect scenario questions like "which responsible-AI consideration applies here?" Around 6–12 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The conceptual foundation. Identifies the four common AI workload types (computer vision, natural language processing, document processing, generative AI) with example scenarios for each, and walks through Microsoft's six guiding principles for responsible AI — fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Expect scenario questions like "which responsible-AI consideration applies here?" Around 6–12 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Fundamental principles of machine learning on Azure<span class="domain__weight">15–20%</span></h3>
-          <p>
-            Common ML techniques (regression, classification, clustering, deep learning, the Transformer architecture) and core concepts (features and labels, training and validation datasets). Covers Azure Machine Learning capabilities: automated ML, the data and compute services, and the model management and deployment story. You don't write code — you identify the right technique for a given scenario. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Common ML techniques (regression, classification, clustering, deep learning, the Transformer architecture) and core concepts (features and labels, training and validation datasets). Covers Azure Machine Learning capabilities: automated ML, the data and compute services, and the model management and deployment story. You don't write code — you identify the right technique for a given scenario. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Computer vision workloads on Azure<span class="domain__weight">15–20%</span></h3>
-          <p>
-            Distinguishing image classification from object detection from optical character recognition (OCR) from facial detection — and matching each to the right Azure service. Covers the Azure AI Vision service and the Azure AI Face detection service: what each can do, what each is restricted from doing (Limited Access policies for Face), and which scenario maps to which. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Distinguishing image classification from object detection from optical character recognition (OCR) from facial detection — and matching each to the right Azure service. Covers the Azure AI Vision service and the Azure AI Face detection service: what each can do, what each is restricted from doing (Limited Access policies for Face), and which scenario maps to which. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Natural Language Processing (NLP) workloads on Azure<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The NLP scenario taxonomy: key phrase extraction, entity recognition, sentiment analysis, language modelling, speech recognition and synthesis, and translation. Maps each scenario to the right Azure tool — Azure AI Language for text analysis, Azure AI Speech for spoken-input/output. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The NLP scenario taxonomy: key phrase extraction, entity recognition, sentiment analysis, language modelling, speech recognition and synthesis, and translation. Maps each scenario to the right Azure tool — Azure AI Language for text analysis, Azure AI Speech for spoken-input/output. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Generative AI workloads on Azure<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The largest domain by typical question count, reflecting the May 2025 outline update. Covers what generative AI models are, common scenarios (chat, code, image generation, summarisation), and responsible-AI considerations specific to GenAI. Service coverage includes Microsoft Foundry, Azure OpenAI Service, and the Microsoft Foundry model catalog — what they offer and how they differ. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The largest domain by typical question count, reflecting the May 2025 outline update. Covers what generative AI models are, common scenarios (chat, code, image generation, summarisation), and responsible-AI considerations specific to GenAI. Service coverage includes Microsoft Foundry, Azure OpenAI Service, and the Microsoft Foundry model catalog — what they offer and how they differ. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AI-900</p>
       <h2 class="display-small section-title">How Azure Mastery preserves AI-900 coverage</h2>
       <p>
@@ -1492,30 +1533,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AI-900 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Can I still take the AI-900 exam?</h3>
-          <p>No. Microsoft retired AI-900 on 30 June 2026, so it can no longer be scheduled. <a href="/exams/ai-901/">AI-901</a> is now the exam route to the Azure AI Fundamentals credential.</p>
-        </article>
-        <article class="faq">
-          <h3>What replaced AI-900?</h3>
-          <p><a href="/exams/ai-901/">AI-901 replaced AI-900</a> on 1 July 2026. It remains the route to Microsoft Certified: Azure AI Fundamentals and adds a more implementation-oriented focus on Microsoft Foundry and Python examples.</p>
-        </article>
-        <article class="faq">
-          <h3>What happens if I already passed AI-900?</h3>
-          <p>An Azure AI Fundamentals credential earned through AI-900 remains on your Microsoft Learn transcript. AI-900 itself is retired and cannot be retaken.</p>
-        </article>
-        <article class="faq">
-          <h3>Are AI-900 practice questions still useful?</h3>
-          <p>Yes, as reference material for core AI, machine-learning, vision, language, and responsible-AI concepts. New candidates should study the current <a href="/exams/ai-901/">AI-901</a> outline and use the AI-901 bank for exam readiness.</p>
-        </article>
-        <article class="faq">
-          <h3>AI-900 vs AI-102 — which should I take first?</h3>
-          <p>AI-900 first, unless you already build AI applications professionally. AI-900 is the conceptual map: it teaches you the vocabulary (image classification vs object detection, key phrase extraction vs entity recognition, regression vs classification, the Foundry model catalog) without expecting you to write code. AI-102 is the role-based Associate exam — it expects hands-on Python, REST API calls against Azure AI services, and prompt-engineering against Azure OpenAI. Most candidates pass AI-900 in a few weeks, then spend two to three months on AI-102.</p>
-        </article>
-        <article class="faq">
-          <h3>Is AI-900 worth taking if I'm not technical?</h3>
-          <p>Yes — that's a large part of the audience. Microsoft positions AI-900 for both technical and non-technical candidates: solution consultants, sales engineers, technical PMs, business stakeholders evaluating Azure AI procurement, and anyone wanting a credible answer to "which Azure AI service should we use for this?" The exam doesn't ask you to write Python. It asks you to recognise scenarios — "which Azure AI service is best suited for redacting PII from a document?" or "which guiding principle of responsible AI applies here?" — and pick the correct option.</p>
-        </article>
+        <details class="faq">
+          <summary>Can I still take the AI-900 exam?</summary>
+          <div class="faq__answer">
+            <p>No. Microsoft retired AI-900 on 30 June 2026, so it can no longer be scheduled. <a href="/exams/ai-901/">AI-901</a> is now the exam route to the Azure AI Fundamentals credential.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What replaced AI-900?</summary>
+          <div class="faq__answer">
+            <p><a href="/exams/ai-901/">AI-901 replaced AI-900</a> on 1 July 2026. It remains the route to Microsoft Certified: Azure AI Fundamentals and adds a more implementation-oriented focus on Microsoft Foundry and Python examples.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What happens if I already passed AI-900?</summary>
+          <div class="faq__answer">
+            <p>An Azure AI Fundamentals credential earned through AI-900 remains on your Microsoft Learn transcript. AI-900 itself is retired and cannot be retaken.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Are AI-900 practice questions still useful?</summary>
+          <div class="faq__answer">
+            <p>Yes, as reference material for core AI, machine-learning, vision, language, and responsible-AI concepts. New candidates should study the current <a href="/exams/ai-901/">AI-901</a> outline and use the AI-901 bank for exam readiness.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AI-900 vs AI-102 — which should I take first?</summary>
+          <div class="faq__answer">
+            <p>AI-900 first, unless you already build AI applications professionally. AI-900 is the conceptual map: it teaches you the vocabulary (image classification vs object detection, key phrase extraction vs entity recognition, regression vs classification, the Foundry model catalog) without expecting you to write code. AI-102 is the role-based Associate exam — it expects hands-on Python, REST API calls against Azure AI services, and prompt-engineering against Azure OpenAI. Most candidates pass AI-900 in a few weeks, then spend two to three months on AI-102.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is AI-900 worth taking if I'm not technical?</summary>
+          <div class="faq__answer">
+            <p>Yes — that's a large part of the audience. Microsoft positions AI-900 for both technical and non-technical candidates: solution consultants, sales engineers, technical PMs, business stakeholders evaluating Azure AI procurement, and anyone wanting a credible answer to "which Azure AI service should we use for this?" The exam doesn't ask you to write Python. It asks you to recognise scenarios — "which Azure AI service is best suited for redacting PII from a document?" or "which guiding principle of responsible AI applies here?" — and pick the correct option.</p>
+          </div>
+        </details>
       </div>
     </section>
 

@@ -1133,6 +1133,7 @@
     .am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1291,42 +1292,82 @@
       <p class="section-lede">
         Five domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-104" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--azure">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/azure-skills-dark.webp"
+            data-theme-src-light="/exams/images/azure-skills-light.webp"
+            alt="Aura presents a visual map of identity, compute, networking, and Azure operations skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Azure skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Identity</span><span>Compute</span><span>Network</span><span>Operations</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Manage Azure identities and governance<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The largest domain by typical question count, and the one everything else depends on. Covers Microsoft Entra ID user and group management, license assignment, external users, and self-service password reset (SSPR); managing access via built-in Azure roles assigned at different scopes (management group, subscription, resource group, resource); subscription and governance tooling — Azure Policy, resource locks, tags, resource groups, cost management with alerts and budgets, and management groups. Around 8–15 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The largest domain by typical question count, and the one everything else depends on. Covers Microsoft Entra ID user and group management, license assignment, external users, and self-service password reset (SSPR); managing access via built-in Azure roles assigned at different scopes (management group, subscription, resource group, resource); subscription and governance tooling — Azure Policy, resource locks, tags, resource groups, cost management with alerts and budgets, and management groups. Around 8–15 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement and manage storage<span class="domain__weight">15–20%</span></h3>
-          <p>
-            Configure access to storage via firewalls and virtual network rules, SAS tokens, stored access policies, access keys, and identity-based access for Azure Files. Configure storage accounts including redundancy options, object replication, and encryption. Configure Azure Files (file shares, snapshots, soft delete) and Azure Blob Storage (containers, tiers, soft delete, lifecycle management, versioning). Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Configure access to storage via firewalls and virtual network rules, SAS tokens, stored access policies, access keys, and identity-based access for Azure Files. Configure storage accounts including redundancy options, object replication, and encryption. Configure Azure Files (file shares, snapshots, soft delete) and Azure Blob Storage (containers, tiers, soft delete, lifecycle management, versioning). Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Deploy and manage Azure compute resources<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Automate deployment using ARM templates or Bicep — interpret existing files, modify them, deploy resources, and convert between formats. Create and configure virtual machines including encryption at host, sizing, disks, availability zones and sets, and Virtual Machine Scale Sets. Provision and manage containers via Azure Container Registry, Container Instances, and Container Apps. Configure Azure App Service — service plans, scaling, certificates, custom DNS, deployment slots, and networking. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Automate deployment using ARM templates or Bicep — interpret existing files, modify them, deploy resources, and convert between formats. Create and configure virtual machines including encryption at host, sizing, disks, availability zones and sets, and Virtual Machine Scale Sets. Provision and manage containers via Azure Container Registry, Container Instances, and Container Apps. Configure Azure App Service — service plans, scaling, certificates, custom DNS, deployment slots, and networking. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement and manage virtual networking<span class="domain__weight">15–20%</span></h3>
-          <p>
-            Configure virtual networks, subnets, peering, public IPs, user-defined routes, and troubleshoot connectivity. Configure secure access via NSGs, application security groups, Azure Bastion, service endpoints, and private endpoints. Configure name resolution (Azure DNS) and load balancing (internal and public load balancers). Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Configure virtual networks, subnets, peering, public IPs, user-defined routes, and troubleshoot connectivity. Configure secure access via NSGs, application security groups, Azure Bastion, service endpoints, and private endpoints. Configure name resolution (Azure DNS) and load balancing (internal and public load balancers). Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Monitor and maintain Azure resources<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Monitor with Azure Monitor — metrics, log settings, log queries, alert rules, action groups, alert processing rules, Insights for VMs/storage/networks, plus Azure Network Watcher with Connection Monitor. Implement backup and recovery using Recovery Services vaults, Azure Backup vaults, backup policies, and Azure Site Recovery for failover to a secondary region. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Monitor with Azure Monitor — metrics, log settings, log queries, alert rules, action groups, alert processing rules, Insights for VMs/storage/networks, plus Azure Network Watcher with Connection Monitor. Implement backup and recovery using Recovery Services vaults, Azure Backup vaults, backup policies, and Azure Site Recovery for failover to a secondary region. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AZ-104</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AZ-104</h2>
       <p>
@@ -1505,30 +1546,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AZ-104 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the AZ-104 exam cost?</h3>
-          <p>The AZ-104 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AZ-104 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AZ-104 certification expire?</h3>
-          <p>Yes. Microsoft Associate certifications including AZ-104 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AZ-104 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AZ-104?</h3>
-          <p>Most candidates plan four to eight weeks with prior Azure experience, or longer if they are new to administration. Practise identity and governance, storage, compute, virtual networking, and monitoring in the portal and with Azure CLI, PowerShell, and Bicep so you can choose and apply the right administration method. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
-        </article>
-        <article class="faq">
-          <h3>AZ-104 vs AZ-900 — which should I take first?</h3>
-          <p>If you have less than six months of hands-on Azure experience, take <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> first — it builds the conceptual map AZ-104 assumes you already have. If you have a year or more of practical Azure work, you can skip AZ-900 and go straight to AZ-104. Most hiring managers care about AZ-104 specifically; AZ-900 is often dropped from CVs once AZ-104 is on it.</p>
-        </article>
-        <article class="faq">
-          <h3>AZ-104 vs AZ-305 — which next?</h3>
-          <p>Pass AZ-104 first. AZ-104 is the Associate-level operational cert; <a href="/exams/az-305/">AZ-305</a> is the Expert-level architectural cert. AZ-305 assumes you already understand Azure operations (the AZ-104 material) and adds requirements gathering, capacity planning, governance design, and choosing between competing service options. Most architects hold both — AZ-104 to prove they've done the work, AZ-305 to prove they can design it.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the AZ-104 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The AZ-104 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AZ-104 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AZ-104 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Associate certifications including AZ-104 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AZ-104 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AZ-104?</summary>
+          <div class="faq__answer">
+            <p>Most candidates plan four to eight weeks with prior Azure experience, or longer if they are new to administration. Practise identity and governance, storage, compute, virtual networking, and monitoring in the portal and with Azure CLI, PowerShell, and Bicep so you can choose and apply the right administration method. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AZ-104 vs AZ-900 — which should I take first?</summary>
+          <div class="faq__answer">
+            <p>If you have less than six months of hands-on Azure experience, take <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> first — it builds the conceptual map AZ-104 assumes you already have. If you have a year or more of practical Azure work, you can skip AZ-900 and go straight to AZ-104. Most hiring managers care about AZ-104 specifically; AZ-900 is often dropped from CVs once AZ-104 is on it.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AZ-104 vs AZ-305 — which next?</summary>
+          <div class="faq__answer">
+            <p>Pass AZ-104 first. AZ-104 is the Associate-level operational cert; <a href="/exams/az-305/">AZ-305</a> is the Expert-level architectural cert. AZ-305 assumes you already understand Azure operations (the AZ-104 material) and adds requirements gathering, capacity planning, governance design, and choosing between competing service options. Most architects hold both — AZ-104 to prove they've done the work, AZ-305 to prove they can design it.</p>
+          </div>
+        </details>
       </div>
     </section>
 

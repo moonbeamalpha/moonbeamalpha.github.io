@@ -1133,6 +1133,7 @@
     .am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1291,42 +1292,82 @@
       <p class="section-lede">
         Five domains, with weights set by Microsoft's March 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-cloud-developer" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--ai">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/ai-skills-dark.webp"
+            data-theme-src-light="/exams/images/ai-skills-light.webp"
+            alt="Aura presents a visual map of data, models, agents, and responsible AI skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">AI & agent skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Models</span><span>Agents</span><span>Responsible AI</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Develop AI-powered compute solutions<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Tied for the largest domain. Choose and configure compute hosts for AI workloads: Azure Functions (Premium / Flex Consumption for AI calls), Azure Container Apps (jobs, scale-to-zero), Azure Kubernetes Service (GPU node pools, KAITO, Ray clusters), and serverless GPUs. Plus Azure Container Registry, container image best practices for AI, autoscaling strategies, and cold-start mitigation. Around 8–15 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Tied for the largest domain. Choose and configure compute hosts for AI workloads: Azure Functions (Premium / Flex Consumption for AI calls), Azure Container Apps (jobs, scale-to-zero), Azure Kubernetes Service (GPU node pools, KAITO, Ray clusters), and serverless GPUs. Plus Azure Container Registry, container image best practices for AI, autoscaling strategies, and cold-start mitigation. Around 8–15 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Develop for vector-enabled storage and data<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The vector-database surface. <em>Azure Cosmos DB</em> for NoSQL, MongoDB vCore, and PostgreSQL — native vector indexes, similarity search (cosine, dot product, Euclidean), hybrid filtering. <em>Azure SQL</em> vector capabilities. <em>Azure AI Search</em> vector indexes vs hybrid search vs semantic ranking. Embedding generation strategies and chunking. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The vector-database surface. <em>Azure Cosmos DB</em> for NoSQL, MongoDB vCore, and PostgreSQL — native vector indexes, similarity search (cosine, dot product, Euclidean), hybrid filtering. <em>Azure SQL</em> vector capabilities. <em>Azure AI Search</em> vector indexes vs hybrid search vs semantic ranking. Embedding generation strategies and chunking. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement AI pipelines and integration<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Tied for the largest domain. <em>Azure Data Factory</em> and <em>Synapse pipelines</em> for batch AI workflows, <em>Logic Apps</em> and <em>Power Automate</em> for event-driven AI integration, <em>Azure Functions</em> with Event Grid / Service Bus / Storage Queue triggers. Plus retry and idempotency patterns, async vs sync invocation of AI services, structured-output parsing. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Tied for the largest domain. <em>Azure Data Factory</em> and <em>Synapse pipelines</em> for batch AI workflows, <em>Logic Apps</em> and <em>Power Automate</em> for event-driven AI integration, <em>Azure Functions</em> with Event Grid / Service Bus / Storage Queue triggers. Plus retry and idempotency patterns, async vs sync invocation of AI services, structured-output parsing. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement security and identity for AI<span class="domain__weight">15–20%</span></h3>
-          <p>
-            Managed identities for AI service access, Microsoft Entra app registrations and consent, Private Link / Private Endpoints for AI services, customer-managed keys, content filters and abuse monitoring on Azure OpenAI, secrets management via Azure Key Vault, role-based access for Foundry projects. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Managed identities for AI service access, Microsoft Entra app registrations and consent, Private Link / Private Endpoints for AI services, customer-managed keys, content filters and abuse monitoring on Azure OpenAI, secrets management via Azure Key Vault, role-based access for Foundry projects. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Monitor and optimize AI solutions<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Smallest domain. <em>Application Insights</em> instrumentation for AI calls, custom telemetry for token usage and latency, distributed tracing across AI pipelines, cost dashboards, performance tuning (caching, batching, model selection), and capacity planning for token throughput. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Smallest domain. <em>Application Insights</em> instrumentation for AI calls, custom telemetry for token usage and latency, distributed tracing across AI pipelines, cost dashboards, performance tuning (caching, batching, model selection), and capacity planning for token throughput. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AI-200</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AI-200</h2>
       <p>
@@ -1497,30 +1538,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AI-200 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the AI-200 exam cost?</h3>
-          <p>The AI-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-200 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AI-200 certification expire?</h3>
-          <p>Yes. Microsoft Associate certifications including AI-200 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AI-200 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AI-200?</h3>
-          <p>Allow four to eight weeks of focused study if you already develop on Azure. Spend longer if Python, Azure SDKs, containerized applications, messaging, vector databases, identity, monitoring, or troubleshooting are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
-        </article>
-        <article class="faq">
-          <h3>AI-200 vs AI-103 — different roles?</h3>
-          <p>Different emphases. AI-200 validates back-end Azure development for AI solutions, including containers, data services, messaging, identity, monitoring, and troubleshooting. <a href="/exams/ai-103/">AI-103</a> focuses on developing AI apps and agents with Python and Microsoft Foundry. AI-200 is cloud-platform and service integration; AI-103 is model, agent, retrieval, and AI-application implementation.</p>
-        </article>
-        <article class="faq">
-          <h3>AI-200 vs AI-300 — which next?</h3>
-          <p>AI-200 first. AI-200 is the AI Cloud Developer Associate cert — building the platform that AI workloads run on. <a href="/exams/ai-300/">AI-300</a> is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the AI-200 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The AI-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-200 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AI-200 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Associate certifications including AI-200 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AI-200 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AI-200?</summary>
+          <div class="faq__answer">
+            <p>Allow four to eight weeks of focused study if you already develop on Azure. Spend longer if Python, Azure SDKs, containerized applications, messaging, vector databases, identity, monitoring, or troubleshooting are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AI-200 vs AI-103 — different roles?</summary>
+          <div class="faq__answer">
+            <p>Different emphases. AI-200 validates back-end Azure development for AI solutions, including containers, data services, messaging, identity, monitoring, and troubleshooting. <a href="/exams/ai-103/">AI-103</a> focuses on developing AI apps and agents with Python and Microsoft Foundry. AI-200 is cloud-platform and service integration; AI-103 is model, agent, retrieval, and AI-application implementation.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AI-200 vs AI-300 — which next?</summary>
+          <div class="faq__answer">
+            <p>AI-200 first. AI-200 is the AI Cloud Developer Associate cert — building the platform that AI workloads run on. <a href="/exams/ai-300/">AI-300</a> is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it.</p>
+          </div>
+        </details>
       </div>
     </section>
 

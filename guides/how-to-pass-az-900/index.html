@@ -723,6 +723,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -760,20 +761,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         How to pass <span class="headline-accent">AZ-900</span> Azure Fundamentals
       </h1>
       <p class="guide-hero__dek">
-        A plain-English route through Microsoft's entry-level Azure exam: what it actually asks of you, whether you need it at all, the three domains and their weights, a realistic three-week study plan, and where to go once you've passed.
+        A focused two-week route through cloud concepts, core Azure services, governance, and exam-day tactics.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~8 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/study-loop-dark.webp"
+          data-theme-src-light="/guides/images/study-loop-light.webp"
+          alt="Aura presents a four-step visual study cycle: learn, connect, practise, and prove readiness."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Your study loop</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Learn</span><span>Connect</span><span>Practise</span><span>Prove</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- What is AZ-900 -->
@@ -943,30 +959,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AZ-900 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Is AZ-900 hard for a complete beginner?</h3>
-          <p>AZ-900 is the easiest Microsoft certification, but it is not trivial if cloud computing is genuinely new to you. It is entirely conceptual — no PowerShell, no Azure CLI, no hands-on configuration — but it still expects precise recall of terms such as region pairs, availability zones, and the shared responsibility model. Most people with some general IT background pass after one to two weeks; complete beginners should plan for three to four.</p>
-        </article>
-        <article class="faq">
-          <h3>Do I need AZ-900 before other Azure certifications?</h3>
-          <p>No, it is not a formal prerequisite for any Microsoft Azure certification, including <a href="/exams/az-104/">AZ-104</a>. It is optional but strongly recommended if you have less than six months of hands-on Azure experience, because it builds the conceptual map that every higher-level exam assumes you already have. If you already work with Azure day to day, you can skip straight to an Associate-level exam.</p>
-        </article>
-        <article class="faq">
-          <h3>Is AZ-900 worth it if I am not a developer or engineer?</h3>
-          <p>Yes — that is exactly who it is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles or simply to speak the same language as the engineers they work with. The exam never expects you to write a script; it expects you to explain concepts such as consumption-based pricing or defence-in-depth in plain terms.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the passing score for AZ-900?</h3>
-          <p>You need 700 out of 1000 to pass. The score is scaled rather than a simple percentage of questions answered correctly, so it does not map to a fixed number of right answers. Treat 700 as a comfortable floor to clear rather than a target to scrape past.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AZ-900 certification expire?</h3>
-          <p>No. AZ-900 is a Fundamentals-level certification, and Fundamentals certifications do not expire. Once you pass, it is yours permanently. This is different from Associate and Expert certifications such as AZ-104, which require a free annual renewal assessment on Microsoft Learn.</p>
-        </article>
-        <article class="faq">
-          <h3>How much does AZ-900 cost and can I retake it if I fail?</h3>
-          <p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-fundamentals/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. Fail it and you can rebook after 24 hours for the first retry; the next two retries each carry a 14-day wait, and Microsoft allows no more than five sittings within any 12 months. Every attempt is a fresh booking.</p>
-        </article>
+        <details class="faq">
+          <summary>Is AZ-900 hard for a complete beginner?</summary>
+          <div class="faq__answer"><p>AZ-900 is the easiest Microsoft certification, but it is not trivial if cloud computing is genuinely new to you. It is entirely conceptual — no PowerShell, no Azure CLI, no hands-on configuration — but it still expects precise recall of terms such as region pairs, availability zones, and the shared responsibility model. Most people with some general IT background pass after one to two weeks; complete beginners should plan for three to four.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do I need AZ-900 before other Azure certifications?</summary>
+          <div class="faq__answer"><p>No, it is not a formal prerequisite for any Microsoft Azure certification, including <a href="/exams/az-104/">AZ-104</a>. It is optional but strongly recommended if you have less than six months of hands-on Azure experience, because it builds the conceptual map that every higher-level exam assumes you already have. If you already work with Azure day to day, you can skip straight to an Associate-level exam.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Is AZ-900 worth it if I am not a developer or engineer?</summary>
+          <div class="faq__answer"><p>Yes — that is exactly who it is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles or simply to speak the same language as the engineers they work with. The exam never expects you to write a script; it expects you to explain concepts such as consumption-based pricing or defence-in-depth in plain terms.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What is the passing score for AZ-900?</summary>
+          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled rather than a simple percentage of questions answered correctly, so it does not map to a fixed number of right answers. Treat 700 as a comfortable floor to clear rather than a target to scrape past.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does the AZ-900 certification expire?</summary>
+          <div class="faq__answer"><p>No. AZ-900 is a Fundamentals-level certification, and Fundamentals certifications do not expire. Once you pass, it is yours permanently. This is different from Associate and Expert certifications such as AZ-104, which require a free annual renewal assessment on Microsoft Learn.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How much does AZ-900 cost and can I retake it if I fail?</summary>
+          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-fundamentals/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. Fail it and you can rebook after 24 hours for the first retry; the next two retries each carry a 14-day wait, and Microsoft allows no more than five sittings within any 12 months. Every attempt is a fresh booking.</p></div>
+        </details>
       </div>
     </section>
 

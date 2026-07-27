@@ -1124,6 +1124,7 @@
     .am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1282,36 +1283,71 @@
       <p class="section-lede">
         Four domains — the two data domains carry the most weight (30–35% each), with environment setup and Unity Catalog governance at 15–20% each. Every summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
       </p>
+      <figure class="exam-family-visual exam-family-visual--data">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/data-skills-dark.webp"
+            data-theme-src-light="/exams/images/data-skills-light.webp"
+            alt="Aura presents a visual map of data sources, transformation, storage, and analysis skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Data skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Sources</span><span>Transform</span><span>Store</span><span>Analyse</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Set up and configure an Azure Databricks environment<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The platform-setup domain. Selecting and configuring <em>compute</em> — job, serverless, warehouse, classic, and shared — with performance settings (CPU, node count, autoscaling, termination, pooling) and feature settings (<em>Photon acceleration</em>, runtime/Spark version, machine learning); installing libraries and setting compute access permissions; and creating and organising <em>Unity Catalog</em> objects — catalogs, schemas, volumes, tables, views, and materialized views — plus foreign catalogs, DDL on managed and external tables, and AI/BI Genie instructions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The platform-setup domain. Selecting and configuring <em>compute</em> — job, serverless, warehouse, classic, and shared — with performance settings (CPU, node count, autoscaling, termination, pooling) and feature settings (<em>Photon acceleration</em>, runtime/Spark version, machine learning); installing libraries and setting compute access permissions; and creating and organising <em>Unity Catalog</em> objects — catalogs, schemas, volumes, tables, views, and materialized views — plus foreign catalogs, DDL on managed and external tables, and AI/BI Genie instructions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Secure and govern Unity Catalog objects<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The governance domain. Granting privileges to <em>principals</em> (users, service principals, groups); implementing table-, column-, and <em>row-level security</em>; reading <em>Azure Key Vault</em> secrets and authenticating with service principals and managed identities; and governing with table and column descriptions for discovery, <em>ABAC tags and policies</em>, row filters and column masks, data-retention policies, <em>data lineage</em> in Catalog Explorer, audit logging, and a secure <em>Delta Sharing</em> strategy.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The governance domain. Granting privileges to <em>principals</em> (users, service principals, groups); implementing table-, column-, and <em>row-level security</em>; reading <em>Azure Key Vault</em> secrets and authenticating with service principals and managed identities; and governing with table and column descriptions for discovery, <em>ABAC tags and policies</em>, row filters and column masks, data-retention policies, <em>data lineage</em> in Catalog Explorer, audit logging, and a secure <em>Delta Sharing</em> strategy.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Prepare and process data<span class="domain__weight">30–35%</span></h3>
-          <p>
-            The hands-on heart of the exam. Modelling data in Unity Catalog — ingestion logic, table formats (<em>Delta, Parquet, JSON, Iceberg</em>), partitioning, <em>SCD types</em>, temporal history tables, and clustering (<em>liquid clustering, Z-ordering, deletion vectors</em>); ingesting batch and streaming data with <em>Lakeflow Connect, Auto Loader, notebooks, CTAS, COPY INTO, CDC feeds, Spark Structured Streaming, and Azure Event Hubs</em>; cleansing and transforming with joins, aggregation, pivoting, and <em>merge/insert/append</em>; and enforcing <em>data-quality constraints</em> with schema enforcement and pipeline expectations.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The hands-on heart of the exam. Modelling data in Unity Catalog — ingestion logic, table formats (<em>Delta, Parquet, JSON, Iceberg</em>), partitioning, <em>SCD types</em>, temporal history tables, and clustering (<em>liquid clustering, Z-ordering, deletion vectors</em>); ingesting batch and streaming data with <em>Lakeflow Connect, Auto Loader, notebooks, CTAS, COPY INTO, CDC feeds, Spark Structured Streaming, and Azure Event Hubs</em>; cleansing and transforming with joins, aggregation, pivoting, and <em>merge/insert/append</em>; and enforcing <em>data-quality constraints</em> with schema enforcement and pipeline expectations.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Deploy and maintain data pipelines and workloads<span class="domain__weight">30–35%</span></h3>
-          <p>
-            The operations domain. Designing pipelines and choosing between notebooks and <em>Lakeflow Spark Declarative Pipelines</em>; implementing <em>Lakeflow Jobs</em> with triggers, schedules, alerts, and automatic restarts; applying development-lifecycle practices — <em>Git</em> branching and pull requests, testing strategies, and <em>Databricks Asset Bundles</em> deployed via CLI or REST; and monitoring, troubleshooting, and optimising — cluster cost, Spark <em>skew, spilling, shuffle</em> issues via the DAG and Spark UI, <em>OPTIMIZE and VACUUM</em>, and log streaming with <em>Azure Monitor</em>.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The operations domain. Designing pipelines and choosing between notebooks and <em>Lakeflow Spark Declarative Pipelines</em>; implementing <em>Lakeflow Jobs</em> with triggers, schedules, alerts, and automatic restarts; applying development-lifecycle practices — <em>Git</em> branching and pull requests, testing strategies, and <em>Databricks Asset Bundles</em> deployed via CLI or REST; and monitoring, troubleshooting, and optimising — cluster cost, Spark <em>skew, spilling, shuffle</em> issues via the DAG and Spark UI, <em>OPTIMIZE and VACUUM</em>, and log streaming with <em>Azure Monitor</em>.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for DP-750</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass DP-750</h2>
       <p>
@@ -1480,30 +1516,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">DP-750 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the DP-750 exam cost?</h3>
-          <p>The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the DP-750 certification expire?</h3>
-          <p>Yes. DP-750 earns the Microsoft Certified: Azure Databricks Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as <a href="/exams/dp-900/">DP-900</a>, which never expire.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the DP-750 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for DP-750?</h3>
-          <p>DP-750 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL and Python before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data in Azure Databricks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
-        </article>
-        <article class="faq">
-          <h3>DP-750 vs DP-700 — which should I take?</h3>
-          <p>Both are associate-level Microsoft data-engineering certifications, but they target different platforms. DP-750 (Azure Databricks Data Engineer) is for teams building on Azure Databricks — Unity Catalog governance, Lakeflow Jobs and Declarative Pipelines, Delta tables, Spark and Photon tuning, and Databricks Asset Bundles. DP-700 (Fabric Data Engineer) covers the same data-engineering craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream, Lakehouse and Warehouse. Pick the exam that matches your platform: if your organisation runs Azure Databricks, take DP-750; if it standardises on Microsoft Fabric, take <a href="/exams/dp-700/">DP-700</a>. Many engineers eventually earn both.</p>
-        </article>
-        <article class="faq">
-          <h3>Is DP-750 a technical, hands-on exam?</h3>
-          <p>Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at <a href="/exams/dp-900/">DP-900</a> (Azure Data Fundamentals) as an on-ramp.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the DP-750 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the DP-750 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. DP-750 earns the Microsoft Certified: Azure Databricks Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as <a href="/exams/dp-900/">DP-900</a>, which never expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the DP-750 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for DP-750?</summary>
+          <div class="faq__answer">
+            <p>DP-750 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL and Python before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data in Azure Databricks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>DP-750 vs DP-700 — which should I take?</summary>
+          <div class="faq__answer">
+            <p>Both are associate-level Microsoft data-engineering certifications, but they target different platforms. DP-750 (Azure Databricks Data Engineer) is for teams building on Azure Databricks — Unity Catalog governance, Lakeflow Jobs and Declarative Pipelines, Delta tables, Spark and Photon tuning, and Databricks Asset Bundles. DP-700 (Fabric Data Engineer) covers the same data-engineering craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream, Lakehouse and Warehouse. Pick the exam that matches your platform: if your organisation runs Azure Databricks, take DP-750; if it standardises on Microsoft Fabric, take <a href="/exams/dp-700/">DP-700</a>. Many engineers eventually earn both.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is DP-750 a technical, hands-on exam?</summary>
+          <div class="faq__answer">
+            <p>Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at <a href="/exams/dp-900/">DP-900</a> (Azure Data Fundamentals) as an on-ramp.</p>
+          </div>
+        </details>
       </div>
     </section>
 

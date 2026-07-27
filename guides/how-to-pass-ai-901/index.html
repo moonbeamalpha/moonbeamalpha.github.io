@@ -729,6 +729,7 @@
     .site-footer a:hover { color: var(--azure-cyan); }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
 </head>
 <body>
 
@@ -766,20 +767,35 @@
       </ol>
     </nav>
 
-    <!-- HERO — text-only article hero (no phone mockup) -->
-    <section class="guide-hero container">
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
       <h1 class="display-large guide-hero__title">
         How to pass <span class="headline-accent">AI-901</span> AI Fundamentals
       </h1>
       <p class="guide-hero__dek">
-        A practical route through Microsoft's AI Fundamentals exam: what changed since AI-900 retired, the five skills domains and their weights, a realistic three-to-four week study plan, the topics that trip people up, and what to study next.
+        A three-to-four week route through AI workloads, machine learning, vision, language, generative AI, and exam-day tactics.
       </p>
       <p class="guide-meta">
         <span>Updated July 2026</span>
         <span class="guide-meta__dot">·</span>
         <span>~8 min read</span>
       </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/study-loop-dark.webp"
+          data-theme-src-light="/guides/images/study-loop-light.webp"
+          alt="Aura presents a four-step visual study cycle: learn, connect, practise, and prove readiness."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Your study loop</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Learn</span><span>Connect</span><span>Practise</span><span>Prove</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- What is AI-901 -->
@@ -952,30 +968,30 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AI-901 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Is AI-901 the same exam as AI-900?</h3>
-          <p>They cover the same skills outline, but Microsoft retired <a href="/exams/ai-900/">AI-900</a> on 30 June 2026 and AI-901 is its replacement — the exam you book going forward. If you already passed AI-900, that certification still stands and you do not need to sit AI-901 as well. If you have not yet taken either, AI-901 is the current exam.</p>
-        </article>
-        <article class="faq">
-          <h3>How hard is the AI-901 exam?</h3>
-          <p>AI-901 is a Fundamentals-level exam, so it stays conceptual rather than hands-on. There is no code to write and no model to configure. The difficulty comes from precision: you need to recognise which AI workload type a scenario describes, which of the six responsible-AI principles it touches, and which specific Azure AI service fits — computer vision questions in particular expect you to distinguish classification, detection, OCR, and facial detection cleanly. Most candidates with some general IT or cloud background pass after three to four weeks of focused study.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AI-901?</h3>
-          <p>Three to four weeks of steady study is realistic for most candidates, and it can compress to two if you already work with machine learning or generative AI tools. If AI concepts are genuinely new to you, allow six to eight weeks so the vocabulary across all five domains has time to settle, especially the responsible-AI principles and the ML terminology in the second domain.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the passing score for AI-901?</h3>
-          <p>You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map directly onto a fixed number of correct answers, and harder questions carry more weight. Treat 700 as a comfortable target to clear rather than a line to scrape over.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AI-901 certification expire?</h3>
-          <p>No. AI-901 is a Fundamentals certification, and unlike Associate-level certifications such as <a href="/exams/az-104/">AZ-104</a> or AI-103, Fundamentals credentials do not expire and carry no renewal requirement. Once you pass, the credential stands even as the underlying skills outline continues to update.</p>
-        </article>
-        <article class="faq">
-          <h3>What should I study after AI-901?</h3>
-          <p>The developer path now runs through a single exam. <a href="/exams/ai-103/">AI-103</a> (Microsoft Certified: AI App and Agent Developer Associate) is the natural next step for building generative AI applications and agents, and it expects hands-on Python or .NET SDK work against Azure OpenAI and Azure AI Foundry. It replaced the retired AI-102 (AI Engineer Associate) in June 2026, so AI-103 is where AI-901's vocabulary leads once you are ready to write code.</p>
-        </article>
+        <details class="faq">
+          <summary>Is AI-901 the same exam as AI-900?</summary>
+          <div class="faq__answer"><p>They cover the same skills outline, but Microsoft retired <a href="/exams/ai-900/">AI-900</a> on 30 June 2026 and AI-901 is its replacement — the exam you book going forward. If you already passed AI-900, that certification still stands and you do not need to sit AI-901 as well. If you have not yet taken either, AI-901 is the current exam.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How hard is the AI-901 exam?</summary>
+          <div class="faq__answer"><p>AI-901 is a Fundamentals-level exam, so it stays conceptual rather than hands-on. There is no code to write and no model to configure. The difficulty comes from precision: you need to recognise which AI workload type a scenario describes, which of the six responsible-AI principles it touches, and which specific Azure AI service fits — computer vision questions in particular expect you to distinguish classification, detection, OCR, and facial detection cleanly. Most candidates with some general IT or cloud background pass after three to four weeks of focused study.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AI-901?</summary>
+          <div class="faq__answer"><p>Three to four weeks of steady study is realistic for most candidates, and it can compress to two if you already work with machine learning or generative AI tools. If AI concepts are genuinely new to you, allow six to eight weeks so the vocabulary across all five domains has time to settle, especially the responsible-AI principles and the ML terminology in the second domain.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What is the passing score for AI-901?</summary>
+          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map directly onto a fixed number of correct answers, and harder questions carry more weight. Treat 700 as a comfortable target to clear rather than a line to scrape over.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does the AI-901 certification expire?</summary>
+          <div class="faq__answer"><p>No. AI-901 is a Fundamentals certification, and unlike Associate-level certifications such as <a href="/exams/az-104/">AZ-104</a> or AI-103, Fundamentals credentials do not expire and carry no renewal requirement. Once you pass, the credential stands even as the underlying skills outline continues to update.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What should I study after AI-901?</summary>
+          <div class="faq__answer"><p>The developer path now runs through a single exam. <a href="/exams/ai-103/">AI-103</a> (Microsoft Certified: AI App and Agent Developer Associate) is the natural next step for building generative AI applications and agents, and it expects hands-on Python or .NET SDK work against Azure OpenAI and Azure AI Foundry. It replaced the retired AI-102 (AI Engineer Associate) in June 2026, so AI-103 is where AI-901's vocabulary leads once you are ready to write code.</p></div>
+        </details>
       </div>
     </section>
 

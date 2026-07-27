@@ -1132,6 +1132,7 @@
     .am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1296,36 +1297,71 @@
       <p class="section-lede">
         Four domains, with weights set by Microsoft's April 2025 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-100" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--data">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/data-skills-dark.webp"
+            data-theme-src-light="/exams/images/data-skills-light.webp"
+            alt="Aura presents a visual map of data sources, transformation, storage, and analysis skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Data skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Sources</span><span>Transform</span><span>Store</span><span>Analyse</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Design and prepare a machine learning solution<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The setup phase. Covers <em>Azure Machine Learning</em> workspace design — assets (data, environments, models), compute targets (compute instances, compute clusters, attached compute, serverless), and identity (managed identities, role assignments). Plus data assets (URI, MLTable), datastore registration (Blob, ADLS Gen2, key-based vs identity-based access), and curated vs custom environments. Around 8–15 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The setup phase. Covers <em>Azure Machine Learning</em> workspace design — assets (data, environments, models), compute targets (compute instances, compute clusters, attached compute, serverless), and identity (managed identities, role assignments). Plus data assets (URI, MLTable), datastore registration (Blob, ADLS Gen2, key-based vs identity-based access), and curated vs custom environments. Around 8–15 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Explore data, and run experiments<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Notebook-driven exploration in compute instances or Visual Studio Code, plus the <em>Designer</em> low-code surface and <em>Automated ML</em> for the no-code path. Covers MLflow integration for experiment tracking and metric logging, hyperparameter tuning with <em>Sweep jobs</em> (sampling strategies, early termination policies, primary metric), and choosing between AutoML and a manual pipeline. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Notebook-driven exploration in compute instances or Visual Studio Code, plus the <em>Designer</em> low-code surface and <em>Automated ML</em> for the no-code path. Covers MLflow integration for experiment tracking and metric logging, hyperparameter tuning with <em>Sweep jobs</em> (sampling strategies, early termination policies, primary metric), and choosing between AutoML and a manual pipeline. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Train and deploy models<span class="domain__weight">25–30%</span></h3>
-          <p>
-            Tied for the largest domain. Job configuration — command jobs, pipeline jobs, parallel jobs, run context, output handling. Model registration (MLflow vs custom format) and versioning. Deployment to <em>managed online endpoints</em> (real-time, blue/green and traffic split), <em>batch endpoints</em>, and Kubernetes-attached compute. Inference monitoring, data drift detection, and retraining pipelines. Around 10–18 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Tied for the largest domain. Job configuration — command jobs, pipeline jobs, parallel jobs, run context, output handling. Model registration (MLflow vs custom format) and versioning. Deployment to <em>managed online endpoints</em> (real-time, blue/green and traffic split), <em>batch endpoints</em>, and Kubernetes-attached compute. Inference monitoring, data drift detection, and retraining pipelines. Around 10–18 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Optimize language models for AI applications<span class="domain__weight">25–30%</span></h3>
-          <p>
-            New in the April 2025 outline, tied for the largest domain. Covers prompt engineering basics (system prompts, few-shot examples, chain-of-thought), fine-tuning workflows on Azure Machine Learning and Azure AI Foundry, retrieval-augmented generation (RAG) with embeddings and Azure AI Search, evaluating LLM outputs (groundedness, relevance, fluency, similarity), and responsible-AI considerations specific to generative AI. Around 10–18 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                New in the April 2025 outline, tied for the largest domain. Covers prompt engineering basics (system prompts, few-shot examples, chain-of-thought), fine-tuning workflows on Azure Machine Learning and Azure AI Foundry, retrieval-augmented generation (RAG) with embeddings and Azure AI Search, evaluating LLM outputs (groundedness, relevance, fluency, similarity), and responsible-AI considerations specific to generative AI. Around 10–18 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for DP-100</p>
       <h2 class="display-small section-title">How Azure Mastery preserves DP-100 coverage</h2>
       <p>
@@ -1502,30 +1538,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">DP-100 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Can I still take the DP-100 exam?</h3>
-          <p>No. Microsoft retired DP-100 and the Azure Data Scientist Associate certification on 1 June 2026. The exam can no longer be scheduled.</p>
-        </article>
-        <article class="faq">
-          <h3>What should I study after DP-100 retired?</h3>
-          <p>Microsoft did not continue the retired Azure Data Scientist Associate credential under the same name. <a href="/exams/ai-300/">AI-300</a> is a current adjacent option focused on operationalising machine learning and generative AI solutions, and Microsoft lists AI-300 courseware as the successor to DP-100 courseware.</p>
-        </article>
-        <article class="faq">
-          <h3>What happens if I already earned Azure Data Scientist Associate?</h3>
-          <p>A certification earned before retirement remains on your Microsoft Learn transcript. DP-100 and its renewal assessment are retired, so the exam cannot be retaken or newly earned.</p>
-        </article>
-        <article class="faq">
-          <h3>Are DP-100 practice questions still useful?</h3>
-          <p>Yes, as reference material for Azure Machine Learning, training, deployment, MLflow, responsible AI, and language-model optimisation. New candidates should compare those skills with current <a href="/exams/ai-300/">AI-300</a> and other active Microsoft credentials before choosing a path.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the current fundamentals route after DP-100 retirement?</h3>
-          <p><a href="/exams/ai-901/">AI-901</a> is the current Azure AI Fundamentals exam and <a href="/exams/dp-900/">DP-900</a> remains the current data-fundamentals option. DP-100 content is retained for reference, but new candidates should compare those fundamentals with the active <a href="/exams/ai-300/">AI-300</a> operations credential.</p>
-        </article>
-        <article class="faq">
-          <h3>Which current credentials cover adjacent skills?</h3>
-          <p><a href="/exams/ai-300/">AI-300</a> is Microsoft's replacement route for operationalizing machine learning and generative AI. <a href="/exams/ai-103/">AI-103</a> covers developing AI apps and agents with Python and Microsoft Foundry. Neither recreates the retired DP-100 data-scientist credential exactly, so choose based on whether your work centres on AI operations or application development.</p>
-        </article>
+        <details class="faq">
+          <summary>Can I still take the DP-100 exam?</summary>
+          <div class="faq__answer">
+            <p>No. Microsoft retired DP-100 and the Azure Data Scientist Associate certification on 1 June 2026. The exam can no longer be scheduled.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What should I study after DP-100 retired?</summary>
+          <div class="faq__answer">
+            <p>Microsoft did not continue the retired Azure Data Scientist Associate credential under the same name. <a href="/exams/ai-300/">AI-300</a> is a current adjacent option focused on operationalising machine learning and generative AI solutions, and Microsoft lists AI-300 courseware as the successor to DP-100 courseware.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What happens if I already earned Azure Data Scientist Associate?</summary>
+          <div class="faq__answer">
+            <p>A certification earned before retirement remains on your Microsoft Learn transcript. DP-100 and its renewal assessment are retired, so the exam cannot be retaken or newly earned.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Are DP-100 practice questions still useful?</summary>
+          <div class="faq__answer">
+            <p>Yes, as reference material for Azure Machine Learning, training, deployment, MLflow, responsible AI, and language-model optimisation. New candidates should compare those skills with current <a href="/exams/ai-300/">AI-300</a> and other active Microsoft credentials before choosing a path.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the current fundamentals route after DP-100 retirement?</summary>
+          <div class="faq__answer">
+            <p><a href="/exams/ai-901/">AI-901</a> is the current Azure AI Fundamentals exam and <a href="/exams/dp-900/">DP-900</a> remains the current data-fundamentals option. DP-100 content is retained for reference, but new candidates should compare those fundamentals with the active <a href="/exams/ai-300/">AI-300</a> operations credential.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Which current credentials cover adjacent skills?</summary>
+          <div class="faq__answer">
+            <p><a href="/exams/ai-300/">AI-300</a> is Microsoft's replacement route for operationalizing machine learning and generative AI. <a href="/exams/ai-103/">AI-103</a> covers developing AI apps and agents with Python and Microsoft Foundry. Neither recreates the retired DP-100 data-scientist credential exactly, so choose based on whether your work centres on AI operations or application development.</p>
+          </div>
+        </details>
       </div>
     </section>
 

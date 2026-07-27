@@ -1133,6 +1133,7 @@
     .am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1291,42 +1292,82 @@
       <p class="section-lede">
         Five domains, with weights set by Microsoft's March 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ml-operations-engineer" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--ai">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/ai-skills-dark.webp"
+            data-theme-src-light="/exams/images/ai-skills-light.webp"
+            alt="Aura presents a visual map of data, models, agents, and responsible AI skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">AI & agent skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Models</span><span>Agents</span><span>Responsible AI</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Design and implement an MLOps infrastructure<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The platform layer. CI/CD for ML — Azure DevOps and GitHub Actions for model build, test, deploy. Environment management (Conda, Docker), feature stores, model registries, governance and approval gates. Plus reproducibility, lineage tracking, and Responsible-AI governance baseline. Around 6–12 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The platform layer. CI/CD for ML — Azure DevOps and GitHub Actions for model build, test, deploy. Environment management (Conda, Docker), feature stores, model registries, governance and approval gates. Plus reproducibility, lineage tracking, and Responsible-AI governance baseline. Around 6–12 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement machine learning model lifecycle and operations<span class="domain__weight">25–30%</span></h3>
-          <p>
-            Largest domain. Training pipelines, automated training (AutoML), deployment to managed online and batch endpoints, A/B traffic splitting, blue/green and canary deployments. Monitoring — data drift, model drift, performance metrics. Retraining triggers and automated rollback. Plus model packaging, containerisation, and Kubernetes-attached compute scenarios. Around 10–18 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Largest domain. Training pipelines, automated training (AutoML), deployment to managed online and batch endpoints, A/B traffic splitting, blue/green and canary deployments. Monitoring — data drift, model drift, performance metrics. Retraining triggers and automated rollback. Plus model packaging, containerisation, and Kubernetes-attached compute scenarios. Around 10–18 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Design and implement a GenAIOps infrastructure<span class="domain__weight">20–25%</span></h3>
-          <p>
-            The generative-AI ops layer. Prompt versioning and prompt registries, evaluation pipelines (groundedness, relevance, fluency, similarity), deployment patterns for LLM apps (Foundry-deployed apps, Azure Functions, Container Apps), feature-flag-driven prompt rollouts, and observability for token usage and cost. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The generative-AI ops layer. Prompt versioning and prompt registries, evaluation pipelines (groundedness, relevance, fluency, similarity), deployment patterns for LLM apps (Foundry-deployed apps, Azure Functions, Container Apps), feature-flag-driven prompt rollouts, and observability for token usage and cost. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement generative AI quality assurance and observability<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Quality at the production edge. Groundedness checks, hallucination detection, content-safety telemetry, drift detection on prompt or RAG inputs, regression suites for prompts. Distributed tracing across LLM calls and agent invocations. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Quality at the production edge. Groundedness checks, hallucination detection, content-safety telemetry, drift detection on prompt or RAG inputs, regression suites for prompts. Distributed tracing across LLM calls and agent invocations. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Optimize generative AI systems and model performance<span class="domain__weight">10–15%</span></h3>
-          <p>
-            Performance and cost. Caching strategies (semantic cache, embedding cache), batching, model selection (small models for routing, large for generation), fine-tuning vs few-shot vs RAG trade-offs, token budget management, capacity planning for token throughput. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Performance and cost. Caching strategies (semantic cache, embedding cache), batching, model selection (small models for routing, large for generation), fine-tuning vs few-shot vs RAG trade-offs, token budget management, capacity planning for token throughput. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AI-300</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AI-300</h2>
       <p>
@@ -1496,30 +1537,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AI-300 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the AI-300 exam cost?</h3>
-          <p>The AI-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AI-300 certification expire?</h3>
-          <p>Yes. Microsoft Associate certifications including AI-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AI-300 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AI-300?</h3>
-          <p>Allow four to eight weeks of focused study if you already work with Azure Machine Learning or generative AI systems. Spend longer if MLOps, GenAIOps, deployment infrastructure, observability, quality evaluation, or model lifecycle automation are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
-        </article>
-        <article class="faq">
-          <h3>Did AI-300 replace DP-100?</h3>
-          <p>Yes. Microsoft retired <a href="/exams/dp-100/">DP-100</a> and the Azure Data Scientist Associate certification on 1 June 2026 and identifies AI-300, Machine Learning Operations Engineer Associate, as its replacement. The emphasis changed: DP-100 focused on data-science model development, while AI-300 focuses on operationalizing machine learning and generative AI through MLOps, GenAIOps, observability, quality, and lifecycle automation.</p>
-        </article>
-        <article class="faq">
-          <h3>AI-300 vs AI-200 — which next?</h3>
-          <p>AI-200 first. <a href="/exams/ai-200/">AI-200 (AI Cloud Developer Associate)</a> builds the cloud platform that AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform. AI-200 is upstream of AI-300 in most roles.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the AI-300 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The AI-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AI-300 certification expire?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Associate certifications including AI-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AI-300 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AI-300?</summary>
+          <div class="faq__answer">
+            <p>Allow four to eight weeks of focused study if you already work with Azure Machine Learning or generative AI systems. Spend longer if MLOps, GenAIOps, deployment infrastructure, observability, quality evaluation, or model lifecycle automation are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Did AI-300 replace DP-100?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft retired <a href="/exams/dp-100/">DP-100</a> and the Azure Data Scientist Associate certification on 1 June 2026 and identifies AI-300, Machine Learning Operations Engineer Associate, as its replacement. The emphasis changed: DP-100 focused on data-science model development, while AI-300 focuses on operationalizing machine learning and generative AI through MLOps, GenAIOps, observability, quality, and lifecycle automation.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AI-300 vs AI-200 — which next?</summary>
+          <div class="faq__answer">
+            <p>AI-200 first. <a href="/exams/ai-200/">AI-200 (AI Cloud Developer Associate)</a> builds the cloud platform that AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform. AI-200 is upstream of AI-300 in most roles.</p>
+          </div>
+        </details>
       </div>
     </section>
 

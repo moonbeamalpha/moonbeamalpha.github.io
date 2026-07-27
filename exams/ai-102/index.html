@@ -1134,6 +1134,7 @@
     .am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1298,48 +1299,93 @@
       <p class="section-lede">
         Six domains, with weights set by Microsoft's December 2025 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-102" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--ai">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/ai-skills-dark.webp"
+            data-theme-src-light="/exams/images/ai-skills-light.webp"
+            alt="Aura presents a visual map of data, models, agents, and responsible AI skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">AI & agent skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Data</span><span>Models</span><span>Agents</span><span>Responsible AI</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Plan and manage an Azure AI solution<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Tied for the largest domain. Plan and provision <em>Azure AI services</em> resources — multi-service vs single-service accounts, RBAC roles, customer-managed keys, regional and SKU choices. Manage authentication (keys, RBAC, managed identities), networking (VNet integration, private endpoints), and content moderation. Plus Responsible AI considerations, monitoring with Azure Monitor and Application Insights, and deployment strategies (containers, ARM/Bicep). Around 8–15 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Tied for the largest domain. Plan and provision <em>Azure AI services</em> resources — multi-service vs single-service accounts, RBAC roles, customer-managed keys, regional and SKU choices. Manage authentication (keys, RBAC, managed identities), networking (VNet integration, private endpoints), and content moderation. Plus Responsible AI considerations, monitoring with Azure Monitor and Application Insights, and deployment strategies (containers, ARM/Bicep). Around 8–15 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement generative AI solutions<span class="domain__weight">15–20%</span></h3>
-          <p>
-            <em>Azure OpenAI</em> end-to-end. Provision Azure OpenAI resources, deploy models, choose the right model (GPT family, embeddings, image, audio), prompt engineering basics (system prompts, few-shot, chain-of-thought), <em>retrieval-augmented generation (RAG)</em> with Azure AI Search and embeddings, content filters and abuse monitoring, fine-tuning workflows, evaluating model outputs (groundedness, relevance, fluency). Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                <em>Azure OpenAI</em> end-to-end. Provision Azure OpenAI resources, deploy models, choose the right model (GPT family, embeddings, image, audio), prompt engineering basics (system prompts, few-shot, chain-of-thought), <em>retrieval-augmented generation (RAG)</em> with Azure AI Search and embeddings, content filters and abuse monitoring, fine-tuning workflows, evaluating model outputs (groundedness, relevance, fluency). Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement an agentic solution<span class="domain__weight">5–10%</span></h3>
-          <p>
-            New domain in the December 2025 outline — smallest by weight but distinct. Cover <em>Azure AI Foundry agents</em>, tool calling and function definitions, agent grounding via knowledge sources, multi-agent orchestration patterns, agent observability and tracing. Around 2–6 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                New domain in the December 2025 outline — smallest by weight but distinct. Cover <em>Azure AI Foundry agents</em>, tool calling and function definitions, agent grounding via knowledge sources, multi-agent orchestration patterns, agent observability and tracing. Around 2–6 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement computer vision solutions<span class="domain__weight">10–15%</span></h3>
-          <p>
-            <em>Azure AI Vision</em> for image analysis (tagging, captioning, OCR via Read API, smart cropping), <em>Custom Vision</em> for image classification and object detection (training, evaluation, deployment), <em>Face</em> service (detection, identification, verification — note Limited Access policy), and <em>Video Analyzer for Media</em>. Around 4–9 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                <em>Azure AI Vision</em> for image analysis (tagging, captioning, OCR via Read API, smart cropping), <em>Custom Vision</em> for image classification and object detection (training, evaluation, deployment), <em>Face</em> service (detection, identification, verification — note Limited Access policy), and <em>Video Analyzer for Media</em>. Around 4–9 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement natural language processing solutions<span class="domain__weight">15–20%</span></h3>
-          <p>
-            <em>Azure AI Language</em> for entity recognition, sentiment analysis, key phrase extraction, language detection, summarisation, custom text classification, custom named-entity recognition, conversational language understanding (CLU), and question answering. <em>Azure AI Speech</em> for speech-to-text, text-to-speech, speech translation, custom speech, and pronunciation assessment. <em>Azure AI Translator</em> for text and document translation. Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                <em>Azure AI Language</em> for entity recognition, sentiment analysis, key phrase extraction, language detection, summarisation, custom text classification, custom named-entity recognition, conversational language understanding (CLU), and question answering. <em>Azure AI Speech</em> for speech-to-text, text-to-speech, speech translation, custom speech, and pronunciation assessment. <em>Azure AI Translator</em> for text and document translation. Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Implement knowledge mining and information extraction solutions<span class="domain__weight">15–20%</span></h3>
-          <p>
-            Tied for the largest domain in scope. <em>Azure AI Search</em> end-to-end — indexers, indexes, skillsets, semantic search, vector search, hybrid search. <em>Document Intelligence</em> (formerly Form Recognizer) — prebuilt models (invoice, receipt, ID, business card, layout) and custom models (template, neural). Around 6–12 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Tied for the largest domain in scope. <em>Azure AI Search</em> end-to-end — indexers, indexes, skillsets, semantic search, vector search, hybrid search. <em>Document Intelligence</em> (formerly Form Recognizer) — prebuilt models (invoice, receipt, ID, business card, layout) and custom models (template, neural). Around 6–12 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AI-102</p>
       <h2 class="display-small section-title">How Azure Mastery preserves AI-102 coverage</h2>
       <p>
@@ -1512,30 +1558,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AI-102 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>Can I still take the AI-102 exam?</h3>
-          <p>No. Microsoft retired AI-102 and the Azure AI Engineer Associate certification on 30 June 2026. The exam can no longer be scheduled.</p>
-        </article>
-        <article class="faq">
-          <h3>What replaced AI-102?</h3>
-          <p><a href="/exams/ai-103/">AI-103</a> is the current role-based route for developing AI apps and agents on Azure. It leads to the Azure AI Apps and Agents Developer Associate credential and assesses Python, Microsoft Foundry, generative and agentic solutions, vision, text analysis, and information extraction.</p>
-        </article>
-        <article class="faq">
-          <h3>What happens if I already earned Azure AI Engineer Associate?</h3>
-          <p>A certification earned before retirement remains on your Microsoft Learn transcript. AI-102 and its renewal assessment are retired, so the exam cannot be retaken or newly earned.</p>
-        </article>
-        <article class="faq">
-          <h3>Are AI-102 practice questions still useful?</h3>
-          <p>Yes, as reference material for Azure AI services, generative AI, vision, language, search, and document intelligence. New candidates should study the current <a href="/exams/ai-103/">AI-103</a> outline and use its exam-specific bank.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the current path after AI-102 retirement?</h3>
-          <p><a href="/exams/ai-901/">AI-901</a> is the current Azure AI Fundamentals exam, and <a href="/exams/ai-103/">AI-103</a> is the current role-based route for developing AI apps and agents on Azure. AI-102 content remains useful as historical reference, but new candidates should use the AI-901 and AI-103 outlines rather than planning an AI-102 certification path.</p>
-        </article>
-        <article class="faq">
-          <h3>What replaced the retired AI-102 and DP-100 routes?</h3>
-          <p>Microsoft replaced the retired AI-102 route with <a href="/exams/ai-103/">AI-103</a> for Azure AI apps and agents, and identifies <a href="/exams/ai-300/">AI-300</a> as the replacement for the retired DP-100 data-science route. AI-103 focuses on application and agent development; AI-300 focuses on operationalizing machine learning and generative AI systems.</p>
-        </article>
+        <details class="faq">
+          <summary>Can I still take the AI-102 exam?</summary>
+          <div class="faq__answer">
+            <p>No. Microsoft retired AI-102 and the Azure AI Engineer Associate certification on 30 June 2026. The exam can no longer be scheduled.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What replaced AI-102?</summary>
+          <div class="faq__answer">
+            <p><a href="/exams/ai-103/">AI-103</a> is the current role-based route for developing AI apps and agents on Azure. It leads to the Azure AI Apps and Agents Developer Associate credential and assesses Python, Microsoft Foundry, generative and agentic solutions, vision, text analysis, and information extraction.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What happens if I already earned Azure AI Engineer Associate?</summary>
+          <div class="faq__answer">
+            <p>A certification earned before retirement remains on your Microsoft Learn transcript. AI-102 and its renewal assessment are retired, so the exam cannot be retaken or newly earned.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Are AI-102 practice questions still useful?</summary>
+          <div class="faq__answer">
+            <p>Yes, as reference material for Azure AI services, generative AI, vision, language, search, and document intelligence. New candidates should study the current <a href="/exams/ai-103/">AI-103</a> outline and use its exam-specific bank.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the current path after AI-102 retirement?</summary>
+          <div class="faq__answer">
+            <p><a href="/exams/ai-901/">AI-901</a> is the current Azure AI Fundamentals exam, and <a href="/exams/ai-103/">AI-103</a> is the current role-based route for developing AI apps and agents on Azure. AI-102 content remains useful as historical reference, but new candidates should use the AI-901 and AI-103 outlines rather than planning an AI-102 certification path.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What replaced the retired AI-102 and DP-100 routes?</summary>
+          <div class="faq__answer">
+            <p>Microsoft replaced the retired AI-102 route with <a href="/exams/ai-103/">AI-103</a> for Azure AI apps and agents, and identifies <a href="/exams/ai-300/">AI-300</a> as the replacement for the retired DP-100 data-science route. AI-103 focuses on application and agent development; AI-300 focuses on operationalizing machine learning and generative AI systems.</p>
+          </div>
+        </details>
       </div>
     </section>
 

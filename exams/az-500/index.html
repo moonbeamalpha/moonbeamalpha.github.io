@@ -1132,6 +1132,7 @@
     .am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }
   </style>
   <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/exams/exam-visuals.css">
 </head>
 <body>
 
@@ -1299,36 +1300,71 @@
       <p class="section-lede">
         Four domains, with weights set by Microsoft's January 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-500" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
+      <figure class="exam-family-visual exam-family-visual--azure">
+        <div class="exam-family-visual__media">
+          <img
+            src="/exams/images/azure-skills-dark.webp"
+            data-theme-src-light="/exams/images/azure-skills-light.webp"
+            alt="Aura presents a visual map of identity, compute, networking, and Azure operations skills."
+            width="1400"
+            height="788"
+            loading="lazy">
+        </div>
+        <figcaption class="exam-family-visual__caption">
+          <span class="exam-family-visual__title">Azure skill map</span>
+          <span class="exam-family-visual__legend" aria-hidden="true"><span>Identity</span><span>Compute</span><span>Network</span><span>Operations</span></span>
+        </figcaption>
+      </figure>
       <div class="domains">
         <article class="domain">
           <h3>Secure identity and access<span class="domain__weight">15–20%</span></h3>
-          <p>
-            The Microsoft Entra surface end-to-end. Cover identity types (members, guests, hybrid identities), authentication (passwordless, MFA, password protection), <em>Conditional Access</em> design (named locations, sign-in risk, session controls), <em>Privileged Identity Management</em> (just-in-time activation, access reviews, eligibility), and Microsoft Entra ID Protection (risky users, risky sign-ins). Plus securing access to Azure resources via RBAC, Azure ABAC, custom roles, and managed identities. Around 6–12 questions per sitting.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The Microsoft Entra surface end-to-end. Cover identity types (members, guests, hybrid identities), authentication (passwordless, MFA, password protection), <em>Conditional Access</em> design (named locations, sign-in risk, session controls), <em>Privileged Identity Management</em> (just-in-time activation, access reviews, eligibility), and Microsoft Entra ID Protection (risky users, risky sign-ins). Plus securing access to Azure resources via RBAC, Azure ABAC, custom roles, and managed identities. Around 6–12 questions per sitting.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Secure networking<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Defence-in-depth at the network layer. Configure perimeter security with <em>Azure Firewall</em> (rules, threat intelligence, hierarchies via Firewall Manager), <em>Azure DDoS Protection</em>, <em>Web Application Firewall</em> on Application Gateway and Front Door. Network segmentation with NSGs, application security groups, service tags. Private connectivity via <em>Private Link</em>, <em>Private Endpoints</em>, and service endpoints. Plus <em>Azure Bastion</em>, JIT VM access, ExpressRoute and VPN security. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Defence-in-depth at the network layer. Configure perimeter security with <em>Azure Firewall</em> (rules, threat intelligence, hierarchies via Firewall Manager), <em>Azure DDoS Protection</em>, <em>Web Application Firewall</em> on Application Gateway and Front Door. Network segmentation with NSGs, application security groups, service tags. Private connectivity via <em>Private Link</em>, <em>Private Endpoints</em>, and service endpoints. Plus <em>Azure Bastion</em>, JIT VM access, ExpressRoute and VPN security. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Secure compute, storage, and databases<span class="domain__weight">20–25%</span></h3>
-          <p>
-            Harden the workload tier. Compute: VM updates and disk encryption (host encryption, ADE, customer-managed keys), Azure Kubernetes Service security (network policies, Microsoft Entra integration, secrets), App Service network restrictions and authentication, container registry signing and scanning. Storage: SAS tokens, stored access policies, customer-managed keys, immutable storage. Databases: SQL TDE, Always Encrypted, dynamic data masking, Microsoft Defender for SQL. Plus <em>Azure Key Vault</em> as the cross-cutting story — keys, secrets, certificates, access policies vs RBAC. Around 8–15 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                Harden the workload tier. Compute: VM updates and disk encryption (host encryption, ADE, customer-managed keys), Azure Kubernetes Service security (network policies, Microsoft Entra integration, secrets), App Service network restrictions and authentication, container registry signing and scanning. Storage: SAS tokens, stored access policies, customer-managed keys, immutable storage. Databases: SQL TDE, Always Encrypted, dynamic data masking, Microsoft Defender for SQL. Plus <em>Azure Key Vault</em> as the cross-cutting story — keys, secrets, certificates, access policies vs RBAC. Around 8–15 questions.
+              </p>
+            </div>
+          </details>
         </article>
         <article class="domain">
           <h3>Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel<span class="domain__weight">30–35%</span></h3>
-          <p>
-            The largest domain by weight, and the operational core of the role. <em>Microsoft Defender for Cloud</em>: Secure Score, regulatory compliance (Azure Security Benchmark, custom standards), workload protection plans (Servers, App Service, Storage, SQL, Containers), security recommendations and exemptions, and the Cloud Security Posture Management surface. <em>Microsoft Sentinel</em>: data connectors (Azure activity, Microsoft 365, Defender XDR), analytics rules and watchlists, incident investigation, hunting with KQL, automation via playbooks (Logic Apps), workbooks. Plus security alert lifecycle and Defender for Cloud → Sentinel integration. Around 12–20 questions.
-          </p>
+          <details class="domain__details">
+            <summary>Explore key topics</summary>
+            <div class="domain__body">
+              <p>
+                The largest domain by weight, and the operational core of the role. <em>Microsoft Defender for Cloud</em>: Secure Score, regulatory compliance (Azure Security Benchmark, custom standards), workload protection plans (Servers, App Service, Storage, SQL, Containers), security recommendations and exemptions, and the Cloud Security Posture Management surface. <em>Microsoft Sentinel</em>: data connectors (Azure activity, Microsoft 365, Defender XDR), analytics rules and watchlists, incident investigation, hunting with KQL, automation via playbooks (Logic Apps), workbooks. Plus security alert lifecycle and Defender for Cloud → Sentinel integration. Around 12–20 questions.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
 
     <!-- How Azure Mastery helps -->
-    <section id="how-helps" class="container">
+    <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AZ-500</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AZ-500</h2>
       <p>
@@ -1507,30 +1543,42 @@
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">AZ-500 FAQs</h2>
       <div class="faqs">
-        <article class="faq">
-          <h3>How much does the AZ-500 exam cost?</h3>
-          <p>The AZ-500 voucher is USD $165 in the United States, with regional pricing. AZ-500 retires on <strong>31 August 2026</strong>, so only book it if you can prepare and sit before that date; candidates starting a longer study plan should use <a href="/exams/sc-500/">SC-500</a>, the current Cloud and AI Security Engineer exam.</p>
-        </article>
-        <article class="faq">
-          <h3>Does the AZ-500 certification expire?</h3>
-          <p>AZ-500 and the Azure Security Engineer Associate certification retire on <strong>31 August 2026</strong>. Microsoft states that renewal assessments are no longer available after a certification retires. If you are starting now and cannot sit AZ-500 before retirement, prepare for <a href="/exams/sc-500/">SC-500</a> instead.</p>
-        </article>
-        <article class="faq">
-          <h3>What is the AZ-500 retake policy if I fail?</h3>
-          <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-        </article>
-        <article class="faq">
-          <h3>How long should I study for AZ-500?</h3>
-          <p>If you intend to sit AZ-500 before 31 August 2026, focus on identity and access, platform protection, security operations, and data and application security across Azure. Build hands-on familiarity with Entra, Defender for Cloud, Sentinel, Key Vault, Azure networking, and workload protection. Otherwise start with <a href="/exams/sc-500/">SC-500</a>, its current successor.</p>
-        </article>
-        <article class="faq">
-          <h3>AZ-500 vs AZ-104 — should I do AZ-104 first?</h3>
-          <p>Microsoft strongly recommends AZ-104 first, and it shows. AZ-500 assumes you already know how Azure compute, networking, and storage work day-to-day — it's the security overlay on top of that knowledge. If you've never deployed a VM or configured a VNet outside of fundamentals, take <a href="/exams/az-104/">AZ-104 (Microsoft Azure Administrator)</a> first; you'll save weeks on AZ-500 prep. If you have a year or more of hands-on Azure ops, you can skip AZ-104 and go straight in. Some employers want both anyway.</p>
-        </article>
-        <article class="faq">
-          <h3>AZ-500 vs SC-200 — which next on the security track?</h3>
-          <p>Different roles. AZ-500 is the <em>Azure</em> Security Engineer cert — it's about hardening Azure resources end-to-end. SC-200 is the <em>Security Operations Analyst</em> cert — it's about running Microsoft Defender XDR and Sentinel as a SOC analyst, with much heavier focus on M365 and incident triage workflows. If your day job is securing Azure workloads, AZ-500. If it's running detection-and-response across the Microsoft estate, SC-200. Many Cybersecurity Architect Expert candidates hold both, with <a href="/exams/sc-900/">SC-900</a> as the connective fundamentals.</p>
-        </article>
+        <details class="faq">
+          <summary>How much does the AZ-500 exam cost?</summary>
+          <div class="faq__answer">
+            <p>The AZ-500 voucher is USD $165 in the United States, with regional pricing. AZ-500 retires on <strong>31 August 2026</strong>, so only book it if you can prepare and sit before that date; candidates starting a longer study plan should use <a href="/exams/sc-500/">SC-500</a>, the current Cloud and AI Security Engineer exam.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does the AZ-500 certification expire?</summary>
+          <div class="faq__answer">
+            <p>AZ-500 and the Azure Security Engineer Associate certification retire on <strong>31 August 2026</strong>. Microsoft states that renewal assessments are no longer available after a certification retires. If you are starting now and cannot sit AZ-500 before retirement, prepare for <a href="/exams/sc-500/">SC-500</a> instead.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What is the AZ-500 retake policy if I fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How long should I study for AZ-500?</summary>
+          <div class="faq__answer">
+            <p>If you intend to sit AZ-500 before 31 August 2026, focus on identity and access, platform protection, security operations, and data and application security across Azure. Build hands-on familiarity with Entra, Defender for Cloud, Sentinel, Key Vault, Azure networking, and workload protection. Otherwise start with <a href="/exams/sc-500/">SC-500</a>, its current successor.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AZ-500 vs AZ-104 — should I do AZ-104 first?</summary>
+          <div class="faq__answer">
+            <p>Microsoft strongly recommends AZ-104 first, and it shows. AZ-500 assumes you already know how Azure compute, networking, and storage work day-to-day — it's the security overlay on top of that knowledge. If you've never deployed a VM or configured a VNet outside of fundamentals, take <a href="/exams/az-104/">AZ-104 (Microsoft Azure Administrator)</a> first; you'll save weeks on AZ-500 prep. If you have a year or more of hands-on Azure ops, you can skip AZ-104 and go straight in. Some employers want both anyway.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>AZ-500 vs SC-200 — which next on the security track?</summary>
+          <div class="faq__answer">
+            <p>Different roles. AZ-500 is the <em>Azure</em> Security Engineer cert — it's about hardening Azure resources end-to-end. SC-200 is the <em>Security Operations Analyst</em> cert — it's about running Microsoft Defender XDR and Sentinel as a SOC analyst, with much heavier focus on M365 and incident triage workflows. If your day job is securing Azure workloads, AZ-500. If it's running detection-and-response across the Microsoft estate, SC-200. Many Cybersecurity Architect Expert candidates hold both, with <a href="/exams/sc-900/">SC-900</a> as the connective fundamentals.</p>
+          </div>
+        </details>
       </div>
     </section>
 

@@ -92,7 +92,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ## Guides
 
-Free long-form study guides — exam-neutral advice grounded in the official Microsoft Learn skills outlines, with FAQ and study-plan structured data on every page. Index: [Azure certification guides](https://azuremastery.app/guides/).
+Free long-form study guides — exam-neutral advice grounded in the official Microsoft Learn skills outlines. Every guide article includes FAQ structured data, and the five how-to guides also include study-plan structured data. Index: [Azure certification guides](https://azuremastery.app/guides/).
 
 - [Which Microsoft certification should you get first?](https://azuremastery.app/guides/which-azure-certification-first/): Decision guide mapping roles (IT ops, security, data, AI, business) to the right entry certification and its associate-level follow-on.
 - [How to pass AZ-900 Azure Fundamentals](https://azuremastery.app/guides/how-to-pass-az-900/): Study plan, domain breakdown, hardest topics, and what to do after passing.

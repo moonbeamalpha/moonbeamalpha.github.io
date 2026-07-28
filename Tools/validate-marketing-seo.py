@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the static SEO contract for every Azure Mastery exam page."""
+"""Validate the static SEO contract for every Azure Mastery exam and guide page."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import ast
 import json
 import re
 import sys
+from html import unescape
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -26,6 +27,25 @@ SUCCESSOR_ROUTES = {
 }
 SEO_UPDATED = "2026-07-25"
 SEO_UPDATED_OVERRIDES = {}
+GUIDE_UPDATED = "2026-07-28"
+GUIDE_UPDATED_LABEL = "Updated 28 July 2026"
+GUIDE_SLUGS = (
+    "which-azure-certification-first",
+    "how-to-pass-az-900",
+    "how-to-pass-az-104",
+    "how-to-pass-sc-900",
+    "how-to-pass-dp-900",
+    "how-to-pass-ai-901",
+    "az-900-vs-az-104",
+    "sc-900-vs-az-900",
+)
+HOW_TO_GUIDE_SLUGS = {
+    "how-to-pass-az-900",
+    "how-to-pass-az-104",
+    "how-to-pass-sc-900",
+    "how-to-pass-dp-900",
+    "how-to-pass-ai-901",
+}
 ACTIVE_SEO_REQUIREMENTS = {
     "AI-103": ("Developing AI Apps and Agents on Azure", "Microsoft Foundry"),
     "AB-620": ("Copilot Studio AI Agent Builder exam", "Power Platform"),
@@ -93,6 +113,221 @@ def matches_once(pattern: str, text: str, label: str, page: Path, errors: list[s
         errors.append(f"{page.relative_to(ROOT)}: expected one {label}, found {len(found)}")
         return ""
     return found[0]
+
+
+def normalise_visible_text(markup: str) -> str:
+    return " ".join(unescape(re.sub(r"<[^>]+>", "", markup)).split())
+
+
+def validate_guide_pages(errors: list[str], sitemap: str, llms: str) -> list[Path]:
+    guide_pages = [ROOT / "guides" / "index.html"]
+    guide_pages.extend(ROOT / "guides" / slug / "index.html" for slug in GUIDE_SLUGS)
+
+    expected_llms_contract = (
+        "Every guide article includes FAQ structured data, and the five how-to guides "
+        "also include study-plan structured data."
+    )
+    if expected_llms_contract not in llms:
+        errors.append("llms.txt has a stale or inaccurate guide structured-data description")
+
+    for page in guide_pages:
+        slug = "" if page.parent == ROOT / "guides" else page.parent.name
+        text = page.read_text()
+        title = matches_once(r"<title>(.*?)</title>", text, "title", page, errors, re.S)
+        description = matches_once(
+            r'<meta name="description" content="([^"]*)">', text, "meta description", page, errors
+        )
+        canonical = matches_once(
+            r'<link rel="canonical" href="([^"]+)">', text, "canonical", page, errors
+        )
+        expected_canonical = (
+            "https://azuremastery.app/guides/"
+            if not slug
+            else f"https://azuremastery.app/guides/{slug}/"
+        )
+        if canonical != expected_canonical:
+            errors.append(
+                f"{page.relative_to(ROOT)}: canonical is {canonical}, expected {expected_canonical}"
+            )
+        if len(title) > 62:
+            errors.append(f"{page.relative_to(ROOT)}: title is {len(title)} characters")
+        if len(description) > 160:
+            errors.append(f"{page.relative_to(ROOT)}: description is {len(description)} characters")
+
+        matches_once(r"<h1\b[^>]*>.*?</h1>", text, "H1", page, errors, re.S)
+        modified = matches_once(
+            rf'<time datetime="([^"]+)">{re.escape(GUIDE_UPDATED_LABEL)}</time>',
+            text,
+            "semantic updated date",
+            page,
+            errors,
+        )
+        if modified and modified != GUIDE_UPDATED:
+            errors.append(
+                f"{page.relative_to(ROOT)}: visible updated date is {modified}, expected {GUIDE_UPDATED}"
+            )
+
+        required_markup = (
+            '<meta name="robots" content="index, follow, max-image-preview:large, '
+            'max-snippet:-1, max-video-preview:-1">',
+            '<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">',
+            '<meta name="author" content="Moonbeam Alpha Ltd">',
+            '<meta name="publisher" content="Moonbeam Alpha Ltd">',
+            '<link rel="alternate" type="application/llms.txt" href="/llms.txt">',
+            'property="og:title"',
+            'property="og:description"',
+            'property="og:image"',
+            'name="twitter:card"',
+            'name="twitter:title"',
+            'name="twitter:description"',
+            'name="twitter:image"',
+        )
+        for marker in required_markup:
+            if marker not in text:
+                errors.append(f"{page.relative_to(ROOT)}: required SEO marker is missing: {marker}")
+
+        og_url = matches_once(
+            r'<meta property="og:url" content="([^"]+)">', text, "OpenGraph URL", page, errors
+        )
+        if og_url and og_url != expected_canonical:
+            errors.append(
+                f"{page.relative_to(ROOT)}: OpenGraph URL is {og_url}, expected {expected_canonical}"
+            )
+
+        schemas = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', text, re.S)
+        graph: list[dict[str, object]] = []
+        if len(schemas) != 1:
+            errors.append(
+                f"{page.relative_to(ROOT)}: expected one JSON-LD block, found {len(schemas)}"
+            )
+        else:
+            try:
+                payload = json.loads(schemas[0])
+                graph = payload.get("@graph", [])
+                if not isinstance(graph, list):
+                    errors.append(f"{page.relative_to(ROOT)}: JSON-LD @graph is not a list")
+                    graph = []
+            except json.JSONDecodeError as exc:
+                errors.append(f"{page.relative_to(ROOT)}: invalid JSON-LD: {exc}")
+
+        schema_types = {
+            item.get("@type") for item in graph if isinstance(item, dict) and item.get("@type")
+        }
+        required_types = {"WebPage", "BreadcrumbList", "ItemList"} if not slug else {
+            "WebPage",
+            "BreadcrumbList",
+            "TechArticle",
+            "FAQPage",
+        }
+        if slug in HOW_TO_GUIDE_SLUGS:
+            required_types.add("HowTo")
+        missing_types = required_types - schema_types
+        if missing_types:
+            errors.append(
+                f"{page.relative_to(ROOT)}: missing JSON-LD types {sorted(missing_types)}"
+            )
+        if slug and slug not in HOW_TO_GUIDE_SLUGS and "HowTo" in schema_types:
+            errors.append(
+                f"{page.relative_to(ROOT)}: comparison or decision guide has misleading HowTo schema"
+            )
+
+        dated_nodes = [
+            item for item in graph if isinstance(item, dict) and "dateModified" in item
+        ]
+        expected_dated_nodes = 1 if not slug else 2
+        if len(dated_nodes) != expected_dated_nodes:
+            errors.append(
+                f"{page.relative_to(ROOT)}: expected {expected_dated_nodes} dated schema nodes, "
+                f"found {len(dated_nodes)}"
+            )
+        for item in dated_nodes:
+            if item["dateModified"] != GUIDE_UPDATED:
+                errors.append(
+                    f"{page.relative_to(ROOT)}: schema dateModified is {item['dateModified']}, "
+                    f"expected {GUIDE_UPDATED}"
+                )
+
+        if slug:
+            faq_nodes = [
+                item for item in graph if isinstance(item, dict) and item.get("@type") == "FAQPage"
+            ]
+            visible_faqs = re.findall(
+                r'<details class="faq">\s*<summary>(.*?)</summary>\s*'
+                r'<div class="faq__answer"><p>(.*?)</p></div>\s*</details>',
+                text,
+                re.S,
+            )
+            if len(faq_nodes) != 1:
+                errors.append(
+                    f"{page.relative_to(ROOT)}: expected one FAQPage node, found {len(faq_nodes)}"
+                )
+            else:
+                schema_faqs = faq_nodes[0].get("mainEntity", [])
+                if len(schema_faqs) != len(visible_faqs):
+                    errors.append(
+                        f"{page.relative_to(ROOT)}: FAQ schema has {len(schema_faqs)} questions, "
+                        f"visible section has {len(visible_faqs)}"
+                    )
+                else:
+                    for position, (schema_faq, visible_faq) in enumerate(
+                        zip(schema_faqs, visible_faqs), start=1
+                    ):
+                        schema_question = normalise_visible_text(str(schema_faq.get("name", "")))
+                        schema_answer = normalise_visible_text(
+                            str(schema_faq.get("acceptedAnswer", {}).get("text", ""))
+                        )
+                        visible_question = normalise_visible_text(visible_faq[0])
+                        visible_answer = normalise_visible_text(visible_faq[1])
+                        if (schema_question, schema_answer) != (visible_question, visible_answer):
+                            errors.append(
+                                f"{page.relative_to(ROOT)}: FAQ {position} schema does not match visible text"
+                            )
+            if "https://learn.microsoft.com/" not in text:
+                errors.append(
+                    f"{page.relative_to(ROOT)}: official Microsoft Learn source link is missing"
+                )
+
+        if canonical and canonical not in llms:
+            errors.append(f"{page.relative_to(ROOT)}: canonical URL is missing from llms.txt")
+
+        sitemap_block = re.search(
+            rf"<url>\s*<loc>{re.escape(expected_canonical)}</loc>.*?</url>",
+            sitemap,
+            re.S,
+        )
+        if not sitemap_block or f"<lastmod>{GUIDE_UPDATED}</lastmod>" not in sitemap_block.group(0):
+            errors.append(f"{page.relative_to(ROOT)}: sitemap entry is missing or stale")
+
+        ids = set(re.findall(r'\bid="([^"]+)"', text))
+        for href in re.findall(r'href="([^"]+)"', text):
+            if href.startswith("#"):
+                if href[1:] and href[1:] not in ids:
+                    errors.append(f"{page.relative_to(ROOT)}: missing fragment target {href}")
+                continue
+            if href.startswith(("http:", "https:", "mailto:", "tel:")):
+                continue
+            url = urlsplit(href)
+            target = ROOT / url.path.lstrip("/") if href.startswith("/") else page.parent / url.path
+            if url.path.endswith("/"):
+                target /= "index.html"
+            if not target.exists():
+                errors.append(f"{page.relative_to(ROOT)}: missing internal target {href}")
+
+    robots = (ROOT / "robots.txt").read_text()
+    for crawler in (
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "PerplexityBot",
+        "Google-Extended",
+    ):
+        if not re.search(
+            rf"User-agent: {re.escape(crawler)}\s+Allow: /",
+            robots,
+        ):
+            errors.append(f"robots.txt does not explicitly allow {crawler}")
+
+    return guide_pages
 
 
 def main() -> None:
@@ -243,12 +478,17 @@ def main() -> None:
         if not block or f"<lastmod>{expected_lastmod}</lastmod>" not in block.group(0):
             errors.append(f"sitemap entry missing or stale for {code}")
 
+    guide_pages = validate_guide_pages(errors, sitemap, llms)
+
     if errors:
         print(f"SEO validation failed with {len(errors)} error(s):")
         for error in errors:
             print(f"  - {error}")
         sys.exit(1)
-    print(f"SEO validation passed for {len(pages)} exam pages.")
+    print(
+        f"SEO validation passed for {len(pages)} exam pages "
+        f"and {len(guide_pages)} guide pages."
+    )
 
 
 if __name__ == "__main__":

@@ -860,64 +860,370 @@
     .aura-trait--purple { border-color: rgba(149,120,224,0.5); color: #b9a6f0; }
     .aura-trait--cyan   { border-color: rgba(80,230,255,0.45); color: var(--azure-cyan); }
 
-    /* v1.9 Aura-led session recap */
+    /* Aura-led session recap — a compact visual story, not a wall of copy */
     .session-story-preview {
-      display: flex; flex-direction: column; gap: 12px;
-      padding: 20px 14px 16px; overflow: hidden;
-      background: linear-gradient(180deg, #0c1422 0%, #070a11 100%);
+      --recap-accent: #50e6ff;
+      --recap-blue: #5a91ff;
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 17px 13px 15px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 22% 16%, rgba(80,230,255,0.16), transparent 30%),
+        radial-gradient(circle at 82% 34%, rgba(149,120,224,0.14), transparent 34%),
+        linear-gradient(180deg, #0c1422 0%, #070a11 100%);
       color: #f5f7fb;
     }
-    .session-story-preview__nav {
-      font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600;
-      letter-spacing: 0.02em; text-align: center; color: #b8c2d1;
+    .session-story-preview::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(to bottom, #000, transparent 62%);
+      pointer-events: none;
     }
-    .session-story-preview__card {
-      padding: 16px; border: 1px solid rgba(80,230,255,0.22); border-radius: 18px;
-      background: rgba(17,24,39,0.82); box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+    .session-story-preview__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      min-height: 22px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 650;
+      letter-spacing: 0.03em;
+      color: #aab7c9;
+    }
+    .session-story-preview__nav-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 8px;
+      border: 1px solid rgba(80,230,255,0.18);
+      border-radius: 999px;
+      background: rgba(80,230,255,0.07);
+      color: #dffbff;
+    }
+    .session-story-preview__nav-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--recap-accent);
+      box-shadow: 0 0 9px rgba(80,230,255,0.8);
+    }
+    .session-story-preview__aura-stage {
+      position: relative;
+      min-height: 104px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 12px;
+    }
+    .session-story-preview__aura-glow {
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      width: 128px;
+      height: 128px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(80,230,255,0.2), rgba(43,136,216,0.07) 48%, transparent 72%);
+      filter: blur(2px);
     }
     .session-story-preview__aura {
-      display: block; width: 86px; height: auto; margin: -8px auto -2px;
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 94px;
+      height: auto;
       filter: drop-shadow(0 12px 18px rgba(0,0,0,0.38));
     }
+    .session-story-preview__bubble {
+      position: relative;
+      z-index: 2;
+      max-width: 150px;
+      margin-left: -2px;
+      padding: 10px 11px;
+      border: 1px solid rgba(80,230,255,0.26);
+      border-radius: 13px 13px 13px 4px;
+      background: rgba(17,24,39,0.78);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      color: #e9faff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .session-story-preview__card {
+      padding: 14px;
+      border: 1px solid rgba(80,230,255,0.22);
+      border-radius: 20px;
+      background:
+        linear-gradient(145deg, rgba(80,230,255,0.06), transparent 45%),
+        rgba(17,24,39,0.88);
+      box-shadow: 0 20px 44px rgba(0,0,0,0.34);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+    .session-story-preview__heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 82px;
+      align-items: center;
+      gap: 11px;
+    }
     .session-story-preview__eyebrow {
-      margin: 0 0 6px; font-family: 'Outfit', sans-serif; font-size: 9px;
-      font-weight: 700; letter-spacing: 0.14em; color: #50e6ff;
+      margin: 0 0 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 8px;
+      font-weight: 750;
+      letter-spacing: 0.15em;
+      color: var(--recap-accent);
     }
     .session-story-preview h3 {
-      margin: 0 0 8px; font-family: 'Outfit', sans-serif; font-size: 19px; line-height: 1.12;
+      margin: 0;
+      max-width: 150px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      line-height: 1.08;
     }
-    .session-story-preview__narrative {
-      margin: 0; font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5;
-      color: #b8c2d1;
+    .session-story-preview__score-ring {
+      --score-progress: 47.5%;
+      position: relative;
+      display: grid;
+      width: 82px;
+      height: 82px;
+      place-items: center;
+      border-radius: 50%;
+      background: conic-gradient(var(--recap-accent) var(--score-progress), rgba(255,255,255,0.08) 0);
+      box-shadow: 0 0 26px rgba(80,230,255,0.13);
     }
-    .session-story-preview__score {
-      display: flex; align-items: baseline; justify-content: space-between; margin-top: 14px;
-      padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);
-      font-family: 'DM Sans', sans-serif; font-size: 10px; color: #9aa7ba;
+    .session-story-preview__score-ring::before {
+      content: '';
+      position: absolute;
+      inset: 7px;
+      border-radius: inherit;
+      background: #101827;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
     }
-    .session-story-preview__score strong {
-      font-family: 'Outfit', sans-serif; font-size: 26px; color: #f5f7fb;
+    .session-story-preview__score-value {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+    .session-story-preview__score-value strong {
+      font-family: 'Outfit', sans-serif;
+      font-size: 23px;
+      color: #f5f7fb;
+    }
+    .session-story-preview__score-value span {
+      margin-top: 4px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 7px;
+      color: #91a0b4;
+    }
+    .session-story-preview__score-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+      margin-top: 11px;
+    }
+    .session-story-preview__score-meta div {
+      padding: 8px 9px;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.025);
+    }
+    .session-story-preview__score-meta span,
+    .session-story-preview__score-meta strong {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .session-story-preview__score-meta span {
+      margin-bottom: 2px;
+      color: #8f9eb2;
+      font-size: 7px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .session-story-preview__score-meta strong {
+      color: #eaf1fa;
+      font-size: 10px;
+    }
+    .session-story-preview__domains {
+      display: grid;
+      gap: 7px;
+      margin-top: 11px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .session-story-preview__domains-header,
+    .session-story-preview__domain-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .session-story-preview__domains-header {
+      color: #8f9eb2;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+    .session-story-preview__domains-header strong {
+      color: var(--recap-accent);
+      font-weight: 700;
+    }
+    .session-story-preview__domain {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      align-items: center;
+      gap: 8px;
+    }
+    .session-story-preview__domain-label {
+      color: #b8c4d4;
+      font-size: 8px;
+    }
+    .session-story-preview__domain-label strong {
+      color: #8796aa;
+      font-size: 7px;
+      font-weight: 600;
+    }
+    .session-story-preview__track {
+      height: 6px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+    }
+    .session-story-preview__track span {
+      display: block;
+      width: var(--signal);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--recap-blue), var(--recap-accent));
+      box-shadow: 0 0 9px rgba(80,230,255,0.34);
+    }
+    .session-story-preview__domain--focus .session-story-preview__domain-label,
+    .session-story-preview__domain--focus .session-story-preview__domain-label strong {
+      color: var(--recap-accent);
+    }
+    .session-story-preview__domain--focus .session-story-preview__track span {
+      background: linear-gradient(90deg, #f59e0b, #ffcf57);
+      box-shadow: 0 0 9px rgba(245,158,11,0.3);
     }
     .session-story-preview__change {
-      margin-top: 10px; padding: 12px; border-radius: 14px;
-      background: rgba(80,230,255,0.08); border: 1px solid rgba(80,230,255,0.16);
+      display: grid;
+      grid-template-columns: 30px minmax(0, 1fr) 18px;
+      align-items: center;
+      gap: 9px;
+      margin-top: 11px;
+      padding: 10px;
+      border: 1px solid rgba(80,230,255,0.2);
+      border-radius: 13px;
+      background: linear-gradient(105deg, rgba(80,230,255,0.12), rgba(90,145,255,0.06));
     }
-    .session-story-preview__change strong,
-    .session-story-preview__change span { display: block; }
-    .session-story-preview__change strong {
-      margin-bottom: 4px; font-family: 'Outfit', sans-serif; font-size: 12px; color: #50e6ff;
+    .session-story-preview__change-icon {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 9px;
+      background: rgba(80,230,255,0.14);
+      color: var(--recap-accent);
     }
-    .session-story-preview__change span {
-      font-family: 'DM Sans', sans-serif; font-size: 10px; line-height: 1.35; color: #b8c2d1;
+    .session-story-preview__change-icon svg,
+    .session-story-preview__change-arrow svg {
+      display: block;
+      width: 14px;
+      height: 14px;
+    }
+    .session-story-preview__change-copy span,
+    .session-story-preview__change-copy strong {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .session-story-preview__change-copy span {
+      margin-bottom: 2px;
+      color: #91a0b4;
+      font-size: 7px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .session-story-preview__change-copy strong {
+      color: #eafcff;
+      font-size: 10px;
+      line-height: 1.25;
+    }
+    .session-story-preview__change-arrow {
+      color: var(--recap-accent);
     }
     html[data-theme="light"] .session-story-preview {
-      background: linear-gradient(180deg, #edf5fb 0%, #f8fafc 100%); color: #111827;
+      background:
+        radial-gradient(circle at 22% 16%, rgba(80,230,255,0.2), transparent 32%),
+        radial-gradient(circle at 82% 34%, rgba(149,120,224,0.12), transparent 35%),
+        linear-gradient(180deg, #edf5fb 0%, #f8fafc 100%);
+      color: #111827;
     }
-    html[data-theme="light"] .session-story-preview__card { background: rgba(255,255,255,0.9); }
-    html[data-theme="light"] .session-story-preview__narrative,
-    html[data-theme="light"] .session-story-preview__change span,
+    html[data-theme="light"] .session-story-preview::before { opacity: 0.42; }
     html[data-theme="light"] .session-story-preview__nav { color: #526176; }
-    html[data-theme="light"] .session-story-preview__score strong { color: #111827; }
+    html[data-theme="light"] .session-story-preview__nav-status {
+      color: #0e6278;
+      background: rgba(14,116,144,0.07);
+      border-color: rgba(14,116,144,0.18);
+    }
+    html[data-theme="light"] .session-story-preview__bubble {
+      color: #24364a;
+      background: rgba(255,255,255,0.88);
+      border-color: rgba(14,116,144,0.18);
+      box-shadow: 0 12px 28px rgba(15,30,60,0.12);
+    }
+    html[data-theme="light"] .session-story-preview__card {
+      background:
+        linear-gradient(145deg, rgba(80,230,255,0.08), transparent 45%),
+        rgba(255,255,255,0.94);
+      border-color: rgba(14,116,144,0.18);
+      box-shadow: 0 20px 42px rgba(15,30,60,0.13);
+    }
+    html[data-theme="light"] .session-story-preview__score-ring {
+      background: conic-gradient(#0e7490 var(--score-progress), rgba(15,30,60,0.09) 0);
+      box-shadow: 0 0 24px rgba(14,116,144,0.12);
+    }
+    html[data-theme="light"] .session-story-preview__score-ring::before {
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(15,30,60,0.06);
+    }
+    html[data-theme="light"] .session-story-preview__score-value strong,
+    html[data-theme="light"] .session-story-preview__score-meta strong,
+    html[data-theme="light"] .session-story-preview__change-copy strong { color: #14202e; }
+    html[data-theme="light"] .session-story-preview__score-value span,
+    html[data-theme="light"] .session-story-preview__score-meta span,
+    html[data-theme="light"] .session-story-preview__domains-header,
+    html[data-theme="light"] .session-story-preview__domain-label,
+    html[data-theme="light"] .session-story-preview__domain-label strong,
+    html[data-theme="light"] .session-story-preview__change-copy span { color: #5b6b7d; }
+    html[data-theme="light"] .session-story-preview__score-meta div {
+      border-color: rgba(15,30,60,0.07);
+      background: rgba(15,30,60,0.025);
+    }
+    html[data-theme="light"] .session-story-preview__domains { border-color: rgba(15,30,60,0.07); }
+    html[data-theme="light"] .session-story-preview__track { background: rgba(15,30,60,0.08); }
+    html[data-theme="light"] .session-story-preview__change {
+      border-color: rgba(14,116,144,0.18);
+      background: linear-gradient(105deg, rgba(80,230,255,0.14), rgba(90,145,255,0.06));
+    }
 
     /* How It Works coaching chip */
     .how-aura {
@@ -2768,22 +3074,67 @@
   </section>
 
   <!-- ═══════════ SHOWCASE 3: EXAM SIMULATOR ═══════════ -->
-  <section class="section-showcase">
+  <section class="section-showcase" id="exam-simulator">
     <div class="showcase-inner showcase-inner--device-left">
       <div class="showcase-device" aria-hidden="true">
         <div class="phone-wrap phone-angle-feature-left">
           <div class="phone-frame" style="width:320px;height:660px;">
             <div class="phone-screen session-story-preview">
-              <div class="session-story-preview__nav">Session recap</div>
-              <img src="images/aura-coach.webp" alt="" class="session-story-preview__aura" width="320" height="480" loading="lazy" decoding="async">
+              <div class="session-story-preview__nav">
+                <span class="session-story-preview__nav-status"><span class="session-story-preview__nav-dot"></span>Practice complete</span>
+                <span>Session recap</span>
+              </div>
+              <div class="session-story-preview__aura-stage">
+                <span class="session-story-preview__aura-glow"></span>
+                <img src="images/aura-coach.webp" alt="" class="session-story-preview__aura" width="320" height="480" loading="lazy" decoding="async">
+                <div class="session-story-preview__bubble">I found the clearest place to start.</div>
+              </div>
               <div class="session-story-preview__card">
-                <p class="session-story-preview__eyebrow">PRACTICE RESULTS</p>
-                <h3>Now we know where to focus</h3>
-                <p class="session-story-preview__narrative">This result gave us a useful starting point. I found the areas to strengthen, and the explanations are ready when you are.</p>
-                <div class="session-story-preview__score"><span>Exam score</span><strong>475</strong></div>
+                <div class="session-story-preview__heading">
+                  <div>
+                    <p class="session-story-preview__eyebrow">PRACTICE RESULTS</p>
+                    <h3>Now we know where to focus</h3>
+                  </div>
+                  <div class="session-story-preview__score-ring" style="--score-progress:47.5%;" aria-label="Exam score 475 out of 1000">
+                    <div class="session-story-preview__score-value"><strong>475</strong><span>/ 1000</span></div>
+                  </div>
+                </div>
+                <div class="session-story-preview__score-meta">
+                  <div><span>Pass mark</span><strong>700</strong></div>
+                  <div><span>Gap to close</span><strong>225 points</strong></div>
+                </div>
+                <div class="session-story-preview__domains">
+                  <div class="session-story-preview__domains-header"><span>Domain signal</span><strong>Focus first</strong></div>
+                  <div class="session-story-preview__domain session-story-preview__domain--focus" style="--signal:42%;">
+                    <div class="session-story-preview__domain-label"><span>Storage</span><strong>Focus</strong></div>
+                    <div class="session-story-preview__track"><span></span></div>
+                  </div>
+                  <div class="session-story-preview__domain" style="--signal:66%;">
+                    <div class="session-story-preview__domain-label"><span>Compute</span><strong>Building</strong></div>
+                    <div class="session-story-preview__track"><span></span></div>
+                  </div>
+                  <div class="session-story-preview__domain" style="--signal:78%;">
+                    <div class="session-story-preview__domain-label"><span>Identity</span><strong>Steady</strong></div>
+                    <div class="session-story-preview__track"><span></span></div>
+                  </div>
+                </div>
                 <div class="session-story-preview__change">
-                  <strong>Focus: Storage</strong>
-                  <span>Review the highest-value misses first</span>
+                  <span class="session-story-preview__change-icon">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"></circle>
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"></circle>
+                      <path d="M12 4V1.8M12 22.2V20M4 12H1.8M22.2 12H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                    </svg>
+                  </span>
+                  <div class="session-story-preview__change-copy">
+                    <span>Best next move</span>
+                    <strong>Review the highest-value Storage misses</strong>
+                  </div>
+                  <span class="session-story-preview__change-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 12h13M13 7l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
                 </div>
               </div>
             </div>

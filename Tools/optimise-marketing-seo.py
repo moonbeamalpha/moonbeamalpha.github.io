@@ -35,7 +35,10 @@ EXAMS_DIR = ROOT / "exams"
 DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-07-25"
-SEO_UPDATED_OVERRIDES = {}
+SEO_UPDATED_OVERRIDES = {
+    "AZ-400": "2026-07-30",
+    "PL-300": "2026-07-30",
+}
 RETIRED_EXAMS = {
     "AI-900": {
         "date": "30 June 2026",
@@ -66,6 +69,28 @@ RETIRING_EXAMS = {
     },
 }
 ACTIVE_SEO = {
+    "AZ-400": {
+        "title": "AZ-400 DevOps Engineer Practice Questions | Azure Mastery",
+        "description": (
+            "{count} AZ-400 practice questions for DevOps Engineer Expert. Study Azure Pipelines, "
+            "GitHub Actions, security, deployments, and monitoring on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AZ-400 practice questions covering Azure Pipelines, GitHub Actions, security, "
+            "deployments, and monitoring. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
+    "PL-300": {
+        "title": "PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery",
+        "description": (
+            "{count} PL-300 Power BI practice questions covering Power Query, DAX, data modelling, "
+            "visualisation, and security. Adaptive exam prep for iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} PL-300 Power BI practice questions covering Power Query, DAX, modelling, "
+            "visualisation, and security. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
     "AI-103": {
         "description": (
             "{count} AI-103 practice questions for Developing AI Apps and Agents on Azure. "

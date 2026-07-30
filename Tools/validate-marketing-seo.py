@@ -26,7 +26,10 @@ SUCCESSOR_ROUTES = {
     **{code: successor for code, (_, successor) in RETIRING.items()},
 }
 SEO_UPDATED = "2026-07-25"
-SEO_UPDATED_OVERRIDES = {}
+SEO_UPDATED_OVERRIDES = {
+    "AZ-400": "2026-07-30",
+    "PL-300": "2026-07-30",
+}
 GUIDE_UPDATED = "2026-07-28"
 GUIDE_UPDATED_LABEL = "Updated 28 July 2026"
 GUIDE_SLUGS = (
@@ -47,9 +50,16 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-ai-901",
 }
 ACTIVE_SEO_REQUIREMENTS = {
+    "AZ-400": ("DevOps Engineer Expert", "Azure Pipelines", "GitHub Actions"),
     "AI-103": ("Developing AI Apps and Agents on Azure", "Microsoft Foundry"),
     "AB-620": ("Copilot Studio AI Agent Builder exam", "Power Platform"),
     "AI-901": ("current Azure AI Fundamentals exam", "Microsoft Foundry"),
+    "PL-300": ("Power BI", "Power Query", "DAX"),
+}
+ACTIVE_SEO_TITLES = {
+    "AI-901": "AI-901 Practice Questions | Azure AI Fundamentals Exam",
+    "AZ-400": "AZ-400 DevOps Engineer Practice Questions | Azure Mastery",
+    "PL-300": "PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery",
 }
 TARGETED_STALE_PHRASES = {
     "AI-103": (
@@ -451,8 +461,9 @@ def main() -> None:
         for phrase in ACTIVE_SEO_REQUIREMENTS.get(code, ()):
             if phrase not in description:
                 errors.append(f"{page.relative_to(ROOT)}: tailored description is missing {phrase!r}")
-        if code == "AI-901" and title != "AI-901 Practice Questions | Azure AI Fundamentals Exam":
-            errors.append(f"{page.relative_to(ROOT)}: tailored AI-901 title is missing")
+        expected_title = ACTIVE_SEO_TITLES.get(code)
+        if expected_title is not None and title != expected_title:
+            errors.append(f"{page.relative_to(ROOT)}: tailored {code} title is missing")
         for phrase in TARGETED_STALE_PHRASES.get(code, ()):
             if phrase in text:
                 errors.append(f"{page.relative_to(ROOT)}: stale targeted copy remains: {phrase}")

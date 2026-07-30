@@ -106,6 +106,16 @@ ACTIVE_PAGES_WITHOUT_RETIRED_ROUTES = {
     "SC-900",
 }
 
+SOCIAL_PROFILES = (
+    ("instagram", "Instagram", "https://www.instagram.com/azuremastery.app"),
+    ("x", "X", "https://x.com/AzureMastery"),
+    ("tiktok", "TikTok", "https://www.tiktok.com/@azuremastery"),
+    ("youtube", "YouTube", "https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg"),
+    ("facebook", "Facebook", "https://www.facebook.com/profile.php?id=61578421530035"),
+)
+SOCIAL_START_MARKER = "<!-- social-follow:start -->"
+SOCIAL_END_MARKER = "<!-- social-follow:end -->"
+
 
 def matches_once(pattern: str, text: str, label: str, page: Path, errors: list[str], flags: int = 0) -> str:
     found = re.findall(pattern, text, flags)
@@ -117,6 +127,68 @@ def matches_once(pattern: str, text: str, label: str, page: Path, errors: list[s
 
 def normalise_visible_text(markup: str) -> str:
     return " ".join(unescape(re.sub(r"<[^>]+>", "", markup)).split())
+
+
+def social_target_pages() -> list[Path]:
+    pages = [ROOT / "index.html", ROOT / "exams" / "_template.html"]
+    pages.extend(ROOT / "exams" / code.lower() / "index.html" for code in sorted(COUNTS))
+    pages.append(ROOT / "guides" / "index.html")
+    pages.extend(ROOT / "guides" / slug / "index.html" for slug in GUIDE_SLUGS)
+    pages.extend(
+        ROOT / "apps" / "AzureMastery" / name
+        for name in ("privacy.html", "terms.html", "support.html")
+    )
+    return pages
+
+
+def validate_social_follow(errors: list[str]) -> None:
+    partial = (ROOT / "_includes" / "social-follow.html").read_text().strip()
+    marker_pattern = (
+        rf"{re.escape(SOCIAL_START_MARKER)}.*?{re.escape(SOCIAL_END_MARKER)}"
+    )
+
+    for page in social_target_pages():
+        text = page.read_text()
+        if text.count('<link rel="stylesheet" href="/social-follow.css">') != 1:
+            errors.append(f"{page.relative_to(ROOT)}: shared social-follow stylesheet is missing or duplicated")
+
+        blocks = re.findall(marker_pattern, text, re.S)
+        if len(blocks) != 1:
+            errors.append(
+                f"{page.relative_to(ROOT)}: expected one social-follow block, found {len(blocks)}"
+            )
+            continue
+
+        block = blocks[0]
+        normalised_block = re.sub(r"(?m)^ {4}", "", block).strip()
+        if normalised_block != partial:
+            errors.append(f"{page.relative_to(ROOT)}: social-follow block has drifted from the shared partial")
+
+        if 'aria-label="Follow Azure Mastery on social media"' not in block:
+            errors.append(f"{page.relative_to(ROOT)}: social navigation label is missing")
+        for platform, label, url in SOCIAL_PROFILES:
+            if block.count(url) != 1:
+                errors.append(
+                    f"{page.relative_to(ROOT)}: expected one {label} social link, found {block.count(url)}"
+                )
+            for marker in (
+                f'data-social-platform="{platform}"',
+                'data-social-placement="footer"',
+                f'aria-label="Azure Mastery on {label}"',
+                f"<span>{label}</span>",
+            ):
+                if marker not in block:
+                    errors.append(f"{page.relative_to(ROOT)}: {label} social marker is missing: {marker}")
+
+    homepage = (ROOT / "index.html").read_text()
+    same_as_match = re.search(r'"sameAs": \[(.*?)\]', homepage, re.S)
+    if not same_as_match:
+        errors.append("homepage Organization sameAs list is missing")
+    else:
+        same_as = same_as_match.group(1)
+        for _, label, url in SOCIAL_PROFILES:
+            if same_as.count(url) != 1:
+                errors.append(f"homepage Organization sameAs must contain one {label} profile")
 
 
 def validate_guide_pages(errors: list[str], sitemap: str, llms: str) -> list[Path]:
@@ -333,7 +405,11 @@ def validate_guide_pages(errors: list[str], sitemap: str, llms: str) -> list[Pat
 def main() -> None:
     errors: list[str] = []
 
-    for script in (ROOT / "Tools" / "optimise-marketing-seo.py", ROOT / "Tools" / "sync-marketing-counts.py"):
+    for script in (
+        ROOT / "Tools" / "optimise-marketing-seo.py",
+        ROOT / "Tools" / "sync-marketing-counts.py",
+        ROOT / "Tools" / "sync-social-footer.py",
+    ):
         try:
             ast.parse(script.read_text(), filename=str(script))
         except SyntaxError as exc:
@@ -479,6 +555,7 @@ def main() -> None:
             errors.append(f"sitemap entry missing or stale for {code}")
 
     guide_pages = validate_guide_pages(errors, sitemap, llms)
+    validate_social_follow(errors)
 
     if errors:
         print(f"SEO validation failed with {len(errors)} error(s):")

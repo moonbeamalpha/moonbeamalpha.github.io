@@ -174,7 +174,10 @@ Azure Mastery is built for serious certification candidates who want to know *wh
 
 ## Social
 
+- [Instagram — @azuremastery.app](https://www.instagram.com/azuremastery.app): Visual study tips, product updates, and certification guidance.
+- [X — @AzureMastery](https://x.com/AzureMastery): Exam updates, release news, and Azure certification insights.
 - [TikTok — @azuremastery](https://www.tiktok.com/@azuremastery): Short-form video tips and exam study walkthroughs.
+- [YouTube — Azure Mastery](https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg): Product walkthroughs and longer-form certification guidance.
 - [Facebook — Azure Mastery](https://www.facebook.com/profile.php?id=61578421530035): App announcements and community.
 
 ## Optional resources

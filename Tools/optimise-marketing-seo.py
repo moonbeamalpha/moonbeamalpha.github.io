@@ -36,6 +36,7 @@ DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-07-25"
 SEO_UPDATED_OVERRIDES = {
+    "AB-410": "2026-08-09",
     "AZ-400": "2026-07-30",
     "PL-300": "2026-07-30",
 }
@@ -69,6 +70,16 @@ RETIRING_EXAMS = {
     },
 }
 ACTIVE_SEO = {
+    "AB-410": {
+        "description": (
+            "{count} AB-410 practice questions for Intelligent Applications Builder. Study Dataverse, "
+            "Power Apps, cloud flows, Power Fx, and AI Hub on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AB-410 practice questions for Dataverse, Power Apps, cloud flows, Power Fx, "
+            "and AI Hub. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
     "AZ-400": {
         "title": "AZ-400 DevOps Engineer Practice Questions | Azure Mastery",
         "description": (

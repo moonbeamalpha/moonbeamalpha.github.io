@@ -27,6 +27,7 @@ SUCCESSOR_ROUTES = {
 }
 SEO_UPDATED = "2026-07-25"
 SEO_UPDATED_OVERRIDES = {
+    "AB-410": "2026-08-09",
     "AZ-400": "2026-07-30",
     "PL-300": "2026-07-30",
 }
@@ -50,6 +51,7 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-ai-901",
 }
 ACTIVE_SEO_REQUIREMENTS = {
+    "AB-410": ("Intelligent Applications Builder", "Dataverse", "Power Apps"),
     "AZ-400": ("DevOps Engineer Expert", "Azure Pipelines", "GitHub Actions"),
     "AI-103": ("Developing AI Apps and Agents on Azure", "Microsoft Foundry"),
     "AB-620": ("Copilot Studio AI Agent Builder exam", "Power Platform"),
@@ -62,6 +64,17 @@ ACTIVE_SEO_TITLES = {
     "PL-300": "PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery",
 }
 TARGETED_STALE_PHRASES = {
+    "AB-410": (
+        "100-minute",
+        "five domains",
+        "April 2026 outline",
+        "outline as published in <strong>August 2026</strong>",
+        "40–60 multiple choice",
+        "same formats Microsoft puts on the live exam",
+        "mirroring Pearson VUE",
+        "25–30 question online assessment",
+        "Microsoft Fabric Data Agent",
+    ),
     "AI-103": (
         "AI-900 first if AI concepts are new to you",
         "AI-900 builds the AI vocabulary",
@@ -541,8 +554,19 @@ def main() -> None:
             errors.append(f"stale or generic content remains: {phrase}")
 
     llms = (ROOT / "llms.txt").read_text()
-    if "## Exams covered (32)" not in llms:
+    if f"## Exams covered ({len(COUNTS)})" not in llms:
         errors.append("llms.txt has a stale exam-count heading")
+    for match in re.finditer(
+        r"^### (?P<label>[^\n]+?) \((?P<declared>\d+)\)\n(?P<body>.*?)(?=^### |^## |\Z)",
+        llms,
+        re.M | re.S,
+    ):
+        actual = len(re.findall(r"^- ", match.group("body"), re.M))
+        declared = int(match.group("declared"))
+        if actual != declared:
+            errors.append(
+                f"llms.txt category {match.group('label')!r} declares {declared} but lists {actual}"
+            )
     if "Platform: iOS 18+, iPadOS 18+" not in llms:
         errors.append("llms.txt has a stale minimum OS version")
     if "Answer Coach" not in llms or re.search(r"Why Wrong|Why Was I Wrong", llms, re.I):

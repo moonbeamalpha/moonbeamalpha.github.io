@@ -34,12 +34,8 @@ ROOT = Path(__file__).resolve().parent.parent
 EXAMS_DIR = ROOT / "exams"
 DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
-SEO_UPDATED = "2026-07-25"
-SEO_UPDATED_OVERRIDES = {
-    "AB-410": "2026-08-09",
-    "AZ-400": "2026-07-30",
-    "PL-300": "2026-07-30",
-}
+SEO_UPDATED = "2026-08-09"
+SEO_UPDATED_OVERRIDES = {}
 RETIRED_EXAMS = {
     "AI-900": {
         "date": "30 June 2026",
@@ -131,6 +127,204 @@ ACTIVE_SEO = {
         "social_description": (
             "{count} AI-901 practice questions for the current Azure AI Fundamentals exam, "
             "including Microsoft Foundry and Python. Free to start."
+        ),
+    },
+    "AB-100": {
+        "title": 'AB-100 Practice Questions — {count} Qs for AI Architect (2026)',
+        "description": (
+            '{count} AB-100 practice questions for Agentic AI Business Solutions Architect. Multi-agent architecture, governance, and Copilot — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} AB-100 practice questions for Agentic AI Business Solutions Architect. Multi-agent architecture, governance, and Copilot — updated for the 2026 exam.'
+        ),
+    },
+    "AB-731": {
+        "title": 'AB-731 Practice Questions — {count} Qs for AI Leadership (2026)',
+        "description": (
+            '{count} AB-731 practice questions for Microsoft AI Transformation Leader. AI strategy, adoption, and governance — free to start on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} AB-731 practice questions for Microsoft AI Transformation Leader. AI strategy, adoption, and governance — free to start on iPhone and iPad.'
+        ),
+    },
+    "AB-900": {
+        "title": 'AB-900 Practice Questions — {count} Qs for Copilot Admin (2026)',
+        "description": (
+            '{count} AB-900 practice questions for Copilot and Agent Administration Fundamentals. Microsoft 365, Copilot configuration, and agents — updated for 2026.'
+        ),
+        "social_description": (
+            '{count} AB-900 practice questions for Copilot and Agent Administration Fundamentals. Microsoft 365, Copilot configuration, and agents — updated for 2026.'
+        ),
+    },
+    "AI-200": {
+        "title": 'AI-200 Practice Questions — {count} Qs for AI Developer (2026)',
+        "description": (
+            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+        ),
+    },
+    "AI-300": {
+        "title": 'AI-300 Practice Questions — {count} Qs for ML Ops Engineer (2026)',
+        "description": (
+            '{count} AI-300 practice questions for ML Operations Engineer. ML lifecycle, deployment, and monitoring on Azure — exam-style prep on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} AI-300 practice questions for ML Operations Engineer. ML lifecycle, deployment, and monitoring on Azure — exam-style prep on iPhone and iPad.'
+        ),
+    },
+    "AZ-104": {
+        "title": 'AZ-104 Practice Questions — {count} Qs for Azure Admin (2026)',
+        "description": (
+            '{count} AZ-104 practice questions for Microsoft Azure Administrator. Identities, storage, compute, networking, and monitoring — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} AZ-104 practice questions for Microsoft Azure Administrator. Identities, storage, compute, networking, and monitoring — updated for the 2026 exam.'
+        ),
+    },
+    "AZ-305": {
+        "title": 'AZ-305 Practice Questions — {count} Qs for Azure Architect (2026)',
+        "description": (
+            '{count} AZ-305 practice questions for Azure Solutions Architect Expert. Identity, data, business continuity, and infrastructure design — updated for 2026.'
+        ),
+        "social_description": (
+            '{count} AZ-305 practice questions for Azure Solutions Architect Expert. Identity, data, business continuity, and infrastructure design — updated for 2026.'
+        ),
+    },
+    "AZ-700": {
+        "title": 'AZ-700 Practice Questions — {count} Qs for Network Engineer (2026)',
+        "description": (
+            '{count} AZ-700 practice questions for Azure Network Engineer. VNets, peering, ExpressRoute, load balancing, and network security — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} AZ-700 practice questions for Azure Network Engineer. VNets, peering, ExpressRoute, load balancing, and network security — updated for the 2026 exam.'
+        ),
+    },
+    "AZ-900": {
+        "title": 'AZ-900 Practice Questions — {count} Qs for Fundamentals (2026)',
+        "description": (
+            '{count} AZ-900 practice questions for Microsoft Azure Fundamentals. Cloud concepts, architecture, services, and pricing — free to start on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} AZ-900 practice questions for Microsoft Azure Fundamentals. Cloud concepts, architecture, services, and pricing — free to start on iPhone and iPad.'
+        ),
+    },
+    "DP-300": {
+        "title": 'DP-300 Practice Questions — {count} Qs for Database Admin (2026)',
+        "description": (
+            '{count} DP-300 practice questions for Azure Database Administrator. SQL deployment, security, performance tuning, and HA/DR — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} DP-300 practice questions for Azure Database Administrator. SQL deployment, security, performance tuning, and HA/DR — updated for the 2026 exam.'
+        ),
+    },
+    "DP-700": {
+        "title": 'DP-700 Practice Questions — {count} Qs for Fabric Engineer (2026)',
+        "description": (
+            '{count} DP-700 practice questions for Microsoft Fabric Data Engineer. Ingestion, transformation, lakehouses, and monitoring — exam-style prep on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} DP-700 practice questions for Microsoft Fabric Data Engineer. Ingestion, transformation, lakehouses, and monitoring — exam-style prep on iPhone and iPad.'
+        ),
+    },
+    "DP-750": {
+        "title": 'DP-750 Practice Questions — {count} Qs for Databricks (2026)',
+        "description": (
+            '{count} DP-750 practice questions for Azure Databricks Data Engineer. Spark, Delta Lake, pipelines, and governance — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} DP-750 practice questions for Azure Databricks Data Engineer. Spark, Delta Lake, pipelines, and governance — updated for the 2026 exam.'
+        ),
+    },
+    "DP-800": {
+        "title": 'DP-800 Practice Questions — {count} Qs for SQL AI Developer (2026)',
+        "description": (
+            '{count} DP-800 practice questions for Developing AI-Enabled Database Solutions. SQL, vector search, and intelligent apps — exam-style prep on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} DP-800 practice questions for Developing AI-Enabled Database Solutions. SQL, vector search, and intelligent apps — exam-style prep on iPhone and iPad.'
+        ),
+    },
+    "DP-900": {
+        "title": 'DP-900 Practice Questions — {count} Qs for Data Basics (2026)',
+        "description": (
+            '{count} DP-900 practice questions for Azure Data Fundamentals. Core data concepts, relational, non-relational, and analytics — free to start on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} DP-900 practice questions for Azure Data Fundamentals. Core data concepts, relational, non-relational, and analytics — free to start on iPhone and iPad.'
+        ),
+    },
+    "GH-300": {
+        "title": 'GH-300 Practice Questions — {count} Qs for GitHub Copilot (2026)',
+        "description": (
+            '{count} GH-300 practice questions for the GitHub Copilot certification. Copilot features, prompt skills, policies, and responsible AI — updated for 2026.'
+        ),
+        "social_description": (
+            '{count} GH-300 practice questions for the GitHub Copilot certification. Copilot features, prompt skills, policies, and responsible AI — updated for 2026.'
+        ),
+    },
+    "GH-900": {
+        "title": 'GH-900 Practice Questions — {count} Qs for GitHub Basics (2026)',
+        "description": (
+            '{count} GH-900 practice questions for GitHub Foundations. Repositories, pull requests, Actions basics, and collaboration — free to start on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} GH-900 practice questions for GitHub Foundations. Repositories, pull requests, Actions basics, and collaboration — free to start on iPhone and iPad.'
+        ),
+    },
+    "PL-900": {
+        "title": 'PL-900 Practice Questions — {count} Qs for Power Platform (2026)',
+        "description": (
+            '{count} PL-900 practice questions for Power Platform Fundamentals. Power Apps, Automate, Power BI, and Copilot Studio basics — free to start on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} PL-900 practice questions for Power Platform Fundamentals. Power Apps, Automate, Power BI, and Copilot Studio basics — free to start on iPhone and iPad.'
+        ),
+    },
+    "SC-100": {
+        "title": 'SC-100 Practice Questions — {count} Qs for Cyber Architect (2026)',
+        "description": (
+            '{count} SC-100 practice questions for Microsoft Cybersecurity Architect. Zero Trust strategy, GRC, and security operations design — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} SC-100 practice questions for Microsoft Cybersecurity Architect. Zero Trust strategy, GRC, and security operations design — updated for the 2026 exam.'
+        ),
+    },
+    "SC-200": {
+        "title": 'SC-200 Practice Questions — {count} Qs for SOC Analyst (2026)',
+        "description": (
+            '{count} SC-200 practice questions for Security Operations Analyst. Defender XDR, Sentinel, KQL hunting, and incident response — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} SC-200 practice questions for Security Operations Analyst. Defender XDR, Sentinel, KQL hunting, and incident response — updated for the 2026 exam.'
+        ),
+    },
+    "SC-300": {
+        "title": 'SC-300 Practice Questions — {count} Qs for Identity Admin (2026)',
+        "description": (
+            '{count} SC-300 practice questions for Identity and Access Administrator. Entra ID, authentication, governance, and app access — updated for the 2026 exam.'
+        ),
+        "social_description": (
+            '{count} SC-300 practice questions for Identity and Access Administrator. Entra ID, authentication, governance, and app access — updated for the 2026 exam.'
+        ),
+    },
+    "SC-500": {
+        "title": 'SC-500 Practice Questions — {count} Qs for Cloud Security (2026)',
+        "description": (
+            '{count} SC-500 practice questions for Cloud and AI Security Engineer — the AZ-500 successor. Identity, platform protection, and AI security, updated for 2026.'
+        ),
+        "social_description": (
+            '{count} SC-500 practice questions for Cloud and AI Security Engineer — the AZ-500 successor. Identity, platform protection, and AI security, updated for 2026.'
+        ),
+    },
+    "SC-900": {
+        "title": 'SC-900 Practice Questions — {count} Qs for Security Basics (2026)',
+        "description": (
+            '{count} SC-900 practice questions for Security, Compliance, and Identity Fundamentals. Entra ID, Defender, and Purview basics — free to start on iPhone and iPad.'
+        ),
+        "social_description": (
+            '{count} SC-900 practice questions for Security, Compliance, and Identity Fundamentals. Entra ID, Defender, and Purview basics — free to start on iPhone and iPad.'
         ),
     },
 }
@@ -263,7 +457,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
     return f'''      <div class="question-types" data-preview-source="in-app-question-bank">
 
         <article class="qt">
-          <div class="qt__viz" aria-hidden="true">
+          <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">{clean_text(single.get("text", ""), 175)}</p>
             <ul class="qt__viz-options">
 {option_list(single, "radio")}
@@ -275,7 +469,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
         </article>
 
         <article class="qt">
-          <div class="qt__viz" aria-hidden="true">
+          <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">{clean_text(multi.get("text", ""), 175)}</p>
             <ul class="qt__viz-options">
 {option_list(multi, "checkbox")}
@@ -385,12 +579,14 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
         feature_claim = f"{count} {code} practice questions mapped to the final Microsoft skills outline"
     else:
         active_seo = ACTIVE_SEO.get(code, {})
-        title = active_seo.get("title", f"{code} Practice Questions & Exam Prep | Azure Mastery")
+        title = active_seo.get(
+            "title", f"{code} Practice Questions — {{count}} Qs & Exam Prep (2026)"
+        ).format(count=count)
         description = active_seo.get(
             "description",
             (
-                f"Prepare for {code} with {count} practice questions, private Answer Coach, adaptive "
-                "study plans, and an exam simulator for iPhone and iPad."
+                f"{{count}} {code} practice questions with Answer Coach rationales, adaptive "
+                "study plans, and a full exam simulator — updated for the 2026 exam."
             ),
         ).format(count=count)
         social_description = active_seo.get(

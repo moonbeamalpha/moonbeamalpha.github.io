@@ -222,7 +222,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AB-100 practice test mode?
 A: Yes - the exam simulator runs full-length AB-100 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ab-410/ — AB-410 Practice Questions & Exam Prep | Azure Mastery
+## /exams/ab-410/ — AB-410 Practice Questions — 420 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Create a foundation for intelligent applications (25–30%)
@@ -247,7 +247,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AB-410 practice test mode?
 A: Yes - the exam simulator runs full-length AB-410 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ab-620/ — AB-620 Practice Questions & Exam Prep | Azure Mastery
+## /exams/ab-620/ — AB-620 Practice Questions — 452 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Plan and configure agent solutions (30–35%)
@@ -350,7 +350,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AI-102 practice test mode?
 A: Yes - the exam simulator runs full-length AI-102 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ai-103/ — AI-103 Practice Questions & Exam Prep | Azure Mastery
+## /exams/ai-103/ — AI-103 Practice Questions — 557 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Plan and manage an Azure AI solution (25–30%)

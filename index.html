@@ -2592,6 +2592,20 @@
     }
     /* ── 44pt tap targets (Apple HIG) ── */
     .btn-nav-cta { min-height: 44px; display: inline-flex; align-items: center; }
+    /* Footer link list grew (guide links) — wrap instead of widening the body */
+    .footer-links { flex-wrap: wrap; justify-content: center; row-gap: 10px; max-width: 100%; }
+    .site-footer .footer-copy { max-width: 100%; }
+    @media (max-width: 480px) {
+      /* the sticky bottom bar owns mobile conversion; keep the nav CTA compact */
+      .btn-nav-cta { padding: 8px 12px; font-size: 13px; }
+      .nav-links { gap: 12px; }
+      .site-nav { padding-left: 14px; padding-right: 14px; }
+    }
+    @media (max-width: 768px) {
+      /* the scaled 3-phone fan bleeds ~20px past the right edge; keep the
+         bleed visual-only rather than adding horizontal page scroll */
+      .section-hero { overflow-x: clip; }
+    }
     .hero-exam-tag { min-height: 36px; display: inline-flex; align-items: center; }
     .roadmap-filter__button { min-height: 44px; }
     .exam-tag { min-height: 36px; display: inline-flex; align-items: center; }

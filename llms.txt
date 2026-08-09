@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,900+ practice questions cover 32 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 13,300+ practice questions cover 33 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -47,6 +47,8 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 - [AI-200 — Microsoft Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 444 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Skills outline updated March 2026.
 
 - [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 400 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
+
+- [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 420 in-app practice questions. Associate-tier cert for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
 
 - [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 452 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
 
@@ -103,7 +105,7 @@ Free long-form study guides — exam-neutral advice grounded in the official Mic
 - [AZ-900 vs AZ-104](https://azuremastery.app/guides/az-900-vs-az-104/): Which Azure certification fits, whether you need both, and in what order.
 - [SC-900 vs AZ-900](https://azuremastery.app/guides/sc-900-vs-az-900/): Security-first or cloud-first — how the two fundamentals exams differ and which to sit first.
 
-## Exams covered (32)
+## Exams covered (33)
 
 The app covers the following Microsoft certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine.
 
@@ -123,6 +125,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 - AI-103 — Developing AI Apps and Agents on Azure
 - AI-200 — Microsoft Azure AI Cloud Developer
 - AI-300 — Microsoft Azure ML Operations Engineer
+- AB-410 — Microsoft Intelligent Applications Builder Associate
 - AB-620 — Microsoft AI Agent Builder Associate
 - AB-731 — Microsoft AI Transformation Leader (no-code business leadership)
 - AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals

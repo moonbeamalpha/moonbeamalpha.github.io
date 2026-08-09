@@ -151,4 +151,21 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
+
+# Internal/scratch files — not content, keep them out of the index
+User-agent: *
+Disallow: /exams/_template.html
+Disallow: /exams/_hero.html
+Disallow: /exams/_hero-preview.html
+Disallow: /apps/AzureMastery/og-image.html
+Disallow: /apps/AzureMastery/linkedin-banner.html
+Disallow: /apps/AzureMastery/linkedin-article.html
+Disallow: /SEO_PHASE_2_HANDOFF.md
+Disallow: /Tools/
+Disallow: /data/
+
+# Machine-readable site summary for AI assistants
+# llms.txt: https://azuremastery.app/llms.txt
+# llms-full.txt: https://azuremastery.app/llms-full.txt
+
 Sitemap: https://azuremastery.app/sitemap.xml

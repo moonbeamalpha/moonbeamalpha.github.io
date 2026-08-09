@@ -318,6 +318,45 @@
       pointer-events: none;
       z-index: 15;
     }
+
+
+    /* Desktop→phone bridge: most exam-page search impressions are desktop, and a
+       desktop click on an App Store link can't install anything. */
+    .am-cert-hero__qr { display: none; }
+    @media (min-width: 900px) and (pointer: fine) {
+      .am-cert-hero__qr { display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; }
+      .am-cert-hero__qr img { border-radius: 10px; background: #fff; padding: 4px; }
+      .am-cert-hero__qr span:last-child { font-size: 12px; line-height: 1.4; color: var(--text-secondary, #9AA3B5); }
+    }
+    /* Per-exam code chip masking the baked-in "AZ-104 · 30 days left" pill in the
+       shared dashboard screenshot. Opaque on purpose — it must hide the text under it. */
+    .am-cert-hero__code-overlay {
+      position: absolute;
+      left: 2.8%;
+      top: 7.4%;
+      min-width: 47.5%;
+      height: 5.1%;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: #0C1424;
+      box-shadow: 0 0 0 1px rgba(96,150,255,0.35);
+      color: #E8EEFA;
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: 0.1px;
+      line-height: 1;
+      white-space: nowrap;
+      z-index: 5;
+    }
+    .am-cert-hero__code-overlay svg { width: 15px; height: 15px; flex: none; }
+    .am-cert-hero__code-overlay-chevron { margin-left: auto; opacity: 0.6; font-size: 1.1em; font-weight: 500; }
+    @media (max-width: 879px) {
+      .am-cert-hero__code-overlay { font-size: 10.5px; padding: 0 11px; gap: 5px; }
+      .am-cert-hero__code-overlay svg { width: 12px; height: 12px; }
+    }
     /* Exam-specific CTA masking the baked-in "Book your AZ-104 exam" button so each cert page shows its own code */
     .am-cert-hero__cta-overlay {
       position: absolute;

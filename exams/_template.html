@@ -91,7 +91,7 @@
   <!-- Crawler directives — explicitly allow rich results, full snippet length, large image previews.
        Helps both classical SEO (Google rich snippets) and AI/AEO answer engines (ChatGPT, Perplexity,
        Google AI Overviews, Gemini) extract substantive content blocks. -->
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="author" content="Moonbeam Alpha Ltd">
   <meta name="publisher" content="Moonbeam Alpha Ltd">
@@ -853,6 +853,10 @@
               Download free
             </a>
             <span class="am-cert-hero__small">iPhone &amp; iPad · Free to start</span>
+            <span class="am-cert-hero__qr">
+              <img src="/images/qr/{{CERT_CODE_LOWER}}.svg" alt="QR code — scan with your iPhone to open Azure Mastery on the App Store" width="72" height="72" loading="lazy">
+              <span>On your Mac?<br>Scan to install</span>
+            </span>
           </div>
         </div>
 
@@ -872,6 +876,7 @@
               <div class="am-cert-hero__phone-screen"
                    role="img"
                    aria-label="Azure Mastery home dashboard showing today's plan, predicted score, and readiness gauge">
+                <span class="am-cert-hero__code-overlay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 L3 6 V12 C3 17 7 21 12 22 C17 21 21 17 21 12 V6 Z" fill="rgba(80,130,255,0.25)" stroke="#6FA8FF" stroke-width="1.6" stroke-linejoin="round"/></svg>{{CERT_CODE}} · 30 days left <span class="am-cert-hero__code-overlay-chevron">›</span></span>
                 <span class="am-cert-hero__cta-overlay" aria-hidden="true">Book your {{CERT_CODE}} exam<span class="am-cert-hero__cta-overlay-arrow">↗</span></span>
               </div>
             </div>

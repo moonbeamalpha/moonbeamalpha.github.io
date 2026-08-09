@@ -25,14 +25,10 @@ SUCCESSOR_ROUTES = {
     "DP-100": "AI-300",
     **{code: successor for code, (_, successor) in RETIRING.items()},
 }
-SEO_UPDATED = "2026-07-25"
-SEO_UPDATED_OVERRIDES = {
-    "AB-410": "2026-08-09",
-    "AZ-400": "2026-07-30",
-    "PL-300": "2026-07-30",
-}
-GUIDE_UPDATED = "2026-07-28"
-GUIDE_UPDATED_LABEL = "Updated 28 July 2026"
+SEO_UPDATED = "2026-08-09"
+SEO_UPDATED_OVERRIDES = {}
+GUIDE_UPDATED = "2026-08-09"
+GUIDE_UPDATED_LABEL = "Updated 9 August 2026"
 GUIDE_SLUGS = (
     "which-azure-certification-first",
     "how-to-pass-az-900",

@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb#">
+<html lang="en-GB" prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb#">
 <head>
   <meta charset="UTF-8">
+  <!-- JS marker: animation initial-states are scoped to html.js so a no-JS
+       visit (or a crawler) sees the full page with nothing opacity-hidden. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- Google Tag Manager — same container as every other page (GTM-TK79R26R) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TK79R26R');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
@@ -14,7 +24,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azure Mastery — AI-Powered Microsoft Certification Exam Prep (Azure, AI, Data, Security, GitHub) | 33 Exams</title>
   <meta name="description" content="Pass your Microsoft certification with confidence. Azure Mastery combines on-device Exam IQ predictions, adaptive study plans, Aura-guided recaps, and private Answer Coach lessons. 13,300+ questions across 33 exams spanning Azure, AI, Data, Security, and GitHub: AZ-104, AZ-900, AZ-305, AZ-204, AZ-400, AZ-500, AZ-700, AI-102, AI-103, AI-200, AI-300, AI-900, AI-901, AB-100, AB-410, AB-620, AB-731, AB-900, DP-100, DP-300, DP-700, DP-750, DP-800, DP-900, PL-300, PL-900, SC-100, SC-200, SC-300, SC-500, SC-900, GH-900, GH-300.">
-  <meta name="keywords" content="Azure certification, Microsoft certification, Microsoft Certified, Microsoft certification exam prep, AI certification, AZ-104 exam prep, AZ-900 study guide, AZ-305 practice questions, AZ-204 exam prep, AZ-400 practice test, AZ-500 study guide, AZ-700 practice questions, AI-102 exam prep, AI-103 exam prep, AI-200 exam prep, AI-300 exam prep, AI-900 study guide, AI-901 study guide, AB-100 exam prep, AB-100 Agentic AI Business Solutions Architect, AB-410 exam prep, AB-410 Intelligent Applications Builder, AB-410 Building Intelligent Applications, AB-620 exam prep, AB-620 AI Agent Builder, AB-731 exam prep, AB-731 AI Transformation Leader, AB-900 exam prep, AB-900 Copilot and Agent Administration Fundamentals, DP-100 practice exam, DP-300 exam prep, DP-700 exam prep, DP-700 Microsoft Fabric Data Engineer, DP-700 Implementing Data Engineering Solutions Using Microsoft Fabric, DP-750 exam prep, DP-750 Azure Databricks Data Engineer, DP-750 Implementing Data Engineering Solutions Using Azure Databricks, DP-800 exam prep, DP-800 SQL AI Developer, DP-800 Developing AI-Enabled Database Solutions, DP-900 exam prep, PL-300 exam prep, PL-300 Power BI Data Analyst, PL-900 exam prep, PL-900 Power Platform Fundamentals, SC-100 practice test, SC-200 practice test, SC-300 exam prep, SC-500 exam prep, SC-500 Cloud and AI Security Engineer, SC-900 study guide, Microsoft Azure exam, Azure Administrator, Azure Database Administrator, Azure Fundamentals, Azure Solutions Architect, Azure Developer Associate, Azure DevOps Engineer, Azure Security Engineer, Azure Network Engineer, Azure AI Engineer, Azure AI App Agent Developer, Azure AI Cloud Developer, ML Operations Engineer, Azure AI Fundamentals, Azure Data Scientist, Azure Data Fundamentals, Cybersecurity Architect, Security Operations Analyst, Identity Access Administrator, Security Compliance Identity Fundamentals, AI Agent Builder Associate, Agentic AI Solutions Architect, Copilot Agent Administrator, AI Transformation Leader, SQL AI Developer, Microsoft 365 Copilot, Power BI Data Analyst Associate, exam preparation app, iOS study app, Exam IQ, AI exam prep, Microsoft certification, Azure practice test, Azure exam simulator, cloud certification prep, Azure study app, knowledge decay, spaced repetition, adaptive learning, offline exam prep, GH-900, GH-900 study app, GH-900 practice questions, GH-900 exam prep, GH-300, GH-300 study app, GH-300 practice questions, GH-300 exam prep, GH-300 mock exam, GitHub Copilot, GitHub Copilot certification, GitHub Foundations, GitHub certification">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="author" content="Moonbeam Alpha Ltd">
   <meta name="application-name" content="Azure Mastery">
@@ -31,6 +40,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
   <link rel="preload" as="image" href="/images/azure-mastery-icon.webp" fetchpriority="high">
+  <!-- Hero phone screenshots are CSS backgrounds (theme-swappable), so the
+       preload scanner can't discover them — preload the LCP candidates here. -->
+  <link rel="preload" as="image" href="/images/cap-home-dashboard.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/cap-exam-iq.webp">
+  <link rel="preload" as="image" href="/images/cap-question-types.webp">
 
   <!-- Open Graph -->
   <meta property="fb:app_id" content="1278988257499847">
@@ -216,20 +230,275 @@
     ]
   }
   </script>
+  <!-- Entity graph: publisher + site + freshness + the 33-exam ItemList.
+       Complements the flat SoftwareApplication/FAQPage/HowTo blocks above. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://azuremastery.app/#org",
+      "name": "Moonbeam Alpha Ltd",
+      "url": "https://azuremastery.app/",
+      "logo": "https://azuremastery.app/images/apple-touch-icon.png",
+      "sameAs": [
+        "https://www.instagram.com/azuremastery.app",
+        "https://x.com/AzureMastery",
+        "https://www.tiktok.com/@azuremastery",
+        "https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg",
+        "https://www.facebook.com/profile.php?id=61578421530035"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://azuremastery.app/#website",
+      "url": "https://azuremastery.app/",
+      "name": "Azure Mastery",
+      "publisher": {
+        "@id": "https://azuremastery.app/#org"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://azuremastery.app/#webpage",
+      "url": "https://azuremastery.app/",
+      "name": "Azure Mastery — AI-Powered Microsoft Certification Exam Prep",
+      "isPartOf": {
+        "@id": "https://azuremastery.app/#website"
+      },
+      "about": {
+        "@id": "https://azuremastery.app/#org"
+      },
+      "datePublished": "2026-05-08",
+      "dateModified": "2026-08-09",
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://azuremastery.app/#exam-list",
+      "name": "Microsoft certification exams covered by Azure Mastery",
+      "numberOfItems": 33,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AZ-900 study app — Microsoft Azure Fundamentals",
+          "url": "https://azuremastery.app/exams/az-900/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AZ-104 study app — Microsoft Azure Administrator",
+          "url": "https://azuremastery.app/exams/az-104/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AZ-204 study app — Developing Solutions for Microsoft Azure",
+          "url": "https://azuremastery.app/exams/az-204/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "AZ-305 study app — Designing Microsoft Azure Infrastructure Solutions",
+          "url": "https://azuremastery.app/exams/az-305/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "AZ-400 study app — Designing and Implementing Microsoft DevOps Solutions",
+          "url": "https://azuremastery.app/exams/az-400/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "AZ-500 study app — Microsoft Azure Security Engineer",
+          "url": "https://azuremastery.app/exams/az-500/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "AZ-700 study app — Microsoft Azure Network Engineer",
+          "url": "https://azuremastery.app/exams/az-700/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "AI-901 study app — Microsoft AI Fundamentals",
+          "url": "https://azuremastery.app/exams/ai-901/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "AI-103 study app — Microsoft AI App and Agent Developer",
+          "url": "https://azuremastery.app/exams/ai-103/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "AI-200 study app — Microsoft AI Cloud Developer",
+          "url": "https://azuremastery.app/exams/ai-200/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "AI-300 study app — Microsoft ML Operations Engineer",
+          "url": "https://azuremastery.app/exams/ai-300/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "AB-410 study app — Microsoft Intelligent Applications Builder",
+          "url": "https://azuremastery.app/exams/ab-410/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "AB-620 study app — Microsoft AI Agent Builder",
+          "url": "https://azuremastery.app/exams/ab-620/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "AB-731 study app — Microsoft AI Transformation Leader",
+          "url": "https://azuremastery.app/exams/ab-731/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "AB-900 study app — Microsoft 365 Copilot and Agent Administration Fundamentals",
+          "url": "https://azuremastery.app/exams/ab-900/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "AB-100 study app — Microsoft Agentic AI Business Solutions Architect",
+          "url": "https://azuremastery.app/exams/ab-100/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "DP-900 study app — Microsoft Azure Data Fundamentals",
+          "url": "https://azuremastery.app/exams/dp-900/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "DP-300 study app — Microsoft Azure Database Administrator",
+          "url": "https://azuremastery.app/exams/dp-300/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "DP-700 study app — Microsoft Fabric Data Engineer",
+          "url": "https://azuremastery.app/exams/dp-700/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "DP-750 study app — Microsoft Azure Databricks Data Engineer",
+          "url": "https://azuremastery.app/exams/dp-750/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "DP-800 study app — Microsoft SQL AI Developer",
+          "url": "https://azuremastery.app/exams/dp-800/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "PL-300 study app — Microsoft Power BI Data Analyst",
+          "url": "https://azuremastery.app/exams/pl-300/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "PL-900 study app — Microsoft Power Platform Fundamentals",
+          "url": "https://azuremastery.app/exams/pl-900/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "SC-900 study app — Microsoft Security, Compliance, and Identity Fundamentals",
+          "url": "https://azuremastery.app/exams/sc-900/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "SC-100 study app — Microsoft Cybersecurity Architect Expert",
+          "url": "https://azuremastery.app/exams/sc-100/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "SC-200 study app — Microsoft Security Operations Analyst",
+          "url": "https://azuremastery.app/exams/sc-200/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "SC-300 study app — Microsoft Identity and Access Administrator",
+          "url": "https://azuremastery.app/exams/sc-300/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "SC-500 study app — Microsoft Cloud and AI Security Engineer",
+          "url": "https://azuremastery.app/exams/sc-500/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "GH-300 study app — GitHub Copilot",
+          "url": "https://azuremastery.app/exams/gh-300/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "GH-900 study app — GitHub Foundations",
+          "url": "https://azuremastery.app/exams/gh-900/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "AI-900 retired exam reference — Microsoft Azure AI Fundamentals",
+          "url": "https://azuremastery.app/exams/ai-900/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "AI-102 retired exam reference — Microsoft Azure AI Engineer",
+          "url": "https://azuremastery.app/exams/ai-102/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "DP-100 retired exam reference — Microsoft Azure Data Scientist",
+          "url": "https://azuremastery.app/exams/dp-100/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
 
   <!-- Google Fonts: Outfit + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <!-- GSAP is self-hosted (js/) — no third-party script origin, no CDN outage
+       or tampering risk, one fewer DNS+TLS handshake before the hero animates. -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap"></noscript>
 
   <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="/js/gsap.min.js" defer></script>
+  <script src="/js/ScrollTrigger.min.js" defer></script>
   <script src="/theme.js" defer></script>
 
   <style>
@@ -2272,17 +2541,82 @@
     }
     .footer-links a:hover { color: var(--text-primary); }
 
+
+
+    /* ── Homepage FAQ ── */
+    .section-faq { padding: 96px 40px; background: var(--bg-deep); }
+    .faqs { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq { border: 1px solid var(--border-subtle); border-radius: 14px; background: rgba(255,255,255,0.02); }
+    .faq summary { cursor: pointer; padding: 16px 20px; font-weight: 600; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: var(--text-secondary); flex: none; }
+    .faq[open] summary::after { content: '\2013'; }
+    .faq__answer { padding: 0 20px 18px; color: var(--text-secondary); font-size: 15px; line-height: 1.6; }
+    @media (max-width: 768px) { .section-faq { padding: 64px 20px; } }
+    /* ── Mid-page CTA band ── */
+    .cta-band { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 28px 24px; margin: 0 auto; max-width: 900px; }
+    .cta-band__text { font-size: 17px; font-weight: 600; color: var(--text-primary); text-align: center; }
+    .cta-band__btn { min-height: 44px; display: inline-flex; align-items: center; padding: 0 26px; border-radius: 999px; background: linear-gradient(120deg, var(--azure-cyan), #2E7CEE); color: #041018; font-weight: 700; text-decoration: none; }
+    /* ── Desktop QR bridge (81% of search impressions are desktop) ── */
+    .hero-qr { display: none; }
+    @media (min-width: 900px) and (pointer: fine) {
+      .hero-qr { display: inline-flex; align-items: center; gap: 10px; margin-left: 6px; }
+      .hero-qr img { border-radius: 10px; background: #fff; padding: 4px; }
+      .hero-qr span:last-child { font-size: 12px; line-height: 1.4; color: var(--text-secondary); }
+    }
+    /* ── Sticky mobile download bar ── */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 900;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(7, 11, 22, 0.92);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    @media (max-width: 768px) { .mobile-cta-bar { display: flex; } body { padding-bottom: 72px; } }
+    .mobile-cta-bar__label { font-size: 13px; color: var(--text-secondary); min-width: 0; }
+    .mobile-cta-bar__btn {
+      flex: none;
+      min-height: 44px;
+      display: inline-flex; align-items: center;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, var(--azure-cyan), var(--azure-blue, #2E7CEE));
+      color: #041018; font-weight: 700; font-size: 15px; text-decoration: none;
+    }
+    /* ── 44pt tap targets (Apple HIG) ── */
+    .btn-nav-cta { min-height: 44px; display: inline-flex; align-items: center; }
+    .hero-exam-tag { min-height: 36px; display: inline-flex; align-items: center; }
+    .roadmap-filter__button { min-height: 44px; }
+    .exam-tag { min-height: 36px; display: inline-flex; align-items: center; }
+    .ipad-dot { position: relative; }
+    .ipad-dot::after { content: ''; position: absolute; inset: -16px; }
+    /* ── :has() fallback (Safari < 15.4): class mirrors the :has() rule ── */
+    .nav-links li.nav-item-hide-mobile { }
+    @media (max-width: 768px) {
+      .nav-links li.nav-item-hide-mobile { display: none; }
+      .hero-exam-group { align-items: center; }
+    }
     /* ══════════════════════════════════════════════
        ANIMATIONS — Initial States
+       Scoped to html.js (set by the first inline script) so no-JS visitors and
+       crawlers see everything. The reveal runs on DOMContentLoaded, not load —
+       the hero must never wait for images or fonts to paint.
        ══════════════════════════════════════════════ */
-    .fade-up,
-    .hero-app-title,
-    .hero-text,
-    .showcase-text,
-    .showcase-device,
-    #device-left,
-    #device-center,
-    #device-right { opacity: 0; }
+    html.js .fade-up,
+    html.js .hero-app-title,
+    html.js .hero-text,
+    html.js .showcase-text,
+    html.js .showcase-device,
+    html.js #device-left,
+    html.js #device-center,
+    html.js #device-right { opacity: 0; }
 
     /* ══════════════════════════════════════════════
        ACCESSIBILITY — Reduced Motion
@@ -2408,6 +2742,10 @@
   <link rel="stylesheet" href="/social-follow.css">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK79R26R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- ═══════════ NAV ═══════════ -->
   <nav class="site-nav" aria-label="Main navigation">
@@ -2417,11 +2755,11 @@
         <span>Azure Mastery</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#exam-iq" class="hide-mobile">Exam IQ</a></li>
-        <li><a href="#features" class="hide-mobile">Features</a></li>
-        <li><a href="#exam-roadmap" class="hide-mobile">Exams</a></li>
-        <li><a href="#screenshots" class="hide-mobile">Screenshots</a></li>
-        <li><a href="/guides/" class="hide-mobile">Guides</a></li>
+        <li class="nav-item-hide-mobile"><a href="#exam-iq" class="hide-mobile">Exam IQ</a></li>
+        <li class="nav-item-hide-mobile"><a href="#features" class="hide-mobile">Features</a></li>
+        <li class="nav-item-hide-mobile"><a href="#exam-roadmap" class="hide-mobile">Exams</a></li>
+        <li class="nav-item-hide-mobile"><a href="#screenshots" class="hide-mobile">Screenshots</a></li>
+        <li class="nav-item-hide-mobile"><a href="/guides/" class="hide-mobile">Guides</a></li>
         <li><button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
           <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -2452,7 +2790,7 @@
           </span>
         </div>
         <h1 class="sr-only">
-          Azure Mastery — AI-Powered Exam Prep for AZ-104, AZ-900, AZ-305, AZ-204, AZ-400, and 21 More Microsoft Certifications on iOS
+          Azure Mastery — AI-Powered Exam Prep for AZ-104, AZ-900, AZ-305, AZ-204, AZ-400, and 28 More Microsoft Certifications on iOS
         </h1>
         <h2 class="display-large hero-headline">
           Know When<br>
@@ -2463,6 +2801,22 @@
           decay alerts — all running on-device. The smarter way to prepare for
           Microsoft certification — Azure, AI, Data, Security, and GitHub.
         </p>
+                <div class="hero-ctas">
+          <a href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-home&pt=128558698&mt=8" class="btn-primary" rel="noopener noreferrer" aria-label="Download Azure Mastery on the App Store">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
+            Download Free
+          </a>
+          <a href="#features" class="btn-ghost">See features &#8594;</a>
+          <span class="hero-qr">
+            <img src="/images/qr/app-store.svg" alt="QR code — scan with your iPhone to open Azure Mastery on the App Store" width="76" height="76" loading="lazy">
+            <span>On your Mac?<br>Scan to install</span>
+          </span>
+        </div>
+        <div class="hero-badges">
+          <span class="hero-badge"><span class="hero-badge-dot" style="background:var(--success-green)"></span> 100% Offline</span>
+          <span class="hero-badge"><span class="hero-badge-dot" style="background:var(--azure-cyan)"></span> No Tracking</span>
+          <span class="hero-badge"><span class="hero-badge-dot" style="background:var(--azure-purple)"></span> On-Device ML</span>
+        </div>
         <nav class="hero-exam-tags" aria-label="Supported Microsoft certification exams">
           <div class="hero-exam-group hero-exam-group--azure" role="group" aria-labelledby="hero-grp-azure">
             <p class="hero-exam-group__title" id="hero-grp-azure">Azure</p>
@@ -2530,18 +2884,6 @@
             </details>
           </div>
 </nav>
-        <div class="hero-ctas">
-          <a href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-home&pt=128558698&mt=8" class="btn-primary" rel="noopener noreferrer" aria-label="Download Azure Mastery on the App Store">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/></svg>
-            Download Free
-          </a>
-          <a href="#features" class="btn-ghost">See features &#8594;</a>
-        </div>
-        <div class="hero-badges">
-          <span class="hero-badge"><span class="hero-badge-dot" style="background:var(--success-green)"></span> 100% Offline</span>
-          <span class="hero-badge"><span class="hero-badge-dot" style="background:var(--azure-cyan)"></span> No Tracking</span>
-          <span class="hero-badge"><span class="hero-badge-dot" style="background:var(--azure-purple)"></span> On-Device ML</span>
-        </div>
       </div>
 
       <div class="hero-visual">
@@ -2996,6 +3338,11 @@
   </section>
 
   <!-- ═══════════ MEET AURA ═══════════ -->
+  <div class="cta-band fade-up">
+    <span class="cta-band__text">See your predicted score after one session.</span>
+    <a class="cta-band__btn" href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-mid-examiq&pt=128558698&mt=8" rel="noopener noreferrer">Download free</a>
+  </div>
+
   <section class="section-showcase section-meet-aura" id="meet-aura" aria-label="Meet Aura, your study buddy">
     <div class="showcase-inner showcase-inner--device-left">
       <div class="showcase-device" aria-hidden="true">
@@ -3248,6 +3595,11 @@
   </section>
 
   <!-- ═══════════ MULTI-DEVICE (iPad + Watch) ═══════════ -->
+  <div class="cta-band fade-up">
+    <span class="cta-band__text">Free to start — 13,300+ questions across 33 exams.</span>
+    <a class="cta-band__btn" href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-mid-screens&pt=128558698&mt=8" rel="noopener noreferrer">Download free</a>
+  </div>
+
   <section class="section-devices" id="devices" aria-label="iPad and Apple Watch showcase">
     <div class="section-inner" style="text-align:center;">
       <p class="label-eyebrow fade-up" style="margin-bottom:12px;">Multi-Platform</p>
@@ -3353,6 +3705,50 @@
   </section>
 
   <!-- ═══════════ CTA FINAL ═══════════ -->
+  <!-- FAQ — renders the FAQPage structured data visibly (schema policy:
+       marked-up content must be visible to users). Also the only place the
+       pricing model is stated in plain sight. -->
+  <section class="section-faq" id="faq" aria-labelledby="faq-heading">
+    <div class="features-container">
+      <p class="label-eyebrow fade-up" style="text-align:center;">Frequently asked</p>
+      <h2 id="faq-heading" class="display-medium fade-up" style="text-align:center;margin-bottom:32px;">Questions, answered</h2>
+      <div class="faqs fade-up">
+        <details class="faq">
+          <summary>Is Azure Mastery free?</summary>
+          <div class="faq__answer"><p>Azure Mastery is free to download and includes a starter set of practice questions for every supported exam. Full per-exam question banks are available as one-time in-app purchases. There is no subscription required to use core study features, and no account is required.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which Microsoft certifications does Azure Mastery cover?</summary>
+          <div class="faq__answer"><p>Azure Mastery covers 33 Microsoft certification exams: AZ-900, AZ-104, AZ-204, AZ-305, AZ-400, AZ-500, AZ-700, AI-900, AI-901, AI-102, AI-103, AI-200, AI-300, AB-100, AB-410, AB-620, AB-731, AB-900, DP-900, DP-100, DP-300, DP-700, DP-750, DP-800, SC-900, SC-100, SC-200, SC-300, SC-500, PL-300, PL-900, GH-900, and GH-300. The app spans Azure infrastructure, AI engineering, data, security and compliance, Microsoft 365 Copilot administration, AI transformation leadership, SQL AI development, agentic AI architecture, and Power BI roles.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How does the Exam IQ score work?</summary>
+          <div class="faq__answer"><p>Exam IQ is an on-device CoreML model that predicts your likely exam-day score with confidence intervals. It uses Item Response Theory to score each answer by question difficulty, discrimination, and guessing, then updates your ability estimate per exam domain using Bayesian inference. Predictions are calibrated against Microsoft's published pass thresholds rather than raw percentage correct.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does Azure Mastery work offline?</summary>
+          <div class="faq__answer"><p>Yes. Core study — including the question bank, Exam IQ score prediction, adaptive study plans, and authored Answer Coach guidance — works without a connection. Optional model rewriting happens on-device, and optional sync uses the learner's private iCloud account. Azure Mastery has no study-data server or behavioural telemetry.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does Azure Mastery support iPad and Apple Watch?</summary>
+          <div class="faq__answer"><p>Yes. Azure Mastery is a native SwiftUI app for iPhone and iPad, with full Stage Manager and large-screen layouts on iPad. An Apple Watch companion shows your daily streak and XP at a glance. Live Activities surface the active study session timer on the lock screen and Dynamic Island.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How is Azure Mastery different from other Microsoft exam prep apps?</summary>
+          <div class="faq__answer"><p>Azure Mastery is designed to tell you when you are ready to pass, not just to drill questions. It calibrates predicted scores against Microsoft's real pass thresholds, estimates ability per exam domain so you can see exactly which area is dragging your predicted score down, and uses spaced-repetition signals to flag topics where retention has decayed. All ML runs on-device with no telemetry.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What kinds of practice questions are included?</summary>
+          <div class="faq__answer"><p>The app includes 13,300+ practice questions across 33 Microsoft exams. Question types match Microsoft's real exam formats: multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies. Each question includes a written rationale. When an answer is missed, Answer Coach uses authored certification guidance to explain the misconception, key distinction, and rule to remember; supported devices may optionally rewrite the note on-device after grounding checks.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Who makes Azure Mastery?</summary>
+          <div class="faq__answer"><p>Azure Mastery is published by Moonbeam Alpha Ltd, an independent iOS app studio focused on certification preparation. The app is not affiliated with or endorsed by Microsoft.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="section-final-cta" id="download">
     <div class="final-cta-inner">
       <div class="final-cta-glow" aria-hidden="true"></div>
@@ -3516,6 +3912,15 @@
         <a href="apps/AzureMastery/privacy.html">Privacy</a>
         <a href="apps/AzureMastery/terms.html">Terms</a>
         <a href="apps/AzureMastery/support.html">Support</a>
+        <a href="/guides/how-to-pass-az-104/">AZ-104 guide</a>
+        <a href="/guides/how-to-pass-az-900/">AZ-900 guide</a>
+        <a href="/guides/how-to-pass-ai-901/">AI-901 guide</a>
+        <a href="/guides/how-to-pass-sc-900/">SC-900 guide</a>
+        <a href="/guides/how-to-pass-dp-900/">DP-900 guide</a>
+        <a href="/guides/az-900-vs-az-104/">AZ-900 vs AZ-104</a>
+        <a href="/guides/sc-900-vs-az-900/">SC-900 vs AZ-900</a>
+        <a href="/guides/which-azure-certification-first/">Which cert first?</a>
+        <a href="/exams/">All exam pages</a>
       </nav>
     </div>
   </footer>
@@ -3552,7 +3957,18 @@
       });
     })();
 
-    window.addEventListener('load', function() {
+    // Safety valve: whatever happens to the animation scripts, the headline and
+    // primary CTA force-reveal after 2.5s. An ad-click visitor on a slow
+    // connection must never stare at a blank gradient.
+    setTimeout(function() {
+      document.querySelectorAll('.hero-app-title, .hero-text').forEach(function(el) {
+        if (!el.style.opacity) { el.style.opacity = '1'; el.style.transform = 'none'; }
+      });
+    }, 2500);
+
+    // DOMContentLoaded, deliberately not `load`: the deferred GSAP files are
+    // parsed by DCL, and the hero must not wait for ~1.5MB of screenshots.
+    document.addEventListener('DOMContentLoaded', function() {
       if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
         // Fallback: reveal all hidden elements if GSAP failed to load
         document.querySelectorAll('.fade-up, .hero-app-title, .hero-text, .showcase-text, .showcase-device, #device-left, #device-center, #device-right').forEach(function(el) {
@@ -3813,5 +4229,11 @@
     })();
   </script>
 
+
+  <!-- Sticky mobile download bar — the hero CTA scrolls away fast on a phone -->
+  <div class="mobile-cta-bar" id="mobile-cta-bar">
+    <span class="mobile-cta-bar__label">Azure Mastery — free on the App&nbsp;Store</span>
+    <a class="mobile-cta-bar__btn" href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-home-sticky&pt=128558698&mt=8" rel="noopener noreferrer">Download</a>
+  </div>
 </body>
 </html>

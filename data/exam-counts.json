@@ -1,7 +1,8 @@
 {
-  "cert_path_count": 32,
+  "cert_path_count": 33,
   "exams": {
     "AB-100": 421,
+    "AB-410": 420,
     "AB-620": 452,
     "AB-731": 352,
     "AB-900": 358,

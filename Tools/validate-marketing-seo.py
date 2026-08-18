@@ -125,6 +125,24 @@ ACTIVE_PAGES_WITHOUT_RETIRED_ROUTES = {
     "SC-900",
 }
 
+CERTIFICATION_CODES_BY_LEVEL = {
+    "fundamentals": {
+        "AB-900", "AI-900", "AI-901", "AZ-900", "DP-900", "PL-900", "SC-900",
+    },
+    "associate": {
+        "AB-410", "AB-620", "AB-731", "AI-102", "AI-103", "AI-200", "AI-300",
+        "AZ-104", "AZ-204", "AZ-500", "AZ-700", "DP-100", "DP-203", "DP-300",
+        "DP-600", "DP-700", "DP-750", "DP-800", "PL-300", "SC-200", "SC-300",
+        "SC-500",
+    },
+    "expert": {"AB-100", "AZ-305", "AZ-400", "SC-100"},
+}
+CERT_LEVEL_BY_CODE = {
+    code: level
+    for level, codes in CERTIFICATION_CODES_BY_LEVEL.items()
+    for code in codes
+}
+
 SOCIAL_PROFILES = (
     ("instagram", "Instagram", "https://www.instagram.com/azuremastery.app"),
     ("x", "X", "https://x.com/AzureMastery"),
@@ -520,6 +538,27 @@ def main() -> None:
             errors.append(f"{page.relative_to(ROOT)}: stale pre-v1.9 coaching name remains")
         if "generated on-device by Apple Foundation Model" in text:
             errors.append(f"{page.relative_to(ROOT)}: stale Answer Coach provenance remains")
+
+        certification_chips = re.findall(
+            r'(<(?:a|span)\s+class="[^"]*cert-path__chip(?:\s|")[^>]*>)\s*'
+            r'<span class="cert-path__chip-code">([A-Z]{2,3}-\d{3})</span>',
+            text,
+            re.S,
+        )
+        for opening_tag, certification_code in certification_chips:
+            expected_level = CERT_LEVEL_BY_CODE.get(certification_code)
+            if expected_level is None:
+                errors.append(
+                    f"{page.relative_to(ROOT)}: certification tier is unmapped for {certification_code}"
+                )
+                continue
+            level_match = re.search(r'data-cert-level="([^"]+)"', opening_tag)
+            actual_level = level_match.group(1) if level_match else None
+            if actual_level != expected_level:
+                errors.append(
+                    f"{page.relative_to(ROOT)}: {certification_code} tier is {actual_level!r}, "
+                    f"expected {expected_level!r}"
+                )
 
         ids = set(re.findall(r'\bid="([^"]+)"', text))
         for href in re.findall(r'href="([^"]+)"', text):

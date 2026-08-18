@@ -434,3 +434,522 @@ html[data-theme="light"] .faq {
   background-color: var(--bg-card);
   box-shadow: 0 8px 24px rgba(15, 30, 60, 0.06);
 }
+
+/* Certification paths become compact badge rails. The existing ordered-list
+   markup keeps its semantics while the stations stay on one visual line. */
+#cert-paths .cert-paths {
+  gap: clamp(14px, 2vw, 18px);
+  margin-top: 24px;
+}
+
+#cert-paths .cert-path {
+  --path-rail-accent: 80, 230, 255;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 20px clamp(18px, 2.8vw, 28px) 18px;
+  border-color: rgba(var(--path-rail-accent), 0.18);
+  background:
+    radial-gradient(circle at 92% 0%, rgba(var(--path-rail-accent), 0.10), transparent 32%),
+    linear-gradient(115deg, rgba(43, 136, 216, 0.055), transparent 42%),
+    rgba(255, 255, 255, 0.025);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+#cert-paths .cert-path::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 18px auto 18px 0;
+  width: 3px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(180deg, #50e6ff, #2b88d8 58%, #9578e0);
+  box-shadow: 0 0 18px rgba(var(--path-rail-accent), 0.34);
+}
+
+#cert-paths .cert-path::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -110px;
+  right: -80px;
+  width: 260px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--path-rail-accent), 0.09), transparent 68%);
+  pointer-events: none;
+}
+
+#cert-paths .cert-path__header {
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  gap: 10px 14px;
+  margin-bottom: 12px;
+}
+
+#cert-paths .cert-path__name {
+  font-size: clamp(17px, 1.7vw, 20px);
+  font-weight: 650;
+  letter-spacing: -0.012em;
+}
+
+#cert-paths .cert-path__tag {
+  padding: 4px 10px;
+  border-color: rgba(var(--path-rail-accent), 0.25);
+  background: rgba(var(--path-rail-accent), 0.075);
+  white-space: nowrap;
+}
+
+#cert-paths .cert-path__stations {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 6px 3px 10px;
+  scroll-snap-type: inline proximity;
+  scrollbar-color: rgba(var(--path-rail-accent), 0.42) rgba(255, 255, 255, 0.035);
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+#cert-paths .cert-path__stations::-webkit-scrollbar {
+  height: 5px;
+}
+
+#cert-paths .cert-path__stations::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+#cert-paths .cert-path__stations::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(var(--path-rail-accent), 0.42);
+}
+
+#cert-paths .cert-path__station {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+#cert-paths .cert-path__station + .cert-path__station::before {
+  content: '';
+  width: clamp(16px, 2vw, 24px);
+  height: 12px;
+  margin: 0 clamp(2px, 0.35vw, 3px);
+  align-self: center;
+  background: linear-gradient(90deg, rgba(139, 154, 179, 0.46), rgba(var(--path-rail-accent), 0.82));
+  clip-path: polygon(0 46%, 76% 46%, 76% 16%, 100% 50%, 76% 84%, 76% 54%, 0 54%);
+}
+
+#cert-paths .cert-path__station + .cert-path__station:has(.cert-path__or)::before {
+  content: none;
+}
+
+#cert-paths .cert-path__or {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  margin: 0 5px;
+  padding: 0;
+  border: 1px solid rgba(var(--path-rail-accent), 0.28);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.13), transparent 42%),
+    rgba(var(--path-rail-accent), 0.09);
+  box-shadow: 0 0 18px rgba(var(--path-rail-accent), 0.10);
+  color: var(--azure-cyan);
+  font-size: 10px;
+  line-height: 1;
+}
+
+#cert-paths .cert-path__chip {
+  --cert-shield-asset: url("images/certification-badge-shield.webp");
+  --cert-star-asset: url("images/fluent-star-24-filled.svg");
+  --cert-star-size: 12px;
+  --cert-star-strip-width: 12px;
+  --cert-shield-filter:
+    saturate(0.76)
+    hue-rotate(25deg)
+    brightness(0.86)
+    drop-shadow(0 8px 12px rgba(0, 0, 0, 0.34));
+  --cert-shield-hover-filter:
+    saturate(0.92)
+    hue-rotate(22deg)
+    brightness(0.94)
+    drop-shadow(0 11px 16px rgba(43, 136, 216, 0.30));
+  --cert-code-colour: #102750;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 82px minmax(30px, auto);
+  align-items: center;
+  gap: 5px;
+  width: 112px;
+  min-width: 0;
+  min-height: 118px;
+  padding: 2px 4px 6px;
+  overflow: visible;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+  transition: background 180ms ease, box-shadow 180ms ease;
+}
+
+#cert-paths .cert-path__chip::before,
+#cert-paths .cert-path__chip::after {
+  content: '';
+  grid-area: 1 / 1;
+  place-self: center;
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+#cert-paths .cert-path__chip::before {
+  display: block;
+  width: 82px;
+  height: 82px;
+  background: var(--cert-shield-asset) center / contain no-repeat;
+  filter: var(--cert-shield-filter);
+}
+
+#cert-paths .cert-path__chip::after {
+  display: none;
+}
+
+/* Microsoft certification tiers: one star for Fundamentals, two for
+   Associate, and three for Expert. The official Fluent UI star stays separate
+   from the shield so the ribbon label can be aligned independently. */
+#cert-paths .cert-path__chip[data-cert-level]:not(.cert-path__chip--target)::after {
+  display: block;
+  width: var(--cert-star-strip-width);
+  height: var(--cert-star-size);
+  background-image: var(--cert-star-asset);
+  background-position: center;
+  background-size: var(--cert-star-size) var(--cert-star-size);
+  background-repeat: space no-repeat;
+  filter:
+    brightness(0)
+    invert(1)
+    drop-shadow(0 1px 2px rgba(0, 15, 49, 0.46));
+  opacity: 0.96;
+  transform: translateY(20px);
+}
+
+#cert-paths .cert-path__chip[data-cert-level="associate"] {
+  --cert-star-strip-width: 27px;
+}
+
+#cert-paths .cert-path__chip[data-cert-level="expert"] {
+  --cert-star-strip-width: 42px;
+}
+
+#cert-paths .cert-path__chip-code {
+  position: relative;
+  z-index: 1;
+  grid-area: 1 / 1;
+  place-self: center;
+  max-width: 70px;
+  color: var(--cert-code-colour);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  text-align: center;
+  text-wrap: balance;
+  transform: translateY(-1px);
+  transition: transform 180ms ease;
+}
+
+#cert-paths .cert-path__chip-role {
+  grid-area: 2 / 1;
+  place-self: start center;
+  max-width: 12ch;
+  color: var(--text-secondary);
+  font-size: 11.5px;
+  line-height: 1.28;
+  text-align: center;
+  text-wrap: balance;
+  transition: color 180ms ease;
+}
+
+#cert-paths a.cert-path__chip:hover {
+  border-color: transparent;
+  background: rgba(var(--path-rail-accent), 0.055);
+  box-shadow: inset 0 0 0 1px rgba(var(--path-rail-accent), 0.14);
+  transform: none;
+}
+
+#cert-paths a.cert-path__chip:hover::before,
+#cert-paths a.cert-path__chip:hover::after {
+  transform: translateY(-3px);
+}
+
+#cert-paths a.cert-path__chip[data-cert-level]:not(.cert-path__chip--target):hover::after {
+  transform: translateY(17px);
+}
+
+#cert-paths a.cert-path__chip:hover::before {
+  filter: var(--cert-shield-hover-filter);
+}
+
+#cert-paths a.cert-path__chip:not(.cert-path__chip--target):hover .cert-path__chip-code {
+  transform: translateY(-4px);
+}
+
+#cert-paths a.cert-path__chip:hover .cert-path__chip-role {
+  color: var(--text-primary);
+}
+
+#cert-paths a.cert-path__chip:focus-visible {
+  outline: 2px solid var(--azure-cyan);
+  outline-offset: 3px;
+}
+
+#cert-paths .cert-path__chip--current {
+  --cert-shield-filter:
+    saturate(1.18)
+    hue-rotate(-8deg)
+    brightness(1.02)
+    drop-shadow(0 9px 14px rgba(0, 174, 219, 0.30))
+    drop-shadow(0 0 10px rgba(80, 230, 255, 0.23));
+  --cert-shield-hover-filter: var(--cert-shield-filter);
+  --cert-code-colour: #062c5b;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#cert-paths .cert-path__chip--current::before {
+  filter: var(--cert-shield-filter);
+}
+
+#cert-paths .cert-path__chip--current .cert-path__chip-code {
+  color: var(--cert-code-colour);
+}
+
+#cert-paths .cert-path__chip--target {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2px 10px;
+  width: 174px;
+  min-height: 68px;
+  padding: 9px 13px 9px 10px;
+  border: 1px solid rgba(255, 185, 0, 0.32);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 214, 92, 0.14), transparent 30%),
+    linear-gradient(120deg, rgba(255, 185, 0, 0.12), rgba(255, 185, 0, 0.045));
+  box-shadow: inset 0 1px 0 rgba(255, 225, 139, 0.08);
+}
+
+#cert-paths .cert-path__chip--target::before {
+  grid-area: 1 / 1 / span 2 / 1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffe18c, #ffb900 62%, #d88a00);
+  clip-path: none;
+  filter: drop-shadow(0 5px 10px rgba(255, 185, 0, 0.26));
+}
+
+#cert-paths .cert-path__chip--target::after {
+  content: '';
+  display: block;
+  grid-area: 1 / 1 / span 2 / 1;
+  width: 15px;
+  height: 15px;
+  place-self: center;
+  clip-path: polygon(50% 0, 61% 36%, 100% 50%, 61% 64%, 50% 100%, 39% 64%, 0 50%, 39% 36%);
+  background: #332400;
+}
+
+#cert-paths .cert-path__chip--target .cert-path__chip-code {
+  grid-area: 1 / 2;
+  place-self: end start;
+  max-width: none;
+  color: var(--xp-gold);
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: left;
+  transform: none;
+}
+
+#cert-paths .cert-path__chip--target .cert-path__chip-role {
+  grid-area: 2 / 2;
+  place-self: start;
+  max-width: none;
+  font-size: 10px;
+  letter-spacing: 0.10em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@media (max-width: 699px) {
+  #cert-paths .cert-path {
+    padding: 18px 16px 15px;
+  }
+
+  #cert-paths .cert-path__header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  #cert-paths .cert-path__stations {
+    width: calc(100% + 16px);
+    padding-right: 16px;
+  }
+
+  #cert-paths .cert-path__chip {
+    grid-template-columns: 1fr;
+    grid-template-rows: 76px minmax(28px, auto);
+    gap: 5px;
+    width: 104px;
+    min-height: 110px;
+    padding: 2px 4px 5px;
+  }
+
+  #cert-paths .cert-path__chip::before {
+    width: 76px;
+    height: 76px;
+  }
+
+  #cert-paths .cert-path__chip[data-cert-level]:not(.cert-path__chip--target)::after {
+    transform: translateY(18px);
+  }
+
+  #cert-paths a.cert-path__chip[data-cert-level]:not(.cert-path__chip--target):hover::after {
+    transform: translateY(15px);
+  }
+
+  #cert-paths .cert-path__chip-code {
+    max-width: 66px;
+    font-size: 10.5px;
+  }
+
+  #cert-paths .cert-path__chip-role {
+    font-size: 11px;
+  }
+
+  #cert-paths .cert-path__chip--target {
+    grid-template-columns: 30px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    width: 170px;
+    min-height: 60px;
+  }
+
+  #cert-paths .cert-path__chip--target::before {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cert-paths .cert-path__chip,
+  #cert-paths .cert-path__chip::before,
+  #cert-paths .cert-path__chip::after,
+  #cert-paths .cert-path__chip-code,
+  #cert-paths .cert-path__chip-role {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  #cert-paths .cert-path__chip::before {
+    forced-color-adjust: none;
+    background: var(--cert-shield-asset) center / contain no-repeat;
+    filter: grayscale(1) contrast(1.2);
+  }
+
+  #cert-paths .cert-path__chip-code {
+    forced-color-adjust: none;
+    color: #001b44;
+  }
+
+  #cert-paths .cert-path__chip--target {
+    border: 1px solid CanvasText;
+  }
+}
+
+html[data-theme="light"] #cert-paths .cert-path {
+  border-color: rgba(43, 136, 216, 0.17);
+  background:
+    radial-gradient(circle at 92% 0%, rgba(var(--path-rail-accent), 0.12), transparent 32%),
+    linear-gradient(115deg, rgba(43, 136, 216, 0.065), transparent 44%),
+    #ffffff;
+  box-shadow:
+    0 14px 34px rgba(15, 30, 60, 0.075),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+html[data-theme="light"] #cert-paths .cert-path__chip {
+  --cert-shield-filter:
+    saturate(0.82)
+    hue-rotate(22deg)
+    brightness(0.94)
+    drop-shadow(0 8px 12px rgba(15, 30, 60, 0.18));
+  --cert-shield-hover-filter:
+    saturate(0.96)
+    hue-rotate(18deg)
+    brightness(1)
+    drop-shadow(0 11px 16px rgba(35, 126, 192, 0.24));
+  --cert-code-colour: #102750;
+  background: transparent;
+}
+
+html[data-theme="light"] #cert-paths a.cert-path__chip:hover {
+  border-color: transparent;
+  background: rgba(0, 110, 170, 0.055);
+}
+
+html[data-theme="light"] #cert-paths .cert-path__chip--current {
+  --cert-shield-filter:
+    saturate(1.18)
+    hue-rotate(-8deg)
+    brightness(1.02)
+    drop-shadow(0 9px 14px rgba(0, 142, 175, 0.23))
+    drop-shadow(0 0 8px rgba(49, 207, 229, 0.16));
+  --cert-shield-hover-filter: var(--cert-shield-filter);
+  --cert-code-colour: #062c5b;
+  background: transparent;
+}
+
+html[data-theme="light"] #cert-paths .cert-path__chip--target {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 185, 0, 0.18), transparent 32%),
+    linear-gradient(120deg, rgba(255, 185, 0, 0.12), rgba(255, 185, 0, 0.035));
+}
+
+html[data-theme="light"] #cert-paths .cert-path__stations {
+  scrollbar-color: rgba(0, 110, 170, 0.40) rgba(13, 30, 55, 0.055);
+}
+
+html[data-theme="light"] #cert-paths .cert-path__stations::-webkit-scrollbar-track {
+  background: rgba(13, 30, 55, 0.055);
+}
+
+html[data-theme="light"] #cert-paths .cert-path__stations::-webkit-scrollbar-thumb {
+  background: rgba(0, 110, 170, 0.40);
+}
+
+html[data-theme="light"] #cert-paths .cert-path__or {
+  color: #006b83;
+  background: rgba(0, 110, 170, 0.07);
+}

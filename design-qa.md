@@ -68,4 +68,35 @@
 - [x] Verify dark, light, desktop, and mobile states.
 - [x] Verify browser-console and static-validator health.
 
+## Homepage Light-Mode Download CTA QA — 2026-08-18
+
+**Source visual truth**
+
+- Mobile light-mode reference: `/tmp/codex-remote-attachments/01a015aa-3843-7d50-ba1d-8591b072d240/0FF92EFB-41AF-490C-A89F-9DDB2552BBCE/1-Pasted-Image-1.jpg`
+- Requested correction: white download labels on branded buttons and a light sticky App Store banner in light mode.
+
+**Implementation target**
+
+- The compact navigation CTA uses a filled Azure gradient so its white label remains clear against the light navigation surface.
+- Both mid-page `Download free` CTAs and the sticky mobile `Download` CTA use white labels.
+- The sticky mobile banner switches to a translucent near-white surface with a subtle divider and upward shadow; its supporting copy remains dark and readable.
+- All overrides remain gated by `html[data-theme="light"]`, preserving the existing dark-mode treatment.
+
+**Rendered implementation evidence**
+
+- Mobile light-mode capture: `/Users/chris/.codex/visualizations/2026/08/18/01a015aa-3843-7d50-ba1d-8591b072d240/home-light-download-ctas-final.jpg`
+- Side-by-side reference comparison: `/Users/chris/.codex/visualizations/2026/08/18/01a015aa-3843-7d50-ba1d-8591b072d240/home-light-download-cta-comparison.jpg`
+- Viewport override: 390 × 844 CSS px; browser content capture: 375 × 812 px.
+
+**Validation evidence**
+
+- Light-mode computed styles: navigation, mid-page, and sticky download labels are `rgb(255, 255, 255)`.
+- Sticky banner computed background is `rgba(248, 250, 253, 0.94)` with a dark 12% divider and subtle upward shadow.
+- Mobile document overflow: 0 px.
+- Dark-mode preservation check: original transparent navigation CTA, dark sticky banner, and dark-on-bright-gradient download labels remain unchanged.
+- Browser console: zero warnings or errors.
+- Marketing SEO validator: 33 exam pages and 9 guide pages passed.
+- `git diff --check`: passed.
+- The existing generated-page check still identifies `AB-410`, `AB-900`, and `PL-300` as out of sync; this pre-existing generator drift is outside the two-file light-theme change.
+
 final result: passed

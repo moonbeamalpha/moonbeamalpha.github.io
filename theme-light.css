@@ -138,8 +138,24 @@ html[data-theme="light"] .headline-accent--purple {
 }
 html[data-theme="light"] .site-nav { background: rgba(245,247,250,0.80); }
 html[data-theme="light"] .site-nav--scrolled { background: rgba(245,247,250,0.94); }
-html[data-theme="light"] .btn-nav-cta { border-color: rgba(0,110,170,0.45); }
-html[data-theme="light"] .btn-nav-cta:hover { background: rgba(0,110,170,0.08); }
+html[data-theme="light"] .btn-nav-cta {
+  color: #fff !important;
+  background: linear-gradient(120deg, #0E7490, #1D6FB8);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(29,111,184,0.20);
+}
+html[data-theme="light"] .btn-nav-cta:hover {
+  color: #fff !important;
+  background: linear-gradient(120deg, #0C657D, #185F9D);
+}
+html[data-theme="light"] .cta-band__btn,
+html[data-theme="light"] .mobile-cta-bar__btn { color: #fff; }
+html[data-theme="light"] .mobile-cta-bar {
+  background: rgba(248,250,253,0.94);
+  border-top-color: rgba(13,30,55,0.12);
+  box-shadow: 0 -8px 28px rgba(15,30,60,0.10);
+}
+html[data-theme="light"] .mobile-cta-bar__label { color: var(--text-secondary); }
 html[data-theme="light"] .badge-exam-iq { color: #fff; } /* gradient bg darkens via tokens; keep white text */
 html[data-theme="light"] .hero-app-icon { box-shadow: 0 0 24px rgba(43,136,216,0.25), 0 0 48px rgba(43,136,216,0.12); }
 

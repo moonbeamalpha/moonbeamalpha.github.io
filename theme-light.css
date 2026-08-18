@@ -277,8 +277,34 @@ html[data-theme="light"] .exam-mini__dot { background: rgba(13,30,55,0.22); }
 html[data-theme="light"] .exam-mini__dot:hover { background: rgba(13,30,55,0.42); }
 
 /* ── 4. Exam-page component overrides ── */
-html[data-theme="light"] .site-nav__cta { background: rgba(0,110,170,0.07); border-color: rgba(0,110,170,0.40); }
-html[data-theme="light"] .site-nav__cta:hover { background: rgba(0,110,170,0.12); }
+html[data-theme="light"] .site-nav__cta {
+  color: #fff;
+  background: linear-gradient(120deg, #0E7490, #1D6FB8);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(29,111,184,0.20);
+}
+html[data-theme="light"] .site-nav__cta:hover {
+  color: #fff;
+  background: linear-gradient(120deg, #0C657D, #185F9D);
+}
+html[data-theme="light"] .am-cert-hero__cta {
+  color: #fff;
+  background: linear-gradient(135deg, #0E7490, #1D6FB8);
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--amh-accent) 55%, #000),
+    color-mix(in srgb, var(--amh-accent-2) 55%, #000));
+}
+html[data-theme="light"] .cta-button,
+html[data-theme="light"] .guide-inline-cta__btn {
+  color: #fff;
+  background: linear-gradient(120deg, #0E7490, #1D6FB8);
+}
+html[data-theme="light"] .cta-final {
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 25%, rgba(43,136,216,0.13) 0%, transparent 68%),
+    linear-gradient(180deg, #F8FAFD 0%, #EDF3FA 100%);
+  border-top: 1px solid rgba(13,30,55,0.08);
+}
 html[data-theme="light"] .page-toc { background: rgba(245,247,250,0.85); }
 html[data-theme="light"] .page-toc__link:hover { background: rgba(0,110,170,0.07); }
 html[data-theme="light"] .page-toc__link[aria-current="true"] { background: rgba(0,110,170,0.09); }

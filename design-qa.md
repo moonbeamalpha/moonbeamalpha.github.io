@@ -99,4 +99,35 @@
 - `git diff --check`: passed.
 - The existing generated-page check still identifies `AB-410`, `AB-900`, and `PL-300` as out of sync; this pre-existing generator drift is outside the two-file light-theme change.
 
+## Site-Wide Light-Mode Download CTA QA — 2026-08-18
+
+**Source visual truth**
+
+- Mobile light-mode reference: `/tmp/codex-remote-attachments/01a015aa-3843-7d50-ba1d-8591b072d240/0FF92EFB-41AF-490C-A89F-9DDB2552BBCE/1-Pasted-Image-1.jpg`
+- Selected treatment: white download labels on darkened Azure gradients, plus an explicitly light lower conversion surface.
+
+**Implementation scope**
+
+- Shared exam, guide, exam-index, and 404 navigation CTA: white label on the filled Azure gradient.
+- Exam hero CTA: white label on a family-colour gradient darkened specifically for light-mode contrast.
+- Shared in-article, guide-inline, and final download CTAs: white labels on a deep Azure gradient.
+- Exam and guide final conversion bands: light layered background with a subtle top divider.
+- Homepage treatment remains unchanged; every new rule is gated by `html[data-theme="light"]`.
+
+**Rendered implementation evidence**
+
+- Exam final CTA: `/Users/chris/.codex/visualizations/2026/08/18/01a015aa-3843-7d50-ba1d-8591b072d240/exam-light-final-cta-mobile.jpg`
+- Guide final CTA: `/Users/chris/.codex/visualizations/2026/08/18/01a015aa-3843-7d50-ba1d-8591b072d240/guide-light-final-cta-mobile.jpg`
+- Source/exam/guide comparison: `/Users/chris/.codex/visualizations/2026/08/18/01a015aa-3843-7d50-ba1d-8591b072d240/site-wide-light-cta-comparison.jpg`
+- Mobile viewport override: 390 × 844 CSS px.
+
+**Validation evidence**
+
+- Complete browser sweep: 46 themed pages and 145 download CTA instances checked in light mode, with zero non-white labels, non-light conversion bands, or document-level overflow issues.
+- Representative dark-mode guide check: original cyan navigation link, bright gradient buttons, and dark lower surface remain unchanged.
+- Browser console: zero warnings or errors after the full sweep.
+- Marketing SEO validator: 33 exam pages and 9 guide pages passed.
+- `git diff --check`: passed.
+- The existing generated-page check still identifies `AB-410`, `AB-900`, and `PL-300` as out of sync; this pre-existing generator drift is outside the shared light-theme change.
+
 final result: passed

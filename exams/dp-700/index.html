@@ -587,10 +587,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">A new analyst must be able to open every notebook, pipeline, and lakehouse in a workspace and read the data, but must not be allowed to edit any item or write data. Which…</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-radio"></span>Viewer</li>
+              <li><span class="qt__viz-radio"></span>Admin</li>
               <li><span class="qt__viz-radio"></span>Contributor</li>
               <li><span class="qt__viz-radio"></span>Member</li>
-              <li><span class="qt__viz-radio"></span>Admin</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>Viewer</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -602,11 +602,11 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">A new project will start ingestion and transformation in a Lakehouse rather than a Warehouse. Which factors legitimately point toward choosing the Lakehouse for this stage?…</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>The team develops mainly in Apache Spark notebooks using Python and Scala</li>
+              <li><span class="qt__viz-checkbox"></span>The schema is a fixed, governed star schema built entirely in T-SQL</li>
               <li class="is-selected"><span class="qt__viz-checkbox"></span>The incoming data includes unstructured files alongside structured tables</li>
               <li><span class="qt__viz-checkbox"></span>The workload requires multi-table transactional writes across many tables</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>The team develops mainly in Apache Spark notebooks using Python and Scala</li>
               <li><span class="qt__viz-checkbox"></span>Most consumers need full T-SQL DML to update and delete rows directly</li>
-              <li><span class="qt__viz-checkbox"></span>The schema is a fixed, governed star schema built entirely in T-SQL</li>
             </ul>
           </div>
           <h3>Multi-select</h3>
@@ -667,9 +667,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Contributor</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Admin</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>This role adds write and modify rights, letting the user edit notebooks, run pipelines, and change lakehouse data, which exceeds read-only access.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>This role can manage permissions, add other admins, and delete the workspace, making it the most privileged option and inappropriate for a read-only analyst.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

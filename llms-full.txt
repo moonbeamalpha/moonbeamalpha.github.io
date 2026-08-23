@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 13,300+ practice questions cover 33 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 14,300+ practice questions cover 35 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -36,7 +36,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 396 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
 
-### AI, Machine Learning & Copilot Agents (11)
+### AI, Machine Learning & Copilot Agents (13)
 
 - [AI-900 — Microsoft Azure AI Fundamentals (retired)](https://azuremastery.app/exams/ai-900/): 340 in-app practice questions retained for reference. Microsoft retired AI-900 on 30 June 2026 and replaced it with AI-901; AI-900 can no longer be scheduled.
 
@@ -50,9 +50,13 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 400 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
 
+- [AI-500 — Microsoft Multi-Agent AI Solutions Expert](https://azuremastery.app/exams/ai-500/): 452 in-app practice questions. Expert-tier cert, launched in beta in 2026. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: architect multi-agent solutions (15–20%), develop multi-agent solutions in Azure (30–35%), evaluate, optimize, and monitor multi-agent solutions (20–25%), and secure, govern, and deploy multi-agent solutions (20–25%). Covers Microsoft Foundry, the Microsoft Agent Framework, orchestration patterns, A2A and MCP protocols, agent observability, and Microsoft Entra Agent ID.
+
 - [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 420 in-app practice questions. Associate-tier cert with a 120-minute assessment for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Microsoft's study guide was last updated 15 May 2026. Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
 
 - [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 452 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
+
+- [AB-650 — Microsoft AI Services Administrator Associate](https://azuremastery.app/exams/ab-650/): 501 in-app practice questions. Associate-tier admin cert, launched in beta in 2026. 120-min duration, 40–60 questions, pass score 700/1000. Three domains: configure and manage Microsoft 365 tenants and workloads (20–25%), govern and secure Microsoft 365 tenants and workloads (40–45%), and manage and secure AI services in Microsoft 365 (35–40%). For Microsoft 365 administrators taking on Copilot, agent governance with Agent 365 and Microsoft Entra Agent ID, and Microsoft Purview data security for AI.
 
 - [AB-731 — Microsoft AI Transformation Leader](https://azuremastery.app/exams/ab-731/): 352 in-app practice questions. Beginner-tier leadership cert (no-code), does not expire, USD $99 voucher. 45-min duration (65-min seat), 30–40 mixed-format questions, pass score 700/1000. Three domains: identify the business value of generative AI solutions (35–40%), identify benefits/capabilities of Microsoft's AI apps and services (35–40%), identify an implementation and adoption strategy (20–25%). For business decision-makers, programme leads, and AI champions — not builders. Skills outline 2026.
 
@@ -91,7 +95,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 - [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 351 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
 
 ### GitHub (2)
-- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 355 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
+- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 366 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
 - [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 367 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community.
 
 ## Guides
@@ -107,7 +111,7 @@ Free long-form study guides — exam-neutral advice grounded in the official Mic
 - [AZ-900 vs AZ-104](https://azuremastery.app/guides/az-900-vs-az-104/): Which Azure certification fits, whether you need both, and in what order.
 - [SC-900 vs AZ-900](https://azuremastery.app/guides/sc-900-vs-az-900/): Security-first or cloud-first — how the two fundamentals exams differ and which to sit first.
 
-## Exams covered (33)
+## Exams covered (35)
 
 The app covers the following Microsoft certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine.
 
@@ -120,15 +124,17 @@ The app covers the following Microsoft certification exams. All are taught with 
 - AZ-500 — Microsoft Azure Security Technologies (Security Engineer Associate)
 - AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions
 
-### AI, Machine Learning & Copilot Agents (11)
+### AI, Machine Learning & Copilot Agents (13)
 - AI-900 — Microsoft Azure AI Fundamentals (retired 30 June 2026; replaced by AI-901)
 - AI-901 — Microsoft Azure AI Fundamentals
 - AI-102 — Designing and Implementing a Microsoft Azure AI Solution (retired 30 June 2026; current route is AI-103)
 - AI-103 — Developing AI Apps and Agents on Azure
 - AI-200 — Microsoft Azure AI Cloud Developer
 - AI-300 — Microsoft Azure ML Operations Engineer
+- AI-500 — Microsoft Multi-Agent AI Solutions Expert
 - AB-410 — Microsoft Intelligent Applications Builder Associate
 - AB-620 — Microsoft AI Agent Builder Associate
+- AB-650 — Microsoft AI Services Administrator Associate
 - AB-731 — Microsoft AI Transformation Leader (no-code business leadership)
 - AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals
 - AB-100 — Microsoft Agentic AI Business Solutions Architect (Expert)
@@ -271,6 +277,33 @@ Q: Does AB-620 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-620 practice test mode?
 A: Yes - the exam simulator runs full-length AB-620 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+
+## /exams/ab-650/ — AB-650 Practice Questions — 501 Qs & Exam Prep (2026)
+Page last modified: 2026-08-23
+Exam domains:
+  - Configure and manage Microsoft 365 tenants and workloads (20–25%)
+  - Govern and secure Microsoft 365 tenants and workloads (40–45%)
+  - Manage and secure AI services in Microsoft 365 (35–40%)
+Q: How much does the AB-650 exam cost?
+A: Microsoft prices AB-650 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. During a beta, Microsoft sometimes opens a short discounted-registration window (announced on the Microsoft Learn blog) with a discount code for a limited number of seats. The certification renews annually with a free online assessment once you're certified, so there is no recurring fee.
+Q: Does the AB-650 certification expire?
+A: Yes. Microsoft Associate certifications including AB-650 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills-outline updates, so staying current is straightforward if you remain broadly active in the role. Fundamentals certifications such as AB-900 are different — those don't expire.
+Q: What is the AB-650 retake policy if I fail?
+A: AB-650's beta status changes this for now. If you don't pass a beta exam, Microsoft has you wait until the exam goes live before you can retake it — the usual 24-hour and 14-day retake windows don't apply during the beta window. Once AB-650 is fully live, Microsoft's standard retake policy takes over: a 24-hour wait before your first retake, 14-day waits before the second and third, and a cap of five attempts per rolling 12 months. Each attempt requires a new voucher.
+Q: How long should I study for AB-650?
+A: Allow four to eight weeks of focused study if you already administer Microsoft 365 tenants and Microsoft Entra ID day to day. Spend longer if Microsoft Purview data protection, Conditional Access, Agent 365, or Microsoft Entra Agent ID are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
+Q: AB-650 vs AB-620 — administer or build?
+A: Different roles over the same agent estate. AB-620 is the AI Agent Builder Associate credential — the maker-role exam for designing, integrating, and testing agents inside Microsoft Copilot Studio. AB-650 is the administrator-role exam: it's about governing whatever agents your organisation ends up with, wherever they were built, across the wider Microsoft 365 tenant — licensing, identity, Defender and Purview protection, the agent registry, and Agent 365 monitoring. A Copilot Studio maker and a Microsoft 365 administrator often sit on the same team; AB-620 and AB-650 map to those two different jobs.
+Q: AB-650 vs AB-900 — do I need the fundamentals exam first?
+A: AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals) is the conceptual on-ramp — it stays at the "what is it and why does it matter" level across core Microsoft 365 objects, data protection concepts, and basic Copilot and agent administration. AB-650 is the associate-level exam built on top of that: it expects you to actually configure the tenant settings, identity policies, and agent governance controls, and to defend the trade-offs between similar-looking options. AB-900 isn't a formal prerequisite for AB-650, but it's a solid foundation if Microsoft 365 administration is new to you.
+Q: AB-650 vs SC-300 — how much identity overlap is there?
+A: Some overlap, different depth. SC-300 (Identity and Access Administrator) goes far deeper into Microsoft Entra identity architecture — hybrid identity, external identities, application integration, and identity governance at a specialist level. AB-650 covers the identity surface a Microsoft 365 administrator actually touches day to day — users, groups, administrative units, Conditional Access, and Privileged Identity Management — plus the newer agent identity model built on Microsoft Entra Agent ID, which SC-300 does not cover. Candidates who own both Microsoft 365 and deep identity architecture often hold both certifications.
+Q: Is Azure Mastery free for AB-650 prep?
+A: The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full bank of 501 AB-650 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: Does AB-650 practice work offline?
+A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+Q: Is there an AB-650 practice test mode?
+A: Yes — the exam simulator runs full-length AB-650 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-731/ — AB-731 Practice Questions — 352 Qs for AI Leadership (2026)
 Page last modified: 2026-08-09
@@ -430,6 +463,32 @@ Q: Does AI-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-300 practice test mode?
 A: Yes - the exam simulator runs full-length AI-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+
+## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
+Page last modified: 2026-08-23
+Exam domains:
+  - Architect Multi-Agent Solutions (15–20%)
+  - Develop Multi-Agent Solutions in Azure (30–35%)
+  - Evaluate, Optimize, and Monitor Multi-Agent Solutions (20–25%)
+  - Secure, Govern, and Deploy Multi-Agent Solutions (20–25%)
+Q: How much does the AI-500 exam cost?
+A: Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee.
+Q: Does the AI-500 certification expire?
+A: Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. Fundamentals certifications such as AZ-900 are different — those don't expire.
+Q: What is the AI-500 retake policy if I fail?
+A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+Q: How long should I study for AI-500?
+A: Allow six to ten weeks of focused study if you already build agentic solutions on Microsoft Foundry with Python. Spend longer if orchestration frameworks, Model Context Protocol, agent identity and RBAC, or evaluation and observability tooling are new to you. This is an expert-level exam that expects hands-on production experience, not just familiarity — Azure Mastery's readiness gauge helps you decide when to schedule it.
+Q: AI-500 vs AI-103 — which do I need?
+A: Different tiers and different scope. AI-103 (Azure AI Apps and Agents Developer Associate) validates building AI apps and single agents on Microsoft Foundry with Python — models, retrieval, vision, speech, and one agent talking to its own tools. AI-500 (Multi-Agent AI Solutions Expert) is the expert tier above it: architecting, orchestrating, evaluating, and securing systems where multiple agents coordinate in production, including Microsoft Agent Framework orchestration patterns, Agent2Agent and MCP integration, and per-agent identity and guardrails. The dependency is also formal: Microsoft lists the Azure AI Apps and Agents Developer Associate certification (earned via AI-103) as a required prerequisite, so you receive the Multi-Agent AI Solutions Expert credential only once you hold it and pass AI-500.
+Q: AI-500 vs AB-100 — architect or engineer?
+A: Different roles at a similar level. AB-100 (Agentic AI Business Solutions Architect) is the business-architecture view of agentic AI — ROI analysis, build-vs-buy across Copilot Studio, Microsoft Foundry, and Power Platform, governance, and ALM, aimed at architects who plan agentic solutions across an enterprise. AI-500 is the hands-on engineering expert exam — designing, coding, evaluating, and securing the multi-agent systems themselves, with Microsoft Agent Framework, MCP servers, orchestration patterns, and agent identity. Pick AB-100 if you're deciding which agentic patterns a business should adopt; pick AI-500 if you're the one building and running them.
+Q: Is Azure Mastery free for AI-500 prep?
+A: The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: Does AI-500 practice work offline?
+A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+Q: Is there an AI-500 practice test mode?
+A: Yes - the exam simulator runs full-length AI-500 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-900/ — AI-900 Retired Exam & AI-901 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -822,7 +881,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there a DP-900 practice test mode?
 A: Yes - the exam simulator runs full-length DP-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/gh-300/ — GH-300 Practice Questions — 355 Qs for GitHub Copilot (2026)
+## /exams/gh-300/ — GH-300 Practice Questions — 366 Qs for GitHub Copilot (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Use GitHub Copilot Responsibly (15–20%)
@@ -842,9 +901,9 @@ A: Yes. 'Use GitHub Copilot Responsibly' is the first domain, weighted 15–20%.
 Q: How much of GH-300 is prompt engineering?
 A: Prompt engineering and context crafting is its own domain, weighted 10–15%. GH-300 tests how you structure a prompt, how Copilot determines context, the difference between zero-shot and few-shot prompting, and the core principles of writing prompts that produce useful, relevant suggestions. It pairs closely with the data-and-architecture domain, which explains how your prompt is processed and turned into a suggestion.
 Q: How many GH-300 practice questions does Azure Mastery include?
-A: Azure Mastery ships with 355 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Core study runs on-device and works offline; optional sync uses your private iCloud account.
+A: Azure Mastery ships with 366 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Core study runs on-device and works offline; optional sync uses your private iCloud account.
 Q: Is Azure Mastery free for GH-300 prep?
-A: The app is free to download and includes a free allowance of GH-300 questions so you can try every feature. The full bank of 355 GH-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of GH-300 questions so you can try every feature. The full bank of 366 GH-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does GH-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a GH-300 practice test mode?

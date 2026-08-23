@@ -35,7 +35,11 @@ EXAMS_DIR = ROOT / "exams"
 DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-08-09"
-SEO_UPDATED_OVERRIDES = {}
+SEO_UPDATED_OVERRIDES = {
+    # New pages launched after the 2026-08-09 site-wide SEO pass.
+    "AB-650": "2026-08-23",
+    "AI-500": "2026-08-23",
+}
 RETIRED_EXAMS = {
     "AI-900": {
         "date": "30 June 2026",
@@ -66,6 +70,26 @@ RETIRING_EXAMS = {
     },
 }
 ACTIVE_SEO = {
+    "AB-650": {
+        "description": (
+            "{count} AB-650 practice questions for AI Services Administrator Associate. Study "
+            "Copilot administration, agent governance, and Purview on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AB-650 practice questions for Microsoft 365 Copilot administration, Agent 365 "
+            "governance, and Purview data security. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
+    "AI-500": {
+        "description": (
+            "{count} AI-500 practice questions for Multi-Agent AI Solutions Expert. Study Microsoft "
+            "Foundry, Agent Framework, orchestration, and security on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AI-500 practice questions for Microsoft Foundry, Agent Framework orchestration, "
+            "evaluations, and agent security. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
     "AB-410": {
         "description": (
             "{count} AB-410 practice questions for Intelligent Applications Builder. Study Dataverse, "

@@ -26,7 +26,11 @@ SUCCESSOR_ROUTES = {
     **{code: successor for code, (_, successor) in RETIRING.items()},
 }
 SEO_UPDATED = "2026-08-09"
-SEO_UPDATED_OVERRIDES = {}
+SEO_UPDATED_OVERRIDES = {
+    # Keep in lockstep with optimise-marketing-seo.py.
+    "AB-650": "2026-08-23",
+    "AI-500": "2026-08-23",
+}
 GUIDE_UPDATED = "2026-08-09"
 GUIDE_UPDATED_LABEL = "Updated 9 August 2026"
 GUIDE_SLUGS = (
@@ -47,6 +51,8 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-ai-901",
 }
 ACTIVE_SEO_REQUIREMENTS = {
+    "AB-650": ("AI Services Administrator", "Copilot", "Purview"),
+    "AI-500": ("Multi-Agent AI Solutions Expert", "Microsoft Foundry", "Agent Framework"),
     "AB-410": ("Intelligent Applications Builder", "Dataverse", "Power Apps"),
     "AZ-400": ("DevOps Engineer Expert", "Azure Pipelines", "GitHub Actions"),
     "AI-103": ("Developing AI Apps and Agents on Azure", "Microsoft Foundry"),
@@ -130,12 +136,12 @@ CERTIFICATION_CODES_BY_LEVEL = {
         "AB-900", "AI-900", "AI-901", "AZ-900", "DP-900", "PL-900", "SC-900",
     },
     "associate": {
-        "AB-410", "AB-620", "AB-731", "AI-102", "AI-103", "AI-200", "AI-300",
-        "AZ-104", "AZ-204", "AZ-500", "AZ-700", "DP-100", "DP-203", "DP-300",
-        "DP-600", "DP-700", "DP-750", "DP-800", "PL-300", "SC-200", "SC-300",
-        "SC-500",
+        "AB-410", "AB-620", "AB-650", "AB-731", "AI-102", "AI-103", "AI-200",
+        "AI-300", "AZ-104", "AZ-204", "AZ-500", "AZ-700", "DP-100", "DP-203",
+        "DP-300", "DP-600", "DP-700", "DP-750", "DP-800", "PL-300", "SC-200",
+        "SC-300", "SC-500",
     },
-    "expert": {"AB-100", "AZ-305", "AZ-400", "SC-100"},
+    "expert": {"AB-100", "AI-500", "AZ-305", "AZ-400", "SC-100"},
 }
 CERT_LEVEL_BY_CODE = {
     code: level

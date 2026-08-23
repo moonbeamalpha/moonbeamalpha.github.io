@@ -620,9 +620,9 @@
             <p class="qt__viz-q">Which file format is used to define prompt flow DAGs that can be version-controlled in a Git repository?</p>
             <ul class="qt__viz-options">
               <li class="is-selected"><span class="qt__viz-radio"></span>YAML</li>
-              <li><span class="qt__viz-radio"></span>JSON</li>
               <li><span class="qt__viz-radio"></span>XML</li>
               <li><span class="qt__viz-radio"></span>TOML</li>
+              <li><span class="qt__viz-radio"></span>JSON</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -634,10 +634,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">Which TWO Azure services can be added as connected resources to a Microsoft Foundry hub? (Choose two.)</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Azure AI Search</li>
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Azure OpenAI Service</li>
               <li><span class="qt__viz-checkbox"></span>Azure DevTest Labs</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Azure OpenAI Service</li>
               <li><span class="qt__viz-checkbox"></span>Azure Batch</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Azure AI Search</li>
             </ul>
           </div>
           <h3>Multi-select</h3>
@@ -698,9 +698,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: JSON</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: XML</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>While JSON is valid for many APIs, prompt flow does not author its DAG definitions in it, and its bracket-and-quote syntax produces noisier diffs than the format the tooling actually emits.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>XML is a verbose markup language that prompt flow tooling neither generates nor consumes for flow definitions, so it cannot describe a flow DAG.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

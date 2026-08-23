@@ -651,10 +651,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">What is the maximum size of a single message in Azure Queue Storage?</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-radio"></span>64 KB</li>
-              <li><span class="qt__viz-radio"></span>256 KB</li>
               <li><span class="qt__viz-radio"></span>1 MB</li>
               <li><span class="qt__viz-radio"></span>4 MB</li>
+              <li><span class="qt__viz-radio"></span>256 KB</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>64 KB</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -666,11 +666,11 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">Which TWO of the following are restart policy options for Azure Container Instances? Select two.</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Always</li>
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Never</li>
-              <li><span class="qt__viz-checkbox"></span>OnCrash</li>
-              <li><span class="qt__viz-checkbox"></span>Scheduled</li>
               <li><span class="qt__viz-checkbox"></span>Manual</li>
+              <li><span class="qt__viz-checkbox"></span>OnCrash</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Never</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Always</li>
+              <li><span class="qt__viz-checkbox"></span>Scheduled</li>
             </ul>
           </div>
           <h3>Multi-select</h3>
@@ -730,9 +730,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: 256 KB</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: 1 MB</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>256 KB is the Standard-tier maximum for Azure Service Bus messages, a different service with its own quotas, not the limit for Queue Storage. Queue Storage messages cannot reach this size.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>1 MB does not correspond to any Queue Storage message limit; it overstates the per-message capacity, which is far smaller. No tier of Queue Storage permits a message this large.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

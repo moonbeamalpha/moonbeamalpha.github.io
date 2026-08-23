@@ -613,10 +613,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">Which suffix identifies a custom log table that receives data through the Logs Ingestion API in a Microsoft Sentinel workspace?</p>
             <ul class="qt__viz-options">
+              <li><span class="qt__viz-radio"></span>_CEF</li>
               <li class="is-selected"><span class="qt__viz-radio"></span>_CL</li>
               <li><span class="qt__viz-radio"></span>_SRCH</li>
               <li><span class="qt__viz-radio"></span>_RST</li>
-              <li><span class="qt__viz-radio"></span>_CEF</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -629,8 +629,8 @@
             <p class="qt__viz-q">Which two mechanisms let Microsoft Sentinel collect security-relevant events? (Select two.)</p>
             <ul class="qt__viz-options">
               <li class="is-selected"><span class="qt__viz-checkbox"></span>Data connectors for Azure resources such as Azure Activity</li>
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Data collection rules (DCRs) for Windows Security events</li>
               <li><span class="qt__viz-checkbox"></span>An Azure Load Balancer health probe</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Data collection rules (DCRs) for Windows Security events</li>
               <li><span class="qt__viz-checkbox"></span>A storage lifecycle management policy</li>
               <li><span class="qt__viz-checkbox"></span>An Azure Policy that denies VM creation</li>
             </ul>
@@ -693,9 +693,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: _SRCH</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: _CEF</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>A _SRCH table holds the output of a search job, not raw ingested custom data; the workspace creates it when you run a search against stored logs.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>There is no _CEF table suffix; Common Event Format data lands in the built-in CommonSecurityLog table, which uses no custom suffix.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

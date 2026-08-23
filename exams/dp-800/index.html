@@ -601,10 +601,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">Which HTTP method does a RAG procedure use to invoke a chat-completions endpoint?</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-radio"></span>POST</li>
-              <li><span class="qt__viz-radio"></span>GET</li>
               <li><span class="qt__viz-radio"></span>DELETE</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>POST</li>
               <li><span class="qt__viz-radio"></span>PATCH</li>
+              <li><span class="qt__viz-radio"></span>GET</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -616,11 +616,11 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">Which two features help you retain and review historical changes to rows over time? (Select two.)</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>System-versioned temporal tables</li>
               <li class="is-selected"><span class="qt__viz-checkbox"></span>Change data capture (CDC)</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>System-versioned temporal tables</li>
+              <li><span class="qt__viz-checkbox"></span>A check constraint on a numeric range</li>
               <li><span class="qt__viz-checkbox"></span>A nonclustered index on the primary key</li>
               <li><span class="qt__viz-checkbox"></span>A computed column that uppercases a name</li>
-              <li><span class="qt__viz-checkbox"></span>A check constraint on a numeric range</li>
             </ul>
           </div>
           <h3>Multi-select</h3>
@@ -682,9 +682,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: GET</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: DELETE</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>GET retrieves resources and carries no request body, so it cannot send the JSON payload a completions call requires.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>DELETE is used to remove a resource, not to request a generated completion.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

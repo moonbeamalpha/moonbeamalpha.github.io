@@ -595,10 +595,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">A canvas app uses an Edit form named Form1 over a Microsoft Dataverse table. Rather than the built-in save, the maker must send the values the user typed into the form to a…</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-radio"></span>Form1.Updates</li>
-              <li><span class="qt__viz-radio"></span>Form1.LastSubmit</li>
               <li><span class="qt__viz-radio"></span>Form1.Item</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>Form1.Updates</li>
               <li><span class="qt__viz-radio"></span>Form1.Valid</li>
+              <li><span class="qt__viz-radio"></span>Form1.LastSubmit</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -610,11 +610,11 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">You are building a canvas app and want AI Builder controls from the Insert tab that work with no training round beforehand. Which two components are backed by ready-to-use…</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Business card reader component</li>
               <li><span class="qt__viz-checkbox"></span>Object detector component</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Business card reader component</li>
               <li><span class="qt__viz-checkbox"></span>Form processor component</li>
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Text recognizer component</li>
               <li><span class="qt__viz-checkbox"></span>Prediction model component</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Text recognizer component</li>
             </ul>
           </div>
           <h3>Multi-select</h3>
@@ -676,9 +676,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Form1.LastSubmit</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Form1.Item</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>This output fills in only after a submit succeeds and returns the row as the server stored it, including generated keys, so it cannot carry edits that have not yet been written.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>Form1.Item is the record supplied to the form that describes the row as it was loaded from the table, so reading it back yields the original values and silently discards everything the user typed.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

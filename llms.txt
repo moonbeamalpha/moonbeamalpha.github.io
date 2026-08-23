@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 13,300+ practice questions cover 33 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 14,300+ practice questions cover 35 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -36,7 +36,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 396 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
 
-### AI, Machine Learning & Copilot Agents (11)
+### AI, Machine Learning & Copilot Agents (13)
 
 - [AI-900 — Microsoft Azure AI Fundamentals (retired)](https://azuremastery.app/exams/ai-900/): 340 in-app practice questions retained for reference. Microsoft retired AI-900 on 30 June 2026 and replaced it with AI-901; AI-900 can no longer be scheduled.
 
@@ -50,9 +50,13 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 400 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
 
+- [AI-500 — Microsoft Multi-Agent AI Solutions Expert](https://azuremastery.app/exams/ai-500/): 452 in-app practice questions. Expert-tier cert, launched in beta in 2026. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: architect multi-agent solutions (15–20%), develop multi-agent solutions in Azure (30–35%), evaluate, optimize, and monitor multi-agent solutions (20–25%), and secure, govern, and deploy multi-agent solutions (20–25%). Covers Microsoft Foundry, the Microsoft Agent Framework, orchestration patterns, A2A and MCP protocols, agent observability, and Microsoft Entra Agent ID.
+
 - [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 420 in-app practice questions. Associate-tier cert with a 120-minute assessment for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Microsoft's study guide was last updated 15 May 2026. Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
 
 - [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 452 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
+
+- [AB-650 — Microsoft AI Services Administrator Associate](https://azuremastery.app/exams/ab-650/): 501 in-app practice questions. Associate-tier admin cert, launched in beta in 2026. 120-min duration, 40–60 questions, pass score 700/1000. Three domains: configure and manage Microsoft 365 tenants and workloads (20–25%), govern and secure Microsoft 365 tenants and workloads (40–45%), and manage and secure AI services in Microsoft 365 (35–40%). For Microsoft 365 administrators taking on Copilot, agent governance with Agent 365 and Microsoft Entra Agent ID, and Microsoft Purview data security for AI.
 
 - [AB-731 — Microsoft AI Transformation Leader](https://azuremastery.app/exams/ab-731/): 352 in-app practice questions. Beginner-tier leadership cert (no-code), does not expire, USD $99 voucher. 45-min duration (65-min seat), 30–40 mixed-format questions, pass score 700/1000. Three domains: identify the business value of generative AI solutions (35–40%), identify benefits/capabilities of Microsoft's AI apps and services (35–40%), identify an implementation and adoption strategy (20–25%). For business decision-makers, programme leads, and AI champions — not builders. Skills outline 2026.
 
@@ -91,7 +95,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 - [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 351 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
 
 ### GitHub (2)
-- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 355 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
+- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 366 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
 - [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 367 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community.
 
 ## Guides
@@ -107,7 +111,7 @@ Free long-form study guides — exam-neutral advice grounded in the official Mic
 - [AZ-900 vs AZ-104](https://azuremastery.app/guides/az-900-vs-az-104/): Which Azure certification fits, whether you need both, and in what order.
 - [SC-900 vs AZ-900](https://azuremastery.app/guides/sc-900-vs-az-900/): Security-first or cloud-first — how the two fundamentals exams differ and which to sit first.
 
-## Exams covered (33)
+## Exams covered (35)
 
 The app covers the following Microsoft certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine.
 
@@ -120,15 +124,17 @@ The app covers the following Microsoft certification exams. All are taught with 
 - AZ-500 — Microsoft Azure Security Technologies (Security Engineer Associate)
 - AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions
 
-### AI, Machine Learning & Copilot Agents (11)
+### AI, Machine Learning & Copilot Agents (13)
 - AI-900 — Microsoft Azure AI Fundamentals (retired 30 June 2026; replaced by AI-901)
 - AI-901 — Microsoft Azure AI Fundamentals
 - AI-102 — Designing and Implementing a Microsoft Azure AI Solution (retired 30 June 2026; current route is AI-103)
 - AI-103 — Developing AI Apps and Agents on Azure
 - AI-200 — Microsoft Azure AI Cloud Developer
 - AI-300 — Microsoft Azure ML Operations Engineer
+- AI-500 — Microsoft Multi-Agent AI Solutions Expert
 - AB-410 — Microsoft Intelligent Applications Builder Associate
 - AB-620 — Microsoft AI Agent Builder Associate
+- AB-650 — Microsoft AI Services Administrator Associate
 - AB-731 — Microsoft AI Transformation Leader (no-code business leadership)
 - AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals
 - AB-100 — Microsoft Agentic AI Business Solutions Architect (Expert)

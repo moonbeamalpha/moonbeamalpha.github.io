@@ -620,10 +620,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">How many dimensions does the text-embedding-3-large model produce by default?</p>
             <ul class="qt__viz-options">
-              <li><span class="qt__viz-radio"></span>256</li>
-              <li class="is-selected"><span class="qt__viz-radio"></span>3,072</li>
-              <li><span class="qt__viz-radio"></span>1,536</li>
               <li><span class="qt__viz-radio"></span>8,191</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>3,072</li>
+              <li><span class="qt__viz-radio"></span>256</li>
+              <li><span class="qt__viz-radio"></span>1,536</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -635,10 +635,10 @@
           <div class="qt__viz" data-quiz="1">
             <p class="qt__viz-q">Which TWO of the following are valid status values for a background response in the current Foundry runtime? (Select TWO)</p>
             <ul class="qt__viz-options">
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Queued</li>
-              <li class="is-selected"><span class="qt__viz-checkbox"></span>Completed</li>
               <li><span class="qt__viz-checkbox"></span>Paused</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Queued</li>
               <li><span class="qt__viz-checkbox"></span>Restarting</li>
+              <li class="is-selected"><span class="qt__viz-checkbox"></span>Completed</li>
             </ul>
           </div>
           <h3>Multi-select</h3>
@@ -700,9 +700,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: 256</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: 8,191</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>256 is a valid reduced dimension setting available through the dimensions parameter on text-embedding-3-large, but it is not the default output size for the model.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>8,191 is the maximum number of input tokens text-embedding-3-large can process in a single call — an input length limit, not the dimension count of the output vector.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

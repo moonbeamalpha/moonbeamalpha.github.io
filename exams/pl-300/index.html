@@ -611,12 +611,13 @@
 
         <article class="qt">
           <div class="qt__viz" data-quiz="1">
-            <p class="qt__viz-q">Which visual is best suited to show a trend over time?</p>
+            <p class="qt__viz-q">Which DAX function introduces row context when iterating a table?</p>
             <ul class="qt__viz-options">
-              <li><span class="qt__viz-radio"></span>Treemap</li>
-              <li class="is-selected"><span class="qt__viz-radio"></span>Line chart</li>
-              <li><span class="qt__viz-radio"></span>Pie chart</li>
-              <li><span class="qt__viz-radio"></span>Donut chart</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>SUMX</li>
+              <li><span class="qt__viz-radio"></span>SUM</li>
+              <li><span class="qt__viz-radio"></span>CALCULATE</li>
+              <li><span class="qt__viz-radio"></span>VALUES</li>
+              <li><span class="qt__viz-radio"></span>RELATED</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -692,9 +693,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: Treemap</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: SUM</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>A Treemap encodes hierarchical or categorical composition as nested rectangles sized by value; it shows magnitude at a point in time rather than trend across multiple periods.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>SUM aggregates a single column without iterating. It doesn't evaluate an expression per row, so it doesn't introduce row context.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

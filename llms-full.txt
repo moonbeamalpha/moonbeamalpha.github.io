@@ -34,7 +34,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Exam retires 31 August 2026** — successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
-- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 535 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
+- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 569 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
 
 ### AI, Machine Learning & Copilot Agents (11)
 
@@ -674,7 +674,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-500 practice test mode?
 A: Yes - the exam simulator runs full-length AZ-500 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-700/ — AZ-700 Practice Questions — 535 Qs for Network Engineer (2026)
+## /exams/az-700/ — AZ-700 Practice Questions — 569 Qs for Network Engineer (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Design and implement core networking infrastructure (25–30%)
@@ -695,7 +695,7 @@ A: If you have less than six months of hands-on Azure experience, take AZ-900 (M
 Q: AZ-700 vs AZ-305 — which next?
 A: Pass AZ-700 first. AZ-700 is the Associate-level operational cert; AZ-305 is the Expert-level architectural cert. AZ-305 assumes you already understand Azure operations (the AZ-700 material) and adds requirements gathering, capacity planning, governance design, and choosing between competing service options. Most architects hold both — AZ-700 to prove they have done the work, AZ-305 to prove they can design it.
 Q: Is Azure Mastery free for AZ-700 prep?
-A: The app is free to download and includes a free allowance of AZ-700 questions so you can try every feature. The full bank of 535 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AZ-700 questions so you can try every feature. The full bank of 569 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-700 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-700 practice test mode?

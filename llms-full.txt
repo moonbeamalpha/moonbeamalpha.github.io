@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 14,300+ practice questions cover 35 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 10,300+ practice questions cover 30 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -20,83 +20,83 @@ Last updated: 2026-08-09
 
 Every exam covered by the app has a dedicated landing page describing the exam, the in-app question count, the official Microsoft Learn skills outline, a suggested study plan, and cert-specific FAQs. Question counts are extracted directly from the app's bundled question banks. Each page ships a single `@graph` JSON-LD block linking 6 entities (WebPage, BreadcrumbList, EducationalOccupationalCredential, SoftwareApplication, FAQPage, HowTo) for AI/AEO discoverability. The first 5 below are the most heavily-trafficked Azure exams and ship the deepest per-domain breakdowns.
 
-### Azure infrastructure & solutions (7)
+### Azure infrastructure & solutions (5)
 
-- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 380 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills outline updated 14 January 2026.
+- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 330 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills outline updated 14 January 2026.
 
-- [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 612 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
+- [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 481 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
 
-- [AZ-305 — Designing Microsoft Azure Infrastructure Solutions](https://azuremastery.app/exams/az-305/): 400 in-app practice questions. Expert-tier solution architect cert (single exam earns the Microsoft Certified: Azure Solutions Architect Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions plus case studies. Four design domains: identity/governance/monitoring (25–30%), data storage (20–25%), business continuity (15–20%), infrastructure (30–35%). Recommended Associate prerequisite: AZ-104. Skills outline updated 17 April 2026.
+- [AZ-305 — Designing Microsoft Azure Infrastructure Solutions](https://azuremastery.app/exams/az-305/): 223 in-app practice questions. Expert-tier solution architect cert (single exam earns the Microsoft Certified: Azure Solutions Architect Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions plus case studies. Four design domains: identity/governance/monitoring (25–30%), data storage (20–25%), business continuity (15–20%), infrastructure (30–35%). Recommended Associate prerequisite: AZ-104. Skills outline updated 17 April 2026.
 
-- [AZ-204 — Developing Solutions for Microsoft Azure](https://azuremastery.app/exams/az-204/): 405 in-app practice questions. Associate-tier developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. **⚠ Exam retires 31 July 2026.** Five developer domains: compute (25–30%), storage (15–20%), security (15–20%), monitor/troubleshoot/optimize (5–10%), connect/consume services (20–25%). Heavy on SDK code samples in C#/Python/JavaScript. Skills outline updated 14 January 2026.
+- [AZ-204 — Developing Solutions for Microsoft Azure](https://azuremastery.app/exams/az-204/): 405 in-app practice questions. Associate-tier developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. **⚠ Microsoft retired AZ-204 on 31 July 2026** — it can no longer be scheduled; the current AI cloud developer route is AI-200. Five developer domains: compute (25–30%), storage (15–20%), security (15–20%), monitor/troubleshoot/optimize (5–10%), connect/consume services (20–25%). Heavy on SDK code samples in C#/Python/JavaScript. Skills outline updated 14 January 2026.
 
-- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 470 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 OR AZ-204. Skills outline updated 24 April 2026.
+- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 395 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 OR AZ-204. Skills outline updated 24 April 2026.
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Exam retires 31 August 2026** — successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
-- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 396 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
+- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 304 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
 
-### AI, Machine Learning & Copilot Agents (13)
+### AI, Machine Learning & Copilot Agents (11)
 
 - [AI-900 — Microsoft Azure AI Fundamentals (retired)](https://azuremastery.app/exams/ai-900/): 340 in-app practice questions retained for reference. Microsoft retired AI-900 on 30 June 2026 and replaced it with AI-901; AI-900 can no longer be scheduled.
 
-- [AI-901 — Microsoft Azure AI Fundamentals](https://azuremastery.app/exams/ai-901/): 604 in-app practice questions. Current replacement for retired AI-900; the Fundamentals credential does not expire and local exam pricing varies. 45-min duration, pass score 700/1000. Two assessed areas: identify AI concepts and responsibilities (40–45%); implement AI solutions by using Microsoft Foundry (55–60%). Requires foundational cloud/Azure knowledge and understanding Python examples. English exam updated 15 April 2026.
+- [AI-901 — Microsoft Azure AI Fundamentals](https://azuremastery.app/exams/ai-901/): 423 in-app practice questions. Current replacement for retired AI-900; the Fundamentals credential does not expire and local exam pricing varies. 45-min duration, pass score 700/1000. Two assessed areas: identify AI concepts and responsibilities (40–45%); implement AI solutions by using Microsoft Foundry (55–60%). Requires foundational cloud/Azure knowledge and understanding Python examples. English exam updated 15 April 2026.
 
 - [AI-102 — Designing and Implementing a Microsoft Azure AI Solution (retired)](https://azuremastery.app/exams/ai-102/): 334 in-app practice questions retained for reference. Microsoft retired AI-102 on 30 June 2026; the current role-based Azure AI apps and agents route is AI-103.
 
-- [AI-103 — Developing AI Apps and Agents on Azure](https://azuremastery.app/exams/ai-103/): 557 in-app practice questions for the Azure AI Apps and Agents Developer Associate credential. 100-min duration, pass score 700/1000. Five domains: plan/manage an Azure AI solution (25–30%), generative and agentic solutions (30–35%), computer vision (10–15%), text analysis (10–15%), and information extraction (10–15%). Requires Python and Microsoft Foundry experience. Skills measured as of 16 April 2026.
+- [AI-103 — Developing AI Apps and Agents on Azure](https://azuremastery.app/exams/ai-103/): 404 in-app practice questions for the Azure AI Apps and Agents Developer Associate credential. 100-min duration, pass score 700/1000. Five domains: plan/manage an Azure AI solution (25–30%), generative and agentic solutions (30–35%), computer vision (10–15%), text analysis (10–15%), and information extraction (10–15%). Requires Python and Microsoft Foundry experience. Skills measured as of 16 April 2026.
 
-- [AI-200 — Microsoft Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 444 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Skills outline updated March 2026.
+- [AI-200 — Microsoft Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 258 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Skills outline updated March 2026.
 
-- [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 400 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
+- [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 319 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
 
-- [AI-500 — Microsoft Multi-Agent AI Solutions Expert](https://azuremastery.app/exams/ai-500/): 452 in-app practice questions. Expert-tier cert, launched in beta in 2026. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: architect multi-agent solutions (15–20%), develop multi-agent solutions in Azure (30–35%), evaluate, optimize, and monitor multi-agent solutions (20–25%), and secure, govern, and deploy multi-agent solutions (20–25%). Covers Microsoft Foundry, the Microsoft Agent Framework, orchestration patterns, A2A and MCP protocols, agent observability, and Microsoft Entra Agent ID.
+- [AI-500 — Microsoft Multi-Agent AI Solutions Expert](https://azuremastery.app/exams/ai-500/): 416 in-app practice questions. Expert-tier cert, launched in beta in 2026. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: architect multi-agent solutions (15–20%), develop multi-agent solutions in Azure (30–35%), evaluate, optimize, and monitor multi-agent solutions (20–25%), and secure, govern, and deploy multi-agent solutions (20–25%). Covers Microsoft Foundry, the Microsoft Agent Framework, orchestration patterns, A2A and MCP protocols, agent observability, and Microsoft Entra Agent ID.
 
-- [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 420 in-app practice questions. Associate-tier cert with a 120-minute assessment for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Microsoft's study guide was last updated 15 May 2026. Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
+- [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 389 in-app practice questions. Associate-tier cert with a 120-minute assessment for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Microsoft's study guide was last updated 15 May 2026. Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
 
-- [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 452 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
+- [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 327 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
 
-- [AB-650 — Microsoft AI Services Administrator Associate](https://azuremastery.app/exams/ab-650/): 501 in-app practice questions. Associate-tier admin cert, launched in beta in 2026. 120-min duration, 40–60 questions, pass score 700/1000. Three domains: configure and manage Microsoft 365 tenants and workloads (20–25%), govern and secure Microsoft 365 tenants and workloads (40–45%), and manage and secure AI services in Microsoft 365 (35–40%). For Microsoft 365 administrators taking on Copilot, agent governance with Agent 365 and Microsoft Entra Agent ID, and Microsoft Purview data security for AI.
+- [AB-650 — Microsoft AI Services Administrator Associate](https://azuremastery.app/exams/ab-650/): 471 in-app practice questions. Associate-tier admin cert, launched in beta in 2026. 120-min duration, 40–60 questions, pass score 700/1000. Three domains: configure and manage Microsoft 365 tenants and workloads (20–25%), govern and secure Microsoft 365 tenants and workloads (40–45%), and manage and secure AI services in Microsoft 365 (35–40%). For Microsoft 365 administrators taking on Copilot, agent governance with Agent 365 and Microsoft Entra Agent ID, and Microsoft Purview data security for AI.
 
-- [AB-731 — Microsoft AI Transformation Leader](https://azuremastery.app/exams/ab-731/): 352 in-app practice questions. Beginner-tier leadership cert (no-code), does not expire, USD $99 voucher. 45-min duration (65-min seat), 30–40 mixed-format questions, pass score 700/1000. Three domains: identify the business value of generative AI solutions (35–40%), identify benefits/capabilities of Microsoft's AI apps and services (35–40%), identify an implementation and adoption strategy (20–25%). For business decision-makers, programme leads, and AI champions — not builders. Skills outline 2026.
+- [AB-731 — Microsoft AI Transformation Leader](https://azuremastery.app/exams/ab-731/): 284 in-app practice questions. Beginner-tier leadership cert (no-code), does not expire, USD $99 voucher. 45-min duration (65-min seat), 30–40 mixed-format questions, pass score 700/1000. Three domains: identify the business value of generative AI solutions (35–40%), identify benefits/capabilities of Microsoft's AI apps and services (35–40%), identify an implementation and adoption strategy (20–25%). For business decision-makers, programme leads, and AI champions — not builders. Skills outline 2026.
 
-- [AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals](https://azuremastery.app/exams/ab-900/): 358 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 35–45 mixed-format questions, pass score 700/1000. Three domains: identify core features/objects of Microsoft 365 (30–35%), data protection and governance for M365 and Copilot (35–40%), basic admin tasks for Copilot and agents (25–30%). For IT admins deploying and governing Copilot. Skills outline published May 2026.
+- [AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals](https://azuremastery.app/exams/ab-900/): 285 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 35–45 mixed-format questions, pass score 700/1000. Three domains: identify core features/objects of Microsoft 365 (30–35%), data protection and governance for M365 and Copilot (35–40%), basic admin tasks for Copilot and agents (25–30%). For IT admins deploying and governing Copilot. Skills outline published May 2026.
 
-- [AB-100 — Microsoft Agentic AI Business Solutions Architect](https://azuremastery.app/exams/ab-100/): 421 in-app practice questions. Expert-tier architect cert, renews annually, USD $165 voucher. 100-min duration, 40–60 mixed-format questions, pass score 700/1000. Validates architecting multi-agent enterprise solutions with the Microsoft 365 Copilot extensibility framework, Microsoft Agent Framework, MCP extensibility, Computer Use, agent feed, and DSPM for AI. Skills outline published May 2026.
+- [AB-100 — Microsoft Agentic AI Business Solutions Architect](https://azuremastery.app/exams/ab-100/): 305 in-app practice questions. Expert-tier architect cert, renews annually, USD $165 voucher. 100-min duration, 40–60 mixed-format questions, pass score 700/1000. Validates architecting multi-agent enterprise solutions with the Microsoft 365 Copilot extensibility framework, Microsoft Agent Framework, MCP extensibility, Computer Use, agent feed, and DSPM for AI. Skills outline published May 2026.
 
-### Data (6)
+### Data (5)
 
-- [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 360 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills outline updated 1 November 2024.
+- [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 312 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills outline updated 1 November 2024.
 
 - [DP-100 — Designing and Implementing a Data Science Solution on Azure (retired)](https://azuremastery.app/exams/dp-100/): 350 in-app practice questions retained for reference. Microsoft retired DP-100 on 1 June 2026; it can no longer be scheduled.
 
-- [DP-300 — Administering Microsoft Azure SQL Solutions](https://azuremastery.app/exams/dp-300/): 384 in-app practice questions. Associate-tier database administrator cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Five domains: plan/implement data platform resources (15–20%), implement secure environment (20–25%), monitor/configure/optimize (20–25%), automation (15–20%), HA/DR (20–25%). Skills outline updated 24 April 2026.
+- [DP-300 — Administering Microsoft Azure SQL Solutions](https://azuremastery.app/exams/dp-300/): 382 in-app practice questions. Associate-tier database administrator cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Five domains: plan/implement data platform resources (15–20%), implement secure environment (20–25%), monitor/configure/optimize (20–25%), automation (15–20%), HA/DR (20–25%). Skills outline updated 24 April 2026.
 
-- [DP-700 — Implementing Data Engineering Solutions Using Microsoft Fabric](https://azuremastery.app/exams/dp-700/): 368 in-app practice questions. Associate-tier Microsoft Fabric data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Three domains each weighted 30–35%: implement and manage an analytics solution (Fabric workspaces, Git and deployment pipelines, OneLake security, orchestration), ingest and transform data (full/incremental loads, Dataflows Gen2, notebooks, PySpark, T-SQL, KQL, OneLake shortcuts, mirroring, Eventstream and Spark Structured Streaming), and monitor and optimize an analytics solution (alerts, error resolution, Lakehouse/Warehouse/Spark tuning). Requires SQL, PySpark, or KQL. Skills outline updated 21 July 2026.
+- [DP-700 — Implementing Data Engineering Solutions Using Microsoft Fabric](https://azuremastery.app/exams/dp-700/): 301 in-app practice questions. Associate-tier Microsoft Fabric data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Three domains each weighted 30–35%: implement and manage an analytics solution (Fabric workspaces, Git and deployment pipelines, OneLake security, orchestration), ingest and transform data (full/incremental loads, Dataflows Gen2, notebooks, PySpark, T-SQL, KQL, OneLake shortcuts, mirroring, Eventstream and Spark Structured Streaming), and monitor and optimize an analytics solution (alerts, error resolution, Lakehouse/Warehouse/Spark tuning). Requires SQL, PySpark, or KQL. Skills outline updated 21 July 2026.
 
-- [DP-750 — Implementing Data Engineering Solutions Using Azure Databricks](https://azuremastery.app/exams/dp-750/): 408 in-app practice questions. Associate-tier Azure Databricks data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: set up and configure an Azure Databricks environment (15–20%), secure and govern Unity Catalog objects (15–20%), prepare and process data (30–35%), deploy and maintain data pipelines and workloads (30–35%). Covers compute selection, Unity Catalog objects and governance (grants, row/column security, ABAC, lineage, Delta Sharing), Delta modelling and Lakeflow/Auto Loader ingestion, Spark optimisation (OPTIMIZE, VACUUM), and CI/CD with Databricks Asset Bundles. Requires SQL and Python. Skills outline updated 11 March 2026.
+- [DP-750 — Implementing Data Engineering Solutions Using Azure Databricks](https://azuremastery.app/exams/dp-750/): 374 in-app practice questions. Associate-tier Azure Databricks data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: set up and configure an Azure Databricks environment (15–20%), secure and govern Unity Catalog objects (15–20%), prepare and process data (30–35%), deploy and maintain data pipelines and workloads (30–35%). Covers compute selection, Unity Catalog objects and governance (grants, row/column security, ABAC, lineage, Delta Sharing), Delta modelling and Lakeflow/Auto Loader ingestion, Spark optimisation (OPTIMIZE, VACUUM), and CI/CD with Databricks Asset Bundles. Requires SQL and Python. Skills outline updated 11 March 2026.
 
-- [DP-800 — Microsoft Certified: SQL AI Developer Associate](https://azuremastery.app/exams/dp-800/): 364 in-app practice questions. Associate-tier SQL developer cert focused on AI-enabled SQL workloads (exam title: "Developing AI-Enabled Database Solutions"), renews annually, USD $165 voucher. 100-min duration (120-min seat), 40–60 mixed-format questions, pass score 700/1000. Three domains: design and develop database solutions (35–40%) — advanced T-SQL, JSON, regex, fuzzy matching, graph queries, AI-assisted dev; secure/optimize/deploy (35–40%); implement AI capabilities in database solutions (25–30%) — embeddings, vector indexes, RAG with `sp_invoke_external_rest_endpoint`. Skills outline published 12 March 2026.
+- [DP-800 — Microsoft Certified: SQL AI Developer Associate](https://azuremastery.app/exams/dp-800/): 328 in-app practice questions. Associate-tier SQL developer cert focused on AI-enabled SQL workloads (exam title: "Developing AI-Enabled Database Solutions"), renews annually, USD $165 voucher. 100-min duration (120-min seat), 40–60 mixed-format questions, pass score 700/1000. Three domains: design and develop database solutions (35–40%) — advanced T-SQL, JSON, regex, fuzzy matching, graph queries, AI-assisted dev; secure/optimize/deploy (35–40%); implement AI capabilities in database solutions (25–30%) — embeddings, vector indexes, RAG with `sp_invoke_external_rest_endpoint`. Skills outline published 12 March 2026.
 
 ### Security, Compliance & Identity (5)
 
-- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 408 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills outline updated 7 November 2025.
+- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 375 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills outline updated 7 November 2025.
 
-- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 442 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills outline updated 27 April 2026.
+- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 366 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills outline updated 27 April 2026.
 
-- [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 358 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills outline updated 16 April 2026.
+- [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 324 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills outline updated 16 April 2026.
 
-- [SC-300 — Microsoft Identity and Access Administrator](https://azuremastery.app/exams/sc-300/): 405 in-app practice questions. Associate-tier identity admin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates implementing identities in Microsoft Entra ID, implementing authentication and access management (conditional access, MFA, PIM, passwordless), implementing access management for apps, and planning/implementing identity governance. Skills outline updated 27 April 2026.
-- [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 400 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The successor to AZ-500 (which retires 31 August 2026); beta from May 2026, exam expected July 2026. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Skills outline published May 2026.
+- [SC-300 — Microsoft Identity and Access Administrator](https://azuremastery.app/exams/sc-300/): 381 in-app practice questions. Associate-tier identity admin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates implementing identities in Microsoft Entra ID, implementing authentication and access management (conditional access, MFA, PIM, passwordless), implementing access management for apps, and planning/implementing identity governance. Skills outline updated 27 April 2026.
+- [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 369 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The successor to AZ-500 (which retires 31 August 2026); beta from May 2026, exam expected July 2026. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Skills outline published May 2026.
 
 ### Power Platform (2)
 
-- [PL-300 — Microsoft Power BI Data Analyst](https://azuremastery.app/exams/pl-300/): 365 in-app practice questions. Associate-tier data analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates preparing data (Power Query M, data profiling), modelling data (star schemas, DAX measures, calculation groups, row-level security), visualising and analysing data (Power BI reports, dashboards, AI visuals), and deploying/maintaining assets (workspaces, deployment pipelines, refresh, sensitivity labels). Skills outline updated 24 April 2026.
-- [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 351 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
+- [PL-300 — Microsoft Power BI Data Analyst](https://azuremastery.app/exams/pl-300/): 339 in-app practice questions. Associate-tier data analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates preparing data (Power Query M, data profiling), modelling data (star schemas, DAX measures, calculation groups, row-level security), visualising and analysing data (Power BI reports, dashboards, AI visuals), and deploying/maintaining assets (workspaces, deployment pipelines, refresh, sensitivity labels). Skills outline updated 24 April 2026.
+- [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 300 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
 
 ### GitHub (2)
-- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 366 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
-- [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 367 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community.
+- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 310 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
+- [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 301 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community.
 
 ## Guides
 
@@ -111,20 +111,20 @@ Free long-form study guides — exam-neutral advice grounded in the official Mic
 - [AZ-900 vs AZ-104](https://azuremastery.app/guides/az-900-vs-az-104/): Which Azure certification fits, whether you need both, and in what order.
 - [SC-900 vs AZ-900](https://azuremastery.app/guides/sc-900-vs-az-900/): Security-first or cloud-first — how the two fundamentals exams differ and which to sit first.
 
-## Exams covered (35)
+## Exams covered (30)
 
-The app covers the following Microsoft certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine.
+The app covers the following Microsoft certification exams. All are taught with the same Exam IQ, adaptive study plan, exam simulator, and knowledge-decay engine. Counts above cover only exams currently open for booking. Exams Microsoft has retired, or has announced a retirement date for, are listed here for reference and excluded from every count.
 
-### Azure infrastructure & solutions (7)
+### Azure infrastructure & solutions (5)
 - AZ-900 — Microsoft Azure Fundamentals
 - AZ-104 — Microsoft Azure Administrator Associate
-- AZ-204 — Developing Solutions for Microsoft Azure (Developer Associate)
+- AZ-204 — Developing Solutions for Microsoft Azure (retired 31 July 2026; current route is AI-200)
 - AZ-305 — Designing Microsoft Azure Infrastructure Solutions (Solutions Architect Expert)
 - AZ-400 — Designing and Implementing Microsoft DevOps Solutions (DevOps Engineer Expert)
 - AZ-500 — Microsoft Azure Security Technologies (Security Engineer Associate)
 - AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions
 
-### AI, Machine Learning & Copilot Agents (13)
+### AI, Machine Learning & Copilot Agents (11)
 - AI-900 — Microsoft Azure AI Fundamentals (retired 30 June 2026; replaced by AI-901)
 - AI-901 — Microsoft Azure AI Fundamentals
 - AI-102 — Designing and Implementing a Microsoft Azure AI Solution (retired 30 June 2026; current route is AI-103)
@@ -139,7 +139,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 - AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals
 - AB-100 — Microsoft Agentic AI Business Solutions Architect (Expert)
 
-### Data (6)
+### Data (5)
 - DP-900 — Microsoft Azure Data Fundamentals
 - DP-100 — Designing and Implementing a Data Science Solution on Azure (retired 1 June 2026)
 - DP-300 — Administering Microsoft Azure SQL Solutions (Database Administrator Associate)
@@ -203,7 +203,7 @@ Azure Mastery is built for serious certification candidates who want to know *wh
 
 Everything below is extracted from each page's own structured data (FAQPage, EducationalOccupationalCredential, WebPage) and regenerated whenever a page changes, so it always matches the live site.
 
-## /exams/ab-100/ — AB-100 Practice Questions — 421 Qs for AI Architect (2026)
+## /exams/ab-100/ — AB-100 Practice Questions — 305 Qs for AI Architect (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Plan AI-powered business solutions (25–30%)
@@ -222,13 +222,13 @@ A: Different roles. AB-620 (AI Agent Builder) is the maker-level cert focused on
 Q: AB-100 vs AI-103 vs AB-620 — how do the roles differ?
 A: AI-103 is the code-first developer credential for Python and Microsoft Foundry agents. AB-620 is the Copilot Studio builder credential for integrated low-code agents. AB-100 is the architect-level credential spanning Microsoft Foundry, Copilot Studio, Microsoft 365 Copilot, Dynamics 365, and Power Platform. Choose the implementation credential that matches your role before moving into architecture.
 Q: Is Azure Mastery free for AB-100 prep?
-A: The app is free to download and includes a free allowance of AB-100 questions so you can try every feature. The full bank of 421 AB-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AB-100 questions so you can try every feature. The full bank of 305 AB-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-100 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-100 practice test mode?
 A: Yes - the exam simulator runs full-length AB-100 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ab-410/ — AB-410 Practice Questions — 420 Qs & Exam Prep (2026)
+## /exams/ab-410/ — AB-410 Practice Questions — 389 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Create a foundation for intelligent applications (25–30%)
@@ -247,13 +247,13 @@ A: Different surfaces. AB-410 is the Intelligent Applications Builder cert: you 
 Q: AB-410 vs PL-900 — which should I take first?
 A: PL-900 first if Microsoft Power Platform is new to you. PL-900 is the Power Platform Fundamentals exam and stays conceptual — what Power Apps, Power Automate and Dataverse are for. AB-410 is the role-based exam where you configure the real artefacts: tables and relationships, forms and views, cloud flows, and AI Hub prompts. Makers new to the platform often use PL-900 as a foundation before AB-410.
 Q: Is Azure Mastery free for AB-410 prep?
-A: The app is free to download and includes a free allowance of AB-410 questions so you can try every feature. The full bank of 420 AB-410 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AB-410 questions so you can try every feature. The full bank of 389 AB-410 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-410 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-410 practice test mode?
 A: Yes - the exam simulator runs full-length AB-410 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ab-620/ — AB-620 Practice Questions — 452 Qs & Exam Prep (2026)
+## /exams/ab-620/ — AB-620 Practice Questions — 327 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Plan and configure agent solutions (30–35%)
@@ -272,13 +272,13 @@ A: Different platforms. AB-620 is the AI Agent Builder cert focused on Microsoft
 Q: AB-620 vs AI-901 — which should I take first?
 A: AI-901 first if AI concepts are new to you. AI-901 is the current Azure AI Fundamentals exam and covers AI concepts, responsible AI, Microsoft Foundry, and introductory Python. AB-620 is the role-based exam for designing, integrating, testing, and governing agents in Copilot Studio. Candidates new to AI can use AI-901 as a foundation before AB-620.
 Q: Is Azure Mastery free for AB-620 prep?
-A: The app is free to download and includes a free allowance of AB-620 questions so you can try every feature. The full bank of 452 AB-620 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AB-620 questions so you can try every feature. The full bank of 327 AB-620 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-620 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-620 practice test mode?
 A: Yes - the exam simulator runs full-length AB-620 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ab-650/ — AB-650 Practice Questions — 501 Qs & Exam Prep (2026)
+## /exams/ab-650/ — AB-650 Practice Questions — 471 Qs & Exam Prep (2026)
 Page last modified: 2026-08-23
 Exam domains:
   - Configure and manage Microsoft 365 tenants and workloads (20–25%)
@@ -299,13 +299,13 @@ A: AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals) is the c
 Q: AB-650 vs SC-300 — how much identity overlap is there?
 A: Some overlap, different depth. SC-300 (Identity and Access Administrator) goes far deeper into Microsoft Entra identity architecture — hybrid identity, external identities, application integration, and identity governance at a specialist level. AB-650 covers the identity surface a Microsoft 365 administrator actually touches day to day — users, groups, administrative units, Conditional Access, and Privileged Identity Management — plus the newer agent identity model built on Microsoft Entra Agent ID, which SC-300 does not cover. Candidates who own both Microsoft 365 and deep identity architecture often hold both certifications.
 Q: Is Azure Mastery free for AB-650 prep?
-A: The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full bank of 501 AB-650 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full bank of 471 AB-650 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-650 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-650 practice test mode?
 A: Yes — the exam simulator runs full-length AB-650 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ab-731/ — AB-731 Practice Questions — 352 Qs for AI Leadership (2026)
+## /exams/ab-731/ — AB-731 Practice Questions — 284 Qs for AI Leadership (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Identify the business value of generative AI solutions (35–40%)
@@ -324,13 +324,13 @@ A: Different jobs entirely. AB-731 is the leadership credential — for business
 Q: AB-731 vs AB-900 — what's the difference?
 A: Different audiences. AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals) is the IT admin's Fundamentals exam — admin centres, Purview governance, licensing, agent approval flows. AB-731 (AI Transformation Leader) is the business leader's exam — ROI, adoption strategy, responsible AI, build/buy/extend decisions, AI council governance. AB-900 administers Copilot; AB-731 leads the AI transformation. Programme leads sometimes take both for full coverage.
 Q: Is Azure Mastery free for AB-731 prep?
-A: The app is free to download and includes a free allowance of AB-731 questions so you can try every feature. The full bank of 352 AB-731 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AB-731 questions so you can try every feature. The full bank of 284 AB-731 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-731 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-731 practice test mode?
 A: Yes - the exam simulator runs full-length AB-731 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ab-900/ — AB-900 Practice Questions — 358 Qs for Copilot Admin (2026)
+## /exams/ab-900/ — AB-900 Practice Questions — 285 Qs for Copilot Admin (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Identify the core features and objects of Microsoft 365 services (30–35%)
@@ -349,7 +349,7 @@ A: Different scopes. SC-900 (Security, Compliance, and Identity Fundamentals) is
 Q: AB-900 vs AB-620 — what is the difference?
 A: Different jobs. AB-900 is the Fundamentals-tier admin cert: it expects you to identify Microsoft 365 admin-centre objects, Purview governance surfaces, and Copilot administration controls (licensing, usage analytics, agent approval flow). AB-620 (AI Agent Builder) is the Associate-tier maker cert: it expects you to build agents in Copilot Studio with topics, generative answers, knowledge sources, and channel deployments. AB-900 administers; AB-620 builds. Many M365 admins take both because real-world Copilot rollouts require admin governance and maker support.
 Q: Is Azure Mastery free for AB-900 prep?
-A: The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 358 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 285 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-900 practice test mode?
@@ -383,7 +383,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AI-102 practice test mode?
 A: Yes - the exam simulator runs full-length AI-102 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ai-103/ — AI-103 Practice Questions — 557 Qs & Exam Prep (2026)
+## /exams/ai-103/ — AI-103 Practice Questions — 404 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Plan and manage an Azure AI solution (25–30%)
@@ -404,13 +404,13 @@ A: AI-102 retired on June 30, 2026. AI-103 is the current exam for the Azure AI 
 Q: AI-103 vs AI-901 — which should I take first?
 A: AI-901 first if AI concepts are new to you. AI-901 is the current Azure AI Fundamentals exam and covers core AI concepts plus foundational Microsoft Foundry and Python skills. AI-103 is the role-based Associate exam and expects hands-on Python development with Microsoft Foundry, agents, retrieval, evaluation, and Azure AI services. Many candidates use AI-901 as their foundation before moving to AI-103.
 Q: Is Azure Mastery free for AI-103 prep?
-A: The app is free to download and includes a free allowance of AI-103 questions so you can try every feature. The full bank of 557 AI-103 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AI-103 questions so you can try every feature. The full bank of 404 AI-103 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-103 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-103 practice test mode?
 A: Yes - the exam simulator runs full-length AI-103 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ai-200/ — AI-200 Practice Questions — 444 Qs for AI Developer (2026)
+## /exams/ai-200/ — AI-200 Practice Questions — 258 Qs for AI Developer (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Develop AI-powered compute solutions (20–25%)
@@ -431,13 +431,13 @@ A: Different emphases. AI-200 validates back-end Azure development for AI soluti
 Q: AI-200 vs AI-300 — which next?
 A: AI-200 first. AI-200 is the AI Cloud Developer Associate cert — building the platform that AI workloads run on. AI-300 is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it.
 Q: Is Azure Mastery free for AI-200 prep?
-A: The app is free to download and includes a free allowance of AI-200 questions so you can try every feature. The full bank of 444 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AI-200 questions so you can try every feature. The full bank of 258 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-200 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-200 practice test mode?
 A: Yes - the exam simulator runs full-length AI-200 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ai-300/ — AI-300 Practice Questions — 400 Qs for ML Ops Engineer (2026)
+## /exams/ai-300/ — AI-300 Practice Questions — 319 Qs for ML Ops Engineer (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Design and implement an MLOps infrastructure (15–20%)
@@ -458,13 +458,13 @@ A: Yes. Microsoft retired DP-100 and the Azure Data Scientist Associate certific
 Q: AI-300 vs AI-200 — which next?
 A: AI-200 first. AI-200 (AI Cloud Developer Associate) builds the cloud platform that AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform. AI-200 is upstream of AI-300 in most roles.
 Q: Is Azure Mastery free for AI-300 prep?
-A: The app is free to download and includes a free allowance of AI-300 questions so you can try every feature. The full bank of 400 AI-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AI-300 questions so you can try every feature. The full bank of 319 AI-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-300 practice test mode?
 A: Yes - the exam simulator runs full-length AI-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
+## /exams/ai-500/ — AI-500 Practice Questions — 416 Qs & Exam Prep (2026)
 Page last modified: 2026-08-23
 Exam domains:
   - Architect Multi-Agent Solutions (15–20%)
@@ -484,7 +484,7 @@ A: Different tiers and different scope. AI-103 (Azure AI Apps and Agents Develop
 Q: AI-500 vs AB-100 — architect or engineer?
 A: Different roles at a similar level. AB-100 (Agentic AI Business Solutions Architect) is the business-architecture view of agentic AI — ROI analysis, build-vs-buy across Copilot Studio, Microsoft Foundry, and Power Platform, governance, and ALM, aimed at architects who plan agentic solutions across an enterprise. AI-500 is the hands-on engineering expert exam — designing, coding, evaluating, and securing the multi-agent systems themselves, with Microsoft Agent Framework, MCP servers, orchestration patterns, and agent identity. Pick AB-100 if you're deciding which agentic patterns a business should adopt; pick AI-500 if you're the one building and running them.
 Q: Is Azure Mastery free for AI-500 prep?
-A: The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 416 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-500 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-500 practice test mode?
@@ -535,13 +535,13 @@ A: AI-901 replaced AI-900 on July 1, 2026. AI-900 retired on June 30, 2026 and c
 Q: What should I take after AI-901?
 A: Choose the role-based exam that matches how you build agents. AI-103 covers code-first AI apps and agents with Python and Microsoft Foundry. AB-620 covers integrated agents built with Copilot Studio, Power Platform, and Microsoft 365. Both build on the foundations assessed by AI-901.
 Q: Is Azure Mastery free for AI-901 prep?
-A: The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 604 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 423 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-901 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-901 practice test mode?
 A: Yes - the exam simulator runs full-length AI-901 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-104/ — AZ-104 Practice Questions — 612 Qs for Azure Admin (2026)
+## /exams/az-104/ — AZ-104 Practice Questions — 481 Qs for Azure Admin (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Manage Azure identities and governance (20–25%)
@@ -562,13 +562,13 @@ A: If you have less than six months of hands-on Azure experience, take AZ-900 (M
 Q: AZ-104 vs AZ-305 — which next?
 A: Pass AZ-104 first. AZ-104 is the Associate-level operational cert; AZ-305 is the Expert-level architectural cert. AZ-305 assumes you already understand Azure operations (the AZ-104 material) and adds requirements gathering, capacity planning, governance design, and choosing between competing service options. Most architects hold both — AZ-104 to prove they have done the work, AZ-305 to prove they can design it.
 Q: Is Azure Mastery free for AZ-104 prep?
-A: The app is free to download and includes a free allowance of AZ-104 questions so you can try every feature. The full bank of 612 AZ-104 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AZ-104 questions so you can try every feature. The full bank of 481 AZ-104 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-104 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-104 practice test mode?
 A: Yes - the exam simulator runs full-length AZ-104 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-204/ — AZ-204 Retirement & AI-200 Next Step | Azure Mastery
+## /exams/az-204/ — AZ-204 Retired Exam & AI-200 Next Step | Azure Mastery
 Page last modified: 2026-08-09
 Exam domains:
   - Develop Azure compute solutions (25–30%)
@@ -595,7 +595,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-204 practice test mode?
 A: Yes - the exam simulator runs full-length AZ-204 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-305/ — AZ-305 Practice Questions — 400 Qs for Azure Architect (2026)
+## /exams/az-305/ — AZ-305 Practice Questions — 223 Qs for Azure Architect (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Design identity, governance, and monitoring solutions (25–30%)
@@ -615,7 +615,7 @@ A: AZ-104 first. AZ-104 is the Associate-level operational certification require
 Q: Do I need other exams alongside AZ-305?
 A: AZ-305 is the expert-level exam for Microsoft Certified: Azure Solutions Architect Expert. You must also hold Microsoft Certified: Azure Administrator Associate, earned through AZ-104. Passing AZ-305 alone does not award the expert credential.
 Q: Is Azure Mastery free for AZ-305 prep?
-A: The app is free to download and includes a free allowance of AZ-305 questions so you can try every feature. The full bank of 400 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AZ-305 questions so you can try every feature. The full bank of 223 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-305 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-305 practice test mode?
@@ -642,7 +642,7 @@ A: Plan eight to twelve weeks for AZ-400, even if you already hold AZ-104 or AZ-
 Q: AZ-400 vs AZ-305 — which Expert cert should I take?
 A: Pick the one that matches your role. AZ-400 is for SREs, platform engineers, and developers who own CI/CD; AZ-305 is for architects designing the systems those pipelines deploy. They are complementary and both can use Azure Administrator Associate as a prerequisite. AZ-305 does not accept Azure Developer Associate as an alternative.
 Q: Is Azure Mastery free for AZ-400 prep?
-A: The app is free to download and includes a free allowance of AZ-400 questions so you can try every feature. The full bank of 470 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AZ-400 questions so you can try every feature. The full bank of 395 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-400 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-400 practice test mode?
@@ -674,7 +674,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-500 practice test mode?
 A: Yes - the exam simulator runs full-length AZ-500 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-700/ — AZ-700 Practice Questions — 396 Qs for Network Engineer (2026)
+## /exams/az-700/ — AZ-700 Practice Questions — 304 Qs for Network Engineer (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Design and implement core networking infrastructure (25–30%)
@@ -695,13 +695,13 @@ A: If you have less than six months of hands-on Azure experience, take AZ-900 (M
 Q: AZ-700 vs AZ-305 — which next?
 A: Pass AZ-700 first. AZ-700 is the Associate-level operational cert; AZ-305 is the Expert-level architectural cert. AZ-305 assumes you already understand Azure operations (the AZ-700 material) and adds requirements gathering, capacity planning, governance design, and choosing between competing service options. Most architects hold both — AZ-700 to prove they have done the work, AZ-305 to prove they can design it.
 Q: Is Azure Mastery free for AZ-700 prep?
-A: The app is free to download and includes a free allowance of AZ-700 questions so you can try every feature. The full bank of 396 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AZ-700 questions so you can try every feature. The full bank of 304 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-700 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-700 practice test mode?
 A: Yes - the exam simulator runs full-length AZ-700 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-900/ — AZ-900 Practice Questions — 380 Qs for Fundamentals (2026)
+## /exams/az-900/ — AZ-900 Practice Questions — 330 Qs for Fundamentals (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Describe cloud concepts (25–30%)
@@ -720,7 +720,7 @@ A: AZ-900 first, almost always. AZ-900 is designed as the on-ramp to AZ-104 (Mic
 Q: Is AZ-900 worth taking if I am not technical?
 A: Yes — that is exactly who AZ-900 is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles. The exam does not expect you to write a PowerShell script. It expects you to explain concepts such as region pairs, the shared responsibility model, and when a hybrid cloud is appropriate.
 Q: Is Azure Mastery free for AZ-900 prep?
-A: The app is free to download and includes a free allowance of AZ-900 questions so you can try every feature. The full bank of 380 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AZ-900 questions so you can try every feature. The full bank of 330 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-900 practice test mode?
@@ -752,7 +752,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there a DP-100 practice test mode?
 A: Yes - the exam simulator runs full-length DP-100 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/dp-300/ — DP-300 Practice Questions — 384 Qs for Database Admin (2026)
+## /exams/dp-300/ — DP-300 Practice Questions — 382 Qs for Database Admin (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Plan and implement data platform resources (15–20%)
@@ -773,13 +773,13 @@ A: DP-900 first if databases aren't already your day job. DP-900 (Microsoft Azur
 Q: DP-300 vs AI-300 — different data roles?
 A: They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role.
 Q: Is Azure Mastery free for DP-300 prep?
-A: The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 384 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 382 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-300 practice test mode?
 A: Yes - the exam simulator runs full-length DP-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/dp-700/ — DP-700 Practice Questions — 368 Qs for Fabric Engineer (2026)
+## /exams/dp-700/ — DP-700 Practice Questions — 301 Qs for Fabric Engineer (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Implement and manage an analytics solution (30–35%)
@@ -798,13 +798,13 @@ A: Both are Microsoft Fabric associate certifications, and your role should deci
 Q: Is DP-700 a technical, hands-on exam?
 A: Yes. DP-700 expects you to reason about real data-engineering work in Microsoft Fabric — writing and debugging T-SQL, PySpark, and KQL; designing full and incremental load patterns; working with Delta tables, OneLake shortcuts, mirroring, and pipelines; and optimising Lakehouse, Warehouse, and Spark performance. It is a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
 Q: Is Azure Mastery free for DP-700 prep?
-A: The app is free to download and includes a free allowance of DP-700 questions so you can try every feature. The full bank of 368 DP-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of DP-700 questions so you can try every feature. The full bank of 301 DP-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-700 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-700 practice test mode?
 A: Yes - the exam simulator runs full-length DP-700 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/dp-750/ — DP-750 Practice Questions — 408 Qs for Databricks (2026)
+## /exams/dp-750/ — DP-750 Practice Questions — 374 Qs for Databricks (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Set up and configure an Azure Databricks environment (15–20%)
@@ -824,13 +824,13 @@ A: Both are associate-level Microsoft data-engineering certifications, but they 
 Q: Is DP-750 a technical, hands-on exam?
 A: Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It is a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
 Q: Is Azure Mastery free for DP-750 prep?
-A: The app is free to download and includes a free allowance of DP-750 questions so you can try every feature. The full bank of 408 DP-750 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of DP-750 questions so you can try every feature. The full bank of 374 DP-750 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-750 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-750 practice test mode?
 A: Yes - the exam simulator runs full-length DP-750 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/dp-800/ — DP-800 Practice Questions — 364 Qs for SQL AI Developer (2026)
+## /exams/dp-800/ — DP-800 Practice Questions — 328 Qs for SQL AI Developer (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Design and develop database solutions (35–40%)
@@ -849,13 +849,13 @@ A: Different jobs. DP-300 is the Database Administrator Associate cert — runni
 Q: DP-800 vs AI-103 — what's the difference?
 A: Different stacks. AI-103 is for building generative AI solutions and agents with Microsoft Foundry, including model selection, orchestration, tools, knowledge sources, and operational readiness. DP-800 is for SQL developers bringing AI primitives such as embeddings, vector indexes, RAG, and structured outputs directly into SQL Server, Azure SQL, and Microsoft Fabric with T-SQL. AI-103 is application and agent-layer; DP-800 is data-layer.
 Q: Is Azure Mastery free for DP-800 prep?
-A: The app is free to download and includes a free allowance of DP-800 questions so you can try every feature. The full bank of 364 DP-800 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of DP-800 questions so you can try every feature. The full bank of 328 DP-800 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-800 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-800 practice test mode?
 A: Yes - the exam simulator runs full-length DP-800 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/dp-900/ — DP-900 Practice Questions — 360 Qs for Data Basics (2026)
+## /exams/dp-900/ — DP-900 Practice Questions — 312 Qs for Data Basics (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Describe core data concepts (25–30%)
@@ -875,13 +875,13 @@ A: DP-900 first, almost always. DP-900 is designed as the on-ramp to AZ-104 (Mic
 Q: Is DP-900 worth taking if I am not technical?
 A: Yes — that is exactly who DP-900 is designed for. Account managers, project managers, sales engineers, and finance partners all sit DP-900 to qualify for Microsoft Partner Network roles. The exam does not expect you to write a PowerShell script. It expects you to explain concepts such as region pairs, the shared responsibility model, and when a hybrid cloud is appropriate.
 Q: Is Azure Mastery free for DP-900 prep?
-A: The app is free to download and includes a free allowance of DP-900 questions so you can try every feature. The full bank of 360 DP-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of DP-900 questions so you can try every feature. The full bank of 312 DP-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-900 practice test mode?
 A: Yes - the exam simulator runs full-length DP-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/gh-300/ — GH-300 Practice Questions — 366 Qs for GitHub Copilot (2026)
+## /exams/gh-300/ — GH-300 Practice Questions — 310 Qs for GitHub Copilot (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Use GitHub Copilot Responsibly (15–20%)
@@ -901,15 +901,15 @@ A: Yes. 'Use GitHub Copilot Responsibly' is the first domain, weighted 15–20%.
 Q: How much of GH-300 is prompt engineering?
 A: Prompt engineering and context crafting is its own domain, weighted 10–15%. GH-300 tests how you structure a prompt, how Copilot determines context, the difference between zero-shot and few-shot prompting, and the core principles of writing prompts that produce useful, relevant suggestions. It pairs closely with the data-and-architecture domain, which explains how your prompt is processed and turned into a suggestion.
 Q: How many GH-300 practice questions does Azure Mastery include?
-A: Azure Mastery ships with 366 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Core study runs on-device and works offline; optional sync uses your private iCloud account.
+A: Azure Mastery ships with 310 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Core study runs on-device and works offline; optional sync uses your private iCloud account.
 Q: Is Azure Mastery free for GH-300 prep?
-A: The app is free to download and includes a free allowance of GH-300 questions so you can try every feature. The full bank of 366 GH-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of GH-300 questions so you can try every feature. The full bank of 310 GH-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does GH-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a GH-300 practice test mode?
 A: Yes - the exam simulator runs full-length GH-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/gh-900/ — GH-900 Practice Questions — 367 Qs for GitHub Basics (2026)
+## /exams/gh-900/ — GH-900 Practice Questions — 301 Qs for GitHub Basics (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Understand Git and GitHub Basics (25–30%)
@@ -932,7 +932,7 @@ A: GH-900 (GitHub Foundations) validates collaboration on GitHub: Git, repositor
 Q: Is GH-900 worth taking if I am not a developer?
 A: Yes — GH-900 is explicitly designed for non-developers as well as developers. Project managers, technical writers, product owners, and team leads all sit GH-900 to prove they can collaborate effectively on GitHub. The exam does not ask you to write code. It asks you to explain concepts such as the GitHub Flow, how pull requests link to issues, what branch protection rules do, and when to use a fork versus a template.
 Q: Is Azure Mastery free for GH-900 prep?
-A: The app is free to download and includes a free allowance of GH-900 questions so you can try every feature. The full bank of 367 GH-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of GH-900 questions so you can try every feature. The full bank of 301 GH-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does GH-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a GH-900 practice test mode?
@@ -958,13 +958,13 @@ A: DP-900 first if you don't have a working understanding of relational vs non-r
 Q: PL-300 vs DP-300 — different roles?
 A: Different angles on the data stack. PL-300 is the analyst-side cert — it focuses on building Power BI reports from data: Power Query M, DAX, visualisations, governance and sharing. DP-300 is the operational DBA cert — it focuses on running Azure SQL workloads: HA/DR, performance tuning, security, automation. The two complement each other in larger BI teams; small teams often have one person doing both.
 Q: Is Azure Mastery free for PL-300 prep?
-A: The app is free to download and includes a free allowance of PL-300 questions so you can try every feature. The full bank of 365 PL-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of PL-300 questions so you can try every feature. The full bank of 339 PL-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does PL-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a PL-300 practice test mode?
 A: Yes - the exam simulator runs full-length PL-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/pl-900/ — PL-900 Practice Questions — 351 Qs for Power Platform (2026)
+## /exams/pl-900/ — PL-900 Practice Questions — 300 Qs for Power Platform (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Describe the business value of Microsoft Power Platform (5–10%)
@@ -985,13 +985,13 @@ A: PL-900 first if low-code Power Platform is new to you. PL-900 teaches the pla
 Q: Is PL-900 worth taking if I am not a developer?
 A: Yes — that is exactly who PL-900 is designed for. Business analysts, citizen developers and makers, project managers, and IT pros evaluating low-code all sit PL-900. The exam does not expect you to write production code. It expects you to recognise scenarios — canvas or model-driven app for this case, cloud or desktop flow — and pick the correct option. It is the natural first step before building real apps and flows.
 Q: Is Azure Mastery free for PL-900 prep?
-A: The app is free to download and includes a free allowance of PL-900 questions so you can try every feature. The full bank of 351 PL-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of PL-900 questions so you can try every feature. The full bank of 300 PL-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does PL-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a PL-900 practice test mode?
 A: Yes - the exam simulator runs full-length PL-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/sc-100/ — SC-100 Practice Questions — 442 Qs for Cyber Architect (2026)
+## /exams/sc-100/ — SC-100 Practice Questions — 366 Qs for Cyber Architect (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Design solutions that align with security best practices and priorities (20–25%)
@@ -1011,13 +1011,13 @@ A: If you have less than six months of hands-on Azure experience, take AZ-900 (M
 Q: SC-100 vs AZ-305 — which next?
 A: They validate different architectural lenses. SC-100 is the expert-level security architecture exam, covering Zero Trust, security operations, identity, compliance, infrastructure, applications, and data. AZ-305 is the Azure solutions architecture exam, covering identity, governance, monitoring, data storage, business continuity, and infrastructure. Senior architects may hold both; neither exam is a prerequisite for the other.
 Q: Is Azure Mastery free for SC-100 prep?
-A: The app is free to download and includes a free allowance of SC-100 questions so you can try every feature. The full bank of 442 SC-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of SC-100 questions so you can try every feature. The full bank of 366 SC-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-100 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-100 practice test mode?
 A: Yes - the exam simulator runs full-length SC-100 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/sc-200/ — SC-200 Practice Questions — 358 Qs for SOC Analyst (2026)
+## /exams/sc-200/ — SC-200 Practice Questions — 324 Qs for SOC Analyst (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Manage a security operations environment (40–45%)
@@ -1036,13 +1036,13 @@ A: SC-900 first if security concepts are new to you. SC-900 builds the cross-cut
 Q: SC-200 vs SC-500 — different security roles?
 A: Different angles on Microsoft security. SC-500 implements security controls across cloud and AI workloads; SC-200 runs detection, investigation, hunting, and incident response in Microsoft Defender XDR and Sentinel. Choose SC-500 for cloud security engineering and SC-200 for security operations.
 Q: Is Azure Mastery free for SC-200 prep?
-A: The app is free to download and includes a free allowance of SC-200 questions so you can try every feature. The full bank of 358 SC-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of SC-200 questions so you can try every feature. The full bank of 324 SC-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-200 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-200 practice test mode?
 A: Yes - the exam simulator runs full-length SC-200 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/sc-300/ — SC-300 Practice Questions — 405 Qs for Identity Admin (2026)
+## /exams/sc-300/ — SC-300 Practice Questions — 381 Qs for Identity Admin (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Implement and manage user identities (20–25%)
@@ -1062,13 +1062,13 @@ A: SC-900 first if security and identity concepts are new to you. SC-900 builds 
 Q: SC-300 vs SC-200 — different security roles?
 A: Different angles on Microsoft security. SC-300 is the Identity and Access Administrator Associate cert — it focuses on operating Microsoft Entra ID end-to-end (identities, authentication, Conditional Access, workload identities, governance). SC-200 is the Security Operations Analyst Associate cert — it focuses on running Microsoft Defender XDR and Sentinel as a SOC analyst. They overlap on Conditional Access and Microsoft Entra ID Protection, but SC-300 goes much deeper on identity and SC-200 covers a broader detection / response surface.
 Q: Is Azure Mastery free for SC-300 prep?
-A: The app is free to download and includes a free allowance of SC-300 questions so you can try every feature. The full bank of 405 SC-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of SC-300 questions so you can try every feature. The full bank of 381 SC-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-300 practice test mode?
 A: Yes - the exam simulator runs full-length SC-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/sc-500/ — SC-500 Practice Questions — 400 Qs for Cloud Security (2026)
+## /exams/sc-500/ — SC-500 Practice Questions — 369 Qs for Cloud Security (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Manage identity, access, and governance (20–25%)
@@ -1088,13 +1088,13 @@ A: Most candidates pass SC-500 after four to eight weeks of focused study, assum
 Q: SC-500 vs SC-200 — which next on the security track?
 A: Different roles. SC-500 (Cloud and AI Security Engineer) is about implementing security controls — hardening identity, storage, networking, compute, and AI workloads across Azure and hybrid environments. SC-200 (Security Operations Analyst) is about running Microsoft Defender XDR and Sentinel as a SOC analyst, with heavier focus on detection, investigation, and incident response across the Microsoft 365 estate. If your day job is securing cloud and AI workloads, take SC-500. If it is running detection-and-response, take SC-200. Many Cybersecurity Architect (SC-100) candidates hold both, with SC-900 as the connective fundamentals.
 Q: Is Azure Mastery free for SC-500 prep?
-A: The app is free to download and includes a free allowance of SC-500 questions so you can try every feature. The full bank of 400 SC-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of SC-500 questions so you can try every feature. The full bank of 369 SC-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-500 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-500 practice test mode?
 A: Yes - the exam simulator runs full-length SC-500 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/sc-900/ — SC-900 Practice Questions — 408 Qs for Security Basics (2026)
+## /exams/sc-900/ — SC-900 Practice Questions — 375 Qs for Security Basics (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Describe the concepts of security, compliance, and identity (10–15%)
@@ -1114,7 +1114,7 @@ A: SC-900 first, almost always. SC-900 is designed as the on-ramp to AZ-104 (Mic
 Q: Is SC-900 worth taking if I am not technical?
 A: Yes — that is exactly who SC-900 is designed for. Account managers, project managers, sales engineers, and finance partners all sit SC-900 to qualify for Microsoft Partner Network roles. The exam does not expect you to write a PowerShell script. It expects you to explain concepts such as region pairs, the shared responsibility model, and when a hybrid cloud is appropriate.
 Q: Is Azure Mastery free for SC-900 prep?
-A: The app is free to download and includes a free allowance of SC-900 questions so you can try every feature. The full bank of 408 SC-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of SC-900 questions so you can try every feature. The full bank of 375 SC-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-900 practice test mode?

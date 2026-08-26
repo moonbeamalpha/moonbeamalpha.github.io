@@ -56,13 +56,13 @@ RETIRED_EXAMS = {
         "replacement": "AI-300",
         "replacement_label": "a current machine-learning operations option",
     },
-}
-RETIRING_EXAMS = {
     "AZ-204": {
         "date": "31 July 2026",
         "replacement": "AI-200",
         "replacement_label": "Microsoft's replacement developer course and current AI cloud route",
     },
+}
+RETIRING_EXAMS = {
     "AZ-500": {
         "date": "31 August 2026",
         "replacement": "SC-500",

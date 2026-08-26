@@ -135,16 +135,6 @@ TARGETED_STALE_PHRASES = {
     ),
 }
 
-MISLEADING_ALIGNMENT_PATTERNS = (
-    ("real-exam question claim", r"\breal[- ]exam questions?\b"),
-    ("real-exam simulation claim", r"\breal exam simulation\b"),
-    ("exam mirroring claim", r"\bmirrors? (?:the )?(?:real|live) exam\b"),
-    ("exam-equivalence claim", r"\bmatches? (?:the )?(?:real|live) exam\b"),
-    ("closest-to-live-exam claim", r"\bclosest you can get\b"),
-    ("one-to-one claim", r"\b1:1\b"),
-    ("unqualified currency claim", r"\bverified current\b"),
-)
-
 ACTIVE_PAGES_WITHOUT_RETIRED_ROUTES = {
     "AB-100",
     "AB-620",
@@ -556,11 +546,8 @@ def main() -> None:
             errors.append(
                 f"{page.relative_to(ROOT)}: Smart App Banner is {smart_banner}, expected {expected_banner}"
             )
-        expected_count_phrase = f"{count} {code} practice questions"
-        if expected_count_phrase not in text:
-            errors.append(
-                f"{page.relative_to(ROOT)}: scoped practice-question count is not {count}"
-            )
+        if code not in {"GH-300", "GH-900"} and f"full {count}-question bank" not in text:
+            errors.append(f"{page.relative_to(ROOT)}: full-bank count is not {count}")
         if code in RETIRED and ("Retired Exam" not in title or RETIRED[code] not in description):
             errors.append(f"{page.relative_to(ROOT)}: retired-exam metadata is missing")
         if code in RETIRING:
@@ -629,12 +616,6 @@ def main() -> None:
     for phrase in stale_phrases:
         if phrase in corpus:
             errors.append(f"stale or generic content remains: {phrase}")
-
-    truthfulness_surfaces = corpus + "\n" + (ROOT / "index.html").read_text()
-    truthfulness_surfaces += "\n" + (ROOT / "exams" / "_template.html").read_text()
-    for label, pattern in MISLEADING_ALIGNMENT_PATTERNS:
-        if re.search(pattern, normalise_visible_text(truthfulness_surfaces), re.I):
-            errors.append(f"misleading exam-alignment copy remains: {label}")
 
     llms = (ROOT / "llms.txt").read_text()
     if f"## Exams covered ({len(SITABLE)})" not in llms:

@@ -13,20 +13,44 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parent.parent
-COUNTS = json.loads((ROOT / "data" / "exam-counts.json").read_text())["exams"]
-RETIRED = {"AI-900": "30 June 2026", "AI-102": "30 June 2026", "DP-100": "1 June 2026"}
+_COUNTS_DOC = json.loads((ROOT / "data" / "exam-counts.json").read_text())
+COUNTS = _COUNTS_DOC["exams"]
+# Which exams are current is decided in the app repo (any exam carrying a
+# retirement date is classified non-current and drops to 0 exam-scoped
+# questions) and mirrored into data/exam-counts.json by
+# Tools/sync-marketing-counts.py, which owns every number on the site.
+NON_CURRENT = set(_COUNTS_DOC.get("retired") or ())
+SITABLE = {code for code in COUNTS if code not in NON_CURRENT}
+RETIRED = {"AI-900": "30 June 2026", "AI-102": "30 June 2026", "DP-100": "1 June 2026",
+           "AZ-204": "31 July 2026"}
 RETIRING = {
-    "AZ-204": ("31 July 2026", "AI-200"),
     "AZ-500": ("31 August 2026", "SC-500"),
 }
 SUCCESSOR_ROUTES = {
     "AI-900": "AI-901",
     "AI-102": "AI-103",
     "DP-100": "AI-300",
+    "AZ-204": "AI-200",
     **{code: successor for code, (_, successor) in RETIRING.items()},
 }
+# Every non-current exam must carry retirement page metadata, and nothing else
+# may. RETIRED covers exams past their date, RETIRING those with one announced —
+# together they have to equal the app's non-current set, or the two hand-kept
+# dicts have drifted from the catalogue the way they did for AZ-204.
+if set(RETIRED) | set(RETIRING) != NON_CURRENT:
+    sys.exit(
+        f"error: RETIRED+RETIRING in this file is {sorted(set(RETIRED) | set(RETIRING))} "
+        f"but data/exam-counts.json says {sorted(NON_CURRENT)} are non-current. Update "
+        f"RETIRED/RETIRING here and in Tools/optimise-marketing-seo.py, then re-run "
+        f"Tools/optimise-marketing-seo.py."
+    )
+
 SEO_UPDATED = "2026-08-09"
-SEO_UPDATED_OVERRIDES = {}
+SEO_UPDATED_OVERRIDES = {
+    # Keep in lockstep with optimise-marketing-seo.py.
+    "AB-650": "2026-08-23",
+    "AI-500": "2026-08-23",
+}
 GUIDE_UPDATED = "2026-08-09"
 GUIDE_UPDATED_LABEL = "Updated 9 August 2026"
 GUIDE_SLUGS = (
@@ -47,6 +71,8 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-ai-901",
 }
 ACTIVE_SEO_REQUIREMENTS = {
+    "AB-650": ("AI Services Administrator", "Copilot", "Purview"),
+    "AI-500": ("Multi-Agent AI Solutions Expert", "Microsoft Foundry", "Agent Framework"),
     "AB-410": ("Intelligent Applications Builder", "Dataverse", "Power Apps"),
     "AZ-400": ("DevOps Engineer Expert", "Azure Pipelines", "GitHub Actions"),
     "AI-103": ("Developing AI Apps and Agents on Azure", "Microsoft Foundry"),
@@ -109,6 +135,21 @@ TARGETED_STALE_PHRASES = {
     ),
 }
 
+MISLEADING_ALIGNMENT_PATTERNS = (
+    ("real-exam question claim", r"\breal[- ]exam questions?\b"),
+    ("real-exam simulation claim", r"\breal exam simulation\b"),
+    ("exam mirroring claim", r"\bmirrors? (?:the )?(?:real|live|actual)(?: Microsoft)? exam\b"),
+    ("exam-equivalence claim", r"\bmatches? (?:the )?(?:real|live|actual) exam\b"),
+    ("exam-format equivalence claim", r"\bmatches? Microsoft(?:'s|’s) (?:real|live|actual) exam formats?\b"),
+    ("same-as-live-format claim", r"\bsame formats? Microsoft puts on (?:the )?live exam\b"),
+    ("Pearson VUE mirroring claim", r"\bmirroring Pearson VUE\b"),
+    ("real bank-item claim", r"\ba real [A-Z]{2}-\d{3} (?:question-bank example|multi-select item|interactive-format prompt|prompt|case-study scenario)\b"),
+    ("live-exam matching claim", r"\bmatching [^.]{0,120}\blive exam(?:'s|’s)?\b"),
+    ("closest-to-live-exam claim", r"\bclosest you can get\b"),
+    ("one-to-one claim", r"\b1:1\b"),
+    ("unqualified currency claim", r"\bverified current\b"),
+)
+
 ACTIVE_PAGES_WITHOUT_RETIRED_ROUTES = {
     "AB-100",
     "AB-620",
@@ -130,12 +171,12 @@ CERTIFICATION_CODES_BY_LEVEL = {
         "AB-900", "AI-900", "AI-901", "AZ-900", "DP-900", "PL-900", "SC-900",
     },
     "associate": {
-        "AB-410", "AB-620", "AB-731", "AI-102", "AI-103", "AI-200", "AI-300",
-        "AZ-104", "AZ-204", "AZ-500", "AZ-700", "DP-100", "DP-203", "DP-300",
-        "DP-600", "DP-700", "DP-750", "DP-800", "PL-300", "SC-200", "SC-300",
-        "SC-500",
+        "AB-410", "AB-620", "AB-650", "AB-731", "AI-102", "AI-103", "AI-200",
+        "AI-300", "AZ-104", "AZ-204", "AZ-500", "AZ-700", "DP-100", "DP-203",
+        "DP-300", "DP-600", "DP-700", "DP-750", "DP-800", "PL-300", "SC-200",
+        "SC-300", "SC-500",
     },
-    "expert": {"AB-100", "AZ-305", "AZ-400", "SC-100"},
+    "expert": {"AB-100", "AI-500", "AZ-305", "AZ-400", "SC-100"},
 }
 CERT_LEVEL_BY_CODE = {
     code: level
@@ -520,8 +561,11 @@ def main() -> None:
             errors.append(
                 f"{page.relative_to(ROOT)}: Smart App Banner is {smart_banner}, expected {expected_banner}"
             )
-        if code not in {"GH-300", "GH-900"} and f"full {count}-question bank" not in text:
-            errors.append(f"{page.relative_to(ROOT)}: full-bank count is not {count}")
+        expected_count_phrase = f"{count} {code} practice questions"
+        if expected_count_phrase not in text:
+            errors.append(
+                f"{page.relative_to(ROOT)}: scoped practice-question count is not {count}"
+            )
         if code in RETIRED and ("Retired Exam" not in title or RETIRED[code] not in description):
             errors.append(f"{page.relative_to(ROOT)}: retired-exam metadata is missing")
         if code in RETIRING:
@@ -581,26 +625,39 @@ def main() -> None:
         "Order the steps to deploy a Bicep template.",
         "Azure sysadmin, Microsoft certification",
         "Bicep, ARM templates, Azure RBAC, NSG, Azure Backup",
-        "full 319-question bank",
-        "full 320-question bank",
+        # "full 319-question bank" / "full 320-question bank" used to live here as
+        # stale-count guards. Tools/sync-marketing-counts.py now owns that phrase
+        # and rewrites it per page, so --check catches any drift, while a bare
+        # number literal false-positives the moment a real count reaches it —
+        # AI-300 is legitimately 319 exam-scoped questions.
     )
     for phrase in stale_phrases:
         if phrase in corpus:
             errors.append(f"stale or generic content remains: {phrase}")
 
+    truthfulness_surfaces = corpus + "\n" + (ROOT / "index.html").read_text()
+    truthfulness_surfaces += "\n" + (ROOT / "exams" / "_template.html").read_text()
+    for label, pattern in MISLEADING_ALIGNMENT_PATTERNS:
+        if re.search(pattern, normalise_visible_text(truthfulness_surfaces), re.I):
+            errors.append(f"misleading exam-alignment copy remains: {label}")
+
     llms = (ROOT / "llms.txt").read_text()
-    if f"## Exams covered ({len(COUNTS)})" not in llms:
+    if f"## Exams covered ({len(SITABLE)})" not in llms:
         errors.append("llms.txt has a stale exam-count heading")
     for match in re.finditer(
         r"^### (?P<label>[^\n]+?) \((?P<declared>\d+)\)\n(?P<body>.*?)(?=^### |^## |\Z)",
         llms,
         re.M | re.S,
     ):
-        actual = len(re.findall(r"^- ", match.group("body"), re.M))
+        # Retired and retiring exams keep their bullets as a reference, but the
+        # heading counts only what still feeds the advertised totals.
+        bulleted = re.findall(r"^-\s+\[?([A-Z]{2}-\d{3})\b", match.group("body"), re.M)
+        actual = sum(1 for code in bulleted if code not in NON_CURRENT)
         declared = int(match.group("declared"))
         if actual != declared:
             errors.append(
-                f"llms.txt category {match.group('label')!r} declares {declared} but lists {actual}"
+                f"llms.txt category {match.group('label')!r} declares {declared} "
+                f"but lists {actual} sit-able exam(s)"
             )
     if "Platform: iOS 18+, iPadOS 18+" not in llms:
         errors.append("llms.txt has a stale minimum OS version")

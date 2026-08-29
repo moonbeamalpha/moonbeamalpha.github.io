@@ -35,7 +35,11 @@ EXAMS_DIR = ROOT / "exams"
 DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-08-09"
-SEO_UPDATED_OVERRIDES = {}
+SEO_UPDATED_OVERRIDES = {
+    # New pages launched after the 2026-08-09 site-wide SEO pass.
+    "AB-650": "2026-08-23",
+    "AI-500": "2026-08-23",
+}
 RETIRED_EXAMS = {
     "AI-900": {
         "date": "30 June 2026",
@@ -52,13 +56,13 @@ RETIRED_EXAMS = {
         "replacement": "AI-300",
         "replacement_label": "a current machine-learning operations option",
     },
-}
-RETIRING_EXAMS = {
     "AZ-204": {
         "date": "31 July 2026",
         "replacement": "AI-200",
         "replacement_label": "Microsoft's replacement developer course and current AI cloud route",
     },
+}
+RETIRING_EXAMS = {
     "AZ-500": {
         "date": "31 August 2026",
         "replacement": "SC-500",
@@ -66,6 +70,26 @@ RETIRING_EXAMS = {
     },
 }
 ACTIVE_SEO = {
+    "AB-650": {
+        "description": (
+            "{count} AB-650 practice questions for AI Services Administrator Associate. Study "
+            "Copilot administration, agent governance, and Purview on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AB-650 practice questions for Microsoft 365 Copilot administration, Agent 365 "
+            "governance, and Purview data security. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
+    "AI-500": {
+        "description": (
+            "{count} AI-500 practice questions for Multi-Agent AI Solutions Expert. Study Microsoft "
+            "Foundry, Agent Framework, orchestration, and security on iPhone and iPad."
+        ),
+        "social_description": (
+            "{count} AI-500 practice questions for Microsoft Foundry, Agent Framework orchestration, "
+            "evaluations, and agent security. Adaptive exam prep for iPhone and iPad."
+        ),
+    },
     "AB-410": {
         "description": (
             "{count} AB-410 practice questions for Intelligent Applications Builder. Study Dataverse, "
@@ -464,7 +488,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </ul>
           </div>
           <h3>Multiple choice</h3>
-          <p>A real {code} question-bank example with one correct answer. The app explains every option after you answer.</p>
+          <p>An original {code} practice-bank example with one correct answer. The app explains every option after you answer.</p>
           <span class="qt__hint">Exam-specific sample</span>
         </article>
 
@@ -476,7 +500,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </ul>
           </div>
           <h3>Multi-select</h3>
-          <p>A real {code} multi-select item. Every required selection must be correct to earn the mark.</p>
+          <p>An original {code} multi-select practice item. Every required selection must be correct to earn the mark.</p>
           <span class="qt__hint">All-or-nothing</span>
         </article>
 
@@ -488,7 +512,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </ul>
           </div>
           <h3>{drag_title}</h3>
-          <p>A real {code} interactive-format prompt, rendered for touch on iPhone and iPad.</p>
+          <p>An original {code} ordering prompt, rendered for touch on iPhone and iPad.</p>
           <span class="qt__hint">Interactive item</span>
         </article>
 
@@ -505,7 +529,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </div>
           </div>
           <h3>{interactive_title}</h3>
-          <p>A real {code} prompt that tests recognition inside a visual or contextual interface.</p>
+          <p>An original {code} visual-context prompt, rendered for touch on iPhone and iPad.</p>
           <span class="qt__hint">{interactive_hint}</span>
         </article>
 
@@ -521,7 +545,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </div>
           </div>
           <h3>Case studies</h3>
-          <p>A real {code} case-study scenario with linked questions that share the same requirements and environment.</p>
+          <p>An original {code} case-study scenario with linked questions that share the same requirements and environment.</p>
           <span class="qt__hint">Multi-question</span>
         </article>
 
@@ -534,7 +558,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </div>
           </div>
           <h3>Answer Coach</h3>
-          <p>Answer Coach uses the bank's authored rationale to explain the misconception, key distinction, and rule to remember. On supported devices, an optional on-device model may rewrite the note only when it passes grounding checks.</p>
+          <p>Answer Coach shows the correct reasoning and option-by-option rationale where available, then explains the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test; supported devices may optionally rewrite a note on-device only after grounding checks.</p>
           <span class="qt__hint qt__hint--purple">App exclusive</span>
         </article>
 

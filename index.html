@@ -1744,27 +1744,112 @@
         // Lightweight native path: the hero is already visible, while content
         // below the fold gets a progressive IntersectionObserver reveal.
         var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!reducedMotion && 'IntersectionObserver' in window) {
+        (function initMetricCounters() {
+          var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+          if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+
+          var counters = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (!entry.isIntersecting) return;
+              counters.unobserve(entry.target);
+              var element = entry.target;
+              var finalText = element.textContent.trim();
+              var match = finalText.match(/^([\d,]+(?:\.\d+)?)(.*)$/);
+              if (!match || motionPreference.matches) return;
+              var target = Number(match[1].replace(/,/g, ''));
+              var decimals = (match[1].split('.')[1] || '').length;
+              var started = null;
+
+              // Keep the generated value available to assistive technology,
+              // and reserve its full width while the visible digits animate.
+              element.style.display = 'inline-block';
+              element.style.minWidth = element.getBoundingClientRect().width + 'px';
+              var accessible = document.createElement('span');
+              accessible.className = 'sr-only';
+              accessible.textContent = finalText;
+              var visible = document.createElement('span');
+              visible.setAttribute('aria-hidden', 'true');
+              visible.textContent = finalText;
+              element.replaceChildren(accessible, visible);
+
+              function tick(now) {
+                if (started === null) started = now;
+                var progress = Math.min((now - started) / 1200, 1);
+                if (motionPreference.matches || progress === 1) {
+                  visible.textContent = finalText;
+                  return;
+                }
+                var value = target * (1 - Math.pow(1 - progress, 3));
+                visible.textContent = (decimals ? value.toFixed(decimals) : Math.floor(value)) + match[2];
+                window.requestAnimationFrame(tick);
+              }
+              window.requestAnimationFrame(tick);
+            });
+          }, { threshold: 0.5 });
+          document.querySelectorAll('.metric-number').forEach(function(element) {
+            counters.observe(element);
+          });
+        })();
+
+        (function initEntranceAnimations() {
+          var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+          if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+
+          var heroObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (!entry.isIntersecting) return;
+              heroObserver.unobserve(entry.target);
+              if (motionPreference.matches) return;
+              var phone = entry.target;
+              function settled(event) {
+                if (event.target !== phone) return;
+                phone.classList.remove('hero-phone-enter');
+                phone.removeEventListener('animationend', settled);
+                phone.removeEventListener('animationcancel', settled);
+              }
+              phone.addEventListener('animationend', settled);
+              phone.addEventListener('animationcancel', settled);
+              phone.classList.add('hero-phone-enter');
+            });
+          }, { threshold: 0.1 });
+          document.querySelectorAll('.hero-devices > .phone-wrap').forEach(function(phone, index) {
+            phone.style.setProperty('--hero-settle-delay', (index * 70) + 'ms');
+            heroObserver.observe(phone);
+          });
+
           var revealObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
               if (!entry.isIntersecting) return;
-              entry.target.classList.add('is-visible');
+              if (entry.target.classList.contains('showcase-inner')) {
+                entry.target.querySelectorAll('.reveal-pending').forEach(function(child) {
+                  child.classList.add('is-visible');
+                });
+              } else {
+                entry.target.classList.add('is-visible');
+              }
               revealObserver.unobserve(entry.target);
             });
           }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
-          document.querySelectorAll('.fade-up, .showcase-text, .showcase-device').forEach(function(el) {
+          // One trigger for each pair keeps the device and text coordinated,
+          // rather than depending on their different bounding-box heights.
+          document.querySelectorAll('.showcase-inner').forEach(function(showcase) {
+            if (showcase.getBoundingClientRect().top <= window.innerHeight * 0.92) return;
+            var device = showcase.querySelector('.showcase-device');
+            var text = showcase.querySelector('.showcase-text');
+            if (!device || !text) return;
+            device.classList.add('reveal-pending', showcase.classList.contains('showcase-inner--device-left') ? 'reveal-from-left' : 'reveal-from-right');
+            text.classList.add('reveal-pending', 'reveal-after-device');
+            revealObserver.observe(showcase);
+          });
+
+          document.querySelectorAll('.fade-up').forEach(function(el) {
+            if (el.closest('.showcase-inner')) return;
             if (el.getBoundingClientRect().top <= window.innerHeight * 0.92) return;
-            el.style.removeProperty('opacity');
-            el.style.removeProperty('transform');
             el.classList.add('reveal-pending');
-            if (el.classList.contains('showcase-device')) {
-              var showcase = el.closest('.showcase-inner');
-              el.classList.add(showcase && showcase.classList.contains('showcase-inner--device-left') ? 'reveal-from-left' : 'reveal-from-right');
-            }
             revealObserver.observe(el);
           });
-        }
+        })();
 
         var nav = document.querySelector('.site-nav');
         var navTicking = false;

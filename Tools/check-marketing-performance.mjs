@@ -27,6 +27,84 @@ for (const [, attributes, source] of home.matchAll(/<script\b([^>]*)>([\s\S]*?)<
   if (!/type="application\/ld\+json"/.test(attributes)) new vm.Script(source);
 }
 new vm.Script(read('theme.js'));
+const entranceScript = home.match(/\(function initEntranceAnimations\(\) \{[\s\S]*?\n        \}\)\(\);/)?.[0];
+assert(entranceScript, 'Native entrance animations are missing');
+assert(entranceScript.includes("'.hero-devices > .phone-wrap'"), 'Only decorative hero phones should animate');
+assert(!/hero-text|hero-ctas|hero-app-title/.test(entranceScript), 'Never gate hero copy on an entrance');
+assert(entranceScript.includes('motionPreference.matches'), 'Entrance animations must respect reduced motion');
+assert(entranceScript.includes('heroObserver.unobserve(entry.target)'), 'Hero entrance must run once');
+assert(entranceScript.includes("remove('hero-phone-enter')"), 'Clean up completed hero animation layers');
+const phoneKeyframes = read('home.css').match(/@keyframes hero-phone-settle \{[\s\S]*?\n    \}/)?.[0];
+assert(phoneKeyframes && /translate:/.test(phoneKeyframes));
+assert(!/opacity:|filter:|transform:|width:|height:/.test(phoneKeyframes), 'Hero settling must preserve visibility, angles and layout');
+assert(/\.reveal-pending\.reveal-after-device\s*\{\s*transition-delay: 160ms;/.test(read('home.css')));
+for (const source of [read('home.css'), read('theme-light.css')]) {
+  for (const [, selectors, declarations] of source.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    if (selectors.split(',').some(selector => /\.(mac|ipad)-wrap$/.test(selector.trim()))) {
+      assert(!declarations.includes('drop-shadow('), 'Do not filter the Mac/iPad wrapper surfaces');
+    }
+  }
+}
+assert(/\.ipad-slide\s*\{[^}]*visibility:\s*hidden/.test(read('home.css')));
+assert(/\.ipad-slide\.active\s*\{[^}]*visibility:\s*visible/.test(read('home.css')));
+
+// Exercise the actual inline counter implementation without a browser or any
+// copied catalogue totals: final values must come from generated HTML.
+const counterScript = home.match(/\(function initMetricCounters\(\) \{[\s\S]*?\n        \}\)\(\);/)?.[0];
+assert(counterScript, 'Native metric count-up is missing');
+const metricValues = [...home.matchAll(/class="metric-number[^>]*>([^<]+)<\/span>/g)].map(match => match[1]);
+assert(metricValues.length > 0);
+function setupCounters(reduce = false, supportsObserver = true) {
+  const preference = { matches: reduce };
+  const frames = [];
+  const observed = new Set();
+  let notify;
+  const elements = metricValues.map(textContent => ({
+    textContent, style: {}, children: [],
+    getBoundingClientRect: () => ({ width: 100 }),
+    replaceChildren(...children) { this.children = children; }
+  }));
+  function Observer(callback) {
+    notify = callback;
+    this.observe = element => observed.add(element);
+    this.unobserve = element => observed.delete(element);
+  }
+  const window = { matchMedia: () => preference, requestAnimationFrame: callback => frames.push(callback) };
+  if (supportsObserver) window.IntersectionObserver = Observer;
+  vm.runInNewContext(counterScript, {
+    window, IntersectionObserver: Observer,
+    document: {
+      querySelectorAll: () => elements,
+      createElement: () => ({ setAttribute(name, value) { this[name] = value; } })
+    }
+  });
+  return { elements, preference, frames, observed, notify };
+}
+const counters = setupCounters();
+assert.equal(counters.frames.length, 0, 'No counter work before entering the viewport');
+const first = counters.elements[0];
+counters.notify([{ target: first, isIntersecting: false }]);
+assert.equal(counters.frames.length, 0);
+counters.notify([{ target: first, isIntersecting: true }]);
+assert(!counters.observed.has(first), 'Only animate once per visit');
+counters.frames.shift()(0);
+assert.equal(first.children[1].textContent, '0');
+counters.frames.shift()(600);
+assert(Number(first.children[1].textContent) > 0 && Number(first.children[1].textContent) < Number(metricValues[0]));
+counters.frames.shift()(1200);
+assert.equal(first.children[1].textContent, metricValues[0]);
+assert.equal(first.children[0].textContent, metricValues[0], 'Accessible total must stay stable');
+assert.equal(first.children[1]['aria-hidden'], 'true');
+assert.equal(counters.frames.length, 0);
+assert.equal(setupCounters(true).observed.size, 0, 'Respect reduced motion');
+assert.equal(setupCounters(false, false).observed.size, 0, 'Keep static totals without IntersectionObserver');
+const interrupted = setupCounters();
+interrupted.notify([{ target: interrupted.elements[0], isIntersecting: true }]);
+interrupted.preference.matches = true;
+interrupted.frames.shift()(0);
+assert.equal(interrupted.elements[0].children[1].textContent, metricValues[0]);
+assert.equal(interrupted.frames.length, 0);
+
 const fallback = [...home.matchAll(/<noscript>([\s\S]*?)<\/noscript>/g)].map(match => match[1]).join('\n');
 for (const [, path] of home.matchAll(/data-theme-bg-(?:dark|light)="([^"]+)"/g)) {
   assert(existsSync(resolve(root, '.' + path)), `Missing lazy image: ${path}`);
@@ -100,4 +178,4 @@ cache.match = async () => { throw new Error('cache read failed'); };
 assert.equal((await request()).body, 'fresh');
 storageUnavailable = true;
 assert.equal((await request()).body, 'fresh');
-console.log('Performance contracts passed: analytics, CSS reference, JS syntax, lazy images, cache safety.');
+console.log('Performance contracts passed: analytics, CSS reference, JS syntax, counters, device layers, lazy images, cache safety.');

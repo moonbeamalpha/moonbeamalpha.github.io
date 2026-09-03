@@ -13,6 +13,11 @@ The hero is visible without JavaScript. Below-fold decorative screenshots use
 viewport. Add a dark image rule to the homepage's `noscript` fallback whenever
 adding a lazy screenshot. Both theme variants must exist on disk.
 
+Hero phones have a one-shot, viewport-triggered translation that preserves their
+angle presets; it must never hide the headline, copy or buttons. Showcase pairs
+share a reveal trigger with a short text delay. Both enhancements respect reduced
+motion and use native CSS/IntersectionObserver, with no animation library.
+
 Use one Google Analytics loader per page. Pages with direct GA must not also
 load the GTM container. GTM-only legacy pages keep their existing loader.
 

@@ -167,10 +167,10 @@ The app covers the following Microsoft certification exams. All are taught with 
 - **Exam IQ**: On-device CoreML model that predicts your exam-day score with confidence intervals, using Item Response Theory (IRT) and Bayesian inference over your answer history.
 - **Adaptive study plans**: The app picks your next session — weak-spot drills, knowledge-decay refreshes, mock exams — based on your current ability estimate per domain.
 - **Aura first-week guidance**: Aura adapts the learner's next step throughout the first week and closes every study block with a concise, evidence-led recap.
-- **Exam simulator**: Full-length mock exams under real timing and question distribution for each Microsoft exam.
+- **Exam simulator**: Full-length, timed practice tests using blueprint-weighted question sets; Microsoft's live interface and exact item mix may differ.
 - **Knowledge decay tracking**: Spaced-repetition signals flag topics where your retention has dropped before exam day, with targeted refresher sessions.
-- **Question types**: Multiple choice, multi-select, drag-and-drop ordering, hotspot, case studies — matching the formats Microsoft uses on the real exams.
-- **Answer Coach**: For incorrect answers, authored certification guidance explains the misconception, key distinction, and rule to remember. On supported devices, an optional on-device model may rewrite the note only when it passes grounding checks.
+- **Question types**: Nine interactive formats for exam-style rehearsal, including multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies.
+- **Answer Coach**: The explanation card shows the correct reasoning, option-by-option rationale where available, and the misconception, key distinction, and rule to remember. Learners can show explanations after each question or at the end of a practice test, then jump to missed answers with session notes kept ready. Authored guidance is always available; supported devices may optionally rewrite a note on-device only after grounding checks.
 - **Offline-first**: Works fully without a network. No telemetry, no analytics on user behavior, no account required.
 - **Apple ecosystem**: Native SwiftUI on iPhone and iPad; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
 
@@ -226,7 +226,7 @@ A: The app is free to download and includes a free allowance of AB-100 questions
 Q: Does AB-100 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-100 practice test mode?
-A: Yes - the exam simulator runs full-length AB-100 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-410/ — AB-410 Practice Questions — 424 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
@@ -251,7 +251,7 @@ A: The app is free to download and includes a free allowance of AB-410 questions
 Q: Does AB-410 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-410 practice test mode?
-A: Yes - the exam simulator runs full-length AB-410 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-620/ — AB-620 Practice Questions — 387 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
@@ -276,7 +276,7 @@ A: The app is free to download and includes a free allowance of AB-620 questions
 Q: Does AB-620 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-620 practice test mode?
-A: Yes - the exam simulator runs full-length AB-620 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-650/ — AB-650 Practice Questions — 506 Qs & Exam Prep (2026)
 Page last modified: 2026-08-23
@@ -303,7 +303,7 @@ A: The app is free to download and includes a free allowance of AB-650 questions
 Q: Does AB-650 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-650 practice test mode?
-A: Yes — the exam simulator runs full-length AB-650 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-731/ — AB-731 Practice Questions — 335 Qs for AI Leadership (2026)
 Page last modified: 2026-08-09
@@ -328,7 +328,7 @@ A: The app is free to download and includes a free allowance of AB-731 questions
 Q: Does AB-731 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-731 practice test mode?
-A: Yes - the exam simulator runs full-length AB-731 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-900/ — AB-900 Practice Questions — 323 Qs for Copilot Admin (2026)
 Page last modified: 2026-08-09
@@ -353,7 +353,7 @@ A: The app is free to download and includes a free allowance of AB-900 questions
 Q: Does AB-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AB-900 practice test mode?
-A: Yes - the exam simulator runs full-length AB-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-102/ — AI-102 Retired Exam & AI-103 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -381,7 +381,7 @@ A: The app is free to download and includes a free allowance of AI-102 questions
 Q: Does AI-102 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-102 practice test mode?
-A: Yes - the exam simulator runs full-length AI-102 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-103/ — AI-103 Practice Questions — 557 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
@@ -408,7 +408,7 @@ A: The app is free to download and includes a free allowance of AI-103 questions
 Q: Does AI-103 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-103 practice test mode?
-A: Yes - the exam simulator runs full-length AI-103 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-200/ — AI-200 Practice Questions — 220 Qs for AI Developer (2026)
 Page last modified: 2026-08-09
@@ -435,7 +435,7 @@ A: The app is free to download and includes a free allowance of AI-200 questions
 Q: Does AI-200 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-200 practice test mode?
-A: Yes - the exam simulator runs full-length AI-200 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-300/ — AI-300 Practice Questions — 362 Qs for ML Ops Engineer (2026)
 Page last modified: 2026-08-09
@@ -462,7 +462,7 @@ A: The app is free to download and includes a free allowance of AI-300 questions
 Q: Does AI-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-300 practice test mode?
-A: Yes - the exam simulator runs full-length AI-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
 Page last modified: 2026-08-23
@@ -488,7 +488,7 @@ A: The app is free to download and includes a free allowance of AI-500 questions
 Q: Does AI-500 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-500 practice test mode?
-A: Yes - the exam simulator runs full-length AI-500 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-900/ — AI-900 Retired Exam & AI-901 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -515,7 +515,7 @@ A: The app is free to download and includes a free allowance of AI-900 questions
 Q: Does AI-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-900 practice test mode?
-A: Yes - the exam simulator runs full-length AI-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-901/ — AI-901 Practice Questions | Azure AI Fundamentals Exam
 Page last modified: 2026-08-09
@@ -539,7 +539,7 @@ A: The app is free to download and includes a free allowance of AI-901 questions
 Q: Does AI-901 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-901 practice test mode?
-A: Yes - the exam simulator runs full-length AI-901 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-104/ — AZ-104 Practice Questions — 481 Qs for Azure Admin (2026)
 Page last modified: 2026-08-09
@@ -566,7 +566,7 @@ A: The app is free to download and includes a free allowance of AZ-104 questions
 Q: Does AZ-104 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-104 practice test mode?
-A: Yes - the exam simulator runs full-length AZ-104 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-204/ — AZ-204 Retired Exam & AI-200 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -593,7 +593,7 @@ A: The app is free to download and includes a free allowance of AZ-204 questions
 Q: Does AZ-204 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-204 practice test mode?
-A: Yes - the exam simulator runs full-length AZ-204 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-305/ — AZ-305 Practice Questions — 399 Qs for Azure Architect (2026)
 Page last modified: 2026-08-09
@@ -619,7 +619,7 @@ A: The app is free to download and includes a free allowance of AZ-305 questions
 Q: Does AZ-305 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-305 practice test mode?
-A: Yes - the exam simulator runs full-length AZ-305 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-400/ — AZ-400 DevOps Engineer Practice Questions | Azure Mastery
 Page last modified: 2026-08-09
@@ -646,7 +646,7 @@ A: The app is free to download and includes a free allowance of AZ-400 questions
 Q: Does AZ-400 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-400 practice test mode?
-A: Yes - the exam simulator runs full-length AZ-400 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-500/ — AZ-500 Retirement & SC-500 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -672,7 +672,7 @@ A: The app is free to download and includes a free allowance of AZ-500 questions
 Q: Does AZ-500 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-500 practice test mode?
-A: Yes - the exam simulator runs full-length AZ-500 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-700/ — AZ-700 Practice Questions — 569 Qs for Network Engineer (2026)
 Page last modified: 2026-08-09
@@ -699,7 +699,7 @@ A: The app is free to download and includes a free allowance of AZ-700 questions
 Q: Does AZ-700 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-700 practice test mode?
-A: Yes - the exam simulator runs full-length AZ-700 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-900/ — AZ-900 Practice Questions — 364 Qs for Fundamentals (2026)
 Page last modified: 2026-08-09
@@ -724,7 +724,7 @@ A: The app is free to download and includes a free allowance of AZ-900 questions
 Q: Does AZ-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-900 practice test mode?
-A: Yes - the exam simulator runs full-length AZ-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-100/ — DP-100 Retired Exam & AI-300 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -750,7 +750,7 @@ A: The app is free to download and includes a free allowance of DP-100 questions
 Q: Does DP-100 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-100 practice test mode?
-A: Yes - the exam simulator runs full-length DP-100 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-300/ — DP-300 Practice Questions — 405 Qs for Database Admin (2026)
 Page last modified: 2026-08-09
@@ -777,7 +777,7 @@ A: The app is free to download and includes a free allowance of DP-300 questions
 Q: Does DP-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-300 practice test mode?
-A: Yes - the exam simulator runs full-length DP-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
 Page last modified: 2026-08-09
@@ -802,7 +802,7 @@ A: The app is free to download and includes a free allowance of DP-700 questions
 Q: Does DP-700 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-700 practice test mode?
-A: Yes - the exam simulator runs full-length DP-700 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-750/ — DP-750 Practice Questions — 442 Qs for Databricks (2026)
 Page last modified: 2026-08-09
@@ -828,7 +828,7 @@ A: The app is free to download and includes a free allowance of DP-750 questions
 Q: Does DP-750 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-750 practice test mode?
-A: Yes - the exam simulator runs full-length DP-750 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-800/ — DP-800 Practice Questions — 393 Qs for SQL AI Developer (2026)
 Page last modified: 2026-08-09
@@ -853,7 +853,7 @@ A: The app is free to download and includes a free allowance of DP-800 questions
 Q: Does DP-800 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-800 practice test mode?
-A: Yes - the exam simulator runs full-length DP-800 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-900/ — DP-900 Practice Questions — 346 Qs for Data Basics (2026)
 Page last modified: 2026-08-09
@@ -879,7 +879,7 @@ A: The app is free to download and includes a free allowance of DP-900 questions
 Q: Does DP-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-900 practice test mode?
-A: Yes - the exam simulator runs full-length DP-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/gh-300/ — GH-300 Practice Questions — 356 Qs for GitHub Copilot (2026)
 Page last modified: 2026-08-09
@@ -907,7 +907,7 @@ A: The app is free to download and includes a free allowance of GH-300 questions
 Q: Does GH-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a GH-300 practice test mode?
-A: Yes - the exam simulator runs full-length GH-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/gh-900/ — GH-900 Practice Questions — 347 Qs for GitHub Basics (2026)
 Page last modified: 2026-08-09
@@ -936,7 +936,7 @@ A: The app is free to download and includes a free allowance of GH-900 questions
 Q: Does GH-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a GH-900 practice test mode?
-A: Yes - the exam simulator runs full-length GH-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/pl-300/ — PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery
 Page last modified: 2026-08-09
@@ -962,7 +962,7 @@ A: The app is free to download and includes a free allowance of PL-300 questions
 Q: Does PL-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a PL-300 practice test mode?
-A: Yes - the exam simulator runs full-length PL-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
 Page last modified: 2026-08-09
@@ -989,7 +989,7 @@ A: The app is free to download and includes a free allowance of PL-900 questions
 Q: Does PL-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a PL-900 practice test mode?
-A: Yes - the exam simulator runs full-length PL-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/sc-100/ — SC-100 Practice Questions — 452 Qs for Cyber Architect (2026)
 Page last modified: 2026-08-09
@@ -1015,7 +1015,7 @@ A: The app is free to download and includes a free allowance of SC-100 questions
 Q: Does SC-100 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-100 practice test mode?
-A: Yes - the exam simulator runs full-length SC-100 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/sc-200/ — SC-200 Practice Questions — 374 Qs for SOC Analyst (2026)
 Page last modified: 2026-08-09
@@ -1040,7 +1040,7 @@ A: The app is free to download and includes a free allowance of SC-200 questions
 Q: Does SC-200 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-200 practice test mode?
-A: Yes - the exam simulator runs full-length SC-200 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/sc-300/ — SC-300 Practice Questions — 428 Qs for Identity Admin (2026)
 Page last modified: 2026-08-09
@@ -1066,7 +1066,7 @@ A: The app is free to download and includes a free allowance of SC-300 questions
 Q: Does SC-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-300 practice test mode?
-A: Yes - the exam simulator runs full-length SC-300 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/sc-500/ — SC-500 Practice Questions — 432 Qs for Cloud Security (2026)
 Page last modified: 2026-08-09
@@ -1092,7 +1092,7 @@ A: The app is free to download and includes a free allowance of SC-500 questions
 Q: Does SC-500 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-500 practice test mode?
-A: Yes - the exam simulator runs full-length SC-500 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
 Page last modified: 2026-08-09
@@ -1118,5 +1118,5 @@ A: The app is free to download and includes a free allowance of SC-900 questions
 Q: Does SC-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an SC-900 practice test mode?
-A: Yes - the exam simulator runs full-length SC-900 practice tests that mirror the real exam's question formats and timing, including interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 

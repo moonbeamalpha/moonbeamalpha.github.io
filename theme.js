@@ -7,6 +7,7 @@
   var KEY = 'am-theme';
   var root = document.documentElement;
   var transitioning = false;
+  var backgroundObserver = null;
 
   function stored() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
@@ -24,8 +25,45 @@
         darkSource = image.getAttribute('src');
         image.setAttribute('data-theme-src-dark', darkSource);
       }
-      image.setAttribute('src', light ? image.getAttribute('data-theme-src-light') : darkSource);
+      var desiredSource = light ? image.getAttribute('data-theme-src-light') : darkSource;
+      if (desiredSource && image.getAttribute('src') !== desiredSource) {
+        image.setAttribute('src', desiredSource);
+      }
     }
+
+    var loadedBackgrounds = document.querySelectorAll('[data-theme-bg-loaded="true"]');
+    for (var j = 0; j < loadedBackgrounds.length; j++) {
+      applyThemedBackground(loadedBackgrounds[j], light);
+    }
+  }
+
+  function applyThemedBackground(element, light) {
+    var source = light ? element.getAttribute('data-theme-bg-light') : element.getAttribute('data-theme-bg-dark');
+    if (!source) source = element.getAttribute('data-theme-bg-dark');
+    if (!source) return;
+    element.style.backgroundImage = 'url("' + source.replace(/"/g, '\\"') + '")';
+    element.setAttribute('data-theme-bg-loaded', 'true');
+  }
+
+  function initLazyBackgrounds() {
+    var backgrounds = document.querySelectorAll('[data-theme-bg-dark]');
+    if (!backgrounds.length) return;
+
+    var light = root.getAttribute('data-theme') === 'light';
+    if (!('IntersectionObserver' in window)) {
+      for (var i = 0; i < backgrounds.length; i++) applyThemedBackground(backgrounds[i], light);
+      return;
+    }
+
+    backgroundObserver = new IntersectionObserver(function(entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (!entries[i].isIntersecting) continue;
+        applyThemedBackground(entries[i].target, root.getAttribute('data-theme') === 'light');
+        backgroundObserver.unobserve(entries[i].target);
+      }
+    }, { rootMargin: '700px 0px' });
+
+    for (var j = 0; j < backgrounds.length; j++) backgroundObserver.observe(backgrounds[j]);
   }
 
   function apply(theme) {
@@ -95,6 +133,13 @@
       buttons[i].addEventListener('click', onToggle);
     }
     apply(stored() === 'light' ? 'light' : 'dark');
+    initLazyBackgrounds();
+
+    if ('serviceWorker' in navigator && window.isSecureContext) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () { /* caching is optional */ });
+      }, { once: true });
+    }
   }
 
   if (document.readyState === 'loading') {

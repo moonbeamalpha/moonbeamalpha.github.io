@@ -32,3 +32,13 @@ jobs:
 
       - name: SEO contract
         run: python3 Tools/validate-marketing-seo.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Homepage CSS bundle is current
+        run: bash Tools/build-home-css.sh --check
+
+      - name: Performance contracts
+        run: node Tools/check-marketing-performance.mjs

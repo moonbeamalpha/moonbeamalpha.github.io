@@ -23,12 +23,22 @@ Targets:
   - index.html, exams/index.html, guides/index.html, guides/*/index.html,
     404.html — the deprecated meta tag ONLY.
 
-Known gap (see task report): five files in the meta-tag target set
-(exams/gh-300, exams/gh-900, exams/_template.html, exams/index.html,
-404.html) never carried `apple-mobile-web-app-capable` in the first place,
-so there is nothing to insert after. The tool treats a zero-count anchor
-for that one edit as "not applicable" and skips just that edit rather than
-failing the file — a >1 count is still a hard failure (real drift).
+Deprecated meta (fix round 1, item 1): every target in both lists gets
+BOTH `apple-mobile-web-app-capable` and `mobile-web-app-capable`, no
+exceptions. Five files (exams/gh-300, exams/gh-900, exams/_template.html,
+exams/index.html, 404.html) never carried the Apple-prefixed tag at all;
+for those, both lines are inserted together immediately after the page's
+`<meta name="viewport" …>` line instead. The viewport anchor is asserted
+to match exactly once (strict — no 0-or-1 branch) before anything is
+written, same as every other anchor here.
+
+Retired-exam copy (fix round 1, item 3): a code in data/exam-counts.json
+["retired"] (currently AI-102, AI-900, AZ-204, AZ-500, DP-100) gets
+different mid-page CTA copy — "Ready to practise" contradicts the
+retirement banner already on that page. Re-running the tool against pages
+patched by an earlier version with the wrong copy detects and rewrites
+just that text (the file's `mobile-cta-bar` marker still short-circuits
+everything else), so the tool stays idempotent either way.
 """
 import json
 import re
@@ -51,6 +61,12 @@ STUDY_PLAN_ANCHOR = '    <section id="study-plan" class="container">'
 FAQS_ANCHOR = '    <section id="faqs" class="container">'
 APPLE_META_LINE = '  <meta name="apple-mobile-web-app-capable" content="yes">'
 MOBILE_WEB_META_LINE = '  <meta name="mobile-web-app-capable" content="yes">'
+VIEWPORT_ANCHOR = '  <meta name="viewport" content="width=device-width, initial-scale=1.0">'
+
+with open(SITE / "data" / "exam-counts.json") as _f:
+    _EXAM_COUNTS = json.load(_f)
+EXAM_CODES = set(_EXAM_COUNTS["exams"].keys())
+RETIRED_CODES = set(_EXAM_COUNTS.get("retired", []))
 
 # Anchored on the id+class of the open tag rather than the trailing copy:
 # three non-current exam pages (AI-102, AI-900, DP-100) run "Review the
@@ -71,10 +87,25 @@ def sticky_bar_html(code: str, code_lower: str) -> str:
     )
 
 
-def inline_cta_html(code: str, code_lower: str, suffix: str) -> str:
+def cta_copy(code: str, retired: bool) -> str:
+    """The <strong>…</strong> lead + follow-on sentence inside the mid-page
+    CTA's <p>. Retired codes (data/exam-counts.json["retired"]) get copy
+    that doesn't contradict the retirement banner already on that page."""
+    if retired:
+        return (
+            f'<strong>Reviewing {code} as reference?</strong> The app keeps the retired '
+            'bank alongside the current exams, and the first sessions are free.'
+        )
+    return (
+        f'<strong>Ready to practise {code}?</strong> Every question explains every option, '
+        'and the first sessions are free.'
+    )
+
+
+def inline_cta_html(code: str, code_lower: str, suffix: str, retired: bool) -> str:
     return (
         '  <aside class="exam-inline-cta" aria-label="Download Azure Mastery">\n'
-        f'    <p class="exam-inline-cta__text"><strong>Ready to practise {code}?</strong> Every question explains every option, and the first sessions are free.</p>\n'
+        f'    <p class="exam-inline-cta__text">{cta_copy(code, retired)}</p>\n'
         f'    <a class="exam-inline-cta__btn" href="{STORE_BASE}?ct=exam-{code_lower}-{suffix}" rel="noopener noreferrer">Download free</a>\n'
         '  </aside>\n'
     )
@@ -84,14 +115,51 @@ def nav_badge_html(code: str) -> str:
     return f'    <span class="site-nav__context" aria-label="Exam page">{code}</span>\n'
 
 
-def full_page_edits(code: str, code_lower: str) -> list[tuple[str, str]]:
-    """The six anchor edits for a real exam page / _template.html."""
+def full_page_edits(code: str, code_lower: str, retired: bool) -> list[tuple[str, str]]:
+    """The four anchor edits for a real exam page / _template.html (the
+    deprecated meta and hero-code span are handled separately — see
+    insert_deprecated_meta() and apply_hero_span())."""
     return [
         (EXAM_JS_ANCHOR, sticky_bar_html(code, code_lower) + EXAM_JS_ANCHOR),
-        (STUDY_PLAN_ANCHOR, inline_cta_html(code, code_lower, "mid1") + STUDY_PLAN_ANCHOR),
-        (FAQS_ANCHOR, inline_cta_html(code, code_lower, "mid2") + FAQS_ANCHOR),
+        (STUDY_PLAN_ANCHOR, inline_cta_html(code, code_lower, "mid1", retired) + STUDY_PLAN_ANCHOR),
+        (FAQS_ANCHOR, inline_cta_html(code, code_lower, "mid2", retired) + FAQS_ANCHOR),
         (THEME_TOGGLE_ANCHOR, nav_badge_html(code) + THEME_TOGGLE_ANCHOR),
     ]
+
+
+def rewrite_retired_cta_copy(text: str, code: str) -> tuple[str, bool]:
+    """For a page already patched with the old (wrong) 'Ready to practise'
+    copy, rewrite both mid-page CTA <p> bodies to the retired-appropriate
+    copy. Returns (text, changed) — changed is False once already rewritten,
+    so re-running this is a no-op (idempotent)."""
+    old = cta_copy(code, retired=False)
+    if old not in text:
+        return text, False
+    new = cta_copy(code, retired=True)
+    return text.replace(old, new), True
+
+
+def insert_deprecated_meta(text: str, path: Path) -> str:
+    """Insert mobile-web-app-capable alongside apple-mobile-web-app-capable.
+    Every target ends up with exactly one of each — no skip branch. Pages
+    that already carry the Apple-prefixed tag get the standards tag right
+    after it (existing behaviour); pages that never had it (gh-300, gh-900,
+    _template.html, exams/index.html, 404.html) get both lines inserted
+    together right after <meta name="viewport" …>, asserted to match
+    exactly once first."""
+    apple_count = text.count(APPLE_META_LINE)
+    if apple_count == 1:
+        return text.replace(APPLE_META_LINE, APPLE_META_LINE + "\n" + MOBILE_WEB_META_LINE, 1)
+    if apple_count == 0:
+        viewport_count = text.count(VIEWPORT_ANCHOR)
+        if viewport_count != 1:
+            raise AssertionError(f"{path}: anchor {VIEWPORT_ANCHOR!r} matched {viewport_count} times (want 1)")
+        return text.replace(
+            VIEWPORT_ANCHOR,
+            VIEWPORT_ANCHOR + "\n" + APPLE_META_LINE + "\n" + MOBILE_WEB_META_LINE,
+            1,
+        )
+    raise AssertionError(f"{path}: anchor {APPLE_META_LINE!r} matched {apple_count} times (want 0 or 1)")
 
 
 def apply_hero_span(text: str, code: str) -> tuple[str, int]:
@@ -107,10 +175,32 @@ def apply_hero_span(text: str, code: str) -> tuple[str, int]:
 
 def process_full_page(path: Path, code: str, code_lower: str) -> str:
     text = path.read_text()
-    if MARKER in text:
-        return "skip (already patched)"
+    retired = code in RETIRED_CODES
 
-    edits = full_page_edits(code, code_lower)
+    if MARKER in text:
+        # Already patched by an earlier run of this tool. Two things an
+        # earlier version could have gotten wrong on an already-patched
+        # file without touching anything else: the deprecated meta was
+        # skipped outright when the Apple-prefixed tag was absent (gh-300,
+        # gh-900, _template.html), and a retired code still carries the
+        # stale "Ready to practise" copy. Detect and fix either; if
+        # neither applies, the file is fully up to date.
+        changes = []
+        if META_MARKER not in text:
+            text = insert_deprecated_meta(text, path)
+            changes.append("meta")
+        if retired:
+            text, copy_changed = rewrite_retired_cta_copy(text, code)
+            if copy_changed:
+                changes.append("retired CTA copy")
+        if not changes:
+            return "skip (already patched)"
+        if not CHECK:
+            path.write_text(text)
+        label = ", ".join(changes)
+        return f"updated ({label})" if not CHECK else f"would update ({label})"
+
+    edits = full_page_edits(code, code_lower, retired)
     for anchor, _ in edits:
         count = text.count(anchor)
         if count != 1:
@@ -118,15 +208,7 @@ def process_full_page(path: Path, code: str, code_lower: str) -> str:
     for anchor, replacement in edits:
         text = text.replace(anchor, replacement, 1)
 
-    # Deprecated meta: best-effort. Five files in this same primary list
-    # (gh-300, gh-900, _template.html) have never carried the Apple-prefixed
-    # tag, so there is nothing to insert after — skip, don't fail the file.
-    apple_count = text.count(APPLE_META_LINE)
-    if apple_count == 1:
-        text = text.replace(APPLE_META_LINE, APPLE_META_LINE + "\n" + MOBILE_WEB_META_LINE, 1)
-    elif apple_count > 1:
-        raise AssertionError(f"{path}: anchor {APPLE_META_LINE!r} matched {apple_count} times (want 0 or 1)")
-
+    text = insert_deprecated_meta(text, path)
     text, _ = apply_hero_span(text, code)
 
     if not CHECK:
@@ -148,25 +230,17 @@ def process_meta_only(path: Path) -> str:
     text = path.read_text()
     if META_MARKER in text:
         return "skip (already has mobile-web-app-capable)"
-    apple_count = text.count(APPLE_META_LINE)
-    if apple_count == 0:
-        return "skip (no apple-mobile-web-app-capable anchor)"
-    if apple_count > 1:
-        raise AssertionError(f"{path}: anchor {APPLE_META_LINE!r} matched {apple_count} times (want 0 or 1)")
-    text = text.replace(APPLE_META_LINE, APPLE_META_LINE + "\n" + MOBILE_WEB_META_LINE, 1)
+    text = insert_deprecated_meta(text, path)
     if not CHECK:
         path.write_text(text)
     return "updated" if not CHECK else "would update"
 
 
 def main() -> int:
-    with open(SITE / "data" / "exam-counts.json") as f:
-        exam_codes = set(json.load(f)["exams"].keys())
-
     primary_targets: list[tuple[Path, str, str]] = []
     for d in sorted(p for p in EXAMS.iterdir() if p.is_dir()):
         code = d.name.upper()
-        if code not in exam_codes:
+        if code not in EXAM_CODES:
             continue
         index = d / "index.html"
         if index.exists():
@@ -213,7 +287,7 @@ def main() -> int:
     for label, status in results:
         print(f"{label:{width}s}  {status}")
 
-    changed = sum(1 for _, status in results if status in ("updated", "would update"))
+    changed = sum(1 for _, status in results if status.startswith("updated") or status.startswith("would update"))
     print(f"\n{len(results)} file(s) checked, {changed} changed, {len(failures)} failure(s)")
 
     if failures:

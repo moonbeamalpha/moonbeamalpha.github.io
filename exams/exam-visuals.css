@@ -1230,11 +1230,16 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
 
 /* ── Exam code in the hero headline and the sticky nav ── */
 .am-cert-hero__lead-code { color: var(--amh-accent, var(--azure-cyan)); }
+/* .site-nav__brand's "Azure Mastery" text must never wrap: the context
+   chip added alongside it eats into the same flex row's width, and on a
+   360-390px phone two-line brand text pushes the row's rendered height and
+   can crowd the row toward horizontal overflow. */
+.site-nav__brand span { white-space: nowrap; }
 .site-nav__context {
   display: inline-flex;
   align-items: center;
-  margin-left: 10px;
-  padding: 3px 10px;
+  margin-left: 8px;
+  padding: 2px 8px;
   border: 1px solid var(--border-accent, rgba(80,230,255,0.30));
   border-radius: 999px;
   background: color-mix(in srgb, var(--azure-cyan) 8%, transparent);
@@ -1244,6 +1249,11 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   font-weight: 700;
   letter-spacing: 0.04em;
   white-space: nowrap;
+}
+/* Narrowest phones (iPhone SE-class, 320-360px): drop the chip entirely
+   rather than let it force any wrapping or overflow. */
+@media (max-width: 360px) {
+  .site-nav__context { display: none; }
 }
 
 /* ── Per-question "see the full rationale" quiz link (Deliverable 2,

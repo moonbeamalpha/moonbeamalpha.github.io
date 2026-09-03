@@ -70,7 +70,8 @@ html[data-theme="light"] .am-cert-hero {
 }
 html[data-theme="light"] .am-cert-hero__eyebrow-code,
 html[data-theme="light"] .am-cert-hero__badge-code,
-html[data-theme="light"] .am-cert-hero__score-pill-value { color: var(--amh-ink); }
+html[data-theme="light"] .am-cert-hero__score-pill-value,
+html[data-theme="light"] .am-cert-hero__lead-code { color: var(--amh-ink); }
 html[data-theme="light"] .am-cert-hero__badge-glyph path { stroke: var(--amh-ink); }
 html[data-theme="light"] .am-cert-hero__lead-accent {
   background: linear-gradient(135deg,
@@ -149,13 +150,27 @@ html[data-theme="light"] .btn-nav-cta:hover {
   background: linear-gradient(120deg, #0C657D, #185F9D);
 }
 html[data-theme="light"] .cta-band__btn,
-html[data-theme="light"] .mobile-cta-bar__btn { color: #fff; }
+html[data-theme="light"] .mobile-cta-bar__btn,
+html[data-theme="light"] .exam-inline-cta__btn { color: #fff; }
 html[data-theme="light"] .mobile-cta-bar {
   background: rgba(248,250,253,0.94);
   border-top-color: rgba(13,30,55,0.12);
   box-shadow: 0 -8px 28px rgba(15,30,60,0.10);
 }
 html[data-theme="light"] .mobile-cta-bar__label { color: var(--text-secondary); }
+/* Mid-page CTA band + nav exam-code badge + per-question quiz link (PR A) —
+   .exam-inline-cta__btn's white text is set above alongside the other
+   gradient-pill buttons; --azure-cyan/--border-accent/--amh-accent already
+   remap for light in section 1/2 above, these just restate the intent. */
+html[data-theme="light"] .exam-inline-cta {
+  border-color: var(--border-accent);
+  background: rgba(0,110,170,0.05);
+}
+html[data-theme="light"] .site-nav__context {
+  border-color: var(--border-accent);
+  color: var(--azure-cyan);
+}
+html[data-theme="light"] .qt__quiz-link { color: var(--amh-accent, var(--azure-cyan)); }
 html[data-theme="light"] .badge-exam-iq { color: #fff; } /* gradient bg darkens via tokens; keep white text */
 html[data-theme="light"] .hero-app-icon { box-shadow: 0 0 24px rgba(43,136,216,0.25), 0 0 48px rgba(43,136,216,0.12); }
 

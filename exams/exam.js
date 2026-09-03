@@ -364,6 +364,12 @@
         ? '<strong>Correct.</strong> The app explains why every other option is wrong, too.'
         : '<strong>Not quite</strong> — the highlighted ' + (key.length > 1 ? 'answers are' : 'answer is') + ' correct. The app’s Answer Coach explains the misconception.';
       hint.replaceWith(note);
+      var quizLink = document.createElement('a');
+      quizLink.className = 'qt__quiz-link';
+      quizLink.href = storeLink ? storeLink.href : 'https://apps.apple.com/app/apple-store/id6760594569';
+      quizLink.rel = 'noopener noreferrer';
+      quizLink.textContent = 'See every ' + code + ' rationale in the app →';
+      note.appendChild(quizLink);
       if (answered === total) summarise();
     }
     function pick(i) {

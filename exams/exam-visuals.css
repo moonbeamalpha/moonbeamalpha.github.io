@@ -1160,3 +1160,98 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::before,
 html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   background-color: #fff;
 }
+
+/* ══════════════════════════════════════════════
+   PR A — exam-page conversion surfaces: sticky download bar, two mid-page
+   CTAs, exam code in the hero headline and sticky nav, per-question quiz
+   link. Every dark rule below has an html[data-theme="light"] override in
+   theme-light.css. Applied to every exam page by Tools/add-exam-page-cta.py.
+   ══════════════════════════════════════════════ */
+
+/* ── Sticky mobile download bar (copied verbatim from home.css) ── */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 900;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(7, 11, 22, 0.92);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+@media (max-width: 768px) { .mobile-cta-bar { display: flex; } body { padding-bottom: 72px; } }
+.mobile-cta-bar__label { font-size: 13px; color: var(--text-secondary); min-width: 0; }
+.mobile-cta-bar__btn {
+  flex: none;
+  min-height: 44px;
+  display: inline-flex; align-items: center;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--azure-cyan), var(--azure-blue, #2E7CEE));
+  color: #041018; font-weight: 700; font-size: 15px; text-decoration: none;
+}
+
+/* ── Mid-page download CTA band. Look matches .guide-inline-cta (see
+   guides/how-to-pass-az-104/index.html); sized to the same max-width
+   container as the sections around it (.container in exams/exam.css) so
+   the band's edges line up with the section headings above and below it.
+   The button reuses .mobile-cta-bar__btn's exact gradient pill. ── */
+.exam-inline-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  border: 1px solid rgba(80,230,255,0.3);
+  border-radius: 14px;
+  background: rgba(80,230,255,0.05);
+}
+.exam-inline-cta__text { font-size: 15px; line-height: 1.5; color: var(--text-primary); }
+.exam-inline-cta__btn {
+  flex: none;
+  min-height: 44px;
+  display: inline-flex; align-items: center;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--azure-cyan), var(--azure-blue, #2E7CEE));
+  color: #041018; font-weight: 700; font-size: 15px; text-decoration: none;
+}
+@media (max-width: 640px) {
+  .exam-inline-cta { flex-direction: column; align-items: stretch; }
+  .exam-inline-cta__btn { justify-content: center; }
+}
+
+/* ── Exam code in the hero headline and the sticky nav ── */
+.am-cert-hero__lead-code { color: var(--amh-accent, var(--azure-cyan)); }
+.site-nav__context {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+  padding: 3px 10px;
+  border: 1px solid var(--border-accent, rgba(80,230,255,0.30));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--azure-cyan) 8%, transparent);
+  color: var(--azure-cyan);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ── Per-question "see the full rationale" quiz link (Deliverable 2,
+   appended by exams/exam.js inside grade()'s .qt__quiz-note) ── */
+.qt__quiz-link {
+  margin-left: 6px;
+  color: var(--amh-accent, var(--azure-cyan));
+  font-weight: 600;
+  text-decoration: none;
+}
+.qt__quiz-link:hover { text-decoration: underline; }

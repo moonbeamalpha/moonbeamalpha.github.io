@@ -29,6 +29,161 @@
   }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
   map.forEach(function (_, sec) { io.observe(sec); });
 })();
+
+// Reorder samples — the authored list is the answer key. JavaScript rotates
+// the steps into an unsolved order, then adds mouse, touch and keyboard
+// reordering without changing the useful static fallback.
+(function () {
+  var lists = document.querySelectorAll('.qt__viz-drag');
+  Array.prototype.forEach.call(lists, function (list) {
+    var article = list.closest('.qt');
+    var title = article && article.querySelector('h3');
+    if (!title || title.textContent.trim() !== 'Drag-and-drop') return;
+    var items = Array.prototype.slice.call(list.children);
+    if (items.length < 2) return;
+
+    var viz = list.closest('.qt__viz');
+    var status = document.createElement('span');
+    var check = document.createElement('button');
+    var dragged = null;
+    var solved = false;
+
+    status.className = 'qt__quiz-hint qt__reorder-status';
+    status.setAttribute('aria-live', 'polite');
+    status.textContent = 'Drag the steps into order, or focus a step and use the arrow keys.';
+
+    check.className = 'qt__quiz-check';
+    check.type = 'button';
+    check.textContent = 'Check order';
+
+    list.setAttribute('data-reorder-live', '1');
+    list.setAttribute('aria-label', 'Arrange the steps in the correct order');
+    if (viz) viz.removeAttribute('aria-hidden');
+
+    function currentItems() {
+      return Array.prototype.slice.call(list.children);
+    }
+
+    function updatePositions() {
+      Array.prototype.forEach.call(currentItems(), function (item, index) {
+        var number = item.querySelector('.qt__viz-drag-num');
+        if (number) number.textContent = index + 1;
+        item.setAttribute('aria-posinset', index + 1);
+        item.setAttribute('aria-setsize', items.length);
+      });
+    }
+
+    function clearResult() {
+      Array.prototype.forEach.call(items, function (item) {
+        item.classList.remove('is-correct-position', 'is-misplaced');
+      });
+    }
+
+    function finishMove(item) {
+      if (!item) return;
+      item.classList.remove('is-dragging');
+      updatePositions();
+      clearResult();
+      status.textContent = 'Order updated. Check it when you are ready.';
+      dragged = null;
+    }
+
+    function moveBy(item, offset) {
+      if (solved) return;
+      var ordered = currentItems();
+      var index = ordered.indexOf(item);
+      var target = index + offset;
+      if (index < 0 || target < 0 || target >= ordered.length) return;
+      if (offset < 0) list.insertBefore(item, ordered[target]);
+      else list.insertBefore(ordered[target], item);
+      finishMove(item);
+      item.focus();
+    }
+
+    Array.prototype.forEach.call(items, function (item, index) {
+      item.setAttribute('data-answer-position', index);
+      item.setAttribute('draggable', 'true');
+      item.setAttribute('tabindex', '0');
+
+      item.addEventListener('dragstart', function (event) {
+        if (solved) return;
+        dragged = item;
+        item.classList.add('is-dragging');
+        event.dataTransfer.effectAllowed = 'move';
+        event.dataTransfer.setData('text/plain', item.textContent.trim());
+      });
+      item.addEventListener('dragover', function (event) {
+        if (!dragged || dragged === item) return;
+        event.preventDefault();
+        var rect = item.getBoundingClientRect();
+        list.insertBefore(dragged, event.clientY < rect.top + rect.height / 2 ? item : item.nextSibling);
+      });
+      item.addEventListener('drop', function (event) {
+        event.preventDefault();
+        finishMove(dragged);
+      });
+      item.addEventListener('dragend', function () { finishMove(dragged); });
+      item.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowUp') {
+          event.preventDefault();
+          moveBy(item, -1);
+        } else if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          moveBy(item, 1);
+        }
+      });
+
+      var handle = item.querySelector('.qt__viz-drag-handle');
+      if (!handle) return;
+      handle.addEventListener('pointerdown', function (event) {
+        if (solved || event.pointerType === 'mouse') return;
+        dragged = item;
+        item.classList.add('is-dragging');
+        try { handle.setPointerCapture(event.pointerId); } catch (_) { /* synthetic-event fallback */ }
+        event.preventDefault();
+      });
+      handle.addEventListener('pointermove', function (event) {
+        if (!dragged || event.pointerType === 'mouse') return;
+        event.preventDefault();
+        var target = document.elementFromPoint(event.clientX, event.clientY);
+        target = target && target.closest('.qt__viz-drag li');
+        if (!target || target.parentNode !== list || target === dragged) return;
+        var rect = target.getBoundingClientRect();
+        list.insertBefore(dragged, event.clientY < rect.top + rect.height / 2 ? target : target.nextSibling);
+      });
+      handle.addEventListener('pointerup', function () { finishMove(dragged); });
+      handle.addEventListener('pointercancel', function () { finishMove(dragged); });
+    });
+
+    // Start from a genuine question rather than displaying its answer.
+    list.appendChild(items[0]);
+    updatePositions();
+    list.insertAdjacentElement('afterend', status);
+    status.insertAdjacentElement('afterend', check);
+
+    check.addEventListener('click', function () {
+      var ordered = currentItems();
+      var correct = 0;
+      Array.prototype.forEach.call(ordered, function (item, index) {
+        var inPlace = Number(item.getAttribute('data-answer-position')) === index;
+        item.classList.toggle('is-correct-position', inPlace);
+        item.classList.toggle('is-misplaced', !inPlace);
+        if (inPlace) correct++;
+      });
+      if (correct === ordered.length) {
+        solved = true;
+        status.innerHTML = '<strong>Correct.</strong> The steps are in the right order.';
+        check.disabled = true;
+        Array.prototype.forEach.call(items, function (item) {
+          item.setAttribute('draggable', 'false');
+          item.removeAttribute('tabindex');
+        });
+      } else {
+        status.innerHTML = '<strong>Not quite.</strong> ' + correct + ' of ' + ordered.length + ' steps are in the right position. Keep arranging.';
+      }
+    });
+  });
+})();
   
 
 // App Store link attribution — stamps the exam's campaign token onto every

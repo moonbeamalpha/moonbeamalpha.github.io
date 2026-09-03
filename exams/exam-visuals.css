@@ -953,3 +953,189 @@ html[data-theme="light"] #cert-paths .cert-path__or {
   color: #006b83;
   background: rgba(0, 110, 170, 0.07);
 }
+
+/* Interactive question samples. This file loads after the light-theme sheet,
+   so graded states remain visible in both themes. */
+.qt__viz[data-quiz-live] .qt__viz-options li.is-picked {
+  border-color: rgba(80, 230, 255, 0.48);
+  background: rgba(80, 230, 255, 0.12);
+  color: var(--text-primary);
+}
+
+.qt__viz-options li.is-correct {
+  border-color: rgba(51, 210, 160, 0.72);
+  background: rgba(31, 190, 67, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(51, 210, 160, 0.42);
+  color: var(--text-primary);
+}
+
+.qt__viz-options li.is-wrong {
+  border-color: rgba(224, 82, 82, 0.68);
+  background: rgba(224, 82, 82, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(224, 82, 82, 0.32);
+  color: var(--text-primary);
+}
+
+.is-picked .qt__viz-radio,
+.is-picked .qt__viz-checkbox,
+.is-correct .qt__viz-radio,
+.is-correct .qt__viz-checkbox,
+.is-wrong .qt__viz-radio,
+.is-wrong .qt__viz-checkbox {
+  position: relative;
+  border-color: var(--azure-cyan);
+  background: var(--azure-cyan);
+}
+
+.is-correct .qt__viz-radio,
+.is-correct .qt__viz-checkbox {
+  border-color: #21a875;
+  background: #21a875;
+  box-shadow: 0 0 0 3px rgba(33, 168, 117, 0.14);
+}
+
+.is-wrong .qt__viz-radio,
+.is-wrong .qt__viz-checkbox {
+  border-color: #d84b4b;
+  background: #d84b4b;
+  box-shadow: 0 0 0 3px rgba(216, 75, 75, 0.12);
+}
+
+.is-picked .qt__viz-radio::after,
+.is-correct .qt__viz-radio::after,
+.is-wrong .qt__viz-radio::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bg-deep);
+}
+
+.is-picked .qt__viz-checkbox::after,
+.is-correct .qt__viz-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 4px;
+  height: 7px;
+  border-right: 1.8px solid var(--bg-deep);
+  border-bottom: 1.8px solid var(--bg-deep);
+  transform: rotate(45deg);
+}
+
+.is-wrong .qt__viz-checkbox::after {
+  content: '\00d7';
+  position: absolute;
+  inset: -4px 0 0;
+  color: var(--bg-deep);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 13px;
+  text-align: center;
+}
+
+.qt__viz-drag[data-reorder-live] li {
+  user-select: none;
+  transition: border-color 150ms ease, background 150ms ease, box-shadow 150ms ease, opacity 150ms ease;
+}
+
+.qt__viz-drag[data-reorder-live] li:focus-visible,
+.qt__quiz-check:focus-visible {
+  outline: 2px solid var(--amh-accent, var(--azure-cyan));
+  outline-offset: 2px;
+}
+
+.qt__viz-drag[data-reorder-live] .qt__viz-drag-handle {
+  display: inline-flex;
+  width: 44px;
+  min-height: 44px;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  margin: -7px 0 -7px -6px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.qt__viz-drag[data-reorder-live] li.is-dragging {
+  opacity: 0.58;
+  border-color: rgba(80, 230, 255, 0.54);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.qt__viz-drag[data-reorder-live] li.is-correct-position {
+  border-color: rgba(33, 168, 117, 0.62);
+  background: rgba(33, 168, 117, 0.13);
+}
+
+.qt__viz-drag[data-reorder-live] li.is-misplaced {
+  border-color: rgba(216, 75, 75, 0.54);
+  background: rgba(216, 75, 75, 0.10);
+}
+
+html[data-theme="light"] .qt__viz[data-quiz-live] .qt__viz-options li.is-picked {
+  border-color: rgba(14, 116, 144, 0.50);
+  background: rgba(14, 116, 144, 0.12);
+}
+
+html[data-theme="light"] .qt__viz-options li.is-correct {
+  border-color: rgba(21, 128, 61, 0.62);
+  background: rgba(21, 128, 61, 0.13);
+  box-shadow: inset 0 0 0 1px rgba(21, 128, 61, 0.24);
+}
+
+html[data-theme="light"] .qt__viz-options li.is-wrong {
+  border-color: rgba(208, 48, 48, 0.58);
+  background: rgba(208, 48, 48, 0.11);
+  box-shadow: inset 0 0 0 1px rgba(208, 48, 48, 0.20);
+}
+
+html[data-theme="light"] .qt__viz-drag[data-reorder-live] li.is-correct-position {
+  border-color: rgba(21, 128, 61, 0.56);
+  background: rgba(21, 128, 61, 0.11);
+}
+
+html[data-theme="light"] .qt__viz-drag[data-reorder-live] li.is-misplaced {
+  border-color: rgba(208, 48, 48, 0.50);
+  background: rgba(208, 48, 48, 0.09);
+}
+
+.qt__quiz-check {
+  min-height: 44px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: 1px solid rgba(80, 230, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(80, 230, 255, 0.09);
+  color: var(--text-primary);
+  cursor: pointer;
+  font: 600 12px/1.2 'Outfit', sans-serif;
+}
+
+.qt__quiz-check:hover {
+  background: rgba(80, 230, 255, 0.15);
+}
+
+.qt__quiz-check:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.qt__reorder-status strong {
+  color: var(--text-primary);
+}
+
+html[data-theme="light"] .is-picked .qt__viz-radio::after,
+html[data-theme="light"] .is-correct .qt__viz-radio::after,
+html[data-theme="light"] .is-wrong .qt__viz-radio::after {
+  background-color: #fff;
+}
+
+html[data-theme="light"] .is-picked .qt__viz-checkbox::after,
+html[data-theme="light"] .is-correct .qt__viz-checkbox::after,
+html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}

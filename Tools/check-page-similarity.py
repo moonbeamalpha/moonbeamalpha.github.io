@@ -30,9 +30,10 @@ on words is what the brief asks for by default, and it comfortably profiles at
 well under a second for all 435 pairs on this corpus (Sep 2026 measurement) --
 fast enough that the shingle-Jaccard fallback was never needed.
 
-Excluded before comparison (the brief's list -- shared or duplicated-by-design
-markup that would otherwise inflate every pair equally and hide genuine
-content overlap): <header>, <footer>, <nav class="page-toc">, the
+Excluded before comparison (shared or duplicated-by-design markup that would
+otherwise inflate every pair equally and hide genuine content overlap):
+<header>, <footer>, <nav class="page-toc">, <section id="guides"> (a
+tool-owned discovery surface rather than exam copy), the
 <div class="question-types"> block (six tool-generated mock-ups, byte-identical
 in shape across every page by design -- B3b is expressly forbidden from
 touching them), and <script>/<style> blocks.
@@ -115,6 +116,7 @@ _SCRIPT_STYLE_RE = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
 _HEADER_RE = re.compile(r'<header\b[^>]*>.*?</header>', re.I | re.S)
 _FOOTER_RE = re.compile(r'<footer\b[^>]*>.*?</footer>', re.I | re.S)
 _PAGE_TOC_RE = re.compile(r'<nav\s+class="page-toc"[^>]*>.*?</nav>', re.I | re.S)
+_GUIDES_SECTION_RE = re.compile(r'<section\s+id="guides"\b[^>]*>.*?</section>', re.I | re.S)
 _QUESTION_TYPES_OPEN_RE = re.compile(r'<div\s+class="question-types"[^>]*>', re.I)
 _DIV_TAG_RE = re.compile(r'<div\b|</div>', re.I)
 _TAG_RE = re.compile(r'<[^>]+>')
@@ -162,6 +164,7 @@ def extract_words(path: str) -> list[str]:
     text = _HEADER_RE.sub(' ', text)
     text = _FOOTER_RE.sub(' ', text)
     text = _PAGE_TOC_RE.sub(' ', text)
+    text = _GUIDES_SECTION_RE.sub(' ', text)
     text = _strip_question_types(text)
     text = _TAG_RE.sub(' ', text)
     text = html.unescape(text)

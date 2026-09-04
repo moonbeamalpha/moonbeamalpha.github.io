@@ -89,6 +89,16 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-dp-900",
     "how-to-pass-ai-901",
 }
+# The three trust pages (Track B, search-visibility recovery). Each tuple is
+# (slug, canonical URL, has_faq) -- unlike the guides above, these live at
+# top level (not under /guides/) and carry no HowTo/EducationalOccupational-
+# Credential schema, so they get their own light contract in
+# validate_static_content_pages() rather than reusing validate_guide_pages().
+STATIC_CONTENT_PAGES = (
+    ("about", "https://azuremastery.app/about/", False),
+    ("how-we-write-questions", "https://azuremastery.app/how-we-write-questions/", True),
+    ("how-exam-iq-works", "https://azuremastery.app/how-exam-iq-works/", True),
+)
 ACTIVE_SEO_REQUIREMENTS = {
     "AB-650": ("AI Services Administrator", "Copilot", "Purview"),
     "AI-500": ("Multi-Agent AI Solutions Expert", "Microsoft Foundry", "Agent Framework"),
@@ -238,6 +248,7 @@ def social_target_pages() -> list[Path]:
     pages.extend(ROOT / "exams" / code.lower() / "index.html" for code in sorted(COUNTS))
     pages.append(ROOT / "guides" / "index.html")
     pages.extend(ROOT / "guides" / slug / "index.html" for slug in GUIDE_SLUGS)
+    pages.extend(ROOT / slug / "index.html" for slug, _, _ in STATIC_CONTENT_PAGES)
     pages.extend(
         ROOT / "apps" / "AzureMastery" / name
         for name in ("privacy.html", "terms.html", "support.html")
@@ -520,6 +531,91 @@ def validate_guide_pages(errors: list[str], llms: str) -> list[Path]:
     return guide_pages
 
 
+def validate_static_content_pages(errors: list[str], llms: str) -> list[Path]:
+    """Basic SEO contract for the trust pages (/about/, /how-we-write-questions/,
+    /how-exam-iq-works/): one title <=62 characters, one meta description
+    <=160, one canonical matching the page's declared URL, one H1, one
+    JSON-LD @graph block that parses, and -- for the two pages that carry a
+    FAQPage -- the visible FAQ markup byte-matching the schema exactly, the
+    same check validate_guide_pages() runs for guide FAQs. Social-footer
+    presence is NOT re-checked here: these pages are also in
+    social_target_pages(), so validate_social_follow() already covers them.
+    """
+    pages: list[Path] = []
+    for slug, canonical_url, has_faq in STATIC_CONTENT_PAGES:
+        page = ROOT / slug / "index.html"
+        pages.append(page)
+        text = page.read_text()
+
+        title = matches_once(r"<title>(.*?)</title>", text, "title", page, errors, re.S)
+        description = matches_once(
+            r'<meta name="description" content="([^"]*)">', text, "meta description", page, errors
+        )
+        canonical = matches_once(
+            r'<link rel="canonical" href="([^"]+)">', text, "canonical", page, errors
+        )
+        matches_once(r"<h1\b[^>]*>.*?</h1>", text, "H1", page, errors, re.S)
+
+        if len(title) > 62:
+            errors.append(f"{page.relative_to(ROOT)}: title is {len(title)} characters")
+        if not title.endswith(" | Azure Mastery"):
+            errors.append(f"{page.relative_to(ROOT)}: title does not end with ' | Azure Mastery'")
+        if len(description) > 160:
+            errors.append(f"{page.relative_to(ROOT)}: description is {len(description)} characters")
+        if canonical and canonical != canonical_url:
+            errors.append(
+                f"{page.relative_to(ROOT)}: canonical is {canonical}, expected {canonical_url}"
+            )
+        if canonical and canonical not in llms:
+            errors.append(f"{page.relative_to(ROOT)}: canonical URL is missing from llms.txt")
+
+        schemas = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', text, re.S)
+        graph: list[dict[str, object]] = []
+        if len(schemas) != 1:
+            errors.append(f"{page.relative_to(ROOT)}: expected one JSON-LD block, found {len(schemas)}")
+        else:
+            try:
+                payload = json.loads(schemas[0])
+                graph = payload.get("@graph", [])
+                if not isinstance(graph, list):
+                    errors.append(f"{page.relative_to(ROOT)}: JSON-LD @graph is not a list")
+                    graph = []
+            except json.JSONDecodeError as exc:
+                errors.append(f"{page.relative_to(ROOT)}: invalid JSON-LD: {exc}")
+
+        if not has_faq:
+            continue
+
+        faq_nodes = [item for item in graph if isinstance(item, dict) and item.get("@type") == "FAQPage"]
+        visible_faqs = re.findall(
+            r'<details class="faq">\s*<summary>(.*?)</summary>\s*'
+            r'<div class="faq__answer"><p>(.*?)</p></div>\s*</details>',
+            text,
+            re.S,
+        )
+        if len(faq_nodes) != 1:
+            errors.append(f"{page.relative_to(ROOT)}: expected one FAQPage node, found {len(faq_nodes)}")
+            continue
+        schema_faqs = faq_nodes[0].get("mainEntity", [])
+        if len(schema_faqs) != len(visible_faqs):
+            errors.append(
+                f"{page.relative_to(ROOT)}: FAQ schema has {len(schema_faqs)} questions, "
+                f"visible section has {len(visible_faqs)}"
+            )
+            continue
+        for position, (schema_faq, visible_faq) in enumerate(zip(schema_faqs, visible_faqs), start=1):
+            schema_question = normalise_visible_text(str(schema_faq.get("name", "")))
+            schema_answer = normalise_visible_text(
+                str(schema_faq.get("acceptedAnswer", {}).get("text", ""))
+            )
+            visible_question = normalise_visible_text(visible_faq[0])
+            visible_answer = normalise_visible_text(visible_faq[1])
+            if (schema_question, schema_answer) != (visible_question, visible_answer):
+                errors.append(f"{page.relative_to(ROOT)}: FAQ {position} schema does not match visible text")
+
+    return pages
+
+
 def main() -> None:
     errors: list[str] = []
 
@@ -677,6 +773,9 @@ def main() -> None:
 
     truthfulness_surfaces = corpus + "\n" + (ROOT / "index.html").read_text()
     truthfulness_surfaces += "\n" + (ROOT / "exams" / "_template.html").read_text()
+    truthfulness_surfaces += "\n" + "\n".join(
+        (ROOT / slug / "index.html").read_text() for slug, _, _ in STATIC_CONTENT_PAGES
+    )
     for label, pattern in MISLEADING_ALIGNMENT_PATTERNS:
         if re.search(pattern, normalise_visible_text(truthfulness_surfaces), re.I):
             errors.append(f"misleading exam-alignment copy remains: {label}")
@@ -714,6 +813,7 @@ def main() -> None:
     validate_sitemap_lastmod(errors, sitemap)
 
     guide_pages = validate_guide_pages(errors, llms)
+    static_pages = validate_static_content_pages(errors, llms)
     validate_social_follow(errors)
 
     if errors:
@@ -722,8 +822,8 @@ def main() -> None:
             print(f"  - {error}")
         sys.exit(1)
     print(
-        f"SEO validation passed for {len(pages)} exam pages "
-        f"and {len(guide_pages)} guide pages."
+        f"SEO validation passed for {len(pages)} exam pages, "
+        f"{len(guide_pages)} guide pages, and {len(static_pages)} static content pages."
     )
 
 

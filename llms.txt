@@ -12,6 +12,9 @@ Last updated: 2026-08-09
 
 - [Home — Azure Mastery](https://azuremastery.app/): Product overview, feature list, screenshots, and App Store link. Canonical entry point.
 - [All exam pages](https://azuremastery.app/exams/): Hub listing every covered exam by family with links to each practice page.
+- [About Azure Mastery](https://azuremastery.app/about/): Who publishes the app, what it does, and how it's built.
+- [How we write and verify practice questions](https://azuremastery.app/how-we-write-questions/): How questions are written against Microsoft's published skills outlines, checked on every change, and watched weekly for drift.
+- [How Exam IQ predicts your score](https://azuremastery.app/how-exam-iq-works/): How the on-device Exam IQ engine predicts a certification exam score with Item Response Theory and Bayesian modelling.
 - [Support](https://azuremastery.app/apps/AzureMastery/support.html): User support, contact, and FAQ.
 - [Privacy Policy](https://azuremastery.app/apps/AzureMastery/privacy.html): Data handling — none collected; everything runs on-device.
 - [Terms of Use](https://azuremastery.app/apps/AzureMastery/terms.html): Standard EULA for in-app purchases.

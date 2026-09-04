@@ -12,6 +12,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PARTIAL = ROOT / "_includes" / "social-follow.html"
 STYLE_LINK = '  <link rel="stylesheet" href="/social-follow.css">'
+# Matches STYLE_LINK's plain synchronous form AND the homepage's deferred
+# print-media form (`<link rel="stylesheet" href="/social-follow.css"
+# media="print" onload="this.media='all'">`) plus its <noscript> fallback --
+# any <link rel="stylesheet" ...> that points at this stylesheet, in whatever
+# order its attributes appear. Without this, the homepage's intentional
+# non-blocking load reads as "missing" and gets a second, blocking link
+# inserted right before </head>.
+STYLE_LINK_RE = re.compile(r'<link\s+rel="stylesheet"[^>]*\bhref="/social-follow\.css"')
 START_MARKER = "<!-- social-follow:start -->"
 END_MARKER = "<!-- social-follow:end -->"
 
@@ -21,6 +29,10 @@ def target_pages() -> list[Path]:
     pages.extend(sorted((ROOT / "exams").glob("*/index.html")))
     pages.append(ROOT / "guides" / "index.html")
     pages.extend(sorted((ROOT / "guides").glob("*/index.html")))
+    pages.extend(
+        ROOT / slug / "index.html"
+        for slug in ("about", "how-we-write-questions", "how-exam-iq-works")
+    )
     pages.extend(
         ROOT / "apps" / "AzureMastery" / name
         for name in ("privacy.html", "terms.html", "support.html")
@@ -59,7 +71,7 @@ def synchronise_page(page: Path, partial: str) -> str:
     if page == ROOT / "index.html":
         text = remove_legacy_homepage_socials(text)
 
-    if STYLE_LINK not in text:
+    if not STYLE_LINK_RE.search(text):
         if text.count("</head>") != 1:
             raise ValueError(f"{page.relative_to(ROOT)}: expected one closing head tag")
         text = text.replace("</head>", f"{STYLE_LINK}\n</head>", 1)

@@ -285,7 +285,7 @@ def patch_related_cards(text: str, counts: dict) -> tuple[str, int]:
 
 
 def homepage_edits(total_label: str, metric_total: str, exam_count: int,
-                   cert_paths: int, retired_count: int):
+                   cert_paths: int, retired_count: int, catalogue_count: int):
     """Anchored aggregate edits for index.html. Each pattern is keyed off stable
     surrounding text so per-pillar roadmap counts ('5 exams') are never touched."""
     ec = str(exam_count)
@@ -319,6 +319,12 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         # ── "Retired & retiring (N)" disclosure summaries (hero + footer) ──
         (r'(exam-retired-disclosure__summary">Retired &amp; retiring \()\d+(\))',
          r'\g<1>' + str(retired_count) + r'\2'),
+        # ── JSON-LD ItemList entity count. This is deliberately NOT exam_count:
+        # entity list = sit-able + retired reference pages, not the advertised
+        # exam count — the ItemList enumerates every /exams/<code>/ page that
+        # exists, current or retired, so search engines can still find retired
+        # exam reference pages. ──
+        (r'("numberOfItems":\s*)\d+', r'\g<1>' + str(catalogue_count)),
     ]
 
 
@@ -451,6 +457,26 @@ def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
     for line in problems:
         print(f"  RETIRED   {line}")
     p.problems += len(problems)
+
+
+def warn_itemlist_count(catalogue_count: int) -> None:
+    """Report when the homepage JSON-LD ItemList's ListItem entries drift from
+    catalogue_count. The ItemList deliberately enumerates every exam page that
+    exists — entity list = sit-able + retired reference pages, not the
+    advertised exam count — so this only warns; homepage_edits() is what keeps
+    numberOfItems itself in sync."""
+    if not os.path.exists(INDEX_HTML):
+        return
+    text = open(INDEX_HTML).read()
+    m = re.search(r'"@type":\s*"ItemList".*?</script>', text, flags=re.S)
+    if not m:
+        print("  warning: homepage has no JSON-LD ItemList block to check.")
+        return
+    n = m.group(0).count('"@type": "ListItem"')
+    if n != catalogue_count:
+        print(f"  warning: homepage ItemList has {n} ListItem entries, but the "
+              f"catalogue has {catalogue_count} exams — re-run with --refresh "
+              f"or check index.html.")
 
 
 def llms_edits(counts: dict, total_label: str, exam_count: int):
@@ -632,6 +658,10 @@ def main() -> None:
     counts = {k.upper(): v for k, v in data["exams"].items()}
     retired = non_current_exams(data)
     active = {code: n for code, n in counts.items() if code not in retired}
+    # catalogue_count = every exam page that exists (sit-able + retired
+    # reference pages) — the basis for the homepage ItemList's numberOfItems,
+    # which is deliberately not exam_count.
+    catalogue_count = len(counts)
 
     # Aggregates are read verbatim from the app's generated catalog-totals.json
     # rather than summed here — that file is what the App Store listing quotes,
@@ -682,7 +712,8 @@ def main() -> None:
 
         print("homepage:")
         p.apply(INDEX_HTML,
-                homepage_edits(total_label, metric_total, exam_count, cert_paths, len(retired)),
+                homepage_edits(total_label, metric_total, exam_count, cert_paths,
+                               len(retired), catalogue_count),
                 transforms=[lambda t: patch_exam_code_lists(t, retired),
                             lambda t: patch_more_certifications(t, exam_count, retired),
                             lambda t: patch_roadmap_category_counts(t, retired)])
@@ -692,6 +723,7 @@ def main() -> None:
                 transforms=[lambda t: patch_llms_section_counts(t, retired)])
 
         warn_retired_markup(p, retired, set(counts))
+        warn_itemlist_count(catalogue_count)
 
     sync_social_images(p, active, total_label, exam_count, cert_paths,
                        render=not args.no_render)

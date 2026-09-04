@@ -115,6 +115,28 @@ non-current exam has not necessarily retired yet.
 | `Tools/sync-exam-faq-schema.py` | FAQPage JSON-LD parity with each exam page's visible `<details class="faq">` text; run after editing any exam-page FAQ; CI runs `--check` |
 | `Tools/check-page-similarity.py` | the exam-page de-templating ratchet against `Tools/page-similarity-baseline.json`; CI runs `--check` |
 | `Tools/test-domain-counts.py` | self-test for `sync-marketing-counts.py`'s per-domain count patcher, against in-memory fixtures — no app-repo checkout needed |
+| `Tools/sync-social-footer.py` | the shared social-follow component on every exam page, `guides/index.html`, and the homepage |
+
+## Adding a guide
+
+A new guide touches every one of these surfaces:
+
+- `Tools/validate-marketing-seo.py`: add the slug to `GUIDE_SLUGS`, and to
+  `HOW_TO_GUIDE_SLUGS` too if it is a how-to-pass guide; update the llms
+  contract sentence checked in `validate_guide_pages()` if the how-to count
+  changes.
+- `guides/index.html`: a new card in the matching grid, and a matching
+  `ItemList` entry in its JSON-LD `@graph`.
+- `sitemap.xml`: a new `<url>` entry for the guide.
+- `llms.txt`: a new bullet under the guides section.
+- The matching exam page's `#guides` block: a related-guide link.
+- `GUIDE_UPDATED` / `GUIDE_UPDATED_LABEL` in `Tools/validate-marketing-seo.py`:
+  bump both, then apply the new date to every guide's `<time datetime>` and
+  both `dateModified` JSON-LD nodes — not just the new page's.
+
+Then run, in order: `Tools/sync-social-footer.py`, `Tools/add-footer-links.py`,
+`Tools/add-ga-internal-flag.py`, `Tools/add-exam-page-cta.py --check`,
+`Tools/update-sitemap-lastmod.py`, `Tools/generate-llms-full.py`.
 
 `validate-marketing-seo.py` asserts its hand-kept `RETIRED` + `RETIRING` dicts
 union to the app's non-current set, and exits with instructions when they drift.

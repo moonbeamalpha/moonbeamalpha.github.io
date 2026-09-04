@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep every exam page's FAQPage JSON-LD in lockstep with its visible FAQ
+"""Keep every exam and guide page's FAQPage JSON-LD in lockstep with its visible FAQ
 text. Google requires FAQ structured data to match the visible page content;
 these pages drifted because the JSON-LD was hand-authored once alongside the
 visible `<details class="faq">` markup and the two were never mechanically
@@ -20,7 +20,8 @@ collapsed to single spaces. FAQ question/answer pairs are read from the
 `<details class="faq"><summary>...</summary><div class="faq__answer">
 <p>...</p></div></details>` blocks -- the exam-page FAQ markup, one paragraph
 per answer, which is a different (but consistent) layout from the single-line
-`<div class="faq__answer"><p>...</p></div>` guides use.
+`<div class="faq__answer"><p>...</p></div>` guides use. The same expression
+supports both layouts.
 
 Guard: a page's visible FAQ count must equal its FAQPage `mainEntity` entry
 count, paired in document order. A page that fails this (a hand-edit added or
@@ -29,13 +30,13 @@ unwritten -- there is no safe way to guess which visible item corresponds to
 which schema entry once the counts disagree.
 
 Targets: every exams/<code>/index.html whose directory is an exam code in
-data/exam-counts.json (35 pages today), plus exams/_template.html if it
-carries a FAQPage node (it does -- new pages are cloned from it).
+data/exam-counts.json, the retired hub and exams/_template.html when they
+carry FAQPage nodes, plus every guides/*/index.html carrying FAQPage markup.
 
     python3 Tools/sync-exam-faq-schema.py            # apply
     python3 Tools/sync-exam-faq-schema.py --check    # dry run; report only, exit 1 on drift
 
-Run this after editing any exam-page FAQ (visible copy, JSON-LD, or both).
+Run this after editing any exam-page or guide FAQ (visible copy, JSON-LD, or both).
 """
 from __future__ import annotations
 
@@ -93,6 +94,9 @@ def target_pages() -> list[Path]:
     for extra in (ROOT / "exams" / "retired" / "index.html", ROOT / "exams" / "_template.html"):
         if extra.exists() and '"@type": "FAQPage"' in extra.read_text():
             pages.append(extra)
+    for guide in sorted((ROOT / "guides").glob("*/index.html")):
+        if '"@type": "FAQPage"' in guide.read_text():
+            pages.append(guide)
     return pages
 
 

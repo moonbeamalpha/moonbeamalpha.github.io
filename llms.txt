@@ -104,7 +104,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ## Guides
 
-Free long-form study guides — exam-neutral advice grounded in the official Microsoft Learn skills outlines. Every guide article includes FAQ structured data, and the five how-to guides also include study-plan structured data. Index: [Azure certification guides](https://azuremastery.app/guides/).
+Free long-form study guides — exam-neutral advice grounded in the official Microsoft Learn skills outlines. Every guide article includes FAQ structured data, and the ten how-to guides also include study-plan structured data. Index: [Azure certification guides](https://azuremastery.app/guides/).
 
 - [Which Microsoft certification should you get first?](https://azuremastery.app/guides/which-azure-certification-first/): Decision guide mapping roles (IT ops, security, data, AI, business) to the right entry certification and its associate-level follow-on.
 - [How to pass AZ-900 Azure Fundamentals](https://azuremastery.app/guides/how-to-pass-az-900/): Study plan, domain breakdown, hardest topics, and what to do after passing.
@@ -112,8 +112,16 @@ Free long-form study guides — exam-neutral advice grounded in the official Mic
 - [How to pass SC-900 Security Fundamentals](https://azuremastery.app/guides/how-to-pass-sc-900/): Security, compliance, and identity fundamentals prep with next steps into SC-500/SC-200.
 - [How to pass DP-900 Data Fundamentals](https://azuremastery.app/guides/how-to-pass-dp-900/): Core data concepts, relational vs non-relational, analytics, and the data career path.
 - [How to pass AI-901 AI Fundamentals](https://azuremastery.app/guides/how-to-pass-ai-901/): The AI-900 successor — AI workloads, generative AI, responsible AI, and the AI-103 path.
+- [How to pass AI-103 Developing AI Apps and Agents on Azure](https://azuremastery.app/guides/how-to-pass-ai-103/): All five skills domains and weights, a six-week study plan, and exam-day tactics for the Foundry-based AI apps and agents exam.
+- [How to pass AB-620 Copilot Studio AI Agent Builder](https://azuremastery.app/guides/how-to-pass-ab-620/): All three skills domains and weights, a six-week study plan, and exam-day tactics for the low-code Copilot Studio agent exam.
+- [How to pass AB-100 Agentic AI Business Solutions Architect](https://azuremastery.app/guides/how-to-pass-ab-100/): All three skills domains and weights, a six-week study plan, and exam-day tactics for the multi-agent architecture exam.
+- [How to pass SC-500 Cloud and AI Security Engineer](https://azuremastery.app/guides/how-to-pass-sc-500/): All four skills domains and weights, a six-week study plan, and exam-day tactics for AZ-500's successor.
+- [How to pass AI-200 Azure AI Cloud Developer](https://azuremastery.app/guides/how-to-pass-ai-200/): All four skills domains and weights, a six-week study plan, and exam-day tactics for the AI cloud back-end exam.
 - [AZ-900 vs AZ-104](https://azuremastery.app/guides/az-900-vs-az-104/): Which Azure certification fits, whether you need both, and in what order.
 - [SC-900 vs AZ-900](https://azuremastery.app/guides/sc-900-vs-az-900/): Security-first or cloud-first — how the two fundamentals exams differ and which to sit first.
+- [AB-620 vs AB-410](https://azuremastery.app/guides/ab-620-vs-ab-410/): Copilot Studio agent builder or intelligent-app builder — credential, domains, exam format, and which to build first.
+- [AI-103 vs AI-200](https://azuremastery.app/guides/ai-103-vs-ai-200/): AI apps and agents or AI cloud developer — credential, domains, exam format, and which layer to sit first.
+- [SC-500 vs AZ-500](https://azuremastery.app/guides/sc-500-vs-az-500/): What changed when Microsoft retired AZ-500, how SC-500 compares, and what carries over if you already hold AZ-500.
 
 ## Exams covered (30)
 

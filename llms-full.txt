@@ -1008,11 +1008,11 @@ A: No — once Microsoft retires an exam, Pearson VUE stops scheduling new sitti
 Q: Does my credential expire when the exam retires?
 A: No. A credential you earned by passing a Microsoft exam stays valid and stays on your Microsoft Learn transcript after the exam itself retires — retirement stops new bookings, it doesn't undo a credential you've already earned.
 Q: Should I renew or move to the successor?
-A: If you already hold the credential and it's due for renewal, Microsoft's free online renewal assessment keeps it current — you don't need to sit the successor exam. If you haven't passed the original exam yet, book the successor instead: the retired exam can no longer be scheduled.
+A: No. When Microsoft retires an exam, its renewal assessment retires with it, so the credential cannot be renewed after the retirement date. It stays on your transcript as earned. To hold a current credential in that area, sit the successor exam listed above.
 Q: Do retired questions still count in the app?
 A: Azure Mastery keeps each retired exam's question bank in the app as reference material for anyone who bought it, or passed the exam before it retired. It isn't counted in the app's advertised exam or question totals.
 Q: Which retired exam maps to which successor?
-A: AI-900 to AI-901, AI-102 to AI-103, DP-100 to AI-300, AZ-204 to AI-200, and AZ-500 to SC-500. The table above lists all five with their retirement dates.
+A: AI-900 to AI-901, AI-102 to AI-103, DP-100 to AI-300, AZ-204 to AI-200, and AZ-500 to SC-500. The table above lists each one with its retirement date.
 
 ## /exams/sc-100/ — SC-100 Practice Questions — 452 Qs for Cyber Architect (2026)
 Page last modified: 2026-08-09

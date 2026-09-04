@@ -1,0 +1,186 @@
+/* Mobile section navigator shared by every Azure Mastery content page. */
+.section-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body.section-nav-ready {
+    padding-bottom: calc(82px + env(safe-area-inset-bottom));
+  }
+
+  .section-nav-ready .mobile-cta-bar {
+    display: none;
+  }
+
+  .section-nav {
+    position: fixed;
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    left: 10px;
+    z-index: 950;
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--border-strong, rgba(255,255,255,.12));
+    border-radius: 22px;
+    background: rgba(7, 11, 22, .94);
+    box-shadow: 0 18px 48px rgba(0,0,0,.36);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+
+  .section-nav__menu-button,
+  .section-nav__direction {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 14px;
+    background: rgba(255,255,255,.04);
+    color: var(--text-primary, #f0f0f0);
+    font: inherit;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .section-nav__menu-button {
+    font-size: 0;
+  }
+
+  .section-nav__menu-button::before,
+  .section-nav__menu-button::after,
+  .section-nav__menu-button span {
+    position: absolute;
+    left: 13px;
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    content: '';
+  }
+
+  .section-nav__menu-button { position: relative; }
+  .section-nav__menu-button::before { top: 14px; }
+  .section-nav__menu-button span { top: 21px; }
+  .section-nav__menu-button::after { top: 28px; }
+
+  .section-nav__track {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgba(255,255,255,.045);
+  }
+
+  .section-nav__direction:disabled {
+    opacity: .28;
+    cursor: default;
+  }
+
+  .section-nav__status {
+    min-width: 0;
+    padding: 0 4px;
+    text-align: center;
+  }
+
+  .section-nav__label,
+  .section-nav__progress {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .section-nav__label {
+    color: var(--text-primary, #f0f0f0);
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 650;
+  }
+
+  .section-nav__progress {
+    margin-top: 1px;
+    color: var(--text-muted, #808a96);
+    font-size: 10px;
+  }
+
+  .section-nav__cta {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 17px;
+    border-radius: 15px;
+    background: linear-gradient(120deg, var(--azure-cyan, #50e6ff), var(--azure-blue, #2b88d8));
+    color: #041018;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .section-nav--cta-suppressed .section-nav__cta {
+    display: none;
+  }
+
+  .section-nav__panel {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 8px);
+    left: 0;
+    max-height: min(52vh, 430px);
+    overflow-y: auto;
+    padding: 8px;
+    border: 1px solid var(--border-strong, rgba(255,255,255,.12));
+    border-radius: 18px;
+    background: rgba(7, 11, 22, .98);
+    box-shadow: 0 18px 48px rgba(0,0,0,.42);
+  }
+
+  .section-nav__panel[hidden] { display: none; }
+  .section-nav__panel a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 11px;
+    color: var(--text-secondary, #8b95a5);
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .section-nav__panel a[aria-current="true"] {
+    background: rgba(80,230,255,.09);
+    color: var(--azure-cyan, #50e6ff);
+  }
+
+  .section-nav button:focus-visible,
+  .section-nav a:focus-visible {
+    outline: 2px solid var(--azure-cyan, #50e6ff);
+    outline-offset: 2px;
+  }
+}
+
+html[data-theme="light"] .section-nav,
+html[data-theme="light"] .section-nav__panel {
+  background: rgba(248, 251, 255, .96);
+  box-shadow: 0 18px 44px rgba(29, 53, 87, .18);
+}
+
+html[data-theme="light"] .section-nav__menu-button,
+html[data-theme="light"] .section-nav__direction,
+html[data-theme="light"] .section-nav__track {
+  background: rgba(29, 53, 87, .06);
+}
+
+@media (max-width: 350px) {
+  .section-nav { left: 6px; right: 6px; gap: 6px; padding: 6px; }
+  .section-nav__cta { padding-inline: 12px; font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-nav * { scroll-behavior: auto; }
+}

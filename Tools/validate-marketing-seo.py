@@ -288,7 +288,7 @@ def validate_social_follow(errors: list[str]) -> None:
 
     for page in social_target_pages():
         text = page.read_text()
-        if text.count('<link rel="stylesheet" href="/social-follow.css">') != 1:
+        if len(re.findall(r'<link rel="stylesheet" href="/social-follow\.css(?:\?v=[0-9a-f]{12})?">', text)) != 1:
             errors.append(f"{page.relative_to(ROOT)}: shared social-follow stylesheet is missing or duplicated")
 
         blocks = re.findall(marker_pattern, text, re.S)

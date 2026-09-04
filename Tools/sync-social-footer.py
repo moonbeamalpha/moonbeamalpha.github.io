@@ -19,7 +19,7 @@ STYLE_LINK = '  <link rel="stylesheet" href="/social-follow.css">'
 # order its attributes appear. Without this, the homepage's intentional
 # non-blocking load reads as "missing" and gets a second, blocking link
 # inserted right before </head>.
-STYLE_LINK_RE = re.compile(r'<link\s+rel="stylesheet"[^>]*\bhref="/social-follow\.css"')
+STYLE_LINK_RE = re.compile(r'<link\s+rel="stylesheet"[^>]*\bhref="/social-follow\.css(?:\?v=[0-9a-f]{12})?"')
 START_MARKER = "<!-- social-follow:start -->"
 END_MARKER = "<!-- social-follow:end -->"
 

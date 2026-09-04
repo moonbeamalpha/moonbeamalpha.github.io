@@ -60,6 +60,12 @@ jobs:
       - name: Exam page CTA surfaces are current
         run: python3 Tools/add-exam-page-cta.py --check
 
+      - name: Marketing UI contracts are current
+        run: python3 Tools/check-marketing-ui.py
+
+      - name: Static asset versions are current
+        run: python3 Tools/version-static-assets.py --check
+
       # Every exam page's FAQPage JSON-LD must byte-match its visible
       # <details class="faq"> text -- Google requires FAQ structured data to
       # match the visible page content. --check reports which pages/questions

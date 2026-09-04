@@ -302,12 +302,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/exams/hero.css">
-  <link rel="stylesheet" href="/exams/exam.css">
+  <link rel="stylesheet" href="/exams/hero.css?v=7ee0f6ea3299">
+  <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #20C020; --amh-accent-2: #178A17; }</style>
-  <link rel="stylesheet" href="/theme-light.css">
-  <link rel="stylesheet" href="/exams/exam-visuals.css">
-  <link rel="stylesheet" href="/social-follow.css">
+  <link rel="stylesheet" href="/theme-light.css?v=dded3a0fa1af">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
+  <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
 <body>
 
@@ -316,7 +317,7 @@
       <img src="/images/app-icon.webp" alt="" width="28" height="28">
       <span>Azure Mastery</span>
     </a>
-    <span class="site-nav__context">SC-200</span>
+    <span class="site-nav__context"><span class="sr-only">Exam </span>SC-200</span>
     <button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
       <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -525,30 +526,69 @@
     <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for SC-200</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass SC-200</h2>
-      <p>
-        Azure Mastery ships with <strong>374 SC-200 practice questions</strong>, every one written specifically against the current (April 2026) skills outline. Each question carries a domain tag mapped to the official three domains (manage SecOps environment, respond to incidents, threat hunting), so you always know which area you're being tested on and where your weak spots are clustered. KQL snippets, alert payloads, Sentinel analytics rules, and Defender XDR incident graphs appear throughout — practising blueprint-relevant formats and decisions.
-      </p>
-      <p>
-        The on-device <strong>Exam IQ</strong> engine predicts your SC-200 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
-      </p>
-      <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Miss a Sentinel analytics-rule scenario? You'll see another rule-type question in the next session. Master "Defender for Endpoint vs Defender for Identity" three sessions running and the engine backs off, surfacing fresh KQL hunting or automation-playbook scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
-      </p>
-      <p>
-        <strong>Knowledge decay tracking</strong> matters more for SC-200 than for foundational exams — three SOC-analyst domains pack a lot of Microsoft Defender / Sentinel / KQL surface into a small bank, and the rule template you mastered three weeks ago is the rule you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
-      </p>
-      <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the April 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
-      </p>
-      <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
-      </p>
-      <p>
-        During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
-      </p>
-      <p>
-        Everything essential runs <strong>on-device</strong>. Your answer history, readiness gauge, and coaching stay private. Optional sync uses your private iCloud account; there is no Azure Mastery account, tracking, or external processing server.
-      </p>
+      <article class="exam-benefit">
+        <h3>Exam-specific practice</h3>
+        <ul>
+          <li><strong>374 SC-200 practice questions</strong> aligned to the published skills outline.</li>
+          <li>Coverage follows the official three domains (manage SecOps environment, respond to incidents, threat hunting).</li>
+          <li>Scenario and interactive items rehearse blueprint-relevant decisions.</li>
+        </ul>
+      </article>
+      <article class="exam-benefit">
+        <h3>Predicted score</h3>
+        <ul>
+          <li>Exam IQ predicts your SC-200 score on-device after roughly 30 questions.</li>
+          <li>A confidence range shows how stable the prediction is.</li>
+          <li>Ranked objectives identify the gaps most likely to improve readiness.</li>
+        </ul>
+      </article>
+      <article class="exam-benefit">
+        <h3>Adaptive study plan</h3>
+        <ul>
+          <li>The plan rebuilds itself from your answer history.</li>
+          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
+          <li>Sessions prioritise the gaps most likely to move you towards the 700 pass score.</li>
+        </ul>
+      </article>
+      <article class="exam-benefit">
+        <h3>Knowledge decay</h3>
+        <ul>
+          <li>Topic-level decay tracking spots knowledge that is starting to fade.</li>
+          <li>Revisit prompts arrive before a weak area becomes an exam-day surprise.</li>
+          <li>Weak-spot sessions prioritise decayed topics automatically.</li>
+        </ul>
+      </article>
+      <article class="exam-benefit">
+        <h3>Exam rehearsal</h3>
+        <ul>
+          <li>100-minute timed sessions build sustained exam focus.</li>
+          <li>Original questions follow the published domain weighting.</li>
+          <li>Microsoft controls the live interface and exact question mix.</li>
+        </ul>
+      </article>
+      <article class="exam-benefit">
+        <h3>Answer Coach</h3>
+        <ul>
+          <li>Every answer includes authored reasoning, with option rationales where available.</li>
+          <li>Misses become a concise misconception, distinction, and rule to remember.</li>
+          <li>Supported devices can optionally rewrite grounded notes on-device.</li>
+        </ul>
+      </article>
+      <article class="exam-benefit">
+        <h3>Aura guidance</h3>
+        <ul>
+          <li>Aura turns each session into a clear next step.</li>
+          <li>Recaps show what changed, what to focus on, and what to do next.</li>
+        </ul>
+      </article>
+      <article class="exam-benefit">
+        <h3>Private by design</h3>
+        <ul>
+          <li>Practice, scoring, readiness, and coaching run on-device.</li>
+          <li>No Azure Mastery account or external processing server is required.</li>
+          <li>Optional sync uses your private iCloud account.</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Suggested study plan -->
@@ -987,7 +1027,8 @@
     <span class="mobile-cta-bar__label">SC-200 practice — free on the App&nbsp;Store</span>
     <a class="mobile-cta-bar__btn" href="https://apps.apple.com/app/apple-store/id6760594569?ct=exam-sc-200-sticky" rel="noopener noreferrer">Download</a>
   </div>
-  <script src="/exams/exam.js" defer></script>
-  <script src="/theme.js" defer></script>
+  <script src="/exams/exam.js?v=f088e09f3d7a" defer></script>
+  <script src="/theme.js?v=236f6e747b4a" defer></script>
+  <script src="/section-nav.js?v=0acc60a13d4e" defer></script>
 </body>
 </html>

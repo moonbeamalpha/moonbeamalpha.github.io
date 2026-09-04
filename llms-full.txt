@@ -164,7 +164,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 
 ## Core capabilities
 
-- **Exam IQ**: On-device CoreML model that predicts your exam-day score with confidence intervals, using Item Response Theory (IRT) and Bayesian inference over your answer history.
+- **Exam IQ**: On-device CoreML model that predicts your exam-day score with a confidence range from your practice record (accuracy by domain, coverage, mastery, consistency, recency).
 - **Adaptive study plans**: The app picks your next session — weak-spot drills, knowledge-decay refreshes, mock exams — based on your current ability estimate per domain.
 - **Aura first-week guidance**: Aura adapts the learner's next step throughout the first week and closes every study block with a concise, evidence-led recap.
 - **Exam simulator**: Full-length, timed practice tests using blueprint-weighted question sets; Microsoft's live interface and exact item mix may differ.
@@ -517,7 +517,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AI-900 practice test mode?
 A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/ai-901/ — AI-901 Practice Questions | Azure AI Fundamentals Exam
+## /exams/ai-901/ — AI-901 Practice Questions — 572 Qs for AI Fundamentals (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Identify AI concepts and capabilities (40–45%)
@@ -621,7 +621,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-305 practice test mode?
 A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-400/ — AZ-400 DevOps Engineer Practice Questions | Azure Mastery
+## /exams/az-400/ — AZ-400 Practice Questions — 467 Qs for DevOps Engineer (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Design and implement processes and communications (10–15%)
@@ -938,7 +938,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there a GH-900 practice test mode?
 A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/pl-300/ — PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery
+## /exams/pl-300/ — PL-300 Practice Questions — 378 Qs for Power BI Analyst (2026)
 Page last modified: 2026-08-09
 Exam domains:
   - Prepare the data (25–30%)

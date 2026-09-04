@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import ast
+import importlib.util
 import json
 import re
+import subprocess
 import sys
 from html import unescape
 from pathlib import Path
@@ -13,6 +15,29 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def _load_sitemap_lastmod_tool():
+    """Load Tools/update-sitemap-lastmod.py, which owns sitemap <lastmod>.
+
+    That tool's filename matches this repo's hyphenated Tools/ naming
+    convention, so it can't be a plain `import`; load it by path instead so
+    the validator checks against the exact same computation the tool
+    writes, rather than duplicating the logic.
+    """
+    path = ROOT / "Tools" / "update-sitemap-lastmod.py"
+    spec = importlib.util.spec_from_file_location("update_sitemap_lastmod", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+try:
+    _sitemap_lastmod = _load_sitemap_lastmod_tool()
+except subprocess.CalledProcessError:
+    sys.exit("validate-marketing-seo: not inside a git checkout")
+expected_lastmod = _sitemap_lastmod.expected_lastmod
+loc_to_path = _sitemap_lastmod.loc_to_path
 _COUNTS_DOC = json.loads((ROOT / "data" / "exam-counts.json").read_text())
 COUNTS = _COUNTS_DOC["exams"]
 # Which exams are current is decided in the app repo (any exam carrying a
@@ -45,12 +70,6 @@ if set(RETIRED) | set(RETIRING) != NON_CURRENT:
         f"Tools/optimise-marketing-seo.py."
     )
 
-SEO_UPDATED = "2026-08-09"
-SEO_UPDATED_OVERRIDES = {
-    # Keep in lockstep with optimise-marketing-seo.py.
-    "AB-650": "2026-08-23",
-    "AI-500": "2026-08-23",
-}
 GUIDE_UPDATED = "2026-08-09"
 GUIDE_UPDATED_LABEL = "Updated 9 August 2026"
 GUIDE_SLUGS = (
@@ -80,10 +99,17 @@ ACTIVE_SEO_REQUIREMENTS = {
     "AI-901": ("current Azure AI Fundamentals exam", "Microsoft Foundry"),
     "PL-300": ("Power BI", "Power Query", "DAX"),
 }
+# Keep these templates in lockstep with optimise-marketing-seo.py's
+# ACTIVE_SEO[code]["title"]; the count is substituted here from the same
+# data/exam-counts.json snapshot so the two files cannot drift on the number.
+_ACTIVE_SEO_TITLE_TEMPLATES = {
+    "AI-901": "AI-901 Practice Questions — {count} Qs for AI Fundamentals (2026)",
+    "AZ-400": "AZ-400 Practice Questions — {count} Qs for DevOps Engineer (2026)",
+    "PL-300": "PL-300 Practice Questions — {count} Qs for Power BI Analyst (2026)",
+}
 ACTIVE_SEO_TITLES = {
-    "AI-901": "AI-901 Practice Questions | Azure AI Fundamentals Exam",
-    "AZ-400": "AZ-400 DevOps Engineer Practice Questions | Azure Mastery",
-    "PL-300": "PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery",
+    code: template.format(count=COUNTS[code])
+    for code, template in _ACTIVE_SEO_TITLE_TEMPLATES.items()
 }
 TARGETED_STALE_PHRASES = {
     "AB-410": (
@@ -269,7 +295,29 @@ def validate_social_follow(errors: list[str]) -> None:
                 errors.append(f"homepage Organization sameAs must contain one {label} profile")
 
 
-def validate_guide_pages(errors: list[str], sitemap: str, llms: str) -> list[Path]:
+def validate_sitemap_lastmod(errors: list[str], sitemap: str) -> None:
+    """Every <url> in sitemap.xml must carry the <lastmod> that
+    Tools/update-sitemap-lastmod.py computes for the page it points to
+    (today's date if the file has uncommitted changes, otherwise its last
+    commit date). That tool owns sitemap.xml's <lastmod> values -- run it,
+    don't hand-edit them."""
+    for block in re.findall(r"<url>.*?</url>", sitemap, re.S):
+        loc_match = re.search(r"<loc>(.*?)</loc>", block)
+        if not loc_match:
+            continue
+        loc = loc_match.group(1)
+        expected = expected_lastmod(loc_to_path(loc))
+        lastmod_match = re.search(r"<lastmod>(.*?)</lastmod>", block)
+        current = lastmod_match.group(1) if lastmod_match else None
+        if current != expected:
+            current_label = current if current is not None else "missing"
+            errors.append(
+                f"sitemap entry for {loc} has lastmod {current_label!r}, expected {expected!r} "
+                f"(run Tools/update-sitemap-lastmod.py)"
+            )
+
+
+def validate_guide_pages(errors: list[str], llms: str) -> list[Path]:
     guide_pages = [ROOT / "guides" / "index.html"]
     guide_pages.extend(ROOT / "guides" / slug / "index.html" for slug in GUIDE_SLUGS)
 
@@ -439,14 +487,6 @@ def validate_guide_pages(errors: list[str], sitemap: str, llms: str) -> list[Pat
 
         if canonical and canonical not in llms:
             errors.append(f"{page.relative_to(ROOT)}: canonical URL is missing from llms.txt")
-
-        sitemap_block = re.search(
-            rf"<url>\s*<loc>{re.escape(expected_canonical)}</loc>.*?</url>",
-            sitemap,
-            re.S,
-        )
-        if not sitemap_block or f"<lastmod>{GUIDE_UPDATED}</lastmod>" not in sitemap_block.group(0):
-            errors.append(f"{page.relative_to(ROOT)}: sitemap entry is missing or stale")
 
         ids = set(re.findall(r'\bid="([^"]+)"', text))
         for href in re.findall(r'href="([^"]+)"', text):
@@ -671,17 +711,9 @@ def main() -> None:
         errors.append("homepage has stale Answer Coach provenance")
 
     sitemap = (ROOT / "sitemap.xml").read_text()
-    for code in COUNTS:
-        block = re.search(
-            rf"<url>\s*<loc>https://azuremastery\.app/exams/{re.escape(code.lower())}/</loc>.*?</url>",
-            sitemap,
-            re.S,
-        )
-        expected_lastmod = SEO_UPDATED_OVERRIDES.get(code, SEO_UPDATED)
-        if not block or f"<lastmod>{expected_lastmod}</lastmod>" not in block.group(0):
-            errors.append(f"sitemap entry missing or stale for {code}")
+    validate_sitemap_lastmod(errors, sitemap)
 
-    guide_pages = validate_guide_pages(errors, sitemap, llms)
+    guide_pages = validate_guide_pages(errors, llms)
     validate_social_follow(errors)
 
     if errors:

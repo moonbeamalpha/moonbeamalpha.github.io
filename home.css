@@ -394,6 +394,19 @@
       outline: 2px solid var(--group-color);
       outline-offset: 2px;
     }
+    /* Mobile chip cloud: keep the first (Azure) group only and hand off to
+       the exam hub instead of stacking every group down the screen. All
+       chips stay in the DOM; hidden ones just aren't rendered under 769px. */
+    .hero-exam-tags__more {
+      display: none;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azure-cyan);
+      text-decoration: none;
+    }
+    .hero-exam-tags__more:hover,
+    .hero-exam-tags__more:focus-visible { text-decoration: underline; }
     .hero-ctas {
       display: flex;
       align-items: center;
@@ -1006,23 +1019,6 @@
       background: linear-gradient(105deg, rgba(80,230,255,0.14), rgba(90,145,255,0.06));
     }
 
-    /* How It Works coaching chip */
-    .how-aura {
-      display: inline-flex; align-items: center; gap: 14px;
-      margin-bottom: 44px; padding: 10px 22px 10px 12px;
-      background: rgba(17,24,39,0.72);
-      border: 1px solid var(--border-accent);
-      border-radius: 999px;
-      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-      text-align: left;
-    }
-    .how-aura-img { width: 60px; height: auto; flex-shrink: 0;
-      filter: drop-shadow(0 8px 14px rgba(0,0,0,0.4)); }
-    .how-aura-line {
-      font-family: 'DM Sans', sans-serif; font-size: 15px; font-style: italic;
-      color: var(--text-secondary); max-width: 430px; margin: 0;
-    }
-
     /* Final CTA celebration */
     .cta-aura { position: relative; display: inline-block; margin-bottom: 8px; }
     .cta-aura-img { display: block; width: clamp(112px, 16vw, 146px); height: auto; margin: 0 auto;
@@ -1050,10 +1046,6 @@
     }
     @media (max-width: 1199px) {
       .hero-aura { display: none; }
-    }
-    @media (max-width: 700px) {
-      .how-aura { flex-direction: column; text-align: center; border-radius: 20px; padding: 16px 20px; }
-      .how-aura-line { text-align: center; }
     }
 
     /* ══════════════════════════════════════════════
@@ -1370,9 +1362,8 @@
     }
 
     /* ══════════════════════════════════════════════
-       HOW EXAM IQ WORKS
+       HOW EXAM IQ WORKS (compact strip, folded into #exam-iq)
        ══════════════════════════════════════════════ */
-    .section-how-it-works { padding: 128px 24px; background: var(--bg-deep); }
     .how-steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -2143,27 +2134,40 @@ html, body { overflow-x: clip; }
     @media (max-width: 768px) {
       .nav-links li.nav-item-hide-mobile { display: none; }
       .hero-exam-group { align-items: center; }
+      .hero-exam-group:nth-of-type(n+2) { display: none; }
+      .hero-exam-tags__more { display: inline-flex; align-items: center; }
     }
-    /* Native, progressively-enhanced reveals. JavaScript adds the pending
-       class only to content that starts below the viewport, so the hero and
-       the LCP text are always eligible to paint immediately. */
-    .reveal-pending {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-      transition-delay: var(--delay, 0s);
+    /* Native, progressively-enhanced reveals. Content is visible by default —
+       nothing here ever sets opacity:0 on text before it enters the viewport.
+       JavaScript adds `reveal-in` only when an element is about to be seen,
+       which plays a one-shot additive animation; without JS, or before the
+       class is added, the content is already fully visible. */
+    @keyframes am-reveal {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: none; }
     }
-    .reveal-pending.reveal-from-left { transform: translateX(-36px); }
-    .reveal-pending.reveal-from-right { transform: translateX(36px); }
-    .reveal-pending.reveal-after-device { transition-delay: 160ms; }
-    .reveal-pending.is-visible { opacity: 1; transform: none; }
+    @keyframes am-reveal-from-left {
+      from { opacity: 0; transform: translateX(-36px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes am-reveal-from-right {
+      from { opacity: 0; transform: translateX(36px); }
+      to { opacity: 1; transform: none; }
+    }
+    .reveal-in {
+      animation: am-reveal 0.55s ease both;
+      animation-delay: var(--delay, 0s);
+    }
+    .reveal-in.reveal-from-left { animation-name: am-reveal-from-left; }
+    .reveal-in.reveal-from-right { animation-name: am-reveal-from-right; }
+    .reveal-in.reveal-after-device { animation-delay: 160ms; }
 
     /* ══════════════════════════════════════════════
        ACCESSIBILITY — Reduced Motion
        ══════════════════════════════════════════════ */
     @media (prefers-reduced-motion: reduce) {
       .hero-phone-enter { animation: none !important; translate: none !important; }
-      .reveal-pending { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .reveal-in { animation: none !important; opacity: 1 !important; transform: none !important; }
       .screenshots-strip { transform: none !important; }
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
@@ -2224,7 +2228,6 @@ html, body { overflow-x: clip; }
          hidden nav links doesn't reserve phantom width and shove the CTA off-screen. */
       .nav-links li:has(.hide-mobile) { display: none; }
       .section-showcase { padding: 80px 24px; }
-      .section-how-it-works { padding: 80px 24px; }
       .how-steps { grid-template-columns: 1fr; gap: 48px; max-width: 400px; }
       .how-step:not(:last-child)::after { display: none; }
       .section-features { padding: 80px 24px; }

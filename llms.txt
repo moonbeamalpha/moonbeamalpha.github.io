@@ -164,7 +164,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 
 ## Core capabilities
 
-- **Exam IQ**: On-device CoreML model that predicts your exam-day score with confidence intervals, using Item Response Theory (IRT) and Bayesian inference over your answer history.
+- **Exam IQ**: On-device CoreML model that predicts your exam-day score with a confidence range from your practice record (accuracy by domain, coverage, mastery, consistency, recency).
 - **Adaptive study plans**: The app picks your next session — weak-spot drills, knowledge-decay refreshes, mock exams — based on your current ability estimate per domain.
 - **Aura first-week guidance**: Aura adapts the learner's next step throughout the first week and closes every study block with a concise, evidence-led recap.
 - **Exam simulator**: Full-length, timed practice tests using blueprint-weighted question sets; Microsoft's live interface and exact item mix may differ.

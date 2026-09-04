@@ -66,6 +66,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
@@ -73,6 +75,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // QA browsers opt themselves out of reporting once via ?am_internal=1. The flag is a
+    // self-set localStorage marker on this origin only; GA4's Internal Traffic filter
+    // drops events that carry traffic_type=internal.
+    try {
+      if (/[?&]am_internal=1(&|$)/.test(location.search)) localStorage.setItem('am_internal', '1');
+      if (localStorage.getItem('am_internal') === '1') gtag('set', { traffic_type: 'internal' });
+    } catch (e) {}
     gtag('config', 'G-YTN7LFS04Y');
   </script>
 
@@ -772,6 +781,7 @@
       <img src="/images/app-icon.webp" alt="" width="28" height="28">
       <span>Azure Mastery</span>
     </a>
+    <span class="site-nav__context">{{CERT_CODE}}</span>
     <button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
       <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -817,7 +827,7 @@
             <span class="am-cert-hero__eyebrow-code">{{CERT_CODE}}</span>
           </p>
           <p id="am-cert-hero-lead" class="am-cert-hero__lead">
-            Predict your score.
+            <span class="am-cert-hero__lead-code">{{CERT_CODE}}:</span> Predict your score.
             <span class="am-cert-hero__lead-accent">Pass with proof.</span>
           </p>
           <p class="am-cert-hero__sub">
@@ -1005,6 +1015,10 @@
     </section>
 
     <!-- Suggested study plan -->
+  <aside class="exam-inline-cta" aria-label="Download Azure Mastery">
+    <p class="exam-inline-cta__text"><strong>Ready to practise {{CERT_CODE}}?</strong> Every question comes with a full explanation, and the first sessions are free.</p>
+    <a class="exam-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569?ct=exam-{{CERT_CODE_LOWER}}-mid1" rel="noopener noreferrer">Download free</a>
+  </aside>
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">2-week revision plan</p>
       <h2 class="display-small section-title">Suggested {{CERT_CODE}} study plan</h2>
@@ -1033,6 +1047,10 @@
     </section>
 
     <!-- FAQs -->
+  <aside class="exam-inline-cta" aria-label="Download Azure Mastery">
+    <p class="exam-inline-cta__text"><strong>Ready to practise {{CERT_CODE}}?</strong> Every question comes with a full explanation, and the first sessions are free.</p>
+    <a class="exam-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569?ct=exam-{{CERT_CODE_LOWER}}-mid2" rel="noopener noreferrer">Download free</a>
+  </aside>
     <section id="faqs" class="container">
       <p class="label-eyebrow section-eyebrow">Frequently asked</p>
       <h2 class="display-small section-title">{{CERT_CODE}} FAQs</h2>
@@ -1184,6 +1202,11 @@
   </footer>
 
 
+  <!-- Sticky mobile download bar — the hero CTA scrolls away fast on a phone -->
+  <div class="mobile-cta-bar" id="mobile-cta-bar">
+    <span class="mobile-cta-bar__label">{{CERT_CODE}} practice — free on the App&nbsp;Store</span>
+    <a class="mobile-cta-bar__btn" href="https://apps.apple.com/app/apple-store/id6760594569?ct=exam-{{CERT_CODE_LOWER}}-sticky" rel="noopener noreferrer">Download</a>
+  </div>
   <script src="/exams/exam.js" defer></script>
   <script src="/theme.js" defer></script>
 </body>

@@ -71,12 +71,26 @@ per-page numbers must share that one basis or they stop summing.
 **Tool-owned — never hand-edit:** aggregate totals everywhere; per-exam counts;
 `roadmap-category__count` pillar chips; `llms.txt` `### Group (N)` headings and
 `## Exams covered (N)`; the `Retired &amp; retiring (N)` disclosure summaries;
-the prose exam-code enumerations in meta/JSON-LD; the SEO `h1`'s
-"and N More Microsoft Certifications".
+the exam-code lists inside the two homepage FAQ answers (visible copy and
+FAQPage JSON-LD); the homepage ItemList `numberOfItems` (entity list =
+sit-able + retired reference pages).
 
 **Hand-edited:** the social-image exam pills (each is hand-coloured and grouped,
 so the tool only warns on drift); the `exam-link--retired` class and grouping on
-homepage links; `exams/index.html` hub cards; `sitemap.xml`.
+homepage links; `exams/index.html` hub cards; `sitemap.xml`'s structure
+(`<loc>`, `<priority>`, `<changefreq>`, entry order).
+
+`sitemap.xml`'s `<lastmod>` values are the one exception: they are tool-owned,
+written by `Tools/update-sitemap-lastmod.py` from git history (today's date for
+an uncommitted change, otherwise the file's last commit date). Run it before
+committing any page change so the sitemap keeps saying what actually changed
+and when — a `<lastmod>` search engines don't trust is worse than none.
+`Tools/validate-marketing-seo.py` checks every sitemap entry against the same
+computation.
+
+Merge page-touching PRs with a merge commit. After a squash or rebase merge,
+re-run `python3 Tools/update-sitemap-lastmod.py` on `main` and commit —
+`--check` fails until you do.
 
 `warn_retired_markup()` reports hand-edited markup that disagrees with the
 catalogue and fails `--check`. It is what caught AZ-204 sitting in the active
@@ -89,9 +103,12 @@ non-current exam has not necessarily retired yet.
 | Tool | Owns |
 |---|---|
 | `Tools/sync-marketing-counts.py` | every count on the site |
-| `Tools/optimise-marketing-seo.py` | exam-page metadata, question-type previews, sitemap |
-| `Tools/validate-marketing-seo.py` | the SEO contract; run after either of the above |
+| `Tools/optimise-marketing-seo.py` | exam-page metadata, question-type previews |
+| `Tools/update-sitemap-lastmod.py` | `sitemap.xml`'s `<lastmod>` values, from git history |
+| `Tools/validate-marketing-seo.py` | the SEO contract; run after any of the above |
 | `Tools/generate-llms-full.py` | `llms-full.txt`, derived from `llms.txt` — **not** run by the sync, so run it after |
+| `Tools/add-exam-page-cta.py` | the exam-page conversion surfaces (sticky bar, mid-page CTAs, nav badge); run after adding any page; CI runs `--check` |
+| `Tools/add-ga-internal-flag.py` | the GA4 internal-traffic opt-out flag on every page's gtag loader; run after adding any page; CI runs `--check` |
 
 `validate-marketing-seo.py` asserts its hand-kept `RETIRED` + `RETIRING` dicts
 union to the app's non-current set, and exits with instructions when they drift.

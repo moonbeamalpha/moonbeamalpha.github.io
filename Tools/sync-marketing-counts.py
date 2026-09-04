@@ -64,6 +64,7 @@ from __future__ import annotations
 
 import argparse
 import functools
+import html
 import http.server
 import json
 import os
@@ -88,6 +89,27 @@ OG_PNG = os.path.join(ROOT, "images", "og-image.png")
 # Codes shown as styled exam pills in each image (e.g. "AZ-104"). Hand-coloured,
 # so we only warn on drift rather than regenerate them.
 PILL_RE = re.compile(r'class="(?:exam-tag exam-tag--|pill pill-)[a-z]+">([A-Z]{2}-\d{3})<')
+
+# Per-exam OG cards (Task A8): one template, filled per code and rendered to a
+# throwaway temp HTML under apps/AzureMastery/ so its "../../images/" relative
+# asset paths keep resolving, then screenshotted like the two shared images.
+# Unlike those two (which stay PNG), per-exam cards are converted to JPEG after
+# render -- see convert_to_jpeg() -- because a mostly-text/gradient card with no
+# embedded photos compresses far better as quality-82 JPEG than as a palette PNG.
+OG_EXAM_HTML = os.path.join(ROOT, "apps", "AzureMastery", "og-exam.html")
+OG_EXAM_TMP = os.path.join(ROOT, "apps", "AzureMastery", "_og-exam-render-tmp.html")
+OG_DIR = os.path.join(ROOT, "images", "og")
+# The pill text as it reads once {{COUNT}} has been filled in; swapped for the
+# retired variant by exact match rather than re-deriving it, so a change to the
+# template's pill copy can't silently desync the two.
+PILL_COUNT_RE = re.compile(r'<div class="pill">\d+ practice questions · free to start</div>')
+PILL_RETIRED = '<div class="pill pill--retired">Retired exam · successor inside</div>'
+# The per-page accent custom properties every exams/<code>/index.html declares
+# in a one-line <style> (e.g. `--amh-accent: #50E6FF; --amh-accent-2: #2B88D8;`).
+# Falls back to the app's default cyan/blue when a page has none.
+ACCENT_RE = re.compile(
+    r'--amh-accent:\s*(#[0-9A-Fa-f]{6});\s*--amh-accent-2:\s*(#[0-9A-Fa-f]{6})')
+DEFAULT_ACCENT = ("#50E6FF", "#2B88D8")
 
 DEFAULT_APP_REPO = os.environ.get(
     "AZURE_MASTERY_APP_REPO",
@@ -127,6 +149,19 @@ def code_to_dir(code: str) -> str:
     return code.lower()
 
 
+def exam_accent(code: str) -> tuple[str, str]:
+    """Read (--amh-accent, --amh-accent-2) from the exam's own page so its OG
+    card matches the page's colour, falling back to the app's default cyan/blue
+    when the page is missing or carries no accent (should not happen -- every
+    shipped exams/<code>/index.html declares one)."""
+    page = os.path.join(EXAMS_DIR, code_to_dir(code), "index.html")
+    if os.path.exists(page):
+        m = ACCENT_RE.search(open(page).read())
+        if m:
+            return m.group(1), m.group(2)
+    return DEFAULT_ACCENT
+
+
 # ── data file ─────────────────────────────────────────────────────────────
 
 def refresh_from_app(app_repo: str) -> dict:
@@ -140,12 +175,15 @@ def refresh_from_app(app_repo: str) -> dict:
     # examQuestionCount is the blueprint-classified, exam-scoped count the app
     # advertises. It is 0 for a non-current exam; those pages fall back to the
     # full bank size so a retired page still states what it actually contains.
-    exams, banks, retirement, retired = {}, {}, {}, []
+    # `name` is snapshotted too (Task A8) so the per-exam OG card render loop
+    # and CI never need their own app-repo checkout to know an exam's title.
+    exams, banks, retirement, retired, names = {}, {}, {}, [], {}
     for entry in entries:
         code = entry["code"]
         scoped = entry.get("examQuestionCount") or 0
         banks[code] = entry["questionCount"]
         exams[code] = scoped or entry["questionCount"]
+        names[code] = entry["name"]
         if not scoped:
             retired.append(code)
         date = (entry.get("lifecycle") or {}).get("retirementDate")
@@ -177,7 +215,7 @@ def refresh_from_app(app_repo: str) -> dict:
 
     data = {"exams": exams, "bank_totals": banks, "retired": sorted(retired),
             "retirement_dates": retirement, "totals": totals,
-            "cert_path_count": cert_paths}
+            "cert_path_count": cert_paths, "names": names}
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w") as fh:
         json.dump(data, fh, indent=2, sort_keys=True)
@@ -285,7 +323,7 @@ def patch_related_cards(text: str, counts: dict) -> tuple[str, int]:
 
 
 def homepage_edits(total_label: str, metric_total: str, exam_count: int,
-                   cert_paths: int, retired_count: int):
+                   cert_paths: int, retired_count: int, catalogue_count: int):
     """Anchored aggregate edits for index.html. Each pattern is keyed off stable
     surrounding text so per-pillar roadmap counts ('5 exams') are never touched."""
     ec = str(exam_count)
@@ -313,12 +351,19 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         (r'\b\d+(\s+certification\s+paths)', cp + r'\1'),
         (r'\b\d+(\s+certification\s+routes)', cp + r'\1'),
         (r'\b\d+(\s+guided\s+certification\s+paths)', cp + r'\1'),
-        # ── headline word-number "Twenty-six certifications." -> exam count word ──
-        (r'(headline-accent">)[A-Za-z-]+(\s+certifications\.)',
-         r'\g<1>' + number_word(exam_count) + r'\2'),
         # ── "Retired & retiring (N)" disclosure summaries (hero + footer) ──
         (r'(exam-retired-disclosure__summary">Retired &amp; retiring \()\d+(\))',
          r'\g<1>' + str(retired_count) + r'\2'),
+        # ── JSON-LD ItemList entity count. This is deliberately NOT exam_count:
+        # entity list = sit-able + retired reference pages, not the advertised
+        # exam count — the ItemList enumerates every /exams/<code>/ page that
+        # exists, current or retired, so search engines can still find retired
+        # exam reference pages. Anchored on the exams ItemList's own @id
+        # (bounded, non-greedy span to "numberOfItems") rather than a bare
+        # "numberOfItems" match, so a second ItemList elsewhere on the page
+        # could never have its count silently overwritten by this one's. ──
+        (r'("@id":\s*"https://azuremastery\.app/#exam-list"[\s\S]{0,300}?"numberOfItems":\s*)\d+',
+         r'\g<1>' + str(catalogue_count)),
     ]
 
 
@@ -391,17 +436,6 @@ def patch_exam_code_lists(text: str, retired: set):
     return re.subn(r'[A-Z]{2}-\d{3}(?:(?:,\s+|,?\s+and\s+)[A-Z]{2}-\d{3}){2,}', repl, text)
 
 
-def patch_more_certifications(text: str, exam_count: int, retired: set):
-    """The SEO h1 names a handful of exams then says "and <n> More Microsoft
-    Certifications" — n has to be the sit-able total minus the ones already named."""
-    def repl(m):
-        named = {c for c in re.findall(r'[A-Z]{2}-\d{3}', m.group(1))} - retired
-        return f"{m.group(1)}and {exam_count - len(named)} More"
-
-    return re.subn(r'((?:[A-Z]{2}-\d{3},\s+)+)and \d+ More(?= Microsoft Certifications)',
-                   repl, text)
-
-
 def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
     """Report exam links whose retired treatment disagrees with the catalogue.
 
@@ -451,6 +485,42 @@ def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
     for line in problems:
         print(f"  RETIRED   {line}")
     p.problems += len(problems)
+
+
+def warn_itemlist_count(catalogue_count: int, data: dict, counts: dict) -> None:
+    """Report when the homepage JSON-LD ItemList's ListItem entries drift from
+    catalogue_count, and print a positive line when they match. The ItemList
+    deliberately enumerates every exam page that exists — entity list =
+    sit-able + retired reference pages, not the advertised exam count — so
+    the entry-count check only warns; homepage_edits() is what keeps
+    numberOfItems itself in sync.
+
+    Also checks data["names"] (the snapshot render_exam_cards() reads an
+    exam's display name from) against the catalogue: a code missing from it
+    would otherwise make the per-exam OG card render silently fall back to
+    the bare code as the name instead of the exam's actual title."""
+    names = data.get("names") or {}
+    missing_names = sorted(code for code in counts if code not in names)
+    if missing_names:
+        plural = "y" if len(missing_names) == 1 else "ies"
+        print(f'  warning: data["names"] is missing an entr{plural} for '
+              f"{', '.join(missing_names)} — the per-exam OG card render "
+              f"would fall back to the code as the name.")
+
+    if not os.path.exists(INDEX_HTML):
+        return
+    text = open(INDEX_HTML).read()
+    m = re.search(r'"@type":\s*"ItemList".*?</script>', text, flags=re.S)
+    if not m:
+        print("  warning: homepage has no JSON-LD ItemList block to check.")
+        return
+    n = m.group(0).count('"@type": "ListItem"')
+    if n != catalogue_count:
+        print(f"  warning: homepage ItemList has {n} ListItem entries, but the "
+              f"catalogue has {catalogue_count} exams — re-run with --refresh "
+              f"or check index.html.")
+    else:
+        print(f"  itemlist ok  {n} entries")
 
 
 def llms_edits(counts: dict, total_label: str, exam_count: int):
@@ -576,6 +646,102 @@ def render_png(chrome: str, port: int, html_path: str, png_path: str) -> bool:
     return True
 
 
+def optimise_png(path: str) -> None:
+    """Quantise a freshly-rendered social PNG to a 256-colour palette in place.
+    Chrome's screenshots are full 24-bit RGB/RGBA PNGs; these are mostly a flat
+    gradient plus a few embedded phone screenshots, so a 256-colour palette
+    loses nothing visible while cutting the file to a third of its size or
+    better. No new dependency: Pillow is already a soft requirement of the
+    render path, guarded here exactly like it is everywhere else -- if it is
+    missing, warn and leave the (larger) true-colour PNG in place rather than
+    fail the run."""
+    try:
+        from PIL import Image
+    except ImportError:
+        print(f"  warning: Pillow not installed, cannot optimise "
+              f"{os.path.relpath(path, ROOT)} (pip install pillow)")
+        return
+    before = os.path.getsize(path)
+    im = Image.open(path)
+    if im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info):
+        # MEDIANCUT/MAXCOVERAGE cannot quantize RGBA; FASTOCTREE is the only
+        # alpha-safe method Pillow ships without libimagequant (not installed
+        # on this machine -- see Tooling facts).
+        quantized = im.convert("RGBA").quantize(colors=256, method=Image.Quantize.FASTOCTREE)
+    else:
+        quantized = im.convert("RGB").quantize(
+            colors=256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.FLOYDSTEINBERG)
+    quantized.save(path, optimize=True)
+    after = os.path.getsize(path)
+    print(f"  optimised   {os.path.relpath(path, ROOT)}: {before:,} -> {after:,} bytes "
+          f"({100 * (1 - after / before):.0f}% smaller)")
+
+
+def convert_to_jpeg(png_path: str, jpg_path: str) -> None:
+    """Convert a rendered per-exam OG card from PNG to JPEG and remove the PNG.
+    Per-exam cards are JPEG, not PNG, unlike the two shared images: a card is
+    almost entirely flat gradient plus text with no embedded photos, so it
+    compresses far smaller as quality-82 JPEG than as a 256-colour PNG palette
+    -- comfortably inside the ~150 KB per-card target. Same Pillow guard as
+    optimise_png(); if Pillow is missing, the PNG is left behind unconverted
+    rather than the run failing."""
+    try:
+        from PIL import Image
+    except ImportError:
+        print(f"  warning: Pillow not installed, cannot convert "
+              f"{os.path.relpath(png_path, ROOT)} to JPEG")
+        return
+    im = Image.open(png_path).convert("RGB")
+    im.save(jpg_path, "JPEG", quality=82, optimize=True, progressive=True)
+    size = os.path.getsize(jpg_path)
+    os.remove(png_path)
+    print(f"  rendered    {os.path.relpath(jpg_path, ROOT)} ({size:,} bytes)")
+
+
+def render_exam_cards(chrome: str, port: int, data: dict, retired: set) -> None:
+    """Render every exam's OG card: fill apps/AzureMastery/og-exam.html's
+    {{CODE}}/{{NAME}}/{{COUNT}} placeholders and its accent custom properties,
+    screenshot it via the same render_png() the two shared images use, then
+    convert to JPEG. The count always comes from data["exams"][code] -- never
+    hand-write it -- and the exam name from the names snapshot refresh_from_app()
+    wrote into data/exam-counts.json, so this loop needs no app-repo checkout."""
+    if not os.path.exists(OG_EXAM_HTML):
+        print("  render SKIP: apps/AzureMastery/og-exam.html missing")
+        return
+    names = data.get("names") or {}
+    counts = {k.upper(): v for k, v in data["exams"].items()}
+    template = open(OG_EXAM_HTML).read()
+    os.makedirs(OG_DIR, exist_ok=True)
+    try:
+        for code in sorted(counts):
+            count = counts[code]
+            name = names.get(code, code)
+            accent, accent2 = exam_accent(code)
+            page_html = (
+                template
+                .replace("{{CODE}}", html.escape(code, quote=False))
+                .replace("{{NAME}}", html.escape(name, quote=False))
+                .replace("{{COUNT}}", str(count))
+                .replace("{{ACCENT}}", accent)
+                .replace("{{ACCENT2}}", accent2)
+            )
+            if code in retired:
+                page_html, k = PILL_COUNT_RE.subn(PILL_RETIRED, page_html)
+                if not k:
+                    print(f"  warning: {code} retired-pill swap matched 0 times "
+                          f"-- og-exam.html's pill markup may have drifted")
+            with open(OG_EXAM_TMP, "w") as fh:
+                fh.write(page_html)
+            dir_ = code_to_dir(code)
+            png_path = os.path.join(OG_DIR, f"{dir_}.png")
+            jpg_path = os.path.join(OG_DIR, f"{dir_}.jpg")
+            if render_png(chrome, port, OG_EXAM_TMP, png_path):
+                convert_to_jpeg(png_path, jpg_path)
+    finally:
+        if os.path.exists(OG_EXAM_TMP):
+            os.remove(OG_EXAM_TMP)
+
+
 def _serve_root() -> tuple[http.server.ThreadingHTTPServer, int]:
     """Serve ROOT on an ephemeral localhost port in a daemon thread."""
     class Quiet(http.server.SimpleHTTPRequestHandler):
@@ -588,7 +754,8 @@ def _serve_root() -> tuple[http.server.ThreadingHTTPServer, int]:
 
 
 def sync_social_images(p: "Patcher", counts: dict, total_label: str,
-                       exam_count: int, cert_paths: int, render: bool) -> None:
+                       exam_count: int, cert_paths: int, render: bool,
+                       data: dict, retired: set) -> None:
     print("social images:")
     p.apply(BANNER_HTML, banner_edits(total_label, exam_count))
     p.apply(OG_HTML, og_edits(total_label, exam_count, cert_paths))
@@ -604,8 +771,12 @@ def sync_social_images(p: "Patcher", counts: dict, total_label: str,
         return
     httpd, port = _serve_root()
     try:
-        render_png(chrome, port, BANNER_HTML, BANNER_PNG)
-        render_png(chrome, port, OG_HTML, OG_PNG)
+        if render_png(chrome, port, BANNER_HTML, BANNER_PNG):
+            optimise_png(BANNER_PNG)
+        if render_png(chrome, port, OG_HTML, OG_PNG):
+            optimise_png(OG_PNG)
+        print("exam OG cards:")
+        render_exam_cards(chrome, port, data, retired)
     finally:
         httpd.shutdown()
 
@@ -632,6 +803,10 @@ def main() -> None:
     counts = {k.upper(): v for k, v in data["exams"].items()}
     retired = non_current_exams(data)
     active = {code: n for code, n in counts.items() if code not in retired}
+    # catalogue_count = every exam page that exists (sit-able + retired
+    # reference pages) — the basis for the homepage ItemList's numberOfItems,
+    # which is deliberately not exam_count.
+    catalogue_count = len(counts)
 
     # Aggregates are read verbatim from the app's generated catalog-totals.json
     # rather than summed here — that file is what the App Store listing quotes,
@@ -682,9 +857,9 @@ def main() -> None:
 
         print("homepage:")
         p.apply(INDEX_HTML,
-                homepage_edits(total_label, metric_total, exam_count, cert_paths, len(retired)),
+                homepage_edits(total_label, metric_total, exam_count, cert_paths,
+                               len(retired), catalogue_count),
                 transforms=[lambda t: patch_exam_code_lists(t, retired),
-                            lambda t: patch_more_certifications(t, exam_count, retired),
                             lambda t: patch_roadmap_category_counts(t, retired)])
 
         print("llms.txt:")
@@ -692,9 +867,10 @@ def main() -> None:
                 transforms=[lambda t: patch_llms_section_counts(t, retired)])
 
         warn_retired_markup(p, retired, set(counts))
+        warn_itemlist_count(catalogue_count, data, counts)
 
     sync_social_images(p, active, total_label, exam_count, cert_paths,
-                       render=not args.no_render)
+                       render=not args.no_render, data=data, retired=retired)
 
     verb = "would change" if args.check else "changed"
     print(f"\n{p.changed_files} file(s) {verb}.")

@@ -8,11 +8,18 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // QA browsers opt themselves out of reporting once via ?am_internal=1. The flag is a
+    // self-set localStorage marker on this origin only; GA4's Internal Traffic filter
+    // drops events that carry traffic_type=internal.
+    try {
+      if (/[?&]am_internal=1(&|$)/.test(location.search)) localStorage.setItem('am_internal', '1');
+      if (localStorage.getItem('am_internal') === '1') gtag('set', { traffic_type: 'internal' });
+    } catch (e) {}
     gtag('config', 'G-YTN7LFS04Y');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azure Mastery — AI-Powered Microsoft Certification Exam Prep (Azure, AI, Data, Security, GitHub) | 30 Exams</title>
-  <meta name="description" content="Pass your Microsoft certification with confidence. Azure Mastery combines on-device Exam IQ predictions, adaptive study plans, Aura-guided recaps, and private Answer Coach lessons. 12,200+ questions across 30 exams spanning Azure, AI, Data, Security, and GitHub: AZ-104, AZ-900, AZ-305, AZ-400, AZ-700, AI-103, AI-200, AI-300, AI-500, AI-901, AB-100, AB-410, AB-620, AB-650, AB-731, AB-900, DP-300, DP-700, DP-750, DP-800, DP-900, PL-300, PL-900, SC-100, SC-200, SC-300, SC-500, SC-900, GH-900, GH-300.">
+  <meta name="description" content="Exam IQ predicts your Microsoft certification score on-device, builds an adaptive study plan, and coaches every miss. 12,200+ questions across 30 exams spanning Azure, AI, Data, Security, Power Platform, and GitHub.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="author" content="Moonbeam Alpha Ltd">
   <meta name="application-name" content="Azure Mastery">
@@ -21,6 +28,7 @@
   <meta name="color-scheme" content="dark">
   <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F5F7FA';}}catch(e){}})()</script>
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Azure Mastery">
   <link rel="canonical" href="https://azuremastery.app/">
@@ -45,7 +53,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Azure Mastery — AI-powered Microsoft certification exam prep app with 12,200+ questions across 30 Microsoft certification exams including AZ-104, AZ-900, AZ-305, AZ-400, AZ-700, AI-103, AI-200, AI-300, AI-500, AI-901, AB-100, AB-410, AB-620, AB-650, AB-731, AB-900, DP-300, DP-700, DP-750, DP-800, DP-900, PL-300, PL-900, SC-100, SC-200, SC-300, SC-500, GH-900, and GH-300">
+  <meta property="og:image:alt" content="Azure Mastery app on iPhone showing Exam IQ score prediction, an adaptive study plan, and Answer Coach — 12,200+ questions across 30 Microsoft certification exams.">
   <meta property="og:url" content="https://azuremastery.app/">
 
   <!-- Twitter Card -->
@@ -66,7 +74,7 @@
     "operatingSystem": "iOS",
     "applicationCategory": "EducationApplication",
     "applicationSubCategory": "Exam Preparation",
-    "description": "AI-powered Microsoft certification exam prep with adaptive study plans, ML score prediction, and blueprint-aligned exam-style rehearsal. 12,200+ questions across 30 exams spanning Azure, AI, Data, Security, and GitHub: AZ-104, AZ-900, AZ-305, AZ-400, AZ-700, AI-103, AI-200, AI-300, AI-500, AI-901, AB-100, AB-410, AB-620, AB-650, AB-731, AB-900, DP-300, DP-700, DP-750, DP-800, DP-900, PL-300, PL-900, SC-100, SC-200, SC-300, SC-500, SC-900, GH-900, GH-300.",
+    "description": "Exam IQ predicts your Microsoft certification score on-device, builds an adaptive study plan, and coaches every miss. 12,200+ questions across 30 exams spanning Azure, AI, Data, Security, Power Platform, and GitHub.",
     "image": "https://azuremastery.app/images/azure-mastery.png",
     "screenshot": [
       "https://azuremastery.app/images/cap-exam-iq.webp",
@@ -91,7 +99,7 @@
         "https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg"
       ]
     },
-    "keywords": "Azure certification, Microsoft certification, Microsoft Certified, AI certification, AZ-104, AZ-900, AZ-305, AZ-400, AZ-700, AI-103, AI-200, AI-300, AI-500, AI-901, AB-100, AB-410, AB-620, AB-650, AB-731, AB-900, DP-300, DP-700, DP-750, DP-800, DP-900, PL-300, PL-900, SC-100, SC-200, SC-300, SC-500, SC-900, Microsoft Azure, exam prep, practice questions, Azure Administrator, Azure Database Administrator, SQL AI Developer, Azure Fundamentals, Azure Solutions Architect, Azure Developer, Azure DevOps Engineer, Azure Security Engineer, Azure Network Engineer, Azure AI Engineer, Azure AI App Agent Developer, Azure AI Cloud Developer, ML Operations Engineer, Azure Data Scientist, Azure Data Fundamentals, Azure AI Fundamentals, Cybersecurity Architect, Security Operations Analyst, Identity Access Administrator, Security Compliance Identity Fundamentals, AI Agent Builder Associate, AI Services Administrator Associate, Multi-Agent AI Solutions Expert, Intelligent Applications Builder Associate, AI Transformation Leader, Agentic AI Business Solutions Architect, Microsoft 365 Copilot and Agent Administration Fundamentals, Developing AI-Enabled Database Solutions, Power BI Data Analyst Associate, Power Platform Fundamentals, GitHub Foundations",
+    "keywords": "Azure certification, Microsoft certification, Microsoft Certified, AI certification, Microsoft Azure, exam prep, practice questions, Azure Administrator, Azure Database Administrator, SQL AI Developer, Azure Fundamentals, Azure Solutions Architect, Azure Developer, Azure DevOps Engineer, Azure Security Engineer, Azure Network Engineer, Azure AI Engineer, Azure AI App Agent Developer, Azure AI Cloud Developer, ML Operations Engineer, Azure Data Scientist, Azure Data Fundamentals, Azure AI Fundamentals, Cybersecurity Architect, Security Operations Analyst, Identity Access Administrator, Security Compliance Identity Fundamentals, AI Agent Builder Associate, AI Services Administrator Associate, Multi-Agent AI Solutions Expert, Intelligent Applications Builder Associate, AI Transformation Leader, Agentic AI Business Solutions Architect, Microsoft 365 Copilot and Agent Administration Fundamentals, Developing AI-Enabled Database Solutions, Power BI Data Analyst Associate, Power Platform Fundamentals, GitHub Foundations",
     "featureList": [
       "12,200+ practice questions across 30 Microsoft exams",
       "AI-powered Exam IQ score prediction",
@@ -133,7 +141,7 @@
         "name": "How does the Exam IQ score work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Exam IQ is an on-device CoreML model that predicts your likely exam-day score with confidence intervals. It uses Item Response Theory to score each answer by question difficulty, discrimination, and guessing, then updates your ability estimate per exam domain using Bayesian inference. Predictions are calibrated against Microsoft's published pass thresholds rather than raw percentage correct."
+          "text": "Exam IQ is an on-device CoreML model that predicts your likely exam-day score with a confidence range. It learns from your practice record — accuracy by domain, question coverage, mastery, consistency and recency — and the range tightens as you answer more. Nothing leaves your device."
         }
       },
       {
@@ -206,7 +214,7 @@
         "@type": "HowToStep",
         "position": 2,
         "name": "CoreML analyses on-device",
-        "text": "Item Response Theory scores each answer by difficulty, discrimination, and guessing. Bayesian inference updates your ability estimate in real time.",
+        "text": "A CoreML model weighs your answers by domain, coverage, mastery and consistency, and updates the prediction after every question.",
         "url": "https://azuremastery.app/#exam-iq"
       },
       {
@@ -503,9 +511,6 @@
   <noscript><link rel="stylesheet" href="/social-follow.css"></noscript>
   <noscript><style>
     [data-theme-bg-dark="/images/cap-exam-iq.webp"] { background-image: url('/images/cap-exam-iq.webp'); }
-    [data-theme-bg-dark="/images/cap-question-types.webp"] { background-image: url('/images/cap-question-types.webp'); }
-    [data-theme-bg-dark="/images/cap-knowledge-decay.webp"] { background-image: url('/images/cap-knowledge-decay.webp'); }
-    [data-theme-bg-dark="/images/cap-goals-profile.webp"] { background-image: url('/images/cap-goals-profile.webp'); }
     [data-theme-bg-dark="/images/cap-macos.webp"] { background-image: url('/images/cap-macos.webp'); }
     [data-theme-bg-dark="/images/cap-ipad-today.webp"] { background-image: url('/images/cap-ipad-today.webp'); }
     [data-theme-bg-dark="/images/cap-ipad-insights.webp"] { background-image: url('/images/cap-ipad-insights.webp'); }
@@ -561,7 +566,7 @@
           </span>
         </div>
         <h1 class="sr-only">
-          Azure Mastery — AI-Powered Exam Prep for AZ-104, AZ-900, AI-103, AZ-305, AZ-400, and 25 More Microsoft Certifications on iOS
+          Azure Mastery — Microsoft certification exam prep for iPhone, iPad, and Apple Watch
         </h1>
         <h2 class="display-large hero-headline">
           Know When<br>
@@ -656,6 +661,7 @@
               </ul>
             </details>
           </div>
+          <a class="hero-exam-tags__more" href="/exams/">Browse every exam →</a>
 </nav>
       </div>
 
@@ -726,7 +732,7 @@
           <h3 class="heading-medium" style="margin:16px 0 8px;">Exam IQ Score</h3>
           <p class="body-medium" style="color:var(--text-secondary);">
             AI-powered readiness score that predicts your exam result before test day.
-            Built on Item Response Theory, running entirely on-device.
+            Learns from your practice record and runs entirely on-device.
           </p>
           <div style="margin-top:20px;">
             <span class="badge-exam-iq badge-exam-iq--large">
@@ -1037,6 +1043,50 @@
     </p>
   </section>
 
+  <!-- FAQ — renders the FAQPage structured data visibly (schema policy:
+       marked-up content must be visible to users). Also the only place the
+       pricing model is stated in plain sight. -->
+  <section class="section-faq" id="faq" aria-labelledby="faq-heading">
+    <div class="features-container">
+      <p class="label-eyebrow fade-up" style="text-align:center;">Frequently asked</p>
+      <h2 id="faq-heading" class="display-medium fade-up" style="text-align:center;margin-bottom:32px;">Questions, answered</h2>
+      <div class="faqs fade-up">
+        <details class="faq">
+          <summary>Is Azure Mastery free?</summary>
+          <div class="faq__answer"><p>Azure Mastery is free to download and includes a starter set of practice questions for every supported exam. Full per-exam question banks are available as one-time in-app purchases. There is no subscription required to use core study features, and no account is required.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which Microsoft certifications does Azure Mastery cover?</summary>
+          <div class="faq__answer"><p>Azure Mastery covers 30 Microsoft certification exams: AZ-900, AZ-104, AZ-305, AZ-400, AZ-700, AI-901, AI-103, AI-200, AI-300, AI-500, AB-100, AB-410, AB-620, AB-650, AB-731, AB-900, DP-900, DP-300, DP-700, DP-750, DP-800, SC-900, SC-100, SC-200, SC-300, SC-500, PL-300, PL-900, GH-900, and GH-300. The app spans Azure infrastructure, AI engineering, data, security and compliance, Microsoft 365 Copilot administration, AI transformation leadership, SQL AI development, agentic AI architecture, multi-agent AI engineering, and Power BI roles.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How does the Exam IQ score work?</summary>
+          <div class="faq__answer"><p>Exam IQ is an on-device CoreML model that predicts your likely exam-day score with a confidence range. It learns from your practice record — accuracy by domain, question coverage, mastery, consistency and recency — and the range tightens as you answer more. Nothing leaves your device.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does Azure Mastery work offline?</summary>
+          <div class="faq__answer"><p>Yes. Core study — including the question bank, Exam IQ score prediction, adaptive study plans, and authored Answer Coach guidance — works without a connection. Optional model rewriting happens on-device, and optional sync uses the learner's private iCloud account. Azure Mastery has no study-data server or behavioural telemetry.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does Azure Mastery support iPad and Apple Watch?</summary>
+          <div class="faq__answer"><p>Yes. Azure Mastery is a native SwiftUI app for iPhone and iPad, with full Stage Manager and large-screen layouts on iPad. An Apple Watch companion shows your daily streak and XP at a glance. Live Activities surface the active study session timer on the lock screen and Dynamic Island.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How is Azure Mastery different from other Microsoft exam prep apps?</summary>
+          <div class="faq__answer"><p>Azure Mastery is designed to tell you when you are ready to pass, not just to drill questions. It calibrates predicted scores against Microsoft's real pass thresholds, estimates ability per exam domain so you can see exactly which area is dragging your predicted score down, and uses spaced-repetition signals to flag topics where retention has decayed. All ML runs on-device with no telemetry.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What kinds of practice questions are included?</summary>
+          <div class="faq__answer"><p>The app includes 12,200+ practice questions across 30 Microsoft exams. Azure Mastery uses nine interactive, exam-style formats including multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies; the live exam's exact interface and item mix are controlled by Microsoft and may differ. Every question includes the correct reasoning and an explanation, with option-by-option rationale where available. Choose whether explanations appear after each question or at the end of a practice test, then jump straight to missed answers; Answer Coach keeps its session notes ready when you revisit.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Who makes Azure Mastery?</summary>
+          <div class="faq__answer"><p>Azure Mastery is published by Moonbeam Alpha Ltd, an independent iOS app studio focused on certification preparation. The app is not affiliated with or endorsed by Microsoft.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════ SHOWCASE 1: EXAM IQ (HERO FEATURE) ═══════════ -->
   <section class="section-showcase" id="exam-iq">
     <div class="showcase-inner showcase-inner--device-left">
@@ -1061,31 +1111,21 @@
         </h2>
         <p class="body-large" style="color:var(--text-secondary);margin-bottom:32px;">
           Exam IQ is a CoreML-powered intelligence engine running entirely on your device.
-          It uses Item Response Theory and Bayesian modelling to predict your exam score with
-          confidence intervals — then tells you exactly what to study next. No server, no cloud,
-          no data ever leaves your iPhone.
+          It reads your practice record — accuracy by domain, coverage, mastery, consistency
+          and recency — and predicts your exam score with a confidence range, then tells you
+          exactly what to study next. No server, no cloud, no data ever leaves your iPhone.
         </p>
         <ul class="showcase-bullets">
           <li>ML-predicted exam score with confidence range, updated after every question</li>
           <li>AI-driven focus recommendations targeting your weakest domains</li>
           <li>Ebbinghaus forgetting curve detection catches knowledge fading from memory</li>
-          <li>Behavioural coaching insights powered by on-device pattern analysis</li>
         </ul>
       </div>
     </div>
-  </section>
 
-  <!-- ═══════════ HOW EXAM IQ WORKS ═══════════ -->
-  <section class="section-how-it-works" aria-label="How Exam IQ works">
-    <div class="section-inner" style="text-align:center;">
-      <p class="label-eyebrow fade-up" style="margin-bottom:12px;color:var(--azure-cyan);">How It Works</p>
-      <h2 class="display-small fade-up" style="margin-bottom:28px;">Three steps to a predicted score.</h2>
-
-      <div class="how-aura fade-up" style="--delay:0.05s">
-        <img src="images/aura-coach.webp" alt="" class="how-aura-img" width="60" height="90" loading="lazy" decoding="async">
-        <p class="how-aura-line">"Answer a few, and I'll show you exactly where you stand — then what to study next."</p>
-      </div>
-
+    <!-- Compact three-step strip (folded in from the former standalone
+         "How Exam IQ Works" section) -->
+    <div class="section-inner" style="text-align:center;margin-top:72px;">
       <div class="how-steps">
         <div class="how-step fade-up">
           <div class="how-step-number">01</div>
@@ -1101,7 +1141,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </div>
           <h3>CoreML analyses on-device</h3>
-          <p>Item Response Theory scores each answer by difficulty, discrimination, and guessing. Bayesian inference updates your ability estimate in real time.</p>
+          <p>A CoreML model weighs your answers by domain, coverage, mastery and consistency, and updates the prediction after every question.</p>
         </div>
         <div class="how-step fade-up" style="--delay:0.2s">
           <div class="how-step-number">03</div>
@@ -1113,14 +1153,14 @@
         </div>
       </div>
     </div>
+
+    <div class="cta-band fade-up" style="margin-top:40px;">
+      <span class="cta-band__text">See your predicted score after one session.</span>
+      <a class="cta-band__btn" href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-mid-examiq&pt=128558698&mt=8" rel="noopener noreferrer">Download free</a>
+    </div>
   </section>
 
   <!-- ═══════════ MEET AURA ═══════════ -->
-  <div class="cta-band fade-up">
-    <span class="cta-band__text">See your predicted score after one session.</span>
-    <a class="cta-band__btn" href="https://apps.apple.com/app/apple-store/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-mid-examiq&pt=128558698&mt=8" rel="noopener noreferrer">Download free</a>
-  </div>
-
   <section class="section-showcase section-meet-aura" id="meet-aura" aria-label="Meet Aura, your study buddy">
     <div class="showcase-inner showcase-inner--device-left">
       <div class="showcase-device" aria-hidden="true">
@@ -1140,45 +1180,15 @@
           changed and what will help next.
         </p>
         <ul class="showcase-bullets" style="margin-bottom:28px;">
-          <li>Guides your first week with one adaptive next step at a time</li>
           <li>Turns missed answers into private, grounded Answer Coach lessons</li>
-          <li>Closes each study block with a concise recap and focused follow-up</li>
+          <li>Review the correct reasoning and each option's rationale where available</li>
+          <li>Guides your first week with one adaptive next step at a time</li>
         </ul>
         <div class="aura-traits">
           <span class="aura-trait aura-trait--blue">Playful</span>
           <span class="aura-trait aura-trait--purple">Smart</span>
           <span class="aura-trait aura-trait--cyan">Supportive</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ SHOWCASE 2: QUESTION TYPES ═══════════ -->
-  <section class="section-showcase" style="background:var(--bg-deep)">
-    <div class="showcase-inner showcase-inner--device-right">
-      <div class="showcase-device" aria-hidden="true">
-        <div class="phone-wrap phone-angle-feature-right">
-          <div class="phone-frame" style="width:320px;height:660px;">
-            <div class="phone-screen themed-screenshot" data-theme-bg-dark="/images/cap-question-types.webp" data-theme-bg-light="/images/cap-question-types-light.webp"></div>
-          </div>
-        </div>
-      </div>
-      <div class="showcase-text fade-up">
-        <p class="label-eyebrow">Blueprint-aligned practice</p>
-        <h2 class="display-small" style="margin:12px 0 20px;">
-          Practice the skills<br>
-          <span class="headline-accent">Microsoft measures.</span>
-        </h2>
-        <p class="body-large" style="color:var(--text-secondary);margin-bottom:32px;">
-          Nine interactive formats for exam-style rehearsal — single-select, multi-select,
-          drag-and-drop, hot area, case study, and more. The live exam interface and exact
-          item mix are controlled by Microsoft and may differ.
-        </p>
-        <ul class="showcase-bullets">
-          <li>Review the correct reasoning and each option's rationale where available</li>
-          <li>Choose explanations after each question or at the end of a practice test</li>
-          <li>Jump straight to missed answers; Answer Coach keeps session notes ready</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -1252,78 +1262,21 @@
         </div>
       </div>
       <div class="showcase-text fade-up">
-        <p class="label-eyebrow">Full Exam Simulation</p>
+        <p class="label-eyebrow">Practice, retention and progress</p>
         <h2 class="display-small" style="margin:12px 0 20px;">
-          Simulate the real exam.<br>
-          <span class="headline-accent">Know your weak spots.</span>
-        </h2>
-        <p class="body-large" style="color:var(--text-secondary);margin-bottom:32px;">
-          Full-length timed practice tests with domain-by-domain performance breakdowns.
-          Aura closes each run with a concise story of what changed and what to do next.
-        </p>
-        <ul class="showcase-bullets">
-          <li>Timed exam environment matching the real test</li>
-          <li>Aura-led recap shows exactly where to improve</li>
-          <li>Live Activities on your Lock Screen during exams</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ SHOWCASE 4: KNOWLEDGE DECAY ═══════════ -->
-  <section class="section-showcase" style="background:var(--bg-deep)">
-    <div class="showcase-inner showcase-inner--device-right">
-      <div class="showcase-device" aria-hidden="true">
-        <div class="phone-wrap phone-angle-feature-right">
-          <div class="phone-frame" style="width:320px;height:660px;">
-            <div class="phone-screen themed-screenshot" data-theme-bg-dark="/images/cap-knowledge-decay.webp" data-theme-bg-light="/images/cap-knowledge-decay-light.webp"></div>
-          </div>
-        </div>
-      </div>
-      <div class="showcase-text fade-up">
-        <p class="label-eyebrow" style="color:var(--warning-orange);">Spaced Repetition</p>
-        <h2 class="display-small" style="margin:12px 0 20px;">
-          Never forget<br>
-          <span class="headline-accent">what you learn.</span>
-        </h2>
-        <p class="body-large" style="color:var(--text-secondary);margin-bottom:32px;">
-          Knowledge decay alerts catch fading concepts before exam day.
-          Deep coaching insights show exactly where to focus your time.
-        </p>
-        <ul class="showcase-bullets">
-          <li>Flags topics fading from memory with retention percentages</li>
-          <li>Weekly study volume and best study day analysis</li>
-          <li>Critical risk alerts for topics needing immediate review</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ SHOWCASE 5: GOALS & PATHS ═══════════ -->
-  <section class="section-showcase">
-    <div class="showcase-inner showcase-inner--device-left">
-      <div class="showcase-device" aria-hidden="true">
-        <div class="phone-wrap phone-angle-feature-left">
-          <div class="phone-frame" style="width:320px;height:660px;">
-            <div class="phone-screen themed-screenshot" data-theme-bg-dark="/images/cap-goals-profile.webp" data-theme-bg-light="/images/cap-goals-profile-light.webp"></div>
-          </div>
-        </div>
-      </div>
-      <div class="showcase-text fade-up">
-        <p class="label-eyebrow">Certification Paths</p>
-        <h2 class="display-small" style="margin:12px 0 20px;">
-          One app.<br>
-          <span class="headline-accent">Thirty certifications.</span>
+          Simulate, retain,<br>
+          <span class="headline-accent">track.</span>
         </h2>
         <p class="body-large" style="color:var(--text-secondary);margin-bottom:32px;">
           Track your path across 29 certification routes — from Azure Fundamentals to
-          Cybersecurity Architect Expert and beyond. Set target exam dates, earn badges, and
-          monitor readiness across every cert.
+          Cybersecurity Architect Expert and beyond.
         </p>
         <ul class="showcase-bullets">
+          <li>Timed, full-length practice exams with domain-by-domain results</li>
+          <li>Aura-led recap shows exactly where to improve</li>
+          <li>Flags topics fading from memory with retention percentages</li>
           <li>30 exams spanning Fundamentals, Associate, Specialty, and Expert levels</li>
           <li>29 guided certification paths with recommended exam sequences</li>
-          <li>Readiness gauge, XP tracking, achievement badges, and exam date countdown</li>
         </ul>
       </div>
     </div>
@@ -1484,50 +1437,6 @@
   </section>
 
   <!-- ═══════════ CTA FINAL ═══════════ -->
-  <!-- FAQ — renders the FAQPage structured data visibly (schema policy:
-       marked-up content must be visible to users). Also the only place the
-       pricing model is stated in plain sight. -->
-  <section class="section-faq" id="faq" aria-labelledby="faq-heading">
-    <div class="features-container">
-      <p class="label-eyebrow fade-up" style="text-align:center;">Frequently asked</p>
-      <h2 id="faq-heading" class="display-medium fade-up" style="text-align:center;margin-bottom:32px;">Questions, answered</h2>
-      <div class="faqs fade-up">
-        <details class="faq">
-          <summary>Is Azure Mastery free?</summary>
-          <div class="faq__answer"><p>Azure Mastery is free to download and includes a starter set of practice questions for every supported exam. Full per-exam question banks are available as one-time in-app purchases. There is no subscription required to use core study features, and no account is required.</p></div>
-        </details>
-        <details class="faq">
-          <summary>Which Microsoft certifications does Azure Mastery cover?</summary>
-          <div class="faq__answer"><p>Azure Mastery covers 30 Microsoft certification exams: AZ-900, AZ-104, AZ-305, AZ-400, AZ-700, AI-901, AI-103, AI-200, AI-300, AI-500, AB-100, AB-410, AB-620, AB-650, AB-731, AB-900, DP-900, DP-300, DP-700, DP-750, DP-800, SC-900, SC-100, SC-200, SC-300, SC-500, PL-300, PL-900, GH-900, and GH-300. The app spans Azure infrastructure, AI engineering, data, security and compliance, Microsoft 365 Copilot administration, AI transformation leadership, SQL AI development, agentic AI architecture, multi-agent AI engineering, and Power BI roles.</p></div>
-        </details>
-        <details class="faq">
-          <summary>How does the Exam IQ score work?</summary>
-          <div class="faq__answer"><p>Exam IQ is an on-device CoreML model that predicts your likely exam-day score with confidence intervals. It uses Item Response Theory to score each answer by question difficulty, discrimination, and guessing, then updates your ability estimate per exam domain using Bayesian inference. Predictions are calibrated against Microsoft's published pass thresholds rather than raw percentage correct.</p></div>
-        </details>
-        <details class="faq">
-          <summary>Does Azure Mastery work offline?</summary>
-          <div class="faq__answer"><p>Yes. Core study — including the question bank, Exam IQ score prediction, adaptive study plans, and authored Answer Coach guidance — works without a connection. Optional model rewriting happens on-device, and optional sync uses the learner's private iCloud account. Azure Mastery has no study-data server or behavioural telemetry.</p></div>
-        </details>
-        <details class="faq">
-          <summary>Does Azure Mastery support iPad and Apple Watch?</summary>
-          <div class="faq__answer"><p>Yes. Azure Mastery is a native SwiftUI app for iPhone and iPad, with full Stage Manager and large-screen layouts on iPad. An Apple Watch companion shows your daily streak and XP at a glance. Live Activities surface the active study session timer on the lock screen and Dynamic Island.</p></div>
-        </details>
-        <details class="faq">
-          <summary>How is Azure Mastery different from other Microsoft exam prep apps?</summary>
-          <div class="faq__answer"><p>Azure Mastery is designed to tell you when you are ready to pass, not just to drill questions. It calibrates predicted scores against Microsoft's real pass thresholds, estimates ability per exam domain so you can see exactly which area is dragging your predicted score down, and uses spaced-repetition signals to flag topics where retention has decayed. All ML runs on-device with no telemetry.</p></div>
-        </details>
-        <details class="faq">
-          <summary>What kinds of practice questions are included?</summary>
-          <div class="faq__answer"><p>The app includes 12,200+ practice questions across 30 Microsoft exams. Azure Mastery uses nine interactive, exam-style formats including multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies; the live exam's exact interface and item mix are controlled by Microsoft and may differ. Every question includes the correct reasoning and an explanation, with option-by-option rationale where available. Choose whether explanations appear after each question or at the end of a practice test, then jump straight to missed answers; Answer Coach keeps its session notes ready when you revisit.</p></div>
-        </details>
-        <details class="faq">
-          <summary>Who makes Azure Mastery?</summary>
-          <div class="faq__answer"><p>Azure Mastery is published by Moonbeam Alpha Ltd, an independent iOS app studio focused on certification preparation. The app is not affiliated with or endorsed by Microsoft.</p></div>
-        </details>
-      </div>
-    </div>
-  </section>
-
   <section class="section-final-cta" id="download">
     <div class="final-cta-inner">
       <div class="final-cta-glow" aria-hidden="true"></div>
@@ -1817,15 +1726,19 @@
             heroObserver.observe(phone);
           });
 
+          // Content is visible by default; this only adds a one-shot reveal
+          // animation as an element is about to be seen, so a no-scroll
+          // render never contains hidden text.
           var revealObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
               if (!entry.isIntersecting) return;
               if (entry.target.classList.contains('showcase-inner')) {
-                entry.target.querySelectorAll('.reveal-pending').forEach(function(child) {
-                  child.classList.add('is-visible');
-                });
+                var device = entry.target.querySelector('.showcase-device');
+                var text = entry.target.querySelector('.showcase-text');
+                if (device) device.classList.add('reveal-in', entry.target.classList.contains('showcase-inner--device-left') ? 'reveal-from-left' : 'reveal-from-right');
+                if (text) text.classList.add('reveal-in', 'reveal-after-device');
               } else {
-                entry.target.classList.add('is-visible');
+                entry.target.classList.add('reveal-in');
               }
               revealObserver.unobserve(entry.target);
             });
@@ -1835,18 +1748,13 @@
           // rather than depending on their different bounding-box heights.
           document.querySelectorAll('.showcase-inner').forEach(function(showcase) {
             if (showcase.getBoundingClientRect().top <= window.innerHeight * 0.92) return;
-            var device = showcase.querySelector('.showcase-device');
-            var text = showcase.querySelector('.showcase-text');
-            if (!device || !text) return;
-            device.classList.add('reveal-pending', showcase.classList.contains('showcase-inner--device-left') ? 'reveal-from-left' : 'reveal-from-right');
-            text.classList.add('reveal-pending', 'reveal-after-device');
+            if (!showcase.querySelector('.showcase-device') || !showcase.querySelector('.showcase-text')) return;
             revealObserver.observe(showcase);
           });
 
           document.querySelectorAll('.fade-up').forEach(function(el) {
             if (el.closest('.showcase-inner')) return;
             if (el.getBoundingClientRect().top <= window.innerHeight * 0.92) return;
-            el.classList.add('reveal-pending');
             revealObserver.observe(el);
           });
         })();

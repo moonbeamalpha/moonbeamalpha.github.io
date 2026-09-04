@@ -8,7 +8,10 @@ This performs the repeatable, site-wide parts of the Search Console cleanup:
 * useful, exam-specific question previews sourced from the in-app banks;
 * clean SoftwareApplication keywords and evergreen feature claims;
 * consistent Answer Coach naming and privacy-safe provenance;
-* matching JSON-LD and sitemap modification dates.
+* matching JSON-LD modification dates.
+
+sitemap.xml's <lastmod> is not written here -- see
+Tools/update-sitemap-lastmod.py, which derives it from git history.
 
 The exam-specific editorial copy remains in each HTML page. Run this after
 question-bank updates so newly published pages do not inherit generic Azure
@@ -101,7 +104,7 @@ ACTIVE_SEO = {
         ),
     },
     "AZ-400": {
-        "title": "AZ-400 DevOps Engineer Practice Questions | Azure Mastery",
+        "title": 'AZ-400 Practice Questions — {count} Qs for DevOps Engineer (2026)',
         "description": (
             "{count} AZ-400 practice questions for DevOps Engineer Expert. Study Azure Pipelines, "
             "GitHub Actions, security, deployments, and monitoring on iPhone and iPad."
@@ -112,7 +115,7 @@ ACTIVE_SEO = {
         ),
     },
     "PL-300": {
-        "title": "PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery",
+        "title": 'PL-300 Practice Questions — {count} Qs for Power BI Analyst (2026)',
         "description": (
             "{count} PL-300 Power BI practice questions covering Power Query, DAX, data modelling, "
             "visualisation, and security. Adaptive exam prep for iPhone and iPad."
@@ -143,7 +146,7 @@ ACTIVE_SEO = {
         ),
     },
     "AI-901": {
-        "title": "AI-901 Practice Questions | Azure AI Fundamentals Exam",
+        "title": 'AI-901 Practice Questions — {count} Qs for AI Fundamentals (2026)',
         "description": (
             "{count} AI-901 practice questions for the current Azure AI Fundamentals exam. "
             "Study AI concepts, Microsoft Foundry, and Python on iPhone and iPad."
@@ -572,7 +575,7 @@ def replace_once(text: str, pattern: str, replacement: str, label: str, *, flags
     return text
 
 
-def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
+def update_page(text: str, code: str, count: int, questions: list[dict], name: str) -> str:
     retired = RETIRED_EXAMS.get(code)
     retiring = RETIRING_EXAMS.get(code)
     if retired:
@@ -664,6 +667,71 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
         text, r'<meta name="twitter:description" content="[^"]*">',
         f'<meta name="twitter:description" content="{social_description}">', "Twitter description",
     )
+
+    # Per-exam OG/Twitter card (Task A8). Guarded on the rendered JPEG actually
+    # existing on disk, so a page is never pointed at an image that hasn't been
+    # rendered yet -- run the social render in sync-marketing-counts.py first.
+    # Pages this hasn't run for keep pointing at the shared images/og-image.png,
+    # same as before this task.
+    og_jpg = ROOT / "images" / "og" / f"{code.lower()}.jpg"
+    if og_jpg.exists():
+        image_url = f"https://azuremastery.app/images/og/{code.lower()}.jpg"
+        alt = f"{code} — {html.escape(name, quote=False)} practice questions in Azure Mastery"
+        text = replace_once(
+            text, r'<meta property="og:image" content="[^"]*">',
+            f'<meta property="og:image" content="{image_url}">', "OpenGraph image",
+        )
+        text = replace_once(
+            text, r'<meta property="og:image:alt" content="[^"]*">',
+            f'<meta property="og:image:alt" content="{alt}">', "OpenGraph image alt",
+        )
+        text = replace_once(
+            text, r'<meta name="twitter:image" content="[^"]*">',
+            f'<meta name="twitter:image" content="{image_url}">', "Twitter image",
+        )
+        text = text.replace(
+            "<!-- OpenGraph / Twitter (cert-scoped title + description; reuses homepage OG image) -->",
+            "<!-- OpenGraph / Twitter (cert-scoped title + description + per-exam card image) -->",
+        )
+        # og:image:width/height (Task A8 gap): apps/AzureMastery/og-exam.html
+        # renders every per-exam card at a fixed 1200x630, same as the shared
+        # og-image.html the homepage already declares these for -- see that
+        # page's og:image block. Same exactly-once insert-or-replace shape as
+        # og:image:type just below.
+        if 'property="og:image:width"' in text:
+            text = replace_once(
+                text, r'<meta property="og:image:width" content="[^"]*">',
+                '<meta property="og:image:width" content="1200">', "OpenGraph image width",
+            )
+        else:
+            text = replace_once(
+                text, r'(<meta property="og:image" content="[^"]*">\n)',
+                r'\1  <meta property="og:image:width" content="1200">\n',
+                "OpenGraph image width (insert)",
+            )
+        if 'property="og:image:height"' in text:
+            text = replace_once(
+                text, r'<meta property="og:image:height" content="[^"]*">',
+                '<meta property="og:image:height" content="630">', "OpenGraph image height",
+            )
+        else:
+            text = replace_once(
+                text, r'(<meta property="og:image:width" content="[^"]*">\n)',
+                r'\1  <meta property="og:image:height" content="630">\n',
+                "OpenGraph image height (insert)",
+            )
+        if 'property="og:image:type"' in text:
+            text = replace_once(
+                text, r'<meta property="og:image:type" content="[^"]*">',
+                '<meta property="og:image:type" content="image/jpeg">', "OpenGraph image type",
+            )
+        else:
+            text = replace_once(
+                text, r'(<meta property="og:image" content="[^"]*">\n)',
+                r'\1  <meta property="og:image:type" content="image/jpeg">\n',
+                "OpenGraph image type (insert)",
+            )
+
     text = replace_once(
         text,
         r'("@type": "WebPage",.*?"name": ")[^"]*(",\s*"description": ")[^"]*(")',
@@ -764,27 +832,15 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
     return text
 
 
-def update_sitemap(text: str, codes: list[str]) -> str:
-    for code in codes:
-        slug = code.lower()
-        updated_date = SEO_UPDATED_OVERRIDES.get(code, SEO_UPDATED)
-        pattern = (
-            rf'(<url>\s*<loc>https://azuremastery\.app/exams/{re.escape(slug)}/</loc>'
-            rf'.*?<lastmod>)\d{{4}}-\d{{2}}-\d{{2}}(</lastmod>\s*</url>)'
-        )
-        text, count = re.subn(pattern, rf'\g<1>{updated_date}\2', text, flags=re.S)
-        if count != 1:
-            raise ValueError(f"expected one sitemap entry for {code}, found {count}")
-    return text
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="report drift without writing files")
     parser.add_argument("--app-repo", type=Path, default=DEFAULT_APP_REPO)
     args = parser.parse_args()
 
-    counts = json.loads(DATA_FILE.read_text())["exams"]
+    exam_data = json.loads(DATA_FILE.read_text())
+    counts = exam_data["exams"]
+    names = exam_data.get("names", {})
     changed: list[Path] = []
 
     for code, count in sorted(counts.items()):
@@ -794,18 +850,11 @@ def main() -> None:
             sys.exit(f"missing page or question bank for {code}: {page} / {resource}")
         questions = json.loads(resource.read_text())["questions"]
         before = page.read_text()
-        after = update_page(before, code, count, questions)
+        after = update_page(before, code, count, questions, names.get(code, code))
         if after != before:
             changed.append(page)
             if not args.check:
                 page.write_text(after)
-
-    before = SITEMAP.read_text()
-    after = update_sitemap(before, sorted(counts))
-    if after != before:
-        changed.append(SITEMAP)
-        if not args.check:
-            SITEMAP.write_text(after)
 
     if changed:
         verb = "would update" if args.check else "updated"
@@ -815,7 +864,7 @@ def main() -> None:
         if args.check:
             sys.exit(1)
     else:
-        print("SEO metadata, previews, and sitemap are in sync.")
+        print("SEO metadata and previews are in sync.")
 
 
 if __name__ == "__main__":

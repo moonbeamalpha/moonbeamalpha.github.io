@@ -102,6 +102,13 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-sc-500",
     "how-to-pass-ai-200",
 }
+# Spells out small counts in the llms.txt guide-structured-data sentence
+# (validate_guide_pages()) so that sentence tracks len(HOW_TO_GUIDE_SLUGS)
+# instead of being a number hand-typed in prose that can drift silently.
+NUMBER_WORDS = {
+    1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+    7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+}
 # The trust pages and reference hubs (Track B, search-visibility recovery).
 # Each tuple is (slug, canonical URL, has_faq) -- unlike the guides above,
 # these live at top level or under /exams/ but outside the per-exam-code
@@ -349,9 +356,16 @@ def validate_guide_pages(errors: list[str], llms: str) -> list[Path]:
     guide_pages = [ROOT / "guides" / "index.html"]
     guide_pages.extend(ROOT / "guides" / slug / "index.html" for slug in GUIDE_SLUGS)
 
+    how_to_count = len(HOW_TO_GUIDE_SLUGS)
+    how_to_word = NUMBER_WORDS.get(how_to_count)
+    if how_to_word is None:
+        sys.exit(
+            f"error: NUMBER_WORDS in this file has no word for {how_to_count} "
+            f"(len(HOW_TO_GUIDE_SLUGS)); add one."
+        )
     expected_llms_contract = (
-        "Every guide article includes FAQ structured data, and the ten how-to guides "
-        "also include study-plan structured data."
+        "Every guide article includes FAQ structured data, and the "
+        f"{how_to_word} how-to guides also include study-plan structured data."
     )
     if expected_llms_contract not in llms:
         errors.append("llms.txt has a stale or inaccurate guide structured-data description")
@@ -362,6 +376,20 @@ def validate_guide_pages(errors: list[str], llms: str) -> list[Path]:
         errors.append(
             f"guides/index.html: hub guide count does not match len(GUIDE_SLUGS) "
             f"({len(GUIDE_SLUGS)}); expected {expected_hub_count!r}"
+        )
+
+    expected_hub_hrefs = {f"/guides/{slug}/" for slug in GUIDE_SLUGS}
+    found_hub_hrefs = set(re.findall(r'<a class="guide-card" href="(/guides/[a-z0-9-]+/)"', hub_text))
+    missing_slugs = {href.split("/")[2] for href in expected_hub_hrefs - found_hub_hrefs}
+    extra_slugs = {href.split("/")[2] for href in found_hub_hrefs - expected_hub_hrefs}
+    if missing_slugs or extra_slugs:
+        parts = []
+        if missing_slugs:
+            parts.append(f"missing {sorted(missing_slugs)}")
+        if extra_slugs:
+            parts.append(f"extra {sorted(extra_slugs)}")
+        errors.append(
+            "guides/index.html: hub card hrefs do not match GUIDE_SLUGS (" + "; ".join(parts) + ")"
         )
 
     for page in guide_pages:

@@ -2,7 +2,7 @@
 """Ratchet against the exam pages reading as one templated skeleton.
 
 Google demoted azuremastery.app on 2026-07-29 with nothing flagged in Search
-Console; the leading suspect is that the 35 exam pages share one skeleton, one
+Console; the leading suspect is that the exam pages share one skeleton, one
 set of mock-ups and mostly the same "how the app helps" prose, with only
 objectives and study plans differing per exam (see the Track B / task-B3
 brief). Task B3b rewrites #objectives, adds a "Where candidates slip" section
@@ -11,13 +11,24 @@ whether that's actually working: it compares every pair of exam pages' visible
 body text and flags pairs that still read as near-duplicates, plus tracks the
 corpus-wide mean, as a ratchet that only ever tightens.
 
+Scope: CURRENT exam pages only -- a page whose code is not in
+data/exam-counts.json's "retired" list (today AI-102, AI-900, AZ-204, AZ-500,
+DP-100; Tools/sync-marketing-counts.py owns that classification, this tool
+only reads it). A retired page's copy is deliberately generic ("this exam has
+retired, here's its successor") rather than de-templated content, so mixing
+it into the corpus would understate how similar the current pages actually
+are -- exactly what this ratchet exists to catch. That leaves 30 pages / 435
+pairs as of Sep 2026. exams/index.html (the pages hub) and
+exams/retired/index.html (the retired-exams hub) are excluded too -- neither
+is an exam page at all.
+
 Method: each page's <body> is reduced to a word list (tags stripped, comments
 and non-visible chrome removed -- see extract_words()), and every unordered
 pair is compared with difflib.SequenceMatcher(None, words_a, words_b).ratio().
 Word lists, not raw character text or a 5-word shingle Jaccard: SequenceMatcher
 on words is what the brief asks for by default, and it comfortably profiles at
-under 4 seconds for all C(35,2)=595 pairs on this corpus (Sep 2026 measurement)
--- fast enough that the shingle-Jaccard fallback was never needed.
+well under a second for all 435 pairs on this corpus (Sep 2026 measurement) --
+fast enough that the shingle-Jaccard fallback was never needed.
 
 Excluded before comparison (the brief's list -- shared or duplicated-by-design
 markup that would otherwise inflate every pair equally and hide genuine
@@ -52,12 +63,19 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXAMS_DIR = os.path.join(ROOT, "exams")
+DATA_FILE = os.path.join(ROOT, "data", "exam-counts.json")
 BASELINE_FILE = os.path.join(ROOT, "Tools", "page-similarity-baseline.json")
 
-# Pairs at or below this ratio aren't printed in the report -- with 35 heavily
-# templated pages today, nearly every pair clears it, which is itself the
-# finding this tool exists to surface. As B3b diverges pages, the printed list
-# should shrink.
+# An exam page's directory looks like "az-104" -- this both excludes the two
+# hub pages (exams/index.html, exams/retired/index.html) that the one-level
+# glob would otherwise pick up and doubles as a sanity check on every
+# directory this tool treats as an exam page.
+CODE_DIR_RE = re.compile(r'^[a-z]{2}-\d{3}$')
+
+# Pairs at or below this ratio aren't printed in the report -- with 30
+# heavily templated current pages today, nearly every pair clears it, which
+# is itself the finding this tool exists to surface. As B3b diverges pages,
+# the printed list should shrink.
 REPORT_THRESHOLD = 0.30
 # --check tolerance: how much either summary number may grow over the
 # committed baseline before this is treated as a regression.
@@ -120,11 +138,37 @@ def extract_words(path: str) -> list[str]:
     return _WORD_RE.findall(text.lower())
 
 
-def exam_pages() -> list[str]:
-    """Every exams/<code>/index.html, sorted. exams/index.html itself (the
-    hub) is one directory shallower, so the one-level glob excludes it without
-    a special case."""
-    return sorted(glob.glob(os.path.join(EXAMS_DIR, "*", "index.html")))
+def load_retired_codes() -> set[str]:
+    """Uppercase codes data/exam-counts.json lists as non-current (any exam
+    carrying a Microsoft retirement date, e.g. AI-102). This is the same
+    classification Tools/sync-marketing-counts.py's non_current_exams() uses
+    -- that tool owns it, this one only reads the committed snapshot."""
+    if not os.path.exists(DATA_FILE):
+        sys.exit(f"error: {os.path.relpath(DATA_FILE, ROOT)} missing — "
+                 f"run sync-marketing-counts.py --refresh first.")
+    with open(DATA_FILE) as fh:
+        data = json.load(fh)
+    return set(data.get("retired") or ())
+
+
+def exam_pages(retired: set[str]) -> list[str]:
+    """Every CURRENT exams/<code>/index.html, sorted. "Current" excludes:
+    - exams/index.html and exams/retired/index.html -- neither directory
+      name matches CODE_DIR_RE, so both hub pages drop out without a
+      special case;
+    - any exams/<code>/index.html whose code is in `retired` -- a retired
+      exam's page is deliberately generic ("this exam has retired, here's
+      its successor"), so including it would understate how similar the
+      current pages are to each other."""
+    pages = []
+    for path in sorted(glob.glob(os.path.join(EXAMS_DIR, "*", "index.html"))):
+        code_dir = os.path.basename(os.path.dirname(path))
+        if not CODE_DIR_RE.match(code_dir):
+            continue
+        if code_dir.upper() in retired:
+            continue
+        pages.append(path)
+    return pages
 
 
 def page_code(path: str) -> str:
@@ -134,9 +178,9 @@ def page_code(path: str) -> str:
 def compute_pairs() -> tuple[list[tuple[float, str, str]], float]:
     """Returns (pairs sorted by ratio descending, corpus mean). Each pair is
     (ratio, code_a, code_b)."""
-    pages = exam_pages()
+    pages = exam_pages(load_retired_codes())
     if len(pages) < 2:
-        sys.exit(f"error: found {len(pages)} exam page(s) under {EXAMS_DIR} — need at least 2.")
+        sys.exit(f"error: found {len(pages)} current exam page(s) under {EXAMS_DIR} — need at least 2.")
     words = {p: extract_words(p) for p in pages}
     pairs = []
     for i in range(len(pages)):

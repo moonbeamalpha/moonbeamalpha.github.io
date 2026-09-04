@@ -972,7 +972,7 @@ def main() -> None:
     verb = "would change" if args.check else "changed"
     print(f"\n{p.changed_files} file(s) {verb}.")
     if p.problems:
-        print(f"{p.problems} markup problem(s) need a hand fix — see RETIRED lines above.")
+        print(f"{p.problems} markup problem(s) need a hand fix — see RETIRED/DOMAIN lines above.")
     if args.check and (p.changed_files or p.problems):
         sys.exit(1)
 

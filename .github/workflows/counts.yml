@@ -32,7 +32,14 @@ jobs:
       - name: Exam and question counts
         run: python3 Tools/sync-marketing-counts.py --check --no-render
 
-      # Ratchets the 35 exam pages against reading as one templated skeleton
+      # Self-test for sync-marketing-counts.py's per-domain count patching
+      # (patch_domain_counts/check_domain_mismatches) against in-memory HTML
+      # fixtures -- stdlib only, no app-repo checkout needed, so it runs from
+      # this committed tree alone.
+      - name: Domain-count patcher self-test
+        run: python3 Tools/test-domain-counts.py
+
+      # Ratchets the current exam pages against reading as one templated skeleton
       # (see Tools/check-page-similarity.py's docstring and the task-B3 brief) --
       # fails if the highest-similarity pair or the corpus mean grows more than
       # 0.005 over the committed Tools/page-similarity-baseline.json. The

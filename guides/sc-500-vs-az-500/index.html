@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // QA browsers opt themselves out of reporting once via ?am_internal=1. The flag is a
+    // self-set localStorage marker on this origin only; GA4's Internal Traffic filter
+    // drops events that carry traffic_type=internal.
+    try {
+      if (/[?&]am_internal=1(&|$)/.test(location.search)) localStorage.setItem('am_internal', '1');
+      if (localStorage.getItem('am_internal') === '1') gtag('set', { traffic_type: 'internal' });
+    } catch (e) {}
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>SC-500 vs AZ-500: what changed in 2026? | Azure Mastery</title>
+  <meta name="description" content="AZ-500 retired 31 August 2026. See how SC-500 compares: domains, exam format, and what changed, plus what happens to an AZ-500 credential you already hold.">
+  <meta name="keywords" content="SC-500 vs AZ-500, AZ-500 retired, SC-500 replacement for AZ-500, Cloud and AI Security Engineer vs Azure Security Engineer, AZ-500 to SC-500, Azure security certification 2026">
+  <link rel="canonical" href="https://azuremastery.app/guides/sc-500-vs-az-500/">
+
+  <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+  <meta name="application-name" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-title" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Theme + favicons (consistent with the exam pages) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F5F7FA';}}catch(e){}})()</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- OpenGraph / Twitter (guide-scoped title + description; reuses homepage OG image) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://azuremastery.app/guides/sc-500-vs-az-500/">
+  <meta property="og:title" content="SC-500 vs AZ-500: What Changed When Microsoft Retired AZ-500">
+  <meta property="og:description" content="AZ-500 retired 31 August 2026. Domains, exam format, and what's genuinely new in SC-500, plus what happens to an AZ-500 credential you already hold.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — comparing SC-500 Cloud and AI Security Engineer with the retired AZ-500 Azure Security Engineer certification.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SC-500 vs AZ-500: What Changed When Microsoft Retired AZ-500">
+  <meta name="twitter:description" content="Domains, exam format, and what's new in SC-500 now that AZ-500 has retired.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking entities by @id.
+       Modern best practice for both classical SEO (Google) AND AI/AEO answer engines
+       (Perplexity, ChatGPT search, Google AI Overviews, Gemini, Claude), which prefer
+       linked, type-rich graphs over flat schemas:
+         · WebPage        — page-level metadata + speakable
+         · BreadcrumbList  — site hierarchy (Azure Mastery → Guides → this guide)
+         · TechArticle     — the comparison article itself
+         · FAQPage         — visible FAQ section (mirrors on-page text)
+       No HowTo block on this page — it is a comparison, not a study plan. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/guides/sc-500-vs-az-500/#webpage",
+        "url": "https://azuremastery.app/guides/sc-500-vs-az-500/",
+        "name": "SC-500 vs AZ-500: what changed when Microsoft retired AZ-500",
+        "description": "AZ-500 retired on 31 August 2026. A side-by-side comparison of SC-500 and AZ-500 covering credential, domains, exam format, what changed, and what happens to an AZ-500 certification you already hold.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-09-04",
+        "dateModified": "2026-08-09",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "mainEntity": { "@id": "https://azuremastery.app/guides/sc-500-vs-az-500/#article" },
+        "breadcrumb": { "@id": "https://azuremastery.app/guides/sc-500-vs-az-500/#breadcrumbs" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".guide-hero__title", ".guide-hero__dek"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/guides/sc-500-vs-az-500/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://azuremastery.app/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "SC-500 vs AZ-500: what changed when Microsoft retired AZ-500" }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://azuremastery.app/guides/sc-500-vs-az-500/#article",
+        "headline": "SC-500 vs AZ-500: what changed when Microsoft retired AZ-500",
+        "description": "AZ-500 retired 31 August 2026. Domains, exam format, and what's genuinely new in SC-500, plus what happens to an AZ-500 credential you already hold and how much of it carries over.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-09-04",
+        "dateModified": "2026-08-09",
+        "image": "https://azuremastery.app/images/og-image.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "about": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: Cloud and AI Security Engineer Associate",
+            "alternateName": "SC-500"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: Azure Security Engineer Associate",
+            "alternateName": "AZ-500"
+          }
+        ],
+        "mainEntityOfPage": { "@id": "https://azuremastery.app/guides/sc-500-vs-az-500/#webpage" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://azuremastery.app/guides/sc-500-vs-az-500/#faqs",
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is AZ-500 still a valid certification?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you passed AZ-500 before it retired, the certification stays on your Microsoft transcript. Microsoft does not revoke or downgrade a credential because the exam behind it has retired. What changes is that you can no longer renew it through AZ-500 itself, because renewal assessments stop being offered once an exam retires."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I still book the AZ-500 exam?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. AZ-500 retired on 31 August 2026 and is no longer available to schedule. If you are starting a cloud security career now, SC-500 is the current path; there is no way to sit AZ-500 as a new candidate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's actually new in SC-500 that wasn't in AZ-500?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI security. SC-500's Secure Compute domain adds a full skill group on securing Microsoft Copilot and AI agents: Microsoft Entra Agent ID conditional access and blast-radius analysis, Defender for AI Services, Foundry guardrails, AI Gateway in Azure API Management, and Microsoft Purview Data Security Posture Management for Copilot. None of that existed in AZ-500's outline. SC-500 also adds Microsoft Security Copilot workspace and plugin management to its posture-monitoring domain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to retake anything if I already have AZ-500?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no requirement to retake anything; your AZ-500 credential remains on your transcript as evidence of what you passed. But because AZ-500 can no longer be renewed, if you want a current, renewable Associate-level cloud security credential going forward, SC-500 is the exam that does that job now."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SC-500 harder than AZ-500 was?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They are comparably demanding overall, but the difficulty is distributed differently. AZ-500 concentrated 30 to 35% of its weight in Defender for Cloud and Microsoft Sentinel, including hands-on KQL query writing. SC-500 spreads that content more evenly across four domains and trades some of that Sentinel depth for breadth into AI-specific security controls, which is unfamiliar territory for most Azure administrators moving across from AZ-500."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does SC-500 count as a prerequisite for SC-100?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not currently. Microsoft's published prerequisite guidance for SC-100 (Cybersecurity Architect Expert) does not list SC-500 as an accepted route as of this guide's last update. Check the official SC-100 requirements before assuming SC-500 alone will satisfy them."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as the exam pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — GUIDES ARTICLE TOKENS + TYPOGRAPHY + COMPONENTS
+       Token block + typography + components copied verbatim from
+       guides/how-to-pass-az-104/index.html (the wave-1 exemplar) so this
+       comparison page matches the site visual with no new tokens.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (site parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 64px); line-height: 1.06; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Sticky site nav (exam-page pattern) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section { padding-block: clamp(44px, 5vw, 72px); }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    .section-eyebrow { margin: 0 0 14px; }
+    .section-title { margin: 0 0 24px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 28px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 66ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    .section-note { margin-top: 22px; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+
+    /* Right-rail "On this page" TOC — desktop only (exam-page pattern) */
+    .page-toc { display: none; }
+    @media (min-width: 1280px) {
+      .page-toc {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        z-index: 40;
+        width: 156px;
+        padding: 16px 10px;
+        background: rgba(5, 8, 16, 0.55);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+      }
+      .page-toc__title {
+        margin: 0 0 10px;
+        padding-inline-start: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--azure-cyan);
+      }
+      .page-toc__list { list-style: none; margin: 0; padding: 0; }
+      .page-toc__item { margin: 0; }
+      .page-toc__link {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        border-radius: 0 6px 6px 0;
+        transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      }
+      .page-toc__link:hover {
+        color: var(--text-primary);
+        background: rgba(80, 230, 255, 0.06);
+        text-decoration: none;
+      }
+      .page-toc__link[aria-current="true"] {
+        color: var(--azure-cyan);
+        border-left-color: var(--azure-cyan);
+        background: rgba(80, 230, 255, 0.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---- Guide article components (reusable across the /guides/ wave) ---- */
+
+    /* Text hero — no phone mockup; eyebrow, headline, dek, meta line */
+    .guide-hero { padding-block: clamp(40px, 6vw, 72px) clamp(28px, 4vw, 44px); }
+    .guide-hero__eyebrow { margin: 0 0 18px; }
+    .guide-hero__title { margin: 0 0 20px; color: var(--text-primary); }
+    .guide-hero__dek {
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .guide-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .guide-meta__dot { color: var(--border-strong); }
+
+    /* Domain / weight / comparison table */
+    .guide-table-wrap { overflow-x: auto; margin-top: 8px; }
+    .guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 460px;
+    }
+    .guide-table caption {
+      text-align: left;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding-bottom: 10px;
+    }
+    .guide-table th, .guide-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .guide-table thead th {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .guide-table tbody th {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .guide-table td { color: var(--text-secondary); }
+    .guide-table__weight {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      white-space: nowrap;
+    }
+    .guide-table tbody tr:last-child th,
+    .guide-table tbody tr:last-child td { border-bottom: 0; }
+
+    /* Quick-facts list (exam format at a glance) */
+    .fact-grid {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 620px) { .fact-grid { grid-template-columns: repeat(2, 1fr); } }
+    .fact-grid li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .fact-grid__label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 92px;
+    }
+    .fact-grid__value { color: var(--text-primary); font-size: 15px; }
+
+    /* Callout / topic cards (verdict, career value) */
+    .topic-cards { display: grid; gap: 16px; margin-top: 8px; }
+    .topic-card {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+    }
+    .topic-card h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .topic-card p { margin: 0; max-width: none; }
+
+    /* CTA panel (in-article, honest features-forward) */
+    .cta-panel {
+      margin-top: 30px;
+      padding: 26px 28px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(ellipse 80% 120% at 0% 0%, rgba(43,136,216,0.16) 0%, transparent 60%),
+        rgba(255,255,255,0.025);
+      border: 1px solid var(--border-accent);
+    }
+    .cta-panel h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+    }
+    .cta-panel p { margin: 0 0 18px; color: var(--text-secondary); max-width: 58ch; }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+
+    /* FAQ items */
+    .faqs { display: grid; gap: 14px; margin-top: 8px; }
+    .faq {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .faq h3 {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .faq p { margin: 0; max-width: none; }
+
+    /* Related grid (exam-page pattern) */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    @media (min-width: 640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    .related-card {
+      display: block;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .related-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .related-card__code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--azure-cyan);
+      letter-spacing: 0.03em;
+    }
+    .related-card__name {
+      display: block;
+      margin-top: 6px;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+    .related-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(52px, 8vw, 104px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 26px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-final .cta-button { font-size: 17px; padding: 16px 32px; }
+    .cta-small { display: block; margin-top: 14px; color: var(--text-muted); font-size: 13px; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+
+    .guide-inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; max-width: 720px; margin: 40px auto 0; padding: 18px 22px; border: 1px solid rgba(80,230,255,0.3); border-radius: 14px; background: rgba(80,230,255,0.05); }
+    .guide-inline-cta__text { font-size: 15px; line-height: 1.5; color: var(--text-primary); }
+    .guide-inline-cta__btn { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; background: linear-gradient(120deg, #50E6FF, #2E7CEE); color: #041018; font-weight: 700; font-size: 14px; text-decoration: none; }
+  </style>
+  <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
+  <link rel="stylesheet" href="/social-follow.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="site-nav__cta" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc__title">On this page</p>
+      <ol class="page-toc__list">
+        <li class="page-toc__item"><a class="page-toc__link" href="#verdict">Quick answer</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#comparison">Side by side</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#sc-500-tests">What SC-500 tests</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#az-500-tests">What AZ-500 tested</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#prerequisite">Prerequisite?</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#career-value">Career value</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#if-you-hold-az500">If you hold AZ-500</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#faqs">FAQs</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#related">Related guides</a></li>
+      </ol>
+    </nav>
+
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
+      <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
+      <h1 class="display-large guide-hero__title">
+        <span class="headline-accent">SC-500</span> vs <span class="headline-accent">AZ-500</span>: what changed when Microsoft retired AZ-500
+      </h1>
+      <p class="guide-hero__dek">
+        AZ-500 retired on 31 August 2026. See exactly what SC-500 kept, what it added, and what happens to an AZ-500 credential you already hold.
+      </p>
+      <p class="guide-meta">
+        <time datetime="2026-08-09">Updated 9 August 2026</time>
+        <span class="guide-meta__dot">·</span>
+        <span>~9 min read</span>
+      </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/exam-choice-dark.webp"
+          data-theme-src-light="/guides/images/exam-choice-light.webp"
+          alt="Aura points from the retired AZ-500 Azure Security Engineer exam toward SC-500, its current Cloud and AI Security Engineer replacement."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">One path is still open</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>SC-500 · current</span><span>AZ-500 · retired</span></span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Quick-answer verdict -->
+    <section id="verdict" class="container">
+      <p class="label-eyebrow section-eyebrow">Quick answer</p>
+      <h2 class="display-small section-title">SC-500 or AZ-500: the short version</h2>
+      <p class="section-lede">
+        This isn't really a choice any more. AZ-500 retired on 31 August 2026, so SC-500 is the only cloud-security Associate exam you can currently book. What's worth understanding is what changed, and what an existing AZ-500 credential is still worth.
+      </p>
+      <div class="topic-cards">
+        <div class="topic-card">
+          <h3>New to cloud security? Sit SC-500</h3>
+          <p>
+            SC-500 (Microsoft Certified: Cloud and AI Security Engineer Associate) is the current, bookable exam for anyone starting a cloud security career today. It keeps the core Azure security-engineering content AZ-500 tested and adds a full domain of AI-workload security that AZ-500 never covered.
+          </p>
+        </div>
+        <div class="topic-card">
+          <h3>Already hold AZ-500? It stays on your transcript</h3>
+          <p>
+            Passing AZ-500 before its retirement date remains valid — Microsoft does not revoke certifications when the underlying exam retires. What it does mean is that AZ-500 itself can no longer be renewed. See <a href="#if-you-hold-az500">"If you hold AZ-500"</a> below for what that means in practice and how much of your existing knowledge carries straight over.
+          </p>
+        </div>
+      </div>
+      <p class="section-note">
+        Both exams lead to a "Microsoft Certified" Associate credential in cloud security; the difference below is entirely about scope and timing, not prestige.
+      </p>
+    </section>
+
+    <!-- Side-by-side comparison table -->
+    <section id="comparison" class="container">
+      <p class="label-eyebrow section-eyebrow">Side by side</p>
+      <h2 class="display-small section-title">SC-500 vs AZ-500 at a glance</h2>
+      <p class="section-lede">
+        AZ-500's figures below describe the exam as it stood before it retired; they're kept here for comparison, not as a live booking option.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>SC-500 and AZ-500 compared</caption>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">SC-500</th><th scope="col">AZ-500 (retired)</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Credential</th><td>Microsoft Certified: Cloud and AI Security Engineer Associate</td><td>Microsoft Certified: Azure Security Engineer Associate</td></tr>
+            <tr><th scope="row">Best for</th><td>Anyone starting a cloud-and-AI security career today — the only current bookable option</td><td>Historical reference only — credential holders keep it, but it can no longer be booked or renewed</td></tr>
+            <tr><th scope="row">Domains</th><td>4: identity, access &amp; governance; storage, databases &amp; networking; compute (incl. AI security); posture management</td><td>4: identity &amp; access; networking; compute, storage &amp; databases; Defender for Cloud &amp; Sentinel</td></tr>
+            <tr><th scope="row">Format</th><td>40–60 questions, 100 minutes (120-minute seat)</td><td>40–60 questions, 100 minutes (120-minute seat)</td></tr>
+            <tr><th scope="row">Question style</th><td>Multiple choice and multi-select scenario questions, often a config snippet or an attack signal to interpret</td><td>Multiple choice and multi-select scenario questions, the same config-and-signal format SC-500 inherited</td></tr>
+            <tr><th scope="row">Pass score</th><td>700 / 1000</td><td>700 / 1000</td></tr>
+            <tr><th scope="row">Typical prep time</th><td>Four to six weeks with AZ-104-level Azure experience; add time for the AI-security skill group if that's new to you</td><td>Four to six weeks with hands-on Azure security experience, while the exam was still active</td></tr>
+            <tr><th scope="row">Renewal</th><td>Renew annually, free online assessment</td><td>Was annual while active — no longer renewable now the exam has retired</td></tr>
+            <tr><th scope="row">Skills outline</th><td>Outline effective 13 May 2026</td><td>Outline effective 22 January 2026 (final version before retirement)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Exam fees vary by country. Read the official Microsoft outlines: the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-500" rel="noopener">SC-500 study guide</a> covers current registration and pricing, and the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-500" rel="noopener">AZ-500 study guide</a> is kept online as a reference even though the exam itself has retired.
+      </p>
+    </section>
+
+    <!-- What SC-500 actually tests -->
+    <section id="sc-500-tests" class="container">
+      <p class="label-eyebrow section-eyebrow">What SC-500 actually tests</p>
+      <h2 class="display-small section-title">What SC-500 actually tests</h2>
+      <p class="section-lede">
+        SC-500 covers the same operational ground AZ-500 did — identity, networking, compute, storage, and Defender for Cloud — and folds AI-workload security into the compute domain rather than treating it as an afterthought.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>SC-500 skills measured (outline effective 13 May 2026)</caption>
+          <thead>
+            <tr><th scope="col">Domain</th><th scope="col">Weight</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Manage identity, access &amp; governance</th><td class="guide-table__weight">20–25%</td></tr>
+            <tr><th scope="row">Secure storage, databases &amp; networking</th><td class="guide-table__weight">25–30%</td></tr>
+            <tr><th scope="row">Secure compute</th><td class="guide-table__weight">20–25%</td></tr>
+            <tr><th scope="row">Manage &amp; monitor security posture</th><td class="guide-table__weight">20–25%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Identity and governance covers Privileged Identity Management, Conditional Access, and Key Vault, alongside Azure Policy and RBAC remediation. The largest domain, storage/databases/networking, is largely continuous with AZ-500's networking and storage material: NSGs, Private Link, Azure Firewall, Defender for Storage and Databases. Secure compute is where SC-500 diverges hardest from AZ-500: alongside disk encryption, Bastion, and Defender for Servers and Containers, it adds a dedicated AI-security skill group covering Microsoft Entra Agent ID, Defender for AI Services, Foundry guardrails, AI Gateway in API Management, and Purview DSPM for Copilot. Posture management rolls up Defender CSPM, multicloud connectors, Microsoft Sentinel ingestion, and Microsoft Security Copilot into one domain rather than one oversized 30–35% block.
+      </p>
+    </section>
+
+    <!-- What AZ-500 tested -->
+    <section id="az-500-tests" class="container">
+      <p class="label-eyebrow section-eyebrow">What AZ-500 tested</p>
+      <h2 class="display-small section-title">What AZ-500 tested (retired 31 August 2026)</h2>
+      <p class="section-lede">
+        Kept here as a reference for anyone comparing what they already studied against SC-500's current outline, not as an active exam guide.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AZ-500 skills measured (final outline, effective 22 January 2026)</caption>
+          <thead>
+            <tr><th scope="col">Domain</th><th scope="col">Weight</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Secure identity &amp; access</th><td class="guide-table__weight">15–20%</td></tr>
+            <tr><th scope="row">Secure networking</th><td class="guide-table__weight">20–25%</td></tr>
+            <tr><th scope="row">Secure compute, storage &amp; databases</th><td class="guide-table__weight">20–25%</td></tr>
+            <tr><th scope="row">Secure Azure using Defender for Cloud &amp; Sentinel</th><td class="guide-table__weight">30–35%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Identity and access covered role assignments, PIM, Conditional Access, and Microsoft Entra app registrations and managed identities. Networking covered NSGs, Virtual Network Manager, Virtual WAN, private access patterns, and Azure Firewall. Compute, storage, and databases covered VM and AKS security, storage access control, and Azure SQL protections including Transparent Data Encryption. The largest domain by far was Defender for Cloud and Sentinel: governance policy, Secure Score remediation, threat protection plans, and hands-on Sentinel configuration including data connectors and analytics rules. Three of these four domains map closely onto SC-500's current outline; the fourth is where SC-500 now spends part of its weight on AI security instead.
+      </p>
+    </section>
+
+    <!-- Prerequisite / ordering -->
+    <section id="prerequisite" class="container">
+      <p class="label-eyebrow section-eyebrow">Prerequisite question</p>
+      <h2 class="display-small section-title">Is there a prerequisite for SC-500?</h2>
+      <p>
+        No formal one. SC-500 doesn't require another certification before you can book it, in the same way AZ-500 never did. Microsoft's own guidance recommends practical experience administering Azure and hybrid environments and strong familiarity with Microsoft Entra ID before attempting it, and Azure Mastery's own certification pathing lists <a href="/exams/az-104/">AZ-104</a> as a recommended (not required) lead-in, exactly as it did for AZ-500.
+      </p>
+      <p>
+        SC-500 also does not currently unlock anything further up the security track on its own. Microsoft's published prerequisite guidance for SC-100 (Cybersecurity Architect Expert) does not list SC-500 as an accepted route as of this guide's last update — check the official <a href="/exams/sc-100/">SC-100</a> requirements directly before assuming otherwise, since Microsoft updates prerequisite lists independently of exam retirements.
+      </p>
+      <p>
+        If you're deciding whether SC-900 (Security, Compliance, and Identity Fundamentals) is worth sitting first: it's optional conceptual groundwork, exactly as it was for AZ-500, and mainly useful if security terminology itself — not just Azure — is new to you.
+      </p>
+    </section>
+
+    <!-- Career value framing (no invented numbers) -->
+    <section id="career-value" class="container">
+      <p class="label-eyebrow section-eyebrow">Career value</p>
+      <h2 class="display-small section-title">How SC-500 changes what the credential signals</h2>
+      <p>
+        AZ-500 signalled "Cloud Security Engineer" or "Azure Security Specialist" — someone who could lock down identity, networking, compute, and storage, and run day-to-day operations in Defender for Cloud and Sentinel. SC-500 signals the same operational competence, plus a claim AZ-500 never made: that you can extend those same controls to the AI systems now running inside the organisation, from Copilot agents to Foundry-hosted models.
+      </p>
+      <p>
+        That AI-security scope is the reason SC-500 exists rather than a straight AZ-500 renewal cycle. As organisations put Copilot and custom agents into production, "who governs what an AI agent can access" became a real operational question that AZ-500's outline had no domain to answer. Hiring managers posting "Cloud Security Engineer" or "Cloud and AI Security" roles in 2026 are increasingly asking for that AI-specific coverage explicitly.
+      </p>
+      <p>
+        Neither certification guarantees a role or a pay rise on its own. What SC-500 does is keep the underlying credential current and renewable, which AZ-500 — through no fault of the people who hold it — can no longer do.
+      </p>
+    </section>
+
+    <!-- If you hold AZ-500 (replaces "take both" for this retirement-driven pair) -->
+    <section id="if-you-hold-az500" class="container">
+      <p class="label-eyebrow section-eyebrow">If you hold AZ-500</p>
+      <h2 class="display-small section-title">What happens to an AZ-500 credential you already hold</h2>
+      <p>
+        Your certification stays on your Microsoft transcript exactly as it is. Microsoft does not retroactively remove or downgrade a credential because the exam that produced it has since retired — the "Microsoft Certified: Azure Security Engineer Associate" line on your record is permanent proof of what you passed and when.
+      </p>
+      <p>
+        What changes is renewal. Microsoft's own guidance states that renewal assessments are no longer available once a certification's exam has retired, so AZ-500 itself has no ongoing free annual renewal path any more. Your transcript entry does not expire in the way an unrenewed Associate certification normally would, but there is also no mechanism left to formally refresh it against a current skills outline.
+      </p>
+      <p>
+        The practical route for staying current is SC-500. Three of AZ-500's four domains — identity and access, networking, and compute/storage/databases — map closely onto SC-500's identity, storage/database/networking, and compute domains, so an AZ-500 holder is not starting from zero. The genuinely new material sits in two places: the AI-security skill group inside Secure Compute (Entra Agent ID, Defender for AI Services, Foundry guardrails, AI Gateway, Purview DSPM for Copilot), and Microsoft Security Copilot inside posture management. Everything else is a change of emphasis and consolidation, not new content to learn from scratch.
+      </p>
+      <div class="cta-panel">
+        <h3>Bring AZ-500 knowledge into SC-500 practice</h3>
+        <p>
+          Azure Mastery's SC-500 question bank is mapped to the current outline domain by domain, so you can see exactly which questions cover ground you already know from AZ-500 and which cover the new AI-security material. It has its own on-device Exam IQ readiness score and a full-length exam simulator, and works offline with no account required to start.
+        </p>
+        <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+          </svg>
+          Download Azure Mastery — free
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <div class="guide-inline-cta">
+      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
+    </div>
+
+    <section id="faqs" class="container">
+      <p class="label-eyebrow section-eyebrow">Frequently asked</p>
+      <h2 class="display-small section-title">SC-500 vs AZ-500 FAQs</h2>
+      <div class="faqs">
+        <details class="faq">
+          <summary>Is AZ-500 still a valid certification?</summary>
+          <div class="faq__answer"><p>Yes. If you passed AZ-500 before it retired, the certification stays on your Microsoft transcript. Microsoft does not revoke or downgrade a credential because the exam behind it has retired. What changes is that you can no longer renew it through AZ-500 itself, because renewal assessments stop being offered once an exam retires.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can I still book the AZ-500 exam?</summary>
+          <div class="faq__answer"><p>No. AZ-500 retired on 31 August 2026 and is no longer available to schedule. If you are starting a cloud security career now, SC-500 is the current path; there is no way to sit AZ-500 as a new candidate.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What's actually new in SC-500 that wasn't in AZ-500?</summary>
+          <div class="faq__answer"><p>AI security. SC-500's Secure Compute domain adds a full skill group on securing Microsoft Copilot and AI agents: Microsoft Entra Agent ID conditional access and blast-radius analysis, Defender for AI Services, Foundry guardrails, AI Gateway in Azure API Management, and Microsoft Purview Data Security Posture Management for Copilot. None of that existed in AZ-500's outline. SC-500 also adds Microsoft Security Copilot workspace and plugin management to its posture-monitoring domain.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do I need to retake anything if I already have AZ-500?</summary>
+          <div class="faq__answer"><p>There is no requirement to retake anything; your AZ-500 credential remains on your transcript as evidence of what you passed. But because AZ-500 can no longer be renewed, if you want a current, renewable Associate-level cloud security credential going forward, SC-500 is the exam that does that job now.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Is SC-500 harder than AZ-500 was?</summary>
+          <div class="faq__answer"><p>They are comparably demanding overall, but the difficulty is distributed differently. AZ-500 concentrated 30 to 35% of its weight in Defender for Cloud and Microsoft Sentinel, including hands-on KQL query writing. SC-500 spreads that content more evenly across four domains and trades some of that Sentinel depth for breadth into AI-specific security controls, which is unfamiliar territory for most Azure administrators moving across from AZ-500.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does SC-500 count as a prerequisite for SC-100?</summary>
+          <div class="faq__answer"><p>Not currently. Microsoft's published prerequisite guidance for SC-100 (Cybersecurity Architect Expert) does not list SC-500 as an accepted route as of this guide's last update. Check the official SC-100 requirements before assuming SC-500 alone will satisfy them.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related guides -->
+    <section id="related" class="container">
+      <p class="label-eyebrow section-eyebrow">Keep reading</p>
+      <h2 class="display-small section-title">Related guides</h2>
+      <p class="section-lede">
+        Whether you're starting fresh on SC-500 or bridging over from AZ-500, these guides carry you through the study plan.
+      </p>
+      <nav class="related-grid" aria-label="Related guides">
+        <a class="related-card" href="/exams/sc-500/">
+          <span class="related-card__code">SC-500</span>
+          <span class="related-card__name">SC-500 study app &amp; question bank</span>
+          <span class="related-card__hint">The full app page: every question type, the Exam IQ readiness score, and the adaptive study plan for Cloud and AI Security Engineer.</span>
+        </a>
+        <a class="related-card" href="/exams/az-500/">
+          <span class="related-card__code">AZ-500</span>
+          <span class="related-card__name">AZ-500 study app &amp; question bank (retired)</span>
+          <span class="related-card__hint">Kept online for anyone comparing what they already studied against SC-500's current outline.</span>
+        </a>
+        <a class="related-card" href="/guides/how-to-pass-sc-500/">
+          <span class="related-card__code">SC-500</span>
+          <span class="related-card__name">How to pass SC-500 Cloud &amp; AI Security</span>
+          <span class="related-card__hint">A study plan mapped to all four domains, plus exam-day tactics.</span>
+        </a>
+        <a class="related-card" href="/guides/which-azure-certification-first/">
+          <span class="related-card__code">Start here</span>
+          <span class="related-card__name">Which Microsoft certification first?</span>
+          <span class="related-card__hint">A guided walk through the Azure, AI, data, and security tracks if you are not sure a security certification is the right track yet.</span>
+        </a>
+      </nav>
+      <p class="section-note">
+        Browse the full library on the <a href="/guides/">Azure certification guides</a> index.
+      </p>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Ready to start on SC-500?</h2>
+      <p>Practise with the SC-500 question bank in Azure Mastery, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <!-- social-follow:start -->
+    <section class="social-follow" aria-labelledby="social-follow-title">
+      <div class="social-follow__copy">
+        <span class="social-follow__eyebrow">Stay current</span>
+        <h2 class="social-follow__title" id="social-follow-title">Follow Azure Mastery</h2>
+        <p class="social-follow__description">Exam updates, bite-sized study tips, and new guide alerts.</p>
+      </div>
+      <nav class="social-follow__links" aria-label="Follow Azure Mastery on social media">
+        <a class="social-follow__link" href="https://www.instagram.com/azuremastery.app"
+           target="_blank" rel="noopener me"
+           data-social-platform="instagram" data-social-placement="footer"
+           aria-label="Azure Mastery on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a class="social-follow__link" href="https://x.com/AzureMastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="x" data-social-placement="footer"
+           aria-label="Azure Mastery on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          <span>X</span>
+        </a>
+        <a class="social-follow__link" href="https://www.tiktok.com/@azuremastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="tiktok" data-social-placement="footer"
+           aria-label="Azure Mastery on TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19.32 6.69a5.31 5.31 0 0 1-3.36-1.2 5.32 5.32 0 0 1-1.96-3.49h-3.27v13.17a2.65 2.65 0 1 1-2.65-2.65c.27 0 .53.04.78.11V9.31a5.93 5.93 0 0 0-.78-.05 5.93 5.93 0 1 0 5.93 5.93V8.6a8.55 8.55 0 0 0 5.31 1.83V7.16a5.27 5.27 0 0 1-0-.47z"/>
+          </svg>
+          <span>TikTok</span>
+        </a>
+        <a class="social-follow__link" href="https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg"
+           target="_blank" rel="noopener me"
+           data-social-platform="youtube" data-social-placement="footer"
+           aria-label="Azure Mastery on YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.56 12 3.56 12 3.56s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.2 31.58 31.58 0 0 0 0 12a31.58 31.58 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14A31.58 31.58 0 0 0 24 12a31.58 31.58 0 0 0-.5-5.8zM9.6 15.56V8.44L15.82 12 9.6 15.56z"/>
+          </svg>
+          <span>YouTube</span>
+        </a>
+        <a class="social-follow__link" href="https://www.facebook.com/profile.php?id=61578421530035"
+           target="_blank" rel="noopener me"
+           data-social-platform="facebook" data-social-placement="footer"
+           aria-label="Azure Mastery on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.43-4.91 8.43-9.93z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+      </nav>
+    </section>
+    <!-- social-follow:end -->
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/exams/">All exams</a> ·
+      <a href="/guides/">Guides</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      SC-500, AZ-500, Microsoft Defender, Microsoft Azure, and Microsoft are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+
+  <script src="/exams/exam.js" defer></script>
+  <script src="/theme.js" defer></script>
+</body>
+</html>

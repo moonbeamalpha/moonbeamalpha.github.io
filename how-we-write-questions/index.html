@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // QA browsers opt themselves out of reporting once via ?am_internal=1. The flag is a
+    // self-set localStorage marker on this origin only; GA4's Internal Traffic filter
+    // drops events that carry traffic_type=internal.
+    try {
+      if (/[?&]am_internal=1(&|$)/.test(location.search)) localStorage.setItem('am_internal', '1');
+      if (localStorage.getItem('am_internal') === '1') gtag('set', { traffic_type: 'internal' });
+    } catch (e) {}
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>How We Write and Verify Questions | Azure Mastery</title>
+  <meta name="description" content="How Azure Mastery's practice questions are written against Microsoft's published skills outlines, checked on every change, and watched weekly for drift.">
+  <link rel="canonical" href="https://azuremastery.app/how-we-write-questions/">
+
+  <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+  <meta name="application-name" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-title" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Theme + favicons (consistent with the exam pages) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F5F7FA';}}catch(e){}})()</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://azuremastery.app/how-we-write-questions/">
+  <meta property="og:title" content="How We Write and Verify Practice Questions">
+  <meta property="og:description" content="How Azure Mastery's practice questions are written against Microsoft's published skills outlines, checked on every change, and watched weekly for drift.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — how practice questions are written against Microsoft's published skills outlines and verified.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How We Write and Verify Practice Questions">
+  <meta name="twitter:description" content="How questions are written against Microsoft's published outlines, checked on every change, and watched weekly for drift.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking entities by @id.
+       WebPage + BreadcrumbList + TechArticle + FAQPage (mirrors the visible
+       FAQ section verbatim). No HowTo or EducationalOccupationalCredential
+       here — this page describes an authoring process, not an exam. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/how-we-write-questions/#webpage",
+        "url": "https://azuremastery.app/how-we-write-questions/",
+        "name": "How We Write and Verify Practice Questions",
+        "description": "How Azure Mastery's practice questions are written against Microsoft's published skills outlines, checked on every change, and watched weekly for drift.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-09-04",
+        "dateModified": "2026-09-04",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "mainEntity": { "@id": "https://azuremastery.app/how-we-write-questions/#article" },
+        "breadcrumb": { "@id": "https://azuremastery.app/how-we-write-questions/#breadcrumbs" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/how-we-write-questions/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "How we write and verify questions" }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://azuremastery.app/how-we-write-questions/#article",
+        "headline": "How We Write and Verify Practice Questions",
+        "description": "How Azure Mastery's practice questions are written against Microsoft's published skills outlines, checked on every change, and watched weekly for drift.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-09-04",
+        "dateModified": "2026-09-04",
+        "image": "https://azuremastery.app/images/og-image.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "mainEntityOfPage": { "@id": "https://azuremastery.app/how-we-write-questions/#webpage" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://azuremastery.app/how-we-write-questions/#faqs",
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are these questions from the real exam?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every question is an original item — drafted with AI assistance, then reviewed and edited by hand against the published skills outline; nothing is copied, adapted or drawn from a live exam question pool."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often is content updated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Whenever Microsoft changes a published skills outline, or whenever one of the automated checks below finds a defect. A weekly watch compares the live outline against what shipped; a separate monthly check confirms every \"learn more\" link a question points to is still live."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you use AI to write questions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Draft questions are generated with AI assistance against the exam's published skills outline, then every draft has to pass a set of automated content checks and a recorded human review, with a named reviewer, before it ships."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do the explanations cover the wrong answers too?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Where a question carries per-option rationales, yes — each option, not just the correct one, has its own written explanation. That field also powers the app's Answer Coach feature, so a wrong answer gets its own explanation rather than a generic \"try again\"."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if a question turns out to be wrong or out of date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It gets fixed. The checks that catch these defect classes are forward-only: each bank has a frozen baseline count per defect type, and a change can only lower it, so a fixed defect cannot quietly reappear. Broken \"learn more\" links are found the same way, by a monthly automated sweep, and repaired."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as the exam pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — GUIDES ARTICLE TOKENS + TYPOGRAPHY + COMPONENTS
+       Token block + typography copied verbatim from exams/az-104/index.html
+       so guides match the site visual. Every colour outside :root is a
+       token or a semi-transparent tint that reads on both themes, keeping
+       the page theme-ready. Sibling guide authors can lift this <style>
+       block wholesale and only change the article prose.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (site parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 64px); line-height: 1.06; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Sticky site nav (exam-page pattern) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section { padding-block: clamp(44px, 5vw, 72px); }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    .section-eyebrow { margin: 0 0 14px; }
+    .section-title { margin: 0 0 24px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 28px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 66ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    .section-note { margin-top: 22px; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+
+    /* Right-rail "On this page" TOC — desktop only (exam-page pattern) */
+    .page-toc { display: none; }
+    @media (min-width: 1280px) {
+      .page-toc {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        z-index: 40;
+        width: 156px;
+        padding: 16px 10px;
+        background: rgba(5, 8, 16, 0.55);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+      }
+      .page-toc__title {
+        margin: 0 0 10px;
+        padding-inline-start: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--azure-cyan);
+      }
+      .page-toc__list { list-style: none; margin: 0; padding: 0; }
+      .page-toc__item { margin: 0; }
+      .page-toc__link {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        border-radius: 0 6px 6px 0;
+        transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      }
+      .page-toc__link:hover {
+        color: var(--text-primary);
+        background: rgba(80, 230, 255, 0.06);
+        text-decoration: none;
+      }
+      .page-toc__link[aria-current="true"] {
+        color: var(--azure-cyan);
+        border-left-color: var(--azure-cyan);
+        background: rgba(80, 230, 255, 0.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---- Guide article components (reusable across the /guides/ wave) ---- */
+
+    /* Text hero — no phone mockup; eyebrow, headline, dek, meta line */
+    .guide-hero { padding-block: clamp(40px, 6vw, 72px) clamp(28px, 4vw, 44px); }
+    .guide-hero__eyebrow { margin: 0 0 18px; }
+    .guide-hero__title { margin: 0 0 20px; color: var(--text-primary); }
+    .guide-hero__dek {
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .guide-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .guide-meta__dot { color: var(--border-strong); }
+
+    /* Domain / weight table */
+    .guide-table-wrap { overflow-x: auto; margin-top: 8px; }
+    .guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 460px;
+    }
+    .guide-table caption {
+      text-align: left;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding-bottom: 10px;
+    }
+    .guide-table th, .guide-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .guide-table thead th {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .guide-table tbody th {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .guide-table td { color: var(--text-secondary); }
+    .guide-table__weight {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      white-space: nowrap;
+    }
+    .guide-table tbody tr:last-child th,
+    .guide-table tbody tr:last-child td { border-bottom: 0; }
+
+    /* Quick-facts list (exam format at a glance) */
+    .fact-grid {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 620px) { .fact-grid { grid-template-columns: repeat(2, 1fr); } }
+    .fact-grid li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .fact-grid__label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 92px;
+    }
+    .fact-grid__value { color: var(--text-primary); font-size: 15px; }
+
+    /* Six-week study plan */
+    .guide-plan {
+      list-style: none;
+      counter-reset: weeks;
+      padding: 0;
+      margin: 8px 0 0;
+      display: grid;
+      gap: 16px;
+    }
+    .guide-plan > li {
+      counter-increment: weeks;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .guide-plan > li::before {
+      content: 'Week ' counter(weeks);
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--azure-cyan);
+      margin-bottom: 8px;
+    }
+    .guide-plan h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+    }
+    .guide-plan p { margin: 0; max-width: none; }
+
+    /* Callout / topic cards (hardest topics, practice tactics) */
+    .topic-cards { display: grid; gap: 16px; margin-top: 8px; }
+    .topic-card {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+    }
+    .topic-card h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .topic-card p { margin: 0; max-width: none; }
+
+    /* Inline article screenshot */
+    .guide-figure {
+      margin: 28px 0 0;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+    }
+    .guide-figure img { display: block; width: 100%; height: auto; }
+    .guide-figure figcaption {
+      padding: 12px 18px;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* CTA panel (in-article, honest features-forward) */
+    .cta-panel {
+      margin-top: 30px;
+      padding: 26px 28px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(ellipse 80% 120% at 0% 0%, rgba(43,136,216,0.16) 0%, transparent 60%),
+        rgba(255,255,255,0.025);
+      border: 1px solid var(--border-accent);
+    }
+    .cta-panel h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+    }
+    .cta-panel p { margin: 0 0 18px; color: var(--text-secondary); max-width: 58ch; }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+
+    /* FAQ items */
+    .faqs { display: grid; gap: 14px; margin-top: 8px; }
+    .faq {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .faq h3 {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .faq p { margin: 0; max-width: none; }
+
+    /* Related grid (exam-page pattern) */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    @media (min-width: 640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    .related-card {
+      display: block;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .related-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .related-card__code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--azure-cyan);
+      letter-spacing: 0.03em;
+    }
+    .related-card__name {
+      display: block;
+      margin-top: 6px;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+    .related-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(52px, 8vw, 104px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 26px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-final .cta-button { font-size: 17px; padding: 16px 32px; }
+    .cta-small { display: block; margin-top: 14px; color: var(--text-muted); font-size: 13px; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+
+    .guide-inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; max-width: 720px; margin: 40px auto 0; padding: 18px 22px; border: 1px solid rgba(80,230,255,0.3); border-radius: 14px; background: rgba(80,230,255,0.05); }
+    .guide-inline-cta__text { font-size: 15px; line-height: 1.5; color: var(--text-primary); }
+    .guide-inline-cta__btn { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; background: linear-gradient(120deg, #50E6FF, #2E7CEE); color: #041018; font-weight: 700; font-size: 14px; text-decoration: none; }
+  </style>
+  <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
+  <link rel="stylesheet" href="/social-follow.css">
+  <style>
+    /* This page has no visual hero (dropped per Track B scope), so the
+       1280-1539px TOC suppression in /guides/guide-visuals.css -- added for
+       pages with the wide visual hero, which need the room -- does not apply
+       here. Restore the rail in that range; same specificity, so this must
+       come after the guide-visuals.css link to win the cascade. */
+    @media (min-width: 1280px) and (max-width: 1539px) {
+      .page-toc { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="site-nav__cta" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc__title">On this page</p>
+      <ol class="page-toc__list">
+        <li class="page-toc__item"><a class="page-toc__link" href="#published-outline">The outline</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#written-to-explain">To explain, not trick</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#every-option-rationale">Every option</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#checked-on-every-change">Checked always</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#watched-weekly">Watched weekly</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#what-we-dont-claim">What we don't claim</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#faqs">FAQs</a></li>
+      </ol>
+    </nav>
+
+    <!-- HERO — no product image; a process page, not an article with a hero figure -->
+    <section class="guide-hero container">
+      <p class="label-eyebrow guide-hero__eyebrow">Methodology</p>
+      <h1 class="display-large guide-hero__title">
+        How we write and <span class="headline-accent">verify practice questions</span>
+      </h1>
+      <p class="guide-hero__dek">
+        Every Azure Mastery question is written against a published exam outline, checked by a fixed set of automated gates, and watched afterwards for drift. This is how that pipeline works.
+      </p>
+    </section>
+
+    <!-- Grounded in the published outline -->
+    <section id="published-outline" class="container">
+      <p class="label-eyebrow section-eyebrow">The outline</p>
+      <h2 class="display-small section-title">Grounded in the published outline</h2>
+      <p>
+        Every question bank is written against the "Skills measured" outline Microsoft publishes for that exam, not against a generic syllabus. Each bank is bound to the specific outline version it was written from — recorded as a hash of that outline page — together with a recorded mapping review confirming the bank's coverage actually maps onto it.
+      </p>
+      <p>
+        Microsoft revises outlines regularly, and sometimes publishes an upcoming version ahead of its effective date. A weekly automated check compares the live outline against what shipped and flags drift. If Microsoft's new outline is not yet in effect, the check reports it as upcoming rather than treating today's content as already stale.
+      </p>
+    </section>
+
+    <!-- Written to explain, not to trick -->
+    <section id="written-to-explain" class="container">
+      <p class="label-eyebrow section-eyebrow">Explain, don't trick</p>
+      <h2 class="display-small section-title">Written to explain, not to trick</h2>
+      <p>
+        Every question carries a written explanation, not just a marked correct answer. For question formats that call for contrasting the options against each other, that explanation has to clear a minimum length before it can ship — a one-line explanation isn't enough material to cover why the wrong options are wrong as well as why the right one is right.
+      </p>
+      <p>
+        The app uses several interactive formats beyond plain multiple choice — including drag-and-drop ordering, hotspot, and case studies — but every format exists to test understanding of a skill the outline lists, not to trip a candidate up on ambiguous wording.
+      </p>
+    </section>
+
+    <!-- Every option gets a rationale -->
+    <section id="every-option-rationale" class="container">
+      <p class="label-eyebrow section-eyebrow">Every option</p>
+      <h2 class="display-small section-title">Every option gets a rationale</h2>
+      <p>
+        Where a question carries per-option rationales, every option — not just the correct one — has its own written explanation. That field powers the app's Answer Coach feature: pick a wrong answer and its fallback explanation is built directly from that option's own rationale, so an incorrect choice gets a considered explanation rather than a generic prompt.
+      </p>
+      <p>
+        The same field is checked for a set of known content-quality defects before it ships: redundant openers that just restate an option as "correct", boilerplate phrases that leak internal review language into candidate-facing text, and rationales that accidentally give away the answer inside a wrong option's own explanation. None of these checks are optional.
+      </p>
+    </section>
+
+    <!-- Checked on every change -->
+    <section id="checked-on-every-change" class="container">
+      <p class="label-eyebrow section-eyebrow">Checked always</p>
+      <h2 class="display-small section-title">Checked on every change</h2>
+      <p>
+        Every push and pull request against the question banks runs a fixed pipeline of checks before anything can ship: a schema and integrity validator, the outline-binding and mapping-review check described above, and a set of scanners for specific defect classes — including questions that leak the answer through the wording of the stem itself, and options that just restate the question back at the candidate. None of these checks are advisory; a failing check blocks the change.
+      </p>
+      <p>
+        Several of the scanners are <strong>forward-only</strong>: every bank has a frozen baseline defect count, and a change can only lower that count, never raise it. That is deliberate — it stops content quality drifting backwards one unnoticed question at a time.
+      </p>
+    </section>
+
+    <!-- Watched weekly against Microsoft Learn -->
+    <section id="watched-weekly" class="container">
+      <p class="label-eyebrow section-eyebrow">Watched weekly</p>
+      <h2 class="display-small section-title">Watched weekly against Microsoft Learn</h2>
+      <p>
+        Two automated routines run on a schedule, independent of any content change. Every Monday, a check re-reads the live "Skills measured" page for every exam and compares it, by hash, against what is recorded for the shipped bank — catching outline changes as soon as Microsoft publishes them.
+      </p>
+      <p>
+        Once a month, a separate routine confirms that every question's "learn more" link still resolves. Microsoft Learn reorganises its documentation continuously, so links that were correct when written do go dead over time; this check finds the ones that have, rather than waiting for a candidate to hit one.
+      </p>
+    </section>
+
+    <!-- What we do not claim -->
+    <section id="what-we-dont-claim" class="container">
+      <p class="label-eyebrow section-eyebrow">Limits</p>
+      <h2 class="display-small section-title">What we do not claim</h2>
+      <p>
+        This app is not a leaked or memorised question dump, and it does not contain live exam items. Passing consistently in the app does not guarantee passing the real exam — Microsoft controls the live exam's content, format, and scoring, and none of that is available to third parties. The in-app Exam IQ score is a readiness estimate built from your own practice record, not a promise — see <a href="/how-exam-iq-works/">how Exam IQ works</a> for exactly what it measures. Azure Mastery is not affiliated with, endorsed by, or sponsored by Microsoft Corporation.
+      </p>
+    </section>
+
+    <!-- FAQs -->
+    <div class="guide-inline-cta">
+      <span class="guide-inline-cta__text"><strong>See it in the app.</strong> Every practice question ships with a written explanation, built the way this page describes.</span>
+      <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
+    </div>
+
+    <section id="faqs" class="container">
+      <p class="label-eyebrow section-eyebrow">Frequently asked</p>
+      <h2 class="display-small section-title">FAQs</h2>
+      <div class="faqs">
+        <details class="faq">
+          <summary>Are these questions from the real exam?</summary>
+          <div class="faq__answer"><p>Every question is an original item — drafted with AI assistance, then reviewed and edited by hand against the published skills outline; nothing is copied, adapted or drawn from a live exam question pool.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How often is content updated?</summary>
+          <div class="faq__answer"><p>Whenever Microsoft changes a published skills outline, or whenever one of the automated checks below finds a defect. A weekly watch compares the live outline against what shipped; a separate monthly check confirms every "learn more" link a question points to is still live.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do you use AI to write questions?</summary>
+          <div class="faq__answer"><p>Yes. Draft questions are generated with AI assistance against the exam's published skills outline, then every draft has to pass a set of automated content checks and a recorded human review, with a named reviewer, before it ships.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do the explanations cover the wrong answers too?</summary>
+          <div class="faq__answer"><p>Where a question carries per-option rationales, yes — each option, not just the correct one, has its own written explanation. That field also powers the app's Answer Coach feature, so a wrong answer gets its own explanation rather than a generic "try again".</p></div>
+        </details>
+        <details class="faq">
+          <summary>What happens if a question turns out to be wrong or out of date?</summary>
+          <div class="faq__answer"><p>It gets fixed. The checks that catch these defect classes are forward-only: each bank has a frozen baseline count per defect type, and a change can only lower it, so a fixed defect cannot quietly reappear. Broken "learn more" links are found the same way, by a monthly automated sweep, and repaired.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Study from questions built this way</h2>
+      <p>Every question carries a written explanation. Free to start, works offline.</p>
+      <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <!-- social-follow:start -->
+    <section class="social-follow" aria-labelledby="social-follow-title">
+      <div class="social-follow__copy">
+        <span class="social-follow__eyebrow">Stay current</span>
+        <h2 class="social-follow__title" id="social-follow-title">Follow Azure Mastery</h2>
+        <p class="social-follow__description">Exam updates, bite-sized study tips, and new guide alerts.</p>
+      </div>
+      <nav class="social-follow__links" aria-label="Follow Azure Mastery on social media">
+        <a class="social-follow__link" href="https://www.instagram.com/azuremastery.app"
+           target="_blank" rel="noopener me"
+           data-social-platform="instagram" data-social-placement="footer"
+           aria-label="Azure Mastery on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a class="social-follow__link" href="https://x.com/AzureMastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="x" data-social-placement="footer"
+           aria-label="Azure Mastery on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          <span>X</span>
+        </a>
+        <a class="social-follow__link" href="https://www.tiktok.com/@azuremastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="tiktok" data-social-placement="footer"
+           aria-label="Azure Mastery on TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19.32 6.69a5.31 5.31 0 0 1-3.36-1.2 5.32 5.32 0 0 1-1.96-3.49h-3.27v13.17a2.65 2.65 0 1 1-2.65-2.65c.27 0 .53.04.78.11V9.31a5.93 5.93 0 0 0-.78-.05 5.93 5.93 0 1 0 5.93 5.93V8.6a8.55 8.55 0 0 0 5.31 1.83V7.16a5.27 5.27 0 0 1-0-.47z"/>
+          </svg>
+          <span>TikTok</span>
+        </a>
+        <a class="social-follow__link" href="https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg"
+           target="_blank" rel="noopener me"
+           data-social-platform="youtube" data-social-placement="footer"
+           aria-label="Azure Mastery on YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.56 12 3.56 12 3.56s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.2 31.58 31.58 0 0 0 0 12a31.58 31.58 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14A31.58 31.58 0 0 0 24 12a31.58 31.58 0 0 0-.5-5.8zM9.6 15.56V8.44L15.82 12 9.6 15.56z"/>
+          </svg>
+          <span>YouTube</span>
+        </a>
+        <a class="social-follow__link" href="https://www.facebook.com/profile.php?id=61578421530035"
+           target="_blank" rel="noopener me"
+           data-social-platform="facebook" data-social-placement="footer"
+           aria-label="Azure Mastery on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.43-4.91 8.43-9.93z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+      </nav>
+    </section>
+    <!-- social-follow:end -->
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/exams/">All exams</a> ·
+      <a href="/guides/">Guides</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/about/">About</a> ·
+      <a href="/how-we-write-questions/" aria-current="page">How we write questions</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      Microsoft, Azure, and Microsoft certification names are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+
+  <script src="/exams/exam.js" defer></script>
+  <script src="/theme.js" defer></script>
+</body>
+</html>

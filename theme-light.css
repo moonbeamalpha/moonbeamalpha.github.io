@@ -326,7 +326,8 @@ html[data-theme="light"] .study-plan > li,
 html[data-theme="light"] .faq,
 html[data-theme="light"] .qt,
 html[data-theme="light"] .cert-path,
-html[data-theme="light"] .related-card { background: rgba(13,30,55,0.03); }
+html[data-theme="light"] .related-card,
+html[data-theme="light"] .trap { background: rgba(13,30,55,0.03); }
 
 html[data-theme="light"] .domain__weight { background: rgba(0,110,170,0.10); border-color: rgba(0,110,170,0.30); }
 html[data-theme="light"] .qt__hint { background: rgba(0,110,170,0.08); border-color: rgba(0,110,170,0.25); }

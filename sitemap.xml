@@ -223,6 +223,12 @@
     <lastmod>2026-09-04</lastmod>
   </url>
   <url>
+    <loc>https://azuremastery.app/exams/retired/</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
     <loc>https://azuremastery.app/guides/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
@@ -273,6 +279,24 @@
   <url>
     <loc>https://azuremastery.app/guides/sc-900-vs-az-900/</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/about/</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/how-we-write-questions/</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://azuremastery.app/how-exam-iq-works/</loc>
+    <priority>0.5</priority>
     <changefreq>monthly</changefreq>
     <lastmod>2026-09-04</lastmod>
   </url>

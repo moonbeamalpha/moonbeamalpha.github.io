@@ -220,7 +220,7 @@ A: Yes. Like Microsoft's other role-based certifications, AB-100 expires annuall
 Q: What is the AB-100 retake policy if I fail?
 A: 24 hours before your first retake, then 14 days for the second and third, capped at five attempts in any rolling 12 months with a fresh voucher each time. Given how broad AB-100's syllabus is, treat a fail as a signal to target the weakest domain specifically rather than rebooking immediately.
 Q: What does the AB-100 exam format look like?
-A: AB-100 is 40–60 questions across a 100-minute session (120 minutes with seat time for admin), online or at a test centre, scored out of 1000 with a 700 pass mark. Expect a heavier share of multi-paragraph scenario questions than on the associate-level agent exams — AB-100 tests architectural judgement against a business setup more than isolated recall.
+A: Like most Microsoft Certification exams, AB-100 has 40–60 questions in a mix of formats, with the exact timing confirmed at registration. It runs across a 100-minute session (120 minutes with seat time for admin), online or at a test centre, and scored out of 1000 with a 700 pass mark. In Azure Mastery's AB-100 bank you'll practise a heavier share of multi-paragraph scenario questions than the associate-level agent exam banks, so you spend real time reading a business constraint before picking the architecture that fits it.
 Q: How long should I study for AB-100?
 A: Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions, not just describe the pieces.
 Q: AB-100 vs AB-620 — which agent cert should I take?
@@ -272,7 +272,7 @@ A: Yes — AB-620 expires annually like every Microsoft Associate certification.
 Q: What is the AB-620 retake policy if I fail?
 A: 24 hours before your first retake, then a 14-day wait for the second and third. Microsoft caps you at five attempts in any rolling 12 months, and each attempt needs its own voucher.
 Q: What does the AB-620 exam format look like?
-A: AB-620 is 40–60 questions in a 100-minute session (120 minutes with seat time for admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Expect single-answer and multi-select multiple choice plus a noticeable share of yes/no and matching items — AB-620 tests configuration recognition as much as recall.
+A: Like most Microsoft Certification exams, AB-620 has 40–60 questions in a mix of formats, with the exact timing confirmed at registration. It runs as a 100-minute session (120 minutes with seat time for admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. In Azure Mastery's AB-620 bank you'll practise single-answer and multi-select multiple choice plus a noticeable share of yes/no and matching items, so you're not just drilling straight recall.
 Q: How long should I study for AB-620?
 A: Four to eight weeks if you already build with Copilot Studio or the wider Power Platform; longer if Power Fx, Dataverse, MCP, or agent lifecycle management are unfamiliar. The exam leans heavily on the Integrate and extend domain (40–45%), so prioritise hands-on time there.
 Q: AB-620 vs AI-103 — different agent roles?
@@ -280,7 +280,7 @@ A: Different platforms for different builders. AB-620 is Microsoft Copilot Studi
 Q: AB-620 vs AI-901 — which should I take first?
 A: Take AI-901 first if AI concepts are genuinely new to you — it's the Fundamentals exam and assumes no build experience. AB-620 is role-based and assumes you can already navigate Copilot Studio, Dataverse, and Power Platform environments.
 Q: Do I need a Copilot Studio licence to prepare for AB-620?
-A: Not to use Azure Mastery, but hands-on practice matters more for AB-620 than for most exams. Copilot Studio's trial environment is free and lets you build topics, agent flows, and knowledge-source connections without a production licence — pair that hands-on time with Azure Mastery's scenario questions rather than relying on question practice alone.
+A: Not to use Azure Mastery, but hands-on practice matters more for AB-620 than for most exams. Microsoft offers trial access to Copilot Studio — check the current terms on Microsoft Learn — and building topics, agent flows, and knowledge-source connections there pairs well with Azure Mastery's scenario questions, rather than relying on question practice alone.
 Q: Is Azure Mastery free for AB-620 prep?
 A: The app is free to download with a free allowance of AB-620 questions. The full 387-question AB-620 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
 Q: Does AB-620 practice work offline?
@@ -406,7 +406,7 @@ A: Yes — like every Microsoft Associate certification, AI-103 expires annually
 Q: What is the AI-103 retake policy if I fail?
 A: You can retake AI-103 24 hours after a failed first attempt; the second and third retakes each require a 14-day wait. Microsoft allows a maximum of five attempts in any rolling 12 months, and every attempt needs its own voucher.
 Q: What does the AI-103 exam format look like?
-A: AI-103 is 40–60 questions in a 100-minute session (120 minutes with the seat time Microsoft allows for exam admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Expect a mix of single-answer and multi-select multiple choice, ordering and matching items, and a small number of linked case-study questions — not just multiple choice.
+A: Like most Microsoft Certification exams, AI-103 has 40–60 questions in a mix of formats, with the exact timing confirmed at registration. It runs as a 100-minute session (120 minutes with the seat time Microsoft allows for exam admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. In Azure Mastery's AI-103 bank you'll practise several of those formats yourself — single-answer and multi-select multiple choice, ordering and matching items, and a small number of linked case studies.
 Q: How long should I study for AI-103?
 A: Plan for several weeks of focused study if you already write Python and have touched Azure AI services before; extend that if Microsoft Foundry, agents, or multimodal AI are new territory. The exam expects working familiarity across five distinct domains, so breadth of practice matters as much as depth in any one area. Azure Mastery's readiness gauge helps you judge when you've closed that gap.
 Q: AI-103 vs AI-102 — different roles?

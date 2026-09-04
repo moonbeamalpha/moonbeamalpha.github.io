@@ -70,8 +70,8 @@ if set(RETIRED) | set(RETIRING) != NON_CURRENT:
         f"Tools/optimise-marketing-seo.py."
     )
 
-GUIDE_UPDATED = "2026-08-09"
-GUIDE_UPDATED_LABEL = "Updated 9 August 2026"
+GUIDE_UPDATED = "2026-09-04"
+GUIDE_UPDATED_LABEL = "Updated 4 September 2026"
 GUIDE_SLUGS = (
     "which-azure-certification-first",
     "how-to-pass-az-900",
@@ -81,6 +81,14 @@ GUIDE_SLUGS = (
     "how-to-pass-ai-901",
     "az-900-vs-az-104",
     "sc-900-vs-az-900",
+    "how-to-pass-ai-103",
+    "how-to-pass-ab-620",
+    "how-to-pass-ab-100",
+    "how-to-pass-sc-500",
+    "how-to-pass-ai-200",
+    "ab-620-vs-ab-410",
+    "ai-103-vs-ai-200",
+    "sc-500-vs-az-500",
 )
 HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-az-900",
@@ -88,6 +96,11 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-sc-900",
     "how-to-pass-dp-900",
     "how-to-pass-ai-901",
+    "how-to-pass-ai-103",
+    "how-to-pass-ab-620",
+    "how-to-pass-ab-100",
+    "how-to-pass-sc-500",
+    "how-to-pass-ai-200",
 }
 # The trust pages and reference hubs (Track B, search-visibility recovery).
 # Each tuple is (slug, canonical URL, has_faq) -- unlike the guides above,
@@ -337,11 +350,19 @@ def validate_guide_pages(errors: list[str], llms: str) -> list[Path]:
     guide_pages.extend(ROOT / "guides" / slug / "index.html" for slug in GUIDE_SLUGS)
 
     expected_llms_contract = (
-        "Every guide article includes FAQ structured data, and the five how-to guides "
+        "Every guide article includes FAQ structured data, and the ten how-to guides "
         "also include study-plan structured data."
     )
     if expected_llms_contract not in llms:
         errors.append("llms.txt has a stale or inaccurate guide structured-data description")
+
+    hub_text = (ROOT / "guides" / "index.html").read_text()
+    expected_hub_count = f"<span>{len(GUIDE_SLUGS)} guides</span>"
+    if expected_hub_count not in hub_text:
+        errors.append(
+            f"guides/index.html: hub guide count does not match len(GUIDE_SLUGS) "
+            f"({len(GUIDE_SLUGS)}); expected {expected_hub_count!r}"
+        )
 
     for page in guide_pages:
         slug = "" if page.parent == ROOT / "guides" else page.parent.name

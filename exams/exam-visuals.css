@@ -112,7 +112,11 @@
 #objectives .domain h3 {
   min-height: 78px;
   margin: 0;
-  padding: 20px 22px 4px;
+  padding: 20px 22px 16px;
+}
+
+#objectives .domain h3:has(+ .domain__inventory) {
+  padding-bottom: 4px;
 }
 
 .domain__inventory {

@@ -423,11 +423,10 @@ A: All of it — question practice, scoring, and the readiness prediction run on
 ## /exams/ai-200/ — AI-200 Practice Questions — 220 Qs for AI Developer (2026)
 Page last modified: 2026-08-09
 Exam domains:
-  - Develop AI-powered compute solutions (20–25%)
-  - Develop for vector-enabled storage and data (15–20%)
-  - Implement AI pipelines and integration (20–25%)
-  - Implement security and identity for AI (15–20%)
-  - Monitor and optimize AI solutions (10–15%)
+  - Develop containerized solutions on Azure (20–25%)
+  - Develop AI solutions by using Azure data management services (25–30%)
+  - Connect to and consume Azure services (20–25%)
+  - Secure, monitor, and troubleshoot Azure solutions (20–25%)
 Q: How much does the AI-200 exam cost?
 A: The AI-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it is typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-200 also requires annual renewal (free, online), so factor that into long-term cost planning.
 Q: Does the AI-200 certification expire?
@@ -435,9 +434,11 @@ A: Yes. Microsoft Associate certifications including AI-200 expire annually. Ren
 Q: What is the AI-200 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for AI-200?
-A: Allow four to eight weeks of focused study if you already develop on Azure. Spend longer if Python, Azure SDKs, containerized applications, messaging, vector databases, identity, monitoring, or troubleshooting are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
+A: Allow four to eight weeks of focused study if you already develop on Azure. Spend longer if Python, Azure SDKs, containerized applications, Cosmos DB or PostgreSQL vector search, messaging, or KQL-based troubleshooting are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
+Q: What prior experience does AI-200 assume?
+A: AI-200 assumes you already work across the full AI-solution lifecycle on Azure — implementation, deployment, security, monitoring, and troubleshooting — with practical comfort in Azure and third-party SDKs, containerized applications, and Python. It expects you to already know your way around Azure data management services and messaging, not to learn them from the study guide alone. If containers or vector-capable databases are genuinely new to you, budget extra time beyond the usual four-to-eight-week window.
 Q: AI-200 vs AI-103 — different roles?
-A: Different emphases. AI-200 validates back-end Azure development for AI solutions, including containers, data services, messaging, identity, monitoring, and troubleshooting. AI-103 focuses on developing AI apps and agents with Python and Microsoft Foundry. AI-200 is cloud-platform and service integration; AI-103 is model, agent, retrieval, and AI-application implementation.
+A: Different emphases. AI-200 validates back-end Azure development for AI solutions, including containers, data services, messaging, security, monitoring, and troubleshooting. AI-103 focuses on developing AI apps and agents with Python and Microsoft Foundry. AI-200 is cloud-platform and service integration; AI-103 is model, agent, retrieval, and AI-application implementation.
 Q: AI-200 vs AI-300 — which next?
 A: AI-200 first. AI-200 is the AI Cloud Developer Associate cert — building the platform that AI workloads run on. AI-300 is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it.
 Q: Is Azure Mastery free for AI-200 prep?
@@ -567,6 +568,8 @@ Q: What is the AZ-104 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for AZ-104?
 A: Most candidates plan four to eight weeks with prior Azure experience, or longer if they are new to administration. Practise identity and governance, storage, compute, virtual networking, and monitoring in the portal and with Azure CLI, PowerShell, and Bicep so you can choose and apply the right administration method. Azure Mastery's readiness gauge tells you when you are exam-ready.
+Q: What prior experience does AZ-104 assume?
+A: AZ-104 assumes familiarity with operating systems, networking, servers, and virtualisation, plus hands-on experience with PowerShell, Azure CLI, the Azure portal, and ARM templates or Bicep files. It isn't written for someone with zero IT background — Microsoft expects a working administrator, not a beginner learning what a virtual machine is. If those fundamentals are genuinely new, AZ-900 first (or general IT experience) will make AZ-104 far more approachable.
 Q: AZ-104 vs AZ-900 — which should I take first?
 A: If you have less than six months of hands-on Azure experience, take AZ-900 (Microsoft Azure Fundamentals) first. It builds the conceptual map AZ-104 assumes you already have. If you have a year or more of practical Azure work, you can skip AZ-900 and go straight to AZ-104 — most hiring managers care about AZ-104 specifically. AZ-900 is often dropped from CVs once AZ-104 is on it.
 Q: AZ-104 vs AZ-305 — which next?
@@ -729,6 +732,8 @@ Q: AZ-900 vs AZ-104 — which should I take first?
 A: AZ-900 first, almost always. AZ-900 is designed as the on-ramp to AZ-104 (Microsoft Azure Administrator). It takes a few weeks to prepare for and does not expire; AZ-104 takes two to three months and requires hands-on PowerShell and CLI knowledge. Most people pass AZ-900 to confirm cloud is the right direction, then commit to AZ-104.
 Q: Is AZ-900 worth taking if I am not technical?
 A: Yes — that is exactly who AZ-900 is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles. The exam does not expect you to write a PowerShell script. It expects you to explain concepts such as region pairs, the shared responsibility model, and when a hybrid cloud is appropriate.
+Q: What prerequisites does AZ-900 assume?
+A: AZ-900 has no formal prerequisites — Microsoft designed it as the common entry point into the Azure ecosystem. That said, some background in an area of IT (infrastructure, databases, or software development) makes the material easier to absorb quickly, since you'll already have working knowledge of an environment to map Azure's concepts onto. If you're coming from a completely non-technical background, expect the low end of the one-to-two-week study estimate to stretch out.
 Q: Is Azure Mastery free for AZ-900 prep?
 A: The app is free to download and includes a free allowance of AZ-900 questions so you can try every feature. The full bank of 364 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-900 practice work offline?
@@ -1108,6 +1113,8 @@ Q: What is the SC-500 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for SC-500?
 A: Most candidates pass SC-500 after four to eight weeks of focused study, assuming some prior Azure and Microsoft Entra experience. If cloud security is genuinely new to you, plan for two to three months — the exam expects hands-on knowledge of Defender for Cloud, Microsoft Sentinel, Entra ID, and Key Vault, not just concepts. Azure Mastery's readiness gauge tells you when you are at exam-ready — do not book until it shows roughly 720 or higher with reasonable confidence.
+Q: What prior experience does SC-500 assume?
+A: SC-500 assumes hands-on experience administering Azure and hybrid environments — compute, network, and storage — plus strong familiarity with Microsoft Entra ID and some exposure to Microsoft 365 administration. It isn't a from-scratch security course: Microsoft expects you to already operate the infrastructure you're being asked to secure. If you're new to Azure administration, working through AZ-104 material first (or the free AZ-900 fundamentals) will close that gap faster than jumping straight into security-specific practice.
 Q: SC-500 vs SC-200 — which next on the security track?
 A: Different roles. SC-500 (Cloud and AI Security Engineer) is about implementing security controls — hardening identity, storage, networking, compute, and AI workloads across Azure and hybrid environments. SC-200 (Security Operations Analyst) is about running Microsoft Defender XDR and Sentinel as a SOC analyst, with heavier focus on detection, investigation, and incident response across the Microsoft 365 estate. If your day job is securing cloud and AI workloads, take SC-500. If it is running detection-and-response, take SC-200. Many Cybersecurity Architect (SC-100) candidates hold both, with SC-900 as the connective fundamentals.
 Q: Is Azure Mastery free for SC-500 prep?

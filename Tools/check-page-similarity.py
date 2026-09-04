@@ -57,10 +57,10 @@ page landing) by construction, not by exempting anything from scrutiny:
 
   (i)   For every pair present in BOTH the baseline and the current corpus --
         i.e. both of its pages are still current -- the drift check compares
-        like with like: this pair's CURRENT ratio against its BASELINE ratio,
-        rolled up into a shared-pairs mean and max, each checked against its
-        own baseline counterpart (also computed over just the shared pairs)
-        with the existing +0.005 tolerance. A page retiring changes which
+        like with like: this pair's CURRENT ratio against its own BASELINE
+        ratio with the existing +0.005 tolerance. Shared-pairs mean and max
+        summaries are checked too, so both local cloning and broad corpus
+        convergence fail the ratchet. A page retiring changes which
         pairs are "shared" but never changes what a still-current pair's own
         historical ratio was, so removing a page cannot move this number the
         way comparing against the old whole-corpus mean/max could.
@@ -329,11 +329,26 @@ def main() -> None:
         failed = False
 
         # (i) Pairs whose both pages are still current: compare this pair's
-        # own baseline ratio against its own current ratio, rolled up into a
-        # shared-only mean/max on each side -- immune to corpus churn because
-        # neither side's summary depends on any pair that isn't shared.
+        # own baseline ratio against its own current ratio. Keep the aggregate
+        # shared-only mean/max checks as broad-corpus signals, but do not rely
+        # on them: one cloned pair can otherwise be diluted across 435 pairs
+        # while remaining below whichever unrelated pair owns the maximum.
         shared_keys = base_pairs.keys() & pairs.keys()
         if shared_keys:
+            pair_regressions = []
+            for key in sorted(shared_keys):
+                drift = pairs[key] - base_pairs[key]
+                if drift > DRIFT_TOLERANCE:
+                    pair_regressions.append((key, base_pairs[key], pairs[key], drift))
+            for key, baseline_ratio, current_ratio, drift in pair_regressions:
+                a, b = key.split("~", 1)
+                print(f"  DRIFT  shared pair {a} ~ {b}: "
+                      f"{baseline_ratio:.4f} -> {current_ratio:.4f} ({drift:+.4f})")
+            if pair_regressions:
+                print(f"FAIL  {len(pair_regressions)} shared pair(s) regressed above "
+                      f"the +{DRIFT_TOLERANCE} tolerance.")
+                failed = True
+
             shared_base_max, shared_base_mean = summarise({k: base_pairs[k] for k in shared_keys})
             shared_cur_max, shared_cur_mean = summarise({k: pairs[k] for k in shared_keys})
             max_drift = shared_cur_max - shared_base_max

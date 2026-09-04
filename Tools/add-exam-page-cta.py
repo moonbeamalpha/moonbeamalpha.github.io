@@ -7,7 +7,8 @@ Apple-prefixed one. Modelled on Tools/add-theme-support.py: a list of
 (anchor, replacement) edits per file; every anchor is asserted to match
 exactly once before anything is written; a file that already carries the
 `mobile-cta-bar` marker (or, for meta-only targets, the standalone
-`mobile-web-app-capable` tag) is skipped outright so re-runs are no-ops.
+`mobile-web-app-capable` tag) is validated so re-runs are no-ops only when
+every required surface is still intact.
 
     python3 Tools/add-exam-page-cta.py            # apply
     python3 Tools/add-exam-page-cta.py --check    # dry run; report only, exit 1 on drift
@@ -222,6 +223,51 @@ def apply_hero_span(text: str, code: str) -> tuple[str, int]:
     return new_text, n
 
 
+def require_exactly_once(text: str, expected: str, path: Path, label: str) -> None:
+    """Assert that a generated surface is present exactly once.
+
+    The patchers double as CI gates. A marker-only idempotency check can miss a
+    partial hand edit (for example, a surviving sticky bar alongside a deleted
+    mid-page CTA), so the gate verifies the complete generated postcondition.
+    """
+    count = text.count(expected)
+    if count != 1:
+        raise AssertionError(f"{path}: {label} matched {count} times (want 1)")
+
+
+def validate_full_page(text: str, path: Path, code: str, code_lower: str, retired: bool) -> None:
+    require_exactly_once(
+        text, sticky_bar_html(code, code_lower, retired), path, "sticky download bar"
+    )
+    require_exactly_once(
+        text, inline_cta_html(code, code_lower, "mid1", retired), path, "first inline CTA"
+    )
+    require_exactly_once(
+        text, inline_cta_html(code, code_lower, "mid2", retired), path, "second inline CTA"
+    )
+    require_exactly_once(text, nav_badge_html(code), path, "exam-code nav badge")
+    require_exactly_once(
+        text,
+        f'<span class="am-cert-hero__lead-code">{code}:</span> ',
+        path,
+        "exam-code hero span",
+    )
+    require_exactly_once(text, MOBILE_WEB_META_LINE, path, "mobile-web-app-capable meta")
+
+
+def validate_hero_fragment(text: str, path: Path) -> None:
+    require_exactly_once(
+        text,
+        '<span class="am-cert-hero__lead-code">{{CERT_CODE}}:</span> ',
+        path,
+        "exam-code hero span",
+    )
+
+
+def validate_meta_only(text: str, path: Path) -> None:
+    require_exactly_once(text, MOBILE_WEB_META_LINE, path, "mobile-web-app-capable meta")
+
+
 def process_full_page(path: Path, code: str, code_lower: str) -> str:
     text = path.read_text()
     retired = code in RETIRED_CODES
@@ -253,6 +299,7 @@ def process_full_page(path: Path, code: str, code_lower: str) -> str:
             text, label_changed = rewrite_retired_sticky_label(text, code)
             if label_changed:
                 changes.append("retired sticky label")
+        validate_full_page(text, path, code, code_lower, retired)
         if not changes:
             return "skip (already patched)"
         if not CHECK:
@@ -270,6 +317,7 @@ def process_full_page(path: Path, code: str, code_lower: str) -> str:
 
     text = insert_deprecated_meta(text, path)
     text, _ = apply_hero_span(text, code)
+    validate_full_page(text, path, code, code_lower, retired)
 
     if not CHECK:
         path.write_text(text)
@@ -279,8 +327,10 @@ def process_full_page(path: Path, code: str, code_lower: str) -> str:
 def process_hero_fragment(path: Path) -> str:
     text = path.read_text()
     if HERO_MARKER in text:
+        validate_hero_fragment(text, path)
         return "skip (already patched)"
     text, _ = apply_hero_span(text, "{{CERT_CODE}}")
+    validate_hero_fragment(text, path)
     if not CHECK:
         path.write_text(text)
     return "updated" if not CHECK else "would update"
@@ -289,8 +339,10 @@ def process_hero_fragment(path: Path) -> str:
 def process_meta_only(path: Path) -> str:
     text = path.read_text()
     if META_MARKER in text:
+        validate_meta_only(text, path)
         return "skip (already has mobile-web-app-capable)"
     text = insert_deprecated_meta(text, path)
+    validate_meta_only(text, path)
     if not CHECK:
         path.write_text(text)
     return "updated" if not CHECK else "would update"

@@ -89,15 +89,19 @@ HOW_TO_GUIDE_SLUGS = {
     "how-to-pass-dp-900",
     "how-to-pass-ai-901",
 }
-# The three trust pages (Track B, search-visibility recovery). Each tuple is
-# (slug, canonical URL, has_faq) -- unlike the guides above, these live at
-# top level (not under /guides/) and carry no HowTo/EducationalOccupational-
-# Credential schema, so they get their own light contract in
-# validate_static_content_pages() rather than reusing validate_guide_pages().
+# The trust pages and reference hubs (Track B, search-visibility recovery).
+# Each tuple is (slug, canonical URL, has_faq) -- unlike the guides above,
+# these live at top level or under /exams/ but outside the per-exam-code
+# pattern, and carry no HowTo/EducationalOccupationalCredential schema, so
+# they get their own light contract in validate_static_content_pages()
+# rather than reusing validate_guide_pages(). exams/retired/ is a slash-
+# bearing slug (Path handles the "/" the same as any other segment), added
+# by Task B4 for the five retired/retiring exams' reference hub.
 STATIC_CONTENT_PAGES = (
     ("about", "https://azuremastery.app/about/", False),
     ("how-we-write-questions", "https://azuremastery.app/how-we-write-questions/", True),
     ("how-exam-iq-works", "https://azuremastery.app/how-exam-iq-works/", True),
+    ("exams/retired", "https://azuremastery.app/exams/retired/", True),
 )
 ACTIVE_SEO_REQUIREMENTS = {
     "AB-650": ("AI Services Administrator", "Copilot", "Purview"),

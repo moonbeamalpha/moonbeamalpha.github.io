@@ -15,6 +15,7 @@ Last updated: 2026-08-09
 - [About Azure Mastery](https://azuremastery.app/about/): Who publishes the app, what it does, and how it's built.
 - [How we write and verify practice questions](https://azuremastery.app/how-we-write-questions/): How questions are written against Microsoft's published skills outlines, checked on every change, and watched weekly for drift.
 - [How Exam IQ predicts your score](https://azuremastery.app/how-exam-iq-works/): How the on-device Exam IQ engine predicts a certification exam score from your practice record with an on-device CoreML model.
+- [Retired Microsoft exams and what replaced them](https://azuremastery.app/exams/retired/): The five retired and retiring exams (AI-900, AI-102, DP-100, AZ-204, AZ-500), when each retired, and its current successor exam.
 - [Support](https://azuremastery.app/apps/AzureMastery/support.html): User support, contact, and FAQ.
 - [Privacy Policy](https://azuremastery.app/apps/AzureMastery/privacy.html): Data handling — none collected; everything runs on-device.
 - [Terms of Use](https://azuremastery.app/apps/AzureMastery/terms.html): Standard EULA for in-app purchases.
@@ -993,6 +994,19 @@ Q: Does PL-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a PL-900 practice test mode?
 A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+
+## /exams/retired/ — Retired Microsoft Exams &amp; Successors | Azure Mastery
+Page last modified: 2026-09-04
+Q: Can I still book a retired exam?
+A: No — once Microsoft retires an exam, Pearson VUE stops scheduling new sittings for it. AZ-500 is the one exception on this page: it stays bookable until it retires on 31 August 2026.
+Q: Does my credential expire when the exam retires?
+A: No. A credential you earned by passing a Microsoft exam stays valid and stays on your Microsoft Learn transcript after the exam itself retires — retirement stops new bookings, it doesn't undo a credential you've already earned.
+Q: Should I renew or move to the successor?
+A: If you already hold the credential and it's due for renewal, Microsoft's free online renewal assessment keeps it current — you don't need to sit the successor exam. If you haven't passed the original exam yet, book the successor instead: the retired exam can no longer be scheduled.
+Q: Do retired questions still count in the app?
+A: Azure Mastery keeps each retired exam's question bank in the app as reference material for anyone who bought it, or passed the exam before it retired. It isn't counted in the app's advertised exam or question totals.
+Q: Which retired exam maps to which successor?
+A: AI-900 to AI-901, AI-102 to AI-103, DP-100 to AI-300, AZ-204 to AI-200, and AZ-500 to SC-500. The table above lists all five with their retirement dates.
 
 ## /exams/sc-100/ — SC-100 Practice Questions — 452 Qs for Cyber Architect (2026)
 Page last modified: 2026-08-09

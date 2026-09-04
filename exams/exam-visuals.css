@@ -245,7 +245,7 @@
   line-height: 1.7;
 }
 
-/* App benefits become visual numbered cards instead of a wall of paragraphs. */
+/* App benefits are short, scannable numbered cards. */
 #how-helps.exam-feature-grid {
   counter-reset: exam-benefits;
   display: grid;
@@ -260,7 +260,7 @@
   grid-column: 1 / -1;
 }
 
-#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow) {
+#how-helps.exam-feature-grid > .exam-benefit {
   counter-increment: exam-benefits;
   position: relative;
   margin: 0;
@@ -272,10 +272,10 @@
     radial-gradient(circle at 100% 0%, rgba(80, 230, 255, 0.09), transparent 42%),
     rgba(255, 255, 255, 0.025);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow)::before {
+#how-helps.exam-feature-grid > .exam-benefit::before {
   content: counter(exam-benefits, decimal-leading-zero);
   position: absolute;
   top: 18px;
@@ -287,7 +287,7 @@
   letter-spacing: 0.14em;
 }
 
-#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow)::after {
+#how-helps.exam-feature-grid > .exam-benefit::after {
   content: '';
   position: absolute;
   top: 25px;
@@ -297,7 +297,25 @@
   background: linear-gradient(90deg, var(--azure-cyan), transparent);
 }
 
-#how-helps.exam-feature-grid > p:not(.section-lede):not(.section-eyebrow) strong {
+#how-helps.exam-feature-grid > .exam-benefit h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+#how-helps.exam-feature-grid > .exam-benefit ul {
+  margin: 0;
+  padding-left: 19px;
+  color: var(--text-secondary);
+}
+
+#how-helps.exam-feature-grid > .exam-benefit li + li {
+  margin-top: 7px;
+}
+
+#how-helps.exam-feature-grid > .exam-benefit strong {
   color: var(--text-primary);
 }
 
@@ -1279,7 +1297,7 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: calc(100% - 48px);
   max-width: 832px;
   margin-inline: auto;
@@ -1288,7 +1306,7 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   border-radius: 14px;
   background: rgba(80,230,255,0.05);
 }
-.exam-inline-cta__text { font-size: 15px; line-height: 1.5; color: var(--text-primary); }
+.exam-inline-cta__text { flex: 1 1 0; min-width: 0; margin: 0; font-size: 15px; line-height: 1.5; color: var(--text-primary); }
 .exam-inline-cta__btn {
   flex: none;
   min-height: 44px;
@@ -1300,7 +1318,7 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
 }
 @media (max-width: 640px) {
   .exam-inline-cta { flex-direction: column; align-items: stretch; }
-  .exam-inline-cta__btn { justify-content: center; }
+  .exam-inline-cta__btn { width: 100%; justify-content: center; }
 }
 
 /* ── Exam code in the hero headline and the sticky nav ── */
@@ -1332,14 +1350,34 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
    inter-item spacing first; only the narrowest phones below drop the chip
    entirely. */
 @media (max-width: 400px) {
-  .site-nav { padding: 14px 14px; }
+  .site-nav { gap: 8px; padding: 14px; }
   .site-nav__cta { padding: 0 14px; }
   .site-nav__context { margin-left: 6px; padding: 2px 7px; font-size: 11px; }
 }
-/* Narrowest phones (below iPhone SE-class): drop the chip entirely rather
-   than let it force any wrapping or overflow. */
+/* Narrowest phones keep the page context; the redundant wordmark yields. */
 @media (max-width: 350px) {
-  .site-nav__context { display: none; }
+  .site-nav__brand span { display: none; }
+  .site-nav__brand { flex: 0 0 auto; }
+  .site-nav__context { display: inline-flex; margin-left: 0; }
+  .site-nav__cta { padding-inline: 12px; }
+}
+
+.site-nav__cta,
+.theme-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+}
+
+.site-nav__cta:focus-visible,
+.exam-inline-cta__btn:focus-visible,
+.mobile-cta-bar__btn:focus-visible {
+  outline: 2px solid var(--azure-cyan);
+  outline-offset: 3px;
+}
+
+.mobile-cta-bar.is-suppressed {
+  display: none;
 }
 
 /* ── Per-question "see the full rationale" quiz link (Deliverable 2,

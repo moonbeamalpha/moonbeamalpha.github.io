@@ -20,7 +20,7 @@ for (const path of htmlFiles(root)) {
   assert(!(html.includes('GTM-TK79R26R') && html.includes('G-YTN7LFS04Y')), `Duplicate analytics: ${path}`);
 }
 const home = read('index.html');
-assert(home.includes('href="/home.min.css"'), 'Homepage must use the generated CSS bundle');
+assert(/href="\/home\.min\.css(?:\?v=[0-9a-f]{12})?"/.test(home), 'Homepage must use the generated CSS bundle');
 assert(!/src="[^"\n]*(?:gsap|ScrollTrigger)/i.test(home), 'Animation libraries returned to the critical path');
 assert(!/html\.js/.test(read('home.css')), 'Do not hide initial content behind a JS marker');
 for (const [, attributes, source] of home.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)) {

@@ -143,16 +143,21 @@ NAV_BADGE_OPEN = '<span class="site-nav__context">'
 
 
 def nav_badge_html(code: str) -> str:
-    return f'    {NAV_BADGE_OPEN}{code}</span>\n'
+    return f'    {NAV_BADGE_OPEN}<span class="sr-only">Exam </span>{code}</span>\n'
 
 
 def rewrite_nav_badge_aria(text: str) -> tuple[str, bool]:
     """`aria-label` is invalid on a generic <span> — drop it from pages an
     earlier version of this tool already patched. A page without the
     attribute is untouched, so this stays idempotent."""
-    if NAV_BADGE_OPEN_WITH_ARIA not in text:
-        return text, False
-    return text.replace(NAV_BADGE_OPEN_WITH_ARIA, NAV_BADGE_OPEN), True
+    original = text
+    text = text.replace(NAV_BADGE_OPEN_WITH_ARIA, NAV_BADGE_OPEN)
+    text = re.sub(
+        r'<span class="site-nav__context">(?!<span class="sr-only">Exam </span>)([^<]+)</span>',
+        r'<span class="site-nav__context"><span class="sr-only">Exam </span>\1</span>',
+        text,
+    )
+    return text, text != original
 
 
 def full_page_edits(code: str, code_lower: str, retired: bool) -> list[tuple[str, str]]:

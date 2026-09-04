@@ -349,19 +349,27 @@
     /* Question types — visualisations of each format */
     .question-types {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 18px;
       margin-top: 16px;
     }
     @media (min-width: 640px) { .question-types { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1000px) { .question-types { grid-template-columns: repeat(3, 1fr); } }
     .qt {
+      min-width: 0;
       padding: 20px 22px;
       background: rgba(255,255,255,0.025);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
       display: flex;
       flex-direction: column;
+    }
+
+    .container p,
+    .container li,
+    main code {
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
     .qt__viz {
       background: rgba(10,14,26,0.7);
@@ -879,4 +887,3 @@
 .quiz-summary a:hover { text-decoration: underline; }
 /* 44pt tap targets (Apple HIG minimum) */
 .site-nav__cta { min-height: 44px; display: inline-flex; align-items: center; }
-

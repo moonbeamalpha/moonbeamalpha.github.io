@@ -319,6 +319,72 @@ html[data-theme="light"] .guide-table tbody tr:nth-child(even) {
   background: rgba(14, 116, 144, 0.035);
 }
 
+/* Canonical article shell polish. Kept here so it loads after the shared
+   article foundation and theme overrides on every guide/trust page. */
+.guide-inline-cta {
+  flex-wrap: nowrap;
+  width: calc(100% - 48px);
+}
+
+.guide-inline-cta__text {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.site-nav__cta,
+.theme-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .site-nav { gap: 8px; padding-inline: 14px; }
+  .site-nav__brand { min-width: 0; }
+  .site-nav__brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .guide-inline-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .guide-inline-cta__btn { width: 100%; justify-content: center; }
+
+  .guide-table-wrap { overflow: visible; border: 0; background: transparent; }
+  .guide-table,
+  .guide-table tbody,
+  .guide-table tr,
+  .guide-table th,
+  .guide-table td { display: block; width: 100%; min-width: 0; }
+  .guide-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .guide-table tbody { display: grid; gap: 12px; }
+  .guide-table tbody tr {
+    overflow: hidden;
+    padding: 12px 14px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+  }
+  .guide-table th,
+  .guide-table td { padding: 7px 0; border: 0; white-space: normal; }
+  .guide-table td::before {
+    display: block;
+    margin-bottom: 2px;
+    content: attr(data-label);
+    color: var(--text-muted);
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 350px) {
+  .site-nav__brand span { display: none; }
+  .site-nav__cta { padding-inline: 12px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .guide-card,
   .topic-card,

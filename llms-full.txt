@@ -214,23 +214,25 @@ Exam domains:
   - Design AI-powered business solutions (25–30%)
   - Deploy AI-powered business solutions (40–45%)
 Q: How much does the AB-100 exam cost?
-A: The AB-100 voucher is USD $165 in the United States. Pricing varies by region — in the UK it is typically around £128. AB-100 is a senior architecture exam, so Microsoft rarely discounts it in free-voucher promotions; if a voucher is available via Microsoft Build or Microsoft Ignite, grab it. The credential also requires annual renewal (free, online), so factor that into long-term cost planning.
+A: The AB-100 voucher costs USD $165 in the United States (around £128 in the UK; pricing varies by region). As an Expert-tier exam, AB-100 is rarely included in free-voucher promotions — if one appears around Microsoft Build or Microsoft Ignite, it's worth grabbing. Renewal itself stays free.
 Q: Does the AB-100 certification expire?
-A: Yes. Microsoft specialty and associate certifications including AB-100 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates (Foundry models, Copilot Studio features, Dynamics 365 Copilot), so staying current is straightforward if you remain broadly active in agentic AI architecture work. Fundamentals certifications such as AB-900 are different — those don't expire.
+A: Yes. Like Microsoft's other role-based certifications, AB-100 expires annually, with a free 25–30 question renewal assessment on Microsoft Learn available in the six-month window before expiry — scoped to whatever changed since you last certified (Foundry, Copilot Studio MCP features, Dynamics 365 orchestration, and similar). AB-900, the Fundamentals-tier exam, doesn't expire.
 Q: What is the AB-100 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-100 has a low pass-rate publicly reported by candidates because it spans the entire Microsoft AI surface (Foundry, Copilot Studio, Dynamics 365 Copilot, MCP, A2A) — invest in the readiness gauge rather than rebooking blindly.
+A: 24 hours before your first retake, then 14 days for the second and third, capped at five attempts in any rolling 12 months with a fresh voucher each time. Given how broad AB-100's syllabus is, treat a fail as a signal to target the weakest domain specifically rather than rebooking immediately.
+Q: What does the AB-100 exam format look like?
+A: AB-100 is 40–60 questions across a 100-minute session (120 minutes with seat time for admin), online or at a test centre, scored out of 1000 with a 700 pass mark. Expect a heavier share of multi-paragraph scenario questions than on the associate-level agent exams — AB-100 tests architectural judgement against a business setup more than isolated recall.
 Q: How long should I study for AB-100?
-A: Most candidates pass AB-100 after eight to twelve weeks of focused study, assuming hands-on experience with at least one of Copilot Studio, Foundry, or Dynamics 365. If multi-agent orchestration is genuinely new to you, plan for three to four months — the exam expects you to design end-to-end agentic-first solutions, not just describe concepts. Azure Mastery's readiness gauge tells you when you are at exam-ready — do not book until it shows roughly 740 or higher with reasonable confidence.
+A: Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions, not just describe the pieces.
 Q: AB-100 vs AB-620 — which agent cert should I take?
-A: Different roles. AB-620 (AI Agent Builder) is the maker-level cert focused on building agents in Copilot Studio — topics, generative answers, knowledge sources, channels. AB-100 (Agentic AI Business Solutions Architect) sits above it: it expects you to architect multi-agent, cross-platform solutions that span Copilot Studio, Microsoft Foundry, Dynamics 365 apps, and Power Platform — plus ALM, governance, ROI analysis, responsible AI, and security. AB-620 first if you are building agents day-to-day; AB-100 if you are leading the architecture decisions across teams.
+A: Different altitudes. AB-620 certifies the maker who builds an agent in Copilot Studio. AB-100 certifies the architect who decides which platform an agent belongs on, how it's governed, and how the ALM and ROI case gets made across Copilot Studio, Foundry, and Dynamics 365 at once. Build the agent first; architect the estate second.
 Q: AB-100 vs AI-103 vs AB-620 — how do the roles differ?
-A: AI-103 is the code-first developer credential for Python and Microsoft Foundry agents. AB-620 is the Copilot Studio builder credential for integrated low-code agents. AB-100 is the architect-level credential spanning Microsoft Foundry, Copilot Studio, Microsoft 365 Copilot, Dynamics 365, and Power Platform. Choose the implementation credential that matches your role before moving into architecture.
+A: AI-103 is the code-first developer path (Python, Foundry). AB-620 is the Copilot Studio builder path (low-code agents). AB-100 sits above both as the architecture credential spanning every Microsoft AI surface. Get comfortable with an implementation credential before attempting the architecture-level exam.
+Q: Do I need prerequisites before attempting AB-100?
+A: Not formally, but AB-100 assumes it. Microsoft expects candidates to already hold AI-901-level knowledge, plus working experience with at least one of AI-102, AI-103, PL-200, PL-300, PL-400, PL-500, or AB-620. AB-100 tests architectural decisions across platforms you're assumed to already know individually — it isn't where most candidates start their Microsoft AI journey.
 Q: Is Azure Mastery free for AB-100 prep?
-A: The app is free to download and includes a free allowance of AB-100 questions so you can try every feature. The full bank of 443 AB-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download with a free allowance of AB-100 questions. The full 443-question AB-100 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
 Q: Does AB-100 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AB-100 practice test mode?
-A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
 
 ## /exams/ab-410/ — AB-410 Practice Questions — 424 Qs & Exam Prep (2026)
 Page last modified: 2026-08-09
@@ -264,23 +266,25 @@ Exam domains:
   - Integrate and extend agents in Copilot Studio (40–45%)
   - Test and manage agents (20–25%)
 Q: How much does the AB-620 exam cost?
-A: The AB-620 voucher is USD $165 in the United States. Pricing varies by region — in the UK it is typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AB-620 also requires annual renewal (free, online), so factor that into long-term cost planning.
+A: The AB-620 voucher costs USD $165 in the United States (around £128 in the UK; pricing varies by region). Watch for occasional free-voucher promotions around Microsoft Build or Microsoft Ignite — Microsoft doesn't run them year-round. Renewal itself is free.
 Q: Does the AB-620 certification expire?
-A: Yes. Microsoft Associate certifications including AB-620 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. Fundamentals certifications such as AZ-900 are different — those don't expire.
+A: Yes — AB-620 expires annually like every Microsoft Associate certification. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry and scoped to whatever changed in the outline since you last certified. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
 Q: What is the AB-620 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: 24 hours before your first retake, then a 14-day wait for the second and third. Microsoft caps you at five attempts in any rolling 12 months, and each attempt needs its own voucher.
+Q: What does the AB-620 exam format look like?
+A: AB-620 is 40–60 questions in a 100-minute session (120 minutes with seat time for admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Expect single-answer and multi-select multiple choice plus a noticeable share of yes/no and matching items — AB-620 tests configuration recognition as much as recall.
 Q: How long should I study for AB-620?
-A: Allow four to eight weeks of focused study if you already build with Copilot Studio or Power Platform. Spend longer if Power Fx, Dataverse, Microsoft 365 Copilot, authentication, adaptive cards, or agent lifecycle management are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
+A: Four to eight weeks if you already build with Copilot Studio or the wider Power Platform; longer if Power Fx, Dataverse, MCP, or agent lifecycle management are unfamiliar. The exam leans heavily on the Integrate and extend domain (40–45%), so prioritise hands-on time there.
 Q: AB-620 vs AI-103 — different agent roles?
-A: Different platforms. AB-620 is the AI Agent Builder cert focused on Microsoft Copilot Studio — a low-code platform for building agents with topics, generative answers, and Power Platform integrations. AI-103 is the AI Apps and Agents Developer Associate cert focused on Microsoft Foundry — a code-first platform for custom agentic apps with Python, tool calling, retrieval, and multi-agent orchestration. AB-620 is for Copilot Studio builders; AI-103 is for app developers. Many enterprises use both.
+A: Different platforms for different builders. AB-620 is Microsoft Copilot Studio — a low-code environment for building agents with topics, generative answers, and Power Platform integrations. AI-103 is Microsoft Foundry — a code-first platform for Python-based agents, tool calling, and multi-agent orchestration. AB-620 is for Copilot Studio builders; AI-103 is for app developers. Many enterprises use people certified in both.
 Q: AB-620 vs AI-901 — which should I take first?
-A: AI-901 first if AI concepts are new to you. AI-901 is the current Azure AI Fundamentals exam and covers AI concepts, responsible AI, Microsoft Foundry, and introductory Python. AB-620 is the role-based exam for designing, integrating, testing, and governing agents in Copilot Studio. Candidates new to AI can use AI-901 as a foundation before AB-620.
+A: Take AI-901 first if AI concepts are genuinely new to you — it's the Fundamentals exam and assumes no build experience. AB-620 is role-based and assumes you can already navigate Copilot Studio, Dataverse, and Power Platform environments.
+Q: Do I need a Copilot Studio licence to prepare for AB-620?
+A: Not to use Azure Mastery, but hands-on practice matters more for AB-620 than for most exams. Copilot Studio's trial environment is free and lets you build topics, agent flows, and knowledge-source connections without a production licence — pair that hands-on time with Azure Mastery's scenario questions rather than relying on question practice alone.
 Q: Is Azure Mastery free for AB-620 prep?
-A: The app is free to download and includes a free allowance of AB-620 questions so you can try every feature. The full bank of 387 AB-620 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download with a free allowance of AB-620 questions. The full 387-question AB-620 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
 Q: Does AB-620 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AB-620 practice test mode?
-A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
 
 ## /exams/ab-650/ — AB-650 Practice Questions — 506 Qs & Exam Prep (2026)
 Page last modified: 2026-08-23
@@ -396,23 +400,25 @@ Exam domains:
   - Implement text analysis solutions (10–15%)
   - Implement information extraction solutions (10–15%)
 Q: How much does the AI-103 exam cost?
-A: The AI-103 voucher is USD $165 in the United States. Pricing varies by region — in the UK it is typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-103 also requires annual renewal (free, online), so factor that into long-term cost planning.
+A: The AI-103 voucher costs USD $165 in the United States (around £128 in the UK; regional pricing varies). Because AI-103 is a role-based Associate exam rather than a Fundamentals-tier one, Microsoft rarely bundles it into free promotional vouchers — watch for occasional offers around Microsoft Build or Microsoft Ignite instead. Renewal itself is free.
 Q: Does the AI-103 certification expire?
-A: Yes. Microsoft Associate certifications including AI-103 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. Fundamentals certifications such as AZ-900 are different — those don't expire.
+A: Yes — like every Microsoft Associate certification, AI-103 expires annually. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry, and it's scoped to whatever changed in the outline since you last certified. AI-901, the Fundamentals-tier exam, doesn't expire — only role-based certifications like AI-103 do.
 Q: What is the AI-103 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: You can retake AI-103 24 hours after a failed first attempt; the second and third retakes each require a 14-day wait. Microsoft allows a maximum of five attempts in any rolling 12 months, and every attempt needs its own voucher.
+Q: What does the AI-103 exam format look like?
+A: AI-103 is 40–60 questions in a 100-minute session (120 minutes with the seat time Microsoft allows for exam admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Expect a mix of single-answer and multi-select multiple choice, ordering and matching items, and a small number of linked case-study questions — not just multiple choice.
 Q: How long should I study for AI-103?
-A: Most candidates should allow several weeks of focused study and hands-on practice. AI-103 expects experience developing apps with Python plus familiarity with Microsoft Foundry, general AI, generative AI, and Azure services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
+A: Plan for several weeks of focused study if you already write Python and have touched Azure AI services before; extend that if Microsoft Foundry, agents, or multimodal AI are new territory. The exam expects working familiarity across five distinct domains, so breadth of practice matters as much as depth in any one area. Azure Mastery's readiness gauge helps you judge when you've closed that gap.
 Q: AI-103 vs AI-102 — different roles?
-A: AI-102 retired on June 30, 2026. AI-103 is the current exam for the Azure AI Apps and Agents Developer Associate credential. It assesses planning and managing Azure AI solutions, generative and agentic solutions, computer vision, text analysis, and information extraction by using Microsoft Foundry and Python.
+A: AI-102 retired on 30 June 2026. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, and it reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content — not just a renamed version of the old outline.
 Q: AI-103 vs AI-901 — which should I take first?
-A: AI-901 first if AI concepts are new to you. AI-901 is the current Azure AI Fundamentals exam and covers core AI concepts plus foundational Microsoft Foundry and Python skills. AI-103 is the role-based Associate exam and expects hands-on Python development with Microsoft Foundry, agents, retrieval, evaluation, and Azure AI services. Many candidates use AI-901 as their foundation before moving to AI-103.
+A: Take AI-901 first if generative AI and Microsoft Foundry are unfamiliar concepts — it's the Fundamentals exam and assumes no coding. AI-103 assumes you can already write Python and expects hands-on familiarity with Foundry projects, agent tools, retrieval, and evaluation. Candidates with existing development experience sometimes skip AI-901 and go straight to AI-103.
+Q: Do I need real Foundry or Python experience before I start?
+A: Not to begin studying, but AI-103 is written for candidates who already develop with Python and have touched Azure services — it isn't an intro-to-AI exam. If you're newer to development, working through Microsoft Foundry's own quickstarts alongside Azure Mastery's practice questions will close that gap faster than question practice alone.
 Q: Is Azure Mastery free for AI-103 prep?
-A: The app is free to download and includes a free allowance of AI-103 questions so you can try every feature. The full bank of 557 AI-103 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download, with a free allowance of AI-103 questions to try Answer Coach, the readiness gauge, and the adaptive plan before you commit. The full 557-question AI-103 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
 Q: Does AI-103 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AI-103 practice test mode?
-A: Yes - timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: All of it — question practice, scoring, and the readiness prediction run on-device, so a flight or an offline commute doesn't interrupt your study streak. No account is required, and your data stays on your device unless you turn on optional private iCloud sync.
 
 ## /exams/ai-200/ — AI-200 Practice Questions — 220 Qs for AI Developer (2026)
 Page last modified: 2026-08-09

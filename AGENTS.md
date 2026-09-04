@@ -76,7 +76,16 @@ the prose exam-code enumerations in meta/JSON-LD; the SEO `h1`'s
 
 **Hand-edited:** the social-image exam pills (each is hand-coloured and grouped,
 so the tool only warns on drift); the `exam-link--retired` class and grouping on
-homepage links; `exams/index.html` hub cards; `sitemap.xml`.
+homepage links; `exams/index.html` hub cards; `sitemap.xml`'s structure
+(`<loc>`, `<priority>`, `<changefreq>`, entry order).
+
+`sitemap.xml`'s `<lastmod>` values are the one exception: they are tool-owned,
+written by `Tools/update-sitemap-lastmod.py` from git history (today's date for
+an uncommitted change, otherwise the file's last commit date). Run it before
+committing any page change so the sitemap keeps saying what actually changed
+and when — a `<lastmod>` search engines don't trust is worse than none.
+`Tools/validate-marketing-seo.py` checks every sitemap entry against the same
+computation.
 
 `warn_retired_markup()` reports hand-edited markup that disagrees with the
 catalogue and fails `--check`. It is what caught AZ-204 sitting in the active
@@ -89,8 +98,9 @@ non-current exam has not necessarily retired yet.
 | Tool | Owns |
 |---|---|
 | `Tools/sync-marketing-counts.py` | every count on the site |
-| `Tools/optimise-marketing-seo.py` | exam-page metadata, question-type previews, sitemap |
-| `Tools/validate-marketing-seo.py` | the SEO contract; run after either of the above |
+| `Tools/optimise-marketing-seo.py` | exam-page metadata, question-type previews |
+| `Tools/update-sitemap-lastmod.py` | `sitemap.xml`'s `<lastmod>` values, from git history |
+| `Tools/validate-marketing-seo.py` | the SEO contract; run after any of the above |
 | `Tools/generate-llms-full.py` | `llms-full.txt`, derived from `llms.txt` — **not** run by the sync, so run it after |
 
 `validate-marketing-seo.py` asserts its hand-kept `RETIRED` + `RETIRING` dicts

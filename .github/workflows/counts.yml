@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -29,6 +31,12 @@ jobs:
       # never moved into the retired groups.
       - name: Exam and question counts
         run: python3 Tools/sync-marketing-counts.py --check --no-render
+
+      # Sitemap <lastmod> is derived from git history, so this needs full
+      # history -- hence fetch-depth: 0 above (actions/checkout defaults to a
+      # shallow, 1-commit clone with no dates to read).
+      - name: Sitemap lastmod values are current
+        run: python3 Tools/update-sitemap-lastmod.py --check
 
       - name: SEO contract
         run: python3 Tools/validate-marketing-seo.py

@@ -8,7 +8,10 @@ This performs the repeatable, site-wide parts of the Search Console cleanup:
 * useful, exam-specific question previews sourced from the in-app banks;
 * clean SoftwareApplication keywords and evergreen feature claims;
 * consistent Answer Coach naming and privacy-safe provenance;
-* matching JSON-LD and sitemap modification dates.
+* matching JSON-LD modification dates.
+
+sitemap.xml's <lastmod> is not written here -- see
+Tools/update-sitemap-lastmod.py, which derives it from git history.
 
 The exam-specific editorial copy remains in each HTML page. Run this after
 question-bank updates so newly published pages do not inherit generic Azure
@@ -765,16 +768,10 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
 
 
 def update_sitemap(text: str, codes: list[str]) -> str:
-    for code in codes:
-        slug = code.lower()
-        updated_date = SEO_UPDATED_OVERRIDES.get(code, SEO_UPDATED)
-        pattern = (
-            rf'(<url>\s*<loc>https://azuremastery\.app/exams/{re.escape(slug)}/</loc>'
-            rf'.*?<lastmod>)\d{{4}}-\d{{2}}-\d{{2}}(</lastmod>\s*</url>)'
-        )
-        text, count = re.subn(pattern, rf'\g<1>{updated_date}\2', text, flags=re.S)
-        if count != 1:
-            raise ValueError(f"expected one sitemap entry for {code}, found {count}")
+    # sitemap.xml <lastmod> is no longer written from SEO_UPDATED here -- it is
+    # derived from git history by Tools/update-sitemap-lastmod.py (run that
+    # instead, and see Tools/validate-marketing-seo.py for the check). This is
+    # a deliberate no-op kept only so main()'s call site stays simple.
     return text
 
 

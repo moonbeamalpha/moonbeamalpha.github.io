@@ -32,6 +32,14 @@ jobs:
       - name: Exam and question counts
         run: python3 Tools/sync-marketing-counts.py --check --no-render
 
+      # Ratchets the 35 exam pages against reading as one templated skeleton
+      # (see Tools/check-page-similarity.py's docstring and the task-B3 brief) --
+      # fails if the highest-similarity pair or the corpus mean grows more than
+      # 0.005 over the committed Tools/page-similarity-baseline.json. The
+      # baseline only tightens, via --update-baseline after a page is rewritten.
+      - name: Exam page similarity ratchet
+        run: python3 Tools/check-page-similarity.py --check
+
       # Sitemap <lastmod> is derived from git history, so this needs full
       # history -- hence fetch-depth: 0 above (actions/checkout defaults to a
       # shallow, 1-commit clone with no dates to read).

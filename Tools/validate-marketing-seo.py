@@ -80,10 +80,17 @@ ACTIVE_SEO_REQUIREMENTS = {
     "AI-901": ("current Azure AI Fundamentals exam", "Microsoft Foundry"),
     "PL-300": ("Power BI", "Power Query", "DAX"),
 }
+# Keep these templates in lockstep with optimise-marketing-seo.py's
+# ACTIVE_SEO[code]["title"]; the count is substituted here from the same
+# data/exam-counts.json snapshot so the two files cannot drift on the number.
+_ACTIVE_SEO_TITLE_TEMPLATES = {
+    "AI-901": "AI-901 Practice Questions — {count} Qs for AI Fundamentals (2026)",
+    "AZ-400": "AZ-400 Practice Questions — {count} Qs for DevOps Engineer (2026)",
+    "PL-300": "PL-300 Practice Questions — {count} Qs for Power BI Analyst (2026)",
+}
 ACTIVE_SEO_TITLES = {
-    "AI-901": "AI-901 Practice Questions | Azure AI Fundamentals Exam",
-    "AZ-400": "AZ-400 DevOps Engineer Practice Questions | Azure Mastery",
-    "PL-300": "PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery",
+    code: template.format(count=COUNTS[code])
+    for code, template in _ACTIVE_SEO_TITLE_TEMPLATES.items()
 }
 TARGETED_STALE_PHRASES = {
     "AB-410": (

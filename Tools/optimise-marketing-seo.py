@@ -101,7 +101,7 @@ ACTIVE_SEO = {
         ),
     },
     "AZ-400": {
-        "title": "AZ-400 DevOps Engineer Practice Questions | Azure Mastery",
+        "title": 'AZ-400 Practice Questions — {count} Qs for DevOps Engineer (2026)',
         "description": (
             "{count} AZ-400 practice questions for DevOps Engineer Expert. Study Azure Pipelines, "
             "GitHub Actions, security, deployments, and monitoring on iPhone and iPad."
@@ -112,7 +112,7 @@ ACTIVE_SEO = {
         ),
     },
     "PL-300": {
-        "title": "PL-300 Power BI Practice Questions & Exam Prep | Azure Mastery",
+        "title": 'PL-300 Practice Questions — {count} Qs for Power BI Analyst (2026)',
         "description": (
             "{count} PL-300 Power BI practice questions covering Power Query, DAX, data modelling, "
             "visualisation, and security. Adaptive exam prep for iPhone and iPad."
@@ -143,7 +143,7 @@ ACTIVE_SEO = {
         ),
     },
     "AI-901": {
-        "title": "AI-901 Practice Questions | Azure AI Fundamentals Exam",
+        "title": 'AI-901 Practice Questions — {count} Qs for AI Fundamentals (2026)',
         "description": (
             "{count} AI-901 practice questions for the current Azure AI Fundamentals exam. "
             "Study AI concepts, Microsoft Foundry, and Python on iPhone and iPad."

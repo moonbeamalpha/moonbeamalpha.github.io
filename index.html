@@ -141,7 +141,7 @@
         "name": "How does the Exam IQ score work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Exam IQ is an on-device CoreML model that predicts your likely exam-day score with confidence intervals. It uses Item Response Theory to score each answer by question difficulty and discrimination, then updates your ability estimate per exam domain using a maximum-likelihood estimate of your ability. Predictions are calibrated against Microsoft's published pass thresholds rather than raw percentage correct."
+          "text": "Exam IQ is an on-device CoreML model that predicts your likely exam-day score with a confidence range. It learns from your practice record — accuracy by domain, question coverage, mastery, consistency and recency — and the range tightens as you answer more. Nothing leaves your device."
         }
       },
       {
@@ -214,7 +214,7 @@
         "@type": "HowToStep",
         "position": 2,
         "name": "CoreML analyses on-device",
-        "text": "Item Response Theory scores each answer by its difficulty and how well it discriminates between candidates, and a maximum-likelihood estimate updates your ability after every question.",
+        "text": "A CoreML model weighs your answers by domain, coverage, mastery and consistency, and updates the prediction after every question.",
         "url": "https://azuremastery.app/#exam-iq"
       },
       {
@@ -732,7 +732,7 @@
           <h3 class="heading-medium" style="margin:16px 0 8px;">Exam IQ Score</h3>
           <p class="body-medium" style="color:var(--text-secondary);">
             AI-powered readiness score that predicts your exam result before test day.
-            Built on Item Response Theory, running entirely on-device.
+            Learns from your practice record and runs entirely on-device.
           </p>
           <div style="margin-top:20px;">
             <span class="badge-exam-iq badge-exam-iq--large">
@@ -1061,7 +1061,7 @@
         </details>
         <details class="faq">
           <summary>How does the Exam IQ score work?</summary>
-          <div class="faq__answer"><p>Exam IQ is an on-device CoreML model that predicts your likely exam-day score with confidence intervals. It uses Item Response Theory to score each answer by question difficulty and discrimination, then updates your ability estimate per exam domain using a maximum-likelihood estimate of your ability. Predictions are calibrated against Microsoft's published pass thresholds rather than raw percentage correct.</p></div>
+          <div class="faq__answer"><p>Exam IQ is an on-device CoreML model that predicts your likely exam-day score with a confidence range. It learns from your practice record — accuracy by domain, question coverage, mastery, consistency and recency — and the range tightens as you answer more. Nothing leaves your device.</p></div>
         </details>
         <details class="faq">
           <summary>Does Azure Mastery work offline?</summary>
@@ -1111,9 +1111,9 @@
         </h2>
         <p class="body-large" style="color:var(--text-secondary);margin-bottom:32px;">
           Exam IQ is a CoreML-powered intelligence engine running entirely on your device.
-          It uses Item Response Theory to estimate your ability from every answer, then a
-          CoreML model turns that estimate into a predicted score with a confidence range.
-          No server, no cloud, no data ever leaves your iPhone.
+          It reads your practice record — accuracy by domain, coverage, mastery, consistency
+          and recency — and predicts your exam score with a confidence range, then tells you
+          exactly what to study next. No server, no cloud, no data ever leaves your iPhone.
         </p>
         <ul class="showcase-bullets">
           <li>ML-predicted exam score with confidence range, updated after every question</li>
@@ -1141,7 +1141,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </div>
           <h3>CoreML analyses on-device</h3>
-          <p>Item Response Theory scores each answer by its difficulty and how well it discriminates between candidates, and a maximum-likelihood estimate updates your ability after every question.</p>
+          <p>A CoreML model weighs your answers by domain, coverage, mastery and consistency, and updates the prediction after every question.</p>
         </div>
         <div class="how-step fade-up" style="--delay:0.2s">
           <div class="how-step-number">03</div>

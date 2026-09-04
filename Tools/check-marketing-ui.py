@@ -53,6 +53,8 @@ def main() -> int:
         text = path.read_text()
         if "/section-nav.css" not in text or "/section-nav.js" not in text:
             errors.append(f"{path.relative_to(ROOT)}: missing shared section navigation assets")
+        if not re.search(r"fonts\.googleapis\.com/css2\?[^\"']*Outfit[^\"']*DM\+Sans", text):
+            errors.append(f"{path.relative_to(ROOT)}: missing Outfit and DM Sans font bundle")
         for table in re.findall(r'<table class="[^"]*guide-table[^"]*".*?</table>', text, re.S):
             if "<td" in table and not re.search(r"<td[^>]+data-label=", table):
                 errors.append(f"{path.relative_to(ROOT)}: guide table cells need mobile labels")

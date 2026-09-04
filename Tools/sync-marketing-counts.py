@@ -18,6 +18,11 @@ Source of truth (the app repo, a sibling checkout):
   - certification-path count = `CertPathDefinition(` occurrences in
       App/AzureMastery/Data/CertPathRegistry.swift minus the legacy ones
       (`replacedByPathID:`), mirroring CertPathRegistry.currentPaths
+  - per-domain question count = domainDistribution[domainId].count from
+      Quality/BlueprintScorecards/<exam-id>.json (one file per exam, keyed by
+      the exam's lowercase id, not its code); exams without a scorecard are
+      skipped. Patched into every <span class="domain__count"
+      data-domain="X">N</span> an exam page carries (Task B3a/B3b).
 
 A snapshot is committed to data/exam-counts.json so the marketing repo is
 self-contained (re-runnable without the app checkout). Refresh it with --refresh.
@@ -200,6 +205,29 @@ def refresh_from_app(app_repo: str) -> dict:
         print(f"  warning: catalog-totals.json counts {totals['examCount']} current exams "
               f"but the catalogue has {len(exams) - len(retired)} with exam-scoped questions.")
 
+    # Per-domain question counts (Task B3a), for the <span class="domain__count"
+    # data-domain="X"> spans B3b adds to #objectives. Sourced from each exam's
+    # scorecard rather than exam-blueprints.json, because the scorecard's
+    # domainDistribution.count is the exam-scoped, blueprint-classified count —
+    # the same basis as examQuestionCount above — while the blueprint file only
+    # has objective text, no counts. A scorecard is keyed by the exam's lowercase
+    # `id` (e.g. "ab-100.json"), not its `code`. Exams without one (today, the
+    # same non-current set that has no examQuestionCount) are skipped; their
+    # pages carry no domain__count span yet, so patch_domain_counts() below
+    # never looks them up.
+    domain_counts = {}
+    scorecards_dir = os.path.join(app_repo, "Quality", "BlueprintScorecards")
+    for entry in entries:
+        scorecard_path = os.path.join(scorecards_dir, f"{entry['id']}.json")
+        if not os.path.exists(scorecard_path):
+            continue
+        with open(scorecard_path) as fh:
+            scorecard = json.load(fh)
+        dist = scorecard.get("domainDistribution") or {}
+        domain_counts[entry["code"]] = {
+            domain_id: info["count"] for domain_id, info in dist.items()
+        }
+
     registry = os.path.join(app_repo, "App", "AzureMastery", "Data", "CertPathRegistry.swift")
     cert_paths = None
     if os.path.exists(registry):
@@ -215,7 +243,8 @@ def refresh_from_app(app_repo: str) -> dict:
 
     data = {"exams": exams, "bank_totals": banks, "retired": sorted(retired),
             "retirement_dates": retirement, "totals": totals,
-            "cert_path_count": cert_paths, "names": names}
+            "cert_path_count": cert_paths, "names": names,
+            "domain_counts": domain_counts}
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w") as fh:
         json.dump(data, fh, indent=2, sort_keys=True)
@@ -223,7 +252,8 @@ def refresh_from_app(app_repo: str) -> dict:
     print(f"refreshed {DATA_FILE}: {len(exams)} banks, {len(retired)} non-current; "
           f"advertising {totals['examCount']} exams / {totals['questionCountLabel']} "
           f"({totals['questionCount']} exam-scoped of {sum(banks.values())} authored), "
-          f"{cert_paths} current cert paths")
+          f"{cert_paths} current cert paths, {len(domain_counts)} exam(s) with a "
+          f"per-domain snapshot")
     return data
 
 
@@ -297,6 +327,65 @@ def exam_page_edits(code: str, count: int):
         # app-FAQ JSON-LD/visible copy "full bank of <n> AZ-700 practice questions"
         (rf'(full bank of )\d+( {re.escape(code)} practice questions)', r'\g<1>' + c + r'\2'),
     ]
+
+
+# <span class="domain__count" data-domain="az104-identity">85</span> — one per
+# blueprint domain inside an exam's #objectives (Task B3b adds these; wave 1 has
+# none yet, so this pattern currently matches nothing anywhere).
+DOMAIN_COUNT_RE = re.compile(
+    r'(<span class="domain__count" data-domain="([^"]+)">)\d+(</span>)')
+
+
+def patch_domain_counts(text: str, domain_counts: dict) -> tuple[str, set]:
+    """Rewrite every domain__count span's digits to the snapshot count for its
+    data-domain id. A span whose id is not in domain_counts is left untouched
+    -- check_domain_mismatches() reports that as an error rather than this
+    function silently leaving a stale or placeholder number in place. Returns
+    (new_text, set of data-domain ids seen on the page) so the caller can diff
+    that set against the snapshot even for ids it couldn't patch."""
+    seen = set()
+
+    def repl(m):
+        domain_id = m.group(2)
+        seen.add(domain_id)
+        if domain_id not in domain_counts:
+            return m.group(0)
+        return f'{m.group(1)}{domain_counts[domain_id]}{m.group(3)}'
+
+    text = DOMAIN_COUNT_RE.sub(repl, text)
+    return text, seen
+
+
+def check_domain_mismatches(p: "Patcher", domain_counts_all: dict, page_domains: dict) -> None:
+    """Report every exam page whose domain__count spans disagree with its
+    snapshot -- either a data-domain id on the page that the snapshot doesn't
+    have (typo, retired domain, exam missing its scorecard) or a snapshot
+    domain the page never rendered a span for (a domain added upstream that
+    the page hasn't caught up to). Pages with no domain__count span at all
+    (every page today -- B3b adds the first ones) are untouched and never
+    reported, per the brief's "only for pages that have at least one
+    domain__count span" rule."""
+    print("domain counts:")
+    problems = []
+    for code, seen in sorted(page_domains.items()):
+        if not seen:
+            continue
+        snapshot = set(domain_counts_all.get(code) or {})
+        missing_in_snapshot = sorted(seen - snapshot)
+        missing_on_page = sorted(snapshot - seen)
+        rel = f"exams/{code_to_dir(code)}/index.html"
+        if missing_in_snapshot:
+            problems.append(f"{rel}: data-domain {missing_in_snapshot} not in the "
+                            f"{code} snapshot (stale id, or re-run --refresh)")
+        if missing_on_page:
+            problems.append(f"{rel}: {code} snapshot has domain(s) {missing_on_page} "
+                            f"with no domain__count span on the page")
+    if not problems:
+        print("  domains ok  every domain__count span matches its exam's snapshot")
+        return
+    for line in problems:
+        print(f"  DOMAIN    {line}")
+    p.problems += len(problems)
 
 
 def patch_related_cards(text: str, counts: dict) -> tuple[str, int]:
@@ -832,6 +921,9 @@ def main() -> None:
 
     p = Patcher(check_only=args.check)
 
+    domain_counts_all = data.get("domain_counts") or {}
+    page_domains = {}   # code -> set of data-domain ids seen on its page
+
     if not args.social_only:
         print("exam pages:")
         for code, n in sorted(counts.items()):
@@ -846,6 +938,9 @@ def main() -> None:
                 text = re.sub(pat, rep, text)
             # cross-referenced related cards (any exam -> its count)
             text, _ = patch_related_cards(text, counts)
+            # per-domain question counts (Task B3a/B3b)
+            text, seen_domains = patch_domain_counts(text, domain_counts_all.get(code, {}))
+            page_domains[code] = seen_domains
             rel = os.path.relpath(page, ROOT)
             if text != original:
                 p.changed_files += 1
@@ -854,6 +949,8 @@ def main() -> None:
                 else:
                     open(page, "w").write(text)
                     print(f"  synced {rel}")
+
+        check_domain_mismatches(p, domain_counts_all, page_domains)
 
         print("homepage:")
         p.apply(INDEX_HTML,

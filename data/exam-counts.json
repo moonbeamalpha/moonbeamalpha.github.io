@@ -37,6 +37,188 @@
     "SC-900": 409
   },
   "cert_path_count": 29,
+  "domain_counts": {
+    "AB-100": {
+      "ab100-deploy": 187,
+      "ab100-design": 132,
+      "ab100-plan": 124
+    },
+    "AB-410": {
+      "ab410-apps": 122,
+      "ab410-foundation": 119,
+      "ab410-logic": 183
+    },
+    "AB-620": {
+      "ab620-integrate": 170,
+      "ab620-manage": 82,
+      "ab620-plan": 135
+    },
+    "AB-650": {
+      "ab650-aiservices": 196,
+      "ab650-govern": 207,
+      "ab650-tenant": 103
+    },
+    "AB-731": {
+      "ab731-microsoft": 131,
+      "ab731-strategy": 78,
+      "ab731-value": 126
+    },
+    "AB-900": {
+      "ab900-admin": 83,
+      "ab900-core": 113,
+      "ab900-protect": 127
+    },
+    "AI-103": {
+      "ai103-extraction": 64,
+      "ai103-genagentic": 189,
+      "ai103-plan": 150,
+      "ai103-textspeech": 74,
+      "ai103-vision": 80
+    },
+    "AI-200": {
+      "ai200-compute": 55,
+      "ai200-data": 62,
+      "ai200-integration": 55,
+      "ai200-operations": 48
+    },
+    "AI-300": {
+      "ai300-genaiops": 84,
+      "ai300-lifecycle": 102,
+      "ai300-mlops": 70,
+      "ai300-optimize": 54,
+      "ai300-quality": 52
+    },
+    "AI-500": {
+      "ai500-architect": 84,
+      "ai500-develop": 158,
+      "ai500-evaluate": 104,
+      "ai500-secure": 106
+    },
+    "AI-901": {
+      "ai901-concepts": 252,
+      "ai901-implement": 320
+    },
+    "AZ-104": {
+      "az104-compute": 133,
+      "az104-identity": 85,
+      "az104-monitoring": 75,
+      "az104-networking": 84,
+      "az104-storage": 104
+    },
+    "AZ-305": {
+      "az305-continuity": 72,
+      "az305-identity": 108,
+      "az305-infra": 133,
+      "az305-storage": 86
+    },
+    "AZ-400": {
+      "az400-monitoring": 45,
+      "az400-pipelines": 236,
+      "az400-processes": 68,
+      "az400-security": 52,
+      "az400-sourcecontrol": 66
+    },
+    "AZ-700": {
+      "az700-access": 64,
+      "az700-connectivity": 138,
+      "az700-core": 168,
+      "az700-delivery": 101,
+      "az700-security": 98
+    },
+    "AZ-900": {
+      "az900-concepts": 109,
+      "az900-governance": 110,
+      "az900-services": 145
+    },
+    "DP-300": {
+      "dp300-automation": 68,
+      "dp300-hadr": 84,
+      "dp300-monitoring": 88,
+      "dp300-platform": 73,
+      "dp300-security": 92
+    },
+    "DP-700": {
+      "dp700-implement": 108,
+      "dp700-ingest": 111,
+      "dp700-monitor": 117
+    },
+    "DP-750": {
+      "dp750-environment": 79,
+      "dp750-governance": 80,
+      "dp750-pipelines": 142,
+      "dp750-process": 141
+    },
+    "DP-800": {
+      "dp800-ai": 102,
+      "dp800-design": 138,
+      "dp800-secure": 153
+    },
+    "DP-900": {
+      "dp900-analytics": 103,
+      "dp900-coredata": 89,
+      "dp900-nonrelational": 68,
+      "dp900-relational": 86
+    },
+    "GH-300": {
+      "gh300-architecture": 47,
+      "gh300-features": 102,
+      "gh300-privacy": 49,
+      "gh300-productivity": 46,
+      "gh300-prompt": 48,
+      "gh300-responsible": 64
+    },
+    "GH-900": {
+      "gh900-basics": 91,
+      "gh900-collaborate": 49,
+      "gh900-community": 28,
+      "gh900-practices": 52,
+      "gh900-projects": 33,
+      "gh900-repositories": 46,
+      "gh900-security": 48
+    },
+    "PL-300": {
+      "pl300-manage": 75,
+      "pl300-model": 95,
+      "pl300-prepare": 95,
+      "pl300-visualize": 113
+    },
+    "PL-900": {
+      "pl900-agents": 76,
+      "pl900-business": 30,
+      "pl900-environment": 76,
+      "pl900-powerapps": 76,
+      "pl900-powerautomate": 70
+    },
+    "SC-100": {
+      "sc100-appsdata": 104,
+      "sc100-bp": 94,
+      "sc100-infra": 119,
+      "sc100-secops": 135
+    },
+    "SC-200": {
+      "sc200-hunt": 80,
+      "sc200-incident": 132,
+      "sc200-ops": 162
+    },
+    "SC-300": {
+      "sc300-access": 121,
+      "sc300-governance": 103,
+      "sc300-identities": 102,
+      "sc300-workload": 102
+    },
+    "SC-500": {
+      "sc500-compute": 108,
+      "sc500-datanet": 111,
+      "sc500-identity": 105,
+      "sc500-posture": 108
+    },
+    "SC-900": {
+      "sc900-compliance": 84,
+      "sc900-concepts": 51,
+      "sc900-entra": 112,
+      "sc900-security": 150
+    }
+  },
   "exams": {
     "AB-100": 443,
     "AB-410": 424,

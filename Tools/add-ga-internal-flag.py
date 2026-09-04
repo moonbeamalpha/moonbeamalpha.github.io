@@ -3,7 +3,7 @@
 GA4 gtag loader. Modelled on Tools/add-theme-support.py and
 Tools/add-exam-page-cta.py: a single (anchor, replacement) edit, asserted to
 match exactly once per file before anything is written; a file that already
-carries the `am_internal` marker is skipped outright so re-runs are no-ops.
+carries the complete generated block is validated so re-runs are no-ops.
 
 Why: GA4 (measurement ID G-YTN7LFS04Y, loaded directly via gtag — there is no
 GTM on these pages) currently counts the owner's own QA visits. A one-time
@@ -83,12 +83,26 @@ def find_targets() -> list[Path]:
 
 def process(path: Path) -> str:
     text = path.read_text()
-    if MARKER in text:
+    replacement_count = text.count(REPLACEMENT)
+    if replacement_count:
+        if replacement_count != 1:
+            raise AssertionError(
+                f"{path}: complete internal-traffic block matched "
+                f"{replacement_count} times (want 1)"
+            )
         return "skip (already flagged)"
+    if MARKER in text:
+        raise AssertionError(
+            f"{path}: found the {MARKER!r} marker without the complete internal-traffic block"
+        )
     count = text.count(ANCHOR)
     if count != 1:
         raise AssertionError(f"{path}: anchor matched {count} times (want 1)")
     new_text = text.replace(ANCHOR, REPLACEMENT, 1)
+    if new_text.count(REPLACEMENT) != 1:
+        raise AssertionError(
+            f"{path}: generated internal-traffic block is not present exactly once"
+        )
     if not CHECK:
         path.write_text(new_text)
     return "updated" if not CHECK else "would update"

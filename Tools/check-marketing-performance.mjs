@@ -37,7 +37,8 @@ assert(entranceScript.includes("remove('hero-phone-enter')"), 'Clean up complete
 const phoneKeyframes = read('home.css').match(/@keyframes hero-phone-settle \{[\s\S]*?\n    \}/)?.[0];
 assert(phoneKeyframes && /translate:/.test(phoneKeyframes));
 assert(!/opacity:|filter:|transform:|width:|height:/.test(phoneKeyframes), 'Hero settling must preserve visibility, angles and layout');
-assert(/\.reveal-pending\.reveal-after-device\s*\{\s*transition-delay: 160ms;/.test(read('home.css')));
+assert(/\.reveal-in\.reveal-after-device\s*\{\s*animation-delay: 160ms;/.test(read('home.css')));
+assert(!/\.reveal-pending\s*\{[^}]*opacity:\s*0/.test(read('home.css')), 'Reveals must be additive, not opacity:0 by default');
 for (const source of [read('home.css'), read('theme-light.css')]) {
   for (const [, selectors, declarations] of source.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
     if (selectors.split(',').some(selector => /\.(mac|ipad)-wrap$/.test(selector.trim()))) {

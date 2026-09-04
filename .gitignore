@@ -5,3 +5,6 @@ __pycache__/
 
 # Aura mascot source renders — only the optimized .webp are used on the site
 images/aura-*.png
+
+# Local git worktrees for feature branches
+.worktrees/

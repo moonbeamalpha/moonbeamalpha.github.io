@@ -178,6 +178,10 @@
           item.setAttribute('draggable', 'false');
           item.removeAttribute('tabindex');
         });
+        list.dispatchEvent(new CustomEvent('azuremastery:quizcomplete', {
+          bubbles: true,
+          detail: { correct: true }
+        }));
       } else {
         status.innerHTML = '<strong>Not quite.</strong> ' + correct + ' of ' + ordered.length + ' steps are in the right position. Keep arranging.';
       }
@@ -296,14 +300,15 @@
 // interaction. Without JS the mockups render exactly as before.
 (function () {
   var vizzes = document.querySelectorAll('.qt__viz[data-quiz]');
-  if (!vizzes.length) return;
+  var reorders = document.querySelectorAll('.qt__viz-drag[data-reorder-live]');
+  if (!vizzes.length && !reorders.length) return;
 
   var codeEl = document.querySelector('.am-cert-hero__eyebrow-code');
   var countEl = document.querySelector('.am-cert-hero__stat-count');
   var code = codeEl ? codeEl.textContent.trim() : 'this exam';
   var bank = countEl ? countEl.textContent.trim() : '';
   var storeLink = document.querySelector('a[href*="apps.apple.com"]');
-  var answered = 0, right = 0, total = vizzes.length;
+  var answered = 0, right = 0, total = reorders.length;
 
   // The per-question "See every ... rationale" link (below) reuses storeLink's
   // href but must carry its own campaign token, so App Store Connect can
@@ -344,6 +349,13 @@
     p.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
+  document.addEventListener('azuremastery:quizcomplete', function (event) {
+    if (!event.target.matches('.qt__viz-drag[data-reorder-live]')) return;
+    if (event.detail && event.detail.correct) right++;
+    answered++;
+    if (answered === total) summarise();
+  });
+
   Array.prototype.forEach.call(vizzes, function (viz) {
     var options = viz.querySelectorAll('.qt__viz-options li');
     if (!options.length) return;
@@ -355,6 +367,7 @@
       li.setAttribute('role', 'button');
     });
     if (!key.length) return;
+    total++;
     viz.removeAttribute('aria-hidden');
     viz.setAttribute('data-quiz-live', '1');
 

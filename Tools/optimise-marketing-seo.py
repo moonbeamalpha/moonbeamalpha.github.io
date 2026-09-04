@@ -781,7 +781,12 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
             flags=re.S,
         )
 
-    if "<strong>Answer Coach</strong>" not in text:
+    has_inline_coaching_copy = "<strong>Answer Coach</strong>" in text
+    has_coaching_benefit_cards = bool(
+        re.search(r"<h3[^>]*>\s*Answer Coach\s*</h3>", text)
+        and re.search(r"<h3[^>]*>\s*Aura guidance\s*</h3>", text)
+    )
+    if not (has_inline_coaching_copy or has_coaching_benefit_cards):
         answer_coach_copy = '''      <p>
         <strong>Answer Coach</strong> turns each missed answer into a private, grounded lesson: the misconception, key distinction, and rule to remember. It always uses authored certification guidance; on supported devices, an optional on-device model may rewrite the note only when it passes grounding checks.
       </p>

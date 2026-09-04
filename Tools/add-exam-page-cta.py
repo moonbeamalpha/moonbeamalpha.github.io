@@ -32,13 +32,14 @@ for those, both lines are inserted together immediately after the page's
 to match exactly once (strict — no 0-or-1 branch) before anything is
 written, same as every other anchor here.
 
-Retired-exam copy (fix round 1, item 3): a code in data/exam-counts.json
-["retired"] (currently AI-102, AI-900, AZ-204, AZ-500, DP-100) gets
-different mid-page CTA copy — "Ready to practise" contradicts the
-retirement banner already on that page. Re-running the tool against pages
-patched by an earlier version with the wrong copy detects and rewrites
-just that text (the file's `mobile-cta-bar` marker still short-circuits
-everything else), so the tool stays idempotent either way.
+Retired-exam copy (fix round 1 item 3, fix round 2 small item): a code in
+data/exam-counts.json["retired"] (currently AI-102, AI-900, AZ-204,
+AZ-500, DP-100) gets different mid-page CTA copy and sticky-bar label —
+"Ready to practise" / "practice" both contradict the retirement banner
+already on that page. Re-running the tool against pages patched by an
+earlier version with the old copy detects and rewrites just that text
+(the file's `mobile-cta-bar` marker still short-circuits everything
+else), so the tool stays idempotent either way.
 """
 import json
 import re
@@ -77,11 +78,21 @@ RETIRED_CODES = set(_EXAM_COUNTS.get("retired", []))
 HERO_LEAD_RE = re.compile(r'(id="am-cert-hero-lead" class="am-cert-hero__lead">\s*\n\s*)')
 
 
-def sticky_bar_html(code: str, code_lower: str) -> str:
+def sticky_bar_label(code: str, retired: bool) -> str:
+    """Text inside .mobile-cta-bar__label. Retired codes (data/exam-counts
+    .json["retired"]) get "reference bank" instead of "practice" — same
+    reasoning as cta_copy(): "practice" contradicts the retirement banner
+    already on that page."""
+    if retired:
+        return f'{code} reference bank — free on the App&nbsp;Store'
+    return f'{code} practice — free on the App&nbsp;Store'
+
+
+def sticky_bar_html(code: str, code_lower: str, retired: bool) -> str:
     return (
         '  <!-- Sticky mobile download bar — the hero CTA scrolls away fast on a phone -->\n'
         '  <div class="mobile-cta-bar" id="mobile-cta-bar">\n'
-        f'    <span class="mobile-cta-bar__label">{code} practice — free on the App&nbsp;Store</span>\n'
+        f'    <span class="mobile-cta-bar__label">{sticky_bar_label(code, retired)}</span>\n'
         f'    <a class="mobile-cta-bar__btn" href="{STORE_BASE}?ct=exam-{code_lower}-sticky" rel="noopener noreferrer">Download</a>\n'
         '  </div>\n'
     )
@@ -120,7 +131,7 @@ def full_page_edits(code: str, code_lower: str, retired: bool) -> list[tuple[str
     deprecated meta and hero-code span are handled separately — see
     insert_deprecated_meta() and apply_hero_span())."""
     return [
-        (EXAM_JS_ANCHOR, sticky_bar_html(code, code_lower) + EXAM_JS_ANCHOR),
+        (EXAM_JS_ANCHOR, sticky_bar_html(code, code_lower, retired) + EXAM_JS_ANCHOR),
         (STUDY_PLAN_ANCHOR, inline_cta_html(code, code_lower, "mid1", retired) + STUDY_PLAN_ANCHOR),
         (FAQS_ANCHOR, inline_cta_html(code, code_lower, "mid2", retired) + FAQS_ANCHOR),
         (THEME_TOGGLE_ANCHOR, nav_badge_html(code) + THEME_TOGGLE_ANCHOR),
@@ -136,6 +147,16 @@ def rewrite_retired_cta_copy(text: str, code: str) -> tuple[str, bool]:
     if old not in text:
         return text, False
     new = cta_copy(code, retired=True)
+    return text.replace(old, new), True
+
+
+def rewrite_retired_sticky_label(text: str, code: str) -> tuple[str, bool]:
+    """Same idea as rewrite_retired_cta_copy() but for the sticky bar's
+    .mobile-cta-bar__label text."""
+    old = sticky_bar_label(code, retired=False)
+    if old not in text:
+        return text, False
+    new = sticky_bar_label(code, retired=True)
     return text.replace(old, new), True
 
 
@@ -178,13 +199,14 @@ def process_full_page(path: Path, code: str, code_lower: str) -> str:
     retired = code in RETIRED_CODES
 
     if MARKER in text:
-        # Already patched by an earlier run of this tool. Two things an
-        # earlier version could have gotten wrong on an already-patched
-        # file without touching anything else: the deprecated meta was
-        # skipped outright when the Apple-prefixed tag was absent (gh-300,
-        # gh-900, _template.html), and a retired code still carries the
-        # stale "Ready to practise" copy. Detect and fix either; if
-        # neither applies, the file is fully up to date.
+        # Already patched by an earlier run of this tool. Things an earlier
+        # version could have gotten wrong on an already-patched file
+        # without touching anything else: the deprecated meta was skipped
+        # outright when the Apple-prefixed tag was absent (gh-300, gh-900,
+        # _template.html), and a retired code still carries the stale
+        # "Ready to practise" mid-CTA copy and/or "practice" sticky-bar
+        # label. Detect and fix whichever apply; if none do, the file is
+        # fully up to date.
         changes = []
         if META_MARKER not in text:
             text = insert_deprecated_meta(text, path)
@@ -193,6 +215,9 @@ def process_full_page(path: Path, code: str, code_lower: str) -> str:
             text, copy_changed = rewrite_retired_cta_copy(text, code)
             if copy_changed:
                 changes.append("retired CTA copy")
+            text, label_changed = rewrite_retired_sticky_label(text, code)
+            if label_changed:
+                changes.append("retired sticky label")
         if not changes:
             return "skip (already patched)"
         if not CHECK:

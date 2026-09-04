@@ -8,3 +8,6 @@ images/aura-*.png
 
 # Local git worktrees for feature branches
 .worktrees/
+
+# Throwaway render source for per-exam OG cards (Tools/sync-marketing-counts.py)
+apps/AzureMastery/_og-exam-render-tmp.html

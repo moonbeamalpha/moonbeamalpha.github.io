@@ -14,23 +14,26 @@ drop the events. No cookies — see Tools/PERFORMANCE.md's "one GA loader per
 page" rule, which this script does not touch (it edits the existing inline
 config block, it never adds a loader).
 
-Targets are discovered dynamically: every *.html file under the site root
-that contains the direct gtag loader
-(`gtag/js?id=G-YTN7LFS04Y`), skipping node_modules. In this repo that is
-every homepage/exam-page/guide/hub file plus exams/_template.html — all 47
-of them share byte-identical indentation for the five-line config block
-(2-space script tags, 4-space body), verified before this tool was written,
-so a single anchor covers every one. 404.html and the three
-apps/AzureMastery/{support,privacy,terms}.html legal pages do NOT carry this
-block at all — they either have no analytics (404.html) or run GTM
-(GTM-TK79R26R) instead of direct gtag — so they are silently absent from the
-target list rather than skipped-with-a-marker; run with no arguments to see
-the full target list printed.
+Targets are discovered dynamically: every *.html file found by walking the
+site root (`Path(SITE).rglob("*.html")`, skipping any path with a
+`.worktrees`, `.git`, `.superpowers` or `node_modules` segment) whose text
+contains the direct gtag loader (`gtag/js?id=G-YTN7LFS04Y`). Walking the
+filesystem directly rather than shelling out to `grep -rl` means the result
+does not depend on which `grep` is on PATH (BSD vs. GNU flag differences)
+and cannot wander into a sibling worktree sharing this checkout's disk. In
+this repo that is every homepage/exam-page/guide/hub file plus
+exams/_template.html — all 47 of them share byte-identical indentation for
+the five-line config block (2-space script tags, 4-space body), verified
+before this tool was written, so a single anchor covers every one. 404.html
+and the three apps/AzureMastery/{support,privacy,terms}.html legal pages do
+NOT carry this block at all — they either have no analytics (404.html) or
+run GTM (GTM-TK79R26R) instead of direct gtag — so they are silently absent
+from the target list rather than skipped-with-a-marker; run with no
+arguments to see the full target list printed.
 
     python3 Tools/add-ga-internal-flag.py            # apply
     python3 Tools/add-ga-internal-flag.py --check    # dry run; report only, exit 1 on drift
 """
-import subprocess
 import sys
 from pathlib import Path
 
@@ -38,6 +41,8 @@ SITE = Path(__file__).resolve().parent.parent
 CHECK = "--check" in sys.argv[1:]
 
 MARKER = "am_internal"
+GTAG_LOADER = "gtag/js?id=G-YTN7LFS04Y"
+SKIP_SEGMENTS = {".worktrees", ".git", ".superpowers", "node_modules"}
 
 ANCHOR = (
     "  <script>\n"
@@ -66,12 +71,14 @@ REPLACEMENT = (
 
 
 def find_targets() -> list[Path]:
-    out = subprocess.run(
-        ["grep", "-rl", "gtag/js?id=G-YTN7LFS04Y", "--include=*.html", "."],
-        cwd=SITE, capture_output=True, text=True, check=False,
-    ).stdout.split()
-    paths = sorted(SITE / p for p in out if "node_modules" not in p)
-    return paths
+    paths = []
+    for path in SITE.rglob("*.html"):
+        rel = path.relative_to(SITE)
+        if SKIP_SEGMENTS & set(rel.parts[:-1]):
+            continue
+        if GTAG_LOADER in path.read_text():
+            paths.append(path)
+    return sorted(paths)
 
 
 def process(path: Path) -> str:

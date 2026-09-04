@@ -98,6 +98,10 @@ def sticky_bar_html(code: str, code_lower: str, retired: bool) -> str:
     )
 
 
+CTA_HEDGE_OLD = 'Every question explains every option, and the first sessions are free.'
+CTA_HEDGE_NEW = 'Every question comes with a full explanation, and the first sessions are free.'
+
+
 def cta_copy(code: str, retired: bool) -> str:
     """The <strong>…</strong> lead + follow-on sentence inside the mid-page
     CTA's <p>. Retired codes (data/exam-counts.json["retired"]) get copy
@@ -107,10 +111,21 @@ def cta_copy(code: str, retired: bool) -> str:
             f'<strong>Reviewing {code} as reference?</strong> The app keeps the retired '
             'bank alongside the current exams, and the first sessions are free.'
         )
-    return (
-        f'<strong>Ready to practise {code}?</strong> Every question explains every option, '
-        'and the first sessions are free.'
-    )
+    return f'<strong>Ready to practise {code}?</strong> {CTA_HEDGE_NEW}'
+
+
+def rewrite_cta_hedge(text: str) -> tuple[str, bool]:
+    """Copy hedge (fix round 2): "explains every option" overclaimed
+    exhaustive per-option rationale coverage; soften to "comes with a full
+    explanation". The phrase only ever appeared in the live (non-retired)
+    CTA copy — the retired variant's own opening sentence never contained
+    it — so this can run unconditionally, ahead of the retired-copy rewrite
+    below, on every page. Both mid-page CTA bands on a page share the same
+    lead sentence, so .replace() (not replace-once) can legitimately fire
+    twice per file."""
+    if CTA_HEDGE_OLD not in text:
+        return text, False
+    return text.replace(CTA_HEDGE_OLD, CTA_HEDGE_NEW), True
 
 
 def inline_cta_html(code: str, code_lower: str, suffix: str, retired: bool) -> str:
@@ -122,8 +137,21 @@ def inline_cta_html(code: str, code_lower: str, suffix: str, retired: bool) -> s
     )
 
 
+NAV_BADGE_OPEN_WITH_ARIA = '<span class="site-nav__context" aria-label="Exam page">'
+NAV_BADGE_OPEN = '<span class="site-nav__context">'
+
+
 def nav_badge_html(code: str) -> str:
-    return f'    <span class="site-nav__context" aria-label="Exam page">{code}</span>\n'
+    return f'    {NAV_BADGE_OPEN}{code}</span>\n'
+
+
+def rewrite_nav_badge_aria(text: str) -> tuple[str, bool]:
+    """`aria-label` is invalid on a generic <span> — drop it from pages an
+    earlier version of this tool already patched. A page without the
+    attribute is untouched, so this stays idempotent."""
+    if NAV_BADGE_OPEN_WITH_ARIA not in text:
+        return text, False
+    return text.replace(NAV_BADGE_OPEN_WITH_ARIA, NAV_BADGE_OPEN), True
 
 
 def full_page_edits(code: str, code_lower: str, retired: bool) -> list[tuple[str, str]]:
@@ -203,14 +231,21 @@ def process_full_page(path: Path, code: str, code_lower: str) -> str:
         # version could have gotten wrong on an already-patched file
         # without touching anything else: the deprecated meta was skipped
         # outright when the Apple-prefixed tag was absent (gh-300, gh-900,
-        # _template.html), and a retired code still carries the stale
-        # "Ready to practise" mid-CTA copy and/or "practice" sticky-bar
-        # label. Detect and fix whichever apply; if none do, the file is
-        # fully up to date.
+        # _template.html); the nav badge carried an invalid aria-label; the
+        # live CTA copy used the old "explains every option" hedge; and a
+        # retired code still carries the stale "Ready to practise" mid-CTA
+        # copy and/or "practice" sticky-bar label. Detect and fix whichever
+        # apply; if none do, the file is fully up to date.
         changes = []
         if META_MARKER not in text:
             text = insert_deprecated_meta(text, path)
             changes.append("meta")
+        text, aria_changed = rewrite_nav_badge_aria(text)
+        if aria_changed:
+            changes.append("nav badge aria-label")
+        text, hedge_changed = rewrite_cta_hedge(text)
+        if hedge_changed:
+            changes.append("CTA hedge copy")
         if retired:
             text, copy_changed = rewrite_retired_cta_copy(text, code)
             if copy_changed:

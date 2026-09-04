@@ -1196,17 +1196,18 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
 }
 
 /* ── Mid-page download CTA band. Look matches .guide-inline-cta (see
-   guides/how-to-pass-az-104/index.html); sized to the same max-width
-   container as the sections around it (.container in exams/exam.css) so
-   the band's edges line up with the section headings above and below it.
-   The button reuses .mobile-cta-bar__btn's exact gradient pill. ── */
+   guides/how-to-pass-az-104/index.html); sized to line up with the section
+   copy around it, not the .container box itself: 832px is .container's
+   880px max-width minus its 24px padding-inline on each side (exams/exam.css),
+   so the band's edges match the section headings and body text above and
+   below it. The button reuses .mobile-cta-bar__btn's exact gradient pill. ── */
 .exam-inline-cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
-  max-width: 880px;
+  max-width: 832px;
   margin: 0 auto;
   padding: 18px 24px;
   border: 1px solid rgba(80,230,255,0.3);

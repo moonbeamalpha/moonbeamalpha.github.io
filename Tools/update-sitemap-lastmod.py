@@ -10,11 +10,15 @@ For every <url> block:
     (https://azuremastery.app/ -> index.html);
   * a <loc> ending in ".html" maps to that file directly.
 
-The lastmod for a file is:
+All dates this tool reads or writes are UTC. The lastmod for a file is:
   * today's date (UTC) if `git status --porcelain -- <file>` reports it
     modified or untracked;
-  * otherwise the date of its most recent commit
-    (`git log -1 --format=%cs -- <file>`);
+  * otherwise the date of its most recent commit, read in UTC regardless of
+    the machine's local timezone or the timezone recorded in the commit
+    itself (`TZ=UTC git log -1 --date=format-local:%Y-%m-%d --format=%cd --
+    <file>` -- plain `%cs` would use the commit's own recorded offset, which
+    can land on a different calendar date than the UTC "today" above used
+    for uncommitted changes);
   * if git has no history at all for a clean file (should not happen),
     today's date, with a warning printed to stderr.
 
@@ -36,6 +40,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import subprocess
 import sys
@@ -74,8 +79,12 @@ INDENT_BEFORE_LOC_RE = re.compile(r"([ \t]*)<loc>")
 
 
 def _git(*args: str) -> str:
+    # TZ=UTC so a `-local`-suffixed --date format (used below for the commit
+    # date) resolves to UTC rather than this machine's local timezone -- see
+    # expected_lastmod().
     result = subprocess.run(
         ["git", *args], cwd=ROOT, capture_output=True, text=True, check=True,
+        env={**os.environ, "TZ": "UTC"},
     )
     return result.stdout
 
@@ -97,13 +106,18 @@ def expected_lastmod(path: Path) -> str:
 
     Today's UTC date if the file has uncommitted changes (modified or
     untracked, per `git status --porcelain`); otherwise the date of its
-    most recent commit. Falls back to today with a printed warning if git
-    has no history at all for the file.
+    most recent commit, converted to UTC (`--date=format-local:%Y-%m-%d`
+    under `TZ=UTC`) so a commit made in a non-UTC timezone can't land on a
+    different calendar date than the UTC "today" used for the uncommitted
+    case -- one date basis throughout. Falls back to today with a printed
+    warning if git has no history at all for the file.
     """
     status = _git("status", "--porcelain", "--", str(path))
     if status.strip():
         return _today()
-    log = _git("log", "-1", "--format=%cs", "--", str(path)).strip()
+    log = _git(
+        "log", "-1", "--date=format-local:%Y-%m-%d", "--format=%cd", "--", str(path),
+    ).strip()
     if not log:
         print(f"warning: no git history for {path}; falling back to today's date", file=sys.stderr)
         return _today()

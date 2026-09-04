@@ -305,6 +305,26 @@
   var storeLink = document.querySelector('a[href*="apps.apple.com"]');
   var answered = 0, right = 0, total = vizzes.length;
 
+  // The per-question "See every ... rationale" link (below) reuses storeLink's
+  // href but must carry its own campaign token, so App Store Connect can
+  // separate quiz-driven installs from the page's general download buttons.
+  // ct= is overwritten (not just set-if-absent, like the first IIFE above);
+  // pt= and mt=, already stamped onto storeLink.href by that IIFE, are left
+  // untouched. Falls back to the unmodified href when the hero eyebrow code
+  // isn't a real exam code (should not happen on a real page).
+  function quizLinkHref(link) {
+    var fallback = 'https://apps.apple.com/app/apple-store/id6760594569';
+    var href = link ? link.href : fallback;
+    if (!/^[A-Za-z]{2,3}-\d{3,4}$/.test(code)) return href;
+    try {
+      var url = new URL(href, window.location.origin);
+      url.searchParams.set('ct', 'exam-' + code.toLowerCase() + '-quiz');
+      return url.toString();
+    } catch (error) {
+      return href;
+    }
+  }
+
   function summarise() {
     var grid = document.querySelector('.question-types');
     if (!grid || document.querySelector('.quiz-summary')) return;
@@ -366,7 +386,7 @@
       hint.replaceWith(note);
       var quizLink = document.createElement('a');
       quizLink.className = 'qt__quiz-link';
-      quizLink.href = storeLink ? storeLink.href : 'https://apps.apple.com/app/apple-store/id6760594569';
+      quizLink.href = quizLinkHref(storeLink);
       quizLink.rel = 'noopener noreferrer';
       quizLink.textContent = 'See every ' + code + ' rationale in the app →';
       note.appendChild(quizLink);

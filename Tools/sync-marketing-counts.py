@@ -351,9 +351,6 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         (r'\b\d+(\s+certification\s+paths)', cp + r'\1'),
         (r'\b\d+(\s+certification\s+routes)', cp + r'\1'),
         (r'\b\d+(\s+guided\s+certification\s+paths)', cp + r'\1'),
-        # ── headline word-number "Twenty-six certifications." -> exam count word ──
-        (r'(headline-accent">)[A-Za-z-]+(\s+certifications\.)',
-         r'\g<1>' + number_word(exam_count) + r'\2'),
         # ── "Retired & retiring (N)" disclosure summaries (hero + footer) ──
         (r'(exam-retired-disclosure__summary">Retired &amp; retiring \()\d+(\))',
          r'\g<1>' + str(retired_count) + r'\2'),
@@ -361,8 +358,12 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         # entity list = sit-able + retired reference pages, not the advertised
         # exam count — the ItemList enumerates every /exams/<code>/ page that
         # exists, current or retired, so search engines can still find retired
-        # exam reference pages. ──
-        (r'("numberOfItems":\s*)\d+', r'\g<1>' + str(catalogue_count)),
+        # exam reference pages. Anchored on the exams ItemList's own @id
+        # (bounded, non-greedy span to "numberOfItems") rather than a bare
+        # "numberOfItems" match, so a second ItemList elsewhere on the page
+        # could never have its count silently overwritten by this one's. ──
+        (r'("@id":\s*"https://azuremastery\.app/#exam-list"[\s\S]{0,300}?"numberOfItems":\s*)\d+',
+         r'\g<1>' + str(catalogue_count)),
     ]
 
 
@@ -435,17 +436,6 @@ def patch_exam_code_lists(text: str, retired: set):
     return re.subn(r'[A-Z]{2}-\d{3}(?:(?:,\s+|,?\s+and\s+)[A-Z]{2}-\d{3}){2,}', repl, text)
 
 
-def patch_more_certifications(text: str, exam_count: int, retired: set):
-    """The SEO h1 names a handful of exams then says "and <n> More Microsoft
-    Certifications" — n has to be the sit-able total minus the ones already named."""
-    def repl(m):
-        named = {c for c in re.findall(r'[A-Z]{2}-\d{3}', m.group(1))} - retired
-        return f"{m.group(1)}and {exam_count - len(named)} More"
-
-    return re.subn(r'((?:[A-Z]{2}-\d{3},\s+)+)and \d+ More(?= Microsoft Certifications)',
-                   repl, text)
-
-
 def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
     """Report exam links whose retired treatment disagrees with the catalogue.
 
@@ -497,12 +487,26 @@ def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
     p.problems += len(problems)
 
 
-def warn_itemlist_count(catalogue_count: int) -> None:
+def warn_itemlist_count(catalogue_count: int, data: dict, counts: dict) -> None:
     """Report when the homepage JSON-LD ItemList's ListItem entries drift from
-    catalogue_count. The ItemList deliberately enumerates every exam page that
-    exists — entity list = sit-able + retired reference pages, not the
-    advertised exam count — so this only warns; homepage_edits() is what keeps
-    numberOfItems itself in sync."""
+    catalogue_count, and print a positive line when they match. The ItemList
+    deliberately enumerates every exam page that exists — entity list =
+    sit-able + retired reference pages, not the advertised exam count — so
+    the entry-count check only warns; homepage_edits() is what keeps
+    numberOfItems itself in sync.
+
+    Also checks data["names"] (the snapshot render_exam_cards() reads an
+    exam's display name from) against the catalogue: a code missing from it
+    would otherwise make the per-exam OG card render silently fall back to
+    the bare code as the name instead of the exam's actual title."""
+    names = data.get("names") or {}
+    missing_names = sorted(code for code in counts if code not in names)
+    if missing_names:
+        plural = "y" if len(missing_names) == 1 else "ies"
+        print(f'  warning: data["names"] is missing an entr{plural} for '
+              f"{', '.join(missing_names)} — the per-exam OG card render "
+              f"would fall back to the code as the name.")
+
     if not os.path.exists(INDEX_HTML):
         return
     text = open(INDEX_HTML).read()
@@ -515,6 +519,8 @@ def warn_itemlist_count(catalogue_count: int) -> None:
         print(f"  warning: homepage ItemList has {n} ListItem entries, but the "
               f"catalogue has {catalogue_count} exams — re-run with --refresh "
               f"or check index.html.")
+    else:
+        print(f"  itemlist ok  {n} entries")
 
 
 def llms_edits(counts: dict, total_label: str, exam_count: int):
@@ -854,7 +860,6 @@ def main() -> None:
                 homepage_edits(total_label, metric_total, exam_count, cert_paths,
                                len(retired), catalogue_count),
                 transforms=[lambda t: patch_exam_code_lists(t, retired),
-                            lambda t: patch_more_certifications(t, exam_count, retired),
                             lambda t: patch_roadmap_category_counts(t, retired)])
 
         print("llms.txt:")
@@ -862,7 +867,7 @@ def main() -> None:
                 transforms=[lambda t: patch_llms_section_counts(t, retired)])
 
         warn_retired_markup(p, retired, set(counts))
-        warn_itemlist_count(catalogue_count)
+        warn_itemlist_count(catalogue_count, data, counts)
 
     sync_social_images(p, active, total_label, exam_count, cert_paths,
                        render=not args.no_render, data=data, retired=retired)

@@ -7,6 +7,7 @@ import ast
 import importlib.util
 import json
 import re
+import subprocess
 import sys
 from html import unescape
 from pathlib import Path
@@ -31,7 +32,10 @@ def _load_sitemap_lastmod_tool():
     return module
 
 
-_sitemap_lastmod = _load_sitemap_lastmod_tool()
+try:
+    _sitemap_lastmod = _load_sitemap_lastmod_tool()
+except subprocess.CalledProcessError:
+    sys.exit("validate-marketing-seo: not inside a git checkout")
 expected_lastmod = _sitemap_lastmod.expected_lastmod
 loc_to_path = _sitemap_lastmod.loc_to_path
 _COUNTS_DOC = json.loads((ROOT / "data" / "exam-counts.json").read_text())
@@ -66,12 +70,6 @@ if set(RETIRED) | set(RETIRING) != NON_CURRENT:
         f"Tools/optimise-marketing-seo.py."
     )
 
-SEO_UPDATED = "2026-08-09"
-SEO_UPDATED_OVERRIDES = {
-    # Keep in lockstep with optimise-marketing-seo.py.
-    "AB-650": "2026-08-23",
-    "AI-500": "2026-08-23",
-}
 GUIDE_UPDATED = "2026-08-09"
 GUIDE_UPDATED_LABEL = "Updated 9 August 2026"
 GUIDE_SLUGS = (

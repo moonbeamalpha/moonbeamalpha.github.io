@@ -693,6 +693,33 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
             "<!-- OpenGraph / Twitter (cert-scoped title + description; reuses homepage OG image) -->",
             "<!-- OpenGraph / Twitter (cert-scoped title + description + per-exam card image) -->",
         )
+        # og:image:width/height (Task A8 gap): apps/AzureMastery/og-exam.html
+        # renders every per-exam card at a fixed 1200x630, same as the shared
+        # og-image.html the homepage already declares these for -- see that
+        # page's og:image block. Same exactly-once insert-or-replace shape as
+        # og:image:type just below.
+        if 'property="og:image:width"' in text:
+            text = replace_once(
+                text, r'<meta property="og:image:width" content="[^"]*">',
+                '<meta property="og:image:width" content="1200">', "OpenGraph image width",
+            )
+        else:
+            text = replace_once(
+                text, r'(<meta property="og:image" content="[^"]*">\n)',
+                r'\1  <meta property="og:image:width" content="1200">\n',
+                "OpenGraph image width (insert)",
+            )
+        if 'property="og:image:height"' in text:
+            text = replace_once(
+                text, r'<meta property="og:image:height" content="[^"]*">',
+                '<meta property="og:image:height" content="630">', "OpenGraph image height",
+            )
+        else:
+            text = replace_once(
+                text, r'(<meta property="og:image:width" content="[^"]*">\n)',
+                r'\1  <meta property="og:image:height" content="630">\n',
+                "OpenGraph image height (insert)",
+            )
         if 'property="og:image:type"' in text:
             text = replace_once(
                 text, r'<meta property="og:image:type" content="[^"]*">',
@@ -805,14 +832,6 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
     return text
 
 
-def update_sitemap(text: str, codes: list[str]) -> str:
-    # sitemap.xml <lastmod> is no longer written from SEO_UPDATED here -- it is
-    # derived from git history by Tools/update-sitemap-lastmod.py (run that
-    # instead, and see Tools/validate-marketing-seo.py for the check). This is
-    # a deliberate no-op kept only so main()'s call site stays simple.
-    return text
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="report drift without writing files")
@@ -837,13 +856,6 @@ def main() -> None:
             if not args.check:
                 page.write_text(after)
 
-    before = SITEMAP.read_text()
-    after = update_sitemap(before, sorted(counts))
-    if after != before:
-        changed.append(SITEMAP)
-        if not args.check:
-            SITEMAP.write_text(after)
-
     if changed:
         verb = "would update" if args.check else "updated"
         print(f"{verb} {len(changed)} files:")
@@ -852,7 +864,7 @@ def main() -> None:
         if args.check:
             sys.exit(1)
     else:
-        print("SEO metadata, previews, and sitemap are in sync.")
+        print("SEO metadata and previews are in sync.")
 
 
 if __name__ == "__main__":

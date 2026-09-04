@@ -38,6 +38,15 @@ jobs:
       - name: Sitemap lastmod values are current
         run: python3 Tools/update-sitemap-lastmod.py --check
 
+      # Both patchers are idempotent, dependency-free batch rewrites (sticky
+      # bar/mid-page CTAs/nav badge; the GA4 internal-traffic flag) -- --check
+      # catches a page added or hand-edited without re-running them.
+      - name: Exam page CTA surfaces are current
+        run: python3 Tools/add-exam-page-cta.py --check
+
+      - name: GA4 internal-traffic flag is current
+        run: python3 Tools/add-ga-internal-flag.py --check
+
       - name: SEO contract
         run: python3 Tools/validate-marketing-seo.py
 

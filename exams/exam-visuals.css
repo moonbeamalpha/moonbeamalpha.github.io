@@ -1200,15 +1200,23 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
    copy around it, not the .container box itself: 832px is .container's
    880px max-width minus its 24px padding-inline on each side (exams/exam.css),
    so the band's edges match the section headings and body text above and
-   below it. The button reuses .mobile-cta-bar__btn's exact gradient pill. ── */
+   below it. The band sits outside .container (it is a raw sibling, not
+   wrapped in one -- see Tools/add-exam-page-cta.py), so it has no inherited
+   side padding of its own: below 832px, `width: calc(100% - 48px)` mirrors
+   .container's 24px-per-side inset directly, rather than relying on
+   max-width alone, which does nothing once the viewport drops under 832px
+   and let the band run edge-to-edge, 24px wider than the copy beside it on
+   every phone. The button reuses .mobile-cta-bar__btn's exact gradient
+   pill. ── */
 .exam-inline-cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+  width: calc(100% - 48px);
   max-width: 832px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 18px 24px;
   border: 1px solid rgba(80,230,255,0.3);
   border-radius: 14px;

@@ -85,9 +85,14 @@ def target_pages() -> list[Path]:
     data = json.loads(DATA_FILE.read_text())
     codes = sorted(data["exams"])
     pages = [ROOT / "exams" / code.lower() / "index.html" for code in codes]
-    template = ROOT / "exams" / "_template.html"
-    if '"@type": "FAQPage"' in template.read_text():
-        pages.append(template)
+    missing = [page for page in pages if not page.exists()]
+    for page in missing:
+        print(f"note: {page.relative_to(ROOT)} not found (code in snapshot, page not yet added)")
+    pages = [page for page in pages if page.exists()]
+    # Hub and template carry FAQPage nodes too: keep them in lockstep as well.
+    for extra in (ROOT / "exams" / "retired" / "index.html", ROOT / "exams" / "_template.html"):
+        if extra.exists() and '"@type": "FAQPage"' in extra.read_text():
+            pages.append(extra)
     return pages
 
 
@@ -99,7 +104,13 @@ def process(path: Path) -> tuple[str, list[str]]:
 
     visible = FAQ_BLOCK_RE.findall(text)
     visible_qas = [(normalise(q), normalise(a)) for q, a in visible]
-    matches = list(QUESTION_RE.finditer(text))
+    # Scan only from the FAQPage node onwards so a Question node that belongs
+    # to some other schema block earlier in the file can never be paired with
+    # a visible FAQ.
+    faq_start = text.find('"@type": "FAQPage"')
+    if faq_start < 0:
+        raise FaqSyncError(f"{rel}: no FAQPage node found")
+    matches = list(QUESTION_RE.finditer(text, faq_start))
 
     if len(visible_qas) != len(matches):
         raise FaqSyncError(

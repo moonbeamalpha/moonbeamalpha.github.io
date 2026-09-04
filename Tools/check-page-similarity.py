@@ -359,7 +359,7 @@ def main() -> None:
         for key in sorted(new_keys):
             if pairs[key] > base_max + DRIFT_TOLERANCE:
                 a, b = key.split("~", 1)
-                new_pages_over.add(a if a not in base_pages else b)
+                new_pages_over.update(c for c in (a, b) if c not in base_pages)
                 print(f"  DRIFT  new pair {a} ~ {b} = {pairs[key]:.4f} "
                       f"> baseline max_pair {base_max:.4f} (+{DRIFT_TOLERANCE})")
         for code in sorted(new_pages_over):

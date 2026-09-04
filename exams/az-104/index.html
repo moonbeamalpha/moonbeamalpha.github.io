@@ -220,6 +220,14 @@
           },
           {
             "@type": "Question",
+            "name": "What prior experience does AZ-104 assume?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AZ-104 assumes familiarity with operating systems, networking, servers, and virtualisation, plus hands-on experience with PowerShell, Azure CLI, the Azure portal, and ARM templates or Bicep files. It isn't written for someone with zero IT background — Microsoft expects a working administrator, not a beginner learning what a virtual machine is. If those fundamentals are genuinely new, AZ-900 first (or general IT experience) will make AZ-104 far more approachable."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "AZ-104 vs AZ-900 — which should I take first?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -333,6 +341,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -466,10 +475,10 @@
 
     <!-- AZ-104 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 17 April 2026</p>
       <h2 class="display-small section-title">AZ-104 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-104" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Five domains, with weights set by Microsoft's <strong>17 April 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-104" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--azure">
         <div class="exam-family-visual__media">
@@ -488,59 +497,120 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Manage Azure identities and governance<span class="domain__weight">20–25%</span></h3>
+          <h3>Manage Azure identities and governance<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="az104-identity">85</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Identity topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Manage Microsoft Entra users and groups</li>
+                <li>Manage access to Azure resources</li>
+                <li>Manage Azure subscriptions and governance</li>
+              </ul>
               <p>
-                The largest domain by typical question count, and the one everything else depends on. Covers Microsoft Entra ID user and group management, license assignment, external users, and self-service password reset (SSPR); managing access via built-in Azure roles assigned at different scopes (management group, subscription, resource group, resource); subscription and governance tooling — Azure Policy, resource locks, tags, resource groups, cost management with alerts and budgets, and management groups. Around 8–15 questions per sitting.
+                The largest domain by typical question count, and the one everything else depends on. Entra ID objectives cover day-to-day user and group administration — creating accounts, managing licences, handling external users, and configuring self-service password reset — while access management is specifically about built-in role assignment at the right scope, and interpreting who actually has access once inheritance from management group down to resource is accounted for. Governance rounds it out: Azure Policy, resource locks, tagging discipline, resource-group and subscription hygiene, cost alerts and budgets, and management-group structure. Scope confusion — assigning a role at subscription level when a resource group would do — is the domain's classic trap.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement and manage storage<span class="domain__weight">15–20%</span></h3>
+          <h3>Implement and manage storage<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="az104-storage">104</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Storage topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure access to storage</li>
+                <li>Configure and manage storage accounts</li>
+                <li>Configure Azure Files and Azure Blob Storage</li>
+              </ul>
               <p>
-                Configure access to storage via firewalls and virtual network rules, SAS tokens, stored access policies, access keys, and identity-based access for Azure Files. Configure storage accounts including redundancy options, object replication, and encryption. Configure Azure Files (file shares, snapshots, soft delete) and Azure Blob Storage (containers, tiers, soft delete, lifecycle management, versioning). Around 6–12 questions.
+                Storage questions are less about creating an account and more about configuring one correctly for a stated requirement. Access control spans firewall and virtual-network rules, SAS tokens and stored access policies, access keys, and identity-based access for Azure Files — four different mechanisms the exam expects you to distinguish. Account configuration covers redundancy tiers, object replication, and encryption; Azure Files and Blob Storage add file-share and container-level detail — soft delete, snapshots, lifecycle management, and versioning. Choosing the right redundancy or access tier for a described cost and durability requirement is tested more than raw factual recall.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Deploy and manage Azure compute resources<span class="domain__weight">20–25%</span></h3>
+          <h3>Deploy and manage Azure compute resources<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="az104-compute">133</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Compute topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Automate deployment of resources by using Azure Resource Manager (ARM) templates or Bicep files</li>
+                <li>Create and configure virtual machines</li>
+                <li>Provision and manage containers in the Azure portal</li>
+                <li>Create and configure Azure App Service</li>
+              </ul>
               <p>
-                Automate deployment using ARM templates or Bicep — interpret existing files, modify them, deploy resources, and convert between formats. Create and configure virtual machines including encryption at host, sizing, disks, availability zones and sets, and Virtual Machine Scale Sets. Provision and manage containers via Azure Container Registry, Container Instances, and Container Apps. Configure Azure App Service — service plans, scaling, certificates, custom DNS, deployment slots, and networking. Around 8–15 questions.
+                The domain with the widest service surface. Infrastructure as code comes first — reading, modifying, deploying, and converting between ARM templates and Bicep files, not just writing one from scratch. Virtual machine objectives cover sizing, disks, encryption at host, availability zones versus availability sets, and Virtual Machine Scale Sets. Containers stay portal-focused: Container Registry, Container Instances, and Container Apps, with an emphasis on sizing and scaling rather than orchestration depth. App Service closes the domain — plans, scaling, TLS certificates, custom DNS, deployment slots, and networking configuration for a web workload.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement and manage virtual networking<span class="domain__weight">15–20%</span></h3>
+          <h3>Implement and manage virtual networking<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="az104-networking">84</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Network topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure and manage virtual networks in Azure</li>
+                <li>Configure secure access to virtual networks</li>
+                <li>Configure name resolution and load balancing</li>
+              </ul>
               <p>
-                Configure virtual networks, subnets, peering, public IPs, user-defined routes, and troubleshoot connectivity. Configure secure access via NSGs, application security groups, Azure Bastion, service endpoints, and private endpoints. Configure name resolution (Azure DNS) and load balancing (internal and public load balancers). Around 6–12 questions.
+                Networking splits into three practical skill areas rather than pure theory. Core VNet configuration covers subnets, peering, public IP addressing, user-defined routes, and — critically — troubleshooting connectivity when a described setup isn't working as expected. Secure access covers NSGs and application security groups, evaluating effective security rules (not just the rules you wrote), Azure Bastion, and service and private endpoints for PaaS resources. Name resolution and load balancing rounds it out with Azure DNS and internal versus public load balancer configuration, including troubleshooting load-balancing behaviour.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Monitor and maintain Azure resources<span class="domain__weight">10–15%</span></h3>
+          <h3>Monitor and maintain Azure resources<span class="domain__weight">Published weight 10–15%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="az104-monitoring">75</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Monitor topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Monitor resources in Azure</li>
+                <li>Implement backup and recovery</li>
+              </ul>
               <p>
-                Monitor with Azure Monitor — metrics, log settings, log queries, alert rules, action groups, alert processing rules, Insights for VMs/storage/networks, plus Azure Network Watcher with Connection Monitor. Implement backup and recovery using Recovery Services vaults, Azure Backup vaults, backup policies, and Azure Site Recovery for failover to a secondary region. Around 4–9 questions.
+                The smallest domain by weight, but not to skip — it's frequently the deciding factor in borderline scores. Monitoring covers reading Azure Monitor metrics, configuring log settings, writing log queries, setting up alert rules and action groups, and using Insights for VMs, storage, and networks alongside Network Watcher's Connection Monitor. Backup and recovery covers Recovery Services and Backup vaults, writing backup policies, running backup and restore operations, and configuring Azure Site Recovery for cross-region failover — including interpreting the reports and alerts a backup job actually produces.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where AZ-104 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where AZ-104 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared AZ-104 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Subscription scope vs resource-group scope</h3>
+          <p>AZ-104 scenarios frequently describe a role assigned at one scope and ask what a user can or can't do at another. A Contributor role assigned at the subscription level cascades down to every resource group inside it; one assigned at a single resource group never reaches sibling resource groups or the subscription itself. Reading exactly which scope a role was assigned at — not just which role — decides the answer.</p>
+        </article>
+        <article class="trap">
+          <h3>Soft delete, versioning, and lifecycle management aren't the same control</h3>
+          <p>Soft delete recovers a blob or container that was deleted; versioning keeps every prior version of a blob as you overwrite it; lifecycle management automatically moves or deletes blobs based on age or last-access rules you define. They solve three different problems and can run simultaneously, but a scenario asking specifically how to recover an overwritten blob wants versioning, not soft delete.</p>
+        </article>
+        <article class="trap">
+          <h3>NSGs and application security groups aren't two names for the same thing</h3>
+          <p>A network security group filters traffic to and from a subnet or NIC using explicit rules; an application security group is a way of grouping VMs by role — web tier, database tier — so an NSG rule can reference the group instead of individual IP addresses. An ASG on its own blocks nothing; it only becomes a security boundary once referenced inside an NSG rule.</p>
+        </article>
+        <article class="trap">
+          <h3>Availability sets, availability zones, and scale sets protect against different failures</h3>
+          <p>Availability sets protect against failure within a single datacenter by spreading VMs across fault and update domains; availability zones protect against failure of an entire datacenter by spreading VMs across physically separate facilities in a region; Virtual Machine Scale Sets add automatic scaling on top of either. A scenario asking for protection against a full datacenter outage needs zones, not sets — mixing these up is one of the exam's most common misses.</p>
+        </article>
+        <article class="trap">
+          <h3>Service endpoints still leave a public IP; private endpoints don't</h3>
+          <p>A service endpoint keeps traffic to a PaaS resource on the Azure backbone, but the resource still has a public IP reachable from outside the VNet unless firewalled; a private endpoint gives the PaaS resource a private IP address inside your VNet, removing public exposure entirely. Scenarios requiring that a resource have no public endpoint at all need a private endpoint specifically, not a service endpoint.</p>
         </article>
       </div>
     </section>
@@ -550,22 +620,22 @@
       <p class="label-eyebrow section-eyebrow">Designed for AZ-104</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AZ-104</h2>
       <p>
-        Azure Mastery ships with <strong>481 AZ-104 practice questions</strong>, every one written specifically against the current (April 2026) skills outline. Each question carries a domain tag mapped to the official five domains, so you always know which area you're being tested on and where your weak spots are clustered. Bicep snippets, Azure CLI commands, and PowerShell cmdlets appear in roughly a third of the questions — practising blueprint-relevant formats and decisions.
+        Azure Mastery ships with <strong>481 AZ-104 practice questions</strong>, each written specifically against the current (17 April 2026) skills outline. Every question carries a domain tag mapped to the official five domains, so weak spots surface by domain, not just by raw score. Most items are single-answer multiple choice, but a meaningful share are scenario-based, yes/no, and multi-select questions, with a smaller mix of ordering, matching, and hotspot items — Bicep snippets, Azure CLI commands, and PowerShell cmdlets appear throughout, so reading a config matters as much as recalling a fact.
       </p>
       <p>
-        The on-device <strong>Exam IQ</strong> engine predicts your AZ-104 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+        The on-device <strong>Exam IQ</strong> engine predicts your AZ-104 score before you sit the exam. After roughly 30 questions across the five domains it has enough signal for a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and it names the specific Bicep, networking, or monitoring topic dragging that number down, rather than telling you to "study more."
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a Bicep-snippet question wrong? You'll see another infrastructure-as-code question in the next session. Master "NSG vs ASG vs Azure Firewall" three sessions running and the engine backs off, surfacing fresh storage redundancy or Azure Monitor scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on Deploy and manage Azure compute resources, tied for the domain Microsoft weights heaviest at 20–25% — get a Bicep-snippet or VM-sizing question wrong and the next session surfaces another compute question first. Master a topic across three sessions and the plan backs off, prioritising whichever gap between your accuracy and the 700 pass score is currently largest.
       </p>
       <p>
-        <strong>Knowledge decay tracking</strong> matters more for AZ-104 than for foundational exams — five domains is a lot to retain, and the topic you mastered three weeks into your study window is the topic you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
+        <strong>Knowledge decay tracking</strong> matters here because AZ-104 spans five genuinely different administration domains — identity, storage, compute, networking, and monitoring — and the redundancy-tier or NSG-rule detail you nailed in week one is exactly the kind of thing that fades by week six. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the April 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        <strong>Blueprint-aligned exam rehearsal</strong> runs a timed, domain-weighted practice session built from original questions — mostly single-answer multiple choice, with a real mix of scenario-based, yes/no, and multi-select items so you also practise reading a Bicep file or CLI command, not just picking one option. The 100-minute timer runs with no jumping back to flag-and-review, and it uses original practice content rather than reproducing Microsoft's exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> is where AZ-104's near-identical scoping and networking decisions get untangled. Get a question wrong because you picked a resource-group-scope role assignment when the scenario needed subscription scope, or confused a service endpoint with a private endpoint, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -755,6 +825,12 @@
           <summary>How long should I study for AZ-104?</summary>
           <div class="faq__answer">
             <p>Most candidates plan four to eight weeks with prior Azure experience, or longer if they are new to administration. Practise identity and governance, storage, compute, virtual networking, and monitoring in the portal and with Azure CLI, PowerShell, and Bicep so you can choose and apply the right administration method. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What prior experience does AZ-104 assume?</summary>
+          <div class="faq__answer">
+            <p>AZ-104 assumes familiarity with operating systems, networking, servers, and virtualisation, plus hands-on experience with PowerShell, Azure CLI, the Azure portal, and ARM templates or Bicep files. It isn't written for someone with zero IT background — Microsoft expects a working administrator, not a beginner learning what a virtual machine is. If those fundamentals are genuinely new, <a href="/exams/az-900/">AZ-900</a> first (or general IT experience) will make AZ-104 far more approachable.</p>
           </div>
         </details>
         <details class="faq">

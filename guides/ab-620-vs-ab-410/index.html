@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // QA browsers opt themselves out of reporting once via ?am_internal=1. The flag is a
+    // self-set localStorage marker on this origin only; GA4's Internal Traffic filter
+    // drops events that carry traffic_type=internal.
+    try {
+      if (/[?&]am_internal=1(&|$)/.test(location.search)) localStorage.setItem('am_internal', '1');
+      if (localStorage.getItem('am_internal') === '1') gtag('set', { traffic_type: 'internal' });
+    } catch (e) {}
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>AB-620 vs AB-410: which Copilot cert first? | Azure Mastery</title>
+  <meta name="description" content="AB-620 and AB-410 compared: credential, domains, exam format, and prep time, plus whether to build the Copilot Studio agent first or the app around it.">
+  <meta name="keywords" content="AB-620 vs AB-410, AB-620 or AB-410, AI Agent Builder vs Intelligent Applications Builder, Copilot Studio certification comparison, which Copilot certification first, Power Platform AI certification 2026">
+  <link rel="canonical" href="https://azuremastery.app/guides/ab-620-vs-ab-410/">
+
+  <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569">
+  <meta name="application-name" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-title" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Theme + favicons (consistent with the exam pages) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F5F7FA';}}catch(e){}})()</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- OpenGraph / Twitter (guide-scoped title + description; reuses homepage OG image) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://azuremastery.app/guides/ab-620-vs-ab-410/">
+  <meta property="og:title" content="AB-620 vs AB-410: Agent Builder or Intelligent-App Builder?">
+  <meta property="og:description" content="Credential, domains, exam format, and prep time for AB-620 and AB-410 compared side by side, plus whether to build the Copilot Studio agent first or the app around it.">
+  <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
+  <meta property="og:image:alt" content="Azure Mastery — comparing AB-620 AI Agent Builder and AB-410 Intelligent Applications Builder to help you choose your next Microsoft certification.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AB-620 vs AB-410: Agent Builder or Intelligent-App Builder?">
+  <meta name="twitter:description" content="Domains, exam format, and prep time for AB-620 and AB-410, side by side.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
+
+  <!-- Structured data: a single @graph block linking entities by @id.
+       Modern best practice for both classical SEO (Google) AND AI/AEO answer engines
+       (Perplexity, ChatGPT search, Google AI Overviews, Gemini, Claude), which prefer
+       linked, type-rich graphs over flat schemas:
+         · WebPage        — page-level metadata + speakable
+         · BreadcrumbList  — site hierarchy (Azure Mastery → Guides → this guide)
+         · TechArticle     — the comparison article itself
+         · FAQPage         — visible FAQ section (mirrors on-page text)
+       No HowTo block on this page — it is a comparison, not a study plan. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://azuremastery.app/guides/ab-620-vs-ab-410/#webpage",
+        "url": "https://azuremastery.app/guides/ab-620-vs-ab-410/",
+        "name": "AB-620 vs AB-410: agent builder or intelligent-app builder?",
+        "description": "A side-by-side comparison of AB-620 and AB-410: credential, domains, exam format, and prep time, plus whether one is a prerequisite for the other and how they combine into one Copilot solution skill set.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-09-04",
+        "dateModified": "2026-08-09",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azure Mastery",
+          "url": "https://azuremastery.app/"
+        },
+        "mainEntity": { "@id": "https://azuremastery.app/guides/ab-620-vs-ab-410/#article" },
+        "breadcrumb": { "@id": "https://azuremastery.app/guides/ab-620-vs-ab-410/#breadcrumbs" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".guide-hero__title", ".guide-hero__dek"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://azuremastery.app/guides/ab-620-vs-ab-410/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Azure Mastery", "item": "https://azuremastery.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://azuremastery.app/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "AB-620 vs AB-410: agent builder or intelligent-app builder?" }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://azuremastery.app/guides/ab-620-vs-ab-410/#article",
+        "headline": "AB-620 vs AB-410: agent builder or intelligent-app builder?",
+        "description": "Credential, domains, exam format, and prep time for AB-620 and AB-410 compared side by side, plus honest guidance on ordering and taking both.",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-09-04",
+        "dateModified": "2026-08-09",
+        "image": "https://azuremastery.app/images/og-image.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Moonbeam Alpha Ltd",
+          "url": "https://azuremastery.app/"
+        },
+        "about": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: AI Agent Builder Associate",
+            "alternateName": "AB-620"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Microsoft Certified: Intelligent Applications Builder Associate",
+            "alternateName": "AB-410"
+          }
+        ],
+        "mainEntityOfPage": { "@id": "https://azuremastery.app/guides/ab-620-vs-ab-410/#webpage" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://azuremastery.app/guides/ab-620-vs-ab-410/#faqs",
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need AB-620 before AB-410, or the other way round?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Neither. AB-620 and AB-410 are both standalone Associate exams with no formal prerequisite between them, and Microsoft's booking system will not check which one you hold before letting you schedule either. They are designed to be taken in whichever order matches the work you actually do."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the real difference between AB-620 and AB-410?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AB-620 tests whether you can design and extend the agent itself inside Copilot Studio: topics, generative orchestration, knowledge sources, tools, and multi-agent protocols. AB-410 tests whether you can build the Power Platform application, data model, and automation around an agent: Dataverse tables, model-driven and canvas apps, cloud flows, and AI Hub prompts. One is agent-layer, the other is application-layer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is AB-410 the same as the old PL-200?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, but it is the successor path for makers who previously targeted PL-200 (Power Platform Functional Consultant Associate). The PL-200T00 training course was replaced by AB-410T00, and AB-410 folds in the AI Hub, generative-page, and Copilot-integration content that PL-200 never covered. Prior PL-200 experience with Dataverse and Power Apps is a genuine head start, but it does not cover the AI Hub prompt or generative-page objectives on its own."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is harder, AB-620 or AB-410?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They are comparably demanding but hard in different ways. AB-620 concentrates difficulty in its Integrate & Extend domain, worth 40 to 45%, where multi-agent orchestration, MCP tools, and the Agent2Agent protocol require precise distinctions. AB-410 spreads difficulty across two application types (model-driven and canvas) plus a 40 to 45% automation domain covering cloud flows, AI Hub prompts, and business logic, so it rewards breadth over depth in any single area."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do AB-620 and AB-410 expire the same way?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Both are Microsoft Associate certifications, and both require annual renewal through a free, unproctored online assessment on Microsoft Learn during the six-month window before expiry. Passing one does not extend or affect the renewal clock on the other; each certification renews independently."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I take AB-620 and AB-410 close together?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. There is no cooling-off period between different exam codes, only between repeat attempts at the same one. Because both exams assume familiarity with the Power Platform environment model, solutions, and ALM basics, studying them back to back means the second exam's foundation section moves faster than the first one did."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as the exam pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==============================================================
+       AZURE MASTERY — GUIDES ARTICLE TOKENS + TYPOGRAPHY + COMPONENTS
+       Token block + typography + components copied verbatim from
+       guides/how-to-pass-az-104/index.html (the wave-1 exemplar) so this
+       comparison page matches the site visual with no new tokens.
+       ============================================================== */
+    :root {
+      --azure-cyan:      #50E6FF;
+      --azure-blue:      #2B88D8;
+      --azure-purple:    #9578E0;
+      --xp-gold:         #FFB900;
+      --success-green:   #20C020;
+      --warning-orange:  #F7630C;
+
+      --bg-app:          #050810;
+      --bg-deep:         #0A0E1A;
+      --bg-card:         #111827;
+      --bg-elevated:     #182033;
+      --bg-soft-blue:    #10233D;
+
+      --text-primary:    #F0F0F0;
+      --text-secondary:  #8B95A5;
+      --text-muted:      #808A96;
+
+      --border-subtle:   rgba(255,255,255,0.06);
+      --border-strong:   rgba(255,255,255,0.12);
+      --border-accent:   rgba(80,230,255,0.25);
+
+      --radius-md:       12px;
+      --radius-lg:       16px;
+      --radius-xl:       20px;
+
+      --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Typography classes (site parity) */
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 64px); line-height: 1.06; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.015em; }
+    .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
+    .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .headline-accent {
+      background: var(--gradient-cyan-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Sticky site nav (exam-page pattern) */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(5, 8, 16, 0.86);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .site-nav__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .site-nav__brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .site-nav__brand span { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; }
+    .site-nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      background: rgba(80,230,255,0.06);
+      border: 1px solid rgba(80,230,255,0.30);
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav__cta:hover { background: rgba(80,230,255,0.12); transform: translateY(-1px); }
+
+    /* Body sections */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+    main > section { padding-block: clamp(44px, 5vw, 72px); }
+    main > section:first-of-type { padding-block-start: 0; }
+    main > section[id] { scroll-margin-top: 72px; }
+
+    .section-eyebrow { margin: 0 0 14px; }
+    .section-title { margin: 0 0 24px; color: var(--text-primary); }
+    .section-lede {
+      margin: 0 0 28px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    section p { color: var(--text-secondary); max-width: 66ch; }
+    section p strong { color: var(--text-primary); font-weight: 600; }
+    .section-note { margin-top: 22px; }
+    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a:hover { text-decoration-thickness: 2px; }
+
+    /* Right-rail "On this page" TOC — desktop only (exam-page pattern) */
+    .page-toc { display: none; }
+    @media (min-width: 1280px) {
+      .page-toc {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        z-index: 40;
+        width: 156px;
+        padding: 16px 10px;
+        background: rgba(5, 8, 16, 0.55);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+      }
+      .page-toc__title {
+        margin: 0 0 10px;
+        padding-inline-start: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--azure-cyan);
+      }
+      .page-toc__list { list-style: none; margin: 0; padding: 0; }
+      .page-toc__item { margin: 0; }
+      .page-toc__link {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        border-radius: 0 6px 6px 0;
+        transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      }
+      .page-toc__link:hover {
+        color: var(--text-primary);
+        background: rgba(80, 230, 255, 0.06);
+        text-decoration: none;
+      }
+      .page-toc__link[aria-current="true"] {
+        color: var(--azure-cyan);
+        border-left-color: var(--azure-cyan);
+        background: rgba(80, 230, 255, 0.08);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---- Guide article components (reusable across the /guides/ wave) ---- */
+
+    /* Text hero — no phone mockup; eyebrow, headline, dek, meta line */
+    .guide-hero { padding-block: clamp(40px, 6vw, 72px) clamp(28px, 4vw, 44px); }
+    .guide-hero__eyebrow { margin: 0 0 18px; }
+    .guide-hero__title { margin: 0 0 20px; color: var(--text-primary); }
+    .guide-hero__dek {
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .guide-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .guide-meta__dot { color: var(--border-strong); }
+
+    /* Domain / weight / comparison table */
+    .guide-table-wrap { overflow-x: auto; margin-top: 8px; }
+    .guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 460px;
+    }
+    .guide-table caption {
+      text-align: left;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding-bottom: 10px;
+    }
+    .guide-table th, .guide-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .guide-table thead th {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .guide-table tbody th {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .guide-table td { color: var(--text-secondary); }
+    .guide-table__weight {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--azure-cyan);
+      white-space: nowrap;
+    }
+    .guide-table tbody tr:last-child th,
+    .guide-table tbody tr:last-child td { border-bottom: 0; }
+
+    /* Quick-facts list (exam format at a glance) */
+    .fact-grid {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 620px) { .fact-grid { grid-template-columns: repeat(2, 1fr); } }
+    .fact-grid li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .fact-grid__label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 92px;
+    }
+    .fact-grid__value { color: var(--text-primary); font-size: 15px; }
+
+    /* Callout / topic cards (verdict, career value) */
+    .topic-cards { display: grid; gap: 16px; margin-top: 8px; }
+    .topic-card {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+    }
+    .topic-card h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .topic-card p { margin: 0; max-width: none; }
+
+    /* CTA panel (in-article, honest features-forward) */
+    .cta-panel {
+      margin-top: 30px;
+      padding: 26px 28px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(ellipse 80% 120% at 0% 0%, rgba(43,136,216,0.16) 0%, transparent 60%),
+        rgba(255,255,255,0.025);
+      border: 1px solid var(--border-accent);
+    }
+    .cta-panel h3 {
+      margin: 0 0 8px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+    }
+    .cta-panel p { margin: 0 0 18px; color: var(--text-secondary); max-width: 58ch; }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #050810;
+      background: var(--gradient-cyan-blue);
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.45) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+    }
+
+    /* FAQ items */
+    .faqs { display: grid; gap: 14px; margin-top: 8px; }
+    .faq {
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .faq h3 {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .faq p { margin: 0; max-width: none; }
+
+    /* Related grid (exam-page pattern) */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    @media (min-width: 640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    .related-card {
+      display: block;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .related-card:hover {
+      background: rgba(80,230,255,0.06);
+      border-color: rgba(80,230,255,0.28);
+      transform: translateY(-2px);
+    }
+    .related-card__code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--azure-cyan);
+      letter-spacing: 0.03em;
+    }
+    .related-card__name {
+      display: block;
+      margin-top: 6px;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+    .related-card__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Final CTA section */
+    .cta-final {
+      text-align: center;
+      padding: clamp(52px, 8vw, 104px) 24px;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(43,136,216,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
+    }
+    .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
+    .cta-final p { margin: 0 auto 26px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-final .cta-button { font-size: 17px; padding: 16px 32px; }
+    .cta-small { display: block; margin-top: 14px; color: var(--text-muted); font-size: 13px; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: var(--azure-cyan); }
+
+    .guide-inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; max-width: 720px; margin: 40px auto 0; padding: 18px 22px; border: 1px solid rgba(80,230,255,0.3); border-radius: 14px; background: rgba(80,230,255,0.05); }
+    .guide-inline-cta__text { font-size: 15px; line-height: 1.5; color: var(--text-primary); }
+    .guide-inline-cta__btn { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; background: linear-gradient(120deg, #50E6FF, #2E7CEE); color: #041018; font-weight: 700; font-size: 14px; text-decoration: none; }
+  </style>
+  <link rel="stylesheet" href="/theme-light.css">
+  <link rel="stylesheet" href="/guides/guide-visuals.css">
+  <link rel="stylesheet" href="/social-follow.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+    <button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="site-nav__cta" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download</a>
+  </header>
+
+  <main>
+
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc__title">On this page</p>
+      <ol class="page-toc__list">
+        <li class="page-toc__item"><a class="page-toc__link" href="#verdict">Quick answer</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#comparison">Side by side</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#ab-620-tests">What AB-620 tests</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#ab-410-tests">What AB-410 tests</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#prerequisite">Prerequisite?</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#career-value">Career value</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#take-both">Take both?</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#faqs">FAQs</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#related">Related guides</a></li>
+      </ol>
+    </nav>
+
+    <!-- HERO — visual article summary -->
+    <section class="guide-hero container guide-hero--visual">
+      <p class="label-eyebrow guide-hero__eyebrow">Guide</p>
+      <h1 class="display-large guide-hero__title">
+        <span class="headline-accent">AB-620</span> vs <span class="headline-accent">AB-410</span>: agent builder or intelligent-app builder?
+      </h1>
+      <p class="guide-hero__dek">
+        Both are new-in-2026 Copilot-adjacent Associate exams. See how they split the work, then pick the one that matches what you actually build.
+      </p>
+      <p class="guide-meta">
+        <time datetime="2026-08-09">Updated 9 August 2026</time>
+        <span class="guide-meta__dot">·</span>
+        <span>~9 min read</span>
+      </p>
+
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/exam-choice-dark.webp"
+          data-theme-src-light="/guides/images/exam-choice-light.webp"
+          alt="Aura points to a fork between building the agent's logic in Copilot Studio and building the Power Platform application around it."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Pick the right builder role</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Agent builder</span><span>App builder</span></span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Quick-answer verdict -->
+    <section id="verdict" class="container">
+      <p class="label-eyebrow section-eyebrow">Quick answer</p>
+      <h2 class="display-small section-title">AB-620 or AB-410: the short version</h2>
+      <p class="section-lede">
+        Both exams sit inside the same Copilot Studio ecosystem, but they certify two different jobs. Which one you sit first should follow the work in front of you, not a ranking of which sounds more advanced.
+      </p>
+      <div class="topic-cards">
+        <div class="topic-card">
+          <h3>Choose AB-620 if you build the agent itself</h3>
+          <p>
+            AB-620 (Microsoft Certified: AI Agent Builder Associate) is the right exam if your job is designing and extending custom agents inside Copilot Studio: conversational topics, generative-answer configuration, knowledge-source grounding, tool integrations through MCP or custom connectors, and multi-agent orchestration with the Agent2Agent protocol. You are the person who decides how the agent reasons and responds.
+          </p>
+        </div>
+        <div class="topic-card">
+          <h3>Choose AB-410 if you build the application around it</h3>
+          <p>
+            AB-410 (Microsoft Certified: Intelligent Applications Builder Associate) is the right exam if your job is building the Power Platform application, data model, and automation that consumes agents, prompts, and AI models: Dataverse tables, model-driven and canvas apps, generative pages, cloud flows, and AI Hub prompts. You are the person who decides how the business actually uses what the agent produces.
+          </p>
+        </div>
+      </div>
+      <p class="section-note">
+        Neither is a formal prerequisite for the other. See <a href="#prerequisite">"Do you need one before the other?"</a> below for how the two certifications fit together when you own the whole solution.
+      </p>
+    </section>
+
+    <!-- Side-by-side comparison table -->
+    <section id="comparison" class="container">
+      <p class="label-eyebrow section-eyebrow">Side by side</p>
+      <h2 class="display-small section-title">AB-620 vs AB-410 at a glance</h2>
+      <p class="section-lede">
+        Both columns come from the current Microsoft skills outlines for each exam, not estimates.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AB-620 and AB-410 compared</caption>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">AB-620</th><th scope="col">AB-410</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Credential</th><td>Microsoft Certified: AI Agent Builder Associate</td><td>Microsoft Certified: Intelligent Applications Builder Associate</td></tr>
+            <tr><th scope="row">Best for</th><td>Developers and consultants who design, extend, and govern custom agents inside Copilot Studio</td><td>App makers who build the Dataverse-backed apps, pages, and flows that consume agents and AI models</td></tr>
+            <tr><th scope="row">Domains</th><td>3: plan &amp; configure agent solutions; integrate &amp; extend agents; test &amp; manage agents</td><td>3: foundation for intelligent applications; create intelligent applications; build business logic &amp; automation</td></tr>
+            <tr><th scope="row">Format</th><td>40–60 questions, 100 minutes (120-minute seat)</td><td>Typically 40–60 questions, 120 minutes</td></tr>
+            <tr><th scope="row">Question style</th><td>Multiple choice and multi-select scenario questions, mostly built around a Copilot Studio topic, flow, or connector configuration</td><td>Multiple choice and multi-select, plus interactive components such as ordering and case studies — Microsoft doesn't disclose the exact item mix</td></tr>
+            <tr><th scope="row">Pass score</th><td>700 / 1000</td><td>700 / 1000</td></tr>
+            <tr><th scope="row">Typical prep time</th><td>Four to six weeks with existing Copilot Studio and Power Platform experience</td><td>Four to six weeks with existing Dataverse and Power Apps experience</td></tr>
+            <tr><th scope="row">Renewal</th><td>Renew annually, free online assessment</td><td>Renew annually, free online assessment</td></tr>
+            <tr><th scope="row">Skills outline</th><td>Updated 21 April 2026</td><td>Updated 15 May 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Exam fees vary by country for both, so check Microsoft's own pages for the price where you live: the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-620" rel="noopener">AB-620 study guide</a> and the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-410" rel="noopener">AB-410 study guide</a> both link through to registration and current pricing.
+      </p>
+    </section>
+
+    <!-- What AB-620 actually tests -->
+    <section id="ab-620-tests" class="container">
+      <p class="label-eyebrow section-eyebrow">What AB-620 actually tests</p>
+      <h2 class="display-small section-title">What AB-620 actually tests</h2>
+      <p class="section-lede">
+        AB-620 is scenario-driven and Copilot Studio-specific. Expect a configuration screen or a described business constraint, and a question about what to change or which component to use.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AB-620 skills measured (outline effective 21 April 2026)</caption>
+          <thead>
+            <tr><th scope="col">Domain</th><th scope="col">Weight</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Plan &amp; configure agent solutions</th><td class="guide-table__weight">30–35%</td></tr>
+            <tr><th scope="row">Integrate &amp; extend agents</th><td class="guide-table__weight">40–45%</td></tr>
+            <tr><th scope="row">Test &amp; manage agents</th><td class="guide-table__weight">20–25%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Planning covers integration with enterprise systems, identity strategy, channel and deployment planning, and responsible AI, then moves into building agent flows and configuring topics: trigger phrases, tools, adaptive cards, and variables. The largest domain, integrate and extend, covers connecting to enterprise knowledge sources such as Azure AI Search and Power Platform connectors, adding tools including MCP and REST APIs, and — the section most candidates underestimate — multi-agent collaboration: wiring a Foundry agent or a Fabric data agent into an orchestrator, and building cross-agent solutions with the Agent2Agent protocol. Test and manage covers evaluation methods and application lifecycle management: solutions, environment variables, and Power Platform Pipelines rather than manual copy-paste between environments.
+      </p>
+    </section>
+
+    <!-- What AB-410 actually tests -->
+    <section id="ab-410-tests" class="container">
+      <p class="label-eyebrow section-eyebrow">What AB-410 actually tests</p>
+      <h2 class="display-small section-title">What AB-410 actually tests</h2>
+      <p class="section-lede">
+        AB-410 is task-based and spans two different app-building paradigms plus a heavyweight automation domain, so it rewards candidates who are comfortable moving between Dataverse, both app types, and Power Fx in the same session.
+      </p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <caption>AB-410 skills measured (outline effective 15 May 2026)</caption>
+          <thead>
+            <tr><th scope="col">Domain</th><th scope="col">Weight</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Create a foundation for intelligent applications</th><td class="guide-table__weight">25–30%</td></tr>
+            <tr><th scope="row">Create intelligent applications</th><td class="guide-table__weight">25–30%</td></tr>
+            <tr><th scope="row">Build business application logic &amp; automation</th><td class="guide-table__weight">40–45%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        The foundation domain covers Dataverse table and column design, relationships, prompt columns, security, and choosing the right AI-enabled build approach and environment type before you start. Create intelligent applications splits between model-driven apps — forms, views, generative pages built from natural language, and dashboards — and canvas apps, where accessibility, reusable components, and error handling matter as much as layout. The largest domain, business logic and automation, is where AB-410 differs most from a plain app-building exam: cloud flow triggers and connectors, AI Hub prompts consumed from both apps and flows, and the distinctions between business rules, business process flows, and calculated, rollup, or formula columns that recur throughout the exam.
+      </p>
+    </section>
+
+    <!-- Prerequisite / ordering -->
+    <section id="prerequisite" class="container">
+      <p class="label-eyebrow section-eyebrow">Prerequisite question</p>
+      <h2 class="display-small section-title">Do you need one before the other?</h2>
+      <p>
+        No. AB-620 and AB-410 are both standalone Associate certifications, and Microsoft does not require either one as a prerequisite for the other. You can sit AB-620 without ever touching AB-410's Dataverse and app-building content, and you can sit AB-410 without ever building an agent from scratch in Copilot Studio.
+      </p>
+      <p>
+        Where the two genuinely connect is in what they build together. AB-620 certifies the agent's internal logic; AB-410 certifies the application, data model, and automation that surrounds it. A single Copilot solution — say, an internal support assistant with a Dataverse-backed case log, a canvas app for agents to review flagged conversations, and an approval flow for escalations — draws on both skill sets at once. If you own that kind of end-to-end solution, sitting both certifications maps directly onto your actual job; if you own only one half, sit the one that matches it and treat the other as optional.
+      </p>
+      <p>
+        If you are deciding purely on order, sit whichever one reflects your stronger existing skill first: candidates who already build in Copilot Studio daily tend to find AB-620 the faster route in, while candidates who already model Dataverse tables and build canvas apps tend to find AB-410 faster. Sitting the exam closer to your current work first also means the second exam's shared Power Platform foundation — solutions, environments, and ALM basics — needs less relearning.
+      </p>
+    </section>
+
+    <!-- Career value framing (no invented numbers) -->
+    <section id="career-value" class="container">
+      <p class="label-eyebrow section-eyebrow">Career value</p>
+      <h2 class="display-small section-title">How each certification helps your career</h2>
+      <p>
+        AB-620 is the credential to point to when a role description says "Copilot Studio developer", "AI agent builder", or asks specifically for agent orchestration, MCP tooling, or multi-agent design. It signals that you can be trusted with the parts of a Copilot solution that are hardest to get wrong: groundedness, tool access, and how agents hand off to one another.
+      </p>
+      <p>
+        AB-410 is the credential for "Power Platform developer" or "low-code application builder" roles that now expect AI literacy as standard, not as a bonus skill. It is also the direct successor path for anyone who previously built toward PL-200 (Power Platform Functional Consultant Associate) — the PL-200T00 training course has been replaced by AB-410T00, and prior PL-200 experience with Dataverse and canvas apps transfers cleanly into AB-410's foundation and application domains.
+      </p>
+      <p>
+        Neither certification guarantees a role or a pay rise on its own. What both reliably provide is a structured way to demonstrate a specific, in-demand skill set to a hiring manager or an internal promotion panel, backed by a Microsoft-set bar rather than a self-assessment.
+      </p>
+    </section>
+
+    <!-- Take both? -->
+    <section id="take-both" class="container">
+      <p class="label-eyebrow section-eyebrow">Take both?</p>
+      <h2 class="display-small section-title">Should you take both AB-620 and AB-410?</h2>
+      <p>
+        For anyone who owns a Copilot solution end to end — the agent, the app around it, and the data model underneath — taking both is the strongest option on the table. Microsoft's own certification pathing groups the two together for exactly this reason: one exam proves you can build the agent, the other proves you can build everything the agent depends on and everything that depends on the agent.
+      </p>
+      <p>
+        For a specialist who only ever touches one side of that boundary, taking both is optional. A pure Copilot Studio developer gets little additional signal from AB-410's Dataverse and canvas-app content, and a pure Power Platform app builder who never designs agent logic gets little additional signal from AB-620's orchestration-heavy domains. In those cases, sit the one that matches the job and revisit the other only if the role expands.
+      </p>
+      <p>
+        If you do plan to sit both, studying them in sequence rather than in parallel makes the shared Power Platform foundation work in your favour instead of doubling your workload. The <a href="/guides/how-to-pass-ab-620/">AB-620 study guide</a> lays out a four-week plan you can use as the first half of a combined project.
+      </p>
+      <div class="cta-panel">
+        <h3>Prepare for either exam, or both, in one app</h3>
+        <p>
+          Azure Mastery carries both the AB-620 and AB-410 question banks, each mapped to its own current skills outline. Every bank gets its own on-device Exam IQ readiness score, its own adaptive study plan, and its own full-length exam simulator, so switching between agent-builder and app-builder practice does not mean switching apps. It works offline and needs no account to start.
+        </p>
+        <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+          </svg>
+          Download Azure Mastery — free
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <div class="guide-inline-cta">
+      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
+    </div>
+
+    <section id="faqs" class="container">
+      <p class="label-eyebrow section-eyebrow">Frequently asked</p>
+      <h2 class="display-small section-title">AB-620 vs AB-410 FAQs</h2>
+      <div class="faqs">
+        <details class="faq">
+          <summary>Do I need AB-620 before AB-410, or the other way round?</summary>
+          <div class="faq__answer"><p>Neither. AB-620 and AB-410 are both standalone Associate exams with no formal prerequisite between them, and Microsoft's booking system will not check which one you hold before letting you schedule either. They are designed to be taken in whichever order matches the work you actually do.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What's the real difference between AB-620 and AB-410?</summary>
+          <div class="faq__answer"><p>AB-620 tests whether you can design and extend the agent itself inside Copilot Studio: topics, generative orchestration, knowledge sources, tools, and multi-agent protocols. AB-410 tests whether you can build the Power Platform application, data model, and automation around an agent: Dataverse tables, model-driven and canvas apps, cloud flows, and AI Hub prompts. One is agent-layer, the other is application-layer.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Is AB-410 the same as the old PL-200?</summary>
+          <div class="faq__answer"><p>No, but it is the successor path for makers who previously targeted PL-200 (Power Platform Functional Consultant Associate). The PL-200T00 training course was replaced by AB-410T00, and AB-410 folds in the AI Hub, generative-page, and Copilot-integration content that PL-200 never covered. Prior PL-200 experience with Dataverse and Power Apps is a genuine head start, but it does not cover the AI Hub prompt or generative-page objectives on its own.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which is harder, AB-620 or AB-410?</summary>
+          <div class="faq__answer"><p>They are comparably demanding but hard in different ways. AB-620 concentrates difficulty in its Integrate &amp; Extend domain, worth 40 to 45%, where multi-agent orchestration, MCP tools, and the Agent2Agent protocol require precise distinctions. AB-410 spreads difficulty across two application types (model-driven and canvas) plus a 40 to 45% automation domain covering cloud flows, AI Hub prompts, and business logic, so it rewards breadth over depth in any single area.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do AB-620 and AB-410 expire the same way?</summary>
+          <div class="faq__answer"><p>Yes. Both are Microsoft Associate certifications, and both require annual renewal through a free, unproctored online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> during the six-month window before expiry. Passing one does not extend or affect the renewal clock on the other; each certification renews independently.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can I take AB-620 and AB-410 close together?</summary>
+          <div class="faq__answer"><p>Yes. There is no cooling-off period between different exam codes, only between repeat attempts at the same one. Because both exams assume familiarity with the Power Platform environment model, solutions, and ALM basics, studying them back to back means the second exam's foundation section moves faster than the first one did.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related guides -->
+    <section id="related" class="container">
+      <p class="label-eyebrow section-eyebrow">Keep reading</p>
+      <h2 class="display-small section-title">Related guides</h2>
+      <p class="section-lede">
+        Once you have picked a side, these guides carry you through the study plan.
+      </p>
+      <nav class="related-grid" aria-label="Related guides">
+        <a class="related-card" href="/exams/ab-620/">
+          <span class="related-card__code">AB-620</span>
+          <span class="related-card__name">AB-620 study app &amp; question bank</span>
+          <span class="related-card__hint">The full app page: every question type, the Exam IQ readiness score, and the adaptive study plan for AI Agent Builder.</span>
+        </a>
+        <a class="related-card" href="/exams/ab-410/">
+          <span class="related-card__code">AB-410</span>
+          <span class="related-card__name">AB-410 study app &amp; question bank</span>
+          <span class="related-card__hint">The full app page: every question type, the Exam IQ readiness score, and the adaptive study plan for Intelligent Applications Builder.</span>
+        </a>
+        <a class="related-card" href="/guides/how-to-pass-ab-620/">
+          <span class="related-card__code">AB-620</span>
+          <span class="related-card__name">How to pass AB-620 Copilot Studio AI Agent Builder</span>
+          <span class="related-card__hint">A four-week study plan, the hardest topics, and exam-day tactics.</span>
+        </a>
+        <a class="related-card" href="/guides/which-azure-certification-first/">
+          <span class="related-card__code">Start here</span>
+          <span class="related-card__name">Which Microsoft certification first?</span>
+          <span class="related-card__hint">A guided walk through the Azure, AI, data, and security tracks if you are not sure a Copilot certification is even the right track yet.</span>
+        </a>
+      </nav>
+      <p class="section-note">
+        Browse the full library on the <a href="/guides/">Azure certification guides</a> index.
+      </p>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final" aria-labelledby="cta-final-heading">
+      <h2 id="cta-final-heading" class="display-small">Ready to start on AB-620 or AB-410?</h2>
+      <p>Practise with the AB-620 or AB-410 question bank in Azure Mastery, each with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>
+        </svg>
+        Download Azure Mastery — free
+      </a>
+      <span class="cta-small">iPhone &amp; iPad · Free to start · No account required</span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <!-- social-follow:start -->
+    <section class="social-follow" aria-labelledby="social-follow-title">
+      <div class="social-follow__copy">
+        <span class="social-follow__eyebrow">Stay current</span>
+        <h2 class="social-follow__title" id="social-follow-title">Follow Azure Mastery</h2>
+        <p class="social-follow__description">Exam updates, bite-sized study tips, and new guide alerts.</p>
+      </div>
+      <nav class="social-follow__links" aria-label="Follow Azure Mastery on social media">
+        <a class="social-follow__link" href="https://www.instagram.com/azuremastery.app"
+           target="_blank" rel="noopener me"
+           data-social-platform="instagram" data-social-placement="footer"
+           aria-label="Azure Mastery on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a class="social-follow__link" href="https://x.com/AzureMastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="x" data-social-placement="footer"
+           aria-label="Azure Mastery on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          <span>X</span>
+        </a>
+        <a class="social-follow__link" href="https://www.tiktok.com/@azuremastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="tiktok" data-social-placement="footer"
+           aria-label="Azure Mastery on TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19.32 6.69a5.31 5.31 0 0 1-3.36-1.2 5.32 5.32 0 0 1-1.96-3.49h-3.27v13.17a2.65 2.65 0 1 1-2.65-2.65c.27 0 .53.04.78.11V9.31a5.93 5.93 0 0 0-.78-.05 5.93 5.93 0 1 0 5.93 5.93V8.6a8.55 8.55 0 0 0 5.31 1.83V7.16a5.27 5.27 0 0 1-0-.47z"/>
+          </svg>
+          <span>TikTok</span>
+        </a>
+        <a class="social-follow__link" href="https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg"
+           target="_blank" rel="noopener me"
+           data-social-platform="youtube" data-social-placement="footer"
+           aria-label="Azure Mastery on YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.56 12 3.56 12 3.56s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.2 31.58 31.58 0 0 0 0 12a31.58 31.58 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14A31.58 31.58 0 0 0 24 12a31.58 31.58 0 0 0-.5-5.8zM9.6 15.56V8.44L15.82 12 9.6 15.56z"/>
+          </svg>
+          <span>YouTube</span>
+        </a>
+        <a class="social-follow__link" href="https://www.facebook.com/profile.php?id=61578421530035"
+           target="_blank" rel="noopener me"
+           data-social-platform="facebook" data-social-placement="footer"
+           aria-label="Azure Mastery on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.43-4.91 8.43-9.93z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+      </nav>
+    </section>
+    <!-- social-follow:end -->
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/exams/">All exams</a> ·
+      <a href="/guides/">Guides</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      AB-620, AB-410, Microsoft Copilot Studio, Microsoft Power Platform, and Microsoft are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+
+  <script src="/exams/exam.js" defer></script>
+  <script src="/theme.js" defer></script>
+</body>
+</html>

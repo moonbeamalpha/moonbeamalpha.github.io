@@ -602,6 +602,37 @@ def render_png(chrome: str, port: int, html_path: str, png_path: str) -> bool:
     return True
 
 
+def optimise_png(path: str) -> None:
+    """Quantise a freshly-rendered social PNG to a 256-colour palette in place.
+    Chrome's screenshots are full 24-bit RGB/RGBA PNGs; these are mostly a flat
+    gradient plus a few embedded phone screenshots, so a 256-colour palette
+    loses nothing visible while cutting the file to a third of its size or
+    better. No new dependency: Pillow is already a soft requirement of the
+    render path, guarded here exactly like it is everywhere else -- if it is
+    missing, warn and leave the (larger) true-colour PNG in place rather than
+    fail the run."""
+    try:
+        from PIL import Image
+    except ImportError:
+        print(f"  warning: Pillow not installed, cannot optimise "
+              f"{os.path.relpath(path, ROOT)} (pip install pillow)")
+        return
+    before = os.path.getsize(path)
+    im = Image.open(path)
+    if im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info):
+        # MEDIANCUT/MAXCOVERAGE cannot quantize RGBA; FASTOCTREE is the only
+        # alpha-safe method Pillow ships without libimagequant (not installed
+        # on this machine -- see Tooling facts).
+        quantized = im.convert("RGBA").quantize(colors=256, method=Image.Quantize.FASTOCTREE)
+    else:
+        quantized = im.convert("RGB").quantize(
+            colors=256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.FLOYDSTEINBERG)
+    quantized.save(path, optimize=True)
+    after = os.path.getsize(path)
+    print(f"  optimised   {os.path.relpath(path, ROOT)}: {before:,} -> {after:,} bytes "
+          f"({100 * (1 - after / before):.0f}% smaller)")
+
+
 def _serve_root() -> tuple[http.server.ThreadingHTTPServer, int]:
     """Serve ROOT on an ephemeral localhost port in a daemon thread."""
     class Quiet(http.server.SimpleHTTPRequestHandler):
@@ -630,8 +661,10 @@ def sync_social_images(p: "Patcher", counts: dict, total_label: str,
         return
     httpd, port = _serve_root()
     try:
-        render_png(chrome, port, BANNER_HTML, BANNER_PNG)
-        render_png(chrome, port, OG_HTML, OG_PNG)
+        if render_png(chrome, port, BANNER_HTML, BANNER_PNG):
+            optimise_png(BANNER_PNG)
+        if render_png(chrome, port, OG_HTML, OG_PNG):
+            optimise_png(OG_PNG)
     finally:
         httpd.shutdown()
 

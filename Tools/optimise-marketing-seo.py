@@ -575,7 +575,7 @@ def replace_once(text: str, pattern: str, replacement: str, label: str, *, flags
     return text
 
 
-def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
+def update_page(text: str, code: str, count: int, questions: list[dict], name: str) -> str:
     retired = RETIRED_EXAMS.get(code)
     retiring = RETIRING_EXAMS.get(code)
     if retired:
@@ -667,6 +667,44 @@ def update_page(text: str, code: str, count: int, questions: list[dict]) -> str:
         text, r'<meta name="twitter:description" content="[^"]*">',
         f'<meta name="twitter:description" content="{social_description}">', "Twitter description",
     )
+
+    # Per-exam OG/Twitter card (Task A8). Guarded on the rendered JPEG actually
+    # existing on disk, so a page is never pointed at an image that hasn't been
+    # rendered yet -- run the social render in sync-marketing-counts.py first.
+    # Pages this hasn't run for keep pointing at the shared images/og-image.png,
+    # same as before this task.
+    og_jpg = ROOT / "images" / "og" / f"{code.lower()}.jpg"
+    if og_jpg.exists():
+        image_url = f"https://azuremastery.app/images/og/{code.lower()}.jpg"
+        alt = f"{code} — {html.escape(name, quote=False)} practice questions in Azure Mastery"
+        text = replace_once(
+            text, r'<meta property="og:image" content="[^"]*">',
+            f'<meta property="og:image" content="{image_url}">', "OpenGraph image",
+        )
+        text = replace_once(
+            text, r'<meta property="og:image:alt" content="[^"]*">',
+            f'<meta property="og:image:alt" content="{alt}">', "OpenGraph image alt",
+        )
+        text = replace_once(
+            text, r'<meta name="twitter:image" content="[^"]*">',
+            f'<meta name="twitter:image" content="{image_url}">', "Twitter image",
+        )
+        text = text.replace(
+            "<!-- OpenGraph / Twitter (cert-scoped title + description; reuses homepage OG image) -->",
+            "<!-- OpenGraph / Twitter (cert-scoped title + description + per-exam card image) -->",
+        )
+        if 'property="og:image:type"' in text:
+            text = replace_once(
+                text, r'<meta property="og:image:type" content="[^"]*">',
+                '<meta property="og:image:type" content="image/jpeg">', "OpenGraph image type",
+            )
+        else:
+            text = replace_once(
+                text, r'(<meta property="og:image" content="[^"]*">\n)',
+                r'\1  <meta property="og:image:type" content="image/jpeg">\n',
+                "OpenGraph image type (insert)",
+            )
+
     text = replace_once(
         text,
         r'("@type": "WebPage",.*?"name": ")[^"]*(",\s*"description": ")[^"]*(")',
@@ -781,7 +819,9 @@ def main() -> None:
     parser.add_argument("--app-repo", type=Path, default=DEFAULT_APP_REPO)
     args = parser.parse_args()
 
-    counts = json.loads(DATA_FILE.read_text())["exams"]
+    exam_data = json.loads(DATA_FILE.read_text())
+    counts = exam_data["exams"]
+    names = exam_data.get("names", {})
     changed: list[Path] = []
 
     for code, count in sorted(counts.items()):
@@ -791,7 +831,7 @@ def main() -> None:
             sys.exit(f"missing page or question bank for {code}: {page} / {resource}")
         questions = json.loads(resource.read_text())["questions"]
         before = page.read_text()
-        after = update_page(before, code, count, questions)
+        after = update_page(before, code, count, questions, names.get(code, code))
         if after != before:
             changed.append(page)
             if not args.check:

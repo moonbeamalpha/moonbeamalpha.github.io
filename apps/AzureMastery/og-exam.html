@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>OG Exam Card — Azure Mastery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Rendered at 1200 × 630 (deviceScaleFactor 2 → 2400 × 1260), converted to
+       JPEG after render — see optimise_png()/sync_social_images() in
+       Tools/sync-marketing-counts.py. {{ACCENT}}/{{ACCENT2}} are read per-page
+       from each exam's own --amh-accent custom properties; falls back to the
+       app's default cyan/blue when a page has none. ── */
+    :root {
+      --accent: {{ACCENT}};
+      --accent-2: {{ACCENT2}};
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #F0F0F0;
+      background:
+        linear-gradient(160deg,
+          #050810 0%,
+          #0A0E1A 30%,
+          #0F1525 60%,
+          #050810 100%);
+      position: relative;
+    }
+
+    /* Ambient glows — accent-tinted per exam, mirrored from og-image.html for
+       visual continuity across the two card families. */
+    .glow-primary {
+      position: absolute;
+      top: -14%;
+      left: -10%;
+      width: 62%;
+      height: 90%;
+      background: radial-gradient(ellipse at center,
+        color-mix(in srgb, var(--accent) 26%, transparent) 0%,
+        color-mix(in srgb, var(--accent) 7%, transparent) 40%,
+        transparent 70%);
+      filter: blur(70px);
+      pointer-events: none;
+    }
+    .glow-secondary {
+      position: absolute;
+      top: -16%;
+      right: -14%;
+      width: 55%;
+      height: 85%;
+      background: radial-gradient(ellipse at center,
+        rgba(180,155,239,0.14) 0%,
+        rgba(80,230,255,0.05) 40%,
+        transparent 70%);
+      filter: blur(70px);
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 46px 68px 38px;
+    }
+
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    .app-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+    .app-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 19px;
+      background: linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .code {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 150px;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 33px;
+      line-height: 1.15;
+      color: #F0F0F0;
+      letter-spacing: -0.01em;
+      max-width: 960px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-self: flex-start;
+      align-items: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 10px 22px;
+      border-radius: 999px;
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
+      margin-top: 8px;
+    }
+    .pill--retired {
+      color: #F7630C;
+      background: rgba(247,99,12,0.12);
+      border-color: rgba(247,99,12,0.36);
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-primary"></div>
+  <div class="glow-secondary"></div>
+
+  <div class="container">
+    <div class="app-brand">
+      <img src="../../images/azure-mastery.png" alt="Azure Mastery" class="app-icon">
+      <span class="app-name">Azure Mastery</span>
+    </div>
+
+    <div class="main">
+      <div class="code">{{CODE}}</div>
+      <div class="name">{{NAME}}</div>
+      <div class="pill">{{COUNT}} practice questions · free to start</div>
+    </div>
+
+    <div class="footer">
+      <span>Independent study app. Not affiliated with Microsoft.</span>
+    </div>
+  </div>
+</body>
+</html>

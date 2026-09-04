@@ -64,6 +64,7 @@ from __future__ import annotations
 
 import argparse
 import functools
+import html
 import http.server
 import json
 import os
@@ -88,6 +89,27 @@ OG_PNG = os.path.join(ROOT, "images", "og-image.png")
 # Codes shown as styled exam pills in each image (e.g. "AZ-104"). Hand-coloured,
 # so we only warn on drift rather than regenerate them.
 PILL_RE = re.compile(r'class="(?:exam-tag exam-tag--|pill pill-)[a-z]+">([A-Z]{2}-\d{3})<')
+
+# Per-exam OG cards (Task A8): one template, filled per code and rendered to a
+# throwaway temp HTML under apps/AzureMastery/ so its "../../images/" relative
+# asset paths keep resolving, then screenshotted like the two shared images.
+# Unlike those two (which stay PNG), per-exam cards are converted to JPEG after
+# render -- see convert_to_jpeg() -- because a mostly-text/gradient card with no
+# embedded photos compresses far better as quality-82 JPEG than as a palette PNG.
+OG_EXAM_HTML = os.path.join(ROOT, "apps", "AzureMastery", "og-exam.html")
+OG_EXAM_TMP = os.path.join(ROOT, "apps", "AzureMastery", "_og-exam-render-tmp.html")
+OG_DIR = os.path.join(ROOT, "images", "og")
+# The pill text as it reads once {{COUNT}} has been filled in; swapped for the
+# retired variant by exact match rather than re-deriving it, so a change to the
+# template's pill copy can't silently desync the two.
+PILL_COUNT_RE = re.compile(r'<div class="pill">\d+ practice questions · free to start</div>')
+PILL_RETIRED = '<div class="pill pill--retired">Retired exam · successor inside</div>'
+# The per-page accent custom properties every exams/<code>/index.html declares
+# in a one-line <style> (e.g. `--amh-accent: #50E6FF; --amh-accent-2: #2B88D8;`).
+# Falls back to the app's default cyan/blue when a page has none.
+ACCENT_RE = re.compile(
+    r'--amh-accent:\s*(#[0-9A-Fa-f]{6});\s*--amh-accent-2:\s*(#[0-9A-Fa-f]{6})')
+DEFAULT_ACCENT = ("#50E6FF", "#2B88D8")
 
 DEFAULT_APP_REPO = os.environ.get(
     "AZURE_MASTERY_APP_REPO",
@@ -127,6 +149,19 @@ def code_to_dir(code: str) -> str:
     return code.lower()
 
 
+def exam_accent(code: str) -> tuple[str, str]:
+    """Read (--amh-accent, --amh-accent-2) from the exam's own page so its OG
+    card matches the page's colour, falling back to the app's default cyan/blue
+    when the page is missing or carries no accent (should not happen -- every
+    shipped exams/<code>/index.html declares one)."""
+    page = os.path.join(EXAMS_DIR, code_to_dir(code), "index.html")
+    if os.path.exists(page):
+        m = ACCENT_RE.search(open(page).read())
+        if m:
+            return m.group(1), m.group(2)
+    return DEFAULT_ACCENT
+
+
 # ── data file ─────────────────────────────────────────────────────────────
 
 def refresh_from_app(app_repo: str) -> dict:
@@ -140,12 +175,15 @@ def refresh_from_app(app_repo: str) -> dict:
     # examQuestionCount is the blueprint-classified, exam-scoped count the app
     # advertises. It is 0 for a non-current exam; those pages fall back to the
     # full bank size so a retired page still states what it actually contains.
-    exams, banks, retirement, retired = {}, {}, {}, []
+    # `name` is snapshotted too (Task A8) so the per-exam OG card render loop
+    # and CI never need their own app-repo checkout to know an exam's title.
+    exams, banks, retirement, retired, names = {}, {}, {}, [], {}
     for entry in entries:
         code = entry["code"]
         scoped = entry.get("examQuestionCount") or 0
         banks[code] = entry["questionCount"]
         exams[code] = scoped or entry["questionCount"]
+        names[code] = entry["name"]
         if not scoped:
             retired.append(code)
         date = (entry.get("lifecycle") or {}).get("retirementDate")
@@ -177,7 +215,7 @@ def refresh_from_app(app_repo: str) -> dict:
 
     data = {"exams": exams, "bank_totals": banks, "retired": sorted(retired),
             "retirement_dates": retirement, "totals": totals,
-            "cert_path_count": cert_paths}
+            "cert_path_count": cert_paths, "names": names}
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w") as fh:
         json.dump(data, fh, indent=2, sort_keys=True)
@@ -633,6 +671,71 @@ def optimise_png(path: str) -> None:
           f"({100 * (1 - after / before):.0f}% smaller)")
 
 
+def convert_to_jpeg(png_path: str, jpg_path: str) -> None:
+    """Convert a rendered per-exam OG card from PNG to JPEG and remove the PNG.
+    Per-exam cards are JPEG, not PNG, unlike the two shared images: a card is
+    almost entirely flat gradient plus text with no embedded photos, so it
+    compresses far smaller as quality-82 JPEG than as a 256-colour PNG palette
+    -- comfortably inside the ~150 KB per-card target. Same Pillow guard as
+    optimise_png(); if Pillow is missing, the PNG is left behind unconverted
+    rather than the run failing."""
+    try:
+        from PIL import Image
+    except ImportError:
+        print(f"  warning: Pillow not installed, cannot convert "
+              f"{os.path.relpath(png_path, ROOT)} to JPEG")
+        return
+    im = Image.open(png_path).convert("RGB")
+    im.save(jpg_path, "JPEG", quality=82, optimize=True, progressive=True)
+    size = os.path.getsize(jpg_path)
+    os.remove(png_path)
+    print(f"  rendered    {os.path.relpath(jpg_path, ROOT)} ({size:,} bytes)")
+
+
+def render_exam_cards(chrome: str, port: int, data: dict, retired: set) -> None:
+    """Render every exam's OG card: fill apps/AzureMastery/og-exam.html's
+    {{CODE}}/{{NAME}}/{{COUNT}} placeholders and its accent custom properties,
+    screenshot it via the same render_png() the two shared images use, then
+    convert to JPEG. The count always comes from data["exams"][code] -- never
+    hand-write it -- and the exam name from the names snapshot refresh_from_app()
+    wrote into data/exam-counts.json, so this loop needs no app-repo checkout."""
+    if not os.path.exists(OG_EXAM_HTML):
+        print("  render SKIP: apps/AzureMastery/og-exam.html missing")
+        return
+    names = data.get("names") or {}
+    counts = {k.upper(): v for k, v in data["exams"].items()}
+    template = open(OG_EXAM_HTML).read()
+    os.makedirs(OG_DIR, exist_ok=True)
+    try:
+        for code in sorted(counts):
+            count = counts[code]
+            name = names.get(code, code)
+            accent, accent2 = exam_accent(code)
+            page_html = (
+                template
+                .replace("{{CODE}}", html.escape(code, quote=False))
+                .replace("{{NAME}}", html.escape(name, quote=False))
+                .replace("{{COUNT}}", str(count))
+                .replace("{{ACCENT}}", accent)
+                .replace("{{ACCENT2}}", accent2)
+            )
+            if code in retired:
+                page_html, k = PILL_COUNT_RE.subn(PILL_RETIRED, page_html)
+                if not k:
+                    print(f"  warning: {code} retired-pill swap matched 0 times "
+                          f"-- og-exam.html's pill markup may have drifted")
+            with open(OG_EXAM_TMP, "w") as fh:
+                fh.write(page_html)
+            dir_ = code_to_dir(code)
+            png_path = os.path.join(OG_DIR, f"{dir_}.png")
+            jpg_path = os.path.join(OG_DIR, f"{dir_}.jpg")
+            if render_png(chrome, port, OG_EXAM_TMP, png_path):
+                convert_to_jpeg(png_path, jpg_path)
+    finally:
+        if os.path.exists(OG_EXAM_TMP):
+            os.remove(OG_EXAM_TMP)
+
+
 def _serve_root() -> tuple[http.server.ThreadingHTTPServer, int]:
     """Serve ROOT on an ephemeral localhost port in a daemon thread."""
     class Quiet(http.server.SimpleHTTPRequestHandler):
@@ -645,7 +748,8 @@ def _serve_root() -> tuple[http.server.ThreadingHTTPServer, int]:
 
 
 def sync_social_images(p: "Patcher", counts: dict, total_label: str,
-                       exam_count: int, cert_paths: int, render: bool) -> None:
+                       exam_count: int, cert_paths: int, render: bool,
+                       data: dict, retired: set) -> None:
     print("social images:")
     p.apply(BANNER_HTML, banner_edits(total_label, exam_count))
     p.apply(OG_HTML, og_edits(total_label, exam_count, cert_paths))
@@ -665,6 +769,8 @@ def sync_social_images(p: "Patcher", counts: dict, total_label: str,
             optimise_png(BANNER_PNG)
         if render_png(chrome, port, OG_HTML, OG_PNG):
             optimise_png(OG_PNG)
+        print("exam OG cards:")
+        render_exam_cards(chrome, port, data, retired)
     finally:
         httpd.shutdown()
 
@@ -759,7 +865,7 @@ def main() -> None:
         warn_itemlist_count(catalogue_count)
 
     sync_social_images(p, active, total_label, exam_count, cert_paths,
-                       render=not args.no_render)
+                       render=not args.no_render, data=data, retired=retired)
 
     verb = "would change" if args.check else "changed"
     print(f"\n{p.changed_files} file(s) {verb}.")

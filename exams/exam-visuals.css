@@ -112,7 +112,19 @@
 #objectives .domain h3 {
   min-height: 78px;
   margin: 0;
-  padding: 20px 22px 16px;
+  padding: 20px 22px 4px;
+}
+
+.domain__inventory {
+  margin: 0;
+  padding: 0 22px 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.domain__inventory .domain__count {
+  color: var(--azure-cyan);
+  font-weight: 700;
 }
 
 .domain__details {
@@ -175,6 +187,56 @@
 .domain__body p {
   margin: 0;
   max-width: none;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.domain__body ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* "Where candidates slip" — exam-specific misconception cards, one per trap.
+   Shares the faq/domain card shape but flags itself with a warning-orange
+   rail so it reads as "watch out for this" rather than another neutral
+   info card. Introduced by Task B3b (AI-103); reused unstyled by every
+   later exam page that adds its own #where-candidates-slip section. */
+.traps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+@media (min-width: 700px) {
+  .traps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.trap {
+  padding: 22px 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--warning-orange);
+  border-radius: var(--radius-lg);
+}
+
+.trap h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.trap p {
+  margin: 0;
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.7;
 }

@@ -12,102 +12,84 @@
 html[data-theme="light"] {
   color-scheme: light;
 
-  /* Accents darkened for text/border use on light surfaces (WCAG AA).
-     Decorative gradients (--gradient-cyan-blue etc.) embed raw hexes,
-     so brand-bright cyan survives where it is background art. */
-  --azure-cyan:      #0E7490;
-  --azure-blue:      #1D6FB8;
-  --azure-purple:    #6C4EC9;
-  --xp-gold:         #B45309;
-  --success-green:   #15803D;
-  --error-red:       #D03030;
-  --warning-orange:  #C2410C;
+  /* Saturated, AA-safe inks for light surfaces. Warm semantic accents use
+     clear red-orange rather than dark amber, which reads as brown on white. */
+  --azure-cyan:      #007A99;
+  --azure-blue:      #0067C5;
+  --azure-purple:    #6D35D9;
+  --xp-gold:         #C43E00;
+  --success-green:   #067A43;
+  --error-red:       #C93655;
+  --warning-orange:  #C43E00;
 
-  --bg-app:          #F5F7FA;
-  --bg-deep:         #ECF1F7;
+  --bg-app:          #F7FAFF;
+  --bg-deep:         #EAF3FF;
   --bg-card:         #FFFFFF;
-  --bg-surface:      #F8FAFD;
+  --bg-surface:      #FBFDFF;
   --bg-elevated:     #FFFFFF;
-  --bg-overlay:      #EDF2F9;
-  --bg-soft-blue:    #E1EEFA;
+  --bg-overlay:      #EEF6FF;
+  --bg-soft-blue:    #DDEEFF;
 
-  --text-primary:    #14202E;
-  --text-secondary:  #46566A;
-  --text-muted:      #5B6B7D;
+  --text-primary:    #10233F;
+  --text-secondary:  #405A74;
+  --text-muted:      #587089;
 
   --border-subtle:   rgba(13,30,55,0.09);
   --border-strong:   rgba(13,30,55,0.18);
-  --border-accent:   rgba(0,110,170,0.35);
+  --border-accent:   rgba(0,103,197,0.35);
 
   --shadow-flat:     0 3px 6px rgba(15,30,60,0.08);
   --shadow-raised:   0 5px 9px rgba(15,30,60,0.10), 0 2px 8px rgba(15,30,60,0.06);
   --shadow-floating: 0 8px 12px rgba(15,30,60,0.12), 0 6px 16px rgba(15,30,60,0.10);
   --shadow-device:   0 40px 80px rgba(15,30,60,0.25);
 
-  --gradient-hero-bg:    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(43,136,216,0.14) 0%, transparent 65%),
-                         radial-gradient(ellipse 50% 40% at 80% 20%, rgba(80,230,255,0.10) 0%, transparent 55%),
+  --gradient-hero-bg:    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,103,197,0.16) 0%, transparent 65%),
+                         radial-gradient(ellipse 50% 45% at 82% 24%, rgba(56,189,248,0.15) 0%, transparent 58%),
+                         radial-gradient(ellipse 42% 34% at 18% 72%, rgba(109,53,217,0.08) 0%, transparent 62%),
                          var(--bg-app);
   --gradient-section-bg: linear-gradient(180deg, var(--bg-app) 0%, var(--bg-deep) 50%, var(--bg-app) 100%);
 }
 
 /* ── 2. hero.css --amh-* namespace (scoped to .am-cert-hero) ── */
 html[data-theme="light"] .am-cert-hero {
-  --amh-bg:     #F5F7FA;
+  --amh-bg:     #F7FAFF;
   --amh-card:   #FFFFFF;
-  --amh-text:   #14202E;
-  --amh-muted:  #46566A;
+  --amh-text:   #10233F;
+  --amh-muted:  #405A74;
   --amh-border: rgba(13,30,55,0.12);
-  /* Per-family bright accent, darkened enough to act as ink on light.
-     Mix toward BLACK (not navy) so warm hues darken without going muddy;
-     the @supports block below upgrades to OKLCH, which pins lightness
-     while keeping the family's full hue and chroma. */
-  --amh-ink: color-mix(in srgb, var(--amh-accent) 55%, #000);
-}
-@supports (color: oklch(from red 0.5 c h)) {
-  html[data-theme="light"] .am-cert-hero {
-    --amh-ink: oklch(from var(--amh-accent) 0.47 c h);
-  }
+  /* The light hero uses one cohesive Azure-blue ink. Retaining the dark
+     theme's per-exam amber and orange here produced muddy brown text. */
+  --amh-ink: var(--azure-blue);
 }
 html[data-theme="light"] .am-cert-hero__eyebrow-code,
 html[data-theme="light"] .am-cert-hero__badge-code,
 html[data-theme="light"] .am-cert-hero__score-pill-value,
 html[data-theme="light"] .am-cert-hero__lead-code { color: var(--amh-ink); }
 html[data-theme="light"] .am-cert-hero__badge-glyph path { stroke: var(--amh-ink); }
+html[data-theme="light"] .am-cert-hero__eyebrow::before { background: var(--azure-blue); }
 html[data-theme="light"] .am-cert-hero__lead-accent {
-  background: linear-gradient(135deg,
-    color-mix(in srgb, var(--amh-accent) 65%, #000) 0%,
-    color-mix(in srgb, var(--amh-accent-2) 78%, #000) 100%);
+  background: linear-gradient(135deg, var(--azure-blue) 0%, var(--azure-purple) 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
-@supports (color: oklch(from red 0.5 c h)) {
-  /* Large display text (3:1 floor) — keep lightness higher for extra pop */
-  html[data-theme="light"] .am-cert-hero__lead-accent {
-    background: linear-gradient(135deg,
-      oklch(from var(--amh-accent) 0.55 c h) 0%,
-      oklch(from var(--amh-accent-2) 0.5 c h) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-}
-html[data-theme="light"] .am-cert-hero__brand:hover { background: rgba(0,110,170,0.06); border-color: rgba(0,110,170,0.30); }
+html[data-theme="light"] .am-cert-hero__brand:hover { background: rgba(0,103,197,0.06); border-color: rgba(0,103,197,0.30); }
 html[data-theme="light"] .am-cert-hero__brand-icon { box-shadow: 0 4px 12px rgba(15,30,60,0.20), 0 0 0 1px rgba(13,30,55,0.08) inset; }
 html[data-theme="light"] .am-cert-hero__stat { background: rgba(13,30,55,0.03); }
 html[data-theme="light"] .am-cert-hero__badge {
   background: rgba(255,255,255,0.90);
-  border-color: rgba(0,110,170,0.40);
-  box-shadow: 0 12px 32px rgba(15,30,60,0.18), 0 0 24px rgba(43,136,216,0.10);
+  border-color: rgba(0,103,197,0.40);
+  box-shadow: 0 12px 32px rgba(15,30,60,0.18), 0 0 24px rgba(0,103,197,0.12);
 }
 html[data-theme="light"] .am-cert-hero__score-pill {
   background: rgba(255,255,255,0.92);
   box-shadow: 0 14px 36px rgba(15,30,60,0.20), 0 0 28px rgba(43,136,216,0.08);
 }
-html[data-theme="light"] .am-cert-hero__score-pill-delta { color: #15803D; }
+html[data-theme="light"] .am-cert-hero__score-pill-delta { color: var(--success-green); }
 html[data-theme="light"] .am-cert-hero__phone-wrap {
   filter: drop-shadow(0 50px 70px rgba(15,30,60,0.28)) drop-shadow(0 0 40px rgba(43,136,216,0.10));
 }
 html[data-theme="light"] .am-cert-hero__phone-screen {
-  background-color: #F5F7FA;
+  background-color: #F7FAFF;
   background-image: url('/images/cap-home-dashboard-light.webp');
 }
 /* The light capture's baked-in exam CTA sits lower and spans more of the
@@ -128,32 +110,32 @@ html[data-theme="light"] .headline-accent,
 html[data-theme="light"] .page-h1-accent,
 html[data-theme="light"] .hero-app-name,
 html[data-theme="light"] .how-step-num {
-  background: linear-gradient(135deg, #0891B2 0%, #1D6FB8 100%);
+  background: linear-gradient(135deg, #007A99 0%, #0067C5 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 html[data-theme="light"] .headline-accent--purple {
-  background: linear-gradient(135deg, #1D6FB8 0%, #6C4EC9 100%);
+  background: linear-gradient(135deg, #0067C5 0%, #6D35D9 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
-html[data-theme="light"] .site-nav { background: rgba(245,247,250,0.80); }
-html[data-theme="light"] .site-nav--scrolled { background: rgba(245,247,250,0.94); }
+html[data-theme="light"] .site-nav { background: rgba(247,250,255,0.82); }
+html[data-theme="light"] .site-nav--scrolled { background: rgba(247,250,255,0.95); }
 html[data-theme="light"] .btn-nav-cta {
   color: #fff !important;
-  background: linear-gradient(120deg, #0E7490, #1D6FB8);
+  background: linear-gradient(120deg, #007A99, #0067C5);
   border-color: transparent;
-  box-shadow: 0 4px 14px rgba(29,111,184,0.20);
+  box-shadow: 0 4px 16px rgba(0,103,197,0.24);
 }
 html[data-theme="light"] .btn-nav-cta:hover {
   color: #fff !important;
-  background: linear-gradient(120deg, #0C657D, #185F9D);
+  background: linear-gradient(120deg, #00647D, #0057A8);
 }
 html[data-theme="light"] .cta-band__btn,
 html[data-theme="light"] .mobile-cta-bar__btn,
 html[data-theme="light"] .exam-inline-cta__btn { color: #fff; }
 html[data-theme="light"] .mobile-cta-bar {
-  background: rgba(248,250,253,0.94);
+  background: rgba(251,253,255,0.95);
   border-top-color: rgba(13,30,55,0.12);
   box-shadow: 0 -8px 28px rgba(15,30,60,0.10);
 }
@@ -164,13 +146,13 @@ html[data-theme="light"] .mobile-cta-bar__label { color: var(--text-secondary); 
    remap for light in section 1/2 above, these just restate the intent. */
 html[data-theme="light"] .exam-inline-cta {
   border-color: var(--border-accent);
-  background: rgba(0,110,170,0.05);
+  background: rgba(0,103,197,0.06);
 }
 html[data-theme="light"] .site-nav__context {
   border-color: var(--border-accent);
   color: var(--azure-cyan);
 }
-html[data-theme="light"] .qt__quiz-link { color: var(--amh-accent, var(--azure-cyan)); }
+html[data-theme="light"] .qt__quiz-link { color: var(--azure-blue); }
 html[data-theme="light"] .badge-exam-iq { color: #fff; } /* gradient bg darkens via tokens; keep white text */
 html[data-theme="light"] .hero-app-icon { box-shadow: 0 0 24px rgba(43,136,216,0.25), 0 0 48px rgba(43,136,216,0.12); }
 
@@ -222,14 +204,14 @@ html[data-theme="light"] .aura-img { filter: drop-shadow(0 18px 26px rgba(15,30,
 html[data-theme="light"] .aura-glow { background: radial-gradient(circle at 50% 55%, rgba(80,230,255,0.16) 0%, rgba(43,136,216,0.06) 46%, transparent 72%); }
 html[data-theme="light"] .aura-pill {
   background: rgba(255,255,255,0.90);
-  border-color: rgba(0,110,170,0.40);
-  box-shadow: 0 12px 32px rgba(15,30,60,0.16), 0 0 24px rgba(43,136,216,0.10);
+  border-color: rgba(0,103,197,0.40);
+  box-shadow: 0 12px 32px rgba(15,30,60,0.16), 0 0 24px rgba(0,103,197,0.12);
 }
 html[data-theme="light"] .aura-portrait-img { filter: drop-shadow(0 30px 50px rgba(15,30,60,0.24)) drop-shadow(0 0 40px rgba(43,136,216,0.12)); }
 html[data-theme="light"] .aura-portrait-glow { background: radial-gradient(circle at 50% 50%, rgba(80,230,255,0.14) 0%, rgba(43,136,216,0.06) 46%, transparent 70%); }
 html[data-theme="light"] .aura-trait { background: rgba(13,30,55,0.04); }
-html[data-theme="light"] .aura-trait--blue { color: #1D6FB8; }
-html[data-theme="light"] .aura-trait--purple { color: #6C4EC9; }
+html[data-theme="light"] .aura-trait--blue { color: var(--azure-blue); }
+html[data-theme="light"] .aura-trait--purple { color: var(--azure-purple); }
 html[data-theme="light"] .cta-aura-img { filter: drop-shadow(0 18px 28px rgba(15,30,60,0.22)) drop-shadow(0 0 30px rgba(43,136,216,0.14)); }
 
 html[data-theme="light"] .roadmap-filter__button {
@@ -237,12 +219,12 @@ html[data-theme="light"] .roadmap-filter__button {
   background: rgba(13,30,55,0.04);
 }
 html[data-theme="light"] .roadmap-filter__button:hover,
-html[data-theme="light"] .roadmap-filter__button:focus-visible { border-color: rgba(0,110,170,0.40); }
+html[data-theme="light"] .roadmap-filter__button:focus-visible { border-color: rgba(0,103,197,0.40); }
 html[data-theme="light"] .roadmap-filter__button[aria-pressed="true"] {
   color: #fff;
-  background: linear-gradient(135deg, #1D6FB8, #6C4EC9);
+  background: linear-gradient(135deg, #0067C5, #6D35D9);
   border-color: transparent;
-  box-shadow: 0 0 24px rgba(29,111,184,0.25);
+  box-shadow: 0 0 24px rgba(0,103,197,0.25);
 }
 html[data-theme="light"] .roadmap-shell {
   border-color: rgba(13,30,55,0.12);
@@ -263,7 +245,7 @@ html[data-theme="light"] .roadmap-category {
 }
 html[data-theme="light"] .roadmap-pill { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35); }
 html[data-theme="light"] .roadmap-pill--featured::after { background: rgba(13,30,55,0.25); }
-html[data-theme="light"] .roadmap-pill:focus-visible { box-shadow: 0 0 0 3px rgba(0,110,170,0.30); }
+html[data-theme="light"] .roadmap-pill:focus-visible { box-shadow: 0 0 0 3px rgba(0,103,197,0.30); }
 
 /* Brightness makes pale chips recede on light surfaces, so use a denser
    family tint and a small coloured lift for a clear pointer/focus state. */
@@ -290,35 +272,33 @@ html[data-theme="light"] .exam-mini__dot:hover { background: rgba(13,30,55,0.42)
 /* ── 4. Exam-page component overrides ── */
 html[data-theme="light"] .site-nav__cta {
   color: #fff;
-  background: linear-gradient(120deg, #0E7490, #1D6FB8);
+  background: linear-gradient(120deg, #007A99, #0067C5);
   border-color: transparent;
-  box-shadow: 0 4px 14px rgba(29,111,184,0.20);
+  box-shadow: 0 4px 16px rgba(0,103,197,0.24);
 }
 html[data-theme="light"] .site-nav__cta:hover {
   color: #fff;
-  background: linear-gradient(120deg, #0C657D, #185F9D);
+  background: linear-gradient(120deg, #00647D, #0057A8);
 }
 html[data-theme="light"] .am-cert-hero__cta {
   color: #fff;
-  background: linear-gradient(135deg, #0E7490, #1D6FB8);
-  background: linear-gradient(135deg,
-    color-mix(in srgb, var(--amh-accent) 55%, #000),
-    color-mix(in srgb, var(--amh-accent-2) 55%, #000));
+  background: linear-gradient(135deg, #0067C5, #6D35D9);
+  box-shadow: 0 10px 26px rgba(0,103,197,0.26), 0 0 0 1px rgba(255,255,255,0.18) inset;
 }
 html[data-theme="light"] .cta-button,
 html[data-theme="light"] .guide-inline-cta__btn {
   color: #fff;
-  background: linear-gradient(120deg, #0E7490, #1D6FB8);
+  background: linear-gradient(120deg, #0067C5, #6D35D9);
 }
 html[data-theme="light"] .cta-final {
   background:
-    radial-gradient(ellipse 60% 55% at 50% 25%, rgba(43,136,216,0.13) 0%, transparent 68%),
-    linear-gradient(180deg, #F8FAFD 0%, #EDF3FA 100%);
+    radial-gradient(ellipse 60% 55% at 50% 25%, rgba(0,103,197,0.15) 0%, transparent 68%),
+    linear-gradient(180deg, #FBFDFF 0%, #EAF3FF 100%);
   border-top: 1px solid rgba(13,30,55,0.08);
 }
-html[data-theme="light"] .page-toc { background: rgba(245,247,250,0.85); }
-html[data-theme="light"] .page-toc__link:hover { background: rgba(0,110,170,0.07); }
-html[data-theme="light"] .page-toc__link[aria-current="true"] { background: rgba(0,110,170,0.09); }
+html[data-theme="light"] .page-toc { background: rgba(247,250,255,0.88); }
+html[data-theme="light"] .page-toc__link:hover { background: rgba(0,103,197,0.07); }
+html[data-theme="light"] .page-toc__link[aria-current="true"] { background: rgba(0,103,197,0.10); }
 
 html[data-theme="light"] .exam-format li,
 html[data-theme="light"] .domain,
@@ -329,8 +309,8 @@ html[data-theme="light"] .cert-path,
 html[data-theme="light"] .related-card,
 html[data-theme="light"] .trap { background: rgba(13,30,55,0.03); }
 
-html[data-theme="light"] .domain__weight { background: rgba(0,110,170,0.10); border-color: rgba(0,110,170,0.30); }
-html[data-theme="light"] .qt__hint { background: rgba(0,110,170,0.08); border-color: rgba(0,110,170,0.25); }
+html[data-theme="light"] .domain__weight { background: rgba(0,103,197,0.10); border-color: rgba(0,103,197,0.30); }
+html[data-theme="light"] .qt__hint { background: rgba(0,103,197,0.08); border-color: rgba(0,103,197,0.25); }
 
 /* Question-type visualizations mirror the app's light surfaces while
    retaining clear selected, drag, hotspot, and coaching states. */
@@ -352,13 +332,13 @@ html[data-theme="light"] .qt__viz-case-questions li {
   box-shadow: 0 1px 2px rgba(15,30,60,0.04);
 }
 html[data-theme="light"] .qt__viz-options li.is-selected {
-  background: rgba(14,116,144,0.10);
-  border-color: rgba(14,116,144,0.42);
-  box-shadow: 0 0 0 1px rgba(14,116,144,0.05), 0 4px 12px rgba(14,116,144,0.08);
+  background: rgba(0,103,197,0.10);
+  border-color: rgba(0,103,197,0.42);
+  box-shadow: 0 0 0 1px rgba(0,103,197,0.05), 0 4px 12px rgba(0,103,197,0.10);
 }
 html[data-theme="light"] .is-selected .qt__viz-radio,
 html[data-theme="light"] .is-selected .qt__viz-checkbox {
-  box-shadow: 0 0 0 3px rgba(14,116,144,0.12);
+  box-shadow: 0 0 0 3px rgba(0,103,197,0.14);
 }
 html[data-theme="light"] .is-selected .qt__viz-radio::after { background: #FFFFFF; }
 html[data-theme="light"] .is-selected .qt__viz-checkbox::after {
@@ -367,8 +347,8 @@ html[data-theme="light"] .is-selected .qt__viz-checkbox::after {
 }
 html[data-theme="light"] .qt__viz-drag-num,
 html[data-theme="light"] .qt__viz-case-num {
-  background: rgba(14,116,144,0.12);
-  color: #0E7490;
+  background: rgba(0,103,197,0.12);
+  color: var(--azure-blue);
 }
 html[data-theme="light"] .qt__viz-hotspot {
   background: linear-gradient(145deg, #F8FBFE 0%, #E7EFF7 100%);
@@ -383,22 +363,22 @@ html[data-theme="light"] .qt__viz-hotspot::before {
 }
 html[data-theme="light"] .qt__viz-hotspot-mock-row { background: rgba(13,30,55,0.12); }
 html[data-theme="light"] .qt__viz-target {
-  box-shadow: 0 0 0 5px rgba(14,116,144,0.10), 0 0 18px rgba(14,116,144,0.25);
+  box-shadow: 0 0 0 5px rgba(0,103,197,0.10), 0 0 18px rgba(0,103,197,0.25);
 }
 html[data-theme="light"] .qt__viz-case-scenario {
-  background: rgba(14,116,144,0.06);
-  border-left-color: #0E7490;
+  background: rgba(0,103,197,0.06);
+  border-left-color: var(--azure-blue);
 }
 html[data-theme="light"] .qt__viz-ai-wrong {
   background: rgba(208,48,48,0.07);
   border-color: rgba(208,48,48,0.22);
 }
-html[data-theme="light"] .qt__viz-ai-wrong-mark { color: #D03030; }
+html[data-theme="light"] .qt__viz-ai-wrong-mark { color: var(--error-red); }
 html[data-theme="light"] .qt__viz-ai-explain {
-  background: linear-gradient(135deg, rgba(14,116,144,0.06), rgba(108,78,201,0.06));
-  border-color: rgba(14,116,144,0.24);
+  background: linear-gradient(135deg, rgba(0,103,197,0.07), rgba(109,53,217,0.07));
+  border-color: rgba(0,103,197,0.24);
 }
-html[data-theme="light"] .qt__viz-ai-explain-mark { color: #0E7490; }
+html[data-theme="light"] .qt__viz-ai-explain-mark { color: var(--azure-blue); }
 html[data-theme="light"] .qt__viz-drag-handle,
 html[data-theme="light"] .qt__viz-radio,
 html[data-theme="light"] .qt__viz-checkbox {
@@ -407,8 +387,8 @@ html[data-theme="light"] .qt__viz-checkbox {
 }
 
 html[data-theme="light"] .cert-path__chip { background: rgba(13,30,55,0.04); }
-html[data-theme="light"] a.cert-path__chip:hover { background: rgba(0,110,170,0.07); border-color: rgba(0,110,170,0.35); }
-html[data-theme="light"] .related-card:hover { background: rgba(0,110,170,0.05); border-color: rgba(0,110,170,0.30); }
+html[data-theme="light"] a.cert-path__chip:hover { background: rgba(0,103,197,0.07); border-color: rgba(0,103,197,0.35); }
+html[data-theme="light"] .related-card:hover { background: rgba(0,103,197,0.05); border-color: rgba(0,103,197,0.30); }
 
 /* ── 5. Theme toggle button (both themes — lives here as theme infra) ── */
 .theme-toggle {

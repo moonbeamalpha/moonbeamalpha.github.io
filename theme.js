@@ -73,7 +73,7 @@
     var scheme = document.querySelector('meta[name="color-scheme"]');
     if (scheme) { scheme.content = light ? 'light' : 'dark'; }
     var tint = document.querySelector('meta[name="theme-color"]');
-    if (tint) { tint.content = light ? '#F5F7FA' : '#050810'; }
+    if (tint) { tint.content = light ? '#F7FAFF' : '#050810'; }
     var buttons = document.querySelectorAll('.theme-toggle');
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].setAttribute('aria-pressed', String(light));

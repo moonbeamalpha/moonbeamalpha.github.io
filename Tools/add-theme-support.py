@@ -22,7 +22,7 @@ SNIPPET = (
     '{var d=document;d.documentElement.setAttribute(\'data-theme\',\'light\');'
     'var c=d.querySelector(\'meta[name="color-scheme"]\'),'
     't=d.querySelector(\'meta[name="theme-color"]\');'
-    'if(c)c.content=\'light\';if(t)t.content=\'#F5F7FA\';}}catch(e){}})()</script>\n'
+    'if(c)c.content=\'light\';if(t)t.content=\'#F7FAFF\';}}catch(e){}})()</script>\n'
 )
 
 TOGGLE = (

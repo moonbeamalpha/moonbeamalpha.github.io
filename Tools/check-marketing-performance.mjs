@@ -20,6 +20,29 @@ for (const path of htmlFiles(root)) {
   assert(!(html.includes('GTM-TK79R26R') && html.includes('G-YTN7LFS04Y')), `Duplicate analytics: ${path}`);
 }
 const home = read('index.html');
+const lightTheme = read('theme-light.css');
+function relativeLuminance(hex) {
+  const channels = hex.slice(1).match(/../g).map(value => parseInt(value, 16) / 255);
+  const linear = channels.map(value => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4);
+  return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+}
+function contrastRatio(first, second) {
+  const [lighter, darker] = [relativeLuminance(first), relativeLuminance(second)].sort((a, b) => b - a);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+function lightThemeToken(name) {
+  return lightTheme.match(new RegExp(`${name}:\\s*(#[0-9A-F]{6})`, 'i'))?.[1];
+}
+const lightBackground = lightThemeToken('--bg-app');
+for (const token of ['--azure-cyan', '--azure-blue', '--azure-purple', '--xp-gold', '--success-green', '--error-red', '--warning-orange']) {
+  const value = lightThemeToken(token);
+  assert(value && contrastRatio(value, lightBackground) >= 4.5, `${token} must remain AA-safe on the light background`);
+}
+for (const path of htmlFiles(root)) {
+  const html = readFileSync(path, 'utf8');
+  if (html.includes('am-theme')) assert(html.includes(`if(t)t.content='${lightBackground}'`), `Stale light theme-color: ${path}`);
+}
+assert(read('theme.js').includes(`light ? '${lightBackground}' : '#050810'`), 'theme.js light tint must match --bg-app');
 assert(/href="\/home\.min\.css(?:\?v=[0-9a-f]{12})?"/.test(home), 'Homepage must use the generated CSS bundle');
 assert(!/src="[^"\n]*(?:gsap|ScrollTrigger)/i.test(home), 'Animation libraries returned to the critical path');
 assert(!/html\.js/.test(read('home.css')), 'Do not hide initial content behind a JS marker');
@@ -39,7 +62,15 @@ assert(phoneKeyframes && /translate:/.test(phoneKeyframes));
 assert(!/opacity:|filter:|transform:|width:|height:/.test(phoneKeyframes), 'Hero settling must preserve visibility, angles and layout');
 assert(/\.reveal-in\.reveal-after-device\s*\{\s*animation-delay: 160ms;/.test(read('home.css')));
 assert(!/\.reveal-pending\s*\{[^}]*opacity:\s*0/.test(read('home.css')), 'Reveals must be additive, not opacity:0 by default');
-for (const source of [read('home.css'), read('theme-light.css')]) {
+assert(
+  !/color-mix\(in srgb,\s*var\(--amh-accent(?:-2)?\)[^)]*#000/i.test(lightTheme),
+  'Light-mode exam accents must not be darkened toward muddy brown'
+);
+assert(
+  /\.am-cert-hero__cta\s*\{[^}]*linear-gradient\(135deg,\s*#0067C5,\s*#6D35D9\)/s.test(lightTheme),
+  'Light-mode exam CTA must retain the vibrant blue-to-violet palette'
+);
+for (const source of [read('home.css'), lightTheme]) {
   for (const [, selectors, declarations] of source.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
     if (selectors.split(',').some(selector => /\.(mac|ipad)-wrap$/.test(selector.trim()))) {
       assert(!declarations.includes('drop-shadow('), 'Do not filter the Mac/iPad wrapper surfaces');

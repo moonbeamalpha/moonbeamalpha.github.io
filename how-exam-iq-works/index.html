@@ -21,7 +21,7 @@
   </script>
 
   <title>How Exam IQ Predicts Your Score | Azure Mastery</title>
-  <meta name="description" content="How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using Item Response Theory and Bayesian modelling, entirely on your iPhone.">
+  <meta name="description" content="How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using a CoreML model built from your practice history, entirely on your iPhone.">
   <link rel="canonical" href="https://azuremastery.app/how-exam-iq-works/">
 
   <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
@@ -51,14 +51,14 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://azuremastery.app/how-exam-iq-works/">
   <meta property="og:title" content="How Exam IQ Predicts Your Score">
-  <meta property="og:description" content="How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using Item Response Theory and Bayesian modelling, entirely on your iPhone.">
+  <meta property="og:description" content="How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using a CoreML model built from your practice history, entirely on your iPhone.">
   <meta property="og:image" content="https://azuremastery.app/images/og-image.png">
   <meta property="og:image:alt" content="Azure Mastery — how the on-device Exam IQ engine predicts your Microsoft certification exam score.">
   <meta property="og:site_name" content="Azure Mastery">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How Exam IQ Predicts Your Score">
-  <meta name="twitter:description" content="How Azure Mastery's on-device Exam IQ engine predicts your exam score with Item Response Theory and Bayesian modelling.">
+  <meta name="twitter:description" content="How Azure Mastery's on-device Exam IQ engine predicts your exam score from your practice history with an on-device CoreML model.">
   <meta name="twitter:image" content="https://azuremastery.app/images/og-image.png">
 
   <!-- Structured data: a single @graph block linking entities by @id.
@@ -75,7 +75,7 @@
         "@id": "https://azuremastery.app/how-exam-iq-works/#webpage",
         "url": "https://azuremastery.app/how-exam-iq-works/",
         "name": "How Exam IQ Predicts Your Score",
-        "description": "How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using Item Response Theory and Bayesian modelling, entirely on your iPhone.",
+        "description": "How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using a CoreML model built from your practice history, entirely on your iPhone.",
         "inLanguage": "en-GB",
         "datePublished": "2026-09-04",
         "dateModified": "2026-09-04",
@@ -104,7 +104,7 @@
         "@type": "TechArticle",
         "@id": "https://azuremastery.app/how-exam-iq-works/#article",
         "headline": "How Exam IQ Predicts Your Score",
-        "description": "How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using Item Response Theory and Bayesian modelling, entirely on your iPhone.",
+        "description": "How Exam IQ, Azure Mastery's on-device engine, predicts your exam score using a CoreML model built from your practice history, entirely on your iPhone.",
         "inLanguage": "en-GB",
         "datePublished": "2026-09-04",
         "dateModified": "2026-09-04",
@@ -164,6 +164,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. Exam IQ has no access to Microsoft's live exam content, format, or scoring — none of that is available to Azure Mastery or any third party. Its prediction is based entirely on your answers to Azure Mastery's own practice questions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Exam IQ use Item Response Theory?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Exam IQ predicts from your practice record with an on-device CoreML model; it does not fit item-level difficulty parameters."
             }
           }
         ]
@@ -704,7 +712,7 @@
       <p class="page-toc__title">On this page</p>
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-exam-iq-is">What it is</a></li>
-        <li class="page-toc__item"><a class="page-toc__link" href="#the-model">The model</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#what-the-model-reads">What it reads</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#confidence-range">Confidence range</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#on-device">Why on-device</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#cannot-do">What it can't do</a></li>
@@ -736,11 +744,11 @@
     </section>
 
     <!-- The model -->
-    <section id="the-model" class="container">
-      <p class="label-eyebrow section-eyebrow">The model</p>
-      <h2 class="display-small section-title">The model: Item Response Theory and Bayesian updating</h2>
+    <section id="what-the-model-reads" class="container">
+      <p class="label-eyebrow section-eyebrow">What it reads</p>
+      <h2 class="display-small section-title">What the model reads</h2>
       <p>
-        Score prediction is built on <strong>Item Response Theory</strong>, a psychometric model that scores each answer by the question's difficulty, discrimination, and guessing, rather than simply counting right and wrong answers. <strong>Bayesian</strong> updating then revises your ability estimate after every answer, so the predicted score moves as you practise instead of only recalculating at the end of a session.
+        Score prediction is a CoreML model bundled with the app, with a weighted-formula fallback when the model is unavailable. Either way, it reads a set of practice signals built from your own answer history — not a single "percent correct" — including your average test score and its consistency, your best and worst domain accuracy, how much of the question bank you have covered, the share of questions you have mastered, your practice-test streak, total study hours, how quickly your score is improving, how many topics are still weak, how long you have been active, how fast you tend to answer, and how much you engage with explanations.
       </p>
     </section>
 
@@ -803,6 +811,10 @@
         <details class="faq">
           <summary>Does Exam IQ know what's on the real exam?</summary>
           <div class="faq__answer"><p>No. Exam IQ has no access to Microsoft's live exam content, format, or scoring — none of that is available to Azure Mastery or any third party. Its prediction is based entirely on your answers to Azure Mastery's own practice questions.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does Exam IQ use Item Response Theory?</summary>
+          <div class="faq__answer"><p>No. Exam IQ predicts from your practice record with an on-device CoreML model; it does not fit item-level difficulty parameters.</p></div>
         </details>
       </div>
     </section>

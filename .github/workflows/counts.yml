@@ -41,8 +41,9 @@ jobs:
 
       # Ratchets the current exam pages against reading as one templated skeleton
       # (see Tools/check-page-similarity.py's docstring and the task-B3 brief) --
-      # fails if the highest-similarity pair or the corpus mean grows more than
-      # 0.005 over the committed Tools/page-similarity-baseline.json. The
+      # fails if any shared pair, the highest-similarity pair, or the corpus
+      # mean grows more than 0.005 over the committed
+      # Tools/page-similarity-baseline.json. The
       # baseline only tightens, via --update-baseline after a page is rewritten.
       - name: Exam page similarity ratchet
         run: python3 Tools/check-page-similarity.py --check

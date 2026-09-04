@@ -42,6 +42,14 @@ SEO_UPDATED_OVERRIDES = {
     # New pages launched after the 2026-08-09 site-wide SEO pass.
     "AB-650": "2026-08-23",
     "AI-500": "2026-08-23",
+    # Wave-1 de-templating pass (Task B, final-review fix wave).
+    "AI-103": "2026-09-04",
+    "AB-620": "2026-09-04",
+    "AB-100": "2026-09-04",
+    "SC-500": "2026-09-04",
+    "AI-200": "2026-09-04",
+    "AZ-104": "2026-09-04",
+    "AZ-900": "2026-09-04",
 }
 RETIRED_EXAMS = {
     "AI-900": {

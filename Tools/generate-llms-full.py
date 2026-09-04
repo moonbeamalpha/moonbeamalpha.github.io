@@ -14,6 +14,7 @@ disagree with the site: re-run after any exam-page change.
     python3 Tools/generate-llms-full.py
 """
 import glob
+import html
 import json
 import os
 import re
@@ -39,7 +40,7 @@ def nodes_of_type(html: str, typ: str):
 
 
 def clean(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
 def main() -> int:

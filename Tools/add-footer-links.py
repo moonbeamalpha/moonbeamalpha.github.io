@@ -27,13 +27,17 @@ failing the assertion.
     python3 Tools/add-footer-links.py            # apply
     python3 Tools/add-footer-links.py --check    # dry run; report only, exit 1 on drift
 """
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CHECK = "--check" in sys.argv[1:]
 
-MARKER = '<a href="/about/">About</a>'
+# Matches the inserted About link even if a later pass (e.g. aria-current="page"
+# on the trust pages' own footer self-link) adds attributes to it — the
+# inserted literal itself never changes.
+MARKER_RE = re.compile(r'<a href="/about/"[^>]*>About</a>')
 
 # (anchor, indent) pairs, tried in order. The inserted lines are built from
 # `indent` and carry the same trailing separator style as the anchor itself.
@@ -42,7 +46,7 @@ DOT_SEPARATED_ANCHOR = '<a href="/apps/AzureMastery/support.html">Support</a> ·
 
 
 def target_pages() -> list[Path]:
-    pages = [ROOT / "index.html", ROOT / "exams" / "_template.html"]
+    pages = [ROOT / "index.html", ROOT / "404.html", ROOT / "exams" / "_template.html"]
     pages.extend(sorted((ROOT / "exams").glob("*/index.html")))
     pages.append(ROOT / "guides" / "index.html")
     pages.extend(sorted((ROOT / "guides").glob("*/index.html")))
@@ -59,7 +63,7 @@ def target_pages() -> list[Path]:
 
 def process(path: Path) -> str:
     text = path.read_text()
-    if MARKER in text:
+    if MARKER_RE.search(text):
         return "skip (already linked)"
 
     for anchor, sep in ((NAV_LIST_ANCHOR, ""), (DOT_SEPARATED_ANCHOR, " ·")):

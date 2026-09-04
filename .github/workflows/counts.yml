@@ -59,8 +59,20 @@ jobs:
       - name: Exam page CTA surfaces are current
         run: python3 Tools/add-exam-page-cta.py --check
 
+      # Every exam page's FAQPage JSON-LD must byte-match its visible
+      # <details class="faq"> text -- Google requires FAQ structured data to
+      # match the visible page content. --check reports which pages/questions
+      # have drifted and exits non-zero; re-run after editing any exam-page FAQ.
+      - name: Exam FAQ schema matches visible text
+        run: python3 Tools/sync-exam-faq-schema.py --check
+
       - name: GA4 internal-traffic flag is current
         run: python3 Tools/add-ga-internal-flag.py --check
+
+      # Footer self-links (About, How we write questions) on every page --
+      # --check catches a page added or hand-edited without re-running it.
+      - name: Footer links are current
+        run: python3 Tools/add-footer-links.py --check
 
       - name: SEO contract
         run: python3 Tools/validate-marketing-seo.py

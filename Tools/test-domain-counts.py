@@ -79,12 +79,15 @@ class FakePatcher:
         self.problems = 0
 
 
-# Page ids exactly match the snapshot -> no problems, exit-worthy state clean.
+# Page ids exactly match the snapshot, and the spans sum to the advertised
+# count -> no problems, exit-worthy state clean.
 p = FakePatcher()
 sync.check_domain_mismatches(
     p,
     domain_counts_all={"AZ-104": {"az104-identity": 85, "az104-storage": 104}},
     page_domains={"AZ-104": {"az104-identity", "az104-storage"}},
+    retired=set(),
+    counts={"AZ-104": 189},
 )
 check("matching ids on both sides raise no problems", p.problems == 0)
 
@@ -96,6 +99,8 @@ sync.check_domain_mismatches(
     p,
     domain_counts_all={"AZ-104": {"az104-identity": 85}},
     page_domains={"AZ-104": {"az104-identity", "az104-bogus"}},
+    retired=set(),
+    counts={"AZ-104": 85},
 )
 check("a page domain id missing from the snapshot is one problem", p.problems == 1)
 
@@ -105,6 +110,8 @@ sync.check_domain_mismatches(
     p,
     domain_counts_all={"AZ-104": {"az104-identity": 85, "az104-storage": 104}},
     page_domains={"AZ-104": {"az104-identity"}},
+    retired=set(),
+    counts={"AZ-104": 189},
 )
 check("a snapshot domain missing from the page is one problem", p.problems == 1)
 
@@ -117,8 +124,37 @@ sync.check_domain_mismatches(
     p,
     domain_counts_all={"AZ-104": {"az104-identity": 85}},
     page_domains={"AZ-104": set(), "AI-102": set()},
+    retired=set(),
+    counts={"AZ-104": 85},
 )
 check("pages with no domain__count span are never flagged", p.problems == 0)
+
+# A retired code with spans that would otherwise fail both the id diff and the
+# sum assertion is skipped outright -- a non-current exam's page count falls
+# back to the full bank size, which never matches the exam-scoped domain
+# snapshot, so this must never be reported.
+p = FakePatcher()
+sync.check_domain_mismatches(
+    p,
+    domain_counts_all={"AI-102": {"ai102-vision": 40}},
+    page_domains={"AI-102": {"ai102-vision", "ai102-bogus"}},
+    retired={"AI-102"},
+    counts={"AI-102": 999},
+)
+check("a retired code is never flagged, even with a mismatch", p.problems == 0)
+
+# Ids match on both sides, but the domain spans don't sum to the exam's
+# advertised count (a scorecard drift the id-level diff alone misses) -> one
+# problem.
+p = FakePatcher()
+sync.check_domain_mismatches(
+    p,
+    domain_counts_all={"AZ-104": {"az104-identity": 85, "az104-storage": 104}},
+    page_domains={"AZ-104": {"az104-identity", "az104-storage"}},
+    retired=set(),
+    counts={"AZ-104": 200},
+)
+check("domain counts not summing to the advertised count is one problem", p.problems == 1)
 
 print()
 if failures:

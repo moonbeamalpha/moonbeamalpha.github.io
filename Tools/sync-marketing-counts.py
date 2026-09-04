@@ -356,21 +356,28 @@ def patch_domain_counts(text: str, domain_counts: dict) -> tuple[str, set]:
     return text, seen
 
 
-def check_domain_mismatches(p: "Patcher", domain_counts_all: dict, page_domains: dict) -> None:
+def check_domain_mismatches(p: "Patcher", domain_counts_all: dict, page_domains: dict,
+                             retired: set, counts: dict) -> None:
     """Report every exam page whose domain__count spans disagree with its
     snapshot -- either a data-domain id on the page that the snapshot doesn't
-    have (typo, retired domain, exam missing its scorecard) or a snapshot
+    have (typo, retired domain, exam missing its scorecard), a snapshot
     domain the page never rendered a span for (a domain added upstream that
-    the page hasn't caught up to). Pages with no domain__count span at all
-    (every page today -- B3b adds the first ones) are untouched and never
-    reported, per the brief's "only for pages that have at least one
-    domain__count span" rule."""
+    the page hasn't caught up to), or the domain spans not summing to the
+    exam's advertised count (a scorecard/count drift the id-level diff alone
+    wouldn't catch). Pages with no domain__count span at all (every page
+    today -- B3b adds the first ones) are untouched and never reported, per
+    the brief's "only for pages that have at least one domain__count span"
+    rule. Retired codes are skipped outright -- a non-current exam's page
+    count falls back to the full bank size (see non_current_exams()), which
+    the exam-scoped domain snapshot never matches, so flagging it here would
+    just be noise on every run."""
     print("domain counts:")
     problems = []
     for code, seen in sorted(page_domains.items()):
-        if not seen:
+        if not seen or code in retired:
             continue
-        snapshot = set(domain_counts_all.get(code) or {})
+        domain_values = domain_counts_all.get(code) or {}
+        snapshot = set(domain_values)
         missing_in_snapshot = sorted(seen - snapshot)
         missing_on_page = sorted(snapshot - seen)
         rel = f"exams/{code_to_dir(code)}/index.html"
@@ -380,6 +387,11 @@ def check_domain_mismatches(p: "Patcher", domain_counts_all: dict, page_domains:
         if missing_on_page:
             problems.append(f"{rel}: {code} snapshot has domain(s) {missing_on_page} "
                             f"with no domain__count span on the page")
+        expected = counts.get(code)
+        domain_sum = sum(domain_values.values())
+        if expected is not None and domain_sum != expected:
+            problems.append(f"{rel}: {code} domain_counts sum to {domain_sum}, "
+                            f"snapshot count is {expected}")
     if not problems:
         print("  domains ok  every domain__count span matches its exam's snapshot")
         return
@@ -950,7 +962,7 @@ def main() -> None:
                     open(page, "w").write(text)
                     print(f"  synced {rel}")
 
-        check_domain_mismatches(p, domain_counts_all, page_domains)
+        check_domain_mismatches(p, domain_counts_all, page_domains, retired, counts)
 
         print("homepage:")
         p.apply(INDEX_HTML,

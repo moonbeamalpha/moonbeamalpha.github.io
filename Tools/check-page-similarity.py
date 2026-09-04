@@ -41,12 +41,42 @@ Usage:
   python3 Tools/check-page-similarity.py                  # report: top pairs + mean
   python3 Tools/check-page-similarity.py --check           # exit 1 if the ratchet slipped
   python3 Tools/check-page-similarity.py --update-baseline # write the new baseline
+  python3 Tools/check-page-similarity.py --drop AB-100     # debug: exclude a code from
+                                                            # the current corpus, to rehearse
+                                                            # what --check does when a page
+                                                            # retires (repeatable)
 
-Baseline file: Tools/page-similarity-baseline.json = {"max_pair": <float>, "mean": <float>}.
---check fails when either the highest pair or the corpus mean grows by more
-than 0.005 over the committed baseline -- rewriting a page can only lower
-similarity against its siblings, never (deliberately) raise it, so the
-baseline should only ever tighten via --update-baseline after a page lands.
+Baseline file: Tools/page-similarity-baseline.json =
+  {"max_pair": <float>, "mean": <float>, "pages": [<code>, ...], "pairs": {"A~B": <float>, ...}}
+-- every pair among the pages current when --update-baseline last ran, 6 decimal
+places, dict keys sorted (json.dump(..., sort_keys=True) does this for free
+since "A~B" sorts lexically the same way the pages do).
+
+--check is immune to corpus-membership changes (a page retiring or a new exam
+page landing) by construction, not by exempting anything from scrutiny:
+
+  (i)   For every pair present in BOTH the baseline and the current corpus --
+        i.e. both of its pages are still current -- the drift check compares
+        like with like: this pair's CURRENT ratio against its BASELINE ratio,
+        rolled up into a shared-pairs mean and max, each checked against its
+        own baseline counterpart (also computed over just the shared pairs)
+        with the existing +0.005 tolerance. A page retiring changes which
+        pairs are "shared" but never changes what a still-current pair's own
+        historical ratio was, so removing a page cannot move this number the
+        way comparing against the old whole-corpus mean/max could.
+  (ii)  Any pair involving a page NOT in the baseline (a brand new exam page)
+        has no historical ratio to diff against, so it is held to an absolute
+        bar instead: its ratio must be <= the baseline's overall max_pair +
+        tolerance, or --check fails with "new page <code> pairs above the
+        ratchet -- de-template it". This is exactly as strict as the ratchet
+        already is for every existing page's pairs.
+  (iii) A page that left the corpus (retired) simply has no current pairs at
+        all -- neither (i) nor (ii) has anything to say about it, so it can
+        never fail. Confirmed by rehearsal: `--drop AB-100` still passes
+        --check against the committed baseline (see the task-B brief).
+
+Pages added/removed relative to the baseline are printed either way, so a
+clean --check run still shows corpus churn even though it can't fail on it.
 """
 
 from __future__ import annotations
@@ -151,7 +181,7 @@ def load_retired_codes() -> set[str]:
     return set(data.get("retired") or ())
 
 
-def exam_pages(retired: set[str]) -> list[str]:
+def exam_pages(retired: set[str], drop: set[str] = frozenset()) -> list[str]:
     """Every CURRENT exams/<code>/index.html, sorted. "Current" excludes:
     - exams/index.html and exams/retired/index.html -- neither directory
       name matches CODE_DIR_RE, so both hub pages drop out without a
@@ -159,13 +189,16 @@ def exam_pages(retired: set[str]) -> list[str]:
     - any exams/<code>/index.html whose code is in `retired` -- a retired
       exam's page is deliberately generic ("this exam has retired, here's
       its successor"), so including it would understate how similar the
-      current pages are to each other."""
+      current pages are to each other;
+    - any code in `drop` -- the --drop debug flag, for rehearsing what
+      --check does when a page leaves the corpus without editing
+      data/exam-counts.json."""
     pages = []
     for path in sorted(glob.glob(os.path.join(EXAMS_DIR, "*", "index.html"))):
         code_dir = os.path.basename(os.path.dirname(path))
         if not CODE_DIR_RE.match(code_dir):
             continue
-        if code_dir.upper() in retired:
+        if code_dir.upper() in retired or code_dir.upper() in drop:
             continue
         pages.append(path)
     return pages
@@ -175,22 +208,43 @@ def page_code(path: str) -> str:
     return os.path.basename(os.path.dirname(path)).upper()
 
 
-def compute_pairs() -> tuple[list[tuple[float, str, str]], float]:
-    """Returns (pairs sorted by ratio descending, corpus mean). Each pair is
-    (ratio, code_a, code_b)."""
-    pages = exam_pages(load_retired_codes())
+def pair_key(a: str, b: str) -> str:
+    """Canonical, order-independent key for a pair of codes."""
+    lo, hi = sorted((a, b))
+    return f"{lo}~{hi}"
+
+
+def compute_pairs(drop: set[str] = frozenset()) -> tuple[list[str], dict[str, float]]:
+    """Returns (sorted current codes, {pair_key: ratio} for every pair)."""
+    pages = exam_pages(load_retired_codes(), drop)
     if len(pages) < 2:
         sys.exit(f"error: found {len(pages)} current exam page(s) under {EXAMS_DIR} — need at least 2.")
     words = {p: extract_words(p) for p in pages}
-    pairs = []
+    codes = sorted(page_code(p) for p in pages)
+    pairs: dict[str, float] = {}
     for i in range(len(pages)):
         for j in range(i + 1, len(pages)):
             a, b = pages[i], pages[j]
             ratio = difflib.SequenceMatcher(None, words[a], words[b]).ratio()
-            pairs.append((ratio, page_code(a), page_code(b)))
-    pairs.sort(key=lambda t: t[0], reverse=True)
-    mean = statistics.mean(r for r, _, _ in pairs)
-    return pairs, mean
+            pairs[pair_key(page_code(a), page_code(b))] = ratio
+    return codes, pairs
+
+
+def summarise(pairs: dict[str, float]) -> tuple[float, float]:
+    """(max_pair, mean) over the given pair-ratio mapping."""
+    values = list(pairs.values())
+    return max(values), statistics.mean(values)
+
+
+def as_sorted_list(pairs: dict[str, float]) -> list[tuple[float, str, str]]:
+    """{pair_key: ratio} -> [(ratio, code_a, code_b), ...] sorted descending,
+    for the human-readable report."""
+    out = []
+    for key, ratio in pairs.items():
+        a, b = key.split("~", 1)
+        out.append((ratio, a, b))
+    out.sort(key=lambda t: t[0], reverse=True)
+    return out
 
 
 def print_report(pairs: list[tuple[float, str, str]], mean: float) -> None:
@@ -208,48 +262,114 @@ def load_baseline() -> dict:
         sys.exit(f"error: {os.path.relpath(BASELINE_FILE, ROOT)} missing — "
                  f"run with --update-baseline first.")
     with open(BASELINE_FILE) as fh:
-        return json.load(fh)
+        data = json.load(fh)
+    # Tolerate the pre-W3a baseline shape (no "pages"/"pairs") so a fresh
+    # checkout mid-migration fails with a clear instruction rather than a
+    # KeyError.
+    if "pages" not in data or "pairs" not in data:
+        sys.exit(f"error: {os.path.relpath(BASELINE_FILE, ROOT)} is in the old "
+                 f"shape (no pages/pairs) — run with --update-baseline first.")
+    return data
 
 
-def write_baseline(max_pair: float, mean: float) -> None:
-    data = {"max_pair": round(max_pair, 6), "mean": round(mean, 6)}
+def write_baseline(codes: list[str], pairs: dict[str, float], max_pair: float, mean: float) -> None:
+    data = {
+        "max_pair": round(max_pair, 6),
+        "mean": round(mean, 6),
+        "pages": sorted(codes),
+        "pairs": {k: round(v, 6) for k, v in pairs.items()},
+    }
     with open(BASELINE_FILE, "w") as fh:
         json.dump(data, fh, indent=2, sort_keys=True)
         fh.write("\n")
-    print(f"wrote {os.path.relpath(BASELINE_FILE, ROOT)}: {data}")
+    print(f"wrote {os.path.relpath(BASELINE_FILE, ROOT)}: "
+          f"{len(data['pages'])} pages, {len(data['pairs'])} pairs, "
+          f"max_pair={data['max_pair']}, mean={data['mean']}")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--check", action="store_true",
-                    help="exit 1 if max_pair or mean grew more than the tolerance over the baseline")
+                    help="exit 1 if the ratchet regressed (see the module docstring)")
     ap.add_argument("--update-baseline", action="store_true",
-                    help="write the current max_pair/mean as the new baseline")
+                    help="write the current pages/pairs/max_pair/mean as the new baseline")
+    ap.add_argument("--drop", action="append", default=[], metavar="CODE",
+                    help="debug: exclude CODE from the current corpus (repeatable) -- "
+                         "for rehearsing what --check does when a page retires")
     args = ap.parse_args()
     if args.check and args.update_baseline:
         sys.exit("error: pass one of --check or --update-baseline, not both.")
 
-    pairs, mean = compute_pairs()
-    max_pair = pairs[0][0] if pairs else 0.0
-    print_report(pairs, mean)
+    drop = {c.upper() for c in args.drop}
+    codes, pairs = compute_pairs(drop)
+    max_pair, mean = summarise(pairs)
+    print_report(as_sorted_list(pairs), mean)
 
     if args.update_baseline:
-        write_baseline(max_pair, mean)
+        write_baseline(codes, pairs, max_pair, mean)
         return
 
     if args.check:
         baseline = load_baseline()
+        base_pages = set(baseline["pages"])
+        base_pairs: dict[str, float] = baseline["pairs"]
         base_max = baseline["max_pair"]
-        base_mean = baseline["mean"]
-        max_drift = max_pair - base_max
-        mean_drift = mean - base_mean
-        print(f"\nbaseline: max_pair={base_max:.4f} mean={base_mean:.4f} "
-              f"(tolerance +{DRIFT_TOLERANCE})")
-        print(f"current:  max_pair={max_pair:.4f} ({max_drift:+.4f})  "
-              f"mean={mean:.4f} ({mean_drift:+.4f})")
-        if max_drift > DRIFT_TOLERANCE or mean_drift > DRIFT_TOLERANCE:
-            print("FAIL  similarity ratchet regressed — pages have converged, not diverged.")
+
+        current_codes = set(codes)
+        added = sorted(current_codes - base_pages)
+        removed = sorted(base_pages - current_codes)
+        if added:
+            print(f"pages added since baseline: {', '.join(added)}")
+        if removed:
+            print(f"pages removed since baseline (e.g. retired): {', '.join(removed)}")
+        if not added and not removed:
+            print("no corpus membership changes since baseline")
+
+        failed = False
+
+        # (i) Pairs whose both pages are still current: compare this pair's
+        # own baseline ratio against its own current ratio, rolled up into a
+        # shared-only mean/max on each side -- immune to corpus churn because
+        # neither side's summary depends on any pair that isn't shared.
+        shared_keys = base_pairs.keys() & pairs.keys()
+        if shared_keys:
+            shared_base_max, shared_base_mean = summarise({k: base_pairs[k] for k in shared_keys})
+            shared_cur_max, shared_cur_mean = summarise({k: pairs[k] for k in shared_keys})
+            max_drift = shared_cur_max - shared_base_max
+            mean_drift = shared_cur_mean - shared_base_mean
+            print(f"\nshared pairs: {len(shared_keys)} "
+                  f"(tolerance +{DRIFT_TOLERANCE})")
+            print(f"  baseline: max_pair={shared_base_max:.4f} mean={shared_base_mean:.4f}")
+            print(f"  current:  max_pair={shared_cur_max:.4f} ({max_drift:+.4f})  "
+                  f"mean={shared_cur_mean:.4f} ({mean_drift:+.4f})")
+            if max_drift > DRIFT_TOLERANCE or mean_drift > DRIFT_TOLERANCE:
+                print("FAIL  similarity ratchet regressed on shared pairs — "
+                      "pages have converged, not diverged.")
+                failed = True
+        else:
+            print("\nno pairs shared with the baseline — nothing to diff.")
+
+        # (ii) Pairs involving a page not in the baseline (a brand new exam
+        # page) have no historical ratio to diff against, so hold them to an
+        # absolute bar instead: no worse than the baseline's own overall
+        # ceiling, plus the same tolerance.
+        new_keys = pairs.keys() - base_pairs.keys()
+        new_pages_over = set()
+        for key in sorted(new_keys):
+            if pairs[key] > base_max + DRIFT_TOLERANCE:
+                a, b = key.split("~", 1)
+                new_pages_over.add(a if a not in base_pages else b)
+                print(f"  DRIFT  new pair {a} ~ {b} = {pairs[key]:.4f} "
+                      f"> baseline max_pair {base_max:.4f} (+{DRIFT_TOLERANCE})")
+        for code in sorted(new_pages_over):
+            print(f"FAIL  new page {code} pairs above the ratchet — de-template it.")
+            failed = True
+
+        # (iii) Pages that left the corpus: their pairs are simply absent
+        # from `pairs` entirely, so they never reach either check above.
+
+        if failed:
             sys.exit(1)
         print("PASS  similarity ratchet holds.")
 

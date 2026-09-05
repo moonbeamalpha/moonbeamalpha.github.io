@@ -597,18 +597,18 @@ Exam domains:
   - Implement Azure security (15–20%)
   - Monitor, troubleshoot, and optimize Azure solutions (5–10%)
   - Connect to and consume Azure services and third-party services (20–25%)
-Q: When does AZ-204 retire?
-A: AZ-204 retires on 31 July 2026 at 11:59 PM Central Standard Time. Microsoft lists AI-200 courseware as the replacement for AZ-204 courseware, but AI-200 earns a different credential. If you want Azure Developer Associate, sit AZ-204 before retirement; already-earned certifications remain valid afterward.
+Q: When did AZ-204 retire?
+A: AZ-204 was retired by Microsoft on 31 July 2026 at 11:59 PM Central Standard Time and can no longer be booked. Microsoft lists AI-200 courseware as the replacement for AZ-204 courseware, but AI-200 earns a different credential rather than extending Azure Developer Associate. Already-earned Azure Developer Associate certifications remain valid.
 Q: How much does the AZ-204 exam cost?
-A: The AZ-204 voucher is USD $165 in the United States, with regional pricing. Only book if you can prepare and pass before 31 July 2026; the exam and Azure Developer Associate certification retire on that date.
+A: The AZ-204 voucher was USD $165 in the United States, with regional pricing. AZ-204 was retired by Microsoft on 31 July 2026 and can no longer be booked; candidates should study AI-200, Microsoft's current AI cloud developer route, instead.
 Q: Does the AZ-204 certification expire?
-A: The AZ-204 exam and Azure Developer Associate certification retire on 31 July 2026. Microsoft states that renewal assessments are no longer available after a certification retires. Already-earned credentials remain on your transcript, subject to their existing expiration date.
+A: The AZ-204 exam and Azure Developer Associate certification retired on 31 July 2026. Microsoft states that renewal assessments are no longer available after a certification retires. Already-earned credentials remain on your transcript, subject to their existing expiration date.
 Q: What is the AZ-204 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. Plan retakes carefully against the 31 July 2026 retirement — a fail on day 1 plus two 14-day waits eats four weeks.
+A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for AZ-204?
 A: Most candidates pass AZ-204 after four to six weeks of focused study, assuming professional .NET, Python, or Node experience. If you're new to writing against Azure SDKs (Cosmos DB, Blob, Service Bus, Functions bindings), plan eight to ten weeks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.
 Q: AZ-204 vs AZ-104 — which should I take first?
-A: Take whichever matches your day job. AZ-104 (Microsoft Azure Administrator) is for sysadmins and platform engineers; AZ-204 is for application developers. They cover overlapping infrastructure (App Service, Functions, Storage, Key Vault) but from different angles — AZ-104 asks "how do I configure X in the portal"; AZ-204 asks "how do I call X from the C# / Python SDK". With AZ-204 retiring 31 July 2026, the deadline pressure may push it ahead of AZ-104 in your queue.
+A: Take whichever matches your day job. AZ-104 (Microsoft Azure Administrator) is for sysadmins and platform engineers; AZ-204 is for application developers. They cover overlapping infrastructure (App Service, Functions, Storage, Key Vault) but from different angles — AZ-104 asks "how do I configure X in the portal"; AZ-204 asks "how do I call X from the C# / Python SDK". AZ-204 was retired by Microsoft on 31 July 2026, so new candidates should start with AZ-104 or move straight to AI-200 for the current developer route.
 Q: Is Azure Mastery free for AZ-204 prep?
 A: The app is free to download and includes a free allowance of AZ-204 questions so you can try every feature. The full bank of 405 AZ-204 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-204 practice work offline?

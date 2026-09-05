@@ -188,34 +188,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the DP-300 exam cost?",
+            "name": "Auto-failover group or active geo-replication — which does DP-300 want?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the DP-300 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the DP-300 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for DP-300?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready."
+              "text": "DP-300's HA/DR scenarios expect you to pick auto-failover groups when the requirement is automatic, transparent failover behind a stable listener endpoint, and active geo-replication when the requirement is manual control over failover timing or more than the auto-failover group's secondary limit. Naming the wrong one for a stated recovery-time requirement is one of the exam's most repeated misses, and Azure Mastery's Answer Coach spells out which property of the scenario should have decided it."
             }
           },
           {
@@ -223,7 +199,39 @@
             "name": "DP-300 vs DP-700 — different data roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "They sit on different sides of the data platform. DP-300 is for administering relational Azure SQL workloads in production — deployment, security, performance tuning, automation, and HA/DR. DP-700 is for engineering analytics solutions end to end in Microsoft Fabric — ingesting, transforming, securing, and optimizing data with SQL, PySpark, and KQL across Lakehouse, Warehouse, and Eventhouse. Neither is a prerequisite for the other; choose based on whether your day job is operating Azure SQL or building Fabric pipelines."
+              "text": "They sit on different sides of the data platform. DP-300 is for administering relational Azure SQL workloads in production — deployment, security, performance tuning, automation, and HA/DR. DP-700 is for engineering analytics solutions end to end in Microsoft Fabric — ingesting, transforming, securing, and optimising data with SQL, PySpark, and KQL across Lakehouse, Warehouse, and Eventhouse. Neither is a prerequisite for the other; choose based on whether your day job is operating Azure SQL or building Fabric pipelines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What format does the DP-300 exam use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's DP-300 bank runs a similar spread: mostly single-answer multiple choice, a real slice of scenario-based, drag-to-match, and multi-select questions, and a smaller mix of dropdown-select, yes/no, and hotspot items — T-SQL query snippets and configuration JSON appear throughout, so reading code matters as much as recalling a feature name."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the DP-300 exam fee, and does renewal cost extra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a DP-300 pass permanent, or does it lapse?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It lapses unless renewed. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Query Store or Extended Events — which does DP-300 expect for troubleshooting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Query Store is the go-to when the scenario is about regression over time — a query that used to run fast and now doesn't, or forcing a known-good execution plan. Extended Events is the go-to when the scenario needs granular, event-level capture of what's happening right now, such as deadlocks or a specific wait type. DP-300 scenarios name the symptom, not the tool, so the exam is really testing whether you can match the symptom to the right diagnostic."
             }
           },
           {
@@ -236,7 +244,15 @@
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for DP-300 prep?",
+            "name": "I need to resit DP-300 — how soon can I book again?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I try Azure Mastery's DP-300 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -244,18 +260,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does DP-300 practice work offline?",
+            "name": "Does DP-300 revision still work with no connection?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there a DP-300 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -795,33 +803,39 @@
       <h2 class="display-small section-title">DP-300 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the DP-300 exam cost?</summary>
+          <summary>Auto-failover group or active geo-replication — which does DP-300 want?</summary>
           <div class="faq__answer">
-            <p>The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the DP-300 certification expire?</summary>
-          <div class="faq__answer">
-            <p>Yes. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the DP-300 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for DP-300?</summary>
-          <div class="faq__answer">
-            <p>Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
+            <p>DP-300's HA/DR scenarios expect you to pick auto-failover groups when the requirement is automatic, transparent failover behind a stable listener endpoint, and active geo-replication when the requirement is manual control over failover timing or more than the auto-failover group's secondary limit. Naming the wrong one for a stated recovery-time requirement is one of the exam's most repeated misses, and Azure Mastery's Answer Coach spells out which property of the scenario should have decided it.</p>
           </div>
         </details>
         <details class="faq">
           <summary>DP-300 vs DP-700 — different data roles?</summary>
           <div class="faq__answer">
-            <p>They sit on different sides of the data platform. DP-300 is for administering relational Azure SQL workloads in production — deployment, security, performance tuning, automation, and HA/DR. <a href="/exams/dp-700/">DP-700</a> is for engineering analytics solutions end to end in Microsoft Fabric — ingesting, transforming, securing, and optimizing data with SQL, PySpark, and KQL across Lakehouse, Warehouse, and Eventhouse. Neither is a prerequisite for the other; choose based on whether your day job is operating Azure SQL or building Fabric pipelines.</p>
+            <p>They sit on different sides of the data platform. DP-300 is for administering relational Azure SQL workloads in production — deployment, security, performance tuning, automation, and HA/DR. <a href="/exams/dp-700/">DP-700</a> is for engineering analytics solutions end to end in Microsoft Fabric — ingesting, transforming, securing, and optimising data with SQL, PySpark, and KQL across Lakehouse, Warehouse, and Eventhouse. Neither is a prerequisite for the other; choose based on whether your day job is operating Azure SQL or building Fabric pipelines.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What format does the DP-300 exam use?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's DP-300 bank runs a similar spread: mostly single-answer multiple choice, a real slice of scenario-based, drag-to-match, and multi-select questions, and a smaller mix of dropdown-select, yes/no, and hotspot items — T-SQL query snippets and configuration JSON appear throughout, so reading code matters as much as recalling a feature name.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the DP-300 exam fee, and does renewal cost extra?</summary>
+          <div class="faq__answer">
+            <p>The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is a DP-300 pass permanent, or does it lapse?</summary>
+          <div class="faq__answer">
+            <p>It lapses unless renewed. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Query Store or Extended Events — which does DP-300 expect for troubleshooting?</summary>
+          <div class="faq__answer">
+            <p>Query Store is the go-to when the scenario is about regression over time — a query that used to run fast and now doesn't, or forcing a known-good execution plan. Extended Events is the go-to when the scenario needs granular, event-level capture of what's happening right now, such as deadlocks or a specific wait type. DP-300 scenarios name the symptom, not the tool, so the exam is really testing whether you can match the symptom to the right diagnostic.</p>
           </div>
         </details>
         <details class="faq">
@@ -831,21 +845,21 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for DP-300 prep?</summary>
+          <summary>I need to resit DP-300 — how soon can I book again?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Can I try Azure Mastery's DP-300 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does DP-300 practice work offline?</summary>
+          <summary>Does DP-300 revision still work with no connection?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there a DP-300 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

@@ -459,57 +459,61 @@ Q: Is there an AI-200 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-300/ — AI-300 Practice Questions — 362 Qs for ML Ops Engineer (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Design and implement an MLOps infrastructure (15–20%)
   - Implement machine learning model lifecycle and operations (25–30%)
   - Design and implement a GenAIOps infrastructure (20–25%)
   - Implement generative AI quality assurance and observability (10–15%)
   - Optimize generative AI systems and model performance (10–15%)
-Q: How much does the AI-300 exam cost?
-A: The AI-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-300 also requires annual renewal (free, online), so factor that into long-term cost planning.
-Q: Does the AI-300 certification expire?
-A: Yes. Microsoft Associate certifications including AI-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the AI-300 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AI-300?
-A: Allow four to eight weeks of focused study if you already work with Azure Machine Learning or generative AI systems. Spend longer if MLOps, GenAIOps, deployment infrastructure, observability, quality evaluation, or model lifecycle automation are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
-Q: Did AI-300 replace DP-100?
-A: Yes. Microsoft retired DP-100 and the Azure Data Scientist Associate certification on 1 June 2026 and identifies AI-300, Machine Learning Operations Engineer Associate, as its replacement. The emphasis changed: DP-100 focused on data-science model development, while AI-300 focuses on operationalizing machine learning and generative AI through MLOps, GenAIOps, observability, quality, and lifecycle automation.
 Q: AI-300 vs AI-200 — which next?
 A: AI-200 first. AI-200 (AI Cloud Developer Associate) builds the cloud platform that AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform. AI-200 is upstream of AI-300 in most roles.
-Q: Is Azure Mastery free for AI-300 prep?
+Q: Did AI-300 replace DP-100?
+A: Yes. Microsoft retired DP-100 and the Azure Data Scientist Associate certification on 1 June 2026 and identifies AI-300, Machine Learning Operations Engineer Associate, as its replacement. The emphasis changed: DP-100 focused on data-science model development, while AI-300 focuses on operationalizing machine learning and generative AI through MLOps, GenAIOps, observability, quality, and lifecycle automation.
+Q: Are there prerequisites for AI-300?
+A: Microsoft sets no mandatory prerequisite exam for AI-300. Its published audience profile expects subject-matter expertise in MLOps and GenAIOps on Azure, a data-science background with Python experience, and an entry-level understanding of DevOps practices such as GitHub Actions and command-line tooling. Candidates without hands-on Azure Machine Learning or Foundry experience typically need longer to prepare, even though nothing blocks booking the exam directly.
+Q: What format is the AI-300 exam?
+A: Microsoft's general guidance for AI-300, in common with most Associate exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's AI-300 bank, single-answer and scenario-based questions carry most of the weight, alongside drag-to-match, dropdown-select, and hot-area items and a run of linked case studies — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.
+Q: What does the AI-300 exam voucher cost?
+A: The AI-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-300 also requires annual renewal (free, online), so factor that into long-term cost planning.
+Q: Is AI-300 a permanent credential, or does it need renewing?
+A: It needs renewing. Microsoft Associate certifications including AI-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
+Q: How soon can I resit AI-300 after a fail?
+A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+Q: How many weeks of prep does AI-300 typically take?
+A: Allow four to eight weeks of focused study if you already work with Azure Machine Learning or generative AI systems. Spend longer if MLOps, GenAIOps, deployment infrastructure, observability, quality evaluation, or model lifecycle automation are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
+Q: Is Azure Mastery free to try for AI-300?
 A: The app is free to download and includes a free allowance of AI-300 questions so you can try every feature. The full bank of 362 AI-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AI-300 practice work offline?
+Q: Can I revise for AI-300 without a connection?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AI-300 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
-Page last modified: 2026-08-23
+Page last modified: 2026-09-05
 Exam domains:
   - Architect Multi-Agent Solutions (15–20%)
   - Develop Multi-Agent Solutions in Azure (30–35%)
   - Evaluate, Optimize, and Monitor Multi-Agent Solutions (20–25%)
   - Secure, Govern, and Deploy Multi-Agent Solutions (20–25%)
-Q: How much does the AI-500 exam cost?
-A: Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee.
-Q: Does the AI-500 certification expire?
-A: Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the AI-500 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AI-500?
-A: Allow six to ten weeks of focused study if you already build agentic solutions on Microsoft Foundry with Python. Spend longer if orchestration frameworks, Model Context Protocol, agent identity and RBAC, or evaluation and observability tooling are new to you. This is an expert-level exam that expects hands-on production experience, not just familiarity — Azure Mastery's readiness gauge helps you decide when to schedule it.
 Q: AI-500 vs AI-103 — which do I need?
 A: Different tiers and different scope. AI-103 (Azure AI Apps and Agents Developer Associate) validates building AI apps and single agents on Microsoft Foundry with Python — models, retrieval, vision, speech, and one agent talking to its own tools. AI-500 (Multi-Agent AI Solutions Expert) is the expert tier above it: architecting, orchestrating, evaluating, and securing systems where multiple agents coordinate in production, including Microsoft Agent Framework orchestration patterns, Agent2Agent and MCP integration, and per-agent identity and guardrails. The dependency is also formal: Microsoft lists the Azure AI Apps and Agents Developer Associate certification (earned via AI-103) as a required prerequisite, so you receive the Multi-Agent AI Solutions Expert credential only once you hold it and pass AI-500.
+Q: Is there a formal prerequisite for AI-500?
+A: Yes — AI-500 is one of the few exams where Microsoft enforces a hard gate rather than a suggestion. You must already hold the Azure AI Apps and Agents Developer Associate certification, earned by passing AI-103, before Microsoft will issue the Multi-Agent AI Solutions Expert credential, even if you sit and pass AI-500 itself first. Plan the AI-103 route before booking AI-500 if you don't already hold it.
 Q: AI-500 vs AB-100 — architect or engineer?
 A: Different roles at a similar level. AB-100 (Agentic AI Business Solutions Architect) is the business-architecture view of agentic AI — ROI analysis, build-vs-buy across Copilot Studio, Microsoft Foundry, and Power Platform, governance, and ALM, aimed at architects who plan agentic solutions across an enterprise. AI-500 is the hands-on engineering expert exam — designing, coding, evaluating, and securing the multi-agent systems themselves, with Microsoft Agent Framework, MCP servers, orchestration patterns, and agent identity. Pick AB-100 if you're deciding which agentic patterns a business should adopt; pick AI-500 if you're the one building and running them.
-Q: Is Azure Mastery free for AI-500 prep?
-A: The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AI-500 practice work offline?
+Q: What format is the AI-500 exam?
+A: Microsoft's general guidance for AI-500, in common with most Expert exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's AI-500 bank, single-answer and scenario-based questions carry most of the weight, with multi-select items covering evaluator selection and drag-and-match and hot-area items covering orchestration ordering and Foundry portal navigation — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.
+Q: What's the AI-500 exam fee, and does the beta change it?
+A: Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee.
+Q: Does the AI-500 credential need annual renewal?
+A: Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
+Q: What happens if I don't pass AI-500 the first time?
+A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+Q: How much lead time should I budget to prepare for AI-500?
+A: Allow six to ten weeks of focused study if you already build agentic solutions on Microsoft Foundry with Python. Spend longer if orchestration frameworks, Model Context Protocol, agent identity and RBAC, or evaluation and observability tooling are new to you. This is an expert-level exam that expects hands-on production experience, not just familiarity — Azure Mastery's readiness gauge helps you decide when to schedule it.
+Q: Does Azure Mastery let me try AI-500 before paying?
+A: Yes. The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: Will AI-500 revision work without Wi-Fi?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AI-500 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-900/ — AI-900 Retired Exam & AI-901 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -539,28 +543,30 @@ Q: Is there an AI-900 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-901/ — AI-901 Practice Questions — 572 Qs for AI Fundamentals (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Identify AI concepts and capabilities (40–45%)
   - Implement AI solutions by using Microsoft Foundry (55–60%)
-Q: How much does the AI-901 exam cost?
-A: Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the official scheduling page for the current local price before booking.
-Q: Does the AI-901 certification expire?
-A: No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire.
-Q: What is the AI-901 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AI-901?
-A: Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
-Q: AI-901 vs AI-900 — different exams?
-A: AI-901 replaced AI-900 on 1 July 2026. AI-900 retired on 30 June 2026 and can no longer be scheduled. AI-901 remains the route to the Azure AI Fundamentals credential and adds a more implementation-oriented focus on Microsoft Foundry and Python examples.
+Q: AI-901 vs AB-900 — which fundamentals exam do I need?
+A: Different subject matter, same tier. AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals) covers Microsoft 365 Copilot and agent administration — core objects and security features, data protection and governance under Microsoft Purview, and basic administrative tasks for Copilot and agents. AI-901 covers AI concepts and building AI solutions with Microsoft Foundry — responsible AI, model capabilities, and Foundry-based generative AI, vision, speech, and information extraction. Take AI-901 if you're heading toward building or evaluating AI solutions; take AB-900 if you're heading toward administering Copilot and agents in a Microsoft 365 tenant. Neither is a prerequisite for the other.
+Q: Did AI-901 replace AI-900?
+A: Yes. AI-901 replaced AI-900 on 1 July 2026. AI-900 retired on 30 June 2026 and can no longer be scheduled. AI-901 remains the route to the Azure AI Fundamentals credential and adds a more implementation-oriented focus on Microsoft Foundry and Python examples.
 Q: What should I take after AI-901?
 A: Choose the role-based exam that matches how you build agents. AI-103 covers code-first AI apps and agents with Python and Microsoft Foundry. AB-620 covers integrated agents built with Copilot Studio, Power Platform, and Microsoft 365. Both build on the foundations assessed by AI-901.
-Q: Is Azure Mastery free for AI-901 prep?
-A: The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AI-901 practice work offline?
+Q: What format is the AI-901 exam?
+A: Microsoft's general guidance for AI-901, in common with most Fundamentals exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's AI-901 bank, single-answer questions carry most of the weight, with multi-select, drag-and-match, and hot-area items covering service selection and workload recognition, plus linked case studies for the Foundry topics — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the areas where your accuracy is lowest.
+Q: Is there a cost to sitting AI-901?
+A: Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the official scheduling page for the current local price before booking.
+Q: Does an AI-901 pass ever expire?
+A: No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire.
+Q: Can I resit AI-901 immediately if I fail?
+A: Not immediately. The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+Q: How much revision time does AI-901 need?
+A: Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
+Q: Does the free tier cover any of AI-901's question bank?
+A: Yes. The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: Can I study AI-901 on a plane with no signal?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AI-901 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-104/ — AZ-104 Practice Questions — 481 Qs for Azure Admin (2026)
 Page last modified: 2026-09-04
@@ -974,30 +980,32 @@ Q: Is there a GH-900 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/pl-300/ — PL-300 Practice Questions — 378 Qs for Power BI Analyst (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
-  - Prepare the data (25–30%)
-  - Model the data (25–30%)
-  - Visualize and analyze the data (25–30%)
-  - Manage and secure Power BI (15–20%)
-Q: How much does the PL-300 exam cost?
-A: The PL-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. PL-300 also requires annual renewal (free, online), so factor that into long-term cost planning.
-Q: Does the PL-300 certification expire?
-A: Yes. Microsoft Associate certifications including PL-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the PL-300 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for PL-300?
-A: Most candidates plan four to eight weeks with regular Power BI practice. Spend hands-on time in Power Query, semantic modelling, DAX, report design, analysis, sharing, and workspace security; the exam rewards choosing the right modelling and visualisation approach for a scenario. Azure Mastery's readiness gauge tells you when you're exam-ready.
+  - Prepare the Data (25–30%)
+  - Model the Data (25–30%)
+  - Visualize and Analyze the Data (25–30%)
+  - Manage and Secure Power BI (15–20%)
 Q: PL-300 vs DP-900 — which should I take first?
 A: DP-900 first if you don't have a working understanding of relational vs non-relational data, transactional vs analytical workloads, or the SQL family on Azure. DP-900 (Microsoft Azure Data Fundamentals) builds that grounding. PL-300 assumes you already know the difference when it asks scenario questions about DirectLake vs DirectQuery vs Import, or about Microsoft Fabric semantic models. If you already do data-analyst work day-to-day, you can skip DP-900 and go straight to PL-300.
 Q: PL-300 vs DP-300 — different roles?
 A: Different angles on the data stack. PL-300 is the analyst-side cert — it focuses on building Power BI reports from data: Power Query M, DAX, visualisations, governance and sharing. DP-300 is the operational DBA cert — it focuses on running Azure SQL workloads: HA/DR, performance tuning, security, automation. The two complement each other in larger BI teams; small teams often have one person doing both.
-Q: Is Azure Mastery free for PL-300 prep?
-A: The app is free to download and includes a free allowance of PL-300 questions so you can try every feature. The full bank of 378 PL-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does PL-300 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a PL-300 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+Q: Are there formal prerequisites for PL-300?
+A: No. Microsoft sets no mandatory prior exam for PL-300, but its published audience profile expects proficiency with Power Query (M) and DAX, and comfort working with business stakeholders on requirements and with analytics or data engineers on sourcing. Candidates without hands-on Power BI experience typically need a longer run-up even though nothing blocks booking the exam directly.
+Q: What's the PL-300 exam format like?
+A: Microsoft's general guidance for PL-300, in common with most Associate exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's PL-300 bank, single-answer and dropdown-select items carry much of the weight, alongside multi-select, drag-to-match, and linked case-study questions that mirror how often the exam asks you to predict a DAX result or a Power Query step — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.
+Q: What's the going rate for a PL-300 exam attempt?
+A: The PL-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. PL-300 also requires annual renewal (free, online), so factor that into long-term cost planning.
+Q: Will my PL-300 badge lapse if I don't renew?
+A: Yes. Microsoft Associate certifications including PL-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
+Q: If I don't pass PL-300, when can I try again?
+A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+Q: What's a realistic PL-300 study timeline?
+A: Most candidates plan four to eight weeks with regular Power BI practice. Spend hands-on time in Power Query, semantic modelling, DAX, report design, analysis, sharing, and workspace security; the exam rewards choosing the right modelling and visualisation approach for a scenario. Azure Mastery's readiness gauge tells you when you're exam-ready.
+Q: Can I test-drive Azure Mastery's PL-300 content for free?
+A: Yes. The app is free to download and includes a free allowance of PL-300 questions so you can try every feature. The full bank of 378 PL-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: Does PL-300 prep need a live internet connection?
+A: No. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 
 ## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
 Page last modified: 2026-09-06

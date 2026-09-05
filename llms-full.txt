@@ -347,7 +347,7 @@ Q: Is there an AB-731 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-900/ — AB-900 Practice Questions — 323 Qs for Copilot Admin (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Identify the core features and objects of Microsoft 365 services (30–35%)
   - Understand data protection and governance tasks for Microsoft 365 and Copilot (35–40%)
@@ -362,8 +362,8 @@ Q: How long should I study for AB-900?
 A: Most candidates pass AB-900 after two to four weeks of focused study, assuming basic Microsoft 365 admin familiarity. If Microsoft 365 admin centres and Microsoft Entra are new to you, plan for six weeks — the exam expects you to recognise admin-centre objects (Exchange, SharePoint, Teams, M365), Purview surfaces (Information Protection, DLP, Insider Risk, DSPM for AI), and Defender XDR features. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher.
 Q: AB-900 vs SC-900 — which should I take first?
 A: Different scopes. SC-900 (Security, Compliance, and Identity Fundamentals) is the broad Microsoft security overview — Entra, Defender, Purview, compliance, identity. AB-900 is narrower and more practical: it focuses on Microsoft 365 Copilot administration, with security and Purview coverage scoped to the Copilot / agent threat surface (DSPM for AI, sensitivity-label flow into Copilot grounding, oversharing in SharePoint). If you already passed SC-900, AB-900 will feel like an extension. If you're starting fresh and your role is M365-Copilot-focused, take AB-900 directly first.
-Q: AB-900 vs AB-620 — what's the difference?
-A: Different jobs. AB-900 is the Fundamentals-tier admin cert: it expects you to identify Microsoft 365 admin-centre objects, Purview governance surfaces, and Copilot administration controls (licensing, usage analytics, agent approval flow). AB-620 (AI Agent Builder) is the Associate-tier maker cert: it expects you to build agents in Copilot Studio with topics, generative answers, knowledge sources, and channel deployments. AB-900 administers; AB-620 builds. Many M365 admins take both because real-world Copilot rollouts require admin governance and maker support.
+Q: AB-900 vs AB-731 — what's the difference?
+A: Different altitudes. AB-900 is the hands-on-governance Fundamentals cert: it expects you to identify Microsoft 365 admin-centre objects, Purview governance surfaces, and day-to-day Copilot administration controls (licensing, usage analytics, agent approval flow). AB-731 (AI Transformation Leader) is an Associate-tier strategy cert — it expects you to reason about organisation-wide AI adoption, Microsoft Foundry, and responsible AI at a leadership level, not configure individual admin centres. AB-900 administers what's already rolled out; AB-731 plans the rollout and the governance strategy behind it. IT admins usually want AB-900 first; those setting AI strategy across a team or organisation are better served starting with AB-731.
 Q: Is Azure Mastery free for AB-900 prep?
 A: The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-900 practice work offline?
@@ -879,7 +879,7 @@ Q: Is there a DP-800 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-900/ — DP-900 Practice Questions — 346 Qs for Data Basics (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Describe core data concepts (25–30%)
   - Identify considerations for relational data on Azure (20–25%)
@@ -893,8 +893,10 @@ Q: What is the DP-900 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for DP-900?
 A: Most candidates with prior IT experience pass after one to two weeks of focused revision. If cloud computing is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
-Q: DP-900 vs DP-300 — which should I take first?
-A: DP-900 first if databases aren't already your day job. DP-900 teaches you the data vocabulary (relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options) without expecting hands-on T-SQL. DP-300 is the role-based Database Administrator Associate exam — it expects you to manage Azure SQL workloads in production, write queries, and configure HA/DR. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.
+Q: What prior experience does DP-900 assume?
+A: Very little. Microsoft doesn't expect database-administration experience or hands-on SQL — just basic familiarity with what a spreadsheet or database is, and a general sense of what "cloud" means. If you can describe why a company might store data in more than one place, you have enough of a starting point; the exam teaches the Azure-specific vocabulary as you study.
+Q: DP-900 vs PL-900 — which should I take first?
+A: They test different things and neither is a prerequisite for the other, so pick based on your role. DP-900 covers data concepts and Azure's data services — relational vs non-relational, analytics workloads, Power BI as a visualisation layer. PL-900 covers the low-code Power Platform itself — Power Apps, Power Automate, Dataverse, and Copilot Studio agents. A data analyst or engineer heading toward DP-300 or AI-300 should start with DP-900; a business user or maker heading toward PL-300 should start with PL-900. Many candidates who work across both simply sit them in either order.
 Q: Is DP-900 worth taking if I'm not technical?
 A: Yes — Microsoft positions DP-900 for both technical and non-technical candidates. Data analysts about to step into Power BI work, software engineers crossing into a data role, and product managers responsible for analytics architecture all sit DP-900. The exam doesn't ask you to write SQL queries. It asks you to recognise scenarios — "which Azure SQL service for this workload?" or "which storage tier for this access pattern?" — and pick the correct option.
 Q: Is Azure Mastery free for DP-900 prep?
@@ -988,7 +990,7 @@ Q: Is there a PL-300 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Describe the business value of Microsoft Power Platform (5–10%)
   - Manage the Microsoft Power Platform environment (20–25%)
@@ -1133,7 +1135,7 @@ Q: Is there an SC-500 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Describe the concepts of security, compliance, and identity (10–15%)
   - Describe the capabilities of Microsoft Entra (25–30%)
@@ -1146,9 +1148,9 @@ A: No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-90
 Q: What is the SC-900 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for SC-900?
-A: Most candidates with prior IT experience pass after one to two weeks of focused revision. If cloud computing is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
-Q: SC-900 vs SC-200 — which should I take first?
-A: SC-900 first if security isn't already your day job. SC-900 teaches you the SCI vocabulary — Zero Trust, defence-in-depth, the Microsoft Defender product family, Microsoft Sentinel, Purview compliance — without expecting you to triage incidents. SC-200 (Security Operations Analyst Associate) is the role-based exam — it expects you to investigate incidents in Sentinel, configure Defender XDR, and write KQL queries. Most candidates pass SC-900 in a few weeks, then spend two to three months on SC-200.
+A: Most candidates with prior IT experience pass after one to two weeks of focused revision. If security and compliance concepts are genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
+Q: SC-900 vs AZ-900 — which should I take first?
+A: Neither depends on the other, so pick based on which vocabulary you need first. SC-900 teaches Microsoft's security, compliance, and identity stack — Zero Trust, Microsoft Entra, the Defender product family, Sentinel, Purview compliance. AZ-900 teaches general Azure fundamentals — regions and availability zones, core compute and networking services, pricing, and governance tools like Azure Policy. If your role is security-adjacent, start with SC-900; if you're new to Azure generally, start with AZ-900. Many candidates who work across both sit both, in either order, since they don't overlap much.
 Q: Is SC-900 worth taking if I'm not technical?
 A: Yes — Microsoft positions SC-900 for both technical and non-technical candidates. Business stakeholders evaluating Microsoft security procurement, IT generalists adjacent to security, and students entering the field all sit SC-900. The exam doesn't ask you to configure Conditional Access or write KQL. It asks you to recognise scenarios — "which Microsoft Defender product covers this surface?" or "which Purview tool addresses this compliance requirement?" — and pick the correct option.
 Q: Is Azure Mastery free for SC-900 prep?

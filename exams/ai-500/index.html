@@ -252,10 +252,10 @@
           },
           {
             "@type": "Question",
-            "name": "Is there an AI-500 practice test mode?",
+            "name": "What format is the AI-500 exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "Microsoft's general guidance for AI-500, in common with most Expert exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's AI-500 bank, single-answer and scenario-based questions carry most of the weight, with multi-select items covering evaluator selection and drag-and-match and hot-area items covering orchestration ordering and Foundry portal navigation — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -333,6 +333,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -452,10 +453,10 @@
         AI-500 is <strong>design-heavy and production-focused</strong>. It validates that you can architect multi-agent solutions (decomposing goals into workflows, agents, and tools; specifying protocols, memory architecture, and Zero Trust components), develop them in Azure (advanced prompt engineering, multi-agent RAG and context management, MCP tool ecosystems, and orchestration patterns via the Microsoft Agent Framework, LangChain, and LangGraph), evaluate and monitor them (agent evaluators, context-window diagnostics, tracing and cost management), and secure, govern, and deploy them (identity and RBAC, layered guardrails, and release strategy). Expect long, constraint-laden scenarios — a control loop that never terminates, a retrieval layer that drops one condition of a compound question, an agent whose tool calls started failing the moment it was published — and a question about which change actually fixes it.
       </p>
       <p>
-        Every question in Azure Mastery's AI-500 bank is mapped to the current Microsoft skills outline for multi-agent solution design, development, evaluation, and security. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500" rel="noopener">learn.microsoft.com</a>.
+        Microsoft published the current AI-500 skills outline on <strong>16 July 2026</strong>. Every question in Azure Mastery's AI-500 bank is mapped to that outline for multi-agent solution design, development, evaluation, and security. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="AI-500 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 mixed format</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">Priced by region (beta)</span></li>
@@ -466,10 +467,10 @@
 
     <!-- AI-500 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 16 July 2026</p>
       <h2 class="display-small section-title">AI-500 exam objectives</h2>
       <p class="section-lede">
-        Four domains, weighted per Microsoft's current skills outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Four domains, skills measured as of <strong>16 July 2026</strong> on the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500" rel="noopener">official skills outline</a>. Every domain below lists Microsoft's own skill groups verbatim, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -488,48 +489,99 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Architect Multi-Agent Solutions<span class="domain__weight">15–20%</span></h3>
+          <h3>Architect Multi-Agent Solutions<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai500-architect">84</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Architect topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design Logical Architecture for Multi-Agent Solutions</li>
+                <li>Specify Technology Components to Include in a Multi-Agent Solution</li>
+              </ul>
               <p>
-                The smallest domain, and the foundation the rest of the exam builds on. Decompose goals and objectives into workflows, agents, subagents, and tools; specify agent personas, scopes, autonomy levels, and behavioural guidelines; choose communication protocols between agents and between agents and other components; design short-term and long-term memory architectures with context sharing; and specify components for Zero Trust multi-agent solutions, including per-agent identity scoping and multi-tier state persistence. Around 6–12 questions per sitting.
+                The smallest domain, and the foundation the rest of the exam builds on. Candidates decompose goals into workflows, agents, subagents, and tools, then choose among Microsoft Agent Framework's built-in orchestration patterns — sequential, concurrent, handoff, group chat, and magentic — matched to a genuine requirement rather than a preference. They specify agent personas, scopes, autonomy levels, and behavioural guidelines, pick communication protocols between agents and other components, and design short-term and long-term memory architectures with context sharing. Zero Trust specification closes the domain: per-agent identity scoping, lateral-movement prevention, and multi-tier state persistence with tenant-isolation policies.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Develop Multi-Agent Solutions in Azure<span class="domain__weight">30–35%</span></h3>
+          <h3>Develop Multi-Agent Solutions in Azure<span class="domain__weight">Published weight 30–35%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai500-develop">158</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Develop topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design and Implement Advanced Prompt Engineering Strategies</li>
+                <li>Design and Implement Agent Memory, Context Management, and Knowledge Integration</li>
+                <li>Build and Integrate Tool Ecosystems</li>
+                <li>Implement Multi-Agent Orchestration</li>
+              </ul>
               <p>
-                The largest domain by a wide margin. Advanced prompt engineering and context-aware multi-agent behaviours; agent memory, context management, and multi-agent RAG and knowledge integration (chunking, embedding quality, retrieval precision); building and integrating tool ecosystems, including MCP servers and clients; and implementing orchestration — hub-and-spoke, sequential, parallel, peer-to-peer, and orchestrator-subagent patterns, human-in-the-loop, caching strategies, and orchestration frameworks such as the Microsoft Agent Framework, LangChain, and LangGraph. Around 12–21 questions.
+                The largest domain by a wide margin, and the one most study time gets spent on. Advanced prompt engineering and context-aware multi-agent behaviours sit alongside agent memory design — distinguishing the orchestration framework's short-term session context from Foundry Agent Service's long-term store of user-profile, chat-summary, and procedural memory. Multi-agent RAG and knowledge integration cover chunking, embedding quality, and retrieval precision, including when a compound question needs agentic retrieval's query planning rather than a single vector query. Tool-ecosystem questions cover MCP servers and clients, and orchestration questions test implementing the five built-in patterns plus human-in-the-loop, caching, and scaling controls.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Evaluate, Optimize, and Monitor Multi-Agent Solutions<span class="domain__weight">20–25%</span></h3>
+          <h3>Evaluate, Optimize, and Monitor Multi-Agent Solutions<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai500-evaluate">104</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Evaluate topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design and Implement Evaluation and Validation Strategies</li>
+                <li>Optimize Prompt and Model Performance</li>
+                <li>Design and Implement Observability and Monitoring</li>
+              </ul>
               <p>
-                Evaluation and validation strategies, including human review in Foundry and evaluations for memory, knowledge, tools, and prompts. Optimising prompt and model performance — task duration, parallelism, and diagnosing context-window issues such as sliding-window amnesia and summary drift. Observability and monitoring — reliability, drift and quality-regression detection, token-usage and cost strategy, and tracing in Foundry. Around 8–15 questions.
+                Evaluation and validation strategies include human review in Foundry and evaluations for memory, knowledge, tools, and prompts — knowing which of the narrow agent evaluators (Intent Resolution, Task Adherence, Task Completion, Tool Selection, Groundedness, and the rest) actually measures a given failure is the densest recall surface in this domain. Optimising prompt and model performance covers task duration, parallelism, rate limits, and diagnosing context-window issues such as sliding-window amnesia, summary drift, and vector-only recall. Observability and monitoring covers reliability and drift detection, token-usage and cost strategy, and tracing correlation IDs and execution paths in Foundry.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Secure, Govern, and Deploy Multi-Agent Solutions<span class="domain__weight">20–25%</span></h3>
+          <h3>Secure, Govern, and Deploy Multi-Agent Solutions<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai500-secure">106</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Secure topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design and Implement Security</li>
+                <li>Design and Implement Guardrails</li>
+                <li>Deploy Multi-Agent Solutions to Azure</li>
+              </ul>
               <p>
-                Resource access and RBAC, authentication flows (user impersonation, on-behalf-of, API keys, OAuth 2.0), and secrets management with Azure Key Vault. Designing a multi-intervention guardrail strategy across user inputs, tool calls, tool responses, and outputs, plus shift-left security with the AI Red Teaming Agent. Deployment — release methodology (DTAP, blue/green, canary), multi-environment release strategy, testing, and CI/CD requirements. Around 8–15 questions.
+                Security questions cover resource access and RBAC, authentication flows — user impersonation, on-behalf-of, API keys, and OAuth 2.0 — and secrets management with Azure Key Vault, including key rotation and encryption. A recurring theme: role assignments never follow an identity change, so publishing an agent or migrating it to the new agent object model routinely breaks tool calls that worked all through development until RBAC is reassigned. Guardrail questions cover a multi-intervention strategy across user inputs, tool calls, tool responses, and outputs, plus shift-left testing with the AI Red Teaming Agent. Deployment covers release methodology (DTAP, blue/green, canary), multi-environment release strategy, testing, and CI/CD requirements.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where AI-500 candidates slip</h2>
+      <div class="traps">
+        <article class="trap">
+          <h3>Publishing an agent doesn't carry its role assignments with it</h3>
+          <p>In the legacy publishing model, role assignments never follow the shared project identity to a published agent's new Agent Application identity; in the new agent object model they don't follow from an Agent Application to the agent object either. Either way, tool calls that worked all through development start failing with authorisation errors the moment an agent is published, until RBAC is reassigned to whichever identity is now making the call. It's the single most reliable source of "it worked in dev" items.</p>
+        </article>
+        <article class="trap">
+          <h3>Group chat agents don't share one session object</h3>
+          <p>It's tempting to assume every agent in a group chat orchestration reads from a single shared context. In practice, the orchestrator broadcasts each response so every participant's session is kept synchronised before its turn — which is why every agent appears to see the full history, without there being one shared session underneath. Confusing the two changes how you'd debug a participant that's clearly missing context.</p>
+        </article>
+        <article class="trap">
+          <h3>A better retrieval score doesn't fix a question the query never asked</h3>
+          <p>A single vector or hybrid query only answers one condition at a time. When a compound question drops a clause, the fix is agentic retrieval's query planning — decomposing the request into subqueries before reranking — not a higher-scoring embedding model or a different chunk size, which only improve scoring on the query that was actually run.</p>
+        </article>
+        <article class="trap">
+          <h3>The wrong evaluator measures the wrong failure</h3>
+          <p>Agent evaluators are deliberately narrow: Task Completion asks whether the job finished end to end, Task Adherence asks whether the agent obeyed its constraints while doing it, and neither substitutes for Tool Input Accuracy or Groundedness. Picking the evaluator that sounds closest, rather than the one that actually measures the failure described in the stem, is a frequent wrong-answer pattern.</p>
+        </article>
+        <article class="trap">
+          <h3>PTU quota is a policy limit, not a guarantee of capacity</h3>
+          <p>Provisioned throughput quota grants permission to deploy up to a limit at no standing cost, but the region's actual deployable capacity is a separate, live constraint. An item describing a deployment that fails despite "having quota" is testing whether you know quota and capacity are different things, not whether the quota request was filed correctly.</p>
         </article>
       </div>
     </section>
@@ -539,19 +591,19 @@
       <p class="label-eyebrow section-eyebrow">Designed for AI-500</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AI-500</h2>
       <p>
-        Azure Mastery ships with <strong>452 AI-500 practice questions</strong>, every one written specifically against the current skills outline. Each question carries a domain tag mapped to the official four domains (architect, develop, evaluate, secure/govern/deploy), so you always know which area you're being tested on and where your weak spots are clustered. Orchestration-pattern trade-offs, agent-identity failure scenarios, evaluator selection, and guardrail-layering questions appear throughout to rehearse blueprint-relevant decisions.
+        Azure Mastery ships with <strong>452 AI-500 practice questions</strong>, every one written against the skills outline Microsoft published on 16 July 2026. Each question carries a domain tag mapped to the official four domains (architect, develop, evaluate, secure/govern/deploy), so you always know which area you're being tested on and where your weak spots are clustered. In Azure Mastery's AI-500 bank, single-answer and scenario-based questions carry most of the weight, with multi-select items testing evaluator selection specifically, and drag-and-match and hot-area items rehearsing orchestration-pattern ordering and Foundry portal navigation.
       </p>
       <p>
-        The on-device <strong>Exam IQ</strong> engine predicts your AI-500 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+        The on-device <strong>Exam IQ</strong> engine predicts your AI-500 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. Because Develop Multi-Agent Solutions in Azure carries nearly a third of the exam on its own, the adaptive plan pulls extra sessions from orchestration patterns and memory design before it moves on to the smaller architecture domain.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a scenario question wrong? The engine surfaces another question in the same domain in your next session. Master a topic across three sessions and it backs off, prioritising the next-highest-leverage gap. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get an identity-migration or evaluator-selection question wrong? The engine surfaces another question in the same domain in your next session. Master a topic across three sessions and it backs off, prioritising the next-highest-leverage gap. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> matters at the expert tier more than anywhere else — four dense domains covering everything from memory architecture to release methodology is a lot to retain, and the orchestration pattern or evaluator you nailed three weeks into your study window is the thing you'll blank on by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the current outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        <strong>Blueprint-aligned exam rehearsal</strong> runs the app's own timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the July 2026 outline, with the app's own 100-minute session clock running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
       </p>
       <p>
         <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
@@ -766,9 +818,9 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Is there an AI-500 practice test mode?</summary>
+          <summary>What format is the AI-500 exam?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>Microsoft's general guidance for AI-500, in common with most Expert exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's AI-500 bank, single-answer and scenario-based questions carry most of the weight, with multi-select items covering evaluator selection and drag-and-match and hot-area items covering orchestration ordering and Foundry portal navigation — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

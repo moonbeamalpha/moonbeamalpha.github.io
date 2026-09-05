@@ -187,34 +187,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the SC-100 exam cost?",
+            "name": "MCRA vs MCSB — which framework does a given SC-100 scenario want?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The SC-100 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-100 also requires annual renewal (free, online), so factor that into long-term cost planning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the SC-100 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including SC-100 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the SC-100 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for SC-100?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates pass SC-100 after six to ten weeks of focused study, assuming an Associate-level prerequisite is already passed. SC-100 is design-oriented, so much of the prep is reading and pattern recognition rather than command memorisation — practice scenario reasoning until you can articulate why each distractor is wrong. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence."
+              "text": "The Microsoft Cybersecurity Reference Architecture describes what capabilities exist and how they fit together; the Microsoft Cloud Security Benchmark is what you measure an existing environment against. A scenario asking you to design new capability wants MCRA-shaped reasoning, not a benchmark recommendation — picking the wrong one of the two is one of the exam's most repeated traps."
             }
           },
           {
@@ -227,10 +203,42 @@
           },
           {
             "@type": "Question",
+            "name": "What format does the SC-100 exam use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-100 bank runs a similar spread: mostly single-answer multiple choice, a meaningful share of scenario-based questions, yes/no and multi-select items in roughly equal measure, a smaller mix of drag-to-match, dropdown-select, hotspot, and ordering items, and a modest set of case studies — the bank leans into scenario reasoning rather than one-line recall, matching how SC-100 itself is built."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the SC-100 exam fee, and does renewal add to the cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The SC-100 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-100 also requires annual renewal (free, online), so factor that into long-term cost planning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SC-100 a lifetime certification, or does it need renewing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, it needs renewing. Microsoft Associate certifications including SC-100 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
+            }
+          },
+          {
+            "@type": "Question",
             "name": "SC-100 vs AZ-305 — which next for an architect?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Different architectural lenses. SC-100 is the security architect cert — design Zero Trust, ransomware resilience, SecOps strategy, identity governance. AZ-305 is the solutions architect cert — design data, infrastructure, business continuity, and identity/governance/monitoring. The two overlap on identity and governance design, but SC-100 goes much deeper on security and AZ-305 covers a broader Azure surface. Many senior architects hold both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How soon can I resit SC-100 after a fail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
             }
           },
           {
@@ -243,7 +251,7 @@
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for SC-100 prep?",
+            "name": "Can I try Azure Mastery's SC-100 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of SC-100 questions so you can try every feature. The full bank of 452 SC-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -251,18 +259,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does SC-100 practice work offline?",
+            "name": "Can I rehearse SC-100 scenarios with no internet connection?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an SC-100 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -786,27 +786,9 @@
       <h2 class="display-small section-title">SC-100 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the SC-100 exam cost?</summary>
+          <summary>MCRA vs MCSB — which framework does a given SC-100 scenario want?</summary>
           <div class="faq__answer">
-            <p>The SC-100 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-100 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the SC-100 certification expire?</summary>
-          <div class="faq__answer">
-            <p>Yes. Microsoft Associate certifications including SC-100 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the SC-100 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for SC-100?</summary>
-          <div class="faq__answer">
-            <p>Most candidates pass SC-100 after six to ten weeks of focused study, assuming an Associate-level prerequisite is already passed. SC-100 is design-oriented, so much of the prep is reading and pattern recognition rather than command memorisation — practice scenario reasoning until you can articulate <em>why</em> each distractor is wrong. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.</p>
+            <p>The Microsoft Cybersecurity Reference Architecture describes what capabilities exist and how they fit together; the Microsoft Cloud Security Benchmark is what you measure an existing environment against. A scenario asking you to design new capability wants MCRA-shaped reasoning, not a benchmark recommendation — picking the wrong one of the two is one of the exam's most repeated traps.</p>
           </div>
         </details>
         <details class="faq">
@@ -816,9 +798,33 @@
           </div>
         </details>
         <details class="faq">
+          <summary>What format does the SC-100 exam use?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-100 bank runs a similar spread: mostly single-answer multiple choice, a meaningful share of scenario-based questions, yes/no and multi-select items in roughly equal measure, a smaller mix of drag-to-match, dropdown-select, hotspot, and ordering items, and a modest set of case studies — the bank leans into scenario reasoning rather than one-line recall, matching how SC-100 itself is built.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the SC-100 exam fee, and does renewal add to the cost?</summary>
+          <div class="faq__answer">
+            <p>The SC-100 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-100 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is SC-100 a lifetime certification, or does it need renewing?</summary>
+          <div class="faq__answer">
+            <p>Yes, it needs renewing. Microsoft Associate certifications including SC-100 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
           <summary>SC-100 vs AZ-305 — which next for an architect?</summary>
           <div class="faq__answer">
             <p>Different architectural lenses. SC-100 is the <em>security</em> architect cert — design Zero Trust, ransomware resilience, SecOps strategy, identity governance. <a href="/exams/az-305/">AZ-305</a> is the <em>solutions</em> architect cert — design data, infrastructure, business continuity, and identity/governance/monitoring. The two overlap on identity and governance design, but SC-100 goes much deeper on security and AZ-305 covers a broader Azure surface. Many senior architects hold both.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How soon can I resit SC-100 after a fail?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
           </div>
         </details>
         <details class="faq">
@@ -828,21 +834,15 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for SC-100 prep?</summary>
+          <summary>Can I try Azure Mastery's SC-100 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of SC-100 questions so you can try every feature. The full bank of 452 SC-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does SC-100 practice work offline?</summary>
+          <summary>Can I rehearse SC-100 scenarios with no internet connection?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there an SC-100 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

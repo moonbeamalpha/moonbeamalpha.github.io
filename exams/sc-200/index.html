@@ -186,34 +186,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the SC-200 exam cost?",
+            "name": "Do I need to know KQL before starting SC-200?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The SC-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-200 also requires annual renewal (free, online), so factor that into long-term cost planning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the SC-200 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including SC-200 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the SC-200 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for SC-200?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates plan four to eight weeks with security-operations experience. Spend hands-on time in Microsoft Defender XDR and Microsoft Sentinel: investigate incidents, build KQL queries and analytics rules, hunt threats, automate response, and manage exposure. Azure Mastery's readiness gauge tells you when you're exam-ready."
+              "text": "Not on day one, but plan to learn it early — threat hunting is 20–25% of the exam and Kusto Query Language shows up across the other two domains too, in custom detection rules and advanced-hunting queries. Start with reading and modifying existing KQL (joins, parse operators, time windows) before writing queries from scratch; the exam tests whether you can pick the right table and interpret a result more than raw syntax recall."
             }
           },
           {
@@ -226,6 +202,46 @@
           },
           {
             "@type": "Question",
+            "name": "What question formats show up on SC-200?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-200 bank runs a similar mix: mostly single-answer multiple choice, a meaningful share of scenario-based and multi-select questions in roughly equal measure, a smaller set of yes/no, dropdown, hotspot, and drag-to-match items, and a handful of case studies — KQL snippets and alert payloads appear throughout so you read code, not just recall product names."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the SC-200 voucher price, and is renewal extra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The SC-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-200 also requires annual renewal (free, online), so factor that into long-term cost planning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does an SC-200 pass last forever, or do I need to renew?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Microsoft Associate certifications including SC-200 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sentinel automation or Defender XDR native response — how does SC-200 test the choice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SC-200 scenarios routinely give you an incident that could plausibly be handled by a Sentinel automation rule or by Defender XDR's built-in automated investigation and response, and expect you to pick based on where the signal originates and how broad the response needs to be, not on which tool you personally prefer. Azure Mastery's Answer Coach spells out which property of the scenario should have driven that call."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I need to retake SC-200 — what's the wait?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "SC-200 vs SC-500 — different security roles?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -234,15 +250,7 @@
           },
           {
             "@type": "Question",
-            "name": "Do I need to know KQL before starting SC-200?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Not on day one, but plan to learn it early — threat hunting is 20–25% of the exam and Kusto Query Language shows up across the other two domains too, in custom detection rules and advanced-hunting queries. Start with reading and modifying existing KQL (joins, parse operators, time windows) before writing queries from scratch; the exam tests whether you can pick the right table and interpret a result more than raw syntax recall."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is Azure Mastery free for SC-200 prep?",
+            "name": "Can I try Azure Mastery's SC-200 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of SC-200 questions so you can try every feature. The full bank of 374 SC-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -250,18 +258,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does SC-200 practice work offline?",
+            "name": "Can I hunt through SC-200 practice scenarios with no connection?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an SC-200 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -768,27 +768,9 @@
       <h2 class="display-small section-title">SC-200 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the SC-200 exam cost?</summary>
+          <summary>Do I need to know KQL before starting SC-200?</summary>
           <div class="faq__answer">
-            <p>The SC-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-200 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the SC-200 certification expire?</summary>
-          <div class="faq__answer">
-            <p>Yes. Microsoft Associate certifications including SC-200 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the SC-200 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for SC-200?</summary>
-          <div class="faq__answer">
-            <p>Most candidates plan four to eight weeks with security-operations experience. Spend hands-on time in Microsoft Defender XDR and Microsoft Sentinel: investigate incidents, build KQL queries and analytics rules, hunt threats, automate response, and manage exposure. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
+            <p>Not on day one, but plan to learn it early — threat hunting is 20–25% of the exam and Kusto Query Language shows up across the other two domains too, in custom detection rules and advanced-hunting queries. Start with reading and modifying existing KQL (joins, parse operators, time windows) before writing queries from scratch; the exam tests whether you can pick the right table and interpret a result more than raw syntax recall.</p>
           </div>
         </details>
         <details class="faq">
@@ -798,33 +780,51 @@
           </div>
         </details>
         <details class="faq">
+          <summary>What question formats show up on SC-200?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-200 bank runs a similar mix: mostly single-answer multiple choice, a meaningful share of scenario-based and multi-select questions in roughly equal measure, a smaller set of yes/no, dropdown, hotspot, and drag-to-match items, and a handful of case studies — KQL snippets and alert payloads appear throughout so you read code, not just recall product names.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the SC-200 voucher price, and is renewal extra?</summary>
+          <div class="faq__answer">
+            <p>The SC-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-200 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does an SC-200 pass last forever, or do I need to renew?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Associate certifications including SC-200 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Sentinel automation or Defender XDR native response — how does SC-200 test the choice?</summary>
+          <div class="faq__answer">
+            <p>SC-200 scenarios routinely give you an incident that could plausibly be handled by a Sentinel automation rule or by Defender XDR's built-in automated investigation and response, and expect you to pick based on where the signal originates and how broad the response needs to be, not on which tool you personally prefer. Azure Mastery's Answer Coach spells out which property of the scenario should have driven that call.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I need to retake SC-200 — what's the wait?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
           <summary>SC-200 vs SC-500 — different security roles?</summary>
           <div class="faq__answer">
             <p>Different angles on Microsoft security. <a href="/exams/sc-500/">SC-500</a> implements security controls across cloud and AI workloads; SC-200 runs detection, investigation, hunting, and incident response in Microsoft Defender XDR and Sentinel. Choose SC-500 for cloud security engineering and SC-200 for security operations.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Do I need to know KQL before starting SC-200?</summary>
-          <div class="faq__answer">
-            <p>Not on day one, but plan to learn it early — threat hunting is 20–25% of the exam and Kusto Query Language shows up across the other two domains too, in custom detection rules and advanced-hunting queries. Start with reading and modifying existing KQL (joins, parse operators, time windows) before writing queries from scratch; the exam tests whether you can pick the right table and interpret a result more than raw syntax recall.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is Azure Mastery free for SC-200 prep?</summary>
+          <summary>Can I try Azure Mastery's SC-200 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of SC-200 questions so you can try every feature. The full bank of 374 SC-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does SC-200 practice work offline?</summary>
+          <summary>Can I hunt through SC-200 practice scenarios with no connection?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there an SC-200 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

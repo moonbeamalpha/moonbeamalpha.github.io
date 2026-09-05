@@ -127,7 +127,7 @@
         "name": "Microsoft Certified: ML Operations Engineer Associate",
         "alternateName": "AI-300",
         "credentialCategory": "Certification",
-        "url": "https://learn.microsoft.com/en-us/credentials/certifications/ml-operations-engineer/",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/operationalizing-machine-learning-and-generative-ai-solutions/",
         "educationalLevel": "Intermediate",
         "competencyRequired": [
           "Design and implement an MLOps infrastructure (15–20%)",
@@ -212,6 +212,14 @@
           },
           {
             "@type": "Question",
+            "name": "Are there prerequisites for AI-300?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft sets no mandatory prerequisite exam for AI-300. Its published audience profile expects subject-matter expertise in MLOps and GenAIOps on Azure, a data-science background with Python experience, and an entry-level understanding of DevOps practices such as GitHub Actions and command-line tooling. Candidates without hands-on Azure Machine Learning or Foundry experience typically need longer to prepare, even though nothing blocks booking the exam directly."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "How long should I study for AI-300?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -252,10 +260,10 @@
           },
           {
             "@type": "Question",
-            "name": "Is there an AI-300 practice test mode?",
+            "name": "What format is the AI-300 exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "Microsoft's general guidance for AI-300, in common with most Associate exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's AI-300 bank, single-answer and scenario-based questions carry most of the weight, alongside drag-to-match, dropdown-select, and hot-area items and a run of linked case studies — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -264,7 +272,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ai-300/#study-plan",
         "name": "How to study for AI-300 (Microsoft ML Operations Engineer) in 6 weeks",
-        "description": "A six-week study plan mapped to the AI-300 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A six-week study plan mapped to the AI-300 skills outline (26 July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -333,6 +341,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -446,16 +455,16 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AI-300 exam?</h2>
       <p>
-        AI-300 is the <strong>Microsoft Certified: ML Operations Engineer Associate</strong> exam — the credential hiring managers expect when posting "MLOps Engineer", "GenAIOps Engineer", "AI Platform Operations", or "ML Reliability Engineer" roles. AI-300 covers the operational lifecycle of ML and generative-AI systems: MLOps infrastructure, model lifecycle, GenAIOps observability, and performance tuning at scale.
+        AI-300 carries the credential name <strong>Operationalizing Machine Learning and Generative AI Solutions</strong> — the exam behind postings for "MLOps Engineer", "GenAIOps Engineer", "AI Platform Operations", or "ML Reliability Engineer" roles. It groups AIOps into two halves: the machine-learning side (Azure Machine Learning, model lifecycle) and the generative-AI side (Microsoft Foundry, agents, GenAIOps), which is why the outline reads as two exams welded together rather than one narrow specialism.
       </p>
       <p>
-        AI-300 is <strong>hands-on and lifecycle-focused</strong>. It validates that you can design and implement an <em>MLOps infrastructure</em> (CI/CD for ML, environment management, registries, governance), implement <em>machine learning model lifecycle and operations</em> (training pipelines, deployment, monitoring, retraining), design and implement a <em>GenAIOps infrastructure</em> (prompt versioning, evaluation pipelines, deployment patterns for LLM apps), implement <em>generative AI quality assurance and observability</em> (groundedness checks, drift, hallucination detection, telemetry), and optimise <em>generative AI systems and model performance</em> (caching, batching, model selection, fine-tuning). Expect scenario questions that span CI/CD configs, monitoring strategies, and trade-off reasoning.
+        AI-300 is <strong>hands-on and lifecycle-focused</strong>. It validates that you can design and implement an <em>MLOps infrastructure</em> (workspace and asset management, infrastructure as code), implement <em>machine learning model lifecycle and operations</em> (training orchestration, registration, deployment, monitoring), design and implement a <em>GenAIOps infrastructure</em> (Foundry environments, foundation-model deployment, prompt versioning), implement <em>generative AI quality assurance and observability</em> (evaluation, safety checks, tracing), and optimise <em>generative AI systems and model performance</em> (RAG tuning, fine-tuning). Expect scenario questions that span Bicep/CLI deployment snippets, monitoring dashboards, and trade-off reasoning between fine-tuning and retrieval.
       </p>
       <p>
-        Microsoft updated the AI-300 skills outline in <strong>March 2026</strong>. Every question in Azure Mastery's AI-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ml-operations-engineer" rel="noopener">learn.microsoft.com</a>.
+        Microsoft published the current AI-300 skills outline on <strong>26 July 2026</strong>. Every question in Azure Mastery's AI-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-300" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="AI-300 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
@@ -466,10 +475,10 @@
 
     <!-- AI-300 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 26 July 2026</p>
       <h2 class="display-small section-title">AI-300 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft's March 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ml-operations-engineer" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Five domains, skills measured as of <strong>26 July 2026</strong> on the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-300" rel="noopener">official skills outline</a>. Every domain below lists Microsoft's own skill groups verbatim, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -488,59 +497,115 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Design and implement an MLOps infrastructure<span class="domain__weight">15–20%</span></h3>
+          <h3>Design and implement an MLOps infrastructure<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai300-mlops">70</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore MLOps Infra topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Create and manage resources in a Machine Learning workspace</li>
+                <li>Create and manage assets in a Machine Learning workspace</li>
+                <li>Implement IaC for Machine Learning</li>
+              </ul>
               <p>
-                The platform layer. CI/CD for ML — Azure DevOps and GitHub Actions for model build, test, deploy. Environment management (Conda, Docker), feature stores, model registries, governance and approval gates. Plus reproducibility, lineage tracking, and Responsible-AI governance baseline. Around 6–12 questions per sitting.
+                Candidates set up the workspace-level scaffolding a Machine Learning team relies on before any model gets built: workspaces, datastores, and compute targets with identity and access management configured correctly from the start, then data assets, environments, and components shared across workspaces through registries. The domain leans hard into infrastructure as code — configuring GitHub integration for secure access, deploying workspaces and resources with Bicep and Azure CLI, automating provisioning through GitHub Actions workflows, restricting network access, and managing source control for the whole project. Expect questions that test whether you reach for a registry or a shared datastore, and whether a network restriction blocks the workflow it's meant to secure.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement machine learning model lifecycle and operations<span class="domain__weight">25–30%</span></h3>
+          <h3>Implement machine learning model lifecycle and operations<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai300-lifecycle">102</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore ML Lifecycle topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Orchestrate model training</li>
+                <li>Implement model registration and versioning</li>
+                <li>Deploy machine learning models for production environments</li>
+                <li>Monitor and maintain machine learning models in production</li>
+              </ul>
               <p>
-                Largest domain. Training pipelines, automated training (AutoML), deployment to managed online and batch endpoints, A/B traffic splitting, blue/green and canary deployments. Monitoring — data drift, model drift, performance metrics. Retraining triggers and automated rollback. Plus model packaging, containerisation, and Kubernetes-attached compute scenarios. Around 10–18 questions.
+                This is the largest domain, and it's the working day of an MLOps engineer. Training questions cover experiment tracking with MLflow, automated machine learning, notebook-based exploration, hyperparameter tuning, distributed training for large models, and comparing performance across jobs. Registration and versioning tests packaging a feature retrieval specification with the model artifact, registering an MLflow model, evaluating it against responsible AI principles, and managing the model lifecycle through to archiving. Deployment covers real-time and batch endpoints, endpoint testing and troubleshooting, and progressive rollout with safe rollback. Monitoring closes the loop — detecting data drift, watching production performance metrics, and configuring retraining or alert triggers before a model quietly degrades.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Design and implement a GenAIOps infrastructure<span class="domain__weight">20–25%</span></h3>
+          <h3>Design and implement a GenAIOps infrastructure<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai300-genaiops">84</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore GenAIOps topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Implement Foundry environments and platform configuration</li>
+                <li>Deploy and manage foundation models for production workloads</li>
+                <li>Implement prompt versioning and management with source control</li>
+              </ul>
               <p>
-                The generative-AI ops layer. Prompt versioning and prompt registries, evaluation pipelines (groundedness, relevance, fluency, similarity), deployment patterns for LLM apps (Foundry-deployed apps, Azure Functions, Container Apps), feature-flag-driven prompt rollouts, and observability for token usage and cost. Around 8–15 questions.
+                Where the ML lifecycle domain is about traditional models, this one is about the infrastructure a generative AI or agentic application runs on in Microsoft Foundry. Candidates configure Foundry resources and project environments, wire up identity and access management with managed identities and RBAC, implement network security and private networking, and deploy that infrastructure with Bicep templates and Azure CLI. A second cluster covers deploying foundation models through serverless API endpoints or managed compute, choosing the right model for a use case, versioning deployments, and configuring provisioned throughput units for high-volume traffic. A third covers prompt versioning itself — designing and comparing prompt variants, then controlling them through Git.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement generative AI quality assurance and observability<span class="domain__weight">10–15%</span></h3>
+          <h3>Implement generative AI quality assurance and observability<span class="domain__weight">Published weight 10–15%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai300-quality">52</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore QA &amp; Observe topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure evaluation and validation for generative AI applications and agents</li>
+                <li>Implement observability for generative AI applications and agents</li>
+              </ul>
               <p>
-                Quality at the production edge. Groundedness checks, hallucination detection, content-safety telemetry, drift detection on prompt or RAG inputs, regression suites for prompts. Distributed tracing across LLM calls and agent invocations. Around 4–9 questions.
+                Quality assurance here means building the evaluation harness before an application ships, not reacting after it fails. Candidates create test datasets and data mappings for comprehensive evaluation, implement AI quality metrics such as groundedness, relevance, coherence, and fluency, configure risk and safety evaluations for harmful content, and set up automated evaluation workflows using built-in and custom metrics. Observability picks up once the system is live: examining continuous monitoring in Foundry, tracking latency, throughput, and response-time metrics, watching token consumption and cost, and configuring the logging, tracing, and debugging that make a production incident diagnosable rather than a mystery.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Optimize generative AI systems and model performance<span class="domain__weight">10–15%</span></h3>
+          <h3>Optimize generative AI systems and model performance<span class="domain__weight">Published weight 10–15%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ai300-optimize">54</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Optimize topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Optimize retrieval-augmented generation (RAG) performance and accuracy</li>
+                <li>Implement advanced fine-tuning and model customization</li>
+              </ul>
               <p>
-                Performance and cost. Caching strategies (semantic cache, embedding cache), batching, model selection (small models for routing, large for generation), fine-tuning vs few-shot vs RAG trade-offs, token budget management, capacity planning for token throughput. Around 4–9 questions.
+                The smallest domain by weight, and a dense one. Retrieval-augmented generation questions test tuning similarity thresholds, chunk sizes, and retrieval strategies, choosing and fine-tuning embedding models for a domain, combining semantic and keyword-based hybrid search, and proving an improvement with relevance metrics or A/B testing rather than instinct. Fine-tuning questions cover designing advanced fine-tuning methods, creating and managing synthetic data for that fine-tuning, monitoring a fine-tuned model's performance, and managing it from development through production. Expect the exam to reward knowing when tuning retrieval beats fine-tuning the model, and when neither beats simply picking a better base model.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where AI-300 candidates slip</h2>
+      <div class="traps">
+        <article class="trap">
+          <h3>Registering an MLflow model isn't the same as deploying one</h3>
+          <p>Candidates conflate "the model is registered" with "the model is production-ready." Registration captures the artifact, its lineage, and a responsible-AI evaluation; deployment is a separate step that chooses a real-time or batch endpoint and a rollout strategy. Items that describe a model sitting in the registry with no traffic are testing whether you notice deployment hasn't happened yet.</p>
+        </article>
+        <article class="trap">
+          <h3>Data drift and prompt drift are monitored by different mechanisms</h3>
+          <p>Traditional model monitoring watches feature distributions and prediction drift against a training baseline. A generative or agentic system doesn't have that baseline — its "drift" shows up as evaluation-metric decay on groundedness, relevance, or safety scores over time. Reaching for classic drift monitoring on a GenAIOps workload, or vice versa, is a common wrong-answer pattern.</p>
+        </article>
+        <article class="trap">
+          <h3>A better embedding model doesn't fix a query the retriever never saw</h3>
+          <p>When retrieval misses part of a compound question, the instinct is to tune the embedding model or the chunk size. Neither helps if the original query never expressed every condition being asked about — that's a query-construction problem, not a scoring problem, and the exam expects you to recognise which one you're looking at before picking a fix.</p>
+        </article>
+        <article class="trap">
+          <h3>Provisioned throughput solves capacity, not cost</h3>
+          <p>Provisioned throughput units guarantee latency and capacity for high-volume foundation-model workloads, but they are billed regardless of usage. Items describing a spiky, low-volume workload with a cost constraint are testing whether you'll wrongly reach for PTUs when a serverless, pay-per-token endpoint fits the actual traffic pattern.</p>
+        </article>
+        <article class="trap">
+          <h3>Network restrictions can block the pipeline they're meant to protect</h3>
+          <p>Locking a workspace or Foundry project behind a private endpoint is correct security practice, but a CI/CD pipeline, a registry share across workspaces, or a monitoring integration can silently fail once that boundary goes up unless the corresponding rule or managed identity is granted through. The exam rewards spotting the missing rule, not just praising the lockdown.</p>
         </article>
       </div>
     </section>
@@ -550,22 +615,22 @@
       <p class="label-eyebrow section-eyebrow">Designed for AI-300</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AI-300</h2>
       <p>
-        Azure Mastery ships with <strong>362 AI-300 practice questions</strong>, every one written specifically against the current (March 2026) skills outline. Each question carries a domain tag mapped to the official five domains (MLOps infra, ML lifecycle, GenAIOps, GenAI QA, optimization), so you always know which area you're being tested on and where your weak spots are clustered. CI/CD pipeline YAML, MLflow tracking configs, prompt-evaluation scripts, and observability setups appear throughout — practising blueprint-relevant formats and decisions.
+        Azure Mastery ships with <strong>362 AI-300 practice questions</strong>, every one written against the skills outline Microsoft published on 26 July 2026. Each question carries a domain tag mapped to the official five domains (MLOps infra, ML lifecycle, GenAIOps, GenAI QA, optimization), so you always know which area you're being tested on and where your weak spots are clustered. In Azure Mastery's AI-300 bank, singleSelect and scenario-based items carry most of the weight, with drag-to-match, dropdown-select, and hot-area items covering deployment ordering, IaC snippets, and monitoring dashboards — and a run of case studies threading a single scenario across several linked questions.
       </p>
       <p>
-        The on-device <strong>Exam IQ</strong> engine predicts your AI-300 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+        The on-device <strong>Exam IQ</strong> engine predicts your AI-300 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. Because the largest domain, model lifecycle and operations, carries the most weight, the adaptive plan pulls extra sessions from training orchestration, deployment, and monitoring topics before it moves on to the smaller optimisation domain.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a scenario question wrong? The engine surfaces another question in the same domain in your next session. Master a topic across three sessions and it backs off, prioritising the next-highest-leverage gap. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a scenario question wrong on foundation-model deployment or RAG tuning? The engine surfaces another question in the same domain in your next session. Master a topic across three sessions and it backs off, prioritising the next-highest-leverage gap. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
-        <strong>Knowledge decay tracking</strong> matters more for AI-300 than for foundational exams — five domains is a lot to retain, and the topic you mastered three weeks into your study window is the topic you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
+        <strong>Knowledge decay tracking</strong> matters more for AI-300 than for foundational exams — five domains spanning both traditional MLOps and GenAIOps is a lot to retain, and the workspace-configuration detail you mastered three weeks into your study window is the detail you'll forget by exam day if you stop revising it. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the April 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        <strong>Blueprint-aligned exam rehearsal</strong> runs the app's own timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the July 2026 outline, with the app's own 100-minute session clock running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson — useful on AI-300 items that hinge on a single distinction, such as registration versus deployment, or PTU capacity versus serverless cost, where the wrong option is plausible right up until the constraint in the stem rules it out. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -745,6 +810,12 @@
           </div>
         </details>
         <details class="faq">
+          <summary>Are there prerequisites for AI-300?</summary>
+          <div class="faq__answer">
+            <p>Microsoft sets no mandatory prerequisite exam for AI-300. Its published audience profile expects subject-matter expertise in MLOps and GenAIOps on Azure, a data-science background with Python experience, and an entry-level understanding of DevOps practices such as GitHub Actions and command-line tooling. Candidates without hands-on Azure Machine Learning or Foundry experience typically need longer to prepare, even though nothing blocks booking the exam directly.</p>
+          </div>
+        </details>
+        <details class="faq">
           <summary>How long should I study for AI-300?</summary>
           <div class="faq__answer">
             <p>Allow four to eight weeks of focused study if you already work with Azure Machine Learning or generative AI systems. Spend longer if MLOps, GenAIOps, deployment infrastructure, observability, quality evaluation, or model lifecycle automation are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
@@ -775,9 +846,9 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Is there an AI-300 practice test mode?</summary>
+          <summary>What format is the AI-300 exam?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>Microsoft's general guidance for AI-300, in common with most Associate exams, is 40–60 questions with formats that vary by sitting. In Azure Mastery's AI-300 bank, single-answer and scenario-based questions carry most of the weight, alongside drag-to-match, dropdown-select, and hot-area items and a run of linked case studies — original practice content, not a copy of Microsoft's live item mix. Timed practice sessions use the app's own session clock and supported interactive item types; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

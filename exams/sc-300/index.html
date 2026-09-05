@@ -187,42 +187,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the SC-300 exam cost?",
+            "name": "PIM eligible vs active assignment — how does SC-300 test the difference?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The SC-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-300 also requires annual renewal (free, online), so factor that into long-term cost planning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the SC-300 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including SC-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the SC-300 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for SC-300?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates plan four to eight weeks with Microsoft Entra administration experience. Practise identity lifecycle, authentication, Conditional Access, workload identities, application access, entitlement management, access reviews, and privileged access; use the portal and Microsoft Graph or PowerShell where the task calls for automation. Azure Mastery's readiness gauge tells you when you're exam-ready."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "SC-300 vs SC-900 — which should I take first?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "SC-900 first if security and identity concepts are new to you. SC-900 (Microsoft Security, Compliance, and Identity Fundamentals) builds the cross-cutting Microsoft security vocabulary including identity, but doesn't expect hands-on Conditional Access, PIM, or workload-identity work. SC-300 is the role-based Associate exam: it expects you to operate Microsoft Entra ID at scale day-to-day. Most candidates pass SC-900 in a few weeks then spend two to three months on SC-300."
+              "text": "Scenarios routinely describe a user who needs a privileged role only occasionally, then ask whether an eligible or an active Privileged Identity Management assignment fits — eligible when the role should require just-in-time activation and approval, active when the role must already be usable without an extra step. Confusing the two is one of SC-300's most repeated slips, and Azure Mastery's Answer Coach names exactly which requirement in the scenario should have decided it."
             }
           },
           {
@@ -235,7 +203,55 @@
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for SC-300 prep?",
+            "name": "What format does the SC-300 exam use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-300 bank runs a similar spread: mostly single-answer multiple choice, a substantial share of yes/no and multi-select questions, a meaningful set of scenario-based items, and a smaller mix of dropdown-select, drag-to-match, hotspot, and ordering items, plus a modest set of case studies — Conditional Access policy snippets and access-package configurations appear throughout."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the SC-300 exam fee, and is renewal on top?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The SC-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-300 also requires annual renewal (free, online), so factor that into long-term cost planning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does an SC-300 pass need renewing each year?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Microsoft Associate certifications including SC-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pass-through Authentication or Password Hash Sync — which does SC-300 want?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The deciding factor is almost always resilience: Password Hash Sync keeps authenticating even if the on-premises environment goes down, because Entra ID holds a hash of the password; Pass-through Authentication validates against on-premises Active Directory in real time, so it fails when that link is down, but it satisfies requirements that credentials never leave the on-premises boundary. A scenario naming an outage-tolerance requirement wants PHS; one naming a strict on-premises-only password policy wants PTA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I need to resit SC-300 — how long before I can rebook?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "SC-300 vs SC-900 — which should I take first?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SC-900 first if security and identity concepts are new to you. SC-900 (Microsoft Security, Compliance, and Identity Fundamentals) builds the cross-cutting Microsoft security vocabulary including identity, but doesn't expect hands-on Conditional Access, PIM, or workload-identity work. SC-300 is the role-based Associate exam: it expects you to operate Microsoft Entra ID at scale day-to-day. Most candidates pass SC-900 in a few weeks then spend two to three months on SC-300."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I try Azure Mastery's SC-300 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of SC-300 questions so you can try every feature. The full bank of 428 SC-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -243,18 +259,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does SC-300 practice work offline?",
+            "name": "Can I revise SC-300 with no data connection?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an SC-300 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -500,7 +508,7 @@
                 <li>Implement and manage hybrid identity</li>
               </ul>
               <p>
-                The directory layer everything else sits on. Tenant objectives cover built-in and custom roles, administrative units, effective-permissions evaluation, domains, and company branding. Identity objectives run day-to-day user and group management, custom security attributes, bulk operations via the admin center or PowerShell, device join/registration, and licensing. External-identity objectives cover collaboration settings, bulk invites, cross-tenant access and synchronisation, and external identity providers. Hybrid-identity objectives require choosing correctly between Entra Connect Sync, Cloud Sync, password hash sync, pass-through authentication, and seamless SSO — plus migrating off AD FS and monitoring with Entra Connect Health.
+                The directory layer everything else sits on. Tenant objectives cover built-in and custom roles, administrative units, effective-permissions evaluation, domains, and company branding. Identity objectives run day-to-day user and group management, custom security attributes, bulk operations via the admin centre or PowerShell, device join/registration, and licensing. External-identity objectives cover collaboration settings, bulk invites, cross-tenant access and synchronisation, and external identity providers. Hybrid-identity objectives require choosing correctly between Entra Connect Sync, Cloud Sync, password hash sync, pass-through authentication, and seamless SSO — plus migrating off AD FS and monitoring with Entra Connect Health.
               </p>
             </div>
           </details>
@@ -610,10 +618,10 @@
         <strong>Knowledge decay tracking</strong> matters more for SC-300 than for foundational exams — four identity-admin domains span a lot of Microsoft Entra surface area, and the policy you mastered three weeks ago is the policy you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> runs a timed, domain-weighted practice session built from original questions, weighted by the four published domain bands, with a 100-minute timer and no jumping back to flag-and-review. It uses original practice content rather than reproducing Microsoft's exam questions.
+        For a closer rehearsal of exam day itself, open a <strong>timed simulation</strong>: original SC-300 questions selected and weighted to match the four published domain bands, a 100-minute countdown on screen throughout, and once you've submitted an answer it stays submitted — no flicking back to flag-and-review the way an untimed drill would let you.
       </p>
       <p>
-        <strong>Answer Coach</strong> is where SC-300's near-identical authentication and access-model decisions get untangled. Get a question wrong because you picked Pass-through Authentication when a scenario needed resilience against an on-premises outage, or confused an eligible PIM assignment with an active one, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        SC-300's hardest moments aren't obscure features — they're two configurations that both look plausible until you check which requirement the scenario actually named. <strong>Answer Coach</strong> is built around exactly that: pick Pass-through Authentication when the scenario needed resilience against an on-premises outage, or mix up an eligible PIM assignment with an active one, and it tells you the specific line you crossed and the rule that would have caught it — not just which option Microsoft wanted. You can read a note the moment you submit an answer, or leave the whole set until a session ends and work through them together; either way, the note stays attached to its question for whenever you return. Guidance always starts from an authored rationale, with an on-device rewrite available on capable hardware once grounding checks clear it.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -782,33 +790,9 @@
       <h2 class="display-small section-title">SC-300 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the SC-300 exam cost?</summary>
+          <summary>PIM eligible vs active assignment — how does SC-300 test the difference?</summary>
           <div class="faq__answer">
-            <p>The SC-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the SC-300 certification expire?</summary>
-          <div class="faq__answer">
-            <p>Yes. Microsoft Associate certifications including SC-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the SC-300 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for SC-300?</summary>
-          <div class="faq__answer">
-            <p>Most candidates plan four to eight weeks with Microsoft Entra administration experience. Practise identity lifecycle, authentication, Conditional Access, workload identities, application access, entitlement management, access reviews, and privileged access; use the portal and Microsoft Graph or PowerShell where the task calls for automation. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>SC-300 vs SC-900 — which should I take first?</summary>
-          <div class="faq__answer">
-            <p>SC-900 first if security and identity concepts are new to you. <a href="/exams/sc-900/">SC-900 (Microsoft Security, Compliance, and Identity Fundamentals)</a> builds the cross-cutting Microsoft security vocabulary including identity, but doesn't expect hands-on Conditional Access, PIM, or workload-identity work. SC-300 is the role-based Associate exam: it expects you to operate Microsoft Entra ID at scale day-to-day. Most candidates pass SC-900 in a few weeks then spend two to three months on SC-300.</p>
+            <p>Scenarios routinely describe a user who needs a privileged role only occasionally, then ask whether an eligible or an active Privileged Identity Management assignment fits — eligible when the role should require just-in-time activation and approval, active when the role must already be usable without an extra step. Confusing the two is one of SC-300's most repeated slips, and Azure Mastery's Answer Coach names exactly which requirement in the scenario should have decided it.</p>
           </div>
         </details>
         <details class="faq">
@@ -818,21 +802,51 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for SC-300 prep?</summary>
+          <summary>What format does the SC-300 exam use?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-300 bank runs a similar spread: mostly single-answer multiple choice, a substantial share of yes/no and multi-select questions, a meaningful set of scenario-based items, and a smaller mix of dropdown-select, drag-to-match, hotspot, and ordering items, plus a modest set of case studies — Conditional Access policy snippets and access-package configurations appear throughout.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the SC-300 exam fee, and is renewal on top?</summary>
+          <div class="faq__answer">
+            <p>The SC-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does an SC-300 pass need renewing each year?</summary>
+          <div class="faq__answer">
+            <p>Yes. Microsoft Associate certifications including SC-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Pass-through Authentication or Password Hash Sync — which does SC-300 want?</summary>
+          <div class="faq__answer">
+            <p>The deciding factor is almost always resilience: Password Hash Sync keeps authenticating even if the on-premises environment goes down, because Entra ID holds a hash of the password; Pass-through Authentication validates against on-premises Active Directory in real time, so it fails when that link is down, but it satisfies requirements that credentials never leave the on-premises boundary. A scenario naming an outage-tolerance requirement wants PHS; one naming a strict on-premises-only password policy wants PTA.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I need to resit SC-300 — how long before I can rebook?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>SC-300 vs SC-900 — which should I take first?</summary>
+          <div class="faq__answer">
+            <p>SC-900 first if security and identity concepts are new to you. <a href="/exams/sc-900/">SC-900 (Microsoft Security, Compliance, and Identity Fundamentals)</a> builds the cross-cutting Microsoft security vocabulary including identity, but doesn't expect hands-on Conditional Access, PIM, or workload-identity work. SC-300 is the role-based Associate exam: it expects you to operate Microsoft Entra ID at scale day-to-day. Most candidates pass SC-900 in a few weeks then spend two to three months on SC-300.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Can I try Azure Mastery's SC-300 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of SC-300 questions so you can try every feature. The full bank of 428 SC-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does SC-300 practice work offline?</summary>
+          <summary>Can I revise SC-300 with no data connection?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there an SC-300 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

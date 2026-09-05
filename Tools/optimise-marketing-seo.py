@@ -499,7 +499,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </ul>
           </div>
           <h3>Multiple choice</h3>
-          <p>An original {code} practice-bank example with one correct answer. The app explains every option after you answer.</p>
+          <p>An original {code} practice question with one correct answer. The app explains every option after you answer.</p>
           <span class="qt__hint">Exam-specific sample</span>
         </article>
 
@@ -511,7 +511,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </ul>
           </div>
           <h3>Multi-select</h3>
-          <p>An original {code} multi-select practice item. Every required selection must be correct to earn the mark.</p>
+          <p>An original {code} multi-select question. Select all the correct options to earn the mark.</p>
           <span class="qt__hint">All-or-nothing</span>
         </article>
 
@@ -523,7 +523,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </ul>
           </div>
           <h3>{drag_title}</h3>
-          <p>An original {code} ordering prompt, rendered for touch on iPhone and iPad.</p>
+          <p>An original {code} ordering question you can answer by touch on iPhone and iPad.</p>
           <span class="qt__hint">Interactive item</span>
         </article>
 
@@ -540,7 +540,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </div>
           </div>
           <h3>{interactive_title}</h3>
-          <p>An original {code} visual-context prompt, rendered for touch on iPhone and iPad.</p>
+          <p>An original {code} question with a visual prompt, designed for touch on iPhone and iPad.</p>
           <span class="qt__hint">{interactive_hint}</span>
         </article>
 
@@ -556,7 +556,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </div>
           </div>
           <h3>Case studies</h3>
-          <p>An original {code} case-study scenario with linked questions that share the same requirements and environment.</p>
+          <p>An original {code} case study with several questions about the same requirements and environment.</p>
           <span class="qt__hint">Multi-question</span>
         </article>
 
@@ -569,7 +569,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
             </div>
           </div>
           <h3>Answer Coach</h3>
-          <p>Answer Coach shows the correct reasoning and option-by-option rationale where available, then explains the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test; supported devices may optionally rewrite a note on-device only after grounding checks.</p>
+          <p>Answer Coach explains why the answer is correct and, where available, why each option is right or wrong. It helps you understand a mistake and remember the distinction. Read explanations after each question or at the end of a practice test. On supported devices, optional AI can reword a note on your device after checking it against the written guidance.</p>
           <span class="qt__hint qt__hint--purple">App exclusive</span>
         </article>
 
@@ -788,7 +788,7 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
     )
     if not (has_inline_coaching_copy or has_coaching_benefit_cards):
         answer_coach_copy = '''      <p>
-        <strong>Answer Coach</strong> turns each missed answer into a private, grounded lesson: the misconception, key distinction, and rule to remember. It always uses authored certification guidance; on supported devices, an optional on-device model may rewrite the note only when it passes grounding checks.
+        <strong>Answer Coach</strong> explains what you missed, how the options differ, and what to remember. Notes use the written certification guidance. On supported devices, optional AI can reword a note on your device after checking it against that guidance.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.

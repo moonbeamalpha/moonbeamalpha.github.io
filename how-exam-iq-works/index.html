@@ -131,7 +131,7 @@
             "name": "What is Exam IQ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Exam IQ is Azure Mastery's on-device engine that predicts your likely score on a Microsoft certification exam as you practise, updates after every question, and recommends what to study next based on where your predicted score is weakest."
+              "text": "Exam IQ estimates your likely Microsoft certification exam score from your practice answers. It runs on your device, updates after every question, and suggests topics that need more work."
             }
           },
           {
@@ -139,7 +139,7 @@
             "name": "Does Exam IQ need an internet connection?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Exam IQ runs as a CoreML model on your device, with a fallback formula if the model is unavailable. There is no server involved and no study data ever leaves your iPhone."
+              "text": "No. The CoreML model and its fallback formula both run on your device. Your answers are not sent to a server for score prediction."
             }
           },
           {
@@ -147,7 +147,7 @@
             "name": "What does the confidence range mean?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Exam IQ reports a low and a high estimate either side of your predicted score, not a single number presented as certain. A tighter range means the estimate is more confident, typically after more questions answered; a wider range means there is not yet enough evidence to narrow it further."
+              "text": "It gives a low and a high estimate around your predicted score. A narrower range means the estimate is more confident, usually after you've answered more questions. A wider range means the app needs more practice data."
             }
           },
           {
@@ -155,7 +155,7 @@
             "name": "Can Exam IQ guarantee I'll pass the exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Exam IQ predicts your readiness from how you have practised in the app. It is a study signal, not a guarantee — how you perform on exam day also depends on factors the app cannot see."
+              "text": "No. Exam IQ estimates readiness from your practice answers. How you perform on exam day also depends on factors the app cannot see."
             }
           },
           {
@@ -163,7 +163,7 @@
             "name": "Does Exam IQ know what's on the real exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Exam IQ has no access to Microsoft's live exam content, format, or scoring — none of that is available to Azure Mastery or any third party. Its prediction is based entirely on your answers to Azure Mastery's own practice questions."
+              "text": "No. Exam IQ has no access to Microsoft's live exam questions or scoring. Its prediction comes entirely from your answers to Azure Mastery's practice questions."
             }
           },
           {
@@ -234,60 +234,44 @@
       <h1 class="display-large guide-hero__title">
         How <span class="headline-accent">Exam IQ</span> predicts your score
       </h1>
-      <p class="guide-hero__dek">
-        Exam IQ is Azure Mastery's on-device engine that predicts your likely certification exam score as you practise. Here is what it actually does, and does not do.
-      </p>
+      <p class="guide-hero__dek">Exam IQ estimates your certification exam score from your practice answers. This page explains what it uses, what the confidence range means, and the limits of the estimate.</p>
     </section>
 
     <!-- What Exam IQ is -->
     <section id="what-exam-iq-is" class="container">
       <p class="label-eyebrow section-eyebrow">What it is</p>
       <h2 class="display-small section-title">What Exam IQ is</h2>
-      <p>
-        Exam IQ is Azure Mastery's on-device engine that predicts your likely score on a Microsoft certification exam as you practise, and recommends what to study next. It updates after every question you answer, rather than only at the end of a practice test.
-      </p>
-      <p>
-        The same on-device models also track a per-domain estimate of your ability, so you can see which exam domain is dragging your predicted score down, and knowledge-decay detection, which flags topics where retention has faded since you last reviewed them, based on the Ebbinghaus forgetting curve.
-      </p>
+      <p>Exam IQ estimates your likely Microsoft certification exam score on your device and recommends what to study next. It updates after every question you answer.</p>
+      <p>The models also estimate your ability in each exam domain, so you can see which areas need work. Knowledge-decay tracking uses the Ebbinghaus forgetting curve to flag topics you're likely to have forgotten since your last review.</p>
     </section>
 
     <!-- The model -->
     <section id="what-the-model-reads" class="container">
       <p class="label-eyebrow section-eyebrow">What it reads</p>
       <h2 class="display-small section-title">What the model reads</h2>
-      <p>
-        Score prediction is a CoreML model bundled with the app, with a weighted-formula fallback when the model is unavailable. Either way, it reads a set of practice signals built from your own answer history — not a single "percent correct" — including your average test score and its consistency, your best and worst domain accuracy, how much of the question bank you have covered, the share of questions you have mastered, your practice-test streak, total study hours, how quickly your score is improving, how many topics are still weak, how long you have been active, how fast you tend to answer, and how much you engage with explanations.
-      </p>
+      <p>The app includes a CoreML model for score prediction and uses a weighted formula if the model is unavailable. Both use your answer history. They consider test scores and consistency; your strongest and weakest domains; question coverage and mastery; practice-test streaks and study hours; improvement over time; remaining weak topics; how long you've been active; answer speed; and how often you read explanations.</p>
     </section>
 
     <!-- What the confidence range means -->
     <section id="confidence-range" class="container">
       <p class="label-eyebrow section-eyebrow">Confidence range</p>
       <h2 class="display-small section-title">What the confidence range means</h2>
-      <p>
-        Exam IQ reports a predicted score together with a confidence range — a low and a high estimate either side of the predicted number — rather than a single figure presented as certain. A tighter range reflects a more confident estimate, typically after more questions answered; a wider range means there is not yet enough evidence to narrow it further.
-      </p>
-      <p>
-        This is shown alongside, not instead of, an estimate of how likely you are to clear the pass mark, so you can see both where your score currently sits and how confident that estimate is.
-      </p>
+      <p>Your predicted score comes with a confidence range: a low and a high estimate. A narrower range means the estimate is more confident, usually because you've answered more questions. A wider range means the app needs more practice data to make a more precise estimate.</p>
+      <p>The app also estimates how likely you are to reach the pass mark, so you can see both your predicted score and its uncertainty.</p>
     </section>
 
     <!-- Why it runs on-device -->
     <section id="on-device" class="container">
       <p class="label-eyebrow section-eyebrow">Why on-device</p>
       <h2 class="display-small section-title">Why it runs on-device</h2>
-      <p>
-        Exam IQ runs as a CoreML model bundled with the app, with a weighted-formula fallback if the model is unavailable — either way, the prediction happens on your device. Azure Mastery has no study-data server: no server, no cloud, and no study data ever leaves your iPhone.
-      </p>
+      <p>The CoreML model and its fallback formula both run on your device. Azure Mastery does not send your answers to a server for score prediction. You can choose to sync your progress separately through your private iCloud account.</p>
     </section>
 
     <!-- What it cannot do -->
     <section id="cannot-do" class="container">
       <p class="label-eyebrow section-eyebrow">Limits</p>
       <h2 class="display-small section-title">What it cannot do</h2>
-      <p>
-        Exam IQ predicts your readiness from how you have practised in the app; it is not a guarantee that you will pass, and it cannot know the content, format, or scoring of the live exam, because none of that is available to Azure Mastery or any third party. Treat the predicted score as a study signal, not a promise.
-      </p>
+      <p>Exam IQ uses your practice in the app to estimate readiness. It cannot guarantee a pass or access Microsoft's live exam questions and scoring. Use the estimate to guide your study alongside your own judgement and hands-on experience.</p>
     </section>
 
     <!-- FAQs -->
@@ -302,23 +286,23 @@
       <div class="faqs">
         <details class="faq">
           <summary>What is Exam IQ?</summary>
-          <div class="faq__answer"><p>Exam IQ is Azure Mastery's on-device engine that predicts your likely score on a Microsoft certification exam as you practise, updates after every question, and recommends what to study next based on where your predicted score is weakest.</p></div>
+          <div class="faq__answer"><p>Exam IQ estimates your likely Microsoft certification exam score from your practice answers. It runs on your device, updates after every question, and suggests topics that need more work.</p></div>
         </details>
         <details class="faq">
           <summary>Does Exam IQ need an internet connection?</summary>
-          <div class="faq__answer"><p>No. Exam IQ runs as a CoreML model on your device, with a fallback formula if the model is unavailable. There is no server involved and no study data ever leaves your iPhone.</p></div>
+          <div class="faq__answer"><p>No. The CoreML model and its fallback formula both run on your device. Your answers are not sent to a server for score prediction.</p></div>
         </details>
         <details class="faq">
           <summary>What does the confidence range mean?</summary>
-          <div class="faq__answer"><p>Exam IQ reports a low and a high estimate either side of your predicted score, not a single number presented as certain. A tighter range means the estimate is more confident, typically after more questions answered; a wider range means there is not yet enough evidence to narrow it further.</p></div>
+          <div class="faq__answer"><p>It gives a low and a high estimate around your predicted score. A narrower range means the estimate is more confident, usually after you've answered more questions. A wider range means the app needs more practice data.</p></div>
         </details>
         <details class="faq">
           <summary>Can Exam IQ guarantee I'll pass the exam?</summary>
-          <div class="faq__answer"><p>No. Exam IQ predicts your readiness from how you have practised in the app. It is a study signal, not a guarantee — how you perform on exam day also depends on factors the app cannot see.</p></div>
+          <div class="faq__answer"><p>No. Exam IQ estimates readiness from your practice answers. How you perform on exam day also depends on factors the app cannot see.</p></div>
         </details>
         <details class="faq">
           <summary>Does Exam IQ know what's on the real exam?</summary>
-          <div class="faq__answer"><p>No. Exam IQ has no access to Microsoft's live exam content, format, or scoring — none of that is available to Azure Mastery or any third party. Its prediction is based entirely on your answers to Azure Mastery's own practice questions.</p></div>
+          <div class="faq__answer"><p>No. Exam IQ has no access to Microsoft's live exam questions or scoring. Its prediction comes entirely from your answers to Azure Mastery's practice questions.</p></div>
         </details>
         <details class="faq">
           <summary>Does Exam IQ use Item Response Theory?</summary>

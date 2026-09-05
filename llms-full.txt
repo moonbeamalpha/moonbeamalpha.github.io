@@ -178,11 +178,11 @@ The app covers the following Microsoft certification exams. All are taught with 
 
 - **Exam IQ**: On-device CoreML model that predicts your exam-day score with a confidence range from your practice record (accuracy by domain, coverage, mastery, consistency, recency).
 - **Adaptive study plans**: The app picks your next session — weak-spot drills, knowledge-decay refreshes, mock exams — based on your current ability estimate per domain.
-- **Aura first-week guidance**: Aura adapts the learner's next step throughout the first week and closes every study block with a concise, evidence-led recap.
+- **Aura first-week guidance**: Aura suggests a next step based on the learner's progress throughout the first week. After each session, a short recap shows what improved and what needs more practice.
 - **Exam simulator**: Full-length, timed practice tests using blueprint-weighted question sets; Microsoft's live interface and exact item mix may differ.
 - **Knowledge decay tracking**: Spaced-repetition signals flag topics where your retention has dropped before exam day, with targeted refresher sessions.
 - **Question types**: Nine interactive formats for exam-style rehearsal, including multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies.
-- **Answer Coach**: The explanation card shows the correct reasoning, option-by-option rationale where available, and the misconception, key distinction, and rule to remember. Learners can show explanations after each question or at the end of a practice test, then jump to missed answers with session notes kept ready. Authored guidance is always available; supported devices may optionally rewrite a note on-device only after grounding checks.
+- **Answer Coach**: See why the answer is correct and, where available, why each option is right or wrong. Review explanations after each question or at the end of a practice test, then return to missed answers and saved session notes. Written guidance is always available. On supported devices, optional AI can reword a note on the device after checking it against that guidance.
 - **Offline-first**: Works fully without a network. No telemetry, no analytics on user behavior, no account required.
 - **Apple ecosystem**: Native SwiftUI on iPhone and iPad; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
 
@@ -232,7 +232,7 @@ A: Like most Microsoft Certification exams, AB-100 has 40–60 questions in a mi
 Q: How long should I study for AB-100?
 A: Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions, not just describe the pieces.
 Q: AB-100 vs AB-620 — which agent cert should I take?
-A: Different altitudes. AB-620 certifies the maker who builds an agent in Copilot Studio. AB-100 certifies the architect who decides which platform an agent belongs on, how it's governed, and how the ALM and ROI case gets made across Copilot Studio, Foundry, and Dynamics 365 at once. Build the agent first; architect the estate second.
+A: AB-620 is for makers who build agents in Copilot Studio. AB-100 is for architects who choose the platform, governance, lifecycle management, and business case across Copilot Studio, Foundry, and Dynamics 365. Start with building agents, then move to AB-100 when your work includes those wider architecture decisions.
 Q: AB-100 vs AI-103 vs AB-620 — how do the roles differ?
 A: AI-103 is the code-first developer path (Python, Foundry). AB-620 is the Copilot Studio builder path (low-code agents). AB-100 sits above both as the architecture credential spanning every Microsoft AI surface. Get comfortable with an implementation credential before attempting the architecture-level exam.
 Q: Do I need prerequisites before attempting AB-100?

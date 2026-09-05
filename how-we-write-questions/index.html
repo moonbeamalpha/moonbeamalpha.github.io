@@ -154,7 +154,7 @@
             "name": "Do the explanations cover the wrong answers too?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Where a question carries per-option rationales, yes — each option, not just the correct one, has its own written explanation. That field also powers the app's Answer Coach feature, so a wrong answer gets its own explanation rather than a generic \"try again\"."
+              "text": "Yes, where per-option rationales are available, each option has its own explanation. Answer Coach uses those explanations to give feedback on the answer you chose."
             }
           },
           {
@@ -162,7 +162,7 @@
             "name": "What happens if a question turns out to be wrong or out of date?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It gets fixed. The checks that catch these defect classes are forward-only: each bank has a frozen baseline count per defect type, and a change can only lower it, so a fixed defect cannot quietly reappear. Broken \"learn more\" links are found the same way, by a monthly automated sweep, and repaired."
+              "text": "We fix it. Automated checks track a fixed maximum number of known defects of each type in a bank, and edits cannot increase those counts. A separate monthly check finds broken \"learn more\" links so they can be repaired."
             }
           }
         ]
@@ -226,18 +226,14 @@
       <h1 class="display-large guide-hero__title">
         How we write and <span class="headline-accent">verify practice questions</span>
       </h1>
-      <p class="guide-hero__dek">
-        Every Azure Mastery question is written against a published exam outline, checked by a fixed set of automated gates, and watched afterwards for drift. This is how that pipeline works.
-      </p>
+      <p class="guide-hero__dek">We write questions against the published exam outline, run automated checks when they change, and check for updates afterwards. Here's what each review covers.</p>
     </section>
 
-    <!-- Grounded in the published outline -->
+    <!-- Based on the published exam outline -->
     <section id="published-outline" class="container">
       <p class="label-eyebrow section-eyebrow">The outline</p>
-      <h2 class="display-small section-title">Grounded in the published outline</h2>
-      <p>
-        Every question bank is written against the "Skills measured" outline Microsoft publishes for that exam, not against a generic syllabus. Each bank is bound to the specific outline version it was written from — recorded as a hash of that outline page — together with a recorded mapping review confirming the bank's coverage actually maps onto it.
-      </p>
+      <h2 class="display-small section-title">Based on the published exam outline</h2>
+      <p>Each question bank follows the "Skills measured" outline Microsoft publishes for that exam. We record the outline version using a hash, a digital fingerprint of the page, and keep a record of the review that checks how the questions map to its topics.</p>
       <p>
         Microsoft revises outlines regularly, and sometimes publishes an upcoming version ahead of its effective date. A weekly automated check compares the live outline against what shipped and flags drift. If Microsoft's new outline is not yet in effect, the check reports it as upcoming rather than treating today's content as already stale.
       </p>
@@ -247,48 +243,32 @@
     <section id="written-to-explain" class="container">
       <p class="label-eyebrow section-eyebrow">Explain, don't trick</p>
       <h2 class="display-small section-title">Written to explain, not to trick</h2>
-      <p>
-        Every question carries a written explanation, not just a marked correct answer. For question formats that call for contrasting the options against each other, that explanation has to clear a minimum length before it can ship — a one-line explanation isn't enough material to cover why the wrong options are wrong as well as why the right one is right.
-      </p>
-      <p>
-        The app uses several interactive formats beyond plain multiple choice — including drag-and-drop ordering, hotspot, and case studies — but every format exists to test understanding of a skill the outline lists, not to trip a candidate up on ambiguous wording.
-      </p>
+      <p>Every question includes a written explanation. When a format calls for comparing options, the explanation must meet a minimum length before publication. It needs enough detail to explain why the wrong options fail as well as why the correct answer works.</p>
+      <p>Multiple choice, drag-and-drop ordering, hotspot, and case studies all test skills in the published outline. The questions should test your understanding without relying on ambiguous wording.</p>
     </section>
 
     <!-- Every option gets a rationale -->
     <section id="every-option-rationale" class="container">
       <p class="label-eyebrow section-eyebrow">Every option</p>
       <h2 class="display-small section-title">Every option gets a rationale</h2>
-      <p>
-        Where a question carries per-option rationales, every option — not just the correct one — has its own written explanation. That field powers the app's Answer Coach feature: pick a wrong answer and its fallback explanation is built directly from that option's own rationale, so an incorrect choice gets a considered explanation rather than a generic prompt.
-      </p>
-      <p>
-        The same field is checked for a set of known content-quality defects before it ships: redundant openers that just restate an option as "correct", boilerplate phrases that leak internal review language into candidate-facing text, and rationales that accidentally give away the answer inside a wrong option's own explanation. None of these checks are optional.
-      </p>
+      <p>Where per-option rationales are available, each option has its own explanation. Answer Coach uses those written rationales to explain a wrong choice, so the feedback addresses the answer you selected.</p>
+      <p>Before publication, automated checks look for explanations that merely label an answer "correct", internal review language left in the text, and wrong-option rationales that accidentally reveal the answer. All of these checks must pass.</p>
     </section>
 
     <!-- Checked on every change -->
     <section id="checked-on-every-change" class="container">
       <p class="label-eyebrow section-eyebrow">Checked always</p>
       <h2 class="display-small section-title">Checked on every change</h2>
-      <p>
-        Every push and pull request against the question banks runs a fixed pipeline of checks before anything can ship: a schema and integrity validator, the outline-binding and mapping-review check described above, and a set of scanners for specific defect classes — including questions that leak the answer through the wording of the stem itself, and options that just restate the question back at the candidate. None of these checks are advisory; a failing check blocks the change.
-      </p>
-      <p>
-        Several of the scanners are <strong>forward-only</strong>: every bank has a frozen baseline defect count, and a change can only lower that count, never raise it. That is deliberate — it stops content quality drifting backwards one unnoticed question at a time.
-      </p>
+      <p>Every change to a question bank runs through automated checks. They validate the data structure and integrity, check the bank's mapping to the exam outline, and look for problems such as question wording that reveals the answer or options that repeat the question. A failed check blocks publication.</p>
+      <p>Several checks track a fixed maximum number of existing defects in each bank. Changes can reduce that number but cannot increase it. This prevents new edits from adding to the known problems.</p>
     </section>
 
     <!-- Watched weekly against Microsoft Learn -->
     <section id="watched-weekly" class="container">
       <p class="label-eyebrow section-eyebrow">Watched weekly</p>
       <h2 class="display-small section-title">Watched weekly against Microsoft Learn</h2>
-      <p>
-        Two automated routines run on a schedule, independent of any content change. Every Monday, a check re-reads the live "Skills measured" page for every exam and compares it, by hash, against what is recorded for the shipped bank — catching outline changes as soon as Microsoft publishes them.
-      </p>
-      <p>
-        Once a month, a separate routine confirms that every question's "learn more" link still resolves. Microsoft Learn reorganises its documentation continuously, so links that were correct when written do go dead over time; this check finds the ones that have, rather than waiting for a candidate to hit one.
-      </p>
+      <p>Two scheduled checks run even when the content hasn't changed. Every Monday, one compares a hash of each live "Skills measured" page with the version recorded for the published bank. Differences flag an outline change for review.</p>
+      <p>Once a month, the other check tests every question's "learn more" link. Microsoft Learn pages sometimes move or disappear, so this finds links that need repair.</p>
     </section>
 
     <!-- What we do not claim -->
@@ -324,11 +304,11 @@
         </details>
         <details class="faq">
           <summary>Do the explanations cover the wrong answers too?</summary>
-          <div class="faq__answer"><p>Where a question carries per-option rationales, yes — each option, not just the correct one, has its own written explanation. That field also powers the app's Answer Coach feature, so a wrong answer gets its own explanation rather than a generic "try again".</p></div>
+          <div class="faq__answer"><p>Yes, where per-option rationales are available, each option has its own explanation. Answer Coach uses those explanations to give feedback on the answer you chose.</p></div>
         </details>
         <details class="faq">
           <summary>What happens if a question turns out to be wrong or out of date?</summary>
-          <div class="faq__answer"><p>It gets fixed. The checks that catch these defect classes are forward-only: each bank has a frozen baseline count per defect type, and a change can only lower it, so a fixed defect cannot quietly reappear. Broken "learn more" links are found the same way, by a monthly automated sweep, and repaired.</p></div>
+          <div class="faq__answer"><p>We fix it. Automated checks track a fixed maximum number of known defects of each type in a bank, and edits cannot increase those counts. A separate monthly check finds broken "learn more" links so they can be repaired.</p></div>
         </details>
       </div>
     </section>

@@ -178,11 +178,11 @@ The app covers the following Microsoft certification exams. All are taught with 
 
 - **Exam IQ**: On-device CoreML model that predicts your exam-day score with a confidence range from your practice record (accuracy by domain, coverage, mastery, consistency, recency).
 - **Adaptive study plans**: The app picks your next session — weak-spot drills, knowledge-decay refreshes, mock exams — based on your current ability estimate per domain.
-- **Aura first-week guidance**: Aura adapts the learner's next step throughout the first week and closes every study block with a concise, evidence-led recap.
+- **Aura first-week guidance**: Aura suggests a next step based on the learner's progress throughout the first week. After each session, a short recap shows what improved and what needs more practice.
 - **Exam simulator**: Full-length, timed practice tests using blueprint-weighted question sets; Microsoft's live interface and exact item mix may differ.
 - **Knowledge decay tracking**: Spaced-repetition signals flag topics where your retention has dropped before exam day, with targeted refresher sessions.
 - **Question types**: Nine interactive formats for exam-style rehearsal, including multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies.
-- **Answer Coach**: The explanation card shows the correct reasoning, option-by-option rationale where available, and the misconception, key distinction, and rule to remember. Learners can show explanations after each question or at the end of a practice test, then jump to missed answers with session notes kept ready. Authored guidance is always available; supported devices may optionally rewrite a note on-device only after grounding checks.
+- **Answer Coach**: See why the answer is correct and, where available, why each option is right or wrong. Review explanations after each question or at the end of a practice test, then return to missed answers and saved session notes. Written guidance is always available. On supported devices, optional AI can reword a note on the device after checking it against that guidance.
 - **Offline-first**: Works fully without a network. No telemetry, no analytics on user behavior, no account required.
 - **Apple ecosystem**: Native SwiftUI on iPhone and iPad; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
 

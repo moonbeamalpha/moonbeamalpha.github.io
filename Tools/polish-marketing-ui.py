@@ -49,23 +49,23 @@ def domain_detail(first: str) -> str:
             words = match.group(1).strip(" —,.").split()
             if 2 <= len(words) <= 24:
                 return "Coverage follows " + " ".join(words) + "."
-    return "Domain tags show exactly where your weak spots cluster."
+    return "Domain tags help you find the topics you need to practise."
 
 
 def benefit_markup(code: str, paragraphs: list[str]) -> str:
     strong = re.search(r"<strong>(.*?)</strong>", paragraphs[0], re.S)
     practice = strip_tags(strong.group(1)) if strong else f"{code} practice questions"
     duration = re.search(r"\b(?:\d{2,3}-minute|\d{2,3} minute|\{\{EXAM_DURATION_SHORT\}\})", strip_tags(paragraphs[4]), re.I)
-    timed = (duration.group(0) + " timed sessions") if duration else "Timed sessions"
+    timed = (duration.group(0) + " session") if duration else "timed session"
     bullets = (
-        (f"<strong>{html.escape(practice)}</strong> aligned to the published skills outline.", domain_detail(paragraphs[0]), "Scenario and interactive items rehearse blueprint-relevant decisions."),
-        (f"Exam IQ predicts your {html.escape(code)} score on-device after roughly 30 questions.", "A confidence range shows how stable the prediction is.", "Ranked objectives identify the gaps most likely to improve readiness."),
-        ("The plan rebuilds itself from your answer history.", "Missed topics return sooner; consistently mastered topics appear less often.", "Sessions prioritise the gaps most likely to move you towards the 700 pass score."),
-        ("Topic-level decay tracking spots knowledge that is starting to fade.", "Revisit prompts arrive before a weak area becomes an exam-day surprise.", "Weak-spot sessions prioritise decayed topics automatically."),
-        (f"{html.escape(timed)} build sustained exam focus.", "Original questions follow the published domain weighting.", "Microsoft controls the live interface and exact question mix."),
-        ("Every answer includes authored reasoning, with option rationales where available.", "Misses become a concise misconception, distinction, and rule to remember.", "Supported devices can optionally rewrite grounded notes on-device."),
-        ("Aura turns each session into a clear next step.", "Recaps show what changed, what to focus on, and what to do next."),
-        ("Practice, scoring, readiness, and coaching run on-device.", "No Azure Mastery account or external processing server is required.", "Optional sync uses your private iCloud account."),
+        (f"<strong>{html.escape(practice)}</strong> aligned to the published skills outline.", domain_detail(paragraphs[0]), "Practise decisions from the exam outline with scenarios and interactive questions."),
+        (f"Exam IQ predicts your {html.escape(code)} score on-device after roughly 30 questions.", "A confidence range shows how stable the prediction is.", "See which exam objectives need the most work."),
+        ("Your study plan updates as you answer questions.", "Missed topics return sooner; consistently mastered topics appear less often.", "Sessions focus on the gaps most likely to help you reach the 700 pass score."),
+        ("Track which topics you're starting to forget.", "Get reminders to revisit those topics before exam day.", "Weak-spot sessions bring fading topics back into practice."),
+        (f"Practise staying focused through a full {html.escape(timed)}.", "Original questions follow the published domain weighting.", "Microsoft controls the live interface and exact question mix."),
+        ("Every answer has a written explanation, with reasons for individual options where available.", "See why you missed an answer, how the options differ, and what to remember.", "On supported devices, optional AI can reword notes while checking them against the written explanations."),
+        ("Aura suggests what to do after each session.", "Recaps show your progress and which topics to practise next."),
+        ("Practice, scoring, readiness, and coaching run on-device.", "You don't need an Azure Mastery account or a server to process your study data.", "Optional sync uses your private iCloud account."),
     )
     cards = []
     for heading, items in zip(HEADINGS, bullets):

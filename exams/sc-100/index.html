@@ -222,7 +222,7 @@
             "name": "What's the SC-100 prerequisite?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "To earn the Cybersecurity Architect Expert credential, Microsoft currently accepts Azure Security Engineer Associate, Security Operations Analyst Associate, or Identity and Access Administrator Associate. You can sit SC-100 without one, but the credential is awarded only after both requirements are met. AZ-500 was the exam tied to Azure Security Engineer Associate before Microsoft retired it on 31 August 2026; Microsoft has not yet listed SC-500 as an accepted replacement prerequisite."
+              "text": "You can register for and sit SC-100 with no prior certification. What Microsoft withholds is the Cybersecurity Architect Expert credential itself: to earn it, you must also hold — or pass within a year of SC-100 — at least one of three Associate-level certifications: Azure Security Engineer Associate (AZ-500), Security Operations Analyst Associate (SC-200), or Identity and Access Administrator Associate (SC-300). Once you have both, both certifications appear on your Microsoft Learn profile."
             }
           },
           {
@@ -231,6 +231,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Different architectural lenses. SC-100 is the security architect cert — design Zero Trust, ransomware resilience, SecOps strategy, identity governance. AZ-305 is the solutions architect cert — design data, infrastructure, business continuity, and identity/governance/monitoring. The two overlap on identity and governance design, but SC-100 goes much deeper on security and AZ-305 covers a broader Azure surface. Many senior architects hold both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is SC-100 different from an Associate-level security exam?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Associate exams such as SC-200 and SC-300 test whether you can configure and operate a named product correctly. SC-100 tests whether you can design the strategy those products serve — picking between Microsoft Sentinel automation vs Defender XDR-native response, or the enterprise access model vs legacy AD tiering, for a stated set of business constraints. Multiple options in an SC-100 scenario can be technically valid; the exam is scored on choosing the one that best satisfies the constraints given."
             }
           },
           {
@@ -263,7 +271,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/sc-100/#study-plan",
         "name": "How to study for SC-100 (Microsoft Cybersecurity Architect) in 6 weeks",
-        "description": "A six-week study plan mapped to the SC-100 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A six-week study plan mapped to the SC-100 skills outline (28 July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -332,6 +340,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -445,17 +454,17 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the SC-100 exam?</h2>
       <p>
-        SC-100 is the exam for the <strong>Microsoft Certified: Cybersecurity Architect Expert</strong> credential — the most senior security cert in Microsoft's track. It's the credential hiring managers expect for "Cybersecurity Architect", "Lead Security Engineer", or "Cloud Security Architect" roles. To earn it, Microsoft currently accepts Azure Security Engineer Associate, <a href="/exams/sc-200/">Security Operations Analyst Associate</a>, or <a href="/exams/sc-300/">Identity and Access Administrator Associate</a> as the prerequisite credential. AZ-500 was the exam for Azure Security Engineer Associate before Microsoft retired it on 31 August 2026 — already-earned credentials still count; MS-500 is no longer an accepted route.
+        SC-100 is the exam for the <strong>Microsoft Certified: Cybersecurity Architect Expert</strong> credential — the most senior security cert in Microsoft's track. It's the credential hiring managers expect for "Cybersecurity Architect", "Lead Security Engineer", or "Cloud Security Architect" roles. Passing SC-100 alone doesn't award the certification: Microsoft also requires you to already hold (or pass within a year) one of three Associate-level prerequisites — Azure Security Engineer Associate (AZ-500), <a href="/exams/sc-200/">Security Operations Analyst Associate</a>, or <a href="/exams/sc-300/">Identity and Access Administrator Associate</a>.
       </p>
       <p>
-        SC-100 is <strong>design-oriented and trade-off-heavy</strong>. Unlike Associate exams that test individual-service knowledge, SC-100 tests architectural reasoning: pick the right strategy under real-world constraints. It validates that you can apply the <em>Microsoft Cybersecurity Reference Architecture (MCRA)</em>, design a <em>Zero Trust</em> strategy and a <em>ransomware-resilience</em> stance, build SecOps strategies around Microsoft Sentinel and Defender XDR, design identity strategies in Microsoft Entra (Conditional Access, PIM, Identity Governance), design infrastructure security spanning endpoints / servers / containers / networks / keys, and design application and data security including DevSecOps. Expect scenario questions where multiple answers <em>could</em> work — the right answer is the one that best satisfies the constraints.
+        SC-100 is <strong>design-oriented and trade-off-heavy</strong>. Unlike the Associate exams that test individual-service configuration, SC-100 tests architectural reasoning across an entire security programme: translate a cybersecurity strategy into capabilities, then design, guide, and evaluate solutions that hold up under real constraints. It validates that you can apply the <em>Microsoft Cybersecurity Reference Architecture (MCRA)</em> and <em>Microsoft Cloud Security Benchmark (MCSB)</em>, design a <em>Zero Trust</em> strategy and a <em>ransomware-resilience</em> stance, build SecOps strategies around Microsoft Sentinel and Defender XDR, design identity strategies in Microsoft Entra (Conditional Access, PIM, Identity Governance), specify infrastructure security requirements spanning endpoints, SaaS/PaaS/IaaS, and Security Service Edge, and design application and data security. Expect scenario questions where multiple answers <em>could</em> work — the right answer is the one that best satisfies the stated constraints.
       </p>
       <p>
-        Microsoft updated the SC-100 skills outline on <strong>27 April 2026</strong>. Every question in Azure Mastery's SC-100 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-100" rel="noopener">learn.microsoft.com</a>.
+        Microsoft updated the SC-100 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-100 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-100" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="SC-100 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
-        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">120 minutes (140 min seat)</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
+        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
         <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew annually (Expert)</span></li>
@@ -465,10 +474,10 @@
 
     <!-- SC-100 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 28 July 2026</p>
       <h2 class="display-small section-title">SC-100 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-100" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Four domains, with weights set by Microsoft's <strong>28 July 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-100" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -487,48 +496,105 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Design solutions that align with security best practices and priorities<span class="domain__weight">20–25%</span></h3>
+          <h3>Design solutions that align with security best practices and priorities<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc100-bp">94</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Best Practices topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design a resiliency strategy for ransomware and other attacks based on Microsoft Security Best Practices</li>
+                <li>Design solutions that align with the Microsoft Cybersecurity Reference Architectures (MCRA) and Microsoft Cloud Security Benchmark (MCSB)</li>
+                <li>Design solutions that align with the Microsoft Cloud Adoption Framework for Azure (CAF) and the Azure Well-Architected Framework</li>
+              </ul>
               <p>
-                The strategy layer. Apply the <em>Microsoft Cybersecurity Reference Architecture (MCRA)</em>, the Microsoft Cloud Security Benchmark, and the <em>Cloud Adoption Framework (CAF)</em> Secure baseline. Design a <em>Zero Trust strategy</em> across identities, endpoints, networks, applications, and data. Design ransomware-resilience patterns and a recovery strategy. Map architectural choices to <em>regulatory compliance</em> requirements (HIPAA, PCI-DSS, GDPR). Around 8–15 questions per sitting.
+                This is the domain where an architect proves they can set direction, not just implement it. Ransomware-resilience objectives ask you to prioritise business-critical assets, design secure backup and restore for hybrid and multicloud estates, and weigh BCDR investment against privileged-access hardening. MCRA and MCSB objectives test whether you can map a customer's controls against Microsoft's reference capabilities and benchmark, including AI-specific alignment and defence against insider, external, and supply-chain attacks. CAF and WAF objectives push further into governance — landing zones, a DevSecOps process, and a secure-AI-adoption strategy that a scenario expects you to recommend or evaluate, not merely describe.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Design security operations, identity, and compliance capabilities<span class="domain__weight">25–30%</span></h3>
+          <h3>Design security operations, identity, and compliance capabilities<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc100-secops">135</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore SecOps topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design solutions for security operations</li>
+                <li>Design solutions for identity and access management</li>
+                <li>Design solutions for securing privileged access</li>
+                <li>Design solutions for regulatory compliance</li>
+              </ul>
               <p>
-                Tied for the largest domain. Design a <em>SecOps strategy</em> with Microsoft Sentinel (analytics rules, automation, hunting) and Microsoft Defender XDR. Design an <em>identity strategy</em> for hybrid and multi-cloud — Microsoft Entra ID, Conditional Access, Privileged Identity Management, Identity Governance, federation. Design a <em>compliance strategy</em> with Microsoft Purview (Information Protection, DLP, Insider Risk, Communication Compliance, Compliance Manager). Around 10–18 questions.
+                Tied for the largest domain, and the one that spans the most Microsoft products. Security-operations objectives cover designing detection and response with XDR and SIEM, centralised logging with Microsoft Purview Audit, and SOAR workflows across Sentinel and Defender XDR, evaluated against MITRE ATT&CK coverage. Identity objectives extend past user sign-in into agent identities, external and decentralised identity, and validating Conditional Access against a Zero Trust strategy. Privileged-access objectives centre on the enterprise access model — assigning and delegating roles, then evaluating PIM, entitlement management, and access reviews for both Entra ID and AD DS. Compliance objectives ask you to translate regulatory requirements into controls using Purview and Azure Policy.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Design security solutions for infrastructure<span class="domain__weight">25–30%</span></h3>
+          <h3>Design security solutions for infrastructure<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc100-infra">119</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Infrastructure topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design solutions for security posture management in hybrid and multicloud environments</li>
+                <li>Specify requirements for securing server and client endpoints</li>
+                <li>Specify requirements for securing SaaS, PaaS, and IaaS services</li>
+                <li>Evaluate solutions for network security and Security Service Edge (SSE)</li>
+              </ul>
               <p>
-                Tied for the largest domain. Design endpoint and server security (Defender for Endpoint, Defender for Servers, secure baselines), Azure / multi-cloud / hybrid postures (Defender for Cloud, Azure Arc, Defender CSPM). Design network security (segmentation, perimeter, private connectivity), key and secret management strategy (Azure Key Vault, customer-managed keys, HSMs), secure remote access (Bastion, JIT VM access). Container and Kubernetes security (Defender for Containers, AKS hardening). Around 10–18 questions.
+                Tied for the largest domain by weight. Posture-management objectives centre on Microsoft Defender for Cloud and Secure Score, extended across hybrid and multicloud environments with Azure Arc and Defender EASM, plus Security Exposure Management's attack-path analysis. Endpoint objectives cover servers, mobile clients, IoT and OT devices, and baseline hardening including Windows LAPS. Service-tier objectives specify baselines across SaaS, PaaS, and IaaS, including containers, container orchestration, and Azure AI services security. Network objectives are the newest ground — evaluating designs against Microsoft Entra Internet Access and Private Access as Security Service Edge components rather than classic perimeter controls.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Design security solutions for applications and data<span class="domain__weight">20–25%</span></h3>
+          <h3>Design security solutions for applications and data<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc100-appsdata">104</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Apps &amp; Data topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Evaluate solutions for securing Microsoft 365</li>
+                <li>Design solutions for securing applications</li>
+                <li>Design solutions for securing an organization's data</li>
+              </ul>
               <p>
-                Application security strategy — secure-by-design SDL, DevSecOps and supply-chain security (Defender for DevOps), threat modelling, secrets management. Data security strategy — Microsoft Purview Information Protection, sensitivity labels, encryption choices for SQL / Cosmos / Storage, data residency considerations. Around 8–15 questions.
+                Microsoft 365 objectives evaluate productivity-workload posture using Secure Score, Defender for Office 365 and Cloud Apps, Intune, and Purview — including the newer requirement to evaluate data-security controls in Microsoft Copilot for Microsoft 365. Application objectives run the full lifecycle: threat modelling business-critical apps, mapping technologies to security requirements, designing workload-identity authentication, API security, and WAF placement. Data objectives cover discovery and classification, encryption at rest and in transit, and designing security for data used in AI workloads across Azure SQL, Synapse, Cosmos DB, and Azure Storage — including Defender for Storage and Defender for Databases.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where SC-100 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where SC-100 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared SC-100 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Zero Trust is an architecture, not a single control</h3>
+          <p>Candidates who have deployed MFA or network segmentation sometimes treat either as "doing Zero Trust." Microsoft's model — verify explicitly, use least privilege, assume breach — spans identity, endpoint, network, application, and data simultaneously. A scenario testing Zero Trust design usually needs a coordinated answer across at least two of those pillars, not a single control applied harder.</p>
+        </article>
+        <article class="trap">
+          <h3>MCRA, MCSB, and CAF/WAF answer different questions</h3>
+          <p>The Microsoft Cybersecurity Reference Architecture describes what capabilities exist and how they fit together; the Microsoft Cloud Security Benchmark is what you measure an existing environment against; the Cloud Adoption Framework and Well-Architected Framework govern how security decisions get adopted and prioritised across an organisation. A scenario asking you to design new capability wants MCRA-shaped reasoning, not a benchmark recommendation.</p>
+        </article>
+        <article class="trap">
+          <h3>The enterprise access model has replaced legacy admin tiering</h3>
+          <p>Candidates who studied older AD-centric tiering models (Tier 0/1/2) default to that language when a privileged-access scenario appears. SC-100 expects the modern enterprise access model — control plane, management plane, and data/workload plane — as the framework for assigning and delegating privileged roles across hybrid and multicloud estates.</p>
+        </article>
+        <article class="trap">
+          <h3>Posture management and active response are different domains</h3>
+          <p>Microsoft Defender for Cloud measures and improves security posture — Secure Score, CSPM, compliance standards. Microsoft Sentinel and Defender XDR detect and respond to active threats. A scenario asking for a SOAR or incident-response design belongs to the security-operations domain even when Defender for Cloud also appears in the same environment description.</p>
+        </article>
+        <article class="trap">
+          <h3>The prerequisite gates the certification, not the exam booking</h3>
+          <p>You can register for and sit SC-100 with no prior certification at all. What Microsoft withholds until you also hold (or pass within a year) AZ-500, SC-200, or SC-300 is the Cybersecurity Architect Expert credential itself — a distinction candidates researching "can I take SC-100 first" frequently get backwards.</p>
         </article>
       </div>
     </section>
@@ -538,22 +604,22 @@
       <p class="label-eyebrow section-eyebrow">Designed for SC-100</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass SC-100</h2>
       <p>
-        Azure Mastery ships with <strong>452 SC-100 practice questions</strong>, every one written specifically against the current (April 2026) skills outline. Each question carries a domain tag mapped to the official four domains (best practices and priorities, security operations / identity / compliance capabilities, infrastructure security, applications and data security), so you always know which area you're being tested on and where your weak spots are clustered. SC-100 questions favour multi-constraint scenarios over single-service recall — you'll see a customer requirement, a regulatory constraint, and a technical limitation, and pick the best architectural answer.
+        Azure Mastery ships with <strong>452 SC-100 practice questions</strong>, every one written specifically against the current (28 July 2026) skills outline. Each question carries a domain tag mapped to the official four domains (best practices and priorities, security operations / identity / compliance capabilities, infrastructure security, applications and data security), so you always know which area you're being tested on and where your weak spots are clustered. Most items in the bank are single-answer multiple choice, with a meaningful share of scenario-based questions and yes/no and multi-select items in roughly equal measure, plus a smaller mix of drag-to-match, dropdown-select, hotspot, and ordering items, and a modest set of case studies — the bank leans into scenario reasoning rather than one-line recall, which matches how SC-100 itself is built.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your SC-100 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Miss a Zero-Trust strategy scenario? You'll see another Zero-Trust question in the next session. Master "Defender for Cloud vs Defender XDR strategy" three sessions running and the engine backs off, surfacing fresh DevSecOps or Purview design scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on whichever of SecOps/identity/compliance or infrastructure security is currently your weakest — the two domains Microsoft weights heaviest at 25–30% each. Miss a Zero Trust strategy scenario and the next session surfaces another identity-strategy question; master "posture management vs active threat response" three sessions running and the plan backs off toward best-practices or applications-and-data scenarios instead. It optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> matters more for SC-100 than for foundational exams — Expert-level architecture spans four broad domains and dozens of Microsoft security products, and the strategy you mastered three weeks ago is the strategy you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the April 2026 outline, with the 120-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        <strong>Blueprint-aligned exam rehearsal</strong> runs a timed, domain-weighted practice session built from original questions, weighted by the four published domain bands, with a 100-minute timer and no jumping back to flag-and-review. It uses original practice content rather than reproducing Microsoft's exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> is where SC-100's near-identical framework and control-plane decisions get untangled. Get a question wrong because you recommended the Microsoft Cloud Security Benchmark when a scenario wanted new architecture from the MCRA, or reached for legacy admin tiering instead of the enterprise access model, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -746,13 +812,19 @@
         <details class="faq">
           <summary>What's the SC-100 prerequisite?</summary>
           <div class="faq__answer">
-            <p>To earn the Cybersecurity Architect Expert credential, Microsoft currently accepts Azure Security Engineer Associate, <a href="/exams/sc-200/">Security Operations Analyst Associate</a>, or <a href="/exams/sc-300/">Identity and Access Administrator Associate</a>. You can <em>sit</em> SC-100 without one, but the credential is awarded only after both requirements are met. AZ-500 was the exam tied to Azure Security Engineer Associate before Microsoft retired it on 31 August 2026; Microsoft has not yet listed SC-500 as an accepted replacement prerequisite.</p>
+            <p>You can register for and sit SC-100 with no prior certification. What Microsoft withholds is the Cybersecurity Architect Expert credential itself: to earn it, you must also hold — or pass within a year of SC-100 — at least one of three Associate-level certifications: Azure Security Engineer Associate (AZ-500), <a href="/exams/sc-200/">Security Operations Analyst Associate</a> (SC-200), or <a href="/exams/sc-300/">Identity and Access Administrator Associate</a> (SC-300). Once you have both, both certifications appear on your Microsoft Learn profile.</p>
           </div>
         </details>
         <details class="faq">
           <summary>SC-100 vs AZ-305 — which next for an architect?</summary>
           <div class="faq__answer">
             <p>Different architectural lenses. SC-100 is the <em>security</em> architect cert — design Zero Trust, ransomware resilience, SecOps strategy, identity governance. <a href="/exams/az-305/">AZ-305</a> is the <em>solutions</em> architect cert — design data, infrastructure, business continuity, and identity/governance/monitoring. The two overlap on identity and governance design, but SC-100 goes much deeper on security and AZ-305 covers a broader Azure surface. Many senior architects hold both.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How is SC-100 different from an Associate-level security exam?</summary>
+          <div class="faq__answer">
+            <p>Associate exams such as SC-200 and SC-300 test whether you can configure and operate a named product correctly. SC-100 tests whether you can design the strategy those products serve — picking between Microsoft Sentinel automation vs Defender XDR-native response, or the enterprise access model vs legacy AD tiering, for a stated set of business constraints. Multiple options in an SC-100 scenario can be technically valid; the exam is scored on choosing the one that best satisfies the constraints given.</p>
           </div>
         </details>
         <details class="faq">
@@ -798,7 +870,7 @@
       <p class="label-eyebrow section-eyebrow">Where SC-100 fits</p>
       <h2 class="display-small section-title">Certification paths that include SC-100</h2>
       <p class="section-lede">
-        SC-100 is the exam for Microsoft Cybersecurity Architect Expert — the senior credential in the security track. The clearest current routes use SC-200 or SC-300 as the accepted Associate prerequisite; an already-earned Azure Security Engineer Associate credential is also accepted, though its AZ-500 exam was retired by Microsoft on 31 August 2026 and is no longer bookable. Tap any linked exam below to see its dedicated study app page.
+        SC-100 is the exam for Microsoft Cybersecurity Architect Expert — the senior credential in the security track. The clearest current routes use SC-200 or SC-300 as the accepted Associate prerequisite; Azure Security Engineer Associate is also accepted, but its AZ-500 exam retires on 31 August 2026. Tap any linked exam below to see its dedicated study app page.
       </p>
       <div class="cert-paths">
 
@@ -815,9 +887,9 @@
               </a>
             </li>
             <li class="cert-path__station">
-              <a class="cert-path__chip" href="/exams/retired/" data-cert-level="associate">
+              <a class="cert-path__chip" href="/exams/az-500/" data-cert-level="associate">
                 <span class="cert-path__chip-code">AZ-500</span>
-                <span class="cert-path__chip-role">Retired · already-earned credential accepted</span>
+                <span class="cert-path__chip-role">Retiring exam · accepted credential</span>
               </a>
             </li>
             <li class="cert-path__station">
@@ -909,13 +981,13 @@
       <p class="label-eyebrow section-eyebrow">Before / after SC-100</p>
       <h2 class="display-small section-title">Related certifications</h2>
       <p class="section-lede">
-        SC-100 is the senior security exam. SC-200 and SC-300 are current prerequisite routes; an already-earned Azure Security Engineer Associate credential also qualifies, though its AZ-500 exam was retired by Microsoft on 31 August 2026. SC-900 builds the cross-cutting Microsoft security vocabulary if security is new to you.
+        SC-100 is the senior security exam. SC-200 and SC-300 are current prerequisite routes; Azure Security Engineer Associate also qualifies, although its AZ-500 exam retires on 31 August 2026. SC-900 builds the cross-cutting Microsoft security vocabulary if security is new to you.
       </p>
       <nav class="related-grid" aria-label="Related certifications">
-        <a class="related-card" href="/exams/retired/">
+        <a class="related-card" href="/exams/az-500/">
           <span class="related-card__code">AZ-500</span>
           <span class="related-card__name">Microsoft Azure Security Engineer</span>
-          <span class="related-card__hint">Retired exam that once granted an accepted prerequisite credential. AZ-500 was retired by Microsoft on 31 August 2026; already-earned credentials remain accepted — check Microsoft's SC-100 page for current details.</span>
+          <span class="related-card__hint">Retiring exam for an accepted prerequisite credential. AZ-500 retires on 31 August 2026; check Microsoft's SC-100 page before choosing this route.</span>
         </a>
         <a class="related-card" href="/exams/sc-900/">
           <span class="related-card__code">SC-900</span>

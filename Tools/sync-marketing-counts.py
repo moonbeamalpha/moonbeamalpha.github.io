@@ -550,11 +550,15 @@ def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
 
     if os.path.exists(INDEX_HTML):
         stale, premature = {}, {}
+        carousel_codes = set()
         for tag in re.findall(r'<a\b[^>]*>', open(INDEX_HTML).read()):
             href = re.search(r'href="/exams/([a-z]+-\d+)/"', tag)
             if not href:
                 continue
             code = href.group(1).upper()
+            classes = re.search(r'class="([^"]*)"', tag)
+            if classes and "exam-mini__tag" in classes.group(1).split():
+                carousel_codes.add(code)
             marked = "exam-link--retired" in tag
             if code in retired and not marked:
                 stale[code] = stale.get(code, 0) + 1
@@ -565,6 +569,13 @@ def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
                             f"active — add exam-link--retired and move it into the disclosures")
         for code, n in sorted(premature.items()):
             problems.append(f"index.html: {code} is current, but {n} link(s) styled non-current")
+        # The bento card advertises the current exam count, so even a labelled
+        # retired link is misleading here. Keep references in the disclosures.
+        current = catalogue - retired
+        for code in sorted(carousel_codes - current):
+            problems.append(f"index.html: remove non-current {code} from the bento carousel")
+        for code in sorted(current - carousel_codes):
+            problems.append(f"index.html: current {code} is missing from the bento carousel")
 
     hub = os.path.join(EXAMS_DIR, "index.html")
     if os.path.exists(hub):

@@ -357,7 +357,7 @@ def guide_page_edits(code: str, count: int):
 # more than one exam in a sentence, so this only ever flags a *number*, never
 # a bare code+"questions" mention.
 GUIDE_STALE_COUNT_RE = re.compile(
-    r'(?<![A-Z]{2}-)(?<![A-Z]{3}-)\b\d{3}(?:,\d{3})*\b'
+    r'(?<![A-Z]{2}-)(?<![A-Z]{3}-)\b\d{3,}(?:,\d{3})*\b'
     r'(?!\s+[A-Z]{2}-\d{3}\s+practice\s+questions\b)'
     r'(?!\s+minutes\b)'
     r'[^.<]{0,40}\bquestions\b'

@@ -220,10 +220,10 @@
           },
           {
             "@type": "Question",
-            "name": "DP-300 vs DP-900 — which should I take first?",
+            "name": "DP-300 vs DP-700 — different data roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "DP-900 first if databases aren't already your day job. DP-900 (Microsoft Azure Data Fundamentals) teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300."
+              "text": "They sit on different sides of the data platform. DP-300 is for administering relational Azure SQL workloads in production — deployment, security, performance tuning, automation, and HA/DR. DP-700 is for engineering analytics solutions end to end in Microsoft Fabric — ingesting, transforming, securing, and optimizing data with SQL, PySpark, and KQL across Lakehouse, Warehouse, and Eventhouse. Neither is a prerequisite for the other; choose based on whether your day job is operating Azure SQL or building Fabric pipelines."
             }
           },
           {
@@ -264,7 +264,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/dp-300/#study-plan",
         "name": "How to study for DP-300 (Microsoft Azure Database Administrator) in 6 weeks",
-        "description": "A six-week study plan mapped to the DP-300 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A six-week study plan mapped to the DP-300 skills outline (24 April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -333,6 +333,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -455,7 +456,7 @@
         Microsoft updated the DP-300 skills outline on <strong>24 April 2026</strong>. Every question in Azure Mastery's DP-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="DP-300 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
@@ -466,10 +467,10 @@
 
     <!-- DP-300 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 24 April 2026</p>
       <h2 class="display-small section-title">DP-300 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Five domains, skills measured as of <strong>24 April 2026</strong> on the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">official skills outline</a>. Every domain below lists Microsoft's own skill groups verbatim, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -488,59 +489,120 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Plan and implement data platform resources<span class="domain__weight">15–20%</span></h3>
+          <h3>Plan and implement data platform resources<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-platform">73</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Platform topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Plan and deploy Azure SQL solutions</li>
+                <li>Configure resources for scale and performance</li>
+                <li>Plan and implement a migration strategy</li>
+              </ul>
               <p>
-                The deployment foundation. Choose between <em>Azure SQL Database</em> (single, elastic pool, hyperscale), <em>Azure SQL Managed Instance</em>, and <em>SQL Server on Azure VMs</em>. Plan for compute and storage requirements, deployment via portal/PowerShell/CLI/Bicep, scaling and elastic pools. Plus migration paths via <em>Azure Database Migration Service</em> and <em>Azure Migrate</em>, including online vs offline approaches. Around 6–12 questions per sitting.
+                The deployment foundation. Candidates choose between Azure SQL Database (single, elastic pool, hyperscale), Azure SQL Managed Instance, and SQL Server on Azure VMs, then plan compute and storage sizing, an automated deployment method via portal, PowerShell, CLI, or Bicep, and table partitioning or sharding for scale. The domain also covers migration planning — evaluating online versus offline strategies, implementing a migration to Azure or between Azure SQL services, and using Azure SQL Managed Instance database copy and move, including troubleshooting a migration that stalls partway through.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement a secure environment<span class="domain__weight">20–25%</span></h3>
+          <h3>Implement a secure environment<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-security">92</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Security topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure database authentication and authorization</li>
+                <li>Implement security for data at rest and data in transit</li>
+                <li>Implement compliance controls for sensitive data</li>
+              </ul>
               <p>
-                The compliance and access surface. Microsoft Entra and SQL authentication, contained users, RBAC and role mappings, server roles, database roles. Encryption — <em>Transparent Data Encryption (TDE)</em>, <em>Always Encrypted</em>, dynamic data masking, row-level security. Auditing, threat detection via <em>Microsoft Defender for SQL</em>, network restrictions (firewall rules, virtual network rules, Private Link). Around 8–15 questions.
+                The access and compliance surface. Candidates configure Microsoft Entra ID and SQL authentication across Azure SQL Database, Managed Instance, and SQL Server, including security principals, users created from Entra identities, and object- and database-level permissions applied under least privilege. Data-protection objectives cover transparent data encryption, object-level encryption, Always Encrypted (including secure enclaves), and firewall or private-link network restriction. Compliance controls round it out — data classification, server and database auditing, change data tracking, dynamic data masking, ledger tables, and row-level security for regulated workloads.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Monitor, configure, and optimize database resources<span class="domain__weight">20–25%</span></h3>
+          <h3>Monitor, configure, and optimize database resources<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-monitoring">88</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Monitoring topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Monitor resource activity and performance</li>
+                <li>Monitor and optimize query performance</li>
+                <li>Configure database solutions for optimal performance</li>
+              </ul>
               <p>
-                The performance angle. <em>Query Store</em> for query and plan history, automatic tuning, manual index tuning (clustered, non-clustered, columnstore, filtered, included columns), statistics, partitioning, In-Memory OLTP, Resource Governor, query plan analysis. <em>Dynamic management views (DMVs)</em>, Intelligent Insights, Performance Monitor, blocking and deadlock troubleshooting. Around 8–15 questions.
+                The performance angle. Candidates prepare an operational performance baseline, then monitor activity and performance through Extended Events and database watcher, interpreting whichever metrics those sources surface. Query-level work centres on Query Store — configuring capture modes, identifying session blocking, and reviewing execution plans — alongside dynamic management views and Intelligent Insights for root-causing regressions. Configuration objectives close the domain: index and statistics maintenance, database integrity checks, automatic tuning, Resource Governor, database-scoped configuration, and recognising when an intelligent query processing feature actually helps.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Configure and manage automation of tasks<span class="domain__weight">15–20%</span></h3>
+          <h3>Configure and manage automation of tasks<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-automation">68</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Automation topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Create and manage SQL Server Agent jobs</li>
+                <li>Automate deployment of database resources</li>
+                <li>Create and manage database tasks in Azure</li>
+              </ul>
               <p>
-                The DBA-as-code layer. SQL Server Agent jobs (steps, schedules, alerts, operators) on Managed Instance and SQL VM. <em>Elastic jobs</em> on Azure SQL Database. PowerShell, Azure CLI, Logic Apps, and Azure Automation runbooks for routine maintenance. ARM/Bicep templates for repeatable deployment. Alerts via Azure Monitor and Action Groups. Around 6–12 questions.
+                The DBA-as-code layer, and the smallest domain by weight. SQL Server Agent objectives cover managing schedules for regular maintenance jobs, configuring job alerts and notifications, and troubleshooting a job that silently stops firing. Deployment automation spans Azure Resource Manager and Bicep templates, PowerShell, and Azure CLI, plus monitoring and troubleshooting those deployments when they fail partway through. The domain closes with Azure-native task automation — creating and configuring elastic jobs that run across a fleet of databases, alerting on them, and troubleshooting a task that fails on some databases but not others.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Plan and configure HA/DR environment<span class="domain__weight">20–25%</span></h3>
+          <h3>Plan and configure a high availability and disaster recovery (HA/DR) environment<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-hadr">84</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore HA/DR topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Plan an HA/DR strategy for database solutions</li>
+                <li>Plan and perform backup and restore of a database</li>
+                <li>Configure HA/DR for database solutions</li>
+              </ul>
               <p>
-                The resilience story. <em>Always On availability groups</em> on SQL VM (synchronous vs asynchronous, read-only routing, listener configuration), <em>failover cluster instances</em>. For Azure SQL Database and Managed Instance: active geo-replication, <em>auto-failover groups</em>, business-critical and zone-redundant tiers. Backup strategies — point-in-time restore, long-term retention, geo-restore, RPO/RTO planning. Around 8–15 questions.
+                The resilience story, and the domain most candidates under-revise. Strategy objectives start with RPO/RTO-driven planning, evaluating hybrid and Azure-specific HA/DR solutions, and designing a realistic test procedure. Backup and restore covers native-tool backup and restore, restoring to a point in time, long-term backup retention, T-SQL-driven backup and restore, and restoring from cloud storage. Configuration closes the domain: active geo-replication, Always On availability groups on Managed Instance and Azure VMs, failover groups, Always On Failover Cluster Instances, log shipping, and troubleshooting an HA/DR setup that fails over but won't fail back cleanly.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where DP-300 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where DP-300 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared DP-300 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Choosing the wrong deployment target</h3>
+          <p>A scenario naming cross-database queries, linked servers, SQL Server Agent, or CLR needs Azure SQL Managed Instance or SQL Server on an Azure VM — a single Azure SQL Database can't do any of them. Read for instance-scoped features before picking the offering, not just cost or management overhead.</p>
+        </article>
+        <article class="trap">
+          <h3>TDE and Always Encrypted protect against different readers</h3>
+          <p>Transparent Data Encryption protects data at rest from someone stealing the physical files — a DBA querying the table still sees plaintext. Always Encrypted keeps sensitive columns encrypted even from a DBA with full permissions, because encryption and decryption happen client-side. A requirement that "database administrators must not be able to view the data" needs Always Encrypted specifically.</p>
+        </article>
+        <article class="trap">
+          <h3>Active geo-replication vs auto-failover groups</h3>
+          <p>Active geo-replication is a single-database relationship with up to four readable secondaries and manual failover. Auto-failover groups wrap multiple databases behind one listener endpoint and can fail over automatically on a defined policy. A scenario needing automatic failover for an application connection string wants a failover group, not geo-replication alone.</p>
+        </article>
+        <article class="trap">
+          <h3>Query Store persists; DMVs don't</h3>
+          <p>Dynamic management views show only the current in-memory state, and that state resets on a restart or failover — exactly when you most need history to diagnose what happened. Query Store persists query and plan history to disk across restarts, which is why regression-hunting questions expect Query Store, not a DMV snapshot.</p>
+        </article>
+        <article class="trap">
+          <h3>Elastic jobs, not SQL Agent, for Azure SQL Database</h3>
+          <p>SQL Server Agent runs on Managed Instance and SQL Server on Azure VMs, but a single or pooled Azure SQL Database has no built-in Agent. Scheduled T-SQL across a fleet of Azure SQL databases needs an elastic job agent instead — a detail that trips candidates who assume Agent is always available.</p>
         </article>
       </div>
     </section>
@@ -550,13 +612,13 @@
       <p class="label-eyebrow section-eyebrow">Designed for DP-300</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass DP-300</h2>
       <p>
-        Azure Mastery ships with <strong>405 DP-300 practice questions</strong>, every one written specifically against the current (April 2026) skills outline. Each question carries a domain tag mapped to the official five domains (platform resources, secure environment, monitor/optimize, automation, HA/DR), so you always know which area you're being tested on and where your weak spots are clustered. T-SQL query snippets, configuration JSON, and HA/DR scenario setups appear throughout — practising blueprint-relevant formats and decisions.
+        Azure Mastery ships with <strong>405 DP-300 practice questions</strong>, every one written specifically against the current (24 April 2026) skills outline. Each question carries a domain tag mapped to the official five domains (platform resources, secure environment, monitor/optimize, automation, HA/DR), so you always know which area you're being tested on and where your weak spots are clustered. Most items are single-answer multiple choice, with a real slice of scenario-based, drag-to-match, and multi-select questions, plus a smaller mix of dropdown-select, yes/no, and hotspot items — T-SQL query snippets, configuration JSON, and HA/DR scenario setups appear throughout.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your DP-300 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get an Always Encrypted vs TDE scenario wrong? You'll see another encryption-choice question in the next session. Master "active geo-replication vs auto-failover groups" three sessions running and the engine backs off, surfacing fresh Query Store or Resource Governor scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on Implement a secure environment and the HA/DR domain — the two domains Microsoft weights joint-heaviest at 20–25%. Get an Always Encrypted vs TDE scenario wrong? You'll see another encryption-choice question in the next session. Master "active geo-replication vs auto-failover groups" three sessions running and the engine backs off, surfacing fresh Query Store or Resource Governor scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> matters more for DP-300 than for foundational exams — five domains is a lot to retain, and the topic you mastered three weeks into your study window is the topic you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
@@ -565,7 +627,7 @@
         <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the April 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> is where DP-300's near-identical security and HA/DR decisions get untangled. Pick TDE when the scenario needed Always Encrypted, or geo-replication when it needed a failover group, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -757,9 +819,9 @@
           </div>
         </details>
         <details class="faq">
-          <summary>DP-300 vs DP-900 — which should I take first?</summary>
+          <summary>DP-300 vs DP-700 — different data roles?</summary>
           <div class="faq__answer">
-            <p>DP-900 first if databases aren't already your day job. <a href="/exams/dp-900/">DP-900 (Microsoft Azure Data Fundamentals)</a> teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.</p>
+            <p>They sit on different sides of the data platform. DP-300 is for administering relational Azure SQL workloads in production — deployment, security, performance tuning, automation, and HA/DR. <a href="/exams/dp-700/">DP-700</a> is for engineering analytics solutions end to end in Microsoft Fabric — ingesting, transforming, securing, and optimizing data with SQL, PySpark, and KQL across Lakehouse, Warehouse, and Eventhouse. Neither is a prerequisite for the other; choose based on whether your day job is operating Azure SQL or building Fabric pipelines.</p>
           </div>
         </details>
         <details class="faq">

@@ -214,15 +214,15 @@
             "name": "How long should I study for SC-900?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most candidates with prior IT experience pass after one to two weeks of focused revision. If cloud computing is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence."
+              "text": "Most candidates with prior IT experience pass after one to two weeks of focused revision. If security and compliance concepts are genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence."
             }
           },
           {
             "@type": "Question",
-            "name": "SC-900 vs SC-200 — which should I take first?",
+            "name": "SC-900 vs AZ-900 — which should I take first?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "SC-900 first if security isn't already your day job. SC-900 teaches you the SCI vocabulary — Zero Trust, defence-in-depth, the Microsoft Defender product family, Microsoft Sentinel, Purview compliance — without expecting you to triage incidents. SC-200 (Security Operations Analyst Associate) is the role-based exam — it expects you to investigate incidents in Sentinel, configure Defender XDR, and write KQL queries. Most candidates pass SC-900 in a few weeks, then spend two to three months on SC-200."
+              "text": "Neither depends on the other, so pick based on which vocabulary you need first. SC-900 teaches Microsoft's security, compliance, and identity stack — Zero Trust, Microsoft Entra, the Defender product family, Sentinel, Purview compliance. AZ-900 teaches general Azure fundamentals — regions and availability zones, core compute and networking services, pricing, and governance tools like Azure Policy. If your role is security-adjacent, start with SC-900; if you're new to Azure generally, start with AZ-900. Many candidates who work across both sit both, in either order, since they don't overlap much."
             }
           },
           {
@@ -263,7 +263,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/sc-900/#study-plan",
         "name": "How to study for SC-900 (Microsoft Security, Compliance, and Identity Fundamentals) in 2 weeks",
-        "description": "A two-week revision plan mapped to the SC-900 skills outline (November 2025), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A two-week revision plan mapped to the SC-900 skills outline (28 July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P14D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -274,7 +274,7 @@
             "@type": "HowToStep",
             "position": 1,
             "name": "Build the mental map (Days 1–7)",
-            "text": "Days 1–2: cover 'Describe cloud concepts' first — smallest domain, foundational. Days 3–5: split 'Describe Azure architecture and services' across three sessions: regions/zones, then compute and networking, then storage and identity. Days 6–7: cover 'Describe Azure management and governance' — cost management, Azure Policy, monitoring tools.",
+            "text": "Days 1–2: cover 'Describe the concepts of security, compliance, and identity' first — smallest domain, foundational. Days 3–4: 'Describe the capabilities of Microsoft Entra' — identity types, authentication, access management, identity governance. Day 5–6: the largest domain, 'Describe the capabilities of Microsoft security solutions' — Azure infrastructure security, Defender family, Sentinel. Day 7: 'Describe the capabilities of Microsoft compliance solutions' — Purview compliance, information protection, insider risk.",
             "url": "https://azuremastery.app/exams/sc-900/#study-plan"
           },
           {
@@ -325,6 +325,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -444,10 +445,10 @@
         The exam doesn't ask you to configure a Conditional Access policy or write a KQL query. It expects you to recognise scenarios across the SCI surface: the <strong>shared responsibility model</strong>, <strong>defence-in-depth</strong>, <strong>Zero Trust</strong>, <strong>encryption vs hashing</strong>, identity vs authentication vs authorization, the role of <strong>Microsoft Entra ID</strong> and its identity types, the capabilities of <strong>Microsoft Defender</strong> products and <strong>Microsoft Sentinel</strong>, and Microsoft's compliance solutions including <strong>Microsoft Purview</strong>.
       </p>
       <p>
-        Microsoft updated the SC-900 skills outline on <strong>7 November 2025</strong>. Every question in Azure Mastery's SC-900 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">learn.microsoft.com</a>.
+        Microsoft updated the SC-900 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-900 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="SC-900 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">45 minutes (65 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $99 (≈ £77 UK)</span></li>
@@ -458,10 +459,10 @@
 
     <!-- SC-900 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · November 2025</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 28 July 2026</p>
       <h2 class="display-small section-title">SC-900 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's November 2025 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
+        Four domains, with weights set by Microsoft's <strong>28 July 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -480,48 +481,112 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Concepts of security, compliance, and identity<span class="domain__weight">10–15%</span></h3>
+          <h3>Describe the concepts of security, compliance, and identity<span class="domain__weight">Published weight 10–15%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc900-concepts">51</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Concepts topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe security and compliance concepts</li>
+                <li>Define identity concepts</li>
+              </ul>
               <p>
-                The smallest domain by weight, the foundation everything else builds on. Covers the shared responsibility model, <em>defence-in-depth</em>, the <em>Zero Trust</em> model, encryption vs hashing, GRC concepts; plus identity-as-perimeter, authentication vs authorization, identity providers, directory services and Active Directory, and federation. Around 4–9 questions per sitting.
+                The smallest domain by weight, but the vocabulary every later domain leans on. The shared responsibility model, defence-in-depth, and Zero Trust set the mental model for "who secures what"; encryption vs hashing and GRC (governance, risk, compliance) concepts round out the security half. The identity half treats identity as the primary security perimeter and drills the distinction between authentication and authorization, plus identity providers, directory services, Active Directory, and federation. Get these definitions solid — every later domain assumes you already have them.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Capabilities of Microsoft Entra<span class="domain__weight">25–30%</span></h3>
+          <h3>Describe the capabilities of Microsoft Entra<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc900-entra">112</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Entra topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe function and identity types of Microsoft Entra ID</li>
+                <li>Describe authentication capabilities of Microsoft Entra ID</li>
+                <li>Describe access management capabilities of Microsoft Entra ID</li>
+                <li>Describe identity protection and governance capabilities of Microsoft Entra</li>
+              </ul>
               <p>
-                The identity surface. Microsoft Entra ID functions and identity types (member, guest, hybrid); authentication methods (passwords, MFA, passwordless, password protection); access management (Conditional Access, Microsoft Entra roles and RBAC); identity protection and governance (Identity Protection, PIM, entitlement management). Around 11–18 questions.
+                The identity surface, and the second-heaviest domain. Entra ID's function and identity types, including hybrid identity and agent ID; authentication methods, MFA, and password protection; access management through Conditional Access and Entra roles/RBAC; and identity protection and governance — ID Governance, access reviews, Privileged Identity Management, and Entra ID Protection. The exam repeatedly tests which of these four sub-areas a described capability belongs to, since several sound similar in isolation.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Capabilities of Microsoft security solutions<span class="domain__weight">35–40%</span></h3>
+          <h3>Describe the capabilities of Microsoft security solutions<span class="domain__weight">Published weight 35–40%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc900-security">150</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Security topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe core infrastructure security services in Azure</li>
+                <li>Describe security management capabilities of Azure</li>
+                <li>Describe capabilities of Microsoft Sentinel</li>
+                <li>Describe threat protection with Microsoft Defender XDR</li>
+              </ul>
               <p>
-                The largest domain. Core Azure security services (Azure Network Security Groups, Azure Firewall, Azure DDoS Protection, Web Application Firewall); the <em>Microsoft Defender</em> product family (for Cloud, for Endpoint, for Office 365, for Identity, Defender XDR); SIEM and SOAR via <em>Microsoft Sentinel</em>; and Microsoft Defender Threat Intelligence. Around 16–24 questions per sitting.
+                The largest domain by a clear margin. Core Azure infrastructure security — DDoS Protection, Azure Firewall, WAF, network segmentation, NSGs, Bastion, Key Vault — sits alongside security management through Microsoft Defender for Cloud and Cloud Security Posture Management. Microsoft Sentinel brings the SIEM/SOAR concepts, and the Defender XDR family (for Office 365, Endpoint, Cloud Apps, Identity, Vulnerability Management, Threat Intelligence) rounds it out. With this many named products, candidates who can't map "which Defender product covers this surface" lose the most marks here.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Capabilities of Microsoft compliance solutions<span class="domain__weight">20–25%</span></h3>
+          <h3>Describe the capabilities of Microsoft compliance solutions<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc900-compliance">84</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Compliance topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe Microsoft Service Trust Portal and privacy principles</li>
+                <li>Describe compliance management capabilities of Microsoft Purview</li>
+                <li>Describe information protection, data lifecycle management, and data governance capabilities of Microsoft Purview</li>
+                <li>Describe insider risk, eDiscovery, and audit capabilities in Microsoft Purview</li>
+              </ul>
               <p>
-                The compliance surface. Microsoft Purview (compliance portal, Compliance Manager, compliance score); information protection and data lifecycle management (sensitivity labels, retention policies, records management, DLP); insider risk capabilities (Insider Risk Management, Communication Compliance); and Microsoft Priva for privacy management. Around 9–14 questions.
+                Almost entirely a Microsoft Purview domain. Compliance management (the Purview portal, Compliance Manager, compliance score) leads into information protection and data lifecycle management — data classification, Content and Activity explorer, sensitivity labels, DLP, records management, and retention policies — before insider risk management, eDiscovery, and audit round it out. The Service Trust Portal and Microsoft's privacy principles sit at the start as smaller, easy-to-overlook context.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Common SC-900 traps -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where SC-900 candidates slip</h2>
+      <div class="traps">
+        <article class="trap">
+          <h3>Authentication vs authorization</h3>
+          <p>
+            Authentication proves who you are; authorization decides what you're allowed to do once you're proven. A question about MFA, passwordless sign-in, or password protection is testing authentication. A question about Conditional Access policies or role-based access control is testing authorization. Mixing the two up is the single most common miss in the concepts domain.
+          </p>
+        </article>
+        <article class="trap">
+          <h3>Which Defender product covers this surface</h3>
+          <p>
+            Microsoft Defender is a family, not one product, and SC-900 tests whether you can match a described surface to the right member: Defender for Office 365 (email and collaboration), Defender for Endpoint (devices), Defender for Cloud Apps (SaaS and shadow IT), Defender for Identity (on-premises Active Directory signals), and Defender for Cloud (workload posture across Azure). Defender XDR then correlates signal across all of them — it doesn't replace any one product.
+          </p>
+        </article>
+        <article class="trap">
+          <h3>Microsoft Sentinel vs Microsoft Defender</h3>
+          <p>
+            Sentinel is a SIEM/SOAR platform — it aggregates and correlates security signal across your whole estate, including non-Microsoft sources, and automates response. Defender XDR is an extended detection and response product scoped to Microsoft's own telemetry (identities, endpoints, email, cloud apps). A scenario about ingesting third-party log sources or building custom automation playbooks points to Sentinel, not Defender.
+          </p>
+        </article>
+        <article class="trap">
+          <h3>Sensitivity labels vs retention labels in Purview</h3>
+          <p>
+            Both are Microsoft Purview labels, but they solve different problems. Sensitivity labels classify and protect content — encryption, watermarks, access restriction — based on what the content is. Retention labels and retention policies govern how long content is kept or when it must be deleted, regardless of sensitivity. A question about keeping data for a legally required period is retention, not sensitivity.
+          </p>
+        </article>
+        <article class="trap">
+          <h3>Compliance Manager vs compliance score</h3>
+          <p>
+            Compliance Manager is the Purview workspace where you manage assessments and controls against a chosen regulation or standard. Compliance score is the single numeric output that workspace produces, weighted by how much risk each control reduces. Candidates who describe compliance score as "a separate tool" rather than an output of Compliance Manager tend to miss this pairing.
+          </p>
         </article>
       </div>
     </section>
@@ -531,13 +596,13 @@
       <p class="label-eyebrow section-eyebrow">Designed for SC-900</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass SC-900</h2>
       <p>
-        Azure Mastery ships with <strong>397 SC-900 practice questions</strong>, every one written specifically against the current (November 2025) skills outline. Each question carries a domain tag mapped to the official four domains (SCI concepts, Microsoft Entra, security solutions, compliance solutions), so you always know which area you're being tested on and where your weak spots are clustered.
+        Azure Mastery ships with <strong>397 SC-900 practice questions</strong>, every one written specifically against the current (July 2026) skills outline. Each question carries a domain tag mapped to the official four domains (SCI concepts, Microsoft Entra, security solutions, compliance solutions), so you always know which area you're being tested on and where your weak spots are clustered. In Azure Mastery's SC-900 bank, most questions are single-select, with a meaningful slice of scenario-based and multi-select questions, plus smaller shares of drag-to-match, hot-area, yes/no, dropdown-select, case-study, and drag-and-drop formats.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your SC-900 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a Conditional Access scenario wrong? You'll see another Entra access-management question in the next session. Master "Defender for Cloud vs Defender for Endpoint" three sessions running and the engine backs off, surfacing fresh Sentinel or Purview scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a Conditional Access scenario wrong? You'll see another Entra access-management question in the next session. Microsoft security solutions is the heaviest domain by far at 35–40%, and the plan weights it accordingly — expect more Defender-family and Sentinel questions than any other domain until your accuracy there catches up. Master "Defender for Cloud vs Defender for Endpoint" three sessions running and the engine backs off, surfacing fresh Sentinel or Purview scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> is the secret weapon for foundational exams like SC-900. The same domain you mastered six weeks ago is the domain you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry — the padlock icon on the Today screen is your "revisit before you forget" cue.
@@ -546,7 +611,7 @@
         <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised question set drawn from original practice questions, 45-minute timer, no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. For SC-900 it's built to catch the exam's favourite pairs — authentication vs authorization, and which Defender product covers a given surface — with the specific distinction spelled out, not just "wrong answer". Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -724,13 +789,13 @@
         <details class="faq">
           <summary>How long should I study for SC-900?</summary>
           <div class="faq__answer">
-            <p>Most candidates with prior IT experience pass after one to two weeks of focused revision. If cloud computing is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
+            <p>Most candidates with prior IT experience pass after one to two weeks of focused revision. If security and compliance concepts are genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>SC-900 vs SC-200 — which should I take first?</summary>
+          <summary>SC-900 vs <a href="/exams/az-900/">AZ-900</a> — which should I take first?</summary>
           <div class="faq__answer">
-            <p>SC-900 first if security isn't already your day job. SC-900 teaches you the SCI vocabulary — Zero Trust, defence-in-depth, the Microsoft Defender product family, Microsoft Sentinel, Purview compliance — without expecting you to triage incidents. SC-200 (Security Operations Analyst Associate) is the role-based exam — it expects you to investigate incidents in Sentinel, configure Defender XDR, and write KQL queries. Most candidates pass SC-900 in a few weeks, then spend two to three months on SC-200.</p>
+            <p>Neither depends on the other, so pick based on which vocabulary you need first. SC-900 teaches Microsoft's security, compliance, and identity stack — Zero Trust, Microsoft Entra, the Defender product family, Sentinel, Purview compliance. AZ-900 teaches general Azure fundamentals — regions and availability zones, core compute and networking services, pricing, and governance tools like Azure Policy. If your role is security-adjacent, start with SC-900; if you're new to Azure generally, start with AZ-900. Many candidates who work across both sit both, in either order, since they don't overlap much.</p>
           </div>
         </details>
         <details class="faq">

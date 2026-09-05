@@ -264,7 +264,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/az-700/#study-plan",
         "name": "How to study for AZ-700 (Microsoft Azure Network Engineer) in 6 weeks",
-        "description": "A six-week study plan mapped to the AZ-700 skills outline effective 27 July 2026, Azure Mastery's adaptive study plan, and the in-app exam rehearsal.",
+        "description": "Build networking foundations, then practise traffic delivery, private access and protection. Use the final study blocks of this six-week route for review and timed rehearsal.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -274,22 +274,85 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Core infrastructure and DNS (Weeks 1–2)",
-            "text": "Week 1: cover 'Design and implement core networking infrastructure' — the largest domain (25–30%). VNets, subnets, IP addressing strategy, public IP SKUs, IPv6, VNet peering (regional, global, gateway transit), hub-and-spoke vs Virtual WAN, route tables and UDRs, BGP propagation, Azure DNS public/private zones. Week 2: cover 'Design, implement, and manage connectivity services' — VPN Gateway (S2S, P2S, V2V, BGP), ExpressRoute (circuits, peering, FastPath, ER Direct), Azure Virtual WAN secured hubs.",
+            "name": "Days 1–3: Virtual network design",
+            "text": "Plan subnets and IP addressing. Compare regional and global peering. Review gateway transit and hub-and-spoke designs.",
             "url": "https://azuremastery.app/exams/az-700/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Application delivery and private access (Weeks 3–4)",
-            "text": "Week 3: cover 'Design and implement application delivery services' — Azure Load Balancer (public, internal, Standard SKU), Application Gateway v2 (URL routing, SSL termination, WAF, autoscaling), Azure Front Door (global, caching), Traffic Manager routing methods. Week 4: cover 'Design and implement private access to Azure services' — Private Link, Private Endpoints, service endpoints, VNet integration for App Service / Functions, Private Link Service.",
+            "name": "Days 4–6: Routing and topology",
+            "text": "Configure route tables and user-defined routes. Review BGP routes and propagation. Compare hub-and-spoke with Virtual WAN.",
             "url": "https://azuremastery.app/exams/az-700/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Network security and exam sharpening (Weeks 5–6)",
-            "text": "Week 5: cover 'Design and implement Azure network security services' — Azure Firewall (rules, threat intelligence, Premium IDPS and TLS inspection, Firewall Manager), NSGs and ASGs, Web Application Firewall on App Gateway and Front Door (CRS rules, custom rules, geo filtering, rate limiting), DDoS Protection (Network vs IP plans). Week 6: switch to Focus Weak Spots sessions every morning, then two full-length 100-minute Exam Simulator runs in the second half. Schedule the exam when you are scoring 750+ with confidence.",
+            "name": "Days 7–9: Azure DNS",
+            "text": "Compare public and private zones. Configure virtual network links. Review registration, resolution and conditional forwarding.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Days 10–14: Hybrid connectivity",
+            "text": "Compare site-to-site, point-to-site and VNet-to-VNet VPNs. Review ExpressRoute circuits, peerings, FastPath and Direct. Explore Virtual WAN hubs and branch connections.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 15–17: Azure Load Balancer",
+            "text": "Compare public and internal load balancing. Configure backend pools and health probes. Review NAT rules.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 18–21: Application delivery",
+            "text": "Configure Application Gateway routing, TLS and autoscaling. Review WAF integration. Explore Front Door caching, domains and global delivery.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Days 22–24: Traffic Manager",
+            "text": "Compare priority, weighted and performance routing. Review geographic, multi-value and subnet routing. Choose between Traffic Manager and Front Door.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Days 25–28: Private connectivity",
+            "text": "Distinguish Private Link, private endpoints and service endpoints. Review VNet integration for App Service and Functions. Explore Private Link Service across tenants.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 9,
+            "name": "Days 29–32: Firewall and network rules",
+            "text": "Review Azure Firewall rules, threat intelligence and Firewall Manager. Explore Premium IDPS and TLS inspection. Analyse NSG and ASG rules and flow logs.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 10,
+            "name": "Days 33–36: Web and DDoS protection",
+            "text": "Compare managed and custom WAF rules. Review geographic filtering and rate limits. Compare DDoS plans and mitigation reports.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 11,
+            "name": "Days 37–40: Target weaker topics",
+            "text": "Use Focus Weak Spots to identify gaps. Revisit core infrastructure and connectivity decisions. Review the explanations for missed questions.",
+            "url": "https://azuremastery.app/exams/az-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 12,
+            "name": "Days 41–42: Timed rehearsal",
+            "text": "Complete two 100-minute Exam Simulator sessions. Review mistakes after each run. Plan further practice where needed.",
             "url": "https://azuremastery.app/exams/az-700/#study-plan"
           }
         ],
@@ -308,7 +371,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -621,35 +684,102 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested AZ-700 study plan</h2>
-      <p class="section-lede">
-        Most candidates pass AZ-700 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AZ-700 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Core infrastructure and DNS</h3>
+      <p class="section-lede">Build networking foundations, then practise traffic delivery, private access and protection. Use the final study blocks of this six-week route for review and timed rehearsal.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–3">
+          <h3>Virtual network design</h3>
           <ul>
-            <li><strong>Days 1–3:</strong> VNets, subnets, IP addressing strategy (RFC1918, public IP SKUs, IPv6). Then VNet peering — regional, global, gateway transit, hub-and-spoke topology design.</li>
-            <li><strong>Days 4–6:</strong> Route tables, user-defined routes, BGP-propagated routes, route propagation rules. Hub-and-spoke vs Virtual WAN trade-offs.</li>
-            <li><strong>Days 7–9:</strong> Azure DNS — public zones, private zones, virtual network links, registration vs resolution, conditional forwarding via custom DNS servers.</li>
-            <li><strong>Days 10–14:</strong> Hybrid connectivity foundations — VPN Gateway (S2S, P2S, V2V, BGP), ExpressRoute (circuits, peerings, FastPath, ER Direct), Virtual WAN (secured hubs, branch connections).</li>
+            <li>Plan subnets and IP addressing.</li>
+            <li>Compare regional and global peering.</li>
+            <li>Review gateway transit and hub-and-spoke designs.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Application delivery and private access</h3>
+        <li data-period-label="Days 4–6">
+          <h3>Routing and topology</h3>
           <ul>
-            <li><strong>Days 15–17:</strong> Azure Load Balancer — public, internal, Standard SKU, backend pools, health probes, NAT rules.</li>
-            <li><strong>Days 18–21:</strong> Application Gateway v2 — URL routing, multi-site, SSL termination, autoscaling, integration with WAF. Then Azure Front Door — global, caching, WAF, custom domains.</li>
-            <li><strong>Days 22–24:</strong> Traffic Manager routing methods — priority, weighted, performance, geographic, multi-value, subnet. Choosing between Front Door and Traffic Manager.</li>
-            <li><strong>Days 25–28:</strong> Private Link, Private Endpoints, service endpoints, VNet integration for App Service / Functions, Private Link Service for cross-tenant private exposure.</li>
+            <li>Configure route tables and user-defined routes.</li>
+            <li>Review BGP routes and propagation.</li>
+            <li>Compare hub-and-spoke with Virtual WAN.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Network security, sharpen, simulate</h3>
+        <li data-period-label="Days 7–9">
+          <h3>Azure DNS</h3>
           <ul>
-            <li><strong>Days 29–32:</strong> Azure Firewall — rules, threat intelligence, Premium-tier IDPS and TLS inspection, Firewall Manager hierarchies. Plus NSGs and ASGs (effective rules, flow logs).</li>
-            <li><strong>Days 33–36:</strong> Web Application Firewall — managed rule sets (CRS), custom rules, geo filtering, rate limiting on App Gateway and Front Door. DDoS Protection (Network vs IP plans, mitigation reports).</li>
-            <li><strong>Days 37–40:</strong> Run <em>Focus Weak Spots</em> every morning. Core infrastructure (25–30%) and connectivity (20–25%) are the heaviest — weight your time accordingly.</li>
-            <li><strong>Days 41–42:</strong> Two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Review carefully. If readiness gauge is 750+ with reasonable confidence, schedule the exam.</li>
+            <li>Compare public and private zones.</li>
+            <li>Configure virtual network links.</li>
+            <li>Review registration, resolution and conditional forwarding.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 10–14">
+          <h3>Hybrid connectivity</h3>
+          <ul>
+            <li>Compare site-to-site, point-to-site and VNet-to-VNet VPNs.</li>
+            <li>Review ExpressRoute circuits, peerings, FastPath and Direct.</li>
+            <li>Explore Virtual WAN hubs and branch connections.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 15–17">
+          <h3>Azure Load Balancer</h3>
+          <ul>
+            <li>Compare public and internal load balancing.</li>
+            <li>Configure backend pools and health probes.</li>
+            <li>Review NAT rules.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 18–21">
+          <h3>Application delivery</h3>
+          <ul>
+            <li>Configure Application Gateway routing, TLS and autoscaling.</li>
+            <li>Review WAF integration.</li>
+            <li>Explore Front Door caching, domains and global delivery.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 22–24">
+          <h3>Traffic Manager</h3>
+          <ul>
+            <li>Compare priority, weighted and performance routing.</li>
+            <li>Review geographic, multi-value and subnet routing.</li>
+            <li>Choose between Traffic Manager and Front Door.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 25–28">
+          <h3>Private connectivity</h3>
+          <ul>
+            <li>Distinguish Private Link, private endpoints and service endpoints.</li>
+            <li>Review VNet integration for App Service and Functions.</li>
+            <li>Explore Private Link Service across tenants.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 29–32">
+          <h3>Firewall and network rules</h3>
+          <ul>
+            <li>Review Azure Firewall rules, threat intelligence and Firewall Manager.</li>
+            <li>Explore Premium IDPS and TLS inspection.</li>
+            <li>Analyse NSG and ASG rules and flow logs.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 33–36">
+          <h3>Web and DDoS protection</h3>
+          <ul>
+            <li>Compare managed and custom WAF rules.</li>
+            <li>Review geographic filtering and rate limits.</li>
+            <li>Compare DDoS plans and mitigation reports.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 37–40">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Use Focus Weak Spots to identify gaps.</li>
+            <li>Revisit core infrastructure and connectivity decisions.</li>
+            <li>Review the explanations for missed questions.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 41–42">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two 100-minute Exam Simulator sessions.</li>
+            <li>Review mistakes after each run.</li>
+            <li>Plan further practice where needed.</li>
           </ul>
         </li>
       </ol>

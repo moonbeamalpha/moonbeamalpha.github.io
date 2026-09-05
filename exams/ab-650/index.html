@@ -271,7 +271,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ab-650/#study-plan",
         "name": "How to study for AB-650 (Administering Microsoft 365 and AI Services) in 6 weeks",
-        "description": "A six-week study plan mapped to the AB-650 skills outline, weighted toward the two largest domains, Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Move from tenant administration to security and AI services. This six-week route gives two weeks each to governance and AI, then time for review.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -281,29 +281,43 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Tenant and workloads (Week 1)",
-            "text": "Configure and manage a Microsoft 365 tenant — branding, domains, organizational settings, group-based and pay-as-you-go licensing including AI-service licences, Microsoft 365 Backup, network connectivity insights, service health. Then manage workloads — mailboxes, Teams, SharePoint sites, and the Copilot meeting-transcription policy matrix.",
+            "name": "Week 1: Tenant and workloads",
+            "text": "Configure domains, branding, settings and licences. Review Microsoft 365 Backup, connectivity insights and service health. Manage mailboxes, Teams, SharePoint and Copilot transcription policies.",
             "url": "https://azuremastery.app/exams/ab-650/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Govern and secure (Weeks 2–3, largest domain, 40–45%)",
-            "text": "Week 2: identities in Microsoft Entra — users, guests, groups, roles and Privileged Identity Management, administrative units, bulk management via Microsoft Graph PowerShell. Then authentication and access — methods, Password Protection, self-service password reset, Conditional Access and ID Protection. Week 3: secure workloads with Defender for Office 365 — alerts, threat policies, investigation, attack simulations. Then protect data with Microsoft Purview — DLP across workloads and Copilot, sensitivity labels, retention, and Data Security Posture Management.",
+            "name": "Week 2: Identity and access",
+            "text": "Manage users, guests, groups, roles and administrative units. Practise PIM and bulk changes with Microsoft Graph PowerShell. Review authentication, password protection, SSPR, Conditional Access and ID Protection.",
             "url": "https://azuremastery.app/exams/ab-650/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "AI services (Weeks 4–5, 35–40%)",
-            "text": "Week 4: enable and manage Microsoft 365 Copilot — tenant readiness, data-readiness and oversharing remediation, Copilot settings, Copilot Search, Cowork, third-party providers, connectors. Week 5: implement and secure agents — Microsoft Entra Agent ID lifecycle, the agent registry, Agent 365 governance, and monitoring AI service cost, adoption and health through the Copilot Control System.",
+            "name": "Week 3: Threat and data protection",
+            "text": "Configure Defender for Office 365 policies and alerts. Practise investigation and attack simulations. Review Purview DLP, sensitivity labels, retention and data security posture.",
             "url": "https://azuremastery.app/exams/ab-650/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 4,
-            "name": "Sharpen and simulate (Week 6)",
-            "text": "Run Focus Weak Spots every morning, drilling the highest-value distinctions the exam repeats. Then run two full-length 120-minute Exam Simulator sessions. Schedule the exam when your readiness gauge is 750+ with reasonable confidence.",
+            "name": "Week 4: Microsoft 365 Copilot",
+            "text": "Check tenant readiness and address data oversharing. Review Copilot settings, Search and Cowork. Configure connectors and third-party providers.",
+            "url": "https://azuremastery.app/exams/ab-650/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Week 5: Agents and AI operations",
+            "text": "Review the Microsoft Entra Agent ID lifecycle. Explore the agent registry and Agent 365 governance. Monitor AI cost, adoption and health in the Copilot Control System.",
+            "url": "https://azuremastery.app/exams/ab-650/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Week 6: Review and rehearse",
+            "text": "Use Focus Weak Spots to revisit difficult distinctions. Complete two timed, 120-minute Exam Simulator sessions. Review errors and plan any further practice.",
             "url": "https://azuremastery.app/exams/ab-650/#study-plan"
           }
         ],
@@ -322,7 +336,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #8D87EE; --amh-accent-2: #3F38B7; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -613,34 +627,54 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested AB-650 study plan</h2>
-      <p class="section-lede">
-        Most candidates prepare for AB-650 in four to eight weeks, depending on their Microsoft 365 and Microsoft Entra administration experience. The six-week plan below weights the two largest domains — govern/secure and AI services — with two weeks each, Azure Mastery's adaptive sessions, and the in-app exam simulator. Adjust the pace to your background — the readiness gauge tells you when you're done, not the calendar.
-      </p>
-      <ol class="study-plan">
+      <p class="section-lede">Move from tenant administration to security and AI services. This six-week route gives two weeks each to governance and AI, then time for review.</p>
+      <ol class="study-plan study-plan--weekly">
         <li data-period-label="Week 1">
           <h3>Tenant and workloads</h3>
           <ul>
-            <li><strong>Week 1:</strong> Configure and manage a Microsoft 365 tenant — branding, domains, organisational settings, licensing including AI-service licences, Microsoft 365 Backup, network connectivity insights, service health. Then manage workloads — mailboxes, Teams, SharePoint sites, and the Copilot meeting-transcription policy matrix.</li>
+            <li>Configure domains, branding, settings and licences.</li>
+            <li>Review Microsoft 365 Backup, connectivity insights and service health.</li>
+            <li>Manage mailboxes, Teams, SharePoint and Copilot transcription policies.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 2–3">
-          <h3>Govern and secure (largest domain, 40–45%)</h3>
+        <li data-period-label="Week 2">
+          <h3>Identity and access</h3>
           <ul>
-            <li><strong>Week 2:</strong> Identities in Microsoft Entra — users, guests, groups, roles and Privileged Identity Management, administrative units, bulk management via Microsoft Graph PowerShell. Then authentication and access — methods, Password Protection, self-service password reset, Conditional Access and ID Protection.</li>
-            <li><strong>Week 3:</strong> Secure Microsoft 365 workloads with Defender for Office 365 — alerts, threat policies, investigation, attack simulations. Then protect data with Microsoft Purview — DLP across workloads and Copilot, sensitivity labels, retention, and Data Security Posture Management.</li>
+            <li>Manage users, guests, groups, roles and administrative units.</li>
+            <li>Practise PIM and bulk changes with Microsoft Graph PowerShell.</li>
+            <li>Review authentication, password protection, SSPR, Conditional Access and ID Protection.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 4–5">
-          <h3>Manage and secure AI services (35–40%)</h3>
+        <li data-period-label="Week 3">
+          <h3>Threat and data protection</h3>
           <ul>
-            <li><strong>Week 4:</strong> Enable and manage Microsoft 365 Copilot — tenant readiness, data-readiness and oversharing remediation, Copilot settings, Copilot Search, Cowork, third-party providers, connectors.</li>
-            <li><strong>Week 5:</strong> Implement and secure agents — Microsoft Entra Agent ID lifecycle, the agent registry, Agent 365 governance, and monitoring AI service cost, adoption and health through the Copilot Control System.</li>
+            <li>Configure Defender for Office 365 policies and alerts.</li>
+            <li>Practise investigation and attack simulations.</li>
+            <li>Review Purview DLP, sensitivity labels, retention and data security posture.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 4">
+          <h3>Microsoft 365 Copilot</h3>
+          <ul>
+            <li>Check tenant readiness and address data oversharing.</li>
+            <li>Review Copilot settings, Search and Cowork.</li>
+            <li>Configure connectors and third-party providers.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 5">
+          <h3>Agents and AI operations</h3>
+          <ul>
+            <li>Review the Microsoft Entra Agent ID lifecycle.</li>
+            <li>Explore the agent registry and Agent 365 governance.</li>
+            <li>Monitor AI cost, adoption and health in the Copilot Control System.</li>
           </ul>
         </li>
         <li data-period-label="Week 6">
-          <h3>Sharpen and simulate</h3>
+          <h3>Review and rehearse</h3>
           <ul>
-            <li><strong>Week 6:</strong> Run <em>Focus Weak Spots</em> every morning, drilling the highest-value distinctions the exam repeats. Then run two full-length <em>Exam Simulator</em> sessions at the full 120-minute length. Schedule the exam when readiness gauge is 750+ with reasonable confidence.</li>
+            <li>Use Focus Weak Spots to revisit difficult distinctions.</li>
+            <li>Complete two timed, 120-minute Exam Simulator sessions.</li>
+            <li>Review errors and plan any further practice.</li>
           </ul>
         </li>
       </ol>

@@ -265,7 +265,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/gh-300/#study-plan",
         "name": "How to study for GH-300 (GitHub Copilot) in 2 weeks",
-        "description": "A two-week revision plan mapped to the GH-300 skills outline (January 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Explore Copilot features, responsible use and architecture in the first week. Use the second week for prompting, safeguards and timed practice.",
         "totalTime": "P14D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -276,15 +276,50 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Master the core domains (Days 1–7)",
-            "text": "Days 1–3: cover 'Use GitHub Copilot Features' — inline suggestions, Copilot Chat, the Copilot CLI, Plan Mode, Agent Mode and Edit Mode, MCP, code review, Spaces and Spark, and organization policy management. This is the largest domain at 25–30%. Days 4–5: work through 'Use GitHub Copilot Responsibly' — the risks and limitations of generative AI, ethical and responsible use, identifying harms and mitigations, and validating output before you trust it (15–20%). Days 6–7: cover 'Understand GitHub Copilot Data and Architecture' — how data flows, input processing and prompt building, proxy filtering, post-processing, the code-suggestion lifecycle, and LLM limitations.",
+            "name": "Days 1–3: Copilot features",
+            "text": "Explore inline suggestions, Chat, CLI and planning, agent and editing modes. Review MCP, code review, Spaces and Spark. Compare organisation policy settings.",
             "url": "https://azuremastery.app/exams/gh-300/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Sharpen and simulate (Days 8–14)",
-            "text": "Days 8–9: cover 'Apply Prompt Engineering and Context Crafting' (prompt structure, how context is determined, zero-shot and few-shot prompting) and 'Improve Developer Productivity with GitHub Copilot' (code generation, refactoring, documentation, generating tests and edge cases, security and performance). Days 10–11: cover 'Configure Privacy, Content Exclusions, and Safeguards' (content exclusions, editor settings, output ownership and limitations, duplication detection, security warnings), then run Focus Weak Spots every morning — the app surfaces the questions most likely to move your readiness score. Days 12–13: run the Exam Simulator end-to-end at the full 90-minute length, twice; if scoring 750+ consistently, book the exam. Day 14: light review only, sleep well, sit the exam.",
+            "name": "Days 4–5: Responsible use",
+            "text": "Review generative AI risks and limitations. Identify possible harms and mitigations. Validate generated output before relying on it.",
+            "url": "https://azuremastery.app/exams/gh-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Days 6–7: Data and architecture",
+            "text": "Trace input processing and prompt building. Review proxy filtering and post-processing. Understand the suggestion lifecycle and model limitations.",
+            "url": "https://azuremastery.app/exams/gh-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Days 8–9: Prompts and productivity",
+            "text": "Practise prompt structure, context, zero-shot and few-shot examples. Use Copilot for generation, refactoring and documentation. Review tests, edge cases, security and performance.",
+            "url": "https://azuremastery.app/exams/gh-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 10–11: Privacy and safeguards",
+            "text": "Review content exclusions and editor settings. Explore output ownership, duplication detection and security warnings. Use Focus Weak Spots to revisit difficult topics.",
+            "url": "https://azuremastery.app/exams/gh-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 12–13: Timed rehearsal",
+            "text": "Complete two simulator sessions of about 90 minutes. Review explanations after each run. Revisit the decisions you missed.",
+            "url": "https://azuremastery.app/exams/gh-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Day 14: Light review",
+            "text": "Revisit your key notes. Allow time to rest. Use your practice results to decide whether more study is needed.",
             "url": "https://azuremastery.app/exams/gh-300/#study-plan"
           }
         ],
@@ -766,7 +801,7 @@
 .site-nav__cta { min-height: 44px; display: inline-flex; align-items: center; }
 </style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -1083,25 +1118,62 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">2-week revision plan</p>
       <h2 class="display-small section-title">Suggested GH-300 study plan</h2>
-      <p class="section-lede">
-        If you already use GitHub Copilot day to day, most candidates pass GH-300 after one to two weeks of focused revision. Below is a two-week plan that maps onto Azure Mastery's six domains, simulator, and decay alerts. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Master the core domains</h3>
+      <p class="section-lede">Explore Copilot features, responsible use and architecture in the first week. Use the second week for prompting, safeguards and timed practice.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–3">
+          <h3>Copilot features</h3>
           <ul>
-            <li><strong>Days 1–3:</strong> Tackle <em>Use GitHub Copilot Features</em> first. It's the largest domain (25–30%): inline suggestions, Copilot Chat, the Copilot CLI, Plan Mode, Agent Mode, Edit Mode, MCP, code review, Spaces and Spark, and org policy management. 30 questions per session, two sessions per day.</li>
-            <li><strong>Days 4–5:</strong> Work through <em>Use GitHub Copilot Responsibly</em> (15–20%). Risks and limitations of generative AI, ethical use, identifying harms and mitigations, and validating output before you trust it.</li>
-            <li><strong>Days 6–7:</strong> Cover <em>Understand GitHub Copilot Data and Architecture</em>. Data flow, input processing and prompt building, proxy filtering and post-processing, the code-suggestion lifecycle, and LLM limitations.</li>
+            <li>Explore inline suggestions, Chat, CLI and planning, agent and editing modes.</li>
+            <li>Review MCP, code review, Spaces and Spark.</li>
+            <li>Compare organisation policy settings.</li>
           </ul>
         </li>
-        <li>
-          <h3>Sharpen and simulate</h3>
+        <li data-period-label="Days 4–5">
+          <h3>Responsible use</h3>
           <ul>
-            <li><strong>Days 8–9:</strong> Cover <em>Apply Prompt Engineering and Context Crafting</em> (prompt structure, how context is determined, zero-shot and few-shot prompting) and <em>Improve Developer Productivity with GitHub Copilot</em> (code generation, refactoring, documentation, tests and edge cases, security and performance).</li>
-            <li><strong>Days 10–11:</strong> Cover <em>Configure Privacy, Content Exclusions, and Safeguards</em> (content exclusions, editor settings, output ownership, duplication detection, security warnings), then run the <em>Focus Weak Spots</em> session every morning. The app surfaces the 5–10 questions most likely to move your readiness score.</li>
-            <li><strong>Days 12–13:</strong> Run the <em>Exam Simulator</em> end-to-end at full ~90-minute length, twice. Review carefully after each. If you're scoring 750+ consistently, book the exam.</li>
-            <li><strong>Day 14:</strong> Light review only. Sleep well. Sit the exam.</li>
+            <li>Review generative AI risks and limitations.</li>
+            <li>Identify possible harms and mitigations.</li>
+            <li>Validate generated output before relying on it.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 6–7">
+          <h3>Data and architecture</h3>
+          <ul>
+            <li>Trace input processing and prompt building.</li>
+            <li>Review proxy filtering and post-processing.</li>
+            <li>Understand the suggestion lifecycle and model limitations.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 8–9">
+          <h3>Prompts and productivity</h3>
+          <ul>
+            <li>Practise prompt structure, context, zero-shot and few-shot examples.</li>
+            <li>Use Copilot for generation, refactoring and documentation.</li>
+            <li>Review tests, edge cases, security and performance.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 10–11">
+          <h3>Privacy and safeguards</h3>
+          <ul>
+            <li>Review content exclusions and editor settings.</li>
+            <li>Explore output ownership, duplication detection and security warnings.</li>
+            <li>Use Focus Weak Spots to revisit difficult topics.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 12–13">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two simulator sessions of about 90 minutes.</li>
+            <li>Review explanations after each run.</li>
+            <li>Revisit the decisions you missed.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 14">
+          <h3>Light review</h3>
+          <ul>
+            <li>Revisit your key notes.</li>
+            <li>Allow time to rest.</li>
+            <li>Use your practice results to decide whether more study is needed.</li>
           </ul>
         </li>
       </ol>

@@ -265,7 +265,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/az-204/#study-plan",
         "name": "How to study for AZ-204 (Developing Solutions for Microsoft Azure) in 5 weeks",
-        "description": "A five-week study plan mapped to the AZ-204 skills outline (January 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator. Designed for working developers who need to pass before AZ-204 retires on 31 July 2026.",
+        "description": "Use these five weeks of study blocks for reference to the retained AZ-204 content. Review the retirement notice and available certification routes before choosing an exam.",
         "totalTime": "P35D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -276,29 +276,92 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Compute solutions (Week 1)",
-            "text": "Week 1: cover 'Develop Azure compute solutions' — the largest domain. Containerised solutions (creating images, Azure Container Registry, Azure Container Instances, Azure Container Apps); Azure App Service Web Apps (TLS, autoscaling, deployment slots, configuration); Azure Functions (input/output bindings, triggers from data ops, timers, webhooks). Practise reading and writing actual function code for the bindings you'll see in the exam.",
+            "name": "Days 1–2: Containers",
+            "text": "Build container images. Compare ACR, ACI and Container Apps. Practise docker build and az acr build.",
             "url": "https://azuremastery.app/exams/az-204/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Storage and security (Week 2)",
-            "text": "Week 2: cover 'Develop for Azure storage' — Cosmos DB SDK operations (containers, items, consistency levels, change feed) and Azure Blob Storage (properties, metadata, SDK operations, lifecycle). Then 'Implement Azure security' — Microsoft Identity platform authentication, Microsoft Entra ID app authorisation, SAS, App Configuration / Key Vault for secrets and certs, and Managed Identities for Azure resources. Heavy on SDK code samples in C# and Python.",
+            "name": "Days 3–4: App Service",
+            "text": "Configure TLS and app settings. Review autoscaling rules. Practise deployment slots and swap with preview.",
             "url": "https://azuremastery.app/exams/az-204/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Monitoring + integration (Week 3)",
-            "text": "Week 3: cover 'Monitor, troubleshoot, and optimize' — Application Insights metrics/logs/traces, availability tests, alerts, instrumenting an app. Then 'Connect to and consume Azure services' — API Management (creating instances, documenting APIs, access, policies); event-based (Event Grid, Event Hubs); message-based (Service Bus, Queue Storage); plus Microsoft Graph integration.",
+            "name": "Days 5–7: Azure Functions",
+            "text": "Create function apps. Compare HTTP, timer, storage and Service Bus triggers. Write functions with input and output bindings.",
             "url": "https://azuremastery.app/exams/az-204/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 4,
-            "name": "Sharpen and simulate (Weeks 4–5)",
-            "text": "Week 4: Focus Weak Spots every morning — Azure Mastery surfaces the 5–10 questions most likely to move your readiness score, prioritising decayed topics. Week 5: two end-to-end Exam Simulator runs at full 100-minute length, days apart, with thorough review after each. Day 35: light review, sleep, sit the exam if your readiness gauge is 750+ with confidence. Don't leave it to the last week before the 31 July 2026 retirement — vouchers and slots are scarce in the final fortnight of any retiring exam.",
+            "name": "Days 8–10: Cosmos DB development",
+            "text": "Practise SDK operations on containers and items. Compare consistency levels. Explore the change feed.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 11–12: Blob Storage development",
+            "text": "Use the SDK for properties and metadata. Configure lifecycle policies. Review versioning and soft delete.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 13–14: Identity and configuration",
+            "text": "Review Microsoft Entra authentication and SAS tokens. Compare App Configuration with Key Vault. Distinguish system-assigned and user-assigned managed identities.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Days 15–16: Application Insights",
+            "text": "Instrument an application. Collect custom metrics, logs and traces. Review availability tests and alerts.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Days 17–19: API Management",
+            "text": "Configure instances and products. Practise rate-limit, transformation and caching policies. Review API versioning.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 9,
+            "name": "Days 20–22: Events and messages",
+            "text": "Compare Event Grid and Event Hubs. Review Service Bus queues, topics and Queue Storage. Explore Microsoft Graph SDK integration.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 10,
+            "name": "Days 23–28: Target weaker topics",
+            "text": "Use Focus Weak Spots for SDK scenarios. Revisit code questions you missed. Return to older topics flagged for review.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 11,
+            "name": "Days 29–32: Historical rehearsal",
+            "text": "Complete two 100-minute simulator sessions, spaced apart. Review explanations after each run. Identify SDK calls you confused.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 12,
+            "name": "Days 33–34: Consolidate learning",
+            "text": "Complete another historical simulator session. Compare mistakes across your practice runs. Revisit the concepts behind repeated errors.",
+            "url": "https://azuremastery.app/exams/az-204/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 13,
+            "name": "Day 35: Review your next route",
+            "text": "Keep revision light. Review the retirement notice and available routes. Choose further study before making exam plans.",
             "url": "https://azuremastery.app/exams/az-204/#study-plan"
           }
         ],
@@ -317,7 +380,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -636,46 +699,110 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">5-week study plan</p>
       <h2 class="display-small section-title">Suggested AZ-204 study plan</h2>
-      <p class="section-lede">
-        Working developers with C#, Python, or Node experience typically pass AZ-204 after four to six weeks of focused study. The five-week plan below front-loads compute (the largest domain) and works through the SDK-heavy storage and security domains second. Set your pace using your practice results and readiness score. Don't leave it to the last fortnight before the 31 July 2026 retirement; vouchers and slots become scarce.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Compute solutions</h3>
+      <p class="section-lede">Use these five weeks of study blocks for reference to the retained AZ-204 content. Review the retirement notice and available certification routes before choosing an exam.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–2">
+          <h3>Containers</h3>
           <ul>
-            <li><strong>Days 1–2:</strong> Containers — building images, ACR, ACI, ACA. Practise <code>docker build</code> + <code>az acr build</code> commands.</li>
-            <li><strong>Days 3–4:</strong> Azure App Service Web Apps — TLS, autoscaling rules, deployment slots, swap with preview, configuration.</li>
-            <li><strong>Days 5–7:</strong> Azure Functions — function apps, triggers (HTTP, timer, blob, queue, Service Bus), input/output bindings. Write actual function code in your language of choice.</li>
+            <li>Build container images.</li>
+            <li>Compare ACR, ACI and Container Apps.</li>
+            <li>Practise docker build and az acr build.</li>
           </ul>
         </li>
-        <li>
-          <h3>Storage and security</h3>
+        <li data-period-label="Days 3–4">
+          <h3>App Service</h3>
           <ul>
-            <li><strong>Days 8–10:</strong> Cosmos DB SDK — CRUD on containers/items, consistency levels (Strong vs Bounded Staleness vs Session vs Consistent Prefix vs Eventual), change feed.</li>
-            <li><strong>Days 11–12:</strong> Azure Blob SDK — properties, metadata, lifecycle policies, versioning, soft delete.</li>
-            <li><strong>Days 13–14:</strong> Microsoft Identity, Microsoft Entra ID auth, SAS tokens, App Configuration vs Key Vault, Managed Identities (system-assigned vs user-assigned).</li>
+            <li>Configure TLS and app settings.</li>
+            <li>Review autoscaling rules.</li>
+            <li>Practise deployment slots and swap with preview.</li>
           </ul>
         </li>
-        <li>
-          <h3>Monitoring + integration</h3>
+        <li data-period-label="Days 5–7">
+          <h3>Azure Functions</h3>
           <ul>
-            <li><strong>Days 15–16:</strong> Application Insights — instrumenting an app, custom metrics/logs/traces, availability tests, smart alerts.</li>
-            <li><strong>Days 17–19:</strong> API Management — instances, products, policies (rate limit, transform, cache), versioning.</li>
-            <li><strong>Days 20–22:</strong> Event-based (Event Grid topics + subscriptions, Event Hubs partitioning + consumer groups) and message-based (Service Bus queues/topics, Queue Storage). Microsoft Graph SDK.</li>
+            <li>Create function apps.</li>
+            <li>Compare HTTP, timer, storage and Service Bus triggers.</li>
+            <li>Write functions with input and output bindings.</li>
           </ul>
         </li>
-        <li>
-          <h3>Sharpen</h3>
+        <li data-period-label="Days 8–10">
+          <h3>Cosmos DB development</h3>
           <ul>
-            <li><strong>Days 23–28:</strong> Run <em>Focus Weak Spots</em> every morning — Azure Mastery surfaces the highest-leverage SDK code questions for your weakest domains. Decay alerts pull older topics back into rotation.</li>
+            <li>Practise SDK operations on containers and items.</li>
+            <li>Compare consistency levels.</li>
+            <li>Explore the change feed.</li>
           </ul>
         </li>
-        <li>
-          <h3>Simulate</h3>
+        <li data-period-label="Days 11–12">
+          <h3>Blob Storage development</h3>
           <ul>
-            <li><strong>Days 29–32:</strong> Two end-to-end <em>Exam Simulator</em> runs at full 100-minute length, days apart. Review carefully after each — pay attention to which SDK calls you mis-identified.</li>
-            <li><strong>Days 33–34:</strong> One more simulator run. If scoring 750+ consistently, schedule the exam.</li>
-            <li><strong>Day 35:</strong> Light review only. Sleep. Sit the exam.</li>
+            <li>Use the SDK for properties and metadata.</li>
+            <li>Configure lifecycle policies.</li>
+            <li>Review versioning and soft delete.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 13–14">
+          <h3>Identity and configuration</h3>
+          <ul>
+            <li>Review Microsoft Entra authentication and SAS tokens.</li>
+            <li>Compare App Configuration with Key Vault.</li>
+            <li>Distinguish system-assigned and user-assigned managed identities.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 15–16">
+          <h3>Application Insights</h3>
+          <ul>
+            <li>Instrument an application.</li>
+            <li>Collect custom metrics, logs and traces.</li>
+            <li>Review availability tests and alerts.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 17–19">
+          <h3>API Management</h3>
+          <ul>
+            <li>Configure instances and products.</li>
+            <li>Practise rate-limit, transformation and caching policies.</li>
+            <li>Review API versioning.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 20–22">
+          <h3>Events and messages</h3>
+          <ul>
+            <li>Compare Event Grid and Event Hubs.</li>
+            <li>Review Service Bus queues, topics and Queue Storage.</li>
+            <li>Explore Microsoft Graph SDK integration.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 23–28">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Use Focus Weak Spots for SDK scenarios.</li>
+            <li>Revisit code questions you missed.</li>
+            <li>Return to older topics flagged for review.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 29–32">
+          <h3>Historical rehearsal</h3>
+          <ul>
+            <li>Complete two 100-minute simulator sessions, spaced apart.</li>
+            <li>Review explanations after each run.</li>
+            <li>Identify SDK calls you confused.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 33–34">
+          <h3>Consolidate learning</h3>
+          <ul>
+            <li>Complete another historical simulator session.</li>
+            <li>Compare mistakes across your practice runs.</li>
+            <li>Revisit the concepts behind repeated errors.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 35">
+          <h3>Review your next route</h3>
+          <ul>
+            <li>Keep revision light.</li>
+            <li>Review the retirement notice and available routes.</li>
+            <li>Choose further study before making exam plans.</li>
           </ul>
         </li>
       </ol>

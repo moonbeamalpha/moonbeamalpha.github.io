@@ -264,7 +264,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ai-300/#study-plan",
         "name": "How to study for AI-300 (Microsoft ML Operations Engineer) in 6 weeks",
-        "description": "A six-week study plan mapped to the AI-300 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Work through ML operations, then generative AI operations and optimisation. Use this six-week route to connect infrastructure choices with model quality and reliability.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -274,22 +274,43 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "MLOps infrastructure and lifecycle (Weeks 1–2)",
-            "text": "Week 1: cover 'Design and implement an MLOps infrastructure' — CI/CD for ML, environment management, registries, governance, reproducibility, lineage. Week 2: cover 'Implement machine learning model lifecycle and operations' (largest domain) — training pipelines, AutoML, deployment to managed online and batch endpoints, A/B traffic, drift monitoring, retraining triggers.",
+            "name": "Week 1: MLOps infrastructure",
+            "text": "Plan CI/CD and reproducible Conda or Docker environments. Review feature stores and model registries. Track governance, lineage and reproducibility.",
             "url": "https://azuremastery.app/exams/ai-300/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "GenAIOps and quality assurance (Weeks 3–4)",
-            "text": "Week 3: cover 'Design and implement a GenAIOps infrastructure' — prompt versioning and registries, evaluation pipelines, deployment patterns for LLM apps, feature-flag prompt rollouts, observability for tokens and cost. Week 4: cover 'Implement generative AI quality assurance and observability' — groundedness checks, hallucination detection, content-safety telemetry, drift on prompts/RAG, distributed tracing.",
+            "name": "Week 2: Model lifecycle",
+            "text": "Build training pipelines and explore AutoML. Deploy online or batch endpoints and compare traffic-splitting choices. Monitor drift and define retraining triggers.",
             "url": "https://azuremastery.app/exams/ai-300/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Optimization and exam sharpening (Weeks 5–6)",
-            "text": "Week 5: cover 'Optimize generative AI systems and model performance' — semantic and embedding caches, batching, model-selection trade-offs (small vs large), fine-tuning vs few-shot vs RAG, token budget management, capacity planning. Week 6: switch to Focus Weak Spots sessions every morning, then two full-length 100-minute Exam Simulator runs in the second half. Schedule the exam when you are scoring 750+ with confidence.",
+            "name": "Week 3: GenAIOps infrastructure",
+            "text": "Version prompts and build evaluation pipelines. Compare deployment patterns and feature-flag rollouts. Track token usage and cost.",
+            "url": "https://azuremastery.app/exams/ai-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Week 4: Quality and observability",
+            "text": "Evaluate groundedness and hallucinations. Review content-safety telemetry and prompt or RAG drift. Use distributed tracing to investigate failures.",
+            "url": "https://azuremastery.app/exams/ai-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Week 5: Performance and cost",
+            "text": "Compare semantic caches, embedding caches and batching. Choose models and weigh fine-tuning, few-shot prompting and RAG. Plan token budgets and capacity.",
+            "url": "https://azuremastery.app/exams/ai-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Week 6: Review and rehearse",
+            "text": "Use Focus Weak Spots to revisit weaker topics. Complete two timed, 100-minute Exam Simulator sessions. Review mistakes and revisit the underlying trade-offs.",
             "url": "https://azuremastery.app/exams/ai-300/#study-plan"
           }
         ],
@@ -308,7 +329,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -621,29 +642,54 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested AI-300 study plan</h2>
-      <p class="section-lede">
-        Most candidates pass AI-300 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the five AI-300 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>MLOps infrastructure and lifecycle</h3>
+      <p class="section-lede">Work through ML operations, then generative AI operations and optimisation. Use this six-week route to connect infrastructure choices with model quality and reliability.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>MLOps infrastructure</h3>
           <ul>
-            <li><strong>Week 1:</strong> Design and implement an MLOps infrastructure — CI/CD for ML, environment management (Conda, Docker), feature stores, model registries, governance, reproducibility, lineage.</li>
-            <li><strong>Week 2:</strong> Implement machine learning model lifecycle and operations (largest domain, 25–30%) — training pipelines, AutoML, deployment to managed online and batch endpoints, A/B traffic, drift monitoring, retraining triggers.</li>
+            <li>Plan CI/CD and reproducible Conda or Docker environments.</li>
+            <li>Review feature stores and model registries.</li>
+            <li>Track governance, lineage and reproducibility.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>GenAIOps and quality assurance</h3>
+        <li data-period-label="Week 2">
+          <h3>Model lifecycle</h3>
           <ul>
-            <li><strong>Week 3:</strong> Design and implement a GenAIOps infrastructure — prompt versioning and registries, evaluation pipelines, deployment patterns for LLM apps, feature-flag prompt rollouts, observability for tokens and cost.</li>
-            <li><strong>Week 4:</strong> Implement generative AI quality assurance and observability — groundedness checks, hallucination detection, content-safety telemetry, drift on prompts/RAG, distributed tracing.</li>
+            <li>Build training pipelines and explore AutoML.</li>
+            <li>Deploy online or batch endpoints and compare traffic-splitting choices.</li>
+            <li>Monitor drift and define retraining triggers.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Optimisation, sharpen, simulate</h3>
+        <li data-period-label="Week 3">
+          <h3>GenAIOps infrastructure</h3>
           <ul>
-            <li><strong>Week 5:</strong> Optimize generative AI systems and model performance — semantic and embedding caches, batching, model-selection trade-offs (small vs large), fine-tuning vs few-shot vs RAG, token budget management, capacity planning.</li>
-            <li><strong>Week 6:</strong> Run <em>Focus Weak Spots</em> every morning, then two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Schedule the exam when readiness gauge is 750+ with reasonable confidence.</li>
+            <li>Version prompts and build evaluation pipelines.</li>
+            <li>Compare deployment patterns and feature-flag rollouts.</li>
+            <li>Track token usage and cost.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 4">
+          <h3>Quality and observability</h3>
+          <ul>
+            <li>Evaluate groundedness and hallucinations.</li>
+            <li>Review content-safety telemetry and prompt or RAG drift.</li>
+            <li>Use distributed tracing to investigate failures.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 5">
+          <h3>Performance and cost</h3>
+          <ul>
+            <li>Compare semantic caches, embedding caches and batching.</li>
+            <li>Choose models and weigh fine-tuning, few-shot prompting and RAG.</li>
+            <li>Plan token budgets and capacity.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 6">
+          <h3>Review and rehearse</h3>
+          <ul>
+            <li>Use Focus Weak Spots to revisit weaker topics.</li>
+            <li>Complete two timed, 100-minute Exam Simulator sessions.</li>
+            <li>Review mistakes and revisit the underlying trade-offs.</li>
           </ul>
         </li>
       </ol>

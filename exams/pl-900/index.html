@@ -264,7 +264,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/pl-900/#study-plan",
         "name": "How to study for PL-900 (Microsoft Power Platform Fundamentals) in 2 weeks",
-        "description": "A two-week revision plan mapped to the PL-900 skills outline (July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Build a map of Power Platform services in the first week. Use the second week for focused revision and timed practice, adjusting the pace to your experience.",
         "totalTime": "P14D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -274,15 +274,57 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Build the mental map (Days 1–7)",
-            "text": "Days 1–2: start with 'Business value' then 'Manage the Power Platform environment' — Dataverse vs a traditional database, environments, the security model, and ALM pipelines. Days 3–4: 'Demonstrate the capabilities of Power Apps' — canvas vs model-driven vs code apps, the Plan designer, and building apps with AI. Days 5–6: 'Demonstrate the capabilities of Power Automate' — cloud vs desktop flows and common use cases. Day 7: 'Agents in Microsoft Copilot Studio' — topics, knowledge sources, tools, channels, and Microsoft Agent 365.",
+            "name": "Days 1–2: Business value and environments",
+            "text": "Review Power Platform business value. Compare Dataverse with a traditional database. Explore environments, security and ALM pipelines.",
             "url": "https://azuremastery.app/exams/pl-900/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Sharpen and simulate (Days 8–14)",
-            "text": "Days 8–10: run Focus Weak Spots every morning — Azure Mastery surfaces the 5–10 questions most likely to move your readiness score. Days 11–12: run the Exam Simulator end-to-end at the full 45-minute length, twice. Day 13: one more simulator run; if scoring 750+ consistently, schedule the exam. Day 14: light review only, sleep well, sit the exam.",
+            "name": "Days 3–4: Power Apps",
+            "text": "Compare canvas, model-driven and code apps. Explore the Plan designer and AI-assisted app building. Practise choosing an app type for a scenario.",
+            "url": "https://azuremastery.app/exams/pl-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Days 5–6: Power Automate",
+            "text": "Compare cloud and desktop flows. Review connector triggers and actions. Explore approval, Teams, Outlook and SharePoint scenarios.",
+            "url": "https://azuremastery.app/exams/pl-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Day 7: Copilot Studio agents",
+            "text": "Review topics and knowledge sources. Explore MCP tools and agent flows. Compare channels and review Microsoft Agent 365.",
+            "url": "https://azuremastery.app/exams/pl-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 8–10: Target weaker topics",
+            "text": "Run Focus Weak Spots sessions. Review explanations for missed questions. Revisit topics you have not practised recently.",
+            "url": "https://azuremastery.app/exams/pl-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 11–12: Timed rehearsal",
+            "text": "Complete two 45-minute Exam Simulator sessions. Review each run carefully. Record topics that need more attention.",
+            "url": "https://azuremastery.app/exams/pl-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Day 13: Check your progress",
+            "text": "Complete another simulator session. Look for recurring mistakes. Use the results to plan any further study.",
+            "url": "https://azuremastery.app/exams/pl-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Day 14: Light review",
+            "text": "Revisit your key notes. Allow time to rest. Decide whether you are ready to move ahead.",
             "url": "https://azuremastery.app/exams/pl-900/#study-plan"
           }
         ],
@@ -301,7 +343,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -614,26 +656,70 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">2-week revision plan</p>
       <h2 class="display-small section-title">Suggested PL-900 study plan</h2>
-      <p class="section-lede">
-        Most candidates with prior IT experience pass PL-900 after one to two weeks of focused revision. Below is a two-week plan that maps onto Azure Mastery's domains, simulator, and decay alerts. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Build the mental map</h3>
+      <p class="section-lede">Build a map of Power Platform services in the first week. Use the second week for focused revision and timed practice, adjusting the pace to your experience.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–2">
+          <h3>Business value and environments</h3>
           <ul>
-            <li><strong>Days 1–2:</strong> Start with <em>Business value</em> (the framing) then <em>Manage the environment</em> — Dataverse vs a traditional database, environments, the security model, and ALM pipelines. 30 questions per session, two sessions per day.</li>
-            <li><strong>Days 3–4:</strong> <em>Power Apps</em>. Canvas vs model-driven vs code apps, the Plan designer, and building apps with AI — the "which app type?" scenario is the single biggest pattern.</li>
-            <li><strong>Days 5–6:</strong> <em>Power Automate</em>. Cloud vs desktop flows, connector triggers and actions, and the common use cases (approvals, Teams, Outlook, SharePoint).</li>
-            <li><strong>Day 7:</strong> <em>Copilot Studio agents</em> — the newest domain. Topics, knowledge sources, tools (MCP servers, agent flows), channels, and Microsoft Agent 365.</li>
+            <li>Review Power Platform business value.</li>
+            <li>Compare Dataverse with a traditional database.</li>
+            <li>Explore environments, security and ALM pipelines.</li>
           </ul>
         </li>
-        <li>
-          <h3>Sharpen and simulate</h3>
+        <li data-period-label="Days 3–4">
+          <h3>Power Apps</h3>
           <ul>
-            <li><strong>Days 8–10:</strong> Run the <em>Focus Weak Spots</em> session every morning. The app surfaces the 5–10 questions most likely to move your readiness score.</li>
-            <li><strong>Days 11–12:</strong> Run the <em>Exam Simulator</em> end-to-end at full 45-minute length. Twice. Review carefully after each.</li>
-            <li><strong>Day 13:</strong> One more simulator run. If you're scoring 750+ consistently, schedule the exam.</li>
-            <li><strong>Day 14:</strong> Light review only. Sleep well. Sit the exam.</li>
+            <li>Compare canvas, model-driven and code apps.</li>
+            <li>Explore the Plan designer and AI-assisted app building.</li>
+            <li>Practise choosing an app type for a scenario.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 5–6">
+          <h3>Power Automate</h3>
+          <ul>
+            <li>Compare cloud and desktop flows.</li>
+            <li>Review connector triggers and actions.</li>
+            <li>Explore approval, Teams, Outlook and SharePoint scenarios.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 7">
+          <h3>Copilot Studio agents</h3>
+          <ul>
+            <li>Review topics and knowledge sources.</li>
+            <li>Explore MCP tools and agent flows.</li>
+            <li>Compare channels and review Microsoft Agent 365.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 8–10">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Run Focus Weak Spots sessions.</li>
+            <li>Review explanations for missed questions.</li>
+            <li>Revisit topics you have not practised recently.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 11–12">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two 45-minute Exam Simulator sessions.</li>
+            <li>Review each run carefully.</li>
+            <li>Record topics that need more attention.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 13">
+          <h3>Check your progress</h3>
+          <ul>
+            <li>Complete another simulator session.</li>
+            <li>Look for recurring mistakes.</li>
+            <li>Use the results to plan any further study.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 14">
+          <h3>Light review</h3>
+          <ul>
+            <li>Revisit your key notes.</li>
+            <li>Allow time to rest.</li>
+            <li>Decide whether you are ready to move ahead.</li>
           </ul>
         </li>
       </ol>

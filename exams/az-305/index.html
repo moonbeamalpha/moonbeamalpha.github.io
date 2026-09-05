@@ -264,7 +264,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/az-305/#study-plan",
         "name": "How to study for AZ-305 (Designing Microsoft Azure Infrastructure Solutions) in 8 weeks",
-        "description": "An eight-week study plan mapped to the AZ-305 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator. Designed for candidates who already hold AZ-104.",
+        "description": "Practise architectural choices across identity, data, resilience and infrastructure. Use the final two weeks of this eight-week route for case studies and timed rehearsal.",
         "totalTime": "P56D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -275,29 +275,71 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Identity, governance, and monitoring (Weeks 1–2)",
-            "text": "Week 1: design authentication and authorization solutions — identity management, Microsoft Entra B2B/B2C, Conditional Access, Privileged Identity Management, Microsoft Entra Identity Governance, Azure Key Vault for secrets/certificates/keys, and authorization for Azure and on-premises resources. Week 2: design governance — management group / subscription / resource group hierarchies, tagging strategy, Azure Policy, Microsoft Purview for compliance and identity governance. Plus design logging and monitoring solutions across the estate.",
+            "name": "Days 1–4: Identity and access design",
+            "text": "Review Entra identities, external access, Conditional Access and PIM. Design access to Azure and on-premises resources. Choose Key Vault approaches for secrets, certificates and keys.",
             "url": "https://azuremastery.app/exams/az-305/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Data storage solutions (Weeks 3–4)",
-            "text": "Weeks 3–4: design data storage. Pick the right database (SQL Database, Managed Instance, Cosmos DB, MySQL, PostgreSQL, Synapse) for the workload — service tier, compute tier, scalability, and protection. For semi-structured and unstructured data: balance Blob, Files, Disks, Cosmos for features, performance, and cost. Design data integration (Azure Data Factory, Synapse pipelines, Event Hubs, Stream Analytics) and analysis (Synapse, Microsoft Fabric). AZ-305 questions in this domain frequently ask 'cheapest option that meets X RTO/RPO/throughput requirement'.",
+            "name": "Days 5–9: Governance design",
+            "text": "Design management group, subscription and resource group hierarchies. Plan tags and Azure Policy. Review Purview compliance and identity governance.",
             "url": "https://azuremastery.app/exams/az-305/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Business continuity and infrastructure (Weeks 5–6)",
-            "text": "Week 5: business continuity — recovery solutions for Azure and hybrid workloads against specific RTO/RPO targets, backup and recovery for compute / databases / unstructured data, plus high-availability designs across compute and data tiers. Week 6: the largest domain — infrastructure. Compute solutions (VMs vs containers vs serverless vs batch), application architecture (messaging, event-driven, API integration, caching, configuration management, automated deployment), migrations using the Cloud Adoption Framework, and network solutions (connectivity, performance, security, load balancing).",
+            "name": "Days 10–14: Monitoring design",
+            "text": "Design Azure Monitor coverage across an estate. Choose Log Analytics workspace arrangements. Plan log routing.",
             "url": "https://azuremastery.app/exams/az-305/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 4,
-            "name": "Case studies and simulator (Weeks 7–8)",
-            "text": "Week 7: work case-study questions exclusively. AZ-305 is heavy on multi-paragraph scenarios that ask you to choose between competing services. Use Azure Mastery's case-study mode (long-form scenarios with multiple linked questions). Week 8: two full-length 100-minute Exam Simulator runs in the first half; Focus Weak Spots in the second half. Schedule the exam when scoring 730+ consistently with confidence — AZ-305's borderline range is unforgiving.",
+            "name": "Days 15–21: Relational data design",
+            "text": "Compare Azure SQL, Managed Instance, MySQL, PostgreSQL and Synapse SQL. Select service and compute tiers. Balance scalability and data protection.",
+            "url": "https://azuremastery.app/exams/az-305/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 22–28: Data storage and integration",
+            "text": "Compare Cosmos DB, Blob, Files and Disks for cost and performance. Review Data Factory, Synapse pipelines, Event Hubs and Stream Analytics. Explore analysis with Synapse and Microsoft Fabric.",
+            "url": "https://azuremastery.app/exams/az-305/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 29–35: Resilience and recovery",
+            "text": "Translate RTO and RPO requirements into recovery designs. Compare Azure Backup, Site Recovery and multi-region failover. Design high availability across compute and data tiers.",
+            "url": "https://azuremastery.app/exams/az-305/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Days 36–42: Infrastructure design",
+            "text": "Choose compute and application patterns, including messaging, APIs and caching. Plan migration, configuration and automated deployment. Design connectivity, performance, load balancing and network security.",
+            "url": "https://azuremastery.app/exams/az-305/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Days 43–49: Case-study practice",
+            "text": "Practise reading longer scenarios. Identify requirements and constraints. Explain why each alternative fits or fails.",
+            "url": "https://azuremastery.app/exams/az-305/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 9,
+            "name": "Days 50–54: Timed rehearsal",
+            "text": "Complete two 100-minute simulator sessions with case studies. Review each run carefully. Track recurring design mistakes.",
+            "url": "https://azuremastery.app/exams/az-305/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 10,
+            "name": "Days 55–56: Consolidate and rest",
+            "text": "Use Focus Weak Spots for remaining gaps. Keep final review light and allow time to rest. Decide whether your practice results support moving ahead.",
             "url": "https://azuremastery.app/exams/az-305/#study-plan"
           }
         ],
@@ -316,7 +358,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -618,38 +660,86 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">8-week study plan</p>
       <h2 class="display-small section-title">Suggested AZ-305 study plan</h2>
-      <p class="section-lede">
-        Plan eight to twelve weeks for AZ-305, even if you already hold AZ-104. The eight-week plan below maps onto the four design domains, Azure Mastery's case-study mode, and the in-app exam simulator. AZ-305 rewards judgement over recall — most of the work is internalising "which Azure service for which requirement", not memorising commands.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Identity, governance, monitoring</h3>
+      <p class="section-lede">Practise architectural choices across identity, data, resilience and infrastructure. Use the final two weeks of this eight-week route for case studies and timed rehearsal.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–4">
+          <h3>Identity and access design</h3>
           <ul>
-            <li><strong>Days 1–4:</strong> Authentication and authorisation design — Microsoft Entra ID, B2B/B2C, Conditional Access, Privileged Identity Management; authorising access to Azure and on-premises resources; managing secrets, certificates, and keys with Azure Key Vault.</li>
-            <li><strong>Days 5–9:</strong> Governance design — management group / subscription / resource group hierarchies, tagging strategy, Azure Policy, Microsoft Purview for compliance, identity governance.</li>
-            <li><strong>Days 10–14:</strong> Logging and monitoring solution design — Azure Monitor, Log Analytics workspaces, log routing, monitoring at the estate level.</li>
+            <li>Review Entra identities, external access, Conditional Access and PIM.</li>
+            <li>Design access to Azure and on-premises resources.</li>
+            <li>Choose Key Vault approaches for secrets, certificates and keys.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Data storage</h3>
+        <li data-period-label="Days 5–9">
+          <h3>Governance design</h3>
           <ul>
-            <li><strong>Days 15–21:</strong> Relational data — SQL Database, SQL Managed Instance, MySQL, PostgreSQL, Synapse SQL — service tier and compute tier selection, scalability, data protection.</li>
-            <li><strong>Days 22–28:</strong> Semi-structured + unstructured — Cosmos DB, Blob, Files, Disks. Balance features, performance, cost. Plus data integration (Data Factory, Synapse pipelines, Event Hubs, Stream Analytics) and data analysis (Synapse, Microsoft Fabric).</li>
+            <li>Design management group, subscription and resource group hierarchies.</li>
+            <li>Plan tags and Azure Policy.</li>
+            <li>Review Purview compliance and identity governance.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Business continuity + infrastructure</h3>
+        <li data-period-label="Days 10–14">
+          <h3>Monitoring design</h3>
           <ul>
-            <li><strong>Days 29–35:</strong> Backup and disaster recovery — recovery solutions for Azure and hybrid workloads against specific RTO/RPO targets, Azure Backup, Azure Site Recovery, multi-region failover. High-availability design across compute and data tiers.</li>
-            <li><strong>Days 36–42:</strong> The largest domain — infrastructure design. Compute solutions (VMs vs containers vs serverless vs batch), application architecture (messaging, event-driven, API integration, caching, configuration management, automated deployment), migrations via the Cloud Adoption Framework, and network solutions (connectivity, performance, security, load balancing, Azure Firewall, WAF).</li>
+            <li>Design Azure Monitor coverage across an estate.</li>
+            <li>Choose Log Analytics workspace arrangements.</li>
+            <li>Plan log routing.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 7–8">
-          <h3>Case studies and simulator</h3>
+        <li data-period-label="Days 15–21">
+          <h3>Relational data design</h3>
           <ul>
-            <li><strong>Days 43–49:</strong> Case-study mode every day. AZ-305 leans heavily on multi-paragraph scenarios — practise reading them quickly, identifying the constraints, and ruling out wrong answers.</li>
-            <li><strong>Days 50–54:</strong> Two end-to-end <em>Exam Simulator</em> runs at full 100-minute length, with full case-study sets. Review carefully after each.</li>
-            <li><strong>Days 55–56:</strong> Focus Weak Spots only. Light review. Sleep. Sit the exam if your readiness gauge is 730+ with confidence — AZ-305's borderline range is unforgiving.</li>
+            <li>Compare Azure SQL, Managed Instance, MySQL, PostgreSQL and Synapse SQL.</li>
+            <li>Select service and compute tiers.</li>
+            <li>Balance scalability and data protection.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 22–28">
+          <h3>Data storage and integration</h3>
+          <ul>
+            <li>Compare Cosmos DB, Blob, Files and Disks for cost and performance.</li>
+            <li>Review Data Factory, Synapse pipelines, Event Hubs and Stream Analytics.</li>
+            <li>Explore analysis with Synapse and Microsoft Fabric.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 29–35">
+          <h3>Resilience and recovery</h3>
+          <ul>
+            <li>Translate RTO and RPO requirements into recovery designs.</li>
+            <li>Compare Azure Backup, Site Recovery and multi-region failover.</li>
+            <li>Design high availability across compute and data tiers.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 36–42">
+          <h3>Infrastructure design</h3>
+          <ul>
+            <li>Choose compute and application patterns, including messaging, APIs and caching.</li>
+            <li>Plan migration, configuration and automated deployment.</li>
+            <li>Design connectivity, performance, load balancing and network security.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 43–49">
+          <h3>Case-study practice</h3>
+          <ul>
+            <li>Practise reading longer scenarios.</li>
+            <li>Identify requirements and constraints.</li>
+            <li>Explain why each alternative fits or fails.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 50–54">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two 100-minute simulator sessions with case studies.</li>
+            <li>Review each run carefully.</li>
+            <li>Track recurring design mistakes.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 55–56">
+          <h3>Consolidate and rest</h3>
+          <ul>
+            <li>Use Focus Weak Spots for remaining gaps.</li>
+            <li>Keep final review light and allow time to rest.</li>
+            <li>Decide whether your practice results support moving ahead.</li>
           </ul>
         </li>
       </ol>

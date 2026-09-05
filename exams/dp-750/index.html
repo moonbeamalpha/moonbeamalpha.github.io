@@ -263,7 +263,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/dp-750/#study-plan",
         "name": "How to study for DP-750 (Implementing Data Engineering Solutions Using Azure Databricks)",
-        "description": "A four-to-eight-week revision plan mapped to the DP-750 skills outline (March 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Allow four to eight weeks, with extra time for SQL or Python if needed. Work through these flexible phases alongside hands-on practice in Azure Databricks.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -275,15 +275,50 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Set up the environment and govern Unity Catalog (Weeks 1–2)",
-            "text": "Cover 'Set up and configure an Azure Databricks environment' (15–20%) and 'Secure and govern Unity Catalog objects' (15–20%): choose and configure compute (job, serverless, warehouse, classic and shared) with autoscaling, Photon and pooling; create catalogs, schemas, volumes, tables and materialized views in Unity Catalog; then grant privileges to principals, implement table-, column- and row-level security, configure ABAC tags, row filters and column masks, set up data lineage and audit logging, and design a secure Delta Sharing strategy. Spin up a workspace and a catalog to make it concrete.",
+            "name": "Warm-up: Refresh SQL and Python",
+            "text": "Review the language you will use most. Practise reading and modifying short examples. Revisit unfamiliar syntax before starting the main phases.",
             "url": "https://azuremastery.app/exams/dp-750/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Prepare, process, then deploy and maintain pipelines (Weeks 3–6)",
-            "text": "Weeks 3–4: 'Prepare and process data' (30–35%) — model data with Delta, Parquet, JSON and Iceberg, partitioning, SCD types and liquid clustering; ingest with Lakeflow Connect, Auto Loader, COPY INTO, CTAS, CDC feeds, Spark Structured Streaming and Azure Event Hubs; cleanse and transform with joins, aggregation and merge; and enforce data quality with pipeline expectations and schema-drift handling. Weeks 5–6: 'Deploy and maintain data pipelines and workloads' (30–35%) — design Lakeflow Jobs and Declarative Pipelines, apply Git and Databricks Asset Bundles, and monitor, troubleshoot and optimise Spark jobs (skew, spill, shuffle, OPTIMIZE, VACUUM) with the Spark UI and Azure Monitor. Run Focus Weak Spots daily, then the Exam Simulator end-to-end at full length; when you score 750+ consistently, schedule the exam.",
+            "name": "Phase 1: Configure Databricks",
+            "text": "Compare compute types, runtimes, autoscaling and Photon. Configure libraries and access permissions. Create Unity Catalog catalogs, schemas, volumes, tables and views.",
+            "url": "https://azuremastery.app/exams/dp-750/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Phase 1: Secure and govern",
+            "text": "Practise grants, row filters, column masks and ABAC tags. Review identities, Key Vault secrets and granular access controls. Explore lineage, audit logs and Delta Sharing.",
+            "url": "https://azuremastery.app/exams/dp-750/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Phase 2: Ingest and model data",
+            "text": "Review Delta modelling, partitioning, SCD types and liquid clustering. Compare Lakeflow Connect, Auto Loader, COPY INTO, CTAS and CDC. Explore streaming with Spark and Event Hubs.",
+            "url": "https://azuremastery.app/exams/dp-750/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Phase 2: Transform and validate",
+            "text": "Practise cleansing, transformations and merges. Apply pipeline expectations. Handle schema drift and data-quality failures.",
+            "url": "https://azuremastery.app/exams/dp-750/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Phase 2: Deploy and operate",
+            "text": "Review Lakeflow Jobs, Declarative Pipelines, triggers and recovery. Use Git and Asset Bundles through CLI or REST workflows. Investigate Spark skew, spill and shuffle; review OPTIMIZE, VACUUM and monitoring.",
+            "url": "https://azuremastery.app/exams/dp-750/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Final review: Rehearse and consolidate",
+            "text": "Use Focus Weak Spots to revisit weaker topics. Complete a timed simulator session of about 100 minutes. Review mistakes and decide whether you need more practice.",
             "url": "https://azuremastery.app/exams/dp-750/#study-plan"
           }
         ],
@@ -302,7 +337,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -604,26 +639,62 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">4–8 week revision plan</p>
       <h2 class="display-small section-title">Suggested DP-750 study plan</h2>
-      <p class="section-lede">
-        DP-750 is associate-level and hands-on, so plan four to eight weeks — more if SQL and Python aren't yet second nature. Below is a two-phase plan that maps onto Azure Mastery's four domains, simulator, and decay alerts. Pair every block with real practice in an Azure Databricks workspace; the readiness gauge tells you when you're done, not the calendar.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Set up the environment and lock down Unity Catalog</h3>
+      <p class="section-lede">Allow four to eight weeks, with extra time for SQL or Python if needed. Work through these flexible phases alongside hands-on practice in Azure Databricks.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Warm-up">
+          <h3>Refresh SQL and Python</h3>
           <ul>
-            <li><strong>Warm-up:</strong> If your SQL or Python is rusty, spend the first sessions refreshing the language you'll lean on most before touching exam objectives.</li>
-            <li><strong>Phase 1a — <em>Set up and configure an Azure Databricks environment</em> (15–20%):</strong> Compute types (job, serverless, warehouse, classic, shared), performance and feature settings (autoscaling, Photon, runtime version), libraries and access permissions; then create catalogs, schemas, volumes, tables and views in Unity Catalog.</li>
-            <li><strong>Phase 1b — <em>Secure and govern Unity Catalog objects</em> (15–20%):</strong> Grants to principals, table-/column-/row-level security, Key Vault secrets, service principals and managed identities, ABAC tags, row filters and column masks, data lineage, audit logging, and Delta Sharing.</li>
-            <li><strong>Make it stick:</strong> Spin up a workspace, create a catalog, and grant a group read access to a schema to ground the theory.</li>
+            <li>Review the language you will use most.</li>
+            <li>Practise reading and modifying short examples.</li>
+            <li>Revisit unfamiliar syntax before starting the main phases.</li>
           </ul>
         </li>
-        <li>
-          <h3>Prepare, process, deploy — then simulate</h3>
+        <li data-period-label="Phase 1">
+          <h3>Configure Databricks</h3>
           <ul>
-            <li><strong>Phase 2a — <em>Prepare and process data</em> (30–35%):</strong> Data modelling with Delta, partitioning, SCD types and liquid clustering; ingestion with Lakeflow Connect, Auto Loader, COPY INTO, CTAS, CDC feeds, Spark Structured Streaming and Azure Event Hubs; cleansing, transforming and merging; and data-quality constraints with pipeline expectations and schema-drift handling.</li>
-            <li><strong>Phase 2b — <em>Deploy and maintain data pipelines and workloads</em> (30–35%):</strong> Lakeflow Jobs and Declarative Pipelines, triggers, alerts and restarts; Git and Databricks Asset Bundles via CLI/REST; and monitoring, troubleshooting and optimising Spark (skew, spill, shuffle, OPTIMIZE, VACUUM) with the Spark UI and Azure Monitor.</li>
-            <li><strong>Run <em>Focus Weak Spots</em> daily.</strong> The app surfaces the 5–10 questions most likely to move your readiness score.</li>
-            <li><strong>Run the <em>Exam Simulator</em> end-to-end</strong> at full ~100-minute length. When you're scoring 750+ consistently, schedule the exam — then light review only, sleep well, and sit it.</li>
+            <li>Compare compute types, runtimes, autoscaling and Photon.</li>
+            <li>Configure libraries and access permissions.</li>
+            <li>Create Unity Catalog catalogs, schemas, volumes, tables and views.</li>
+          </ul>
+        </li>
+        <li data-period-label="Phase 1">
+          <h3>Secure and govern</h3>
+          <ul>
+            <li>Practise grants, row filters, column masks and ABAC tags.</li>
+            <li>Review identities, Key Vault secrets and granular access controls.</li>
+            <li>Explore lineage, audit logs and Delta Sharing.</li>
+          </ul>
+        </li>
+        <li data-period-label="Phase 2">
+          <h3>Ingest and model data</h3>
+          <ul>
+            <li>Review Delta modelling, partitioning, SCD types and liquid clustering.</li>
+            <li>Compare Lakeflow Connect, Auto Loader, COPY INTO, CTAS and CDC.</li>
+            <li>Explore streaming with Spark and Event Hubs.</li>
+          </ul>
+        </li>
+        <li data-period-label="Phase 2">
+          <h3>Transform and validate</h3>
+          <ul>
+            <li>Practise cleansing, transformations and merges.</li>
+            <li>Apply pipeline expectations.</li>
+            <li>Handle schema drift and data-quality failures.</li>
+          </ul>
+        </li>
+        <li data-period-label="Phase 2">
+          <h3>Deploy and operate</h3>
+          <ul>
+            <li>Review Lakeflow Jobs, Declarative Pipelines, triggers and recovery.</li>
+            <li>Use Git and Asset Bundles through CLI or REST workflows.</li>
+            <li>Investigate Spark skew, spill and shuffle; review OPTIMIZE, VACUUM and monitoring.</li>
+          </ul>
+        </li>
+        <li data-period-label="Final review">
+          <h3>Rehearse and consolidate</h3>
+          <ul>
+            <li>Use Focus Weak Spots to revisit weaker topics.</li>
+            <li>Complete a timed simulator session of about 100 minutes.</li>
+            <li>Review mistakes and decide whether you need more practice.</li>
           </ul>
         </li>
       </ol>

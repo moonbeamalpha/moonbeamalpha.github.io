@@ -262,7 +262,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ab-900/#study-plan",
         "name": "How to study for AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals) in 3 weeks",
-        "description": "A three-week study plan mapped to the AB-900 skills outline (May 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Build a Microsoft 365 foundation, then explore data protection and Copilot administration. Allow time for practice and review within this three-week route.",
         "totalTime": "P21D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -272,22 +272,22 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Core features and objects of Microsoft 365 (Week 1)",
-            "text": "Cover 'Identify the core features and objects of Microsoft 365 services' (30–35%). M365 admin centres — Exchange, SharePoint, Teams, M365 — and the objects each one manages (mailboxes, sites, libraries, teams, channels, policies). Zero Trust principles, authorisation and authentication methods. Microsoft Defender XDR features. Microsoft Entra (conditional access, SSO, MFA, PIM, App registrations, audit logs, Identity Secure Score).",
+            "name": "Week 1: Microsoft 365 foundations",
+            "text": "Review admin-centre settings, Exchange, SharePoint and Teams objects. Compare Zero Trust, authentication and authorisation concepts. Explore Entra access controls, identity troubleshooting and Defender XDR.",
             "url": "https://azuremastery.app/exams/ab-900/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Data protection and governance (Week 2)",
-            "text": "Cover 'Understand data protection and governance tasks for Microsoft 365 and Copilot' (35–40% — the largest domain). Microsoft Purview surfaces — Information Protection, DLP, Insider Risk Management, Communication Compliance, DSPM for AI, Data Lifecycle Management. Sensitivity labels, classification, retention. How Copilot accesses data via Microsoft Graph and respects M365 / Purview / Defender controls. Compliance Manager, Data Explorer, Activity Explorer, Content search. SharePoint oversharing and SharePoint Advanced Management.",
+            "name": "Week 2: Data protection and governance",
+            "text": "Review Purview labels, DLP, retention, insider risk and communication compliance. Explore compliance, investigation and DSPM for AI tools. Trace Copilot data access and address SharePoint oversharing.",
             "url": "https://azuremastery.app/exams/ab-900/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Admin tasks, exam sharpening (Week 3)",
-            "text": "Cover 'Perform basic administrative tasks for Copilot and agents' (25–30%). Compare built-in capabilities of Copilot and agents, monthly licence vs pay-as-you-go (PAYG), use cases for Researcher / Analyst / custom agents. Assign Copilot licences. Monitor PAYG billing policies. Copilot Analytics in the M365 admin centre. Manage prompts. Configure agent user access, agent approval process, and agent monitoring via M365 admin centre and Power Platform admin centre. Then: Focus Weak Spots and two full 45-minute Exam Simulator runs. Schedule the exam when readiness gauge is 720+.",
+            "name": "Week 3: Copilot, agents and review",
+            "text": "Compare Copilot and agent capabilities, licensing and usage monitoring. Review agent access, creation, approval and administration. Use Focus Weak Spots, then complete and review two 45-minute simulator sessions.",
             "url": "https://azuremastery.app/exams/ab-900/#study-plan"
           }
         ],
@@ -306,7 +306,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -597,26 +597,30 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">3-week study plan</p>
       <h2 class="display-small section-title">Suggested AB-900 study plan</h2>
-      <p class="section-lede">
-        Most candidates pass AB-900 after two to four weeks of focused study, depending on prior Microsoft 365 admin experience. The three-week plan below maps onto the three AB-900 domains (weighted toward Data Protection &amp; Governance at 35–40%), Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Core features and objects of Microsoft 365</h3>
+      <p class="section-lede">Build a Microsoft 365 foundation, then explore data protection and Copilot administration. Allow time for practice and review within this three-week route.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>Microsoft 365 foundations</h3>
           <ul>
-            <li><strong>Week 1:</strong> Identify the core objects of Microsoft 365 services — M365 admin centre (licences, domain names, org settings), Exchange Online (mailboxes, distribution lists), SharePoint in M365 (sites, libraries, permissions), Teams (teams, channels, policies). Zero Trust principles, authentication and authorisation methods. Microsoft Defender XDR. Microsoft Entra — conditional access, SSO, MFA, PIM, App registrations / Enterprise apps, audit logs, Identity Secure Score, sign-in troubleshooting tools.</li>
+            <li>Review admin-centre settings, Exchange, SharePoint and Teams objects.</li>
+            <li>Compare Zero Trust, authentication and authorisation concepts.</li>
+            <li>Explore Entra access controls, identity troubleshooting and Defender XDR.</li>
           </ul>
         </li>
-        <li>
+        <li data-period-label="Week 2">
           <h3>Data protection and governance</h3>
           <ul>
-            <li><strong>Week 2:</strong> Largest domain (35–40%). Microsoft Purview surfaces — Information Protection, DLP, Insider Risk Management, Communication Compliance, DSPM for AI, Data Lifecycle Management. Sensitivity labels, classification, retention. How Copilot accesses data via Microsoft Graph and respects M365 / Purview / Defender controls. Responsible AI principles. Use Compliance Manager, Data Explorer, Insider Risk, Communication Compliance, Activity Explorer, DSPM for AI, and Content search in eDiscovery. SharePoint oversharing — including SharePoint Advanced Management restricted site access.</li>
+            <li>Review Purview labels, DLP, retention, insider risk and communication compliance.</li>
+            <li>Explore compliance, investigation and DSPM for AI tools.</li>
+            <li>Trace Copilot data access and address SharePoint oversharing.</li>
           </ul>
         </li>
-        <li>
-          <h3>Copilot &amp; agent admin tasks, sharpen, simulate</h3>
+        <li data-period-label="Week 3">
+          <h3>Copilot, agents and review</h3>
           <ul>
-            <li><strong>Week 3:</strong> Compare built-in capabilities of Copilot and agents, monthly licence vs PAYG (including SharePoint), enable / disable Copilot features, use cases for Researcher / Analyst / custom agents. Assign Copilot licences, monitor PAYG billing, monitor adoption via Copilot Analytics, manage prompts. For agents: configure user access, create agents, approval process, monitoring via M365 and Power Platform admin centres. Then: run <em>Focus Weak Spots</em> every morning, plus two end-to-end <em>Exam Simulator</em> runs at full 45-minute length. Schedule the exam when readiness gauge is 720+ with reasonable confidence.</li>
+            <li>Compare Copilot and agent capabilities, licensing and usage monitoring.</li>
+            <li>Review agent access, creation, approval and administration.</li>
+            <li>Use Focus Weak Spots, then complete and review two 45-minute simulator sessions.</li>
           </ul>
         </li>
       </ol>

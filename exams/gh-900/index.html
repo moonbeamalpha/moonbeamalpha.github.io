@@ -266,7 +266,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/gh-900/#study-plan",
         "name": "How to study for GH-900 (GitHub Foundations) in 2 weeks",
-        "description": "A two-week revision plan mapped to the GH-900 skills outline (February 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Build Git and GitHub foundations, then explore collaboration, administration and community. Finish this two-week route with focused review and timed practice.",
         "totalTime": "P14D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -277,15 +277,50 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Master the fundamentals (Days 1–7)",
-            "text": "Days 1–3: cover 'Understand Git and GitHub basics' — version control, the Git vs GitHub distinction, commits, branches, accounts and organizations, and the GitHub Flow. This is the largest domain at 25–30%. Days 4–5: work through 'Work with GitHub repositories' and 'Collaborate using GitHub' — repository structure, README and LICENSE files, issues, pull requests, and discussions. Days 6–7: cover 'Apply modern development practices' — GitHub Actions, Copilot, and Codespaces.",
+            "name": "Days 1–3: Git and GitHub basics",
+            "text": "Distinguish Git from GitHub. Practise commits, branches and GitHub Flow. Review Markdown.",
             "url": "https://azuremastery.app/exams/gh-900/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Sharpen and simulate (Days 8–14)",
-            "text": "Days 8–9: cover the smaller domains — 'Manage projects with GitHub', 'Understand privacy, security, and administration' (2FA, branch protection, EMUs), and 'Explore the GitHub community' (open source, Sponsors, the Marketplace, InnerSource). Days 10–12: run Focus Weak Spots every morning; the app surfaces the questions most likely to move your readiness score, then run the Exam Simulator end-to-end at the full 120-minute length, twice. Day 13: one more simulator run; if scoring 750+ consistently, book the exam. Day 14: light review only, sleep well, sit the exam.",
+            "name": "Days 4–5: Repositories and collaboration",
+            "text": "Explore repository structure and key files. Review issues and pull requests. Use discussions for collaboration.",
+            "url": "https://azuremastery.app/exams/gh-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Days 6–7: Development tools",
+            "text": "Explore GitHub Actions. Compare Copilot plans. Review Codespaces use cases.",
+            "url": "https://azuremastery.app/exams/gh-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Days 8–9: Projects, security and community",
+            "text": "Review GitHub project management. Explore 2FA, branch protection and Enterprise Managed Users. Compare open source, Sponsors, Marketplace and InnerSource.",
+            "url": "https://azuremastery.app/exams/gh-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 10–11: Target weaker topics",
+            "text": "Run Focus Weak Spots sessions. Review missed questions and explanations. Revisit the topics that need more practice.",
+            "url": "https://azuremastery.app/exams/gh-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 12–13: Timed rehearsal",
+            "text": "Complete two 120-minute Exam Simulator sessions. Review each run carefully. Track recurring mistakes.",
+            "url": "https://azuremastery.app/exams/gh-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Day 14: Light review",
+            "text": "Revisit your key notes. Allow time to rest. Use your practice results to decide whether more study is needed.",
             "url": "https://azuremastery.app/exams/gh-900/#study-plan"
           }
         ],
@@ -767,7 +802,7 @@
 .site-nav__cta { min-height: 44px; display: inline-flex; align-items: center; }
 </style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -1095,25 +1130,62 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">2-week revision plan</p>
       <h2 class="display-small section-title">Suggested GH-900 study plan</h2>
-      <p class="section-lede">
-        If you already use GitHub day to day, most candidates pass GH-900 after one to two weeks of focused revision. Below is a two-week plan that maps onto Azure Mastery's seven domains, simulator, and decay alerts. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Master the fundamentals</h3>
+      <p class="section-lede">Build Git and GitHub foundations, then explore collaboration, administration and community. Finish this two-week route with focused review and timed practice.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–3">
+          <h3>Git and GitHub basics</h3>
           <ul>
-            <li><strong>Days 1–3:</strong> Tackle <em>Understand Git and GitHub Basics</em> first. It's the largest domain (25–30%) and underpins everything else: version control, Git vs GitHub, commits and branches, the GitHub Flow, and Markdown. 30 questions per session, two sessions per day.</li>
-            <li><strong>Days 4–5:</strong> Work through <em>Work with GitHub Repositories</em> and <em>Collaborate Using GitHub</em>. Repository structure and key files, then issues, pull requests, and discussions.</li>
-            <li><strong>Days 6–7:</strong> Cover <em>Apply Modern Development Practices</em>. GitHub Actions, Copilot (Individuals vs Business vs Enterprise), and Codespaces.</li>
+            <li>Distinguish Git from GitHub.</li>
+            <li>Practise commits, branches and GitHub Flow.</li>
+            <li>Review Markdown.</li>
           </ul>
         </li>
-        <li>
-          <h3>Sharpen and simulate</h3>
+        <li data-period-label="Days 4–5">
+          <h3>Repositories and collaboration</h3>
           <ul>
-            <li><strong>Days 8–9:</strong> Cover the smaller domains — <em>Manage Projects with GitHub</em>, <em>Privacy, Security, and Administration</em> (2FA, branch protection, EMUs), and <em>Explore the GitHub Community</em> (open source, Sponsors, Marketplace, InnerSource).</li>
-            <li><strong>Days 10–11:</strong> Run the <em>Focus Weak Spots</em> session every morning. The app surfaces the 5–10 questions most likely to move your readiness score.</li>
-            <li><strong>Days 12–13:</strong> Run the <em>Exam Simulator</em> end-to-end at full 120-minute length, twice. Review carefully after each. If you're scoring 750+ consistently, book the exam.</li>
-            <li><strong>Day 14:</strong> Light review only. Sleep well. Sit the exam.</li>
+            <li>Explore repository structure and key files.</li>
+            <li>Review issues and pull requests.</li>
+            <li>Use discussions for collaboration.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 6–7">
+          <h3>Development tools</h3>
+          <ul>
+            <li>Explore GitHub Actions.</li>
+            <li>Compare Copilot plans.</li>
+            <li>Review Codespaces use cases.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 8–9">
+          <h3>Projects, security and community</h3>
+          <ul>
+            <li>Review GitHub project management.</li>
+            <li>Explore 2FA, branch protection and Enterprise Managed Users.</li>
+            <li>Compare open source, Sponsors, Marketplace and InnerSource.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 10–11">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Run Focus Weak Spots sessions.</li>
+            <li>Review missed questions and explanations.</li>
+            <li>Revisit the topics that need more practice.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 12–13">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two 120-minute Exam Simulator sessions.</li>
+            <li>Review each run carefully.</li>
+            <li>Track recurring mistakes.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 14">
+          <h3>Light review</h3>
+          <ul>
+            <li>Revisit your key notes.</li>
+            <li>Allow time to rest.</li>
+            <li>Use your practice results to decide whether more study is needed.</li>
           </ul>
         </li>
       </ol>

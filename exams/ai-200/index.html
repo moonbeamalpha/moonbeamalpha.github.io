@@ -271,7 +271,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ai-200/#study-plan",
         "name": "How to study for AI-200 (Microsoft AI Cloud Developer) in 6 weeks",
-        "description": "A six-week study plan mapped to the AI-200 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Move from AI compute and vector storage to integration, security and operations. Adjust this six-week route to your Azure development experience.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -281,22 +281,43 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Compute and vector storage (Weeks 1–2)",
-            "text": "Week 1: cover 'Develop AI-powered compute solutions' — Azure Functions, Container Apps, AKS GPU pools, ACR, autoscaling, cold-start mitigation. Week 2: cover 'Develop for vector-enabled storage and data' — Azure Cosmos DB vector indexes, Azure SQL vector capabilities, Azure AI Search vector vs hybrid search, embedding generation and chunking strategies.",
+            "name": "Week 1: AI compute",
+            "text": "Compare Functions, Container Apps and AKS GPU pools. Manage container images in ACR. Review autoscaling and cold-start mitigation.",
             "url": "https://azuremastery.app/exams/ai-200/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Pipelines and security (Weeks 3–4)",
-            "text": "Week 3: cover 'Implement AI pipelines and integration' — Azure Data Factory, Synapse pipelines, Logic Apps, Power Automate, Azure Functions with event triggers, retry and idempotency patterns. Week 4: cover 'Implement security and identity for AI' — managed identities, Microsoft Entra app registrations, Private Link, customer-managed keys, content filters, Azure Key Vault, RBAC for Foundry projects.",
+            "name": "Week 2: Vectors and storage",
+            "text": "Compare Cosmos DB, Azure SQL and Azure AI Search vector options. Distinguish vector search from hybrid search. Practise embedding generation and chunking.",
             "url": "https://azuremastery.app/exams/ai-200/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Monitor, optimise, exam sharpening (Weeks 5–6)",
-            "text": "Week 5: cover 'Monitor and optimize AI solutions' — Application Insights for AI calls, custom telemetry for tokens and latency, distributed tracing, cost dashboards, caching and batching strategies, capacity planning. Week 6: switch to Focus Weak Spots sessions every morning, then two full-length 100-minute Exam Simulator runs in the second half. Schedule the exam when you are scoring 750+ with confidence.",
+            "name": "Week 3: Pipelines and integration",
+            "text": "Compare Data Factory, Synapse pipelines, Logic Apps and Power Automate. Use event-triggered Azure Functions. Design retry and idempotency patterns.",
+            "url": "https://azuremastery.app/exams/ai-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Week 4: Security and identity",
+            "text": "Use managed identities, app registrations and Foundry RBAC. Review Private Link, customer-managed keys and Key Vault. Configure content filters.",
+            "url": "https://azuremastery.app/exams/ai-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Week 5: Monitoring and optimisation",
+            "text": "Trace AI calls with Application Insights and custom telemetry. Monitor tokens, latency and cost. Compare caching, batching and capacity-planning choices.",
+            "url": "https://azuremastery.app/exams/ai-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Week 6: Review and rehearse",
+            "text": "Use Focus Weak Spots to revisit weaker topics. Complete two timed, 100-minute Exam Simulator sessions. Review mistakes and repeat difficult scenarios.",
             "url": "https://azuremastery.app/exams/ai-200/#study-plan"
           }
         ],
@@ -315,7 +336,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -670,29 +691,54 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested AI-200 study plan</h2>
-      <p class="section-lede">
-        Most candidates pass AI-200 after four to eight weeks of focused study, depending on prior Azure experience. The six-week plan below maps onto the four AI-200 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Compute and vector storage</h3>
+      <p class="section-lede">Move from AI compute and vector storage to integration, security and operations. Adjust this six-week route to your Azure development experience.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>AI compute</h3>
           <ul>
-            <li><strong>Week 1:</strong> Develop AI-powered compute solutions — Azure Functions, Container Apps, AKS GPU pools, ACR, autoscaling, cold-start mitigation.</li>
-            <li><strong>Week 2:</strong> Develop for vector-enabled storage and data — Azure Cosmos DB vector indexes, Azure SQL vector capabilities, Azure AI Search vector vs hybrid search, embedding generation and chunking strategies.</li>
+            <li>Compare Functions, Container Apps and AKS GPU pools.</li>
+            <li>Manage container images in ACR.</li>
+            <li>Review autoscaling and cold-start mitigation.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Pipelines and security</h3>
+        <li data-period-label="Week 2">
+          <h3>Vectors and storage</h3>
           <ul>
-            <li><strong>Week 3:</strong> Implement AI pipelines and integration — Azure Data Factory, Synapse pipelines, Logic Apps, Power Automate, Azure Functions with event triggers, retry and idempotency patterns.</li>
-            <li><strong>Week 4:</strong> Implement security and identity for AI — managed identities, Microsoft Entra app registrations, Private Link, customer-managed keys, content filters, Azure Key Vault, RBAC for Foundry projects.</li>
+            <li>Compare Cosmos DB, Azure SQL and Azure AI Search vector options.</li>
+            <li>Distinguish vector search from hybrid search.</li>
+            <li>Practise embedding generation and chunking.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Monitor, optimise, sharpen, simulate</h3>
+        <li data-period-label="Week 3">
+          <h3>Pipelines and integration</h3>
           <ul>
-            <li><strong>Week 5:</strong> Monitor and optimize AI solutions — Application Insights for AI calls, custom telemetry for tokens and latency, distributed tracing, cost dashboards, caching and batching strategies, capacity planning.</li>
-            <li><strong>Week 6:</strong> Run <em>Focus Weak Spots</em> every morning, then two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Schedule the exam when readiness gauge is 750+ with reasonable confidence.</li>
+            <li>Compare Data Factory, Synapse pipelines, Logic Apps and Power Automate.</li>
+            <li>Use event-triggered Azure Functions.</li>
+            <li>Design retry and idempotency patterns.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 4">
+          <h3>Security and identity</h3>
+          <ul>
+            <li>Use managed identities, app registrations and Foundry RBAC.</li>
+            <li>Review Private Link, customer-managed keys and Key Vault.</li>
+            <li>Configure content filters.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 5">
+          <h3>Monitoring and optimisation</h3>
+          <ul>
+            <li>Trace AI calls with Application Insights and custom telemetry.</li>
+            <li>Monitor tokens, latency and cost.</li>
+            <li>Compare caching, batching and capacity-planning choices.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 6">
+          <h3>Review and rehearse</h3>
+          <ul>
+            <li>Use Focus Weak Spots to revisit weaker topics.</li>
+            <li>Complete two timed, 100-minute Exam Simulator sessions.</li>
+            <li>Review mistakes and repeat difficult scenarios.</li>
           </ul>
         </li>
       </ol>

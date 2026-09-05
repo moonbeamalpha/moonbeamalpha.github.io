@@ -265,7 +265,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/az-400/#study-plan",
         "name": "How to study for AZ-400 (Designing and Implementing Microsoft DevOps Solutions) in 10 weeks",
-        "description": "A ten-week study plan mapped to the AZ-400 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator. Designed for candidates who already hold AZ-104 or AZ-204.",
+        "description": "Follow this suggested ten-week route, adjusting the pace to your experience. Build from team workflows and Git to pipelines, deployment, security and monitoring. Finish with focused review and timed practice.",
         "totalTime": "P70D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -276,36 +276,71 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Processes, communications, and source control (Weeks 1–2)",
-            "text": "Week 1: 'Design and implement processes and communications' — GitHub Flow, Azure Boards, dashboards, DevOps metrics (cycle time, lead time, time to recovery), wikis with Markdown and Mermaid syntax, webhook integrations. Week 2: 'Design and implement a source control strategy' — branching strategies (trunk-based, feature, release), pull request workflows, branch protection rules, Git LFS, repository scaling, recovering data via Git commands.",
+            "name": "Week 1: Process and communication",
+            "text": "Plan work with Azure Boards, dashboards and GitHub Flow. Track cycle time, lead time and recovery time. Connect team documentation, wikis, webhooks and Teams.",
             "url": "https://azuremastery.app/exams/az-400/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Build and release pipelines, part 1 (Weeks 3–5)",
-            "text": "Weeks 3–5: 'Design and implement build and release pipelines' — the largest domain at 50–55%. Package management (GitHub Packages, Azure Artifacts, SemVer, CalVer); testing strategy (unit, integration, load, code coverage); pipeline implementation (YAML in Azure Pipelines AND GitHub Actions, agents/runners, triggers, multi-stage pipelines, reusable templates, environment checks/approvals).",
+            "name": "Week 2: Source control",
+            "text": "Compare trunk-based, feature and release branches. Practise pull requests and branch protection rules. Manage large repositories, recover Git data and clean history.",
             "url": "https://azuremastery.app/exams/az-400/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Build and release pipelines, part 2 + IaC (Weeks 6–7)",
-            "text": "Week 6: deployments — blue-green, canary, ring, progressive exposure, feature flags via Azure App Configuration, A/B testing, hotfix paths, deployment slots, container deployments, database deployments. Week 7: infrastructure as code — configuration management, Bicep, ARM templates, Azure Automation State Configuration, Azure Machine Configuration, Azure Deployment Environments. Plus pipeline maintenance — health monitoring, optimising for cost/time/performance, classic-to-YAML migration.",
+            "name": "Week 3: Packages and dependencies",
+            "text": "Publish packages with GitHub Packages and Azure Artifacts. Manage feeds, dependencies and artifact versions. Compare SemVer and CalVer; configure quality and release gates.",
             "url": "https://azuremastery.app/exams/az-400/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 4,
-            "name": "Security + instrumentation (Weeks 8–9)",
-            "text": "Week 8: 'Develop a security and compliance plan' — auth (service principals, managed identities, GitHub Apps, GITHUB_TOKEN, PATs, service connections); secret management (Azure Key Vault, GitHub Secrets, OIDC workload identity federation); compliance scanning (Defender for DevOps, GitHub Advanced Security, Dependabot, container scanning, CodeQL). Week 9: 'Implement an instrumentation strategy' — Azure Monitor + Logs integration, Application Insights, GitHub Insights, alerts, KQL queries.",
+            "name": "Week 4: Build pipelines",
+            "text": "Write YAML for Azure Pipelines and GitHub Actions. Choose agents and runners; configure triggers and stages. Reuse templates and add environment checks and approvals.",
             "url": "https://azuremastery.app/exams/az-400/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 5,
-            "name": "Sharpen and simulate (Week 10)",
-            "text": "Week 10: Focus Weak Spots every morning, two full-length 100-minute Exam Simulator runs in the second half. AZ-400's question pool is the largest in the Azure exam family — Azure Mastery's 444 questions match that breadth. Schedule the exam when you're scoring 730+ consistently with confidence.",
+            "name": "Week 5: Automated testing",
+            "text": "Compare unit, integration and load tests. Configure test tasks, agents and results integration. Use code coverage to identify gaps.",
+            "url": "https://azuremastery.app/exams/az-400/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Week 6: Deployment strategies",
+            "text": "Compare blue-green, canary, ring and progressive releases. Use feature flags, A/B testing, slots and hotfix paths. Practise container and database deployments.",
+            "url": "https://azuremastery.app/exams/az-400/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Week 7: Infrastructure and maintenance",
+            "text": "Deploy with Bicep, ARM templates and Azure Deployment Environments. Review Azure Automation State Configuration and Azure Machine Configuration. Monitor pipeline health, optimise cost and speed, set retention and migrate to YAML.",
+            "url": "https://azuremastery.app/exams/az-400/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Week 8: Security and compliance",
+            "text": "Configure identities, tokens, service connections and permissions. Protect secrets with Key Vault, secure files and workload identity federation. Review Defender for DevOps, GitHub Advanced Security, Dependabot, CodeQL and container scans.",
+            "url": "https://azuremastery.app/exams/az-400/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 9,
+            "name": "Week 9: Monitoring and instrumentation",
+            "text": "Connect Azure Monitor, Logs and Application Insights to DevOps tools. Review resource Insights, GitHub Insights and pipeline alerts. Practise metrics analysis, distributed tracing and basic KQL.",
+            "url": "https://azuremastery.app/exams/az-400/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 10,
+            "name": "Week 10: Review and rehearse",
+            "text": "Revisit weaker topics with Focus Weak Spots and decay alerts. Complete two timed, 100-minute Exam Simulator sessions. Review mistakes and use practice results to guide further study.",
             "url": "https://azuremastery.app/exams/az-400/#study-plan"
           }
         ],
@@ -324,7 +359,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -637,43 +672,86 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">10-week study plan</p>
       <h2 class="display-small section-title">Suggested AZ-400 study plan</h2>
-      <p class="section-lede">
-        AZ-400 has the broadest service surface of any Azure exam. Plan eight to twelve weeks even if you already hold AZ-104 or AZ-204. The ten-week plan below front-loads the small process and source-control domains, then spends three full weeks on the 50–55% build/release pipelines domain, before security and instrumentation in the second half.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Process, communications, source control</h3>
+      <p class="section-lede">Follow this suggested ten-week route, adjusting the pace to your experience. Build from team workflows and Git to pipelines, deployment, security and monitoring. Finish with focused review and timed practice.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>Process and communication</h3>
           <ul>
-            <li><strong>Week 1:</strong> GitHub Flow, Azure Boards, dashboards, DevOps metrics (cycle time, lead time, time to recovery), wikis (Markdown + Mermaid), webhook integrations, Microsoft Teams hooks.</li>
-            <li><strong>Week 2:</strong> Branching strategies (trunk-based, feature, release), pull request workflow, branch protection rules, Git LFS, repo scaling, recovering data via Git commands, removing data from history.</li>
+            <li>Plan work with Azure Boards, dashboards and GitHub Flow.</li>
+            <li>Track cycle time, lead time and recovery time.</li>
+            <li>Connect team documentation, wikis, webhooks and Teams.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Build pipelines + package management</h3>
+        <li data-period-label="Week 2">
+          <h3>Source control</h3>
           <ul>
-            <li><strong>Week 3:</strong> Package management (GitHub Packages, Azure Artifacts, SemVer, CalVer), feeds, dependency versioning, pipeline artifact versioning. Quality and release gates.</li>
-            <li><strong>Week 4:</strong> Pipeline implementation — YAML in Azure Pipelines AND GitHub Actions, agents/runners (cost, licensing, self-hosted), trigger rules, multi-stage pipelines, reusable templates, environment checks/approvals.</li>
-            <li><strong>Week 5:</strong> Testing strategy — unit, integration, load tests; configuring test tasks/agents/results integration; code coverage analysis.</li>
+            <li>Compare trunk-based, feature and release branches.</li>
+            <li>Practise pull requests and branch protection rules.</li>
+            <li>Manage large repositories, recover Git data and clean history.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Deployments + IaC + maintenance</h3>
+        <li data-period-label="Week 3">
+          <h3>Packages and dependencies</h3>
           <ul>
-            <li><strong>Week 6:</strong> Deployment strategies (blue-green, canary, ring, progressive exposure, feature flags via Azure App Configuration, A/B testing), hotfix paths, deployment slots, container deployments, database deployments.</li>
-            <li><strong>Week 7:</strong> IaC — Bicep, ARM templates, Azure Automation State Configuration, Azure Machine Configuration, Azure Deployment Environments. Plus pipeline maintenance — health monitoring, optimisation for cost/time/performance, retention strategy, classic-to-YAML migration.</li>
+            <li>Publish packages with GitHub Packages and Azure Artifacts.</li>
+            <li>Manage feeds, dependencies and artifact versions.</li>
+            <li>Compare SemVer and CalVer; configure quality and release gates.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 7–8">
+        <li data-period-label="Week 4">
+          <h3>Build pipelines</h3>
+          <ul>
+            <li>Write YAML for Azure Pipelines and GitHub Actions.</li>
+            <li>Choose agents and runners; configure triggers and stages.</li>
+            <li>Reuse templates and add environment checks and approvals.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 5">
+          <h3>Automated testing</h3>
+          <ul>
+            <li>Compare unit, integration and load tests.</li>
+            <li>Configure test tasks, agents and results integration.</li>
+            <li>Use code coverage to identify gaps.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 6">
+          <h3>Deployment strategies</h3>
+          <ul>
+            <li>Compare blue-green, canary, ring and progressive releases.</li>
+            <li>Use feature flags, A/B testing, slots and hotfix paths.</li>
+            <li>Practise container and database deployments.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 7">
+          <h3>Infrastructure and maintenance</h3>
+          <ul>
+            <li>Deploy with Bicep, ARM templates and Azure Deployment Environments.</li>
+            <li>Review Azure Automation State Configuration and Azure Machine Configuration.</li>
+            <li>Monitor pipeline health, optimise cost and speed, set retention and migrate to YAML.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 8">
           <h3>Security and compliance</h3>
           <ul>
-            <li><strong>Week 8:</strong> Auth — service principals vs Managed Identities (system vs user), GitHub Apps + GITHUB_TOKEN + PATs, Azure DevOps service connections, GitHub permissions and roles, Azure DevOps permissions/security groups, projects/teams configuration. Sensitive info — Azure Key Vault for secrets/keys/certs, OpenID Connect/workload identity federation in GitHub Actions and Azure Pipelines, secure files. Scanning — Microsoft Defender for DevOps, GitHub Advanced Security, Dependabot, container scanning, CodeQL.</li>
+            <li>Configure identities, tokens, service connections and permissions.</li>
+            <li>Protect secrets with Key Vault, secure files and workload identity federation.</li>
+            <li>Review Defender for DevOps, GitHub Advanced Security, Dependabot, CodeQL and container scans.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 9–10">
-          <h3>Instrumentation + sharpen + simulate</h3>
+        <li data-period-label="Week 9">
+          <h3>Monitoring and instrumentation</h3>
           <ul>
-            <li><strong>Week 9:</strong> Azure Monitor + Logs integration with DevOps tools, Application Insights, VM/Container/Storage/Network Insights, GitHub Insights, alerts on Actions/Pipelines events. Analyse infra metrics, distributed tracing, basic KQL queries.</li>
-            <li><strong>Week 10:</strong> Focus Weak Spots in the first half (decay alerts pull older topics back); two full-length 100-minute Exam Simulator runs in the second half. Schedule the exam when scoring 730+ consistently.</li>
+            <li>Connect Azure Monitor, Logs and Application Insights to DevOps tools.</li>
+            <li>Review resource Insights, GitHub Insights and pipeline alerts.</li>
+            <li>Practise metrics analysis, distributed tracing and basic KQL.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 10">
+          <h3>Review and rehearse</h3>
+          <ul>
+            <li>Revisit weaker topics with Focus Weak Spots and decay alerts.</li>
+            <li>Complete two timed, 100-minute Exam Simulator sessions.</li>
+            <li>Review mistakes and use practice results to guide further study.</li>
           </ul>
         </li>
       </ol>

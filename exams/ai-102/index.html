@@ -265,7 +265,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ai-102/#study-plan",
         "name": "How to review the retired AI-102 outline and transition to AI-103",
-        "description": "A six-week reference plan for the final AI-102 outline, followed by a transition to the current AI-103 exam.",
+        "description": "Use this six-week plan as a reference to AI-102's final outline. For the active apps and agents route, move to the AI-103 study plan before choosing an exam.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -275,22 +275,43 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Plan, manage, and generative AI (Weeks 1–2)",
-            "text": "Week 1: cover 'Plan and manage an Azure AI solution' — Azure AI services resources (multi-service vs single-service), RBAC, customer-managed keys, networking, content moderation, Responsible AI considerations, monitoring, deployment via containers and ARM/Bicep. Week 2: cover 'Implement generative AI solutions' — Azure OpenAI provisioning, model deployment, prompt engineering, RAG with Azure AI Search and embeddings, content filters, fine-tuning, evaluation metrics.",
+            "name": "Week 1: Plan and manage AI",
+            "text": "Compare single-service and multi-service resources. Review RBAC, keys, networking, moderation and responsible AI. Monitor resources and review container or ARM/Bicep deployment.",
             "url": "https://azuremastery.app/exams/ai-102/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Vision and NLP (Weeks 3–4)",
-            "text": "Week 3: cover 'Implement computer vision solutions' — Azure AI Vision (analysis, OCR via Read API), Custom Vision (classification and object detection), Face service (Limited Access), Video Analyzer for Media. Week 4: cover 'Implement natural language processing solutions' — Azure AI Language (entity recognition, sentiment, summarisation, CLU, question answering), Azure AI Speech (STT, TTS, translation, custom speech), Azure AI Translator.",
+            "name": "Week 2: Generative AI",
+            "text": "Review Azure OpenAI provisioning and model deployment. Practise prompts, embeddings and RAG with Azure AI Search. Compare content filters, fine-tuning and evaluation metrics.",
             "url": "https://azuremastery.app/exams/ai-102/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Knowledge mining, agentic, exam sharpening (Weeks 5–6)",
-            "text": "Week 5: review knowledge mining, information extraction, Azure AI Search, Document Intelligence, and the final AI-102 agentic content. Week 6: use the historical simulator for reference, then compare the retired outline with AI-103 and move to its current bank before scheduling an exam.",
+            "name": "Week 3: Computer vision",
+            "text": "Review image analysis and OCR with Azure AI Vision. Compare Custom Vision classification and object detection. Revisit Face access restrictions and video-analysis scenarios.",
+            "url": "https://azuremastery.app/exams/ai-102/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Week 4: Language and speech",
+            "text": "Explore entities, sentiment, summaries, CLU and question answering. Compare speech-to-text, text-to-speech and custom speech. Review text and speech translation scenarios.",
+            "url": "https://azuremastery.app/exams/ai-102/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Week 5: Search, documents and agents",
+            "text": "Review Search indexes, indexers, skillsets and semantic or vector search. Compare Document Intelligence models. Explore Foundry agents, tool calling and multi-agent orchestration.",
+            "url": "https://azuremastery.app/exams/ai-102/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Week 6: Review and move forward",
+            "text": "Use Focus Weak Spots for historical revision. Review retained simulator questions and explanations. Move to the AI-103 bank before scheduling an exam.",
             "url": "https://azuremastery.app/exams/ai-102/#study-plan"
           }
         ],
@@ -309,7 +330,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -639,29 +660,54 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested AI-102 study plan</h2>
-      <p class="section-lede">
-        The retained six-week plan maps onto the six domains in AI-102's final outline and remains useful for historical reference. New candidates should use the current AI-103 study plan and question bank for the active Azure AI apps and agents route.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Plan, manage, and generative AI</h3>
+      <p class="section-lede">Use this six-week plan as a reference to AI-102&#x27;s final outline. For the active apps and agents route, move to the AI-103 study plan before choosing an exam.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>Plan and manage AI</h3>
           <ul>
-            <li><strong>Week 1:</strong> Plan and manage Azure AI solutions — resource provisioning (multi-service vs single-service), RBAC, customer-managed keys, networking, content moderation, Responsible AI considerations, monitoring, deployment via containers and ARM/Bicep.</li>
-            <li><strong>Week 2:</strong> Implement generative AI solutions — Azure OpenAI provisioning, model deployment, prompt engineering (system prompts, few-shot, chain-of-thought), RAG with Azure AI Search and embeddings, content filters, fine-tuning, evaluation metrics.</li>
+            <li>Compare single-service and multi-service resources.</li>
+            <li>Review RBAC, keys, networking, moderation and responsible AI.</li>
+            <li>Monitor resources and review container or ARM/Bicep deployment.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Vision and NLP</h3>
+        <li data-period-label="Week 2">
+          <h3>Generative AI</h3>
           <ul>
-            <li><strong>Week 3:</strong> Computer vision — Azure AI Vision (analysis, OCR via Read API), Custom Vision (classification and object detection), Face service (Limited Access policy), Video Analyzer for Media.</li>
-            <li><strong>Week 4:</strong> NLP — Azure AI Language (entity recognition, sentiment, summarisation, CLU, question answering), Azure AI Speech (STT, TTS, translation, custom speech), Azure AI Translator.</li>
+            <li>Review Azure OpenAI provisioning and model deployment.</li>
+            <li>Practise prompts, embeddings and RAG with Azure AI Search.</li>
+            <li>Compare content filters, fine-tuning and evaluation metrics.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Knowledge mining, agentic, sharpen, simulate</h3>
+        <li data-period-label="Week 3">
+          <h3>Computer vision</h3>
           <ul>
-            <li><strong>Week 5:</strong> Knowledge mining — Azure AI Search (indexers, indexes, skillsets, semantic and vector search), Document Intelligence (prebuilt and custom models). Plus agentic — Azure AI Foundry agents, tool calling, multi-agent orchestration.</li>
-            <li><strong>Week 6:</strong> Use <em>Focus Weak Spots</em> and historical simulator runs for reference, then move to the current <a href="/exams/ai-103/">AI-103 bank</a> before scheduling an exam.</li>
+            <li>Review image analysis and OCR with Azure AI Vision.</li>
+            <li>Compare Custom Vision classification and object detection.</li>
+            <li>Revisit Face access restrictions and video-analysis scenarios.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 4">
+          <h3>Language and speech</h3>
+          <ul>
+            <li>Explore entities, sentiment, summaries, CLU and question answering.</li>
+            <li>Compare speech-to-text, text-to-speech and custom speech.</li>
+            <li>Review text and speech translation scenarios.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 5">
+          <h3>Search, documents and agents</h3>
+          <ul>
+            <li>Review Search indexes, indexers, skillsets and semantic or vector search.</li>
+            <li>Compare Document Intelligence models.</li>
+            <li>Explore Foundry agents, tool calling and multi-agent orchestration.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 6">
+          <h3>Review and move forward</h3>
+          <ul>
+            <li>Use Focus Weak Spots for historical revision.</li>
+            <li>Review retained simulator questions and explanations.</li>
+            <li>Move to the AI-103 bank before scheduling an exam.</li>
           </ul>
         </li>
       </ol>

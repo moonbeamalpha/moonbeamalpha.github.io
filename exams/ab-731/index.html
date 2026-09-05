@@ -262,7 +262,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ab-731/#study-plan",
         "name": "How to study for AB-731 (Microsoft AI Transformation Leader) in 4 weeks",
-        "description": "A four-week study plan mapped to the AB-731 skills outline, Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Work through AI business value, Microsoft services and adoption decisions. Use the final week of this four-week route for review and timed practice.",
         "totalTime": "P28D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -272,29 +272,29 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Business value of generative AI (Week 1)",
-            "text": "Cover 'Identify the business value of generative AI solutions' (35–40%). Distinguish generative AI from discriminative, classical ML, and rule-based automation. Token-based cost drivers, prompt size, ROI framing. Prompt-engineering patterns at a leadership level — instruction clarity, few-shot, chain-of-thought, grounding. Retrieval-augmented generation (RAG) as a grounding strategy. Responsible AI principles: fairness, reliability, safety, privacy, inclusiveness, transparency, accountability. Risks: fabrications, bias, supply-chain.",
+            "name": "Week 1: AI business value",
+            "text": "Compare generative AI, classical ML and rule-based automation. Assess cost, ROI, risks and responsible AI principles. Review prompting, grounding, RAG and the ML lifecycle.",
             "url": "https://azuremastery.app/exams/ab-731/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Microsoft AI apps and services (Week 2)",
-            "text": "Cover 'Identify benefits, capabilities, and opportunities for Microsoft's AI apps and services' (35–40%). Differences between Microsoft Copilot (free, web-grounded), Microsoft 365 Copilot Chat (entitlement, EDP), and Microsoft 365 Copilot (Graph-grounded). Copilot in Word, Excel, PowerPoint, Outlook, Teams. Microsoft Copilot Studio for low-code agents. Microsoft Graph as the tenant-resident grounding source. Researcher vs Analyst. Microsoft Foundry and Foundry Tools — Azure AI Vision, Azure AI Search, model selection (Phi, GPT family, fine-tuned, vision/speech).",
+            "name": "Week 2: Microsoft AI services",
+            "text": "Distinguish Microsoft Copilot, Copilot Chat and Microsoft 365 Copilot. Explore app integrations, Graph grounding, Researcher and Analyst. Compare Copilot Studio, Foundry Tools and model options.",
             "url": "https://azuremastery.app/exams/ab-731/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Implementation and adoption strategy (Week 3)",
-            "text": "Cover 'Identify an implementation and adoption strategy for Microsoft's AI apps and services' (20–25%). Build/buy/extend trade-offs and the Microsoft 365 Copilot extensibility framework (declarative agents, plug-ins, connectors, custom-engine agents). Licensing — pay-as-you-go, per-user monthly, included with Microsoft 365. Azure AI subscription options. Governance: AI council, adoption team, AI champions programme. Change-management and barrier-removal tactics. Adoption metrics and the Microsoft Copilot Dashboard.",
+            "name": "Week 3: Implementation and adoption",
+            "text": "Compare build, buy and extend choices and licensing models. Plan governance, AI champions and change management. Review adoption with Copilot Dashboard, Copilot Analytics and Viva Insights.",
             "url": "https://azuremastery.app/exams/ab-731/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 4,
-            "name": "Sharpen and simulate (Week 4)",
-            "text": "Switch to Focus Weak Spots sessions every morning. Two full-length 45-minute Exam Simulator runs in the second half of the week. Schedule the exam when readiness gauge is 720+ with reasonable confidence.",
+            "name": "Week 4: Review and rehearse",
+            "text": "Use Focus Weak Spots to revisit weaker areas. Complete two timed, 45-minute Exam Simulator sessions. Review service-selection and build, buy or extend decisions.",
             "url": "https://azuremastery.app/exams/ab-731/#study-plan"
           }
         ],
@@ -313,7 +313,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -604,32 +604,38 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">4-week study plan</p>
       <h2 class="display-small section-title">Suggested AB-731 study plan</h2>
-      <p class="section-lede">
-        Most business decision-makers pass AB-731 after three to five weeks of focused study, depending on prior generative-AI familiarity. The four-week plan below maps onto the three AB-731 domains (the first two weight 35–40% each, so give them roughly equal time), Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Business value of generative AI</h3>
+      <p class="section-lede">Work through AI business value, Microsoft services and adoption decisions. Use the final week of this four-week route for review and timed practice.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>AI business value</h3>
           <ul>
-            <li><strong>Week 1:</strong> Distinguish generative AI from discriminative, classical ML, and rule-based automation. Cost drivers: tokens, prompt size, response size, model selection. ROI framing for the business case. Risks: fabrications, bias, reliability, supply-chain. Prompt-engineering patterns at a leadership level — instruction clarity, few-shot, role/persona, chain-of-thought, system instructions, grounding. Retrieval-augmented generation (RAG) as a grounding strategy. Responsible AI: fairness, reliability and safety, privacy and security, inclusiveness, transparency, accountability. The ML lifecycle.</li>
+            <li>Compare generative AI, classical ML and rule-based automation.</li>
+            <li>Assess cost, ROI, risks and responsible AI principles.</li>
+            <li>Review prompting, grounding, RAG and the ML lifecycle.</li>
           </ul>
         </li>
-        <li>
-          <h3>Microsoft AI apps and services</h3>
+        <li data-period-label="Week 2">
+          <h3>Microsoft AI services</h3>
           <ul>
-            <li><strong>Week 2:</strong> Differences between Microsoft Copilot (free, web-grounded), Microsoft 365 Copilot Chat (entitlement, enterprise data protection), and Microsoft 365 Copilot (Graph integration). Copilot in Word, Excel, PowerPoint, Outlook, Teams, OneNote, Loop. Microsoft Copilot Studio for low-code agents — topics, generative answers, knowledge sources, custom connectors. Microsoft Graph as the tenant-resident grounding source. Researcher and Analyst use cases. Foundry Tools — Azure AI Vision, Azure AI Search, Microsoft Foundry. Model selection: Phi vs GPT family vs fine-tuned vs specialised.</li>
+            <li>Distinguish Microsoft Copilot, Copilot Chat and Microsoft 365 Copilot.</li>
+            <li>Explore app integrations, Graph grounding, Researcher and Analyst.</li>
+            <li>Compare Copilot Studio, Foundry Tools and model options.</li>
           </ul>
         </li>
-        <li>
-          <h3>Implementation and adoption strategy</h3>
+        <li data-period-label="Week 3">
+          <h3>Implementation and adoption</h3>
           <ul>
-            <li><strong>Week 3:</strong> Build/buy/extend trade-offs across the Microsoft 365 Copilot extensibility framework (declarative agents, plug-ins, connectors, custom-engine agents). Licensing — pay-as-you-go, per-user monthly, included with Microsoft 365. Azure AI subscription options. Governance structures: AI council, adoption team, AI champions programme, barrier-removal tactics. Change-management for rollout. Adoption metrics: Microsoft Copilot Dashboard, Copilot Analytics, Viva Insights signals.</li>
+            <li>Compare build, buy and extend choices and licensing models.</li>
+            <li>Plan governance, AI champions and change management.</li>
+            <li>Review adoption with Copilot Dashboard, Copilot Analytics and Viva Insights.</li>
           </ul>
         </li>
-        <li>
-          <h3>Sharpen, simulate</h3>
+        <li data-period-label="Week 4">
+          <h3>Review and rehearse</h3>
           <ul>
-            <li><strong>Week 4:</strong> Run <em>Focus Weak Spots</em> every morning, weighted toward whichever of the two heavy domains is lagging. Two end-to-end <em>Exam Simulator</em> runs at full 45-minute length in the back half of the week. Review carefully — focus on confidently distinguishing Microsoft Copilot vs Microsoft 365 Copilot Chat vs Microsoft 365 Copilot, and on build/buy/extend judgement calls. Schedule the exam when readiness gauge is 720+ with reasonable confidence.</li>
+            <li>Use Focus Weak Spots to revisit weaker areas.</li>
+            <li>Complete two timed, 45-minute Exam Simulator sessions.</li>
+            <li>Review service-selection and build, buy or extend decisions.</li>
           </ul>
         </li>
       </ol>

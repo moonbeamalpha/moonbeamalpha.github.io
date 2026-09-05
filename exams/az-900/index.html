@@ -270,7 +270,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/az-900/#study-plan",
         "name": "How to study for AZ-900 (Microsoft Azure Fundamentals) in 2 weeks",
-        "description": "A two-week revision plan mapped to the AZ-900 skills outline (July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Build a cloud and Azure foundation in the first week. Use the second week for focused revision and timed practice, adjusting the pace to your experience.",
         "totalTime": "P14D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -280,15 +280,50 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Build the mental map (Days 1–7)",
-            "text": "Days 1–2: cover 'Describe cloud concepts' first — smallest domain, foundational. Days 3–5: split 'Describe Azure architecture and services' across three sessions: regions/zones, then compute and networking, then storage and identity. Days 6–7: cover 'Describe Azure management and governance' — cost management, Azure Policy, monitoring tools.",
+            "name": "Days 1–2: Cloud concepts",
+            "text": "Study cloud concepts first. Use short practice sessions to check understanding. Review explanations before moving on.",
             "url": "https://azuremastery.app/exams/az-900/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Sharpen and simulate (Days 8–14)",
-            "text": "Days 8–10: run Focus Weak Spots every morning — Azure Mastery surfaces the 5–10 questions most likely to move your readiness score. Days 11–12: run the Exam Simulator end-to-end at the full 45-minute length, twice. Day 13: one more simulator run; if scoring 750+ consistently, schedule the exam. Day 14: light review only, sleep well, sit the exam.",
+            "name": "Days 3–5: Azure architecture and services",
+            "text": "Review regions and availability zones. Compare compute and networking services. Explore storage and identity choices.",
+            "url": "https://azuremastery.app/exams/az-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Days 6–7: Management and governance",
+            "text": "Review cost management. Explore Azure Policy. Compare monitoring tools.",
+            "url": "https://azuremastery.app/exams/az-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Days 8–10: Target weaker topics",
+            "text": "Run Focus Weak Spots sessions. Review missed questions and explanations. Revisit topics you have not practised recently.",
+            "url": "https://azuremastery.app/exams/az-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 11–12: Timed rehearsal",
+            "text": "Complete two 45-minute Exam Simulator sessions. Review each run carefully. Record topics that need more attention.",
+            "url": "https://azuremastery.app/exams/az-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Day 13: Check your progress",
+            "text": "Complete another simulator session. Look for recurring mistakes. Use the results to plan any further study.",
+            "url": "https://azuremastery.app/exams/az-900/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Day 14: Light review",
+            "text": "Revisit your key notes. Allow time to rest. Decide whether you are ready to move ahead.",
             "url": "https://azuremastery.app/exams/az-900/#study-plan"
           }
         ],
@@ -307,7 +342,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -650,25 +685,62 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">2-week revision plan</p>
       <h2 class="display-small section-title">Suggested AZ-900 study plan</h2>
-      <p class="section-lede">
-        Most candidates with prior IT experience pass AZ-900 after one to two weeks of focused revision. Below is a two-week plan that maps onto Azure Mastery's domains, simulator, and decay alerts. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Build the mental map</h3>
+      <p class="section-lede">Build a cloud and Azure foundation in the first week. Use the second week for focused revision and timed practice, adjusting the pace to your experience.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–2">
+          <h3>Cloud concepts</h3>
           <ul>
-            <li><strong>Days 1–2:</strong> Tackle <em>Describe cloud concepts</em> first. Smallest domain, foundational. 30 questions per session, two sessions per day.</li>
-            <li><strong>Days 3–5:</strong> Move to <em>Describe Azure architecture and services</em>. Split across three sessions: regions/zones, then compute/networking, then storage and identity.</li>
-            <li><strong>Days 6–7:</strong> Cover <em>Describe Azure management and governance</em>. Cost management, Azure Policy, monitoring tools.</li>
+            <li>Study cloud concepts first.</li>
+            <li>Use short practice sessions to check understanding.</li>
+            <li>Review explanations before moving on.</li>
           </ul>
         </li>
-        <li>
-          <h3>Sharpen and simulate</h3>
+        <li data-period-label="Days 3–5">
+          <h3>Azure architecture and services</h3>
           <ul>
-            <li><strong>Days 8–10:</strong> Run the <em>Focus Weak Spots</em> session every morning. The app surfaces the 5–10 questions most likely to move your readiness score.</li>
-            <li><strong>Days 11–12:</strong> Run the <em>Exam Simulator</em> end-to-end at full 45-minute length. Twice. Review carefully after each.</li>
-            <li><strong>Day 13:</strong> One more simulator run. If you're scoring 750+ consistently, schedule the exam.</li>
-            <li><strong>Day 14:</strong> Light review only. Sleep well. Sit the exam.</li>
+            <li>Review regions and availability zones.</li>
+            <li>Compare compute and networking services.</li>
+            <li>Explore storage and identity choices.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 6–7">
+          <h3>Management and governance</h3>
+          <ul>
+            <li>Review cost management.</li>
+            <li>Explore Azure Policy.</li>
+            <li>Compare monitoring tools.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 8–10">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Run Focus Weak Spots sessions.</li>
+            <li>Review missed questions and explanations.</li>
+            <li>Revisit topics you have not practised recently.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 11–12">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two 45-minute Exam Simulator sessions.</li>
+            <li>Review each run carefully.</li>
+            <li>Record topics that need more attention.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 13">
+          <h3>Check your progress</h3>
+          <ul>
+            <li>Complete another simulator session.</li>
+            <li>Look for recurring mistakes.</li>
+            <li>Use the results to plan any further study.</li>
+          </ul>
+        </li>
+        <li data-period-label="Day 14">
+          <h3>Light review</h3>
+          <ul>
+            <li>Revisit your key notes.</li>
+            <li>Allow time to rest.</li>
+            <li>Decide whether you are ready to move ahead.</li>
           </ul>
         </li>
       </ol>

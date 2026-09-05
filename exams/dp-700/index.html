@@ -262,7 +262,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/dp-700/#study-plan",
         "name": "How to study for DP-700 (Implementing Data Engineering Solutions Using Microsoft Fabric)",
-        "description": "A four-to-eight-week revision plan mapped to the DP-700 skills outline (July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Allow four to eight weeks, with extra time for SQL, PySpark or KQL if needed. Work through these flexible phases and pair each with hands-on Microsoft Fabric practice.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -274,15 +274,43 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Build and manage the analytics solution (Weeks 1–2)",
-            "text": "Cover 'Implement and manage an analytics solution' (30–35%): Fabric workspace settings, lifecycle management with Git integration and deployment pipelines, security and governance (row-, column-, object-level security, OneLake security, dynamic data masking, sensitivity labels), and orchestration — choosing between Dataflow Gen2, pipelines and notebooks, and designing schedule- and event-based triggers. Build a small workspace in Fabric and wire up a deployment pipeline to make it concrete.",
+            "name": "Warm-up: Refresh your languages",
+            "text": "Review the SQL, PySpark or KQL you will use. Practise reading short code examples. Revisit unfamiliar syntax before starting the main phases.",
             "url": "https://azuremastery.app/exams/dp-700/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Ingest, transform, then monitor and optimise (Weeks 3–6)",
-            "text": "Weeks 3–4: 'Ingest and transform data' (30–35%) — full vs incremental loads, batch ingest and transform with Dataflows Gen2, notebooks, PySpark, T-SQL and KQL, OneLake shortcuts and mirroring, plus streaming with Eventstream, Spark Structured Streaming and KQL windowing. Weeks 5–6: 'Monitor and optimize an analytics solution' (30–35%) — monitor items and configure alerts, resolve pipeline, Dataflow, notebook and T-SQL errors, and optimise Lakehouse, Warehouse, pipeline, Spark and query performance. Run Focus Weak Spots daily, then the Exam Simulator end-to-end at full length; when you score 750+ consistently, schedule the exam.",
+            "name": "Phase 1: Build and manage Fabric",
+            "text": "Configure workspaces, Spark, domains, OneLake and Airflow. Review Git, database projects and deployment pipelines. Create a workspace and deployment pipeline for practice.",
+            "url": "https://azuremastery.app/exams/dp-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Phase 1: Security and orchestration",
+            "text": "Review workspace, item and granular data access controls. Explore labels, masking, audit logs and OneLake security. Compare Dataflow Gen2, pipelines and notebooks; plan scheduled or event triggers.",
+            "url": "https://azuremastery.app/exams/dp-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Phase 2: Ingest and transform",
+            "text": "Compare full and incremental loads, shortcuts and mirroring. Transform batch data with Dataflows, notebooks, PySpark, T-SQL or KQL. Explore Eventstream, Spark Structured Streaming and KQL windowing.",
+            "url": "https://azuremastery.app/exams/dp-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Phase 2: Monitor and optimise",
+            "text": "Monitor items and configure alerts. Troubleshoot pipelines, Dataflows, notebooks and T-SQL. Optimise Lakehouse, Warehouse, Spark and query performance.",
+            "url": "https://azuremastery.app/exams/dp-700/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Final review: Rehearse and consolidate",
+            "text": "Use Focus Weak Spots to revisit weaker topics. Complete a timed simulator session of about 100 minutes. Review mistakes and decide whether you need more practice.",
             "url": "https://azuremastery.app/exams/dp-700/#study-plan"
           }
         ],
@@ -301,7 +329,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -592,26 +620,54 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">4–8 week revision plan</p>
       <h2 class="display-small section-title">Suggested DP-700 study plan</h2>
-      <p class="section-lede">
-        DP-700 is associate-level and hands-on, so plan four to eight weeks — more if SQL, PySpark, or KQL aren't yet second nature. Below is a two-phase plan that maps onto Azure Mastery's three domains, simulator, and decay alerts. Pair every block with real practice in a Microsoft Fabric trial; the readiness gauge tells you when you're done, not the calendar.
-      </p>
-      <ol class="study-plan">
-        <li>
-          <h3>Build and manage the platform</h3>
+      <p class="section-lede">Allow four to eight weeks, with extra time for SQL, PySpark or KQL if needed. Work through these flexible phases and pair each with hands-on Microsoft Fabric practice.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Warm-up">
+          <h3>Refresh your languages</h3>
           <ul>
-            <li><strong>Warm-up:</strong> If your SQL, PySpark, or KQL is rusty, spend the first sessions refreshing the language you'll lean on most before touching exam objectives.</li>
-            <li><strong>Phase 1 focus — <em>Implement and manage an analytics solution</em> (30–35%):</strong> Fabric workspace settings (Spark, domains, OneLake, Airflow) and lifecycle management — Git version control, database projects, deployment pipelines.</li>
-            <li><strong>Security &amp; governance:</strong> Workspace- and item-level access, row-/column-/object-/file-level controls, dynamic data masking, sensitivity labels, audit logs, and OneLake security.</li>
-            <li><strong>Orchestration:</strong> Choosing between Dataflow Gen2, pipelines, and notebooks; designing schedule- and event-based triggers. Build a workspace and a deployment pipeline in Fabric to make it stick.</li>
+            <li>Review the SQL, PySpark or KQL you will use.</li>
+            <li>Practise reading short code examples.</li>
+            <li>Revisit unfamiliar syntax before starting the main phases.</li>
           </ul>
         </li>
-        <li>
-          <h3>Ingest, transform, optimise — then simulate</h3>
+        <li data-period-label="Phase 1">
+          <h3>Build and manage Fabric</h3>
           <ul>
-            <li><strong>Phase 2 focus — <em>Ingest and transform data</em> (30–35%):</strong> Full vs incremental loads, batch transform with Dataflows Gen2, notebooks, PySpark, T-SQL and KQL, OneLake shortcuts, mirroring, plus streaming with Eventstream, Spark Structured Streaming, and KQL windowing.</li>
-            <li><strong><em>Monitor and optimize an analytics solution</em> (30–35%):</strong> Monitor items and configure alerts, resolve pipeline / Dataflow / notebook / T-SQL errors, and optimise Lakehouse, Warehouse, pipeline, Spark, and query performance.</li>
-            <li><strong>Run <em>Focus Weak Spots</em> daily.</strong> The app surfaces the 5–10 questions most likely to move your readiness score.</li>
-            <li><strong>Run the <em>Exam Simulator</em> end-to-end</strong> at full ~100-minute length. When you're scoring 750+ consistently, schedule the exam — then light review only, sleep well, and sit it.</li>
+            <li>Configure workspaces, Spark, domains, OneLake and Airflow.</li>
+            <li>Review Git, database projects and deployment pipelines.</li>
+            <li>Create a workspace and deployment pipeline for practice.</li>
+          </ul>
+        </li>
+        <li data-period-label="Phase 1">
+          <h3>Security and orchestration</h3>
+          <ul>
+            <li>Review workspace, item and granular data access controls.</li>
+            <li>Explore labels, masking, audit logs and OneLake security.</li>
+            <li>Compare Dataflow Gen2, pipelines and notebooks; plan scheduled or event triggers.</li>
+          </ul>
+        </li>
+        <li data-period-label="Phase 2">
+          <h3>Ingest and transform</h3>
+          <ul>
+            <li>Compare full and incremental loads, shortcuts and mirroring.</li>
+            <li>Transform batch data with Dataflows, notebooks, PySpark, T-SQL or KQL.</li>
+            <li>Explore Eventstream, Spark Structured Streaming and KQL windowing.</li>
+          </ul>
+        </li>
+        <li data-period-label="Phase 2">
+          <h3>Monitor and optimise</h3>
+          <ul>
+            <li>Monitor items and configure alerts.</li>
+            <li>Troubleshoot pipelines, Dataflows, notebooks and T-SQL.</li>
+            <li>Optimise Lakehouse, Warehouse, Spark and query performance.</li>
+          </ul>
+        </li>
+        <li data-period-label="Final review">
+          <h3>Rehearse and consolidate</h3>
+          <ul>
+            <li>Use Focus Weak Spots to revisit weaker topics.</li>
+            <li>Complete a timed simulator session of about 100 minutes.</li>
+            <li>Review mistakes and decide whether you need more practice.</li>
           </ul>
         </li>
       </ol>

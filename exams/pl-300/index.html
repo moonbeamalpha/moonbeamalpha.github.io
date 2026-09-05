@@ -263,7 +263,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/pl-300/#study-plan",
         "name": "How to study for PL-300 (Microsoft Power BI Data Analyst) in 6 weeks",
-        "description": "A six-week study plan mapped to the PL-300 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Build from data preparation and modelling to reports, performance and security. Follow these six weeks of study blocks, finishing with focused review and rehearsal.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -273,22 +273,85 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Prepare and model the data (Weeks 1–2)",
-            "text": "Week 1: cover 'Prepare the data' — connecting to data sources (SQL Server, Excel, Fabric, OData), DirectLake vs DirectQuery vs Import storage modes, parameters, profiling and cleaning, transformations in Power Query M, Reference vs Duplicate queries, merge and append. Week 2: cover 'Model the data' — star-schema design, relationships and cardinality, role-playing dimensions, calculated columns vs measures, DAX time intelligence, performance optimisation with Performance Analyzer and DAX Studio.",
+            "name": "Days 1–3: Connect to data",
+            "text": "Explore SQL Server, Excel, Fabric and OData sources. Compare Direct Lake, DirectQuery and Import. Review parameters and Power Query Editor.",
             "url": "https://azuremastery.app/exams/pl-300/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Visualize and analyze (Weeks 3–4)",
-            "text": "Week 3: cover 'Visualize and analyze the data' first half — choosing the right visual, formatting, slicers and filters, drill-through and drill-down, bookmarks, Q&A visual, AI visuals (Decomposition Tree, Key Influencers). Week 4: paginated reports, mobile layouts, accessibility considerations, narrative and smart narrative visuals, identifying outliers and trends in data.",
+            "name": "Days 4–6: Transform with Power Query",
+            "text": "Profile columns and manage data types. Practise splitting, merging and pivoting. Convert JSON or XML and build fact and dimension tables.",
             "url": "https://azuremastery.app/exams/pl-300/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Manage, secure, and exam sharpening (Weeks 5–6)",
-            "text": "Week 5: cover 'Manage and secure Power BI' — workspaces and roles, app distribution, sharing scopes, deployment pipelines, dataset refresh schedules and gateways, row-level security (static and dynamic), object-level security, sensitivity labels and Microsoft Purview integration. Week 6: switch to Focus Weak Spots sessions every morning, then two full-length 100-minute Exam Simulator runs in the second half. Schedule the exam when you are scoring 750+ with confidence.",
+            "name": "Days 7–9: Query design",
+            "text": "Compare reference and duplicate queries. Practise merge and append. Review Formula.Firewall and query folding.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Days 10–14: Models and DAX",
+            "text": "Design star schemas, relationships and role-playing dimensions. Compare calculated columns with measures. Practise time intelligence and USERELATIONSHIP.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 15–17: Choose visuals",
+            "text": "Match chart and map types to reporting needs. Review KPIs, gauges and treemaps. Compare decomposition trees and key influencers.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 18–20: Report interaction",
+            "text": "Configure drill-through, drill-down and bookmarks. Build tooltip pages and synced slicers. Review filters and what-if parameters.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Days 21–24: Accessible report design",
+            "text": "Explore AI visuals, Q&A and Smart Narrative. Use custom format strings, conditional formatting and themes. Review accessibility choices.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Days 25–28: Reports and performance",
+            "text": "Compare paginated and Power BI reports. Design mobile layouts. Use Performance Analyzer and DAX Studio to investigate slow models and visuals.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 9,
+            "name": "Days 29–32: Publish and manage",
+            "text": "Compare workspace roles, apps and direct sharing. Review deployment pipelines. Configure gateways and refresh.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 10,
+            "name": "Days 33–36: Secure the data",
+            "text": "Compare static and dynamic row-level security. Review object-level security and sensitivity labels. Explore Purview integration and tenant settings.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 11,
+            "name": "Days 37–40: Target weaker topics",
+            "text": "Run Focus Weak Spots sessions. Balance revision across the domains. Revisit missed scenarios and explanations.",
+            "url": "https://azuremastery.app/exams/pl-300/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 12,
+            "name": "Days 41–42: Timed rehearsal",
+            "text": "Complete two 100-minute Exam Simulator sessions. Review each run carefully. Plan further study based on recurring mistakes.",
             "url": "https://azuremastery.app/exams/pl-300/#study-plan"
           }
         ],
@@ -307,7 +370,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -609,35 +672,102 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested PL-300 study plan</h2>
-      <p class="section-lede">
-        Most candidates pass PL-300 after four to eight weeks of focused study, depending on prior Power BI / DAX experience. The six-week plan below maps onto the four PL-300 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Prepare and model the data</h3>
+      <p class="section-lede">Build from data preparation and modelling to reports, performance and security. Follow these six weeks of study blocks, finishing with focused review and rehearsal.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–3">
+          <h3>Connect to data</h3>
           <ul>
-            <li><strong>Days 1–3:</strong> Connecting to data sources (SQL Server, Excel, Microsoft Fabric, OData), DirectLake vs DirectQuery vs Import storage modes, parameters, Power Query Editor basics.</li>
-            <li><strong>Days 4–6:</strong> Power Query M language — column statistics, profiling, type conversions, splitting/merging/pivoting, JSON/XML to table, fact and dimension construction.</li>
-            <li><strong>Days 7–9:</strong> Reference vs Duplicate queries (and the impact), merge and append, Formula.Firewall, query folding.</li>
-            <li><strong>Days 10–14:</strong> Star-schema design — relationships, cardinality, role-playing dimensions, calculated columns vs measures, DAX time intelligence (CALCULATE, SAMEPERIODLASTYEAR, DATEADD), USERELATIONSHIP for inactive joins.</li>
+            <li>Explore SQL Server, Excel, Fabric and OData sources.</li>
+            <li>Compare Direct Lake, DirectQuery and Import.</li>
+            <li>Review parameters and Power Query Editor.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Visualize and analyze</h3>
+        <li data-period-label="Days 4–6">
+          <h3>Transform with Power Query</h3>
           <ul>
-            <li><strong>Days 15–17:</strong> Visual selection — bar/column/line/area, scatter and bubble, KPIs, gauges, maps, treemap, decomposition tree, key influencers.</li>
-            <li><strong>Days 18–20:</strong> Drill-through and drill-down, bookmarks, tooltip pages, slicers and sync, page-level filters, what-if parameters.</li>
-            <li><strong>Days 21–24:</strong> AI visuals (Decomposition Tree, Key Influencers, Q&amp;A, Smart Narrative), Custom Format Strings, conditional formatting, themes, accessibility considerations.</li>
-            <li><strong>Days 25–28:</strong> Paginated reports vs Power BI reports, mobile layouts, Performance Analyzer, DAX Studio, model and visual optimisation.</li>
+            <li>Profile columns and manage data types.</li>
+            <li>Practise splitting, merging and pivoting.</li>
+            <li>Convert JSON or XML and build fact and dimension tables.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Manage, secure, sharpen, simulate</h3>
+        <li data-period-label="Days 7–9">
+          <h3>Query design</h3>
           <ul>
-            <li><strong>Days 29–32:</strong> Workspaces and roles (Admin, Member, Contributor, Viewer), apps and direct sharing, deployment pipelines (Dev → Test → Prod), gateways and dataset refresh.</li>
-            <li><strong>Days 33–36:</strong> Row-level security (static and dynamic with USERPRINCIPALNAME), object-level security, sensitivity labels, Microsoft Purview integration, tenant settings.</li>
-            <li><strong>Days 37–40:</strong> Run <em>Focus Weak Spots</em> every morning. Three of the four domains are 25–30% — give them roughly equal time and prioritise weakest.</li>
-            <li><strong>Days 41–42:</strong> Two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Review carefully. If readiness gauge is 750+ with reasonable confidence, schedule the exam.</li>
+            <li>Compare reference and duplicate queries.</li>
+            <li>Practise merge and append.</li>
+            <li>Review Formula.Firewall and query folding.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 10–14">
+          <h3>Models and DAX</h3>
+          <ul>
+            <li>Design star schemas, relationships and role-playing dimensions.</li>
+            <li>Compare calculated columns with measures.</li>
+            <li>Practise time intelligence and USERELATIONSHIP.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 15–17">
+          <h3>Choose visuals</h3>
+          <ul>
+            <li>Match chart and map types to reporting needs.</li>
+            <li>Review KPIs, gauges and treemaps.</li>
+            <li>Compare decomposition trees and key influencers.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 18–20">
+          <h3>Report interaction</h3>
+          <ul>
+            <li>Configure drill-through, drill-down and bookmarks.</li>
+            <li>Build tooltip pages and synced slicers.</li>
+            <li>Review filters and what-if parameters.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 21–24">
+          <h3>Accessible report design</h3>
+          <ul>
+            <li>Explore AI visuals, Q&amp;A and Smart Narrative.</li>
+            <li>Use custom format strings, conditional formatting and themes.</li>
+            <li>Review accessibility choices.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 25–28">
+          <h3>Reports and performance</h3>
+          <ul>
+            <li>Compare paginated and Power BI reports.</li>
+            <li>Design mobile layouts.</li>
+            <li>Use Performance Analyzer and DAX Studio to investigate slow models and visuals.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 29–32">
+          <h3>Publish and manage</h3>
+          <ul>
+            <li>Compare workspace roles, apps and direct sharing.</li>
+            <li>Review deployment pipelines.</li>
+            <li>Configure gateways and refresh.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 33–36">
+          <h3>Secure the data</h3>
+          <ul>
+            <li>Compare static and dynamic row-level security.</li>
+            <li>Review object-level security and sensitivity labels.</li>
+            <li>Explore Purview integration and tenant settings.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 37–40">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Run Focus Weak Spots sessions.</li>
+            <li>Balance revision across the domains.</li>
+            <li>Revisit missed scenarios and explanations.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 41–42">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two 100-minute Exam Simulator sessions.</li>
+            <li>Review each run carefully.</li>
+            <li>Plan further study based on recurring mistakes.</li>
           </ul>
         </li>
       </ol>

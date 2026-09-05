@@ -262,7 +262,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/sc-200/#study-plan",
         "name": "How to study for SC-200 (Microsoft Security Operations Analyst) in 6 weeks",
-        "description": "A six-week study plan mapped to the SC-200 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Build the SecOps environment, practise incident response, then develop your threat-hunting skills. Use the final blocks of this six-week route for focused review and rehearsal.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -272,22 +272,85 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Manage the SOC environment (Weeks 1–2)",
-            "text": "Week 1: cover 'Manage a security operations environment' first half (40–45% — the largest domain). Microsoft Sentinel workspace setup, data connectors, log retention, RBAC for Sentinel and Defender XDR, role separation for analysts. Week 2: continue — analytics rules (scheduled, NRT, Microsoft incident creation, anomaly), watchlists, threat-intelligence integration, automation rules and Logic App playbooks, workbooks and dashboards.",
+            "name": "Days 1–3: Sentinel foundations",
+            "text": "Configure workspaces and data connectors. Review retention and table tiers. Compare Sentinel and Defender XDR role assignments.",
             "url": "https://azuremastery.app/exams/sc-200/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Respond to incidents (Weeks 3–4)",
-            "text": "Week 3: cover 'Respond to security incidents' first half (35–40%). Investigation workflow in Microsoft Defender XDR — alerts, incidents, evidence, attack-story view, advanced hunting integration. Triage with Microsoft Defender for Endpoint (live response, automated investigation, response actions). Week 4: continue — Defender for Cloud Apps (CASB, anomaly detection, governance actions), Defender for Identity (lateral movement, golden ticket detection), Defender for Office 365 (anti-phishing, ZAP, attack simulation training).",
+            "name": "Days 4–6: Detection and intelligence",
+            "text": "Compare analytics rule types. Review watchlists and threat-intelligence integration. Explore user and entity behaviour analytics where supported.",
             "url": "https://azuremastery.app/exams/sc-200/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Threat hunting, exam sharpening (Weeks 5–6)",
-            "text": "Week 5: cover 'Perform threat hunting' (20–25%). KQL fundamentals — joins, parse operators, time windows, summarise. Hunting hypotheses, MITRE ATT&CK mapping, hunting in advanced-hunting tables across Microsoft 365 and Sentinel, custom detection rules from saved hunts, livestream hunting sessions. Week 6: switch to Focus Weak Spots sessions every morning, then two full-length 100-minute Exam Simulator runs in the second half. SC-200 questions are heavy on KQL snippets — practise reading them.",
+            "name": "Days 7–10: Automate incident handling",
+            "text": "Configure automation rules and Logic App playbooks. Practise triage, enrichment and response actions. Build workbooks and dashboards.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Days 11–14: Defender for Cloud",
+            "text": "Review Secure Score and regulatory compliance. Compare workload protection plans. Explore JIT access, recommendations and exemptions.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 15–17: Endpoint response",
+            "text": "Review live response and automated investigation. Practise response actions. Explore device groups and attack-surface reduction.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 18–20: Identity threats",
+            "text": "Review lateral movement and golden-ticket detection. Explore identity scoring. Understand sensors and connectors.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Days 21–23: Email and collaboration threats",
+            "text": "Review anti-phishing and zero-hour auto purge. Compare Safe Links and Safe Attachments. Explore attack-simulation training.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Days 24–28: Cloud apps and XDR",
+            "text": "Review Cloud Apps anomaly detection and governance actions. Use the XDR attack-story view and evidence graph. Practise kill-chain analysis.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 9,
+            "name": "Days 29–32: KQL practice",
+            "text": "Review joins, parsing and time windows. Use summarise, project and extend. Interpret KQL snippets in scenarios.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 10,
+            "name": "Days 33–36: Threat hunting",
+            "text": "Explore Sentinel queries, bookmarks and livestream sessions. Review custom detections and Defender XDR advanced hunting. Map findings to MITRE ATT&CK.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 11,
+            "name": "Days 37–40: Target weaker topics",
+            "text": "Run Focus Weak Spots sessions. Revisit SecOps environment decisions. Review explanations for missed questions.",
+            "url": "https://azuremastery.app/exams/sc-200/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 12,
+            "name": "Days 41–42: Timed rehearsal",
+            "text": "Complete two 100-minute Exam Simulator sessions. Review each run carefully. Use the results to plan further study.",
             "url": "https://azuremastery.app/exams/sc-200/#study-plan"
           }
         ],
@@ -306,7 +369,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #20C020; --amh-accent-2: #178A17; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -597,35 +660,102 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested SC-200 study plan</h2>
-      <p class="section-lede">
-        Most candidates pass SC-200 after four to eight weeks of focused study, depending on prior SOC and KQL experience. The six-week plan below maps onto the three SC-200 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Manage the SecOps environment</h3>
+      <p class="section-lede">Build the SecOps environment, practise incident response, then develop your threat-hunting skills. Use the final blocks of this six-week route for focused review and rehearsal.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–3">
+          <h3>Sentinel foundations</h3>
           <ul>
-            <li><strong>Days 1–3:</strong> Microsoft Sentinel workspaces, data connectors (Azure activity, Microsoft 365, Defender XDR, third-party CEF/Syslog), log retention and table tiers, RBAC for Sentinel and Defender XDR.</li>
-            <li><strong>Days 4–6:</strong> Analytics rules — scheduled, NRT, Microsoft incident creation, anomaly. Watchlists, threat-intelligence integration, custom UEBA where supported.</li>
-            <li><strong>Days 7–10:</strong> Automation rules and Logic App playbooks — incident triage, alert enrichment, response actions. Workbooks and dashboards.</li>
-            <li><strong>Days 11–14:</strong> Microsoft Defender for Cloud — Secure Score, regulatory compliance, workload protection plans (Servers, App Service, Storage, SQL, Containers), JIT VM access, recommendations and exemptions.</li>
+            <li>Configure workspaces and data connectors.</li>
+            <li>Review retention and table tiers.</li>
+            <li>Compare Sentinel and Defender XDR role assignments.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Respond to security incidents</h3>
+        <li data-period-label="Days 4–6">
+          <h3>Detection and intelligence</h3>
           <ul>
-            <li><strong>Days 15–17:</strong> Microsoft Defender for Endpoint — live response, automated investigation, response actions, device groups, attack-surface reduction.</li>
-            <li><strong>Days 18–20:</strong> Microsoft Defender for Identity — lateral movement, golden ticket detection, identity scoring, sensors and connectors.</li>
-            <li><strong>Days 21–23:</strong> Microsoft Defender for Office 365 — anti-phishing, ZAP, Safe Links / Safe Attachments, attack-simulation training.</li>
-            <li><strong>Days 24–28:</strong> Microsoft Defender for Cloud Apps — CASB, anomaly detection, governance actions. Defender XDR attack-story view, evidence graph, kill-chain analysis.</li>
+            <li>Compare analytics rule types.</li>
+            <li>Review watchlists and threat-intelligence integration.</li>
+            <li>Explore user and entity behaviour analytics where supported.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Threat hunting, sharpen, simulate</h3>
+        <li data-period-label="Days 7–10">
+          <h3>Automate incident handling</h3>
           <ul>
-            <li><strong>Days 29–32:</strong> KQL fundamentals — joins, parse operators, time windows, summarise, project, extend. Practise reading KQL snippets in scenario questions.</li>
-            <li><strong>Days 33–36:</strong> Sentinel hunting — hunting queries, bookmarks, livestream sessions, custom detection rules from saved hunts. Advanced hunting in Defender XDR. MITRE ATT&amp;CK mapping.</li>
-            <li><strong>Days 37–40:</strong> Run <em>Focus Weak Spots</em> every morning. Manage-SecOps domain is 40–45% — weight your time accordingly.</li>
-            <li><strong>Days 41–42:</strong> Two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Review carefully. If readiness gauge is 750+ with reasonable confidence, schedule the exam.</li>
+            <li>Configure automation rules and Logic App playbooks.</li>
+            <li>Practise triage, enrichment and response actions.</li>
+            <li>Build workbooks and dashboards.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 11–14">
+          <h3>Defender for Cloud</h3>
+          <ul>
+            <li>Review Secure Score and regulatory compliance.</li>
+            <li>Compare workload protection plans.</li>
+            <li>Explore JIT access, recommendations and exemptions.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 15–17">
+          <h3>Endpoint response</h3>
+          <ul>
+            <li>Review live response and automated investigation.</li>
+            <li>Practise response actions.</li>
+            <li>Explore device groups and attack-surface reduction.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 18–20">
+          <h3>Identity threats</h3>
+          <ul>
+            <li>Review lateral movement and golden-ticket detection.</li>
+            <li>Explore identity scoring.</li>
+            <li>Understand sensors and connectors.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 21–23">
+          <h3>Email and collaboration threats</h3>
+          <ul>
+            <li>Review anti-phishing and zero-hour auto purge.</li>
+            <li>Compare Safe Links and Safe Attachments.</li>
+            <li>Explore attack-simulation training.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 24–28">
+          <h3>Cloud apps and XDR</h3>
+          <ul>
+            <li>Review Cloud Apps anomaly detection and governance actions.</li>
+            <li>Use the XDR attack-story view and evidence graph.</li>
+            <li>Practise kill-chain analysis.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 29–32">
+          <h3>KQL practice</h3>
+          <ul>
+            <li>Review joins, parsing and time windows.</li>
+            <li>Use summarise, project and extend.</li>
+            <li>Interpret KQL snippets in scenarios.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 33–36">
+          <h3>Threat hunting</h3>
+          <ul>
+            <li>Explore Sentinel queries, bookmarks and livestream sessions.</li>
+            <li>Review custom detections and Defender XDR advanced hunting.</li>
+            <li>Map findings to MITRE ATT&amp;CK.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 37–40">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Run Focus Weak Spots sessions.</li>
+            <li>Revisit SecOps environment decisions.</li>
+            <li>Review explanations for missed questions.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 41–42">
+          <h3>Timed rehearsal</h3>
+          <ul>
+            <li>Complete two 100-minute Exam Simulator sessions.</li>
+            <li>Review each run carefully.</li>
+            <li>Use the results to plan further study.</li>
           </ul>
         </li>
       </ol>

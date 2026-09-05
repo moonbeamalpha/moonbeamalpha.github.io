@@ -264,7 +264,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ai-500/#study-plan",
         "name": "How to study for AI-500 (Multi-Agent AI Solutions Expert) in 6 weeks",
-        "description": "A six-week study plan mapped to the AI-500 skills outline, Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Design a multi-agent solution, develop its tools and orchestration, then evaluate and secure it. Use the final week of this six-week route for review.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -274,22 +274,43 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Architecture and the core build (Weeks 1–2)",
-            "text": "Week 1: cover 'Architect Multi-Agent Solutions' — decomposing goals into workflows, agents, and tools, agent personas and autonomy levels, communication protocols, memory architecture, and Zero Trust component specification. Week 2: begin 'Develop Multi-Agent Solutions in Azure' — advanced prompt engineering, context management, and multi-agent RAG and knowledge integration.",
+            "name": "Week 1: Multi-agent architecture",
+            "text": "Break goals into workflows, agents and tools. Define personas, autonomy, communication and memory. Specify components using Zero Trust principles.",
             "url": "https://azuremastery.app/exams/ai-500/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Tool ecosystems, orchestration, and evaluation (Weeks 3–4)",
-            "text": "Week 3: finish 'Develop Multi-Agent Solutions in Azure' — MCP servers and tool ecosystems, and orchestration patterns (sequential, concurrent, handoff, group chat, magentic) with the Microsoft Agent Framework, LangChain, and LangGraph. Week 4: cover 'Evaluate, Optimize, and Monitor Multi-Agent Solutions' — the agent evaluator set, context-window failure modes, and tracing and observability in Foundry.",
+            "name": "Week 2: Prompts and knowledge",
+            "text": "Practise advanced prompting. Manage context across agents. Design multi-agent RAG and knowledge integration.",
             "url": "https://azuremastery.app/exams/ai-500/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Security, governance, deployment, and exam sharpening (Weeks 5–6)",
-            "text": "Week 5: cover 'Secure, Govern, and Deploy Multi-Agent Solutions' — identity and RBAC after publishing, authentication flows, Key Vault secrets, layered guardrails, and release methodologies (DTAP, blue/green, canary). Week 6: switch to Focus Weak Spots sessions every morning, then two full-length 100-minute Exam Simulator runs in the second half. Schedule the exam when you are scoring 750+ with confidence.",
+            "name": "Week 3: Tools and orchestration",
+            "text": "Explore MCP servers and tool ecosystems. Compare sequential, concurrent, handoff, group-chat and magentic patterns. Review Microsoft Agent Framework, LangChain and LangGraph.",
+            "url": "https://azuremastery.app/exams/ai-500/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Week 4: Evaluation and monitoring",
+            "text": "Apply agent evaluators. Investigate context-window failures. Use Foundry tracing and observability to guide optimisation.",
+            "url": "https://azuremastery.app/exams/ai-500/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Week 5: Security and deployment",
+            "text": "Review published-agent identity, RBAC and authentication. Manage Key Vault secrets and layered guardrails. Compare DTAP, blue-green and canary releases.",
+            "url": "https://azuremastery.app/exams/ai-500/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Week 6: Review and rehearse",
+            "text": "Use Focus Weak Spots to revisit weaker topics. Complete two timed, 100-minute Exam Simulator sessions. Review orchestration and security decisions you missed.",
             "url": "https://azuremastery.app/exams/ai-500/#study-plan"
           }
         ],
@@ -308,7 +329,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #8C64CC; --amh-accent-2: #4B1B95; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -610,29 +631,54 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested AI-500 study plan</h2>
-      <p class="section-lede">
-        This is an expert-level exam, so most candidates need six to ten weeks even with existing Foundry and agent-development experience. The plan below maps onto the four AI-500 domains — with double time on "Develop", which carries nearly a third of the exam — Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Architecture and the core build</h3>
+      <p class="section-lede">Design a multi-agent solution, develop its tools and orchestration, then evaluate and secure it. Use the final week of this six-week route for review.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>Multi-agent architecture</h3>
           <ul>
-            <li><strong>Week 1:</strong> Architect Multi-Agent Solutions — decomposing goals into workflows, agents, and tools, agent personas and autonomy levels, communication protocols, memory architecture, and Zero Trust component specification.</li>
-            <li><strong>Week 2:</strong> Begin Develop Multi-Agent Solutions in Azure — advanced prompt engineering, context management, and multi-agent RAG and knowledge integration.</li>
+            <li>Break goals into workflows, agents and tools.</li>
+            <li>Define personas, autonomy, communication and memory.</li>
+            <li>Specify components using Zero Trust principles.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Tool ecosystems, orchestration, and evaluation</h3>
+        <li data-period-label="Week 2">
+          <h3>Prompts and knowledge</h3>
           <ul>
-            <li><strong>Week 3:</strong> Finish Develop Multi-Agent Solutions in Azure — MCP servers and tool ecosystems, and orchestration patterns (sequential, concurrent, handoff, group chat, magentic) with the Microsoft Agent Framework, LangChain, and LangGraph.</li>
-            <li><strong>Week 4:</strong> Evaluate, Optimize, and Monitor Multi-Agent Solutions — the agent evaluator set, context-window failure modes, and tracing and observability in Foundry.</li>
+            <li>Practise advanced prompting.</li>
+            <li>Manage context across agents.</li>
+            <li>Design multi-agent RAG and knowledge integration.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Security, governance, deployment, and exam sharpening</h3>
+        <li data-period-label="Week 3">
+          <h3>Tools and orchestration</h3>
           <ul>
-            <li><strong>Week 5:</strong> Secure, Govern, and Deploy Multi-Agent Solutions — identity and RBAC after publishing, authentication flows, Key Vault secrets, layered guardrails, and release methodologies (DTAP, blue/green, canary).</li>
-            <li><strong>Week 6:</strong> Run <em>Focus Weak Spots</em> every morning, then two end-to-end <em>Exam Simulator</em> runs at full 100-minute length. Schedule the exam when readiness gauge is 750+ with reasonable confidence.</li>
+            <li>Explore MCP servers and tool ecosystems.</li>
+            <li>Compare sequential, concurrent, handoff, group-chat and magentic patterns.</li>
+            <li>Review Microsoft Agent Framework, LangChain and LangGraph.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 4">
+          <h3>Evaluation and monitoring</h3>
+          <ul>
+            <li>Apply agent evaluators.</li>
+            <li>Investigate context-window failures.</li>
+            <li>Use Foundry tracing and observability to guide optimisation.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 5">
+          <h3>Security and deployment</h3>
+          <ul>
+            <li>Review published-agent identity, RBAC and authentication.</li>
+            <li>Manage Key Vault secrets and layered guardrails.</li>
+            <li>Compare DTAP, blue-green and canary releases.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 6">
+          <h3>Review and rehearse</h3>
+          <ul>
+            <li>Use Focus Weak Spots to revisit weaker topics.</li>
+            <li>Complete two timed, 100-minute Exam Simulator sessions.</li>
+            <li>Review orchestration and security decisions you missed.</li>
           </ul>
         </li>
       </ol>

@@ -261,7 +261,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/ai-901/#study-plan",
         "name": "How to study for AI-901 (Microsoft Azure AI Fundamentals) in 6 weeks",
-        "description": "A six-week study plan mapped to the AI-901 skills measured as of April 15, 2026, Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "Build AI foundations, then practise with Foundry models, agents and multimodal tools. Connect each Python example to its purpose as you follow this six-week route.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -271,22 +271,43 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "AI concepts and responsibilities (Weeks 1–2)",
-            "text": "Build the conceptual foundation: common AI capabilities and workloads, machine-learning concepts, responsible AI, generative AI, agents, prompts, grounding, and how client applications consume models and services.",
+            "name": "Week 1: AI models and responsibility",
+            "text": "Review the six responsible AI principles. Understand generative models and compare their capabilities. Explore deployment options and configuration parameters.",
             "url": "https://azuremastery.app/exams/ai-901/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Implement with Microsoft Foundry (Weeks 3–4)",
-            "text": "Use Microsoft Foundry to explore and deploy models, create projects, understand endpoints and authentication, build prompts, implement single-agent solutions, and recognize language, vision, and generative AI services in application scenarios.",
+            "name": "Week 2: Recognise AI workloads",
+            "text": "Compare generative, agentic, vision and speech workloads. Review extraction, entities, sentiment and summarisation. Revisit workload categories you find difficult to distinguish.",
             "url": "https://azuremastery.app/exams/ai-901/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Python examples and exam sharpening (Weeks 5–6)",
-            "text": "Read and understand Python examples that call AI models and services, then use Focus Weak Spots sessions and two full-length 45-minute Exam Simulator runs before scheduling the exam.",
+            "name": "Week 3: Foundry models and agents",
+            "text": "Write system and user prompts; deploy and test a model. Build a lightweight chat client with the Foundry SDK. Explore a single-agent solution and its client app.",
+            "url": "https://azuremastery.app/exams/ai-901/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Week 4: Text, speech and vision",
+            "text": "Build text-analysis apps. Explore spoken prompts and Azure Speech in Foundry Tools. Interpret visual input and generate visual outputs.",
+            "url": "https://azuremastery.app/exams/ai-901/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Week 5: Information extraction",
+            "text": "Extract structured data from documents, images, audio and video. Connect Content Understanding outputs to a lightweight app. Read Python examples and identify the Foundry resources they call.",
+            "url": "https://azuremastery.app/exams/ai-901/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Week 6: Review and rehearse",
+            "text": "Use Domain Proficiency and Focus Weak Spots to target gaps. Complete two timed, 45-minute Exam Simulator sessions. Review mistakes across both assessed areas before planning further study.",
             "url": "https://azuremastery.app/exams/ai-901/#study-plan"
           }
         ],
@@ -305,7 +326,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -588,29 +609,54 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested AI-901 study plan</h2>
-      <p class="section-lede">
-        The six-week plan below maps onto the two current AI-901 assessed areas, Python examples, Azure Mastery's adaptive sessions, and the in-app exam simulator. AI-901 is a fundamentals-tier exam, so most candidates need less revision time than an associate-level exam &mdash; but Microsoft's audience profile still expects comfort reading Python syntax, so give the early weeks room to bed that in. Adjust the pace to your background &mdash; the readiness gauge tells you when you're done, not the calendar.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1&ndash;2">
-          <h3>AI concepts and capabilities</h3>
+      <p class="section-lede">Build AI foundations, then practise with Foundry models, agents and multimodal tools. Connect each Python example to its purpose as you follow this six-week route.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Week 1">
+          <h3>AI models and responsibility</h3>
           <ul>
-            <li><strong>Week 1:</strong> Responsible AI's six principles, plus how generative AI models work, model selection by capability, and deployment options and configuration parameters.</li>
-            <li><strong>Week 2:</strong> AI workload recognition across generative and agentic AI, text analysis, speech, computer vision, and information extraction &mdash; including keyword extraction, entity detection, sentiment analysis, and summarisation. Let the adaptive engine resurface any workload category you keep missing.</li>
+            <li>Review the six responsible AI principles.</li>
+            <li>Understand generative models and compare their capabilities.</li>
+            <li>Explore deployment options and configuration parameters.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3&ndash;4">
-          <h3>Build with Microsoft Foundry</h3>
+        <li data-period-label="Week 2">
+          <h3>Recognise AI workloads</h3>
           <ul>
-            <li><strong>Week 3:</strong> Foundry generative AI and agents &mdash; system and user prompts, deploying and testing a model in the Foundry portal, a lightweight chat client with the Foundry SDK, and a single-agent solution with its own client app.</li>
-            <li><strong>Week 4:</strong> Text, speech, and vision in Foundry &mdash; text-analysis apps, responding to spoken prompts through a deployed multimodal model, Azure Speech in Foundry Tools, interpreting visual input, and generating new visual outputs.</li>
+            <li>Compare generative, agentic, vision and speech workloads.</li>
+            <li>Review extraction, entities, sentiment and summarisation.</li>
+            <li>Revisit workload categories you find difficult to distinguish.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5&ndash;6">
-          <h3>Information extraction and exam sharpening</h3>
+        <li data-period-label="Week 3">
+          <h3>Foundry models and agents</h3>
           <ul>
-            <li><strong>Week 5:</strong> Information extraction with Azure Content Understanding &mdash; pulling structured data from documents, images, audio, and video, then wiring the output into a lightweight app. Pair this with foundational Python examples that call Foundry Tools, so you can connect each snippet to its underlying resource rather than memorising syntax in isolation.</li>
-            <li><strong>Week 6:</strong> Run daily <em>Focus Weak Spots</em> sessions against whichever assessed area is lagging &mdash; Domain Proficiency will show you which one. Follow with two full-length 45-minute <em>Exam Simulator</em> runs drawn from the 604-question bank, timed and without flag-and-review, to build comfort with the pressure of the real thing. Schedule the exam once the readiness gauge holds at 700+ with reasonable confidence across both areas.</li>
+            <li>Write system and user prompts; deploy and test a model.</li>
+            <li>Build a lightweight chat client with the Foundry SDK.</li>
+            <li>Explore a single-agent solution and its client app.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 4">
+          <h3>Text, speech and vision</h3>
+          <ul>
+            <li>Build text-analysis apps.</li>
+            <li>Explore spoken prompts and Azure Speech in Foundry Tools.</li>
+            <li>Interpret visual input and generate visual outputs.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 5">
+          <h3>Information extraction</h3>
+          <ul>
+            <li>Extract structured data from documents, images, audio and video.</li>
+            <li>Connect Content Understanding outputs to a lightweight app.</li>
+            <li>Read Python examples and identify the Foundry resources they call.</li>
+          </ul>
+        </li>
+        <li data-period-label="Week 6">
+          <h3>Review and rehearse</h3>
+          <ul>
+            <li>Use Domain Proficiency and Focus Weak Spots to target gaps.</li>
+            <li>Complete two timed, 45-minute Exam Simulator sessions.</li>
+            <li>Review mistakes across both assessed areas before planning further study.</li>
           </ul>
         </li>
       </ol>

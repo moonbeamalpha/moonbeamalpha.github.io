@@ -263,7 +263,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/dp-100/#study-plan",
         "name": "How to review the retired DP-100 outline and compare current options",
-        "description": "A six-week reference plan for the final DP-100 outline, followed by a comparison with current Microsoft machine-learning credentials.",
+        "description": "Use these six weeks of study blocks for historical DP-100 revision. Finish by comparing the retired outline with available routes such as AI-300.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -273,22 +273,85 @@
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Design, prepare, and explore (Weeks 1–2)",
-            "text": "Week 1: cover 'Design and prepare a machine learning solution' — Azure Machine Learning workspaces and assets, compute targets (compute instance, compute clusters, attached compute), data and dataset registration, environments and managed identities. Week 2: cover 'Explore data, and run experiments' — Designer and AutoML, data exploration, MLflow tracking, hyperparameter tuning with Sweep jobs.",
+            "name": "Days 1–3: Machine Learning workspace",
+            "text": "Configure assets, environments, identities and roles. Compare compute instances and clusters. Review attached and serverless compute.",
             "url": "https://azuremastery.app/exams/dp-100/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Train and deploy models (Weeks 3–4)",
-            "text": "Week 3: cover 'Train and deploy models' first half — training pipelines, command and pipeline jobs, registered models, deployment targets (managed online endpoints, batch endpoints). Week 4: deployment monitoring, A/B traffic, model retraining triggers, responsible AI dashboards, fairness and explainability metrics. Practise reading YAML pipeline snippets — DP-100 frequently shows a job spec and asks what it deploys.",
+            "name": "Days 4–6: Data and environments",
+            "text": "Compare URI and MLTable assets. Register Blob and ADLS Gen2 datastores with suitable access. Choose curated or custom environments.",
             "url": "https://azuremastery.app/exams/dp-100/#study-plan"
           },
           {
             "@type": "HowToStep",
             "position": 3,
-            "name": "Optimize LLMs and exam sharpening (Weeks 5–6)",
-            "text": "Week 5: review language-model optimization, prompt engineering, fine-tuning, RAG, evaluation, and Foundry. Week 6: use the historical simulator for reference, then compare the retired outline with active options such as AI-300 before choosing a current credential.",
+            "name": "Days 7–10: Explore and track experiments",
+            "text": "Use notebooks for data exploration. Compare Designer and Automated ML. Track metrics and artifacts with MLflow.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Days 11–14: Hyperparameter tuning",
+            "text": "Configure sweep jobs. Compare grid, random and Bayesian sampling. Choose metrics and early-termination policies.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Days 15–17: Training jobs",
+            "text": "Compare command, pipeline and parallel jobs. Review run context and outputs. Explore distributed training basics.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Days 18–21: Models and online endpoints",
+            "text": "Register and version MLflow or custom models. Trace model lineage. Review online endpoints, blue-green deployment and traffic splits.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Days 22–24: Batch deployment",
+            "text": "Explore batch endpoints. Review Kubernetes-attached compute. Match deployment modes to scenarios.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 8,
+            "name": "Days 25–28: Monitor model quality",
+            "text": "Distinguish data drift and model drift. Plan retraining triggers. Review fairness and explainability dashboards.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 9,
+            "name": "Days 29–32: Prompt engineering",
+            "text": "Compare prompt patterns and examples. Review system instructions. Evaluate prompts in Foundry.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 10,
+            "name": "Days 33–36: LLM optimisation",
+            "text": "Review fine-tuning workflows. Explore embeddings and RAG with Azure AI Search. Compare groundedness, relevance, fluency and similarity metrics.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 11,
+            "name": "Days 37–40: Target weaker topics",
+            "text": "Run Focus Weak Spots sessions. Revisit training, deployment and LLM optimisation. Review explanations for recurring mistakes.",
+            "url": "https://azuremastery.app/exams/dp-100/#study-plan"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 12,
+            "name": "Days 41–42: Review and choose a route",
+            "text": "Use historical simulator questions for reference. Compare DP-100 with routes such as AI-300. Choose further study before selecting a credential.",
             "url": "https://azuremastery.app/exams/dp-100/#study-plan"
           }
         ],
@@ -307,7 +370,7 @@
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }</style>
   <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=c2e9caa14366">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -615,35 +678,102 @@
     <section id="study-plan" class="container">
       <p class="label-eyebrow section-eyebrow">6-week study plan</p>
       <h2 class="display-small section-title">Suggested DP-100 study plan</h2>
-      <p class="section-lede">
-        Most candidates pass DP-100 after four to eight weeks of focused study, depending on prior Python and ML experience. The six-week plan below maps onto the four DP-100 domains, Azure Mastery's adaptive sessions, and the in-app exam simulator. Set your pace using your practice results and readiness score.
-      </p>
-      <ol class="study-plan">
-        <li data-period-label="Weeks 1–2">
-          <h3>Workspace, data, exploration</h3>
+      <p class="section-lede">Use these six weeks of study blocks for historical DP-100 revision. Finish by comparing the retired outline with available routes such as AI-300.</p>
+      <ol class="study-plan study-plan--weekly">
+        <li data-period-label="Days 1–3">
+          <h3>Machine Learning workspace</h3>
           <ul>
-            <li><strong>Days 1–3:</strong> Azure Machine Learning workspace setup — assets, environments, managed identities, role assignments. Compute targets — instance, cluster, attached, serverless.</li>
-            <li><strong>Days 4–6:</strong> Data assets and datastores — URI vs MLTable, Blob and ADLS Gen2 registration, identity-based vs key-based access. Curated vs custom environments.</li>
-            <li><strong>Days 7–10:</strong> Notebook-driven exploration on compute instance, plus Designer (low-code) and Automated ML (no-code). MLflow tracking, metrics, artifacts.</li>
-            <li><strong>Days 11–14:</strong> Sweep jobs for hyperparameter tuning — sampling strategies (grid, random, Bayesian), early termination policies, primary metric selection.</li>
+            <li>Configure assets, environments, identities and roles.</li>
+            <li>Compare compute instances and clusters.</li>
+            <li>Review attached and serverless compute.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 3–4">
-          <h3>Train, deploy, and monitor</h3>
+        <li data-period-label="Days 4–6">
+          <h3>Data and environments</h3>
           <ul>
-            <li><strong>Days 15–17:</strong> Job types — command, pipeline, parallel. Run context, output handling, distributed training basics.</li>
-            <li><strong>Days 18–21:</strong> Model registration (MLflow vs custom), versioning, lineage. Managed online endpoints — real-time, blue/green deployment, traffic split.</li>
-            <li><strong>Days 22–24:</strong> Batch endpoints, Kubernetes-attached compute. Compare deployment modes for the right use-case.</li>
-            <li><strong>Days 25–28:</strong> Inference monitoring — data drift, model drift, retraining triggers, responsible-AI dashboards (fairness, explainability).</li>
+            <li>Compare URI and MLTable assets.</li>
+            <li>Register Blob and ADLS Gen2 datastores with suitable access.</li>
+            <li>Choose curated or custom environments.</li>
           </ul>
         </li>
-        <li data-period-label="Weeks 5–6">
-          <h3>Optimise LLMs, sharpen, simulate</h3>
+        <li data-period-label="Days 7–10">
+          <h3>Explore and track experiments</h3>
           <ul>
-            <li><strong>Days 29–32:</strong> Prompt engineering — system prompts, few-shot, chain-of-thought, evaluating prompts in Azure AI Foundry.</li>
-            <li><strong>Days 33–36:</strong> Fine-tuning workflows on Azure Machine Learning, RAG with embeddings and Azure AI Search, LLM evaluation metrics (groundedness, relevance, fluency, similarity).</li>
-            <li><strong>Days 37–40:</strong> Run <em>Focus Weak Spots</em> every morning. Train + deploy and Optimise-LLMs are 25–30% each — weight your time accordingly.</li>
-            <li><strong>Days 41–42:</strong> Use historical simulator runs for reference, then compare this retired outline with current options such as <a href="/exams/ai-300/">AI-300</a> before choosing a credential.</li>
+            <li>Use notebooks for data exploration.</li>
+            <li>Compare Designer and Automated ML.</li>
+            <li>Track metrics and artifacts with MLflow.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 11–14">
+          <h3>Hyperparameter tuning</h3>
+          <ul>
+            <li>Configure sweep jobs.</li>
+            <li>Compare grid, random and Bayesian sampling.</li>
+            <li>Choose metrics and early-termination policies.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 15–17">
+          <h3>Training jobs</h3>
+          <ul>
+            <li>Compare command, pipeline and parallel jobs.</li>
+            <li>Review run context and outputs.</li>
+            <li>Explore distributed training basics.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 18–21">
+          <h3>Models and online endpoints</h3>
+          <ul>
+            <li>Register and version MLflow or custom models.</li>
+            <li>Trace model lineage.</li>
+            <li>Review online endpoints, blue-green deployment and traffic splits.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 22–24">
+          <h3>Batch deployment</h3>
+          <ul>
+            <li>Explore batch endpoints.</li>
+            <li>Review Kubernetes-attached compute.</li>
+            <li>Match deployment modes to scenarios.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 25–28">
+          <h3>Monitor model quality</h3>
+          <ul>
+            <li>Distinguish data drift and model drift.</li>
+            <li>Plan retraining triggers.</li>
+            <li>Review fairness and explainability dashboards.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 29–32">
+          <h3>Prompt engineering</h3>
+          <ul>
+            <li>Compare prompt patterns and examples.</li>
+            <li>Review system instructions.</li>
+            <li>Evaluate prompts in Foundry.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 33–36">
+          <h3>LLM optimisation</h3>
+          <ul>
+            <li>Review fine-tuning workflows.</li>
+            <li>Explore embeddings and RAG with Azure AI Search.</li>
+            <li>Compare groundedness, relevance, fluency and similarity metrics.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 37–40">
+          <h3>Target weaker topics</h3>
+          <ul>
+            <li>Run Focus Weak Spots sessions.</li>
+            <li>Revisit training, deployment and LLM optimisation.</li>
+            <li>Review explanations for recurring mistakes.</li>
+          </ul>
+        </li>
+        <li data-period-label="Days 41–42">
+          <h3>Review and choose a route</h3>
+          <ul>
+            <li>Use historical simulator questions for reference.</li>
+            <li>Compare DP-100 with routes such as AI-300.</li>
+            <li>Choose further study before selecting a credential.</li>
           </ul>
         </li>
       </ol>

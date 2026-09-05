@@ -69,6 +69,7 @@ from __future__ import annotations
 
 import argparse
 import functools
+import glob
 import html
 import http.server
 import json
@@ -82,6 +83,7 @@ import threading
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(ROOT, "data", "exam-counts.json")
 EXAMS_DIR = os.path.join(ROOT, "exams")
+GUIDES_DIR = os.path.join(ROOT, "guides")
 INDEX_HTML = os.path.join(ROOT, "index.html")
 LLMS_TXT = os.path.join(ROOT, "llms.txt")
 
@@ -329,6 +331,65 @@ def exam_page_edits(code: str, count: int):
     ]
 
 
+# ── guide pages (Task E1) ────────────────────────────────────────────────
+
+def guide_page_edits(code: str, count: int):
+    """Anchored, value-agnostic edit for a single exam's count inside a guide
+    page. Guides carry counts in exactly one phrase — '<n> <CODE> practice
+    questions' — the same tail exam_page_edits() writes, so a guide is
+    trivially re-syncable once written in it once. Anything else (an aside
+    quoting the exam's own 40-60 question format, a bare code mention) is
+    untouched here and is the guard's job (see GUIDE_STALE_COUNT_RE below)."""
+    c = str(count)
+    return [
+        (rf'\b\d+(\s+{re.escape(code)}\s+practice\s+questions)', c + r'\1'),
+    ]
+
+
+# A hand-written question count the tool does not own: a 3+ digit number
+# (never an exam code's own digits — "AZ-104" must not trip this) followed,
+# within a short span, by the word "questions", that is not the sanctioned
+# "<n> <CODE> practice questions" phrase guide_page_edits() writes and not an
+# exam's own timing fact ("100 minutes for 40 to 60 questions" — both numbers
+# there are legal: "100" is excluded by the "minutes" lookahead, "60" is
+# under 100 so never matches \d{3,} at all). Guides are meant to go
+# count-free ("a full practice bank of AZ-104 questions") once they cover
+# more than one exam in a sentence, so this only ever flags a *number*, never
+# a bare code+"questions" mention.
+GUIDE_STALE_COUNT_RE = re.compile(
+    r'(?<![A-Z]{2}-)(?<![A-Z]{3}-)\b\d{3,}(?:,\d{3})*\b'
+    r'(?!\s+[A-Z]{2}-\d{3}\s+practice\s+questions\b)'
+    r'(?!\s+minutes\b)'
+    r'[^.<]{0,40}\bquestions\b'
+)
+
+
+def check_guide_question_counts(p: "Patcher", guide_paths) -> None:
+    """Fail --check when a guide carries a hand-written question count outside
+    the tool's own phrase. Runs after guide_page_edits() has already patched
+    every guide in this same invocation, so a drifted number that the patch
+    loop just fixed never trips this — only a genuinely hand-authored phrase
+    (an "over 300" left behind, or a stray absolute count in prose) does."""
+    print("guide question counts:")
+    problems = []
+    for path in guide_paths:
+        if not os.path.exists(path):
+            continue
+        text = open(path).read()
+        rel = os.path.relpath(path, ROOT)
+        for m in GUIDE_STALE_COUNT_RE.finditer(text):
+            problems.append(
+                f"{rel}: hand-written count {m.group(0)!r} — guide question "
+                f"counts must read '<n> <CODE> practice questions' (this "
+                f"tool's phrase) or stay count-free")
+    if not problems:
+        print("  counts ok  no hand-written question counts found outside the tool's phrase")
+        return
+    for line in problems:
+        print(f"  GUIDE     {line}")
+    p.problems += len(problems)
+
+
 # <span class="domain__count" data-domain="az104-identity">85</span> — one per
 # blueprint domain inside an exam's #objectives (Task B3b adds these; wave 1 has
 # none yet, so this pattern currently matches nothing anywhere).
@@ -453,7 +514,7 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         (r'\b\d+(\s+certification\s+routes)', cp + r'\1'),
         (r'\b\d+(\s+guided\s+certification\s+paths)', cp + r'\1'),
         # ── "Retired & retiring (N)" disclosure summaries (hero + footer) ──
-        (r'(exam-retired-disclosure__summary">Retired &amp; retiring \()\d+(\))',
+        (r'(exam-retired-disclosure__summary">Retired(?: &amp; retiring)? \()\d+(\))',
          r'\g<1>' + str(retired_count) + r'\2'),
         # ── JSON-LD ItemList entity count. This is deliberately NOT exam_count:
         # entity list = sit-able + retired reference pages, not the advertised
@@ -963,6 +1024,24 @@ def main() -> None:
                     print(f"  synced {rel}")
 
         check_domain_mismatches(p, domain_counts_all, page_domains, retired, counts)
+
+        print("guides:")
+        guide_paths = sorted(glob.glob(os.path.join(GUIDES_DIR, "*", "index.html")))
+        for path in guide_paths:
+            original = open(path).read()
+            text = original
+            for code, n in counts.items():
+                for pat, rep in guide_page_edits(code, n):
+                    text = re.sub(pat, rep, text)
+            rel = os.path.relpath(path, ROOT)
+            if text != original:
+                p.changed_files += 1
+                if args.check:
+                    print(f"  DRIFT  {rel}")
+                else:
+                    open(path, "w").write(text)
+                    print(f"  synced {rel}")
+        check_guide_question_counts(p, guide_paths)
 
         print("homepage:")
         p.apply(INDEX_HTML,

@@ -72,14 +72,13 @@ RETIRED_EXAMS = {
         "replacement": "AI-200",
         "replacement_label": "Microsoft's replacement developer course and current AI cloud route",
     },
-}
-RETIRING_EXAMS = {
     "AZ-500": {
         "date": "31 August 2026",
         "replacement": "SC-500",
         "replacement_label": "Microsoft's Cloud and AI Security Engineer successor",
     },
 }
+RETIRING_EXAMS = {}
 ACTIVE_SEO = {
     "AB-650": {
         "description": (
@@ -194,10 +193,10 @@ ACTIVE_SEO = {
     "AI-200": {
         "title": 'AI-200 Practice Questions — {count} Qs for AI Developer (2026)',
         "description": (
-            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+            '{count} AI-200 practice questions for Azure AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
         ),
         "social_description": (
-            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+            '{count} AI-200 practice questions for Azure AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
         ),
     },
     "AI-300": {

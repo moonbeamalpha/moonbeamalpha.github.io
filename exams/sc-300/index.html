@@ -93,7 +93,7 @@
         "description": "428 SC-300 practice questions for Identity and Access Administrator. Entra ID, authentication, governance, and app access — updated for the 2026 exam.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-08-09",
+        "dateModified": "2026-09-05",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -187,7 +187,31 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the SC-300 exam cost?",
+            "name": "PIM eligible vs active assignment — how does SC-300 test the difference?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Scenarios routinely describe a user who needs a privileged role only occasionally, then ask whether an eligible or an active Privileged Identity Management assignment fits — eligible when the role should require just-in-time activation and approval, active when the role must already be usable without an extra step. Confusing the two is one of SC-300's most repeated slips, and Azure Mastery's Answer Coach names exactly which requirement in the scenario should have decided it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "SC-300 vs SC-100 — which next for an identity specialist?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pass SC-300 first. SC-300 is the Associate-level operational cert — configure and run Microsoft Entra ID, Conditional Access, workload identities, and identity governance day-to-day. SC-100 is the Expert-level architectural cert — design the Zero Trust identity strategy those controls implement, alongside SecOps, infrastructure, and application security design. SC-300 is also one of three accepted routes to the SC-100 credential (with AZ-500 and SC-200), so many identity specialists sit SC-300 specifically to unlock SC-100 next."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What format does the SC-300 exam use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-300 bank runs a similar spread: mostly single-answer multiple choice, a substantial share of yes/no and multi-select questions, a meaningful set of scenario-based items, and a smaller mix of dropdown-select, drag-to-match, hotspot, and ordering items, plus a modest set of case studies — Conditional Access policy snippets and access-package configurations appear throughout."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the SC-300 exam fee, and is renewal on top?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The SC-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-300 also requires annual renewal (free, online), so factor that into long-term cost planning."
@@ -195,7 +219,7 @@
           },
           {
             "@type": "Question",
-            "name": "Does the SC-300 certification expire?",
+            "name": "Does an SC-300 pass need renewing each year?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Microsoft Associate certifications including SC-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
@@ -203,18 +227,18 @@
           },
           {
             "@type": "Question",
-            "name": "What is the SC-300 retake policy if I fail?",
+            "name": "Pass-through Authentication or Password Hash Sync — which does SC-300 want?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+              "text": "The deciding factor is almost always resilience: Password Hash Sync keeps authenticating even if the on-premises environment goes down, because Entra ID holds a hash of the password; Pass-through Authentication validates against on-premises Active Directory in real time, so it fails when that link is down, but it satisfies requirements that credentials never leave the on-premises boundary. A scenario naming an outage-tolerance requirement wants PHS; one naming a strict on-premises-only password policy wants PTA."
             }
           },
           {
             "@type": "Question",
-            "name": "How long should I study for SC-300?",
+            "name": "I need to resit SC-300 — how long before I can rebook?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most candidates plan four to eight weeks with Microsoft Entra administration experience. Practise identity lifecycle, authentication, Conditional Access, workload identities, application access, entitlement management, access reviews, and privileged access; use the portal and Microsoft Graph or PowerShell where the task calls for automation. Azure Mastery's readiness gauge tells you when you're exam-ready."
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
             }
           },
           {
@@ -227,15 +251,7 @@
           },
           {
             "@type": "Question",
-            "name": "SC-300 vs SC-200 — different security roles?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Different angles on Microsoft security. SC-300 is the Identity and Access Administrator Associate cert — it focuses on operating Microsoft Entra ID end-to-end (identities, authentication, Conditional Access, workload identities, governance). SC-200 is the Security Operations Analyst Associate cert — it focuses on running Microsoft Defender XDR and Sentinel as a SOC analyst. They overlap on Conditional Access and Microsoft Entra ID Protection, but SC-300 goes much deeper on identity and SC-200 covers a broader detection / response surface."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is Azure Mastery free for SC-300 prep?",
+            "name": "Can I try Azure Mastery's SC-300 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of SC-300 questions so you can try every feature. The full bank of 428 SC-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -243,18 +259,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does SC-300 practice work offline?",
+            "name": "Can I revise SC-300 with no data connection?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an SC-300 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -263,7 +271,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/sc-300/#study-plan",
         "name": "How to study for SC-300 (Microsoft Identity and Access Administrator) in 6 weeks",
-        "description": "A six-week study plan mapped to the SC-300 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A six-week study plan mapped to the SC-300 skills outline (27 April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -332,6 +340,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -454,7 +463,7 @@
         Microsoft updated the SC-300 skills outline on <strong>27 April 2026</strong>. Every question in Azure Mastery's SC-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-300" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="SC-300 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
@@ -465,10 +474,10 @@
 
     <!-- SC-300 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 27 April 2026</p>
       <h2 class="display-small section-title">SC-300 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-300" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Four domains, with weights set by Microsoft's <strong>27 April 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-300" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -487,48 +496,107 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Implement and manage user identities<span class="domain__weight">20–25%</span></h3>
+          <h3>Implement and manage user identities<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc300-identities">102</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Identities topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure and manage a Microsoft Entra tenant</li>
+                <li>Create, configure, and manage Microsoft Entra identities</li>
+                <li>Implement and manage identities for external users and tenants</li>
+                <li>Implement and manage hybrid identity</li>
+              </ul>
               <p>
-                The directory layer. Configure and manage <em>Microsoft Entra ID</em> tenant settings, identity types (cloud-only, hybrid, guest), bulk operations, dynamic groups, group writeback. Hybrid identity with <em>Microsoft Entra Connect Sync</em> and <em>cloud sync</em> — pick between Password Hash Sync (PHS), Pass-through Authentication (PTA), and federation. Self-service password reset (SSPR), B2B collaboration, lifecycle workflows. Around 8–15 questions per sitting.
+                The directory layer everything else sits on. Tenant objectives cover built-in and custom roles, administrative units, effective-permissions evaluation, domains, and company branding. Identity objectives run day-to-day user and group management, custom security attributes, bulk operations via the admin centre or PowerShell, device join/registration, and licensing. External-identity objectives cover collaboration settings, bulk invites, cross-tenant access and synchronisation, and external identity providers. Hybrid-identity objectives require choosing correctly between Entra Connect Sync, Cloud Sync, password hash sync, pass-through authentication, and seamless SSO — plus migrating off AD FS and monitoring with Entra Connect Health.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement authentication and access management<span class="domain__weight">25–30%</span></h3>
+          <h3>Implement authentication and access management<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc300-access">121</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Access topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Plan, implement, and manage Microsoft Entra user authentication</li>
+                <li>Plan, implement, and manage Microsoft Entra Conditional Access</li>
+                <li>Manage risk by using Microsoft Entra ID Protection</li>
+                <li>Implement Global Secure Access</li>
+              </ul>
               <p>
-                The largest domain. Authentication methods — passwordless (FIDO2, Windows Hello for Business, Microsoft Authenticator), MFA registration policies, password protection, smart-lockout, security defaults vs Conditional Access. Design and configure <em>Conditional Access</em> — named locations, sign-in risk, session controls, app-enforced restrictions, Defender for Cloud Apps integration. <em>Microsoft Entra ID Protection</em> — risky users, risky sign-ins, automated remediation. Around 10–18 questions.
+                The largest domain, and the one where Entra's authentication surface keeps expanding. Authentication objectives span certificate-based auth, Temporary Access Pass, OAuth 2.0 tokens, Authenticator, passkeys (FIDO2), Windows Hello for Business, and Kerberos for hybrid identities. Conditional Access objectives run the full policy lifecycle — assignments, controls, session management, continuous access evaluation, authentication context, protected actions, and building from a template. ID Protection objectives cover user- and sign-in-risk remediation and MFA registration campaigns, while Global Secure Access is the newest ground: deploying clients and managing Private Access and Internet Access, including for Microsoft 365.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Plan and implement workload identities<span class="domain__weight">20–25%</span></h3>
+          <h3>Plan and implement workload identities<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc300-workload">102</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Workload topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Plan and implement identities for applications and Azure workloads</li>
+                <li>Plan, implement, and monitor the integration of enterprise applications</li>
+                <li>Plan and implement app registrations</li>
+                <li>Manage and monitor app access by using Microsoft Defender for Cloud Apps</li>
+              </ul>
               <p>
-                The application layer. <em>Service principals</em>, <em>managed identities</em> (system-assigned, user-assigned, federated credentials), <em>app registrations</em>, OAuth 2.0 and OpenID Connect flows, app permissions vs delegated permissions, admin consent. <em>Microsoft Entra Application Proxy</em> and <em>SAML/SSO</em> for legacy apps, custom-developed apps, and gallery apps. Conditional Access for workload identities. Around 8–15 questions.
+                The application layer, and a domain candidates from a pure end-user-identity background often underestimate. Workload-identity objectives choose between managed identities, service principals, user accounts, and managed service accounts, then create and assign them. Enterprise-application objectives cover application- and tenant-level settings, Entra Application Proxy for on-premises apps, SaaS integration, and user/admin consent. App-registration objectives run the full lifecycle — authentication, API permissions, app roles. Defender for Cloud Apps objectives close the domain with cloud discovery, connected apps, Conditional Access app control, and OAuth-app policies.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Plan and automate identity governance<span class="domain__weight">20–25%</span></h3>
+          <h3>Plan and automate identity governance<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc300-governance">103</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Governance topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Plan and implement entitlement management in Microsoft Entra</li>
+                <li>Plan, implement, and manage access reviews in Microsoft Entra</li>
+                <li>Plan and implement privileged access</li>
+                <li>Monitor identity activity by using logs, workbooks, and reports</li>
+              </ul>
               <p>
-                The lifecycle layer. <em>Entitlement management</em> — access packages, catalogs, assignment policies, lifecycle policies, separation of duties. <em>Access reviews</em> — recurring reviews of users, group membership, app access, role assignments. <em>Privileged Identity Management (PIM)</em> — eligibility, just-in-time activation, approval workflows, role and access reviews. <em>Microsoft Entra Permissions Management</em> for multi-cloud scenarios. Around 8–15 questions.
+                The lifecycle layer. Entitlement-management objectives cover catalogs, access packages, terms of use, connected organisations, and the lifecycle of external users. Access-review objectives run the full cycle — planning, configuring, monitoring, and responding to reviews. Privileged-access objectives centre on Privileged Identity Management for both Entra roles and Azure resources, PIM for Groups, the request-and-approval process, audit history, and break-glass accounts. Monitoring objectives close the domain with sign-in/audit/provisioning logs, diagnostic settings to Log Analytics or Event Hubs, KQL queries, workbooks, and Identity Secure Score.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where SC-300 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where SC-300 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared SC-300 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>PHS, PTA, and federation authenticate differently on outage</h3>
+          <p>Password Hash Sync keeps a hash in the cloud, so sign-in keeps working even if on-premises infrastructure goes down; Pass-through Authentication validates every sign-in against an on-premises agent in real time, so it fails closed if that agent is unreachable; federation hands authentication to a separate on-premises service (such as AD FS) entirely. A scenario asking for resilience against an on-premises outage wants PHS, not PTA.</p>
+        </article>
+        <article class="trap">
+          <h3>Security defaults and Conditional Access are mutually exclusive</h3>
+          <p>Security defaults are Microsoft's free, one-size-fits-all baseline — enabling any Conditional Access policy automatically requires turning security defaults off, since the two can't run together. Candidates who assume they layer are usually wrong; the exam expects you to recognise that a tenant with custom Conditional Access policies has already left security defaults behind.</p>
+        </article>
+        <article class="trap">
+          <h3>PIM eligibility is not the same as an active assignment</h3>
+          <p>An eligible PIM assignment grants no standing access at all — the user must activate it, often through an approval workflow, before permissions apply. An active assignment applies permissions immediately, with or without a time bound. A scenario asking how to enforce just-in-time access for a sensitive role wants eligible assignment plus activation requirements, not an active assignment with a shorter duration.</p>
+        </article>
+        <article class="trap">
+          <h3>Managed identities and service principals solve the same problem differently</h3>
+          <p>A service principal is an application identity you create and manage credentials for yourself; a managed identity is a service principal Microsoft creates and rotates credentials for automatically, tied to an Azure resource. When a scenario specifically wants to avoid managing secrets or certificates for an Azure-hosted workload, a managed identity is the expected answer, not a manually created service principal.</p>
+        </article>
+        <article class="trap">
+          <h3>Access packages and entitlement catalogs aren't interchangeable terms</h3>
+          <p>A catalog is the container that groups resources (groups, apps, SharePoint sites) available for access requests; an access package is the specific bundle of those resources, with its own policies, that a user actually requests and receives. A scenario asking you to add a new resource type available for request needs catalog configuration first, before an access package can reference it.</p>
         </article>
       </div>
     </section>
@@ -538,22 +606,22 @@
       <p class="label-eyebrow section-eyebrow">Designed for SC-300</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass SC-300</h2>
       <p>
-        Azure Mastery ships with <strong>428 SC-300 practice questions</strong>, every one written specifically against the current (April 2026) skills outline. Each question carries a domain tag mapped to the official four domains (user identities, authentication and access, workload identities, identity governance), so you always know which area you're being tested on and where your weak spots are clustered. Conditional Access policy snippets, access package configurations, and PIM role assignments appear throughout — practising blueprint-relevant formats and decisions.
+        Azure Mastery ships with <strong>428 SC-300 practice questions</strong>, every one written specifically against the current (27 April 2026) skills outline. Each question carries a domain tag mapped to the official four domains (user identities, authentication and access, workload identities, identity governance), so you always know which area you're being tested on and where your weak spots are clustered. Most items are single-answer multiple choice, with a substantial share of yes/no and multi-select questions and a meaningful set of scenario-based items, plus a smaller mix of dropdown-select, drag-to-match, hotspot, and ordering items, and a modest set of case studies — Conditional Access policy snippets, access-package configurations, and PIM role assignments appear throughout.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your SC-300 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Miss a Conditional Access scenario? You'll see another sign-in-risk question in the next session. Master "PIM eligibility vs assignment" three sessions running and the engine backs off, surfacing fresh access-package or workload-identity scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on Implement authentication and access management, the domain Microsoft weights heaviest at 25–30% and the one with the widest feature surface. Miss a Conditional Access or sign-in-risk scenario and the next session surfaces another authentication question from the same domain first; master "PIM eligibility vs assignment" three sessions running and the plan backs off toward workload-identity or governance scenarios instead. It optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> matters more for SC-300 than for foundational exams — four identity-admin domains span a lot of Microsoft Entra surface area, and the policy you mastered three weeks ago is the policy you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the April 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        For a closer rehearsal of exam day itself, open a <strong>timed simulation</strong>: original SC-300 questions selected and weighted to match the four published domain bands, a 100-minute countdown on screen throughout, and once you've submitted an answer it stays submitted — no flicking back to flag-and-review the way an untimed drill would let you.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        SC-300's hardest moments aren't obscure features — they're two configurations that both look plausible until you check which requirement the scenario actually named. <strong>Answer Coach</strong> is built around exactly that: pick Pass-through Authentication when the scenario needed resilience against an on-premises outage, or mix up an eligible PIM assignment with an active one, and it tells you the specific line you crossed and the rule that would have caught it — not just which option Microsoft wanted. You can read a note the moment you submit an answer, or leave the whole set until a session ends and work through them together; either way, the note stays attached to its question for whenever you return. Guidance always starts from an authored rationale, with an on-device rewrite available on capable hardware once grounding checks clear it.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -722,27 +790,45 @@
       <h2 class="display-small section-title">SC-300 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the SC-300 exam cost?</summary>
+          <summary>PIM eligible vs active assignment — how does SC-300 test the difference?</summary>
+          <div class="faq__answer">
+            <p>Scenarios routinely describe a user who needs a privileged role only occasionally, then ask whether an eligible or an active Privileged Identity Management assignment fits — eligible when the role should require just-in-time activation and approval, active when the role must already be usable without an extra step. Confusing the two is one of SC-300's most repeated slips, and Azure Mastery's Answer Coach names exactly which requirement in the scenario should have decided it.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>SC-300 vs SC-100 — which next for an identity specialist?</summary>
+          <div class="faq__answer">
+            <p>Pass SC-300 first. SC-300 is the Associate-level operational cert — configure and run Microsoft Entra ID, Conditional Access, workload identities, and identity governance day-to-day. <a href="/exams/sc-100/">SC-100</a> is the Expert-level architectural cert — design the Zero Trust identity strategy those controls implement, alongside SecOps, infrastructure, and application security design. SC-300 is also one of three accepted routes to the SC-100 credential (with AZ-500 and SC-200), so many identity specialists sit SC-300 specifically to unlock SC-100 next.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What format does the SC-300 exam use?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-300 bank runs a similar spread: mostly single-answer multiple choice, a substantial share of yes/no and multi-select questions, a meaningful set of scenario-based items, and a smaller mix of dropdown-select, drag-to-match, hotspot, and ordering items, plus a modest set of case studies — Conditional Access policy snippets and access-package configurations appear throughout.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the SC-300 exam fee, and is renewal on top?</summary>
           <div class="faq__answer">
             <p>The SC-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does the SC-300 certification expire?</summary>
+          <summary>Does an SC-300 pass need renewing each year?</summary>
           <div class="faq__answer">
             <p>Yes. Microsoft Associate certifications including SC-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
           </div>
         </details>
         <details class="faq">
-          <summary>What is the SC-300 retake policy if I fail?</summary>
+          <summary>Pass-through Authentication or Password Hash Sync — which does SC-300 want?</summary>
           <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+            <p>The deciding factor is almost always resilience: Password Hash Sync keeps authenticating even if the on-premises environment goes down, because Entra ID holds a hash of the password; Pass-through Authentication validates against on-premises Active Directory in real time, so it fails when that link is down, but it satisfies requirements that credentials never leave the on-premises boundary. A scenario naming an outage-tolerance requirement wants PHS; one naming a strict on-premises-only password policy wants PTA.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>How long should I study for SC-300?</summary>
+          <summary>I need to resit SC-300 — how long before I can rebook?</summary>
           <div class="faq__answer">
-            <p>Most candidates plan four to eight weeks with Microsoft Entra administration experience. Practise identity lifecycle, authentication, Conditional Access, workload identities, application access, entitlement management, access reviews, and privileged access; use the portal and Microsoft Graph or PowerShell where the task calls for automation. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
           </div>
         </details>
         <details class="faq">
@@ -752,27 +838,15 @@
           </div>
         </details>
         <details class="faq">
-          <summary>SC-300 vs SC-200 — different security roles?</summary>
-          <div class="faq__answer">
-            <p>Different angles on Microsoft security. SC-300 is the Identity and Access Administrator Associate cert — it focuses on operating Microsoft Entra ID end-to-end (identities, authentication, Conditional Access, workload identities, governance). <a href="/exams/sc-200/">SC-200</a> is the Security Operations Analyst Associate cert — it focuses on running Microsoft Defender XDR and Sentinel as a SOC analyst. They overlap on Conditional Access and Microsoft Entra ID Protection, but SC-300 goes much deeper on identity and SC-200 covers a broader detection / response surface.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is Azure Mastery free for SC-300 prep?</summary>
+          <summary>Can I try Azure Mastery's SC-300 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of SC-300 questions so you can try every feature. The full bank of 428 SC-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does SC-300 practice work offline?</summary>
+          <summary>Can I revise SC-300 with no data connection?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there an SC-300 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

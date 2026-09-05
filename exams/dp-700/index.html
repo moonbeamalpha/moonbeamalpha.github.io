@@ -93,7 +93,7 @@
         "description": "336 DP-700 practice questions for Microsoft Fabric Data Engineer. Ingestion, transformation, lakehouses, and monitoring — exam-style prep on iPhone and iPad.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-08",
-        "dateModified": "2026-08-09",
+        "dateModified": "2026-09-05",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -186,7 +186,31 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the DP-700 exam cost?",
+            "name": "OneLake shortcut or mirroring — how does DP-700 test the choice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A shortcut is a reference to data that stays in place — no copy, no ongoing compute cost, ideal when a Lakehouse just needs to read data another workspace or source already owns. Mirroring actually replicates the source into Fabric's open Delta format, near-real time, which a scenario wants when downstream engines need to query the data directly without hitting the original system. DP-700 scenarios name the access pattern, not the mechanism, so the exam is testing whether you can infer the mechanism from it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "DP-700 vs DP-750 — different data engineering roles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both are Microsoft associate data-engineering certifications, and the platform decides. DP-700 is for engineering analytics solutions end to end in Microsoft Fabric — Lakehouse, Warehouse, Eventhouse, pipelines, and Dataflows Gen2, transforming with SQL, PySpark, and KQL. DP-750 is for building production data-engineering solutions on Azure Databricks — Unity Catalog, Auto Loader, Lakeflow, and Delta Lake. Neither is a prerequisite for the other; choose based on which platform your organisation runs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What question formats appear on DP-700?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's DP-700 bank runs a similar mix: mostly single-answer multiple choice, a meaningful mix of scenario-based and multi-select questions in roughly equal measure, and a smaller set of yes/no, dropdown, hotspot, drag-to-match, and ordering items, plus a handful of case studies."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the DP-700 voucher price?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The DP-700 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking."
@@ -194,7 +218,7 @@
           },
           {
             "@type": "Question",
-            "name": "Does the DP-700 certification expire?",
+            "name": "Once earned, does DP-700 need renewing?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. DP-700 earns the Microsoft Certified: Fabric Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as DP-900, which never expire.)"
@@ -202,26 +226,10 @@
           },
           {
             "@type": "Question",
-            "name": "What is the DP-700 retake policy if I fail?",
+            "name": "Dataflow Gen2 or a Data pipeline — which does DP-700 expect for a given ingestion task?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for DP-700?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "DP-700 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL, PySpark, or KQL before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "DP-700 vs DP-600 — which should I take?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Both are Microsoft Fabric associate certifications, and your role should decide. DP-600 (Fabric Analytics Engineer) leans toward analytics — semantic models, Power BI, DAX, and serving data for reporting. DP-700 (Fabric Data Engineer) leans toward data engineering — ingestion and transformation with pipelines, Dataflows Gen2, notebooks and PySpark, real-time streaming with Eventstream and KQL, plus Lakehouse and Warehouse optimisation. If you build the pipelines that load and shape data, take DP-700; if you model and serve it for analytics, take DP-600. Many engineers eventually earn both."
+              "text": "Dataflow Gen2 is the low-code, Power Query-driven choice for transformation-heavy loads where a citizen-integrator-style experience fits. A Data pipeline is the orchestration choice for scheduling, chaining activities, and coordinating across sources with control-flow logic. DP-700 scenarios describe the requirement (transform-in-place vs orchestrate-and-schedule) rather than naming the tool, so recognising which one the requirement implies is the actual skill being tested."
             }
           },
           {
@@ -234,7 +242,15 @@
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for DP-700 prep?",
+            "name": "I failed DP-700 — how long until I can retake it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I try Azure Mastery's DP-700 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of DP-700 questions so you can try every feature. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -242,18 +258,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does DP-700 practice work offline?",
+            "name": "Does DP-700 practice hold up without a connection?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there a DP-700 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -262,7 +270,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/dp-700/#study-plan",
         "name": "How to study for DP-700 (Implementing Data Engineering Solutions Using Microsoft Fabric)",
-        "description": "A four-to-eight-week revision plan mapped to the DP-700 skills outline (July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A four-to-eight-week revision plan mapped to the DP-700 skills outline (21 July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -326,6 +334,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -448,8 +457,8 @@
         Microsoft refreshed the DP-700 skills outline on <strong>21 July 2026</strong>. Every question in Azure Mastery's DP-700 bank is mapped to the current outline — no leftover questions on retired features. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-700" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="DP-700 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 (mixed formats)</span></li>
-        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">~100 minutes</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
+        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £113 UK)</span></li>
         <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew yearly (Associate)</span></li>
@@ -459,10 +468,10 @@
 
     <!-- DP-700 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · July 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 21 July 2026</p>
       <h2 class="display-small section-title">DP-700 exam objectives</h2>
       <p class="section-lede">
-        Three domains, each weighted 30–35% in Microsoft's July 2026 update — there's no "easy" domain to coast on. Every summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-700" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
+        Three domains, each weighted 30–35% as of <strong>21 July 2026</strong> on the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-700" rel="noopener">official skills outline</a> — there's no "easy" domain to coast on. Every domain below lists Microsoft's own skill groups verbatim, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -481,37 +490,87 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Implement and manage an analytics solution<span class="domain__weight">30–35%</span></h3>
+          <h3>Implement and manage an analytics solution<span class="domain__weight">Published weight 30–35%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp700-implement">108</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Implement &amp; Manage topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure Microsoft Fabric workspace settings</li>
+                <li>Implement lifecycle management in Fabric</li>
+                <li>Configure security and governance</li>
+                <li>Orchestrate processes</li>
+              </ul>
               <p>
-                The platform-engineering domain. Configuring <em>Fabric workspace settings</em> (Spark, domains, OneLake, Apache Airflow); lifecycle management with <em>Git version control</em>, database projects, and <em>deployment pipelines</em>; security and governance — workspace- and item-level access, <em>row-, column-, object-, and folder/file-level</em> controls, dynamic data masking, sensitivity labels, audit logs, and <em>OneLake security</em>; and orchestration — choosing between <em>Dataflow Gen2, pipelines, and notebooks</em> and designing schedule- and event-based triggers.
+                The platform-engineering domain. Candidates configure Fabric workspace settings across Spark, domains, OneLake, and Apache Airflow, then implement lifecycle management with Git integration, database projects, and deployment pipelines with deployment rules. Security and governance covers workspace- and item-level access controls, row-, column-, object-, and folder/file-level access, dynamic data masking, sensitivity labels, endorsement, audit logs, and OneLake security. Orchestration closes the domain: choosing between Dataflow Gen2, a pipeline, and a notebook, and designing schedules, event-based triggers, and parameterised orchestration patterns.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Ingest and transform data<span class="domain__weight">30–35%</span></h3>
+          <h3>Ingest and transform data<span class="domain__weight">Published weight 30–35%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp700-ingest">111</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Ingest &amp; Transform topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design and implement loading patterns</li>
+                <li>Ingest and transform batch data</li>
+                <li>Ingest and transform streaming data</li>
+              </ul>
               <p>
-                The hands-on heart of the exam. Designing <em>full and incremental load</em> patterns and preparing data for a dimensional model; batch ingest and transform with <em>Dataflows Gen2, notebooks, KQL, T-SQL, and PySpark</em>, plus <em>OneLake shortcuts</em>, <em>mirroring</em>, and pipelines; denormalising, grouping, aggregating, and handling duplicate, missing, and late-arriving data; and streaming ingestion with <em>Eventstream, Spark Structured Streaming, KQL</em>, and windowing functions.
+                The hands-on heart of the exam. Candidates design full and incremental load patterns, prepare data for a dimensional model using surrogate keys and slowly changing dimensions, and design a loading pattern for streaming data. Batch objectives cover choosing a data store and transformation tool (Dataflows Gen2, notebooks, KQL, T-SQL), creating OneLake shortcuts, implementing mirroring, ingesting via pipelines, and handling duplicate, missing, and late-arriving data. Streaming objectives add Eventstreams, Spark Structured Streaming, KQL, and windowing functions — tumbling, hopping, sliding, and session.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Monitor and optimize an analytics solution<span class="domain__weight">30–35%</span></h3>
+          <h3>Monitor and optimize an analytics solution<span class="domain__weight">Published weight 30–35%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp700-monitor">117</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Monitor &amp; Optimize topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Monitor Fabric items</li>
+                <li>Identify and resolve errors</li>
+                <li>Optimize performance</li>
+              </ul>
               <p>
-                The operations domain. Monitoring data ingestion, transformation, and semantic-model refresh and configuring <em>alerts</em>; identifying and resolving errors across <em>pipelines, Dataflow Gen2, notebooks, Eventhouse, Eventstream, T-SQL, and OneLake shortcuts</em>; and optimising performance of the <em>Lakehouse table, pipeline, data warehouse, Eventstreams/Eventhouses, Spark</em>, and individual queries.
+                The operations domain, and the one candidates most often under-revise given its breadth relative to weight. Candidates monitor data ingestion, transformation, and semantic model refresh, and configure Data Activator alerts. Error-resolution objectives span pipeline, Dataflow Gen2, notebook, Eventhouse, Eventstream, T-SQL, and OneLake shortcut failures. Optimisation closes the domain: Lakehouse table tuning (V-Order, OPTIMIZE, VACUUM, partitioning), pipeline optimisation, data-warehouse statistics and result-set caching, Eventstream and Eventhouse tuning, Spark pool and partition tuning, and query performance.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where DP-700 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where DP-700 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared DP-700 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Lakehouse, Warehouse, and Eventhouse solve different problems</h3>
+          <p>A Lakehouse stores files and Delta tables for engineers working in Spark and notebooks; a Warehouse is T-SQL-first with full transactional guarantees for analysts; an Eventhouse (KQL database) is built for high-volume, near-real-time telemetry. A scenario naming the workload's shape — files and Spark, relational T-SQL, or streaming telemetry — is naming the store, not just a preference.</p>
+        </article>
+        <article class="trap">
+          <h3>Shortcut, mirroring, and Copy activity aren't interchangeable</h3>
+          <p>A OneLake shortcut references data in place without copying it; mirroring keeps a near-real-time replica of an external database (Azure SQL, Cosmos DB, Snowflake) inside Fabric with no ETL to write; a Copy activity in a pipeline actually moves and lands data on a schedule. A requirement for "no duplicated storage" points at a shortcut or mirroring, not a Copy activity.</p>
+        </article>
+        <article class="trap">
+          <h3>Dataflow Gen2, notebook, pipeline, T-SQL, and KQL each own a job</h3>
+          <p>Dataflow Gen2 suits low-code, Power Query-style transforms; a notebook suits PySpark or Spark SQL at scale; a pipeline orchestrates and moves data rather than transforming it in place; T-SQL targets the Warehouse; KQL targets the Eventhouse. Picking the tool that matches the stated skillset and data store, not the most powerful option, is what the exam rewards.</p>
+        </article>
+        <article class="trap">
+          <h3>Full loads and incremental loads answer different constraints</h3>
+          <p>A full load reprocesses the entire source every run — simple, but expensive and slow at scale. An incremental load ingests only new or changed rows since the last run, using a watermark or change-tracking mechanism, and is what a scenario citing large volume or a tight refresh window is actually asking for.</p>
+        </article>
+        <article class="trap">
+          <h3>RLS, CLS, OLS, and dynamic data masking protect different things</h3>
+          <p>Row-level security restricts which rows a principal can see; column-level security removes entire columns from view; object-level security blocks access to a table or item outright; dynamic data masking obscures column values in query results without removing access to the row. A requirement to "hide the salary figures but leave the row visible" needs masking, not CLS or OLS.</p>
         </article>
       </div>
     </section>
@@ -521,22 +580,22 @@
       <p class="label-eyebrow section-eyebrow">Designed for DP-700</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass DP-700</h2>
       <p>
-        Azure Mastery ships with <strong>336 DP-700 practice questions</strong>, every one written specifically against the current (July 2026) skills outline. Each question carries a domain tag mapped to the official three domains (implement and manage an analytics solution, ingest and transform data, monitor and optimise an analytics solution), so you always know which area you're being tested on and where your weak spots are clustered.
+        Azure Mastery ships with <strong>336 DP-700 practice questions</strong>, every one written specifically against the current (21 July 2026) skills outline. Each question carries a domain tag mapped to the official three domains (implement and manage an analytics solution, ingest and transform data, monitor and optimise an analytics solution), so you always know which area you're being tested on and where your weak spots are clustered. Most items are single-answer multiple choice, with a real share of scenario-based and yes/no questions, plus a smaller mix of drag-to-match items — PySpark, T-SQL, and KQL snippets appear throughout, so reading code matters as much as recalling a feature name.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your DP-700 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get something wrong on choosing between Dataflow Gen2, a pipeline, and a notebook? You'll see another orchestration question in the next session. Nail incremental load patterns three sessions running and the engine backs off, surfacing fresh Eventstream or Spark optimisation scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history, and — because all three DP-700 domains are weighted almost equally at 30–35% — it won't let you over-invest in the one you already know. Get something wrong on choosing between Dataflow Gen2, a pipeline, and a notebook? You'll see another orchestration question in the next session. Nail incremental load patterns three sessions running and the engine backs off, surfacing fresh Eventstream or Spark optimisation scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> matters even more for a technical exam like DP-700. The KQL windowing syntax or deployment-pipeline workflow you mastered six weeks ago is exactly what you'll fumble on exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry — the padlock icon on the Today screen is your "revisit before you forget" cue.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised question set drawn from original practice questions, a ~100-minute timer, no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised question set drawn from original practice questions, a 100-minute timer, no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> is where DP-700's storage-and-tool discriminations get untangled. Pick a Lakehouse when the scenario needed a Warehouse, or a Copy activity when it needed a OneLake shortcut, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -573,7 +632,7 @@
             <li><strong>Phase 2 focus — <em>Ingest and transform data</em> (30–35%):</strong> Full vs incremental loads, batch transform with Dataflows Gen2, notebooks, PySpark, T-SQL and KQL, OneLake shortcuts, mirroring, plus streaming with Eventstream, Spark Structured Streaming, and KQL windowing.</li>
             <li><strong><em>Monitor and optimize an analytics solution</em> (30–35%):</strong> Monitor items and configure alerts, resolve pipeline / Dataflow / notebook / T-SQL errors, and optimise Lakehouse, Warehouse, pipeline, Spark, and query performance.</li>
             <li><strong>Run <em>Focus Weak Spots</em> daily.</strong> The app surfaces the 5–10 questions most likely to move your readiness score.</li>
-            <li><strong>Run the <em>Exam Simulator</em> end-to-end</strong> at full ~100-minute length. When you're scoring 750+ consistently, schedule the exam — then light review only, sleep well, and sit it.</li>
+            <li><strong>Run the <em>Exam Simulator</em> end-to-end</strong> at full 100-minute length. When you're scoring 750+ consistently, schedule the exam — then light review only, sleep well, and sit it.</li>
           </ul>
         </li>
       </ol>
@@ -696,33 +755,39 @@
       <h2 class="display-small section-title">DP-700 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the DP-700 exam cost?</summary>
+          <summary>OneLake shortcut or mirroring — how does DP-700 test the choice?</summary>
+          <div class="faq__answer">
+            <p>A shortcut is a reference to data that stays in place — no copy, no ongoing compute cost, ideal when a Lakehouse just needs to read data another workspace or source already owns. Mirroring actually replicates the source into Fabric's open Delta format, near-real time, which a scenario wants when downstream engines need to query the data directly without hitting the original system. DP-700 scenarios name the access pattern, not the mechanism, so the exam is testing whether you can infer the mechanism from it.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>DP-700 vs DP-750 — different data engineering roles?</summary>
+          <div class="faq__answer">
+            <p>Both are Microsoft associate data-engineering certifications, and the platform decides. DP-700 is for engineering analytics solutions end to end in Microsoft Fabric — Lakehouse, Warehouse, Eventhouse, pipelines, and Dataflows Gen2, transforming with SQL, PySpark, and KQL. <a href="/exams/dp-750/">DP-750</a> is for building production data-engineering solutions on Azure Databricks — Unity Catalog, Auto Loader, Lakeflow, and Delta Lake. Neither is a prerequisite for the other; choose based on which platform your organisation runs.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What question formats appear on DP-700?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's DP-700 bank runs a similar mix: mostly single-answer multiple choice, a meaningful mix of scenario-based and multi-select questions in roughly equal measure, and a smaller set of yes/no, dropdown, hotspot, drag-to-match, and ordering items, plus a handful of case studies.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the DP-700 voucher price?</summary>
           <div class="faq__answer">
             <p>The DP-700 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does the DP-700 certification expire?</summary>
+          <summary>Once earned, does DP-700 need renewing?</summary>
           <div class="faq__answer">
             <p>Yes. DP-700 earns the Microsoft Certified: Fabric Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as <a href="/exams/dp-900/">DP-900</a>, which never expire.)</p>
           </div>
         </details>
         <details class="faq">
-          <summary>What is the DP-700 retake policy if I fail?</summary>
+          <summary>Dataflow Gen2 or a Data pipeline — which does DP-700 expect for a given ingestion task?</summary>
           <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for DP-700?</summary>
-          <div class="faq__answer">
-            <p>DP-700 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL, PySpark, or KQL before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>DP-700 vs DP-600 — which should I take?</summary>
-          <div class="faq__answer">
-            <p>Both are Microsoft Fabric associate certifications, and your role should decide. DP-600 (Fabric Analytics Engineer) leans toward analytics — semantic models, Power BI, DAX, and serving data for reporting. DP-700 (Fabric Data Engineer) leans toward data engineering — ingestion and transformation with pipelines, Dataflows Gen2, notebooks and PySpark, real-time streaming with Eventstream and KQL, plus Lakehouse and Warehouse optimisation. If you build the pipelines that load and shape data, take DP-700; if you model and serve it for analytics, take DP-600. Many engineers eventually earn both.</p>
+            <p>Dataflow Gen2 is the low-code, Power Query-driven choice for transformation-heavy loads where a citizen-integrator-style experience fits. A Data pipeline is the orchestration choice for scheduling, chaining activities, and coordinating across sources with control-flow logic. DP-700 scenarios describe the requirement (transform-in-place vs orchestrate-and-schedule) rather than naming the tool, so recognising which one the requirement implies is the actual skill being tested.</p>
           </div>
         </details>
         <details class="faq">
@@ -732,21 +797,21 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for DP-700 prep?</summary>
+          <summary>I failed DP-700 — how long until I can retake it?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Can I try Azure Mastery's DP-700 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of DP-700 questions so you can try every feature. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does DP-700 practice work offline?</summary>
+          <summary>Does DP-700 practice hold up without a connection?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there a DP-700 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

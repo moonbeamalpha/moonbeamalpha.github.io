@@ -93,7 +93,7 @@
         "description": "346 DP-900 practice questions for Azure Data Fundamentals. Core data concepts, relational, non-relational, and analytics — free to start on iPhone and iPad.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-08",
-        "dateModified": "2026-08-09",
+        "dateModified": "2026-09-05",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -133,7 +133,7 @@
           "Describe core data concepts (25–30%)",
           "Identify considerations for relational data on Azure (20–25%)",
           "Describe considerations for working with non-relational data on Azure (15–20%)",
-          "Describe an analytics workload on Azure (25–30%)"
+          "Describe an analytics workload (25–30%)"
         ],
         "recognizedBy": {
           "@type": "Organization",
@@ -187,7 +187,31 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the DP-900 exam cost?",
+            "name": "Do I need database experience before sitting DP-900?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Very little is assumed. Microsoft doesn't expect database-administration experience or hands-on SQL — just basic familiarity with what a spreadsheet or database is, and a general sense of what \"cloud\" means. If you can describe why a company might store data in more than one place, you have enough of a starting point; the exam teaches the Azure-specific vocabulary as you study."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the DP-900 exam actually look like?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting — single-answer multiple choice, multi-select, and scenario items are typical. Azure Mastery's DP-900 bank mirrors that mix: mostly single-answer multiple choice, a real share of scenario-based and multi-select questions, and a smaller run of drag-and-drop, drag-to-match, dropdown-select, and hotspot items, plus linked case studies — so you rehearse the format variety, not just one question shape."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "DP-900 vs PL-900 — which should I take first?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They test different things and neither is a prerequisite for the other, so pick based on your role. DP-900 covers data concepts and Azure's data services — relational vs non-relational, analytics workloads, Power BI as a visualisation layer. PL-900 covers the low-code Power Platform itself — Power Apps, Power Automate, Dataverse, and Copilot Studio agents. A data analyst or engineer heading toward DP-300 or AI-300 should start with DP-900; a business user or maker heading toward PL-300 should start with PL-900. Many candidates who work across both simply sit them in either order."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the DP-900 exam fee, and does it vary by region?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The DP-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking."
@@ -195,7 +219,7 @@
           },
           {
             "@type": "Question",
-            "name": "Does the DP-900 certification expire?",
+            "name": "Is a passed DP-900 permanent, or does it lapse?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-901, MS-900, and PL-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as DP-300 or AZ-104, which require an annual free renewal assessment on Microsoft Learn.)"
@@ -203,7 +227,15 @@
           },
           {
             "@type": "Question",
-            "name": "What is the DP-900 retake policy if I fail?",
+            "name": "Is relational vs non-relational the hardest DP-900 call?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most candidates, yes. DP-900 repeatedly asks you to match a workload to the right storage model — a relational schema with joins and transactions vs a document, key-value, column-family, or graph store built for a different access pattern. Azure Mastery's Answer Coach flags exactly which property of the scenario (structure, consistency need, query shape) should have driven the choice, rather than leaving you to memorise service names in isolation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I failed DP-900 once — what's the wait before I can resit?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
@@ -211,23 +243,7 @@
           },
           {
             "@type": "Question",
-            "name": "How long should I study for DP-900?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates with prior IT experience pass after one to two weeks of focused revision. If cloud computing is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "DP-900 vs DP-300 — which should I take first?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "DP-900 first if databases aren't already your day job. DP-900 teaches you the data vocabulary (relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options) without expecting hands-on T-SQL. DP-300 is the role-based Database Administrator Associate exam — it expects you to manage Azure SQL workloads in production, write queries, and configure HA/DR. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is DP-900 worth taking if I'm not technical?",
+            "name": "Is DP-900 worth sitting if I'm not a developer or DBA?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes — Microsoft positions DP-900 for both technical and non-technical candidates. Data analysts about to step into Power BI work, software engineers crossing into a data role, and product managers responsible for analytics architecture all sit DP-900. The exam doesn't ask you to write SQL queries. It asks you to recognise scenarios — \"which Azure SQL service for this workload?\" or \"which storage tier for this access pattern?\" — and pick the correct option."
@@ -235,7 +251,7 @@
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for DP-900 prep?",
+            "name": "Can I try Azure Mastery's DP-900 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of DP-900 questions so you can try every feature. The full bank of 346 DP-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -243,18 +259,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does DP-900 practice work offline?",
+            "name": "Can I revise for DP-900 with no internet connection?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there a DP-900 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -263,7 +271,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/dp-900/#study-plan",
         "name": "How to study for DP-900 (Microsoft Azure Data Fundamentals) in 2 weeks",
-        "description": "A two-week revision plan mapped to the DP-900 skills outline (November 2024), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A two-week revision plan mapped to the DP-900 skills outline (21 July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P14D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -325,6 +333,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -438,16 +447,16 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the DP-900 exam?</h2>
       <p>
-        DP-900 is the <strong>Microsoft Certified: Azure Data Fundamentals</strong> credential — the entry-level exam for anyone working with data in the Microsoft Azure cloud. It's pitched at candidates who have basic familiarity with relational vs non-relational data and transactional vs analytical workloads, but doesn't require database-administration experience. Common audiences include data analysts about to step into Power BI work, software engineers crossing into a data role, and product/operations partners who need to discuss data architecture credibly.
+        DP-900 is the <strong>Microsoft Certified: Azure Data Fundamentals</strong> credential — the data-literacy exam Microsoft points at anyone touching data in Azure without owning a database. It's pitched at candidates who already know what a spreadsheet and a database are but haven't had to reason about redundancy tiers, Cosmos DB APIs, or the split between a warehouse and a lake. Common audiences include data analysts about to step into Power BI work, software engineers crossing into a data role, and delivery leads who need to speak data architecture credibly in a design meeting.
       </p>
       <p>
-        The exam doesn't ask you to write SQL queries from scratch or design a star schema. It expects you to recognise scenarios: <strong>structured vs semi-structured vs unstructured</strong> data; <strong>OLTP vs OLAP</strong> workloads; the difference between <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong>; when to reach for <strong>Azure Cosmos DB</strong>, <strong>Azure Blob Storage</strong>, or <strong>Azure Data Lake Storage Gen2</strong>; and how Microsoft Fabric's analytics surface fits with <strong>Azure Synapse Analytics</strong>.
+        The exam doesn't ask you to write SQL queries from scratch or design a star schema. It expects you to recognise scenarios: <strong>structured vs semi-structured vs unstructured</strong> data; <strong>OLTP vs OLAP</strong> workloads; the difference between <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong>; when to reach for <strong>Azure Cosmos DB</strong>, <strong>Azure Blob Storage</strong>, or <strong>Azure Data Lake Storage Gen2</strong>; and how <strong>Microsoft Fabric</strong>'s analytics surface fits with ingestion, streaming, and Power BI visualisation.
       </p>
       <p>
-        Microsoft updated the DP-900 skills outline on <strong>1 November 2024</strong>. Every question in Azure Mastery's DP-900 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-900" rel="noopener">learn.microsoft.com</a>.
+        Microsoft updated the DP-900 skills outline on <strong>21 July 2026</strong>. Every question in Azure Mastery's DP-900 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-900" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="DP-900 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">45 minutes (65 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $99 (≈ £77 UK)</span></li>
@@ -458,10 +467,10 @@
 
     <!-- DP-900 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · November 2024</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 21 July 2026</p>
       <h2 class="display-small section-title">DP-900 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's November 2024 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-900" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
+        Four domains, with weights set by Microsoft's <strong>21 July 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-900" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -480,48 +489,102 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Core data concepts<span class="domain__weight">25–30%</span></h3>
+          <h3>Describe core data concepts<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp900-coredata">89</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Core Data topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe ways to represent data</li>
+                <li>Identify options for data storage</li>
+                <li>Describe common data workloads</li>
+                <li>Identify roles and responsibilities for data workloads</li>
+              </ul>
               <p>
-                The conceptual base. Distinguishing <em>structured</em>, <em>semi-structured</em>, and <em>unstructured</em> data; identifying common data file formats (CSV, JSON, Parquet, Avro); types of databases (relational vs non-relational, key-value, document, graph, columnar); and the split between <em>transactional</em> (OLTP) and <em>analytical</em> (OLAP) workloads. Also covers the four classic data roles: database administrator, data engineer, data analyst, and data scientist. Around 11–18 questions per sitting.
+                This is the vocabulary domain: get it wrong here and every later domain gets harder to reason about. Candidates need to tell structured, semi-structured, and unstructured data apart, recognise common file formats (CSV, JSON, Parquet, Avro) by what they're good at, and map a described dataset onto a database type — relational, key-value, document, graph, or columnar. The transactional-vs-analytical split (OLTP vs OLAP) recurs as a lens on later questions, since it decides which service family a scenario belongs to. The domain closes with the four data roles Microsoft cares about — database administrator, data engineer, data analyst, data scientist — and the exam expects you to match a described task to the right role, not a job title.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Relational data on Azure<span class="domain__weight">20–25%</span></h3>
+          <h3>Identify considerations for relational data on Azure<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp900-relational">86</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Relational topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe relational concepts</li>
+                <li>Describe relational Azure data services</li>
+              </ul>
               <p>
-                Relational concepts — tables, indexes, views, normalization — and the SQL Server family on Azure: <em>Azure SQL Database</em>, <em>Azure SQL Managed Instance</em>, <em>SQL Server on Azure VMs</em>, plus open-source services for PostgreSQL and MySQL. Expect scenario questions like "single-tenant on-prem migration" → SQL Managed Instance, or "cloud-native serverless app" → Azure SQL Database. Around 8–15 questions.
+                Foundational relational theory first — tables, indexes, views, common SQL statement types, and why normalisation matters — then the Azure SQL family: Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure Virtual Machines, alongside the managed open-source options for PostgreSQL and MySQL. The exam leans hard on scenario matching rather than definitions: a described migration, compatibility requirement, or management overhead constraint should point you to exactly one of the three SQL options, and picking the wrong one because it "sounds similar" to the right one is the domain's most common miss.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Non-relational data on Azure<span class="domain__weight">15–20%</span></h3>
+          <h3>Describe considerations for working with non-relational data on Azure<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp900-nonrelational">68</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Non-Relational topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe the capabilities of Azure storage</li>
+                <li>Describe the capabilities and features of Azure Cosmos DB</li>
+              </ul>
               <p>
-                Smallest domain by weight but tonally distinct. Covers <em>Azure Cosmos DB</em> (and its API options — NoSQL, MongoDB, Cassandra, Gremlin, Table) and <em>Azure Storage</em> services for non-relational data: Blob containers, file shares, Data Lake Storage Gen2, table storage. Strong on "which storage tier?" questions. Around 6–12 questions.
+                The smallest domain by weight but a distinct tone from the relational one — this is about picking a storage shape, not writing a query. Azure Storage's non-relational surface (Blob containers and access tiers, Azure Files shares, Table storage) sits alongside Azure Cosmos DB, where the exam expects you to know what each of its APIs (NoSQL, MongoDB, Cassandra, Gremlin, Table) is actually for, not just that they exist. Expect "which storage tier or API fits this access pattern and cost constraint?" framing rather than raw recall of feature lists.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Analytics workloads on Azure<span class="domain__weight">25–30%</span></h3>
+          <h3>Describe an analytics workload<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp900-analytics">103</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Analytics topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Describe common elements of large-scale analytics</li>
+                <li>Describe considerations for real-time data analytics</li>
+                <li>Describe data visualization in Microsoft Power BI</li>
+              </ul>
               <p>
-                The largest domain (tied with core concepts). Modern data warehousing concepts; <em>Microsoft Fabric</em> and <em>Azure Synapse Analytics</em>; ingestion services (<em>Azure Data Factory</em>, <em>Azure Synapse pipelines</em>); real-time streaming (<em>Azure Stream Analytics</em>); and the data-visualisation surface — Power BI, including dashboards, reports, and the role of Power BI Desktop vs Power BI Service. Around 11–18 questions.
+                Tied with core concepts as the largest domain, and the one that has moved the most in recent skills-outline refreshes. It covers modern data-warehousing concepts and where Microsoft Fabric and Azure Synapse Analytics sit relative to each other, ingestion and processing considerations for large-scale analytics, and the batch-vs-streaming distinction for real-time data. It finishes on Power BI: data models, the difference between Power BI Desktop and the Power BI Service, and picking an appropriate visualisation for a described dataset rather than any hands-on report building.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where DP-900 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where DP-900 candidates slip</h2>
+      <p class="section-lede">
+        Recurring misconceptions that trip up otherwise well-prepared DP-900 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>OLTP and OLAP describe workloads, not products</h3>
+          <p>Candidates often try to memorise "which Azure service is OLTP" and "which is OLAP" as a fixed list. OLTP and OLAP describe how data is used — many short transactions versus large aggregated reads — and the same underlying service family can support either shape depending on how it's configured. The exam wants you to classify a described workload by its access pattern, not recite a product-to-category lookup table.</p>
+        </article>
+        <article class="trap">
+          <h3>Three SQL options solve overlapping but different problems</h3>
+          <p>Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VMs all run SQL Server-compatible workloads, which tempts candidates into treating them as interchangeable. Database is the fully managed, cloud-native option; Managed Instance targets near-total instance-level compatibility for a lift-and-shift; SQL Server on a VM hands you the whole OS when you need something neither managed option supports. A scenario naming a specific compatibility or control requirement usually rules out two of the three.</p>
+        </article>
+        <article class="trap">
+          <h3>A Cosmos DB API choice is a data-model choice, not a preference</h3>
+          <p>Cosmos DB's NoSQL, MongoDB, Cassandra, Gremlin, and Table APIs aren't styling options on the same database — each is built around a different data model (document, wide-column, graph, key-value) and picking one commits you to that shape. A scenario describing relationships and traversals between entities is pointing at the Gremlin API; one describing existing MongoDB application code is pointing at the MongoDB API, regardless of which API "seems" more modern.</p>
+        </article>
+        <article class="trap">
+          <h3>Microsoft Fabric and Azure Synapse Analytics aren't competitors in every question</h3>
+          <p>Recent skills-outline updates expanded Microsoft Fabric's role, and candidates sometimes read every analytics question as "pick Fabric over Synapse." The two overlap in places, but a scenario can still legitimately point at Synapse-specific pipeline or dedicated-pool behaviour. Read what the scenario is actually asking about — ingestion, unified analytics experience, or a specific warehousing feature — rather than defaulting to whichever service was mentioned most recently in the course material.</p>
+        </article>
+        <article class="trap">
+          <h3>Structured, semi-structured, and unstructured are about shape, not size</h3>
+          <p>Candidates sometimes assume "unstructured" means "unimportant" or "small," when it just means the data doesn't fit a predefined schema — video files and free-text documents are unstructured regardless of size or business value. JSON and XML are semi-structured because they carry some organisational markers without a fixed schema. Getting this classification wrong cascades into picking the wrong storage service for a described file type.</p>
         </article>
       </div>
     </section>
@@ -531,22 +594,22 @@
       <p class="label-eyebrow section-eyebrow">Designed for DP-900</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass DP-900</h2>
       <p>
-        Azure Mastery ships with <strong>346 DP-900 practice questions</strong>, every one written specifically against the current (November 2024) skills outline. Each question carries a domain tag mapped to the official four domains (core data concepts, relational data, non-relational data, analytics workloads), so you always know which area you're being tested on and where your weak spots are clustered.
+        Azure Mastery ships with <strong>346 DP-900 practice questions</strong>, every one written specifically against the current (21 July 2026) skills outline. Each question carries a domain tag mapped to the official four domains, so you always know which area you're being tested on and where your weak spots are clustered.
       </p>
       <p>
-        The on-device <strong>Exam IQ</strong> engine predicts your DP-900 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+        The on-device <strong>Exam IQ</strong> engine predicts your DP-900 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and names the specific SQL-family, Cosmos DB, or analytics topic dragging your readiness down, rather than telling you to "study more."
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get something wrong on Azure SQL Database vs Managed Instance? You'll see another SQL-family question in the next session. Master "describe OLTP vs OLAP" three sessions running and the engine backs off, surfacing fresh Cosmos DB or Microsoft Fabric scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on Describe an analytics workload, the domain Microsoft weights joint-heaviest at 25–30% and the one that has moved most in recent skills-outline refreshes. Get a Microsoft Fabric or Cosmos DB API question wrong and the next session surfaces another one from the same domain first; master a topic across three sessions and the plan backs off to whichever gap between your accuracy and the 700 pass score is currently largest.
       </p>
       <p>
-        <strong>Knowledge decay tracking</strong> is the secret weapon for foundational exams like DP-900. The same domain you mastered six weeks ago is the domain you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry — the padlock icon on the Today screen is your "revisit before you forget" cue.
+        <strong>Knowledge decay tracking</strong> matters here because DP-900's vocabulary domain and its service domains reinforce each other — forget the OLTP/OLAP distinction and the relational and analytics domains both get harder to reason about. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry; the padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised question set drawn from original practice questions, 45-minute timer, no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        In Azure Mastery's DP-900 bank, most items are single-answer multiple choice, with a real mix of scenario-based and multi-select questions, plus a smaller share of drag-and-drop, drag-to-match, dropdown-select, and hotspot items, and linked case-study scenarios — so you practise recognising a data shape or service fit under several formats, not just picking one option. <strong>Blueprint-aligned exam rehearsal</strong> runs this mix as a timed, domain-weighted session using original questions; the 45-minute timer runs with no jumping back to flag-and-review, and it uses original practice content rather than reproducing Microsoft's exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> is where DP-900's near-identical service choices get untangled. Get a question wrong because you picked SQL Managed Instance when the scenario needed Azure SQL Database, or confused the Gremlin and MongoDB Cosmos DB APIs, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -702,57 +765,63 @@
       <h2 class="display-small section-title">DP-900 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the DP-900 exam cost?</summary>
+          <summary>Do I need database experience before sitting DP-900?</summary>
+          <div class="faq__answer">
+            <p>Very little is assumed. Microsoft doesn't expect database-administration experience or hands-on SQL — just basic familiarity with what a spreadsheet or database is, and a general sense of what "cloud" means. If you can describe why a company might store data in more than one place, you have enough of a starting point; the exam teaches the Azure-specific vocabulary as you study.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What does the DP-900 exam actually look like?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting — single-answer multiple choice, multi-select, and scenario items are typical. Azure Mastery's DP-900 bank mirrors that mix: mostly single-answer multiple choice, a real share of scenario-based and multi-select questions, and a smaller run of drag-and-drop, drag-to-match, dropdown-select, and hotspot items, plus linked case studies — so you rehearse the format variety, not just one question shape.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>DP-900 vs PL-900 — which should I take first?</summary>
+          <div class="faq__answer">
+            <p>They test different things and neither is a prerequisite for the other, so pick based on your role. DP-900 covers data concepts and Azure's data services — relational vs non-relational, analytics workloads, Power BI as a visualisation layer. <a href="/exams/pl-900/">PL-900</a> covers the low-code Power Platform itself — Power Apps, Power Automate, Dataverse, and Copilot Studio agents. A data analyst or engineer heading toward DP-300 or AI-300 should start with DP-900; a business user or maker heading toward PL-300 should start with PL-900. Many candidates who work across both simply sit them in either order.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the DP-900 exam fee, and does it vary by region?</summary>
           <div class="faq__answer">
             <p>The DP-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does the DP-900 certification expire?</summary>
+          <summary>Is a passed DP-900 permanent, or does it lapse?</summary>
           <div class="faq__answer">
             <p>No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-901, MS-900, and PL-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as DP-300 or <a href="/exams/az-104/">AZ-104</a>, which require an annual free renewal assessment on Microsoft Learn.)</p>
           </div>
         </details>
         <details class="faq">
-          <summary>What is the DP-900 retake policy if I fail?</summary>
+          <summary>Is relational vs non-relational the hardest DP-900 call?</summary>
+          <div class="faq__answer">
+            <p>For most candidates, yes. DP-900 repeatedly asks you to match a workload to the right storage model — a relational schema with joins and transactions vs a document, key-value, column-family, or graph store built for a different access pattern. Azure Mastery's Answer Coach flags exactly which property of the scenario (structure, consistency need, query shape) should have driven the choice, rather than leaving you to memorise service names in isolation.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I failed DP-900 once — what's the wait before I can resit?</summary>
           <div class="faq__answer">
             <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>How long should I study for DP-900?</summary>
-          <div class="faq__answer">
-            <p>Most candidates with prior IT experience pass after one to two weeks of focused revision. If cloud computing is genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>DP-900 vs DP-300 — which should I take first?</summary>
-          <div class="faq__answer">
-            <p>DP-900 first if databases aren't already your day job. DP-900 teaches you the data vocabulary (relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options) without expecting hands-on T-SQL. DP-300 is the role-based Database Administrator Associate exam — it expects you to manage Azure SQL workloads in production, write queries, and configure HA/DR. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is DP-900 worth taking if I'm not technical?</summary>
+          <summary>Is DP-900 worth sitting if I'm not a developer or DBA?</summary>
           <div class="faq__answer">
             <p>Yes — Microsoft positions DP-900 for both technical and non-technical candidates. Data analysts about to step into Power BI work, software engineers crossing into a data role, and product managers responsible for analytics architecture all sit DP-900. The exam doesn't ask you to write SQL queries. It asks you to recognise scenarios — "which Azure SQL service for this workload?" or "which storage tier for this access pattern?" — and pick the correct option.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for DP-900 prep?</summary>
+          <summary>Can I try Azure Mastery's DP-900 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of DP-900 questions so you can try every feature. The full bank of 346 DP-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does DP-900 practice work offline?</summary>
+          <summary>Can I revise for DP-900 with no internet connection?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there a DP-900 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

@@ -186,34 +186,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the AB-900 exam cost?",
+            "name": "Which admin centre owns a given object — is that a recurring AB-900 trap?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AB-900 is a Fundamentals-tier exam. The voucher is USD $99 in the United States; in the UK it's typically around £75. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events for Fundamentals certifications, so check your Microsoft Learn profile for active offers before booking. Fundamentals certifications do not expire, so there is no annual renewal cost."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the AB-900 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. AB-900, like other Microsoft Fundamentals certifications (AZ-900, AI-901, SC-900, DP-900), does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate and Specialty certifications which require annual renewal on Microsoft Learn."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the AB-900 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for AB-900?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates pass AB-900 after two to four weeks of focused study, assuming basic Microsoft 365 admin familiarity. If Microsoft 365 admin centres and Microsoft Entra are new to you, plan for six weeks — the exam expects you to recognise admin-centre objects (Exchange, SharePoint, Teams, M365), Purview surfaces (Information Protection, DLP, Insider Risk, DSPM for AI), and Defender XDR features. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher."
+              "text": "Yes. AB-900 frequently gives you an object — a mailbox setting, a Teams policy, a SharePoint site — and expects you to know which admin centre (Exchange, Teams, SharePoint, or the Microsoft 365 admin centre itself) actually owns the control for it, rather than treating the centres as interchangeable. Azure Mastery's Answer Coach names the specific centre a wrong pick would have sent you to instead."
             }
           },
           {
@@ -226,6 +202,46 @@
           },
           {
             "@type": "Question",
+            "name": "What question formats should I expect on AB-900?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's AB-900 bank runs the same spread: mostly single-select items, a meaningful slice of scenario-based and yes/no questions, and a smaller mix of multi-select, drag-to-match, hot-area, drag-and-drop, dropdown-select, and case-study formats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the AB-900 exam fee, and does it vary by region?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AB-900 is a Fundamentals-tier exam. The voucher is USD $99 in the United States; in the UK it's typically around £75. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events for Fundamentals certifications, so check your Microsoft Learn profile for active offers before booking. Fundamentals certifications do not expire, so there is no annual renewal cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Once earned, does an AB-900 credential ever lapse?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. AB-900, like other Microsoft Fundamentals certifications (AZ-900, AI-901, SC-900, DP-900), does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate and Specialty certifications which require annual renewal on Microsoft Learn."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "DSPM for AI vs standard DLP — how does AB-900 tell them apart?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AB-900 tests whether you know DSPM for AI is scoped specifically to Copilot and agent interactions — flagging oversharing risk and sensitive-data exposure in prompts and grounding data — while standard Data Loss Prevention policies govern data movement across email, Teams, and file storage generally. Picking the AI-specific tool for a plain document-sharing scenario, or vice versa, is the exact mix-up Answer Coach is built to catch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I failed AB-900 — how soon can I book a retake?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "AB-900 vs AB-731 — what's the difference?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -234,7 +250,7 @@
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for AB-900 prep?",
+            "name": "Can I try Azure Mastery's AB-900 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -242,18 +258,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does AB-900 practice work offline?",
+            "name": "Can I revise AB-900 offline?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an AB-900 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -596,10 +604,10 @@
         <strong>Knowledge decay tracking</strong> matters even for a Fundamentals exam — Microsoft 365 admin centres and Purview surfaces are easy to confuse if you only study them once. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 35–45-question set drawn from original practice questions, weighted by domain percentages from the July 2026 outline, with the 45-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        Building toward a booking, you can also run an <strong>exam-style sitting</strong>: 35–45 original questions pulled from Azure Mastery's own bank, weighted to the July 2026 outline's domain split, a 45-minute clock ticking down, and once you submit an answer there's no going back — deliberately closer to how AB-900 itself will feel than an untimed drill.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. For AB-900 it's built to catch the exam's favourite pairs — which admin centre owns a given object, and DSPM for AI vs standard DLP — with the specific distinction spelled out, not just "wrong answer". Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        AB-900 keeps steering candidates toward the same two mix-ups: which admin centre actually owns a given object, and DSPM for AI vs standard DLP. <strong>Answer Coach</strong> is where those get resolved — miss one and it doesn't just show the correct pick, it explains the boundary you crossed and the rule to apply the next time a similar scenario appears. Read the explanation the moment you submit, or wait and clear a whole session's misses in one pass; the note stays with the question either way. Every explanation starts as authored guidance, and on supported hardware it can be re-worded on-device once grounding checks pass.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -759,27 +767,9 @@
       <h2 class="display-small section-title">AB-900 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the AB-900 exam cost?</summary>
+          <summary>Which admin centre owns a given object — is that a recurring AB-900 trap?</summary>
           <div class="faq__answer">
-            <p>AB-900 is a Fundamentals-tier exam. The voucher is USD $99 in the United States; in the UK it's typically around £75. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events for Fundamentals certifications, so check your Microsoft Learn profile for active offers before booking. Fundamentals certifications do not expire, so there is no annual renewal cost.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the AB-900 certification expire?</summary>
-          <div class="faq__answer">
-            <p>No. AB-900, like other Microsoft Fundamentals certifications (<a href="/exams/az-900/">AZ-900</a>, <a href="/exams/ai-901/">AI-901</a>, <a href="/exams/sc-900/">SC-900</a>, <a href="/exams/dp-900/">DP-900</a>), does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate and Specialty certifications which require annual renewal on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the AB-900 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for AB-900?</summary>
-          <div class="faq__answer">
-            <p>Most candidates pass AB-900 after two to four weeks of focused study, assuming basic Microsoft 365 admin familiarity. If Microsoft 365 admin centres and Microsoft Entra are new to you, plan for six weeks — the exam expects you to recognise admin-centre objects (Exchange, SharePoint, Teams, M365), Purview surfaces (Information Protection, DLP, Insider Risk, DSPM for AI), and Defender XDR features. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher.</p>
+            <p>Yes. AB-900 frequently gives you an object — a mailbox setting, a Teams policy, a SharePoint site — and expects you to know which admin centre (Exchange, Teams, SharePoint, or the Microsoft 365 admin centre itself) actually owns the control for it, rather than treating the centres as interchangeable. Azure Mastery's Answer Coach names the specific centre a wrong pick would have sent you to instead.</p>
           </div>
         </details>
         <details class="faq">
@@ -789,27 +779,51 @@
           </div>
         </details>
         <details class="faq">
+          <summary>What question formats should I expect on AB-900?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's AB-900 bank runs the same spread: mostly single-select items, a meaningful slice of scenario-based and yes/no questions, and a smaller mix of multi-select, drag-to-match, hot-area, drag-and-drop, dropdown-select, and case-study formats.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the AB-900 exam fee, and does it vary by region?</summary>
+          <div class="faq__answer">
+            <p>AB-900 is a Fundamentals-tier exam. The voucher is USD $99 in the United States; in the UK it's typically around £75. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events for Fundamentals certifications, so check your Microsoft Learn profile for active offers before booking. Fundamentals certifications do not expire, so there is no annual renewal cost.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Once earned, does an AB-900 credential ever lapse?</summary>
+          <div class="faq__answer">
+            <p>No. AB-900, like other Microsoft Fundamentals certifications (<a href="/exams/az-900/">AZ-900</a>, <a href="/exams/ai-901/">AI-901</a>, <a href="/exams/sc-900/">SC-900</a>, <a href="/exams/dp-900/">DP-900</a>), does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate and Specialty certifications which require annual renewal on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>DSPM for AI vs standard DLP — how does AB-900 tell them apart?</summary>
+          <div class="faq__answer">
+            <p>AB-900 tests whether you know DSPM for AI is scoped specifically to Copilot and agent interactions — flagging oversharing risk and sensitive-data exposure in prompts and grounding data — while standard Data Loss Prevention policies govern data movement across email, Teams, and file storage generally. Picking the AI-specific tool for a plain document-sharing scenario, or vice versa, is the exact mix-up Answer Coach is built to catch.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I failed AB-900 — how soon can I book a retake?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics.</p>
+          </div>
+        </details>
+        <details class="faq">
           <summary>AB-900 vs <a href="/exams/ab-731/">AB-731</a> — what's the difference?</summary>
           <div class="faq__answer">
             <p>Different altitudes. AB-900 is the hands-on-governance Fundamentals cert: it expects you to identify Microsoft 365 admin-centre objects, Purview governance surfaces, and day-to-day Copilot administration controls (licensing, usage analytics, agent approval flow). <a href="/exams/ab-731/">AB-731</a> (AI Transformation Leader) is an Associate-tier strategy cert — it expects you to reason about organisation-wide AI adoption, Microsoft Foundry, and responsible AI at a leadership level, not configure individual admin centres. AB-900 administers what's already rolled out; AB-731 plans the rollout and the governance strategy behind it. IT admins usually want AB-900 first; those setting AI strategy across a team or organisation are better served starting with AB-731.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for AB-900 prep?</summary>
+          <summary>Can I try Azure Mastery's AB-900 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does AB-900 practice work offline?</summary>
+          <summary>Can I revise AB-900 offline?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there an AB-900 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

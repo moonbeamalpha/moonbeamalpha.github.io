@@ -187,34 +187,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the SC-900 exam cost?",
+            "name": "Which Defender product owns which surface — does SC-900 test that?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The SC-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the SC-900 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-901, SC-900, MS-900, and PL-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as SC-200 or SC-300, which require an annual free renewal assessment on Microsoft Learn.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the SC-900 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for SC-900?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates with prior IT experience pass after one to two weeks of focused revision. If security and compliance concepts are genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence."
+              "text": "Yes, repeatedly. SC-900 expects you to place Defender for Endpoint, Defender for Cloud Apps, Defender for Identity, Defender for Office 365, and Defender for Cloud against the surface each one actually protects, not just recall the product names. Azure Mastery's Answer Coach names the specific surface a wrong pick would have left uncovered, rather than only confirming the right product."
             }
           },
           {
@@ -227,6 +203,46 @@
           },
           {
             "@type": "Question",
+            "name": "What question formats come up on SC-900?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-900 bank runs the same spread: mostly single-select items, a meaningful mix of scenario-based and multi-select questions, and a smaller share of drag-to-match, hot-area, yes/no, dropdown-select, case-study, and drag-and-drop formats — so identity-vs-security-vs-compliance reasoning gets tested more than one way."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the SC-900 exam fee, and does it vary by region?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The SC-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Once passed, does an SC-900 certification lapse?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-901, SC-900, MS-900, and PL-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as SC-200 or SC-300, which require an annual free renewal assessment on Microsoft Learn.)"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Purview compliance solutions — what's the recurring SC-900 trap?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Candidates tend to reach for the Purview tool they've heard of rather than the one built for the stated requirement — confusing, say, a data-loss-prevention policy with an information-protection sensitivity label, or a retention policy with an eDiscovery case. SC-900 rewards knowing which compliance job each Purview capability is actually built to do. Answer Coach spells out that distinction whenever you miss one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I need to resit SC-900 — how long is the wait?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Is SC-900 worth taking if I'm not technical?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -235,7 +251,7 @@
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for SC-900 prep?",
+            "name": "Can I try Azure Mastery's SC-900 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The app is free to download and includes a free allowance of SC-900 questions so you can try every feature. The full bank of 397 SC-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
@@ -243,18 +259,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does SC-900 practice work offline?",
+            "name": "Does SC-900 revision work with no signal?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an SC-900 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
             }
           }
         ]
@@ -608,10 +616,10 @@
         <strong>Knowledge decay tracking</strong> is the secret weapon for foundational exams like SC-900. The same domain you mastered six weeks ago is the domain you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry — the padlock icon on the Today screen is your "revisit before you forget" cue.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised question set drawn from original practice questions, 45-minute timer, no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        A dedicated <strong>rehearsal mode</strong> reproduces exam-day pressure without touching Microsoft's own questions: original items drawn from Azure Mastery's SC-900 bank, weighted to the published domain bands, a running 45-minute clock, and a one-way path through the set — once you've answered, you move on, exactly as the real booking works.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. For SC-900 it's built to catch the exam's favourite pairs — authentication vs authorization, and which Defender product covers a given surface — with the specific distinction spelled out, not just "wrong answer". Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        SC-900's four domains sit on a shared vocabulary, which is exactly where candidates blur terms that sound alike but mean different things. <strong>Answer Coach</strong> exists for that moment: get a question wrong and it writes a private note naming the precise confusion — authentication vs authorization, or which Defender product actually owns a given surface — rather than just confirming which option Microsoft wanted. Review notes question-by-question as you go, or leave them all until a session ends and work back through the misses together; everything you've read stays attached to that question. Every note starts from an authored rationale, and eligible devices can additionally re-word one on-device once grounding checks confirm it's safe.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -769,27 +777,9 @@
       <h2 class="display-small section-title">SC-900 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the SC-900 exam cost?</summary>
+          <summary>Which Defender product owns which surface — does SC-900 test that?</summary>
           <div class="faq__answer">
-            <p>The SC-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the SC-900 certification expire?</summary>
-          <div class="faq__answer">
-            <p>No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-901, SC-900, MS-900, and PL-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as SC-200 or SC-300, which require an annual free renewal assessment on Microsoft Learn.)</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the SC-900 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for SC-900?</summary>
-          <div class="faq__answer">
-            <p>Most candidates with prior IT experience pass after one to two weeks of focused revision. If security and compliance concepts are genuinely new to you, plan for three to four weeks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
+            <p>Yes, repeatedly. SC-900 expects you to place Defender for Endpoint, Defender for Cloud Apps, Defender for Identity, Defender for Office 365, and Defender for Cloud against the surface each one actually protects, not just recall the product names. Azure Mastery's Answer Coach names the specific surface a wrong pick would have left uncovered, rather than only confirming the right product.</p>
           </div>
         </details>
         <details class="faq">
@@ -799,27 +789,51 @@
           </div>
         </details>
         <details class="faq">
+          <summary>What question formats come up on SC-900?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's SC-900 bank runs the same spread: mostly single-select items, a meaningful mix of scenario-based and multi-select questions, and a smaller share of drag-to-match, hot-area, yes/no, dropdown-select, case-study, and drag-and-drop formats — so identity-vs-security-vs-compliance reasoning gets tested more than one way.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the SC-900 exam fee, and does it vary by region?</summary>
+          <div class="faq__answer">
+            <p>The SC-900 voucher is USD $99 in the United States. Pricing varies by region — in the UK it's typically around £77. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Once passed, does an SC-900 certification lapse?</summary>
+          <div class="faq__answer">
+            <p>No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-901, SC-900, MS-900, and PL-900 — do not expire. Once you pass, the certification is yours for life. (This is different from Associate and Expert certifications such as SC-200 or SC-300, which require an annual free renewal assessment on Microsoft Learn.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Purview compliance solutions — what's the recurring SC-900 trap?</summary>
+          <div class="faq__answer">
+            <p>Candidates tend to reach for the Purview tool they've heard of rather than the one built for the stated requirement — confusing, say, a data-loss-prevention policy with an information-protection sensitivity label, or a retention policy with an eDiscovery case. SC-900 rewards knowing which compliance job each Purview capability is actually built to do. Answer Coach spells out that distinction whenever you miss one.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I need to resit SC-900 — how long is the wait?</summary>
+          <div class="faq__answer">
+            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+          </div>
+        </details>
+        <details class="faq">
           <summary>Is SC-900 worth taking if I'm not technical?</summary>
           <div class="faq__answer">
             <p>Yes — Microsoft positions SC-900 for both technical and non-technical candidates. Business stakeholders evaluating Microsoft security procurement, IT generalists adjacent to security, and students entering the field all sit SC-900. The exam doesn't ask you to configure Conditional Access or write KQL. It asks you to recognise scenarios — "which Microsoft Defender product covers this surface?" or "which Purview tool addresses this compliance requirement?" — and pick the correct option.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for SC-900 prep?</summary>
+          <summary>Can I try Azure Mastery's SC-900 bank before paying?</summary>
           <div class="faq__answer">
             <p>The app is free to download and includes a free allowance of SC-900 questions so you can try every feature. The full bank of 397 SC-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does SC-900 practice work offline?</summary>
+          <summary>Does SC-900 revision work with no signal?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there an SC-900 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

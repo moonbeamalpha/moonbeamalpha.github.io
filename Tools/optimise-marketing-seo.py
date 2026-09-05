@@ -59,6 +59,11 @@ SEO_UPDATED_OVERRIDES = {
     "SC-100": "2026-09-05",
     "SC-200": "2026-09-05",
     "SC-300": "2026-09-05",
+    # Wave-2a de-templating pass (data cluster).
+    "DP-300": "2026-09-05",
+    "DP-700": "2026-09-05",
+    "DP-750": "2026-09-05",
+    "DP-800": "2026-09-05",
 }
 RETIRED_EXAMS = {
     "AI-900": {

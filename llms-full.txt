@@ -15,7 +15,7 @@ Last updated: 2026-08-09
 - [About Azure Mastery](https://azuremastery.app/about/): Who publishes the app, what it does, and how it's built.
 - [How we write and verify practice questions](https://azuremastery.app/how-we-write-questions/): How questions are written against Microsoft's published skills outlines, checked on every change, and watched weekly for drift.
 - [How Exam IQ predicts your score](https://azuremastery.app/how-exam-iq-works/): How the on-device Exam IQ engine predicts a certification exam score from your practice record with an on-device CoreML model.
-- [Retired Microsoft exams and what replaced them](https://azuremastery.app/exams/retired/): The five retired and retiring exams (AI-900, AI-102, DP-100, AZ-204, AZ-500), when each retired, and its current successor exam.
+- [Retired Microsoft exams and what replaced them](https://azuremastery.app/exams/retired/): The five retired exams (AI-900, AI-102, DP-100, AZ-204, AZ-500), when each retired, and its current successor exam.
 - [Support](https://azuremastery.app/apps/AzureMastery/support.html): User support, contact, and FAQ.
 - [Privacy Policy](https://azuremastery.app/apps/AzureMastery/privacy.html): Data handling — none collected; everything runs on-device.
 - [Terms of Use](https://azuremastery.app/apps/AzureMastery/terms.html): Standard EULA for in-app purchases.
@@ -36,7 +36,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 467 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 OR AZ-204. Skills outline updated 24 April 2026.
 
-- [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Exam retires 31 August 2026** — successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
+- [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Microsoft retired AZ-500 on 31 August 2026** — it can no longer be scheduled; the successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
 - [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 569 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
 
@@ -91,7 +91,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 - [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 374 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills outline updated 16 April 2026.
 
 - [SC-300 — Microsoft Identity and Access Administrator](https://azuremastery.app/exams/sc-300/): 428 in-app practice questions. Associate-tier identity admin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates implementing identities in Microsoft Entra ID, implementing authentication and access management (conditional access, MFA, PIM, passwordless), implementing access management for apps, and planning/implementing identity governance. Skills outline updated 27 April 2026.
-- [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 432 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The successor to AZ-500 (which retires 31 August 2026); beta from May 2026, exam expected July 2026. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Skills outline published May 2026.
+- [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 432 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The successor to AZ-500 (which Microsoft retired on 31 August 2026); beta from May 2026, exam expected July 2026. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Skills outline published May 2026.
 
 ### Power Platform (2)
 
@@ -669,7 +669,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-400 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-500/ — AZ-500 Retirement & SC-500 Next Step | Azure Mastery
+## /exams/az-500/ — AZ-500 Retired Exam & SC-500 Next Step | Azure Mastery
 Page last modified: 2026-08-09
 Exam domains:
   - Secure identity and access (15–20%)
@@ -677,13 +677,13 @@ Exam domains:
   - Secure compute, storage, and databases (20–25%)
   - Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel (30–35%)
 Q: How much does the AZ-500 exam cost?
-A: The AZ-500 voucher is USD $165 in the United States, with regional pricing. AZ-500 retires on 31 August 2026, so only book it if you can prepare and sit before that date; candidates starting a longer study plan should use SC-500, the current Cloud and AI Security Engineer exam.
+A: The AZ-500 voucher was USD $165 in the United States, with regional pricing. AZ-500 was retired by Microsoft on 31 August 2026 and can no longer be booked; candidates should sit SC-500, the current Cloud and AI Security Engineer exam, instead.
 Q: Does the AZ-500 certification expire?
-A: AZ-500 and the Azure Security Engineer Associate certification retire on 31 August 2026. Microsoft states that renewal assessments are no longer available after a certification retires. If you are starting now and cannot sit AZ-500 before retirement, prepare for SC-500 instead.
+A: AZ-500 and the Azure Security Engineer Associate certification retired on 31 August 2026. Microsoft states that renewal assessments are no longer available after a certification retires; already-earned Azure Security Engineer Associate credentials remain valid on your transcript. If you are starting now, prepare for SC-500 instead.
 Q: What is the AZ-500 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for AZ-500?
-A: If you intend to sit AZ-500 before 31 August 2026, focus on identity and access, platform protection, security operations, and data and application security across Azure. Build hands-on familiarity with Entra, Defender for Cloud, Sentinel, Key Vault, Azure networking, and workload protection. Otherwise start with SC-500, its current successor.
+A: AZ-500 was retired by Microsoft on 31 August 2026 and can no longer be booked, so study SC-500, its current successor, instead. SC-500 keeps the identity and access, platform protection, and security operations core while adding cloud and AI workload security — build hands-on familiarity with Entra, Defender for Cloud, Sentinel, Key Vault, Azure networking, and workload protection either way.
 Q: AZ-500 vs AZ-104 — should I do AZ-104 first?
 A: Microsoft strongly recommends AZ-104 first, and it shows. AZ-500 assumes you already know how Azure compute, networking, and storage work day-to-day — it's the security overlay on top of that knowledge. If you've never deployed a VM or configured a VNet outside of fundamentals, take AZ-104 (Microsoft Azure Administrator) first; you'll save weeks on AZ-500 prep. If you have a year or more of hands-on Azure ops, you can skip AZ-104 and go straight in. Some employers want both anyway.
 Q: AZ-500 vs SC-200 — which next on the security track?
@@ -1017,7 +1017,7 @@ A: Yes — timed practice sessions use original, blueprint-aligned questions, pu
 ## /exams/retired/ — Retired Microsoft Exams & Successors | Azure Mastery
 Page last modified: 2026-09-04
 Q: Can I still book a retired exam?
-A: No — once Microsoft retires an exam, Pearson VUE stops scheduling new sittings for it. AZ-500 is the one exception on this page: it stays bookable until it retires on 31 August 2026.
+A: No — once Microsoft retires an exam, Pearson VUE stops scheduling new sittings for it. All five exams on this page, including AZ-500 (retired 31 August 2026), are now closed to new bookings.
 Q: Does my credential expire when the exam retires?
 A: No. A credential you earned by passing a Microsoft exam stays valid and stays on your Microsoft Learn transcript after the exam itself retires — retirement stops new bookings, it doesn't undo a credential you've already earned.
 Q: Can I renew a credential from a retired exam?
@@ -1043,7 +1043,7 @@ A: The first retake is allowed after 24 hours. Second and third retakes each req
 Q: How long should I study for SC-100?
 A: Most candidates pass SC-100 after six to ten weeks of focused study, assuming an Associate-level prerequisite is already passed. SC-100 is design-oriented, so much of the prep is reading and pattern recognition rather than command memorisation — practice scenario reasoning until you can articulate why each distractor is wrong. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.
 Q: What's the SC-100 prerequisite?
-A: To earn the Cybersecurity Architect Expert credential, Microsoft currently accepts Azure Security Engineer Associate, Security Operations Analyst Associate, or Identity and Access Administrator Associate. You can sit SC-100 without one, but the credential is awarded only after both requirements are met. AZ-500 is the retiring exam tied to Azure Security Engineer Associate; Microsoft has not yet listed SC-500 as an accepted replacement prerequisite.
+A: To earn the Cybersecurity Architect Expert credential, Microsoft currently accepts Azure Security Engineer Associate, Security Operations Analyst Associate, or Identity and Access Administrator Associate. You can sit SC-100 without one, but the credential is awarded only after both requirements are met. AZ-500 was the exam tied to Azure Security Engineer Associate before Microsoft retired it on 31 August 2026; Microsoft has not yet listed SC-500 as an accepted replacement prerequisite.
 Q: SC-100 vs AZ-305 — which next for an architect?
 A: Different architectural lenses. SC-100 is the security architect cert — design Zero Trust, ransomware resilience, SecOps strategy, identity governance. AZ-305 is the solutions architect cert — design data, infrastructure, business continuity, and identity/governance/monitoring. The two overlap on identity and governance design, but SC-100 goes much deeper on security and AZ-305 covers a broader Azure surface. Many senior architects hold both.
 Q: Is Azure Mastery free for SC-100 prep?
@@ -1112,7 +1112,7 @@ Exam domains:
   - Secure compute (20–25%)
   - Manage and monitor security posture (20–25%)
 Q: Is SC-500 replacing AZ-500?
-A: Yes. SC-500 (Cloud and AI Security Engineer) is the direct successor to AZ-500 (Azure Security Engineer), which retires on 31 August 2026. The SC-500 beta opened in May 2026, with full training and exam expected from July 2026. SC-500 keeps the core Azure security-engineering content of AZ-500 and expands the role to cover securing cloud and AI workloads — including Microsoft Copilot, Microsoft Entra Agent ID, Microsoft Foundry, and Defender for AI. If you haven't yet started AZ-500, most candidates should now prepare for SC-500 instead.
+A: Yes. SC-500 (Cloud and AI Security Engineer) is the direct successor to AZ-500 (Azure Security Engineer), which was retired by Microsoft on 31 August 2026. The SC-500 beta opened in May 2026, with full training and exam available from July 2026. SC-500 keeps the core Azure security-engineering content of AZ-500 and expands the role to cover securing cloud and AI workloads — including Microsoft Copilot, Microsoft Entra Agent ID, Microsoft Foundry, and Defender for AI. Candidates should now prepare for SC-500 instead of AZ-500.
 Q: How much does the SC-500 exam cost?
 A: The SC-500 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-500 is an Associate certification and requires annual renewal (free, online), so factor that into long-term cost planning.
 Q: Does the SC-500 certification expire?

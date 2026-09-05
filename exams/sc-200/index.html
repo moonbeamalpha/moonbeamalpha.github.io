@@ -234,6 +234,14 @@
           },
           {
             "@type": "Question",
+            "name": "Do I need to know KQL before starting SC-200?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not on day one, but plan to learn it early — threat hunting is 20–25% of the exam and Kusto Query Language shows up across the other two domains too, in custom detection rules and advanced-hunting queries. Start with reading and modifying existing KQL (joins, parse operators, time windows) before writing queries from scratch; the exam tests whether you can pick the right table and interpret a result more than raw syntax recall."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Is Azure Mastery free for SC-200 prep?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -262,7 +270,7 @@
         "@type": "HowTo",
         "@id": "https://azuremastery.app/exams/sc-200/#study-plan",
         "name": "How to study for SC-200 (Microsoft Security Operations Analyst) in 6 weeks",
-        "description": "A six-week study plan mapped to the SC-200 skills outline (April 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
+        "description": "A six-week study plan mapped to the SC-200 skills outline (28 July 2026), Azure Mastery's adaptive study plan, and the in-app exam simulator.",
         "totalTime": "P42D",
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
@@ -331,6 +339,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -450,10 +459,10 @@
         SC-200 is <strong>hands-on and KQL-aware</strong>. It validates that you can configure and manage <em>Microsoft Sentinel</em> (workspaces, data connectors, analytics rules, watchlists, automation, hunting), investigate incidents end-to-end across <em>Microsoft Defender XDR</em> (Defender for Endpoint, Identity, Office 365, Cloud Apps), use <em>Microsoft Defender for Cloud</em> for posture and workload protection, and write KQL queries to hunt threats and build custom detections. Expect scenario questions that show a KQL snippet, an alert payload, or an incident graph and ask what you'd do next.
       </p>
       <p>
-        Microsoft updated the SC-200 skills outline on <strong>16 April 2026</strong>. Every question in Azure Mastery's SC-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">learn.microsoft.com</a>.
+        Microsoft updated the SC-200 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="SC-200 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
@@ -464,10 +473,10 @@
 
     <!-- SC-200 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 28 July 2026</p>
       <h2 class="display-small section-title">SC-200 exam objectives</h2>
       <p class="section-lede">
-        Three domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Three domains, with weights set by Microsoft's <strong>28 July 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -486,37 +495,86 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Manage a security operations environment<span class="domain__weight">40–45%</span></h3>
+          <h3>Manage a security operations environment<span class="domain__weight">Published weight 40–45%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc200-ops">162</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore SecOps topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure automation for Microsoft Defender XDR and Microsoft Sentinel</li>
+                <li>Configure the Microsoft Sentinel SIEM and platform</li>
+                <li>Ingest data into the Microsoft Sentinel SIEM and platform</li>
+                <li>Configure detections</li>
+              </ul>
               <p>
-                The largest domain by far. Configure <em>Microsoft Sentinel</em> end-to-end — workspaces, data connectors (Azure activity, Microsoft 365, Defender XDR, third-party CEF/Syslog), log retention and table tiers, RBAC for Sentinel and Defender XDR. Build analytics rules (scheduled, NRT, Microsoft incident creation, anomaly), watchlists, threat-intelligence integration, and automation rules with Logic App playbooks. Configure <em>Microsoft Defender for Cloud</em> — Secure Score, regulatory compliance, workload protection plans (Servers, App Service, Storage, SQL, Containers), JIT VM access, recommendations and exemptions. Around 16–27 questions per sitting.
+                The largest domain by far, and the one that decides whether a SOC actually sees its own environment. Automation objectives cover email and alert notifications, Defender for Endpoint advanced features and ASR rules, automated investigation and attack disruption, and Sentinel automation rules and playbooks. Platform objectives cover Sentinel roles, data-retention tiers across Analytics/Data lake/XDR, workbooks, and SOC optimisation. Ingestion objectives pick the right connector and collection method — Windows Security Events via AMA or WEF, Syslog/CEF via AMA, Azure Policy diagnostic settings — while detection objectives build custom rules and analytics against the MITRE ATT&CK matrix.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Respond to security incidents<span class="domain__weight">35–40%</span></h3>
+          <h3>Respond to security incidents<span class="domain__weight">Published weight 35–40%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc200-incident">132</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Incidents topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Respond to alerts and incidents in Microsoft Defender XDR</li>
+                <li>Respond to alerts and incidents in Microsoft Defender for Endpoint</li>
+                <li>Investigate Microsoft 365 activities to identify threats</li>
+              </ul>
               <p>
-                The Defender XDR investigation surface. Triage and investigate incidents using <em>Microsoft Defender for Endpoint</em> (live response, automated investigation, response actions, device groups), <em>Microsoft Defender for Identity</em> (lateral movement, golden ticket, identity scoring), <em>Microsoft Defender for Office 365</em> (anti-phishing, ZAP, attack-simulation training), and <em>Microsoft Defender for Cloud Apps</em> (CASB, anomaly detection, governance actions). Use the Defender XDR attack-story view and evidence graph to follow the kill chain. Around 14–24 questions.
+                The Defender XDR investigation surface, and Microsoft's newest ground here is agentic. Defender XDR objectives cover remediating threats across Office 365, Purview, Defender for Cloud, Cloud Apps, Entra ID identities, and Defender for Identity, plus investigating complex multi-stage and lateral-movement attacks — increasingly with agentic AI including embedded Microsoft Security Copilot, and case management to track it all. Defender for Endpoint objectives narrow to device timelines, live response, evidence and entity investigation, and automatic-attack-disruption follow-up. Microsoft 365 objectives round it out with Purview Audit, eDiscovery content search, and Microsoft Graph activity logs.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Perform threat hunting<span class="domain__weight">20–25%</span></h3>
+          <h3>Perform threat hunting<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc200-hunt">80</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Hunt topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Detect threats by using Microsoft Defender XDR</li>
+                <li>Detect threats by using the Microsoft Sentinel platform</li>
+              </ul>
               <p>
-                Smallest domain by weight, but the most KQL-heavy. Hunt with <em>Microsoft Sentinel</em> hunting queries and bookmarks, run advanced-hunting queries across Microsoft 365 / Defender XDR tables, build custom detection rules from saved hunts, and run livestream hunting sessions. Map activity to <em>MITRE ATT&amp;CK</em> tactics and techniques, write KQL with joins, parse operators, time windows, and summarise. Around 8–14 questions.
+                Smallest domain by weight, but the most KQL-heavy and the one that separates an analyst who reacts from one who hunts. Defender XDR objectives ask you to pick the right table for a query, write KQL to identify threats, build Advanced Hunting queries, interpret threat analytics, and use hunting graphs and Sentinel Graph to trace blast radius and entity relationships. Sentinel objectives extend the same skill into the platform itself — hunting queries, KQL jobs and Summary rule tables in the Data lake tier, and Notebooks, including connecting to the Sentinel MCP Server for AI-assisted hunting.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where SC-200 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where SC-200 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared SC-200 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Defender for Cloud is posture; Defender XDR is response</h3>
+          <p>Microsoft Defender for Cloud measures and improves resource posture — Secure Score, regulatory compliance, workload protection plans. Microsoft Defender XDR is where you investigate and remediate an active incident across endpoints, identities, email, and cloud apps. A scenario describing an in-progress attack wants a Defender XDR response, even when Defender for Cloud is the tool that first surfaced the alert.</p>
+        </article>
+        <article class="trap">
+          <h3>Analytics rules, automation rules, and playbooks solve different problems</h3>
+          <p>An analytics rule detects a pattern and creates an incident; an automation rule decides what happens to that incident once created (assign, tag, close, or trigger a playbook); a playbook — built on Logic Apps — performs the actual remediation action, like isolating a device or disabling an account. Candidates who reach for "create an analytics rule" when the scenario actually needs automated remediation pick the wrong layer.</p>
+        </article>
+        <article class="trap">
+          <h3>The right data connector depends on the source, not habit</h3>
+          <p>Windows Security Events via AMA, Windows Event Forwarding, and Syslog/CEF via AMA all bring log data into Sentinel, but they suit different sources and topologies — AMA-based collection for modern Azure Monitor Agent deployments, WEF for centralised on-premises forwarding, CEF/Syslog for third-party network and security appliances. Picking the connector that matches the stated source, not the one you've used most, is what the exam tests.</p>
+        </article>
+        <article class="trap">
+          <h3>KQL table choice changes what a query can even see</h3>
+          <p>Advanced Hunting queries only return data from the table they're written against — SecurityAlert, DeviceEvents, IdentityLogonEvents, and dozens more each hold a different slice of telemetry. A candidate who writes correct KQL syntax against the wrong table gets an empty or misleading result; identifying the appropriate table is itself an assessed objective, not a formality before the real question.</p>
+        </article>
+        <article class="trap">
+          <h3>Case management tracks the incident; the graph explains it</h3>
+          <p>Case management in Defender XDR organises tasks, assignment, and status across an incident's lifecycle. The evidence and attack-story graph — and Sentinel Graph for entity relationships — is what explains how the attack actually moved. A scenario asking "how do you trace lateral movement between these two hosts" wants the graph, not a case-management feature.</p>
         </article>
       </div>
     </section>
@@ -526,22 +584,22 @@
       <p class="label-eyebrow section-eyebrow">Designed for SC-200</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass SC-200</h2>
       <p>
-        Azure Mastery ships with <strong>374 SC-200 practice questions</strong>, every one written specifically against the current (April 2026) skills outline. Each question carries a domain tag mapped to the official three domains (manage SecOps environment, respond to incidents, threat hunting), so you always know which area you're being tested on and where your weak spots are clustered. KQL snippets, alert payloads, Sentinel analytics rules, and Defender XDR incident graphs appear throughout — practising blueprint-relevant formats and decisions.
+        Azure Mastery ships with <strong>374 SC-200 practice questions</strong>, every one written specifically against the current (28 July 2026) skills outline. Each question carries a domain tag mapped to the official three domains (manage a security operations environment, respond to incidents, threat hunting), so you always know which area you're being tested on and where your weak spots are clustered. Most items are single-answer multiple choice, with a meaningful mix of scenario-based and multi-select questions in roughly equal measure, plus a smaller set of yes/no, dropdown, hotspot, drag-to-match, and ordering items, and a handful of case studies — KQL snippets, alert payloads, and Sentinel/Defender XDR configuration screens appear throughout.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your SC-200 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Miss a Sentinel analytics-rule scenario? You'll see another rule-type question in the next session. Master "Defender for Endpoint vs Defender for Identity" three sessions running and the engine backs off, surfacing fresh KQL hunting or automation-playbook scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on Manage a security operations environment, the domain Microsoft weights heaviest at 40–45% and the one spanning the most product surface. Miss a Sentinel analytics-rule or automation-rule scenario and the next session surfaces another configuration question from the same domain first; master "Defender for Endpoint vs Defender for Identity" three sessions running and the plan backs off toward incident-response or KQL hunting scenarios instead. It optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> matters more for SC-200 than for foundational exams — three SOC-analyst domains pack a lot of Microsoft Defender / Sentinel / KQL surface into a small bank, and the rule template you mastered three weeks ago is the rule you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the April 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
+        <strong>Blueprint-aligned exam rehearsal</strong> runs a timed, domain-weighted practice session built from original questions, weighted by the three published domain bands, with a 100-minute timer and no jumping back to flag-and-review. It uses original practice content rather than reproducing Microsoft's exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> is where SC-200's near-identical rule types and Defender-product boundaries get untangled. Get a question wrong because you reached for an analytics rule when the scenario needed an automation rule to route an already-detected incident, or wrote correct KQL against the wrong table, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -743,6 +801,12 @@
           <summary>SC-200 vs SC-500 — different security roles?</summary>
           <div class="faq__answer">
             <p>Different angles on Microsoft security. <a href="/exams/sc-500/">SC-500</a> implements security controls across cloud and AI workloads; SC-200 runs detection, investigation, hunting, and incident response in Microsoft Defender XDR and Sentinel. Choose SC-500 for cloud security engineering and SC-200 for security operations.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Do I need to know KQL before starting SC-200?</summary>
+          <div class="faq__answer">
+            <p>Not on day one, but plan to learn it early — threat hunting is 20–25% of the exam and Kusto Query Language shows up across the other two domains too, in custom detection rules and advanced-hunting queries. Start with reading and modifying existing KQL (joins, parse operators, time windows) before writing queries from scratch; the exam tests whether you can pick the right table and interpret a result more than raw syntax recall.</p>
           </div>
         </details>
         <details class="faq">

@@ -218,10 +218,10 @@
           },
           {
             "@type": "Question",
-            "name": "DP-800 vs DP-300 — which should I take?",
+            "name": "DP-800 vs PL-300 — different data roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Different jobs. DP-300 (Microsoft Azure Database Administrator Associate) is for DBAs — running, securing, tuning, and recovering Azure SQL workloads (Azure SQL Database, Managed Instance, SQL on VM) including HA/DR, performance tuning, and automation. DP-800 is for SQL developers bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL. DP-300 administers; DP-800 develops. Many SQL pros take both because AI-enabled apps need both DBA discipline and developer fluency."
+              "text": "They sit on opposite ends of the data stack. DP-800 is for SQL developers bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL on SQL Server, Azure SQL, and Microsoft Fabric. PL-300 (Microsoft Power BI Data Analyst Associate) is for analysts modelling, visualising, and publishing data with Power BI and DAX. Neither is a prerequisite for the other; choose based on whether your role writes the data layer or reports on it."
             }
           },
           {
@@ -331,6 +331,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -453,7 +454,7 @@
         Microsoft published the DP-800 skills outline on <strong>12 March 2026</strong>. Every question in Azure Mastery's DP-800 bank is mapped to the current outline — no questions on retired services or pre-AI SQL-only patterns. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-800" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="DP-800 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 mixed format</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
@@ -464,10 +465,10 @@
 
     <!-- DP-800 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · March 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 12 March 2026</p>
       <h2 class="display-small section-title">DP-800 exam objectives</h2>
       <p class="section-lede">
-        Three domains, with weights set by Microsoft's 12 March 2026 outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-800" rel="noopener">official skills outline</a>; bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on and where your weak spots cluster.
+        Three domains, skills measured as of <strong>12 March 2026</strong> on the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-800" rel="noopener">official skills outline</a>. Every domain below lists Microsoft's own skill groups verbatim, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -486,37 +487,88 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Design and develop database solutions<span class="domain__weight">35–40%</span></h3>
+          <h3>Design and develop database solutions<span class="domain__weight">Published weight 35–40%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp800-design">138</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Design topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design and implement database objects</li>
+                <li>Implement programmability objects</li>
+                <li>Write advanced T-SQL code</li>
+                <li>Design and implement SQL solutions by using AI-assisted tools</li>
+              </ul>
               <p>
-                The schema and code foundation. Tables and indexes — data types, sizing, column store, in-memory (memory-optimized), temporal, ledger, external (PolyBase / Azure SQL external), and graph (node/edge). JSON columns and indexes, computed JSON columns. Constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, DEFAULT), SEQUENCES, partitioning. Programmability — views (regular and indexed), scalar and table-valued functions, stored procedures, triggers (INSTEAD OF vs AFTER, DML vs DDL). Advanced T-SQL — CTEs (recursive and non-recursive), window functions, JSON_OBJECT/OPENJSON/JSON_MODIFY, regex (REGEXP_LIKE/REPLACE/SUBSTR/INSTR), fuzzy matching (EDIT_DISTANCE, JARO_WINKLER_DISTANCE), graph MATCH queries, correlated queries, TRY/CATCH error handling. AI-assisted development — GitHub Copilot, Microsoft Copilot in Fabric, Model Context Protocol (MCP) tool configuration, Copilot instruction files, and the security impact of each. Around 14–20 questions per sitting.
+                The schema and code foundation. Candidates design tables and specialised table types — column store, in-memory, temporal, ledger, external, and graph — plus JSON columns, constraints, sequences, and partitioning, then implement programmability objects (views, scalar and table-valued functions, stored procedures, triggers) and know when each is an anti-pattern. Advanced T-SQL covers CTEs, window functions, JSON shaping functions, regex and fuzzy-matching functions, graph MATCH queries, correlated queries, and structured error handling. The domain closes with AI-assisted development — configuring GitHub Copilot, Copilot in Fabric, MCP tool options, and Copilot instruction files, and interpreting the security impact of each.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Secure, optimize, and deploy database solutions<span class="domain__weight">35–40%</span></h3>
+          <h3>Secure, optimize, and deploy database solutions<span class="domain__weight">Published weight 35–40%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp800-secure">153</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Secure topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Implement data security and compliance</li>
+                <li>Optimize database performance</li>
+                <li>Implement CI/CD by using SQL Database Projects</li>
+                <li>Integrate SQL solutions with Azure services</li>
+              </ul>
               <p>
-                The production-readiness surface. Security — <em>Always Encrypted</em> with secure enclaves, column-level encryption, <em>Dynamic Data Masking</em>, <em>Row-Level Security (RLS)</em>, object-level permissions, auditing, passwordless access via <em>Managed Identity</em>, key management with <em>Azure Key Vault</em>. Performance — DMVs, <em>Query Store</em>, Query Performance Insight, execution-plan analysis, isolation-level trade-offs for the workload. Deployment — <em>SQL Database Projects</em> for CI/CD on GitHub, schema-drift detection, secrets management, branching policies, reference/static data in source control. Integration — <em>Data API Builder (DAB)</em> REST/GraphQL endpoints, Application Insights, Log Analytics, change tracking, change data capture (CDC), change event streaming (CES), Azure Functions / Logic Apps. Around 14–20 questions.
+                The production-readiness surface, and the exam's other heaviest domain. Candidates design encryption (Always Encrypted, column-level, TDE), Dynamic Data Masking, Row-Level Security, object-level permissions, passwordless access via Managed Identity, and auditing. Performance objectives cover service-tier configuration, transaction isolation levels, and diagnosing issues with execution plans, DMVs, and Query Store. The domain closes with SQL Database Projects CI/CD (testing, source control, secrets management, deployment controls) and integrating SQL with Data API Builder, Azure Monitor, and change-tracking mechanisms.
               </p>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement AI capabilities in database solutions<span class="domain__weight">25–30%</span></h3>
+          <h3>Implement AI capabilities in database solutions<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp800-ai">102</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore AI topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Design and implement models and embeddings</li>
+                <li>Design and implement intelligent search</li>
+                <li>Design and implement retrieval-augmented generation (RAG)</li>
+              </ul>
               <p>
-                The AI-in-the-data-tier story. Register external AI models from SQL. Generate and maintain embeddings; design chunking strategies that preserve semantic boundaries. Build <em>vector indexes</em> for nearest-neighbour search, choose between full-text, semantic-vector, and hybrid search (including <em>reciprocal rank fusion</em>) for the workload. Build <em>retrieval-augmented generation (RAG)</em> flows using <code>sp_invoke_external_rest_endpoint</code> — JSON shaping for language-model input, structured-output parsing on the way back. Decide where the AI primitive belongs (SQL vs Azure AI Search vs application layer) given latency, governance, and cost. Around 10–18 questions.
+                The AI-in-the-data-tier story, and the domain most candidates under-revise despite its real weight. Candidates evaluate and register external models, choose an embedding maintenance method, decide which columns to embed, and design chunking strategies. Intelligent-search objectives cover choosing between full-text, semantic-vector, and hybrid search, vector data types and indexes, ANN versus ENN trade-offs, and evaluation metrics. The domain closes with RAG: identifying use cases, calling a language model with <code>sp_invoke_external_rest_endpoint</code>, shaping JSON for the request, and parsing the response back out.
               </p>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where DP-800 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where DP-800 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared DP-800 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Dynamic Data Masking hides values; Always Encrypted hides them from the DBA too</h3>
+          <p>Dynamic Data Masking obscures column values in query results for non-privileged users, but a user with sufficient permission — including a DBA — can still see plaintext. Always Encrypted keeps sensitive columns encrypted end-to-end, so even a DBA with full permissions cannot read them. A requirement that "administrators must not see the data" needs Always Encrypted, not masking.</p>
+        </article>
+        <article class="trap">
+          <h3>The vector-search metric has to match how the embeddings were built</h3>
+          <p>Cosine similarity suits normalized embeddings and ignores magnitude; Euclidean distance suits raw, un-normalized vectors where magnitude carries meaning; dot product is fastest when vectors are already normalized. Naming the wrong metric for the embedding pipeline described in a scenario is one of the exam's most common vector-search misses.</p>
+        </article>
+        <article class="trap">
+          <h3>ANN trades recall for latency; ENN doesn't</h3>
+          <p>Approximate nearest neighbour (ANN) search returns fast results that are usually, not always, the true nearest matches — the right choice when latency matters more than perfect recall. Exact nearest neighbour (ENN) guarantees the true nearest matches but costs more compute and time. A scenario demanding guaranteed-correct results over speed wants ENN, not a tuned ANN index.</p>
+        </article>
+        <article class="trap">
+          <h3>Row counts rule out scalar UDFs before you even read the rest of the question</h3>
+          <p>A scalar user-defined function called once per row in a SELECT list re-executes for every row, and at real scale — millions of rows — that becomes the bottleneck. A scenario citing a large row count while proposing a scalar UDF is usually testing whether you'll replace it with a set-based expression or an inline table-valued function instead.</p>
+        </article>
+        <article class="trap">
+          <h3>A RAG flow has a fixed order: retrieve, augment, generate, ground</h3>
+          <p>Retrieve the relevant context first (vector or hybrid search), augment the prompt with it, generate the model's response, then ground the answer by citing the source. Distractors love to skip the retrieve step entirely or swap augment and generate — a scenario describing a language-model call with no retrieval step first is missing the "R" in RAG.</p>
         </article>
       </div>
     </section>
@@ -526,13 +578,13 @@
       <p class="label-eyebrow section-eyebrow">Designed for DP-800</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass DP-800</h2>
       <p>
-        Azure Mastery ships with <strong>393 DP-800 practice questions</strong>, every one written specifically against the current (March 2026) skills outline. Each question carries a domain tag mapped to the official three domains (Design &amp; develop, Secure &amp; optimize &amp; deploy, AI capabilities in SQL), so you always know which area you're being tested on and where your weak spots are clustered. T-SQL snippets — CTEs, window functions, JSON shaping, regex, fuzzy matching, graph MATCH queries, vector index DDL, RAG flow stubs — appear throughout, practising blueprint-relevant formats and decisions.
+        Azure Mastery ships with <strong>393 DP-800 practice questions</strong>, every one written specifically against the current (12 March 2026) skills outline. Each question carries a domain tag mapped to the official three domains (Design &amp; develop, Secure &amp; optimize &amp; deploy, AI capabilities in SQL), so you always know which area you're being tested on and where your weak spots are clustered. The overwhelming majority are single-answer multiple choice, with a real slice of drag-to-match and dropdown-select items, plus a smaller mix of yes/no, drag-and-drop, and hotspot questions — T-SQL snippets, JSON shaping, vector index DDL, and RAG flow stubs appear throughout, so reading code matters as much as recalling a feature name.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your DP-800 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
       </p>
       <p>
-        The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get an Always Encrypted vs Dynamic Data Masking scenario wrong? You'll see another data-protection-choice question in the next session. Master "full-text vs vector vs hybrid search with reciprocal rank fusion" three sessions running and the engine backs off, surfacing fresh JSON_MODIFY or SQL Database Projects scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
+        The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on Design &amp; develop and Secure, optimize &amp; deploy — the two domains Microsoft weights heaviest at 35–40% each, ahead of the smaller AI domain. Get an Always Encrypted vs Dynamic Data Masking scenario wrong? You'll see another data-protection-choice question in the next session. Master "full-text vs vector vs hybrid search with reciprocal rank fusion" three sessions running and the engine backs off, surfacing fresh JSON_MODIFY or SQL Database Projects scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
         <strong>Knowledge decay tracking</strong> matters for DP-800 because the AI domain (25–30%) moves quickly — vector index types, embedding model trade-offs, and RAG patterns evolve faster than classical T-SQL knowledge. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
@@ -541,7 +593,7 @@
         <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the March 2026 outline, with the 100-minute timer running and no jumping back to flag-and-review. It uses original practice content and does not reproduce Microsoft exam questions.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        <strong>Answer Coach</strong> is where DP-800's security and vector-search discriminations get untangled. Pick Dynamic Data Masking when the scenario needed Always Encrypted, or the wrong distance metric for a normalized embedding set, and Answer Coach explains the specific distinction and the rule to apply next time — not just which option was correct. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -735,9 +787,9 @@
           </div>
         </details>
         <details class="faq">
-          <summary>DP-800 vs DP-300 — which should I take?</summary>
+          <summary>DP-800 vs PL-300 — different data roles?</summary>
           <div class="faq__answer">
-            <p>Different jobs. <a href="/exams/dp-300/">DP-300 (Microsoft Azure Database Administrator Associate)</a> is for DBAs — running, securing, tuning, and recovering Azure SQL workloads (Azure SQL Database, Managed Instance, SQL on VM) including HA/DR, performance tuning, and automation. DP-800 is for SQL <em>developers</em> bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL. DP-300 administers; DP-800 develops. Many SQL pros take both because AI-enabled apps need both DBA discipline and developer fluency.</p>
+            <p>They sit on opposite ends of the data stack. DP-800 is for SQL developers bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL on SQL Server, Azure SQL, and Microsoft Fabric. <a href="/exams/pl-300/">PL-300 (Microsoft Power BI Data Analyst Associate)</a> is for analysts modelling, visualising, and publishing data with Power BI and DAX. Neither is a prerequisite for the other; choose based on whether your role writes the data layer or reports on it.</p>
           </div>
         </details>
         <details class="faq">

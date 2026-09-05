@@ -50,6 +50,11 @@ SEO_UPDATED_OVERRIDES = {
     "AI-200": "2026-09-04",
     "AZ-104": "2026-09-04",
     "AZ-900": "2026-09-04",
+    # Wave-2a de-templating pass (fundamentals cluster).
+    "DP-900": "2026-09-05",
+    "PL-900": "2026-09-05",
+    "SC-900": "2026-09-05",
+    "AB-900": "2026-09-05",
 }
 RETIRED_EXAMS = {
     "AI-900": {

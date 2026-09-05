@@ -47,15 +47,14 @@ COUNTS = _COUNTS_DOC["exams"]
 NON_CURRENT = set(_COUNTS_DOC.get("retired") or ())
 SITABLE = {code for code in COUNTS if code not in NON_CURRENT}
 RETIRED = {"AI-900": "30 June 2026", "AI-102": "30 June 2026", "DP-100": "1 June 2026",
-           "AZ-204": "31 July 2026"}
-RETIRING = {
-    "AZ-500": ("31 August 2026", "SC-500"),
-}
+           "AZ-204": "31 July 2026", "AZ-500": "31 August 2026"}
+RETIRING = {}
 SUCCESSOR_ROUTES = {
     "AI-900": "AI-901",
     "AI-102": "AI-103",
     "DP-100": "AI-300",
     "AZ-204": "AI-200",
+    "AZ-500": "SC-500",
     **{code: successor for code, (_, successor) in RETIRING.items()},
 }
 # Every non-current exam must carry retirement page metadata, and nothing else

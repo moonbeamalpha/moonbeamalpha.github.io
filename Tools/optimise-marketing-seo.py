@@ -72,14 +72,13 @@ RETIRED_EXAMS = {
         "replacement": "AI-200",
         "replacement_label": "Microsoft's replacement developer course and current AI cloud route",
     },
-}
-RETIRING_EXAMS = {
     "AZ-500": {
         "date": "31 August 2026",
         "replacement": "SC-500",
         "replacement_label": "Microsoft's Cloud and AI Security Engineer successor",
     },
 }
+RETIRING_EXAMS = {}
 ACTIVE_SEO = {
     "AB-650": {
         "description": (

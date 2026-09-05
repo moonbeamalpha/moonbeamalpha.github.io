@@ -194,10 +194,10 @@ ACTIVE_SEO = {
     "AI-200": {
         "title": 'AI-200 Practice Questions — {count} Qs for AI Developer (2026)',
         "description": (
-            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+            '{count} AI-200 practice questions for Azure AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
         ),
         "social_description": (
-            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+            '{count} AI-200 practice questions for Azure AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
         ),
     },
     "AI-300": {

@@ -44,6 +44,17 @@ and gated in that repo's CI. This repo **does not recompute it** — that is the
 whole point. The site once claimed 35 exams while the app already knew four had
 retired, because each side derived its own totals.
 
+Guides carry counts only in the tool's phrase — `<n> <CODE> practice questions`
+— the same tail `sync-marketing-counts.py` writes on exam pages, so a guide is
+just as re-syncable as a page once it uses that phrasing. A guide covering more
+than one exam in a sentence should go count-free instead ("a full practice bank
+of AZ-104 questions", "each with over 300 exam-style questions" is the pattern
+being retired, not one to copy) rather than invent a second phrase the tool
+does not own. `--check` fails on any other three-digit-or-larger "… questions"
+phrase found in a guide; an exam's own format fact ("40–60 questions", "100
+minutes for 40 to 60 questions") stays legal — "60" never reaches three
+digits, and "100" is a minutes figure, not a questions count.
+
 A snapshot lands in `data/exam-counts.json` so this repo stays re-runnable
 without the app checkout.
 

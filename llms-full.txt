@@ -776,7 +776,7 @@ Q: Is there a DP-100 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-300/ — DP-300 Practice Questions — 405 Qs for Database Admin (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Plan and implement data platform resources (15–20%)
   - Implement a secure environment (20–25%)
@@ -791,8 +791,8 @@ Q: What is the DP-300 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for DP-300?
 A: Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready.
-Q: DP-300 vs DP-900 — which should I take first?
-A: DP-900 first if databases aren't already your day job. DP-900 (Microsoft Azure Data Fundamentals) teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.
+Q: DP-300 vs DP-700 — different data roles?
+A: They sit on different sides of the data platform. DP-300 is for administering relational Azure SQL workloads in production — deployment, security, performance tuning, automation, and HA/DR. DP-700 is for engineering analytics solutions end to end in Microsoft Fabric — ingesting, transforming, securing, and optimizing data with SQL, PySpark, and KQL across Lakehouse, Warehouse, and Eventhouse. Neither is a prerequisite for the other; choose based on whether your day job is operating Azure SQL or building Fabric pipelines.
 Q: DP-300 vs AI-300 — different data roles?
 A: They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role.
 Q: Is Azure Mastery free for DP-300 prep?
@@ -803,7 +803,7 @@ Q: Is there a DP-300 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Implement and manage an analytics solution (30–35%)
   - Ingest and transform data (30–35%)
@@ -816,8 +816,8 @@ Q: What is the DP-700 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for DP-700?
 A: DP-700 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL, PySpark, or KQL before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
-Q: DP-700 vs DP-600 — which should I take?
-A: Both are Microsoft Fabric associate certifications, and your role should decide. DP-600 (Fabric Analytics Engineer) leans toward analytics — semantic models, Power BI, DAX, and serving data for reporting. DP-700 (Fabric Data Engineer) leans toward data engineering — ingestion and transformation with pipelines, Dataflows Gen2, notebooks and PySpark, real-time streaming with Eventstream and KQL, plus Lakehouse and Warehouse optimisation. If you build the pipelines that load and shape data, take DP-700; if you model and serve it for analytics, take DP-600. Many engineers eventually earn both.
+Q: DP-700 vs DP-750 — different data engineering roles?
+A: Both are Microsoft associate data-engineering certifications, and the platform decides. DP-700 is for engineering analytics solutions end to end in Microsoft Fabric — Lakehouse, Warehouse, Eventhouse, pipelines, and Dataflows Gen2, transforming with SQL, PySpark, and KQL. DP-750 is for building production data-engineering solutions on Azure Databricks — Unity Catalog, Auto Loader, Lakeflow, and Delta Lake. Neither is a prerequisite for the other; choose based on which platform your organisation runs.
 Q: Is DP-700 a technical, hands-on exam?
 A: Yes. DP-700 expects you to reason about real data-engineering work in Microsoft Fabric — writing and debugging T-SQL, PySpark, and KQL; designing full and incremental load patterns; working with Delta tables, OneLake shortcuts, mirroring, and pipelines; and optimising Lakehouse, Warehouse, and Spark performance. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
 Q: Is Azure Mastery free for DP-700 prep?
@@ -828,7 +828,7 @@ Q: Is there a DP-700 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-750/ — DP-750 Practice Questions — 442 Qs for Databricks (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Set up and configure an Azure Databricks environment (15–20%)
   - Secure and govern Unity Catalog objects (15–20%)
@@ -842,8 +842,8 @@ Q: What is the DP-750 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
 Q: How long should I study for DP-750?
 A: DP-750 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL and Python before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data in Azure Databricks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
-Q: DP-750 vs DP-700 — which should I take?
-A: Both are associate-level Microsoft data-engineering certifications, but they target different platforms. DP-750 (Azure Databricks Data Engineer) is for teams building on Azure Databricks — Unity Catalog governance, Lakeflow Jobs and Declarative Pipelines, Delta tables, Spark and Photon tuning, and Databricks Asset Bundles. DP-700 (Fabric Data Engineer) covers the same data-engineering craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream, Lakehouse and Warehouse. Pick the exam that matches your platform: if your organisation runs Azure Databricks, take DP-750; if it standardises on Microsoft Fabric, take DP-700. Many engineers eventually earn both.
+Q: DP-750 vs DP-800 — different data engineering roles?
+A: Both are Microsoft associate certifications for hands-on data work, but the platform and job differ. DP-750 (Azure Databricks Data Engineer) is for teams building production pipelines on Azure Databricks — Unity Catalog governance, Lakeflow Jobs and Declarative Pipelines, Delta tables, Spark and Photon tuning. DP-800 (SQL AI Developer) is for developers building AI-enabled database solutions on SQL Server, Azure SQL, and Fabric — T-SQL, embeddings, vector search, and RAG. Choose DP-750 for the Databricks engineering role, DP-800 for the SQL-plus-AI development role.
 Q: Is DP-750 a technical, hands-on exam?
 A: Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
 Q: Is Azure Mastery free for DP-750 prep?
@@ -854,7 +854,7 @@ Q: Is there a DP-750 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-800/ — DP-800 Practice Questions — 393 Qs for SQL AI Developer (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-05
 Exam domains:
   - Design and develop database solutions (35–40%)
   - Secure, optimize, and deploy database solutions (35–40%)
@@ -867,8 +867,8 @@ Q: What is the DP-800 retake policy if I fail?
 A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design.
 Q: How long should I study for DP-800?
 A: Most candidates pass DP-800 after six to ten weeks of focused study, assuming working T-SQL fluency and basic awareness of embeddings and vector search. If T-SQL is new to you, plan for three months — the exam expects you to write CTEs, window functions, JSON shaping queries, and regex/fuzzy-match patterns from memory, not just describe what they do. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 750 or higher with reasonable confidence.
-Q: DP-800 vs DP-300 — which should I take?
-A: Different jobs. DP-300 (Microsoft Azure Database Administrator Associate) is for DBAs — running, securing, tuning, and recovering Azure SQL workloads (Azure SQL Database, Managed Instance, SQL on VM) including HA/DR, performance tuning, and automation. DP-800 is for SQL developers bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL. DP-300 administers; DP-800 develops. Many SQL pros take both because AI-enabled apps need both DBA discipline and developer fluency.
+Q: DP-800 vs PL-300 — different data roles?
+A: They sit on opposite ends of the data stack. DP-800 is for SQL developers bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL on SQL Server, Azure SQL, and Microsoft Fabric. PL-300 (Microsoft Power BI Data Analyst Associate) is for analysts modelling, visualising, and publishing data with Power BI and DAX. Neither is a prerequisite for the other; choose based on whether your role writes the data layer or reports on it.
 Q: DP-800 vs AI-103 — what's the difference?
 A: Different stacks. AI-103 is for building generative AI solutions and agents with Microsoft Foundry, including model selection, orchestration, tools, knowledge sources, and operational readiness. DP-800 is for SQL developers bringing AI primitives such as embeddings, vector indexes, RAG, and structured outputs directly into SQL Server, Azure SQL, and Microsoft Fabric with T-SQL. AI-103 is application and agent-layer; DP-800 is data-layer.
 Q: Is Azure Mastery free for DP-800 prep?

@@ -651,7 +651,7 @@ Exam domains:
   - Develop a security and compliance plan (10–15%)
   - Implement an instrumentation strategy (5–10%)
 Q: What prerequisite do I need for AZ-400?
-A: Microsoft currently accepts either Azure Administrator Associate (AZ-104) or Azure Developer Associate (AZ-204) alongside AZ-400. Azure Developer Associate retires on 31 July 2026, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page.
+A: Microsoft currently accepts either Azure Administrator Associate (AZ-104) or Azure Developer Associate (AZ-204) alongside AZ-400. AZ-204 retired on 31 July 2026, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page.
 Q: How much does the AZ-400 exam cost?
 A: The AZ-400 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during Microsoft Build or Microsoft Ignite — worth checking your Microsoft Learn profile for active offers. The DevOps Engineer Expert tier also requires annual renewal (free, online via Microsoft Learn) once earned.
 Q: Does the AZ-400 certification expire?

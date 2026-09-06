@@ -499,7 +499,10 @@
         AZ-305 is the single exam required to earn the <strong>Microsoft Certified: Azure Solutions Architect Expert</strong> credential — Microsoft's senior architecture certification for the Azure platform. (The predecessor pair AZ-303 and AZ-304 were retired in March 2022 in favour of a single AZ-305 exam.) The Expert tier sits above the Associate-level <a href="/exams/az-104/">AZ-104</a> and below specialty certs like Cybersecurity Architect (SC-100).
       </p>
       <p>
-        Unlike <a href="/exams/az-104/">AZ-104</a>, AZ-305 doesn't test your ability to <em>configure</em> Azure — it tests your ability to <em>design</em> Azure solutions that satisfy a brief. You'll be given a multi-paragraph scenario (RTO/RPO targets, throughput requirements, compliance constraints, geographic spread) and asked which combination of Azure services best meets it. The exam aligns to the <a href="https://learn.microsoft.com/azure/well-architected/" rel="noopener">Azure Well-Architected Framework</a> and the <a href="https://learn.microsoft.com/azure/cloud-adoption-framework/" rel="noopener">Cloud Adoption Framework for Azure</a> — the same patterns Microsoft expects architects to apply on the job.
+        Unlike <a href="/exams/az-104/">AZ-104</a>, AZ-305 doesn't test your ability to <em>configure</em> Azure — it tests your ability to <em>design</em> solutions that satisfy a brief. You'll be given a multi-paragraph scenario (RTO/RPO targets, throughput requirements, compliance constraints, geographic spread) and asked which combination of Azure services best meets it.
+      </p>
+      <p>
+        The exam aligns to the <a href="https://learn.microsoft.com/azure/well-architected/" rel="noopener">Azure Well-Architected Framework</a> and the <a href="https://learn.microsoft.com/azure/cloud-adoption-framework/" rel="noopener">Cloud Adoption Framework for Azure</a> — the same patterns Microsoft expects architects to apply on the job.
       </p>
       <p>
         Microsoft updated the AZ-305 skills outline on <strong>17 April 2026</strong>. Every question in Azure Mastery's AZ-305 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-305" rel="noopener">learn.microsoft.com</a>.
@@ -519,7 +522,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 17 April 2026</p>
       <h2 class="display-small section-title">AZ-305 exam objectives</h2>
       <p class="section-lede">
-        Four design domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-305" rel="noopener">official skills outline</a>. AZ-305 questions test design judgement — picking the right Azure service for a given requirement — rather than configuration recall. Bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
+        Four design domains, with weights set by Microsoft's April 2026 update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-305" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster. AZ-305 questions test design judgement — picking the right Azure service for a given requirement — rather than configuration recall.
       </p>
       <figure class="exam-family-visual exam-family-visual--azure">
         <div class="exam-family-visual__media">
@@ -568,8 +571,8 @@
                 <li>Design data integration</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests picking the cheapest data service that still clears a stated RTO, RPO, or throughput number.</li>
-                <li>Candidates default to the most feature-rich data service instead of the one that just meets the constraint.</li>
+                <li>Picking the cheapest data service that still clears a stated RTO, RPO, or throughput number is what gets checked here.</li>
+                <li>Defaulting to the most feature-rich data service instead of the one that just meets the constraint is the common slip.</li>
                 <li>Read the numeric requirement first; it usually rules out half the storage options immediately.</li>
               </ul>
             </div>
@@ -606,8 +609,8 @@
                 <li>Design network solutions</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests weighing compute, application-architecture, migration, and network choices against a stated business requirement.</li>
-                <li>Candidates weak in one of the four infrastructure sub-areas feel it here first, since it's the largest domain.</li>
+                <li>Weighing compute, application-architecture, migration, and network choices against a stated business requirement is the focus here.</li>
+                <li>A weak spot in one of the four infrastructure sub-areas shows up here first, since it's the largest domain.</li>
                 <li>Place a migration activity in the Cloud Adoption Framework's assess, migrate, or modernise phase correctly.</li>
               </ul>
             </div>
@@ -644,7 +647,7 @@
           <h3>The Cloud Adoption Framework has named phases, and questions test which one applies</h3>
           <p>Assess, migrate, and modernise are distinct Cloud Adoption Framework phases, not interchangeable labels for the same migration activity.</p>
           <ul>
-            <li>The exam is testing whether you can place a described activity in the correct framework phase.</li>
+            <li>Placing a described activity in the correct framework phase is the actual skill being scored.</li>
             <li>Match the stem's verb, evaluate, move, or improve, to the phase it actually names.</li>
           </ul>
         </article>
@@ -652,7 +655,7 @@
           <h3>Authorising Azure resources and on-premises resources use different tools</h3>
           <p>Azure RBAC and Conditional Access govern Azure resources, while hybrid join or a federation trust governs on-premises access.</p>
           <ul>
-            <li>The exam is testing whether you'd reach for an on-premises tool instead of an Azure-only control.</li>
+            <li>Reaching for the on-premises tool instead of the Azure-only control (or the reverse) is exactly what trips people up.</li>
             <li>Check whether the requirement names Azure resources, on-premises resources, or a hybrid mix before answering.</li>
           </ul>
         </article>

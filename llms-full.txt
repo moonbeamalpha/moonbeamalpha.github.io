@@ -243,29 +243,31 @@ Q: Does AB-100 practice work offline?
 A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
 
 ## /exams/ab-410/ — AB-410 Practice Questions — 424 Qs & Exam Prep (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-06
 Exam domains:
   - Create a foundation for intelligent applications (25–30%)
   - Create intelligent applications (25–30%)
   - Build business application logic and automation (40–45%)
-Q: How much does the AB-410 exam cost?
-A: Microsoft Associate exams typically cost USD $165, but pricing, currency, and taxes vary by country or region. Check the price shown when scheduling AB-410 through Microsoft Learn before purchasing. The certification must be renewed annually through Microsoft's free online renewal process.
-Q: Does the AB-410 certification expire?
-A: Yes. Microsoft Associate certifications including AB-410 expire annually. Renewal is free through a short, unproctored online assessment on Microsoft Learn during the six-month eligibility window before expiration. Microsoft does not promise a fixed question count. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the AB-410 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AB-410?
-A: Allow four to eight weeks of focused study if you already build apps and flows in Microsoft Power Platform. Spend longer if Dataverse modelling, Power Fx, model-driven app design, or AI Builder prompts are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
-Q: AB-410 vs AB-620 — which builder cert?
-A: Different surfaces. AB-410 is the Intelligent Applications Builder cert: you build Power Platform applications — Dataverse data models, model-driven and canvas apps, cloud flows — that consume agents, prompts, and AI models. AB-620 is the AI Agent Builder cert, focused on designing and extending the agents themselves in Microsoft Copilot Studio. AB-410 builds the application around the agent; AB-620 builds the agent. Many makers hold both.
-Q: AB-410 vs PL-900 — which should I take first?
-A: PL-900 first if Microsoft Power Platform is new to you. PL-900 is the Power Platform Fundamentals exam and stays conceptual — what Power Apps, Power Automate and Dataverse are for. AB-410 is the role-based exam where you configure the real artefacts: tables and relationships, forms and views, cloud flows, and AI Hub prompts. Makers new to the platform often use PL-900 as a foundation before AB-410.
-Q: Is Azure Mastery free for AB-410 prep?
-A: The app is free to download and includes a free allowance of AB-410 questions so you can try every feature. The full bank of 424 AB-410 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AB-410 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AB-410 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+Q: Is there a formal prerequisite for AB-410?
+A: No formal prerequisite exam gates AB-410. Microsoft positions it as the successor to PL-200, and the PL-200T00 training course has been replaced by AB-410T00, but that's a training-path note rather than an exam gate — you can book AB-410 directly. If Power Platform concepts are genuinely new to you, PL-900 (Power Platform Fundamentals) is a sensible primer; makers already building apps and flows day to day can go straight in.
+Q: What does the AB-410 exam format actually look like?
+A: Microsoft's general guidance for AB-410 is 40–60 questions, with the exact formats varying by sitting. In Azure Mastery's AB-410 bank, single-answer and scenario-based items carry most of the weight, alongside multi-select, drag-to-match, dropdown, hot-area, and case-study questions built as original practice content — not a copy of Microsoft's live item mix. Timed practice sessions run to the app's own session clock; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.
+Q: AB-410 vs AB-620 — which Power Platform builder credential fits?
+A: Both are Power Platform builder credentials, but they sit on opposite sides of the same solution. AB-410 builds the application — the Dataverse tables, the model-driven or canvas app, the cloud flow — that consumes an agent, a prompt, or an AI model. AB-620 builds that agent itself, inside Microsoft Copilot Studio: its topics, its knowledge sources, its extensions. A maker who owns a full solution end to end often ends up holding both.
+Q: Does AB-410 expect me to build the Copilot Studio agent itself?
+A: No — building or extending the agent is AB-620 territory. AB-410 tests the maker side of that relationship: creating a canvas app that can spin up a Copilot Studio agent, consuming an existing agent or prompt inside a model-driven app, and wiring AI Hub prompts and AI Builder models into apps and flows. If a stem asks you to design the agent's conversation topics, that's the wrong exam for the question.
+Q: What does the AB-410 exam fee cover?
+A: AB-410 costs USD $165 in the United States; Microsoft adjusts pricing by country and currency, so check the figure shown when you schedule through Microsoft Learn. That fee covers one proctored attempt. The Associate certification it unlocks then needs renewing every year, and that renewal is free.
+Q: I didn't pass AB-410 — how soon can I try again?
+A: The first retake is available after 24 hours. A second or third attempt each requires a 14-day wait, and Microsoft caps you at five attempts in any rolling 12-month period. Every attempt, including retakes, needs its own voucher.
+Q: Is the AB-410 credential still valid after a year?
+A: Yes. Associate certifications including AB-410 expire annually, and Microsoft renews them through a short, unproctored online assessment on Microsoft Learn, available during the six-month window before expiry. There's no fixed question count published for that assessment — it's shorter than the original exam, not a repeat of it. (Fundamentals certifications such as AZ-900 don't expire at all.)
+Q: How long should I spend preparing for AB-410?
+A: Four to eight weeks of focused study is typical if you already build apps, flows, and Dataverse tables in Power Platform day to day. Give yourself the longer end of that range if Power Fx, prompt columns, or AI Hub are unfamiliar — the logic-and-automation domain alone carries close to half the exam. Azure Mastery's readiness gauge is a better signal than the calendar for when to actually book.
+Q: Can I try Azure Mastery's AB-410 content before paying?
+A: Yes. The app is free to download and includes a free allowance of AB-410 questions, so you can try every feature before paying. The full AB-410 bank unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: Does AB-410 practice work without a connection?
+A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so a commute or a flight with no signal doesn't cost you a study session. No account is required to start, and study data stays on your device unless you turn on optional, private iCloud sync.
 
 ## /exams/ab-620/ — AB-620 Practice Questions — 387 Qs & Exam Prep (2026)
 Page last modified: 2026-09-04
@@ -295,7 +297,7 @@ Q: Does AB-620 practice work offline?
 A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
 
 ## /exams/ab-650/ — AB-650 Practice Questions — 506 Qs & Exam Prep (2026)
-Page last modified: 2026-08-23
+Page last modified: 2026-09-06
 Exam domains:
   - Configure and manage Microsoft 365 tenants and workloads (20–25%)
   - Govern and secure Microsoft 365 tenants and workloads (40–45%)
@@ -312,39 +314,41 @@ Q: AB-650 vs AB-620 — administer or build?
 A: Different roles over the same agent estate. AB-620 is the AI Agent Builder Associate credential — the maker-role exam for designing, integrating, and testing agents inside Microsoft Copilot Studio. AB-650 is the administrator-role exam: it's about governing whatever agents your organisation ends up with, wherever they were built, across the wider Microsoft 365 tenant — licensing, identity, Defender and Purview protection, the agent registry, and Agent 365 monitoring. A Copilot Studio maker and a Microsoft 365 administrator often sit on the same team; AB-620 and AB-650 map to those two different jobs.
 Q: AB-650 vs AB-900 — do I need the fundamentals exam first?
 A: AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals) is the conceptual on-ramp — it stays at the "what is it and why does it matter" level across core Microsoft 365 objects, data protection concepts, and basic Copilot and agent administration. AB-650 is the associate-level exam built on top of that: it expects you to actually configure the tenant settings, identity policies, and agent governance controls, and to defend the trade-offs between similar-looking options. AB-900 isn't a formal prerequisite for AB-650, but it's a solid foundation if Microsoft 365 administration is new to you.
-Q: AB-650 vs SC-300 — how much identity overlap is there?
-A: Some overlap, different depth. SC-300 (Identity and Access Administrator) goes far deeper into Microsoft Entra identity architecture — hybrid identity, external identities, application integration, and identity governance at a specialist level. AB-650 covers the identity surface a Microsoft 365 administrator actually touches day to day — users, groups, administrative units, Conditional Access, and Privileged Identity Management — plus the newer agent identity model built on Microsoft Entra Agent ID, which SC-300 does not cover. Candidates who own both Microsoft 365 and deep identity architecture often hold both certifications.
+Q: AB-650 vs AB-731 — administrator or transformation leader?
+A: Different jobs entirely, despite both touching Microsoft's AI stack. AB-731 is a business-leadership credential — no hands-on configuration, no code, just the judgement to frame AI opportunities, champion responsible AI, and lead an adoption programme. AB-650 is a hands-on administrator exam: you're actually configuring Conditional Access policies, Purview DLP rules, and the agent registry, not describing them to a steering committee. A programme lead sponsoring a Copilot rollout might sit AB-731; the person implementing that rollout's guardrails sits AB-650.
+Q: What does the AB-650 exam format actually look like?
+A: Microsoft's general guidance for AB-650 is 40–60 questions, with formats that vary by sitting. In Azure Mastery's AB-650 bank, single-answer and scenario-based items carry most of the weight, alongside multi-select, drag-to-match, dropdown, hot-area, and case-study questions built as original practice content — not a copy of Microsoft's live item mix. Timed practice sessions run to the app's own session clock; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.
 Q: Is Azure Mastery free for AB-650 prep?
-A: The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full bank of 506 AB-650 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full AB-650 bank unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-650 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AB-650 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-731/ — AB-731 Practice Questions — 335 Qs for AI Leadership (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-06
 Exam domains:
   - Identify the business value of generative AI solutions (35–40%)
   - Identify benefits, capabilities, and opportunities for Microsoft's AI apps and services (35–40%)
   - Identify an implementation and adoption strategy for Microsoft's AI apps and services (20–25%)
-Q: How much does the AB-731 exam cost?
-A: AB-731 is a Beginner-tier credential. The voucher is USD $99 in the United States; in the UK it's typically around £77. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events, so check your Microsoft Learn profile for active offers before booking. Pricing is subject to change and varies by country/region — see the AB-731 certification page for current local pricing.
-Q: Does the AB-731 certification expire?
-A: No. AB-731 is a Beginner-tier credential and, like other Beginner-tier Microsoft credentials (AI-901, AB-900, SC-900), it does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate, Expert, and Specialty certifications, which require annual renewal on Microsoft Learn.
-Q: What is the AB-731 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-731 retake failures usually come from underestimating the strategy and governance domain — most candidates over-study Copilot product features and under-study ROI framing, licensing models, and adoption frameworks.
-Q: How long should I study for AB-731?
-A: Most business decision-makers pass AB-731 after three to five weeks of focused study, assuming working familiarity with Microsoft 365 and basic generative-AI concepts. AB-731 is a no-code leadership exam — you do not need to build agents — but you do need to articulate ROI, licensing models, responsible-AI principles, and adoption frameworks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.
+Q: Do I need any coding background before AB-731?
+A: No. AB-731 is explicitly a no-code, leadership-level exam — you're not expected to build an agent or write a line of Power Fx. Microsoft does expect working knowledge of Microsoft 365 and a general sense of how generative AI differs from earlier AI approaches. If that's genuinely new territory, AI-901 (Azure AI Fundamentals) is a reasonable warm-up, though it isn't a formal prerequisite.
+Q: What does the AB-731 exam format actually look like?
+A: AB-731's own published guidance is 30–40 questions in mixed formats over a 45-minute session (65 minutes with the seat allowance) — shorter than a typical Associate exam. In Azure Mastery's AB-731 bank, single-answer and scenario-based items carry most of the weight, with multi-select, drag-to-match, and case-study questions built in as original practice content, not a copy of Microsoft's live item mix. Timed sessions run to the app's own clock; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.
 Q: AB-731 vs AB-620 — which is right for me?
 A: Different jobs entirely. AB-731 is the leadership credential — for business decision-makers driving AI transformation across teams: framing ROI, choosing between build/buy/extend, championing responsible AI, and running adoption programmes. AB-620 (AI Agent Builder Associate) is the maker credential — for low-code builders shipping agents in Microsoft Copilot Studio with topics, generative answers, knowledge sources, and channel deployments. Pick AB-731 if your job is to lead change; pick AB-620 if your job is to build. Many programme leads take both.
 Q: AB-731 vs AB-900 — what's the difference?
 A: Different audiences. AB-900 (Microsoft 365 Copilot and Agent Administration Fundamentals) is the IT admin's Fundamentals exam — admin centres, Purview governance, licensing, agent approval flows. AB-731 (AI Transformation Leader) is the business leader's exam — ROI, adoption strategy, responsible AI, build/buy/extend decisions, AI council governance. AB-900 administers Copilot; AB-731 leads the AI transformation. Programme leads sometimes take both for full coverage of admin governance and business strategy.
-Q: Is Azure Mastery free for AB-731 prep?
-A: The app is free to download and includes a free allowance of AB-731 questions so you can try every feature. The full bank of 335 AB-731 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: What does the AB-731 exam fee cover?
+A: AB-731 is a Beginner-tier credential. The voucher is USD $99 in the United States; in the UK it's typically around £77. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events, so check your Microsoft Learn profile for active offers before booking. Pricing is subject to change and varies by country/region — see the AB-731 certification page for current local pricing.
+Q: What is the AB-731 retake policy if I fail?
+A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-731 retake failures usually come from underestimating the strategy and governance domain — most candidates over-study Copilot product features and under-study ROI framing, licensing models, and adoption frameworks.
+Q: Is the AB-731 credential still valid after a year?
+A: Yes, indefinitely. AB-731 is a Beginner-tier credential and, like other Beginner-tier Microsoft credentials (AI-901, AB-900, SC-900), it does not expire. Once earned, the credential is yours permanently — no annual online assessment, unlike Associate, Expert, and Specialty certifications, which do require one on Microsoft Learn.
+Q: How long should I study for AB-731?
+A: Most business decision-makers pass AB-731 after three to five weeks of focused study, assuming working familiarity with Microsoft 365 and basic generative-AI concepts. AB-731 is a no-code leadership exam — you do not need to build agents — but you do need to articulate ROI, licensing models, responsible-AI principles, and adoption frameworks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.
+Q: Can I try Azure Mastery's AB-731 content before paying?
+A: Yes. The app is free to download and includes a free allowance of AB-731 questions so you can try every feature. The full AB-731 bank unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AB-731 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AB-731 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-900/ — AB-900 Practice Questions — 323 Qs for Copilot Admin (2026)
 Page last modified: 2026-09-05
@@ -457,7 +461,7 @@ Q: Is there an AI-200 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-300/ — AI-300 Practice Questions — 362 Qs for ML Ops Engineer (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Design and implement an MLOps infrastructure (15–20%)
   - Implement machine learning model lifecycle and operations (25–30%)
@@ -486,7 +490,7 @@ Q: Is Azure Mastery free to try for AI-300?
 A: The app is free to download and includes a free allowance of AI-300 questions so you can try every feature. The full bank of 362 AI-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 
 ## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Architect Multi-Agent Solutions (15–20%)
   - Develop Multi-Agent Solutions in Azure (30–35%)
@@ -541,7 +545,7 @@ Q: Is there an AI-900 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-901/ — AI-901 Practice Questions — 572 Qs for AI Fundamentals (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Identify AI concepts and capabilities (40–45%)
   - Implement AI solutions by using Microsoft Foundry (55–60%)
@@ -603,18 +607,18 @@ Exam domains:
   - Implement Azure security (15–20%)
   - Monitor, troubleshoot, and optimize Azure solutions (5–10%)
   - Connect to and consume Azure services and third-party services (20–25%)
-Q: When does AZ-204 retire?
-A: AZ-204 retires on 31 July 2026 at 11:59 PM Central Standard Time. Microsoft lists AI-200 courseware as the replacement for AZ-204 courseware, but AI-200 earns a different credential. If you want Azure Developer Associate, sit AZ-204 before retirement; already-earned certifications remain valid afterward.
-Q: How much does the AZ-204 exam cost?
-A: The AZ-204 voucher is USD $165 in the United States, with regional pricing. Only book if you can prepare and pass before 31 July 2026; the exam and Azure Developer Associate certification retire on that date.
+Q: When did AZ-204 retire?
+A: AZ-204 was retired by Microsoft on 31 July 2026 at 11:59 PM Central Standard Time. Microsoft lists AI-200 courseware as the replacement for AZ-204 courseware, but AI-200 earns a different credential. An Azure Developer Associate certification earned before retirement remains valid.
+Q: How much did the AZ-204 exam cost?
+A: AZ-204 can no longer be booked at any price — Microsoft retired it on 31 July 2026. Before retirement the voucher was USD $165 in the United States, with regional pricing; that figure is kept here for reference only.
 Q: Does the AZ-204 certification expire?
-A: The AZ-204 exam and Azure Developer Associate certification retire on 31 July 2026. Microsoft states that renewal assessments are no longer available after a certification retires. Already-earned credentials remain on your transcript, subject to their existing expiration date.
+A: The AZ-204 exam and Azure Developer Associate certification retired on 31 July 2026. Renewal assessments are no longer available for a retired certification. Already-earned credentials remain on your transcript, subject to their existing expiration date.
 Q: What is the AZ-204 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. Plan retakes carefully against the 31 July 2026 retirement — a fail on day 1 plus two 14-day waits eats four weeks.
+A: That retake policy applied while AZ-204 was still bookable. Since the exam retired on 31 July 2026, no further attempts — first sittings or retakes — can be booked at all; a certification earned before that date stands regardless.
 Q: How long should I study for AZ-204?
-A: Most candidates pass AZ-204 after four to six weeks of focused study, assuming professional .NET, Python, or Node experience. If you're new to writing against Azure SDKs (Cosmos DB, Blob, Service Bus, Functions bindings), plan eight to ten weeks. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher with reasonable confidence.
+A: That timeline applied while AZ-204 could still be booked. Now that the exam has retired, this bank is a reference tool rather than exam prep: working developers use it to revisit Azure SDK patterns (Cosmos DB, Blob, Service Bus, Functions bindings) or to compare the retired outline against a current option like AI-200.
 Q: AZ-204 vs AZ-104 — which should I take first?
-A: Take whichever matches your day job. AZ-104 (Microsoft Azure Administrator) is for sysadmins and platform engineers; AZ-204 is for application developers. They cover overlapping infrastructure (App Service, Functions, Storage, Key Vault) but from different angles — AZ-104 asks "how do I configure X in the portal"; AZ-204 asks "how do I call X from the C# / Python SDK". With AZ-204 retiring 31 July 2026, the deadline pressure may push it ahead of AZ-104 in your queue.
+A: AZ-104 (Microsoft Azure Administrator) and AZ-204 covered overlapping infrastructure — App Service, Functions, Storage, Key Vault — from different angles: AZ-104 asked "how do I configure X in the portal", AZ-204 asked "how do I call X from the C# / Python SDK". AZ-204 retired on 31 July 2026, so that choice no longer applies to new candidates; developers now build the same SDK-facing skills through AI-200 or by pairing AZ-104 with hands-on application work.
 Q: Is Azure Mastery free for AZ-204 prep?
 A: The app is free to download and includes a free allowance of AZ-204 questions so you can try every feature. The full bank of 405 AZ-204 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-204 practice work offline?
@@ -661,7 +665,7 @@ Exam domains:
 Q: What's the going rate for an AZ-400 exam attempt?
 A: The AZ-400 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during Microsoft Build or Microsoft Ignite — worth checking your Microsoft Learn profile for active offers. The DevOps Engineer Expert tier also requires annual renewal (free, online via Microsoft Learn) once earned.
 Q: Which exam do I need to have passed before AZ-400?
-A: Microsoft currently accepts either Azure Administrator Associate (AZ-104) or Azure Developer Associate (AZ-204) alongside AZ-400. Azure Developer Associate retires on 31 July 2026, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page.
+A: Azure Developer Associate (AZ-204) retired on 31 July 2026. An Azure Developer Associate credential earned before that date still satisfies the AZ-400 prerequisite, but new candidates now reach it through Azure Administrator Associate (AZ-104) instead.
 Q: Does AZ-400 really test both Azure DevOps and GitHub equally?
 A: Yes, and it's the exam's defining feature. AZ-400 treats Azure Pipelines and GitHub Actions as parallel tracks throughout the build/release pipelines domain, and expects familiarity with both Azure Boards and GitHub Issues, Azure Repos and GitHub repositories, Azure Key Vault and GitHub Secrets. Candidates who've only worked in one ecosystem typically need dedicated study time in the other before they're exam-ready.
 Q: Will my DevOps Engineer Expert badge lapse if I don't renew?
@@ -919,14 +923,14 @@ Q: Is there a DP-900 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/gh-300/ — GH-300 Practice Questions — 356 Qs for GitHub Copilot (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-06
 Exam domains:
-  - Use GitHub Copilot Responsibly (15–20%)
-  - Use GitHub Copilot Features (25–30%)
-  - Understand GitHub Copilot Data and Architecture (10–15%)
-  - Apply Prompt Engineering and Context Crafting (10–15%)
-  - Improve Developer Productivity with GitHub Copilot (10–15%)
-  - Configure Privacy, Content Exclusions, and Safeguards (10–15%)
+  - Use GitHub Copilot responsibly (15–20%)
+  - Use GitHub Copilot features (25–30%)
+  - Understand GitHub Copilot data and architecture (10–15%)
+  - Apply prompt engineering and context crafting (10–15%)
+  - Improve developer productivity with GitHub Copilot (10–15%)
+  - Configure privacy, content exclusions, and safeguards (10–15%)
 Q: How much does the GH-300 exam cost, and how long is it?
 A: The GitHub Copilot exam is roughly USD $99, though the exact price varies by region. GH-300 runs about 90 minutes and you need 700 out of 1000 to pass. It's delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official GitHub Copilot page for current pricing and any active promotions before you book.
 Q: Does the GH-300 GitHub Copilot certification expire?
@@ -934,28 +938,30 @@ A: GitHub credentials are valid for two years and are renewed by re-examination 
 Q: Who is the GH-300 GitHub Copilot exam for?
 A: GH-300 is an intermediate-level certification for developers and technical team members who already use GitHub Copilot day to day and want to prove real, applied expertise. It assumes GitHub fundamentals and experience in at least one programming language. This is not a beginner exam — it validates working knowledge of Copilot's features, data flows, prompt engineering, and responsible-use practices.
 Q: Does GH-300 cover using GitHub Copilot responsibly?
-A: Yes. "Use GitHub Copilot Responsibly" is the first domain, weighted 15–20%. It tests the risks and limitations of generative AI, ethical and responsible AI use, how to identify potential harms and their mitigations, and — critically — why you must validate Copilot's output before trusting it. Expect scenario questions about biased or insecure suggestions and how a professional handles them.
+A: Yes. "Use GitHub Copilot responsibly" is the first domain, weighted 15–20%. It tests the risks and limitations of generative AI, ethical and responsible AI use, how to identify potential harms and their mitigations, and — critically — why you must validate Copilot's output before trusting it. Expect scenario questions about biased or insecure suggestions and how a professional handles them.
 Q: How much of GH-300 is prompt engineering?
 A: Prompt engineering and context crafting is its own domain, weighted 10–15%. GH-300 tests how you structure a prompt, how Copilot determines context, the difference between zero-shot and few-shot prompting, and the core principles of writing prompts that produce useful, relevant suggestions. It pairs closely with the data-and-architecture domain, which explains how your prompt is processed and turned into a suggestion.
-Q: How many GH-300 practice questions does Azure Mastery include?
-A: Azure Mastery ships with 356 GH-300 practice questions, each mapped to one of the six official GitHub Copilot domains — from responsible AI and Copilot features to data and architecture, prompt engineering, developer productivity, and privacy with content exclusions. Core study runs on-device and works offline; optional sync uses your private iCloud account.
-Q: Is Azure Mastery free for GH-300 prep?
-A: The app is free to download and includes a free allowance of GH-300 questions so you can try every feature. The full bank of 356 GH-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: GH-300 vs AZ-400 — is there any overlap for a DevOps engineer?
+A: Some, but they test different layers. AZ-400 (DevOps Engineer Expert) covers pipelines, releases, and security across both Azure DevOps and GitHub at a platform-engineering level — designing the CI/CD strategy itself. GH-300 stays focused on GitHub Copilot specifically: using it responsibly, prompting it well, and configuring the privacy and governance controls around it. A DevOps engineer building pipelines that call Copilot might reasonably hold both, but neither substitutes for the other.
+Q: I didn't pass GH-300 — how soon can I try again?
+A: The first retake is allowed after 24 hours; second and third retakes each require a 14-day wait, and Microsoft caps attempts at five per rolling 12-month period. GH-300 follows Microsoft's standard exam retake policy even though the credential itself is owned by GitHub — every attempt, including retakes, needs its own voucher.
+Q: How long should I spend preparing for GH-300?
+A: If Copilot is already part of your daily workflow, two to four weeks of focused revision is typical. Give yourself longer if Agent Mode, MCP, or the data-and-architecture domain are unfamiliar — those are the areas that separate "I use Copilot" from "I can explain how Copilot works." Azure Mastery's readiness gauge is a better signal than a fixed calendar for when to book.
+Q: Can I try Azure Mastery's GH-300 content before paying?
+A: Yes. The app is free to download and includes a free allowance of GH-300 questions so you can try every feature. The full GH-300 bank unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does GH-300 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a GH-300 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/gh-900/ — GH-900 Practice Questions — 347 Qs for GitHub Basics (2026)
-Page last modified: 2026-08-09
+Page last modified: 2026-09-06
 Exam domains:
-  - Understand Git and GitHub Basics (25–30%)
-  - Work with GitHub Repositories (10–15%)
-  - Collaborate Using GitHub (10–15%)
-  - Apply Modern Development Practices (10–15%)
-  - Manage Projects with GitHub (5–10%)
-  - Understand Privacy, Security, and Administration (10–15%)
-  - Explore the GitHub Community (5–10%)
+  - Understand Git and GitHub basics (25–30%)
+  - Work with GitHub repositories (10–15%)
+  - Collaborate using GitHub (10–15%)
+  - Apply modern development practices (10–15%)
+  - Manage projects with GitHub (5–10%)
+  - Understand privacy, security, and administration (10–15%)
+  - Explore the GitHub community (5–10%)
 Q: How much does the GH-900 exam cost?
 A: The GitHub Foundations exam is USD $99, a price set by GitHub rather than Microsoft's standard certification pricing. GH-900 is delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub. Check the official GitHub Foundations page for current pricing and any active promotions before you book.
 Q: Does the GH-900 GitHub Foundations certification expire?
@@ -966,17 +972,19 @@ Q: How long should I study for GH-900?
 A: If you already use GitHub day to day — opening pull requests, reviewing branches, working with issues — one to two weeks of focused revision is usually enough. If GitHub is new to you, plan for three to four weeks so the seven domains, from Git basics to GitHub Actions and security, have time to stick. Azure Mastery's readiness gauge tells you when you're exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
 Q: GH-900 vs AZ-900 — what's the difference?
 A: GH-900 (GitHub Foundations) validates collaboration on GitHub: Git, repositories, pull requests, branches, GitHub Actions, Issues and Projects, security features, and the open-source community. AZ-900 (Microsoft Azure Fundamentals) validates cloud concepts and core Azure services. They're independent credentials in different product families — GH-900 is owned by GitHub and is valid for two years, while AZ-900 is owned by Microsoft and never expires. Many DevOps-minded candidates earn both.
+Q: What does the GH-900 exam format actually look like?
+A: GH-900's own published guidance is roughly 60–75 multiple-choice and multiple-response questions over a 120-minute session — longer than most Associate exams, reflecting the breadth of seven domains. In Azure Mastery's GH-900 bank, single-answer and scenario-based items carry most of the weight, with multi-select, drag-to-match, and hotspot questions built as original practice content, not a copy of GitHub's live item mix. Timed sessions run to the app's own clock; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.
 Q: Is GH-900 worth taking if I'm not a developer?
 A: Yes — GH-900 is explicitly designed for non-developers as well as developers. Project managers, technical writers, product owners, and team leads all sit GH-900 to prove they can collaborate effectively on GitHub. The exam doesn't ask you to write code. It expects you to explain concepts such as the GitHub Flow, how pull requests link to issues, what branch protection rules do, and when to use a fork versus a template.
-Q: Is Azure Mastery free for GH-900 prep?
-A: The app is free to download and includes a free allowance of GH-900 questions so you can try every feature. The full bank of 347 GH-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+Q: GH-900 vs GH-300 — foundations or the Copilot-specific exam?
+A: GH-900 is the broad on-ramp — Git, repositories, collaboration, security, and the wider GitHub platform, with no assumed Copilot depth. GH-300 narrows in on one tool: using GitHub Copilot responsibly, prompting it well, and administering it at scale, and assumes you already have GitHub fundamentals and one programming language under your belt. Non-developers usually stop at GH-900; developers proving Copilot fluency specifically move on to GH-300.
+Q: Can I try Azure Mastery's GH-900 content before paying?
+A: Yes. The app is free to download and includes a free allowance of GH-900 questions so you can try every feature. The full GH-900 bank unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does GH-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a GH-900 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/pl-300/ — PL-300 Practice Questions — 378 Qs for Power BI Analyst (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Prepare the Data (25–30%)
   - Model the Data (25–30%)

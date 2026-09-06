@@ -73,6 +73,12 @@ SEO_UPDATED_OVERRIDES = {
     "AZ-305": "2026-09-06",
     "AZ-400": "2026-09-06",
     "AZ-700": "2026-09-06",
+    # Wave-2b de-templating pass (Copilot/GitHub cluster, Task W6).
+    "AB-410": "2026-09-06",
+    "AB-650": "2026-09-06",
+    "AB-731": "2026-09-06",
+    "GH-300": "2026-09-06",
+    "GH-900": "2026-09-06",
 }
 RETIRED_EXAMS = {
     "AI-900": {

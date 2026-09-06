@@ -201,7 +201,7 @@
             "name": "How hard is the AI-103 exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-103 is demanding because it assumes working Python experience and asks you to reason about Foundry SDK behaviour, not just recall service names. Expect scenarios that show you a model deployment, an agent workflow, or a retrieval pipeline and ask what to change or why it is behaving a certain way. If generative AI development is new to you, budget extra hands-on time before relying on practice results."
+              "text": "Demanding, because it assumes working Python experience and asks you to reason about Foundry SDK behaviour, not just recall service names. Expect scenarios showing a model deployment, agent workflow, or retrieval pipeline that ask what to change or why it behaves a certain way. New to generative AI development? Budget extra hands-on time."
             }
           },
           {
@@ -209,7 +209,7 @@
             "name": "How long should I study for AI-103?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The six-week plan on this page is a practical starting point if you already write Python against AI or Azure services professionally. Extend it when Foundry, agent orchestration, and retrieval-augmented generation are new territory, because the exam rewards hands-on time with the SDKs over reading alone. Use your domain-level practice results to decide when to add or repeat a week."
+              "text": "The six-week plan above is a practical start if you already write Python against AI or Azure services professionally. Extend it when Foundry, agent orchestration, and RAG are new territory — the exam rewards hands-on SDK time over reading alone. Use your domain-level results to decide when to add or repeat a week."
             }
           },
           {
@@ -217,7 +217,7 @@
             "name": "Do I need AI-901 before AI-103?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-901 is not a formal prerequisite, but Microsoft's own certification path lists it as the current fundamentals route into AI-103. If you are new to AI concepts, responsible AI, and Microsoft Foundry at a conceptual level, sitting AI-901 first gives you vocabulary the associate exam assumes. If you already work with Python and Azure AI services day to day, you can go straight to AI-103."
+              "text": "Not a formal prerequisite, but Microsoft's own path lists it as the current fundamentals route in. New to AI concepts, responsible AI, and Foundry at a conceptual level? Sit AI-901 first. Already working with Python and Azure AI services day to day? Go straight to AI-103."
             }
           },
           {
@@ -225,7 +225,7 @@
             "name": "What is the passing score for AI-103?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map to a fixed number of correct answers, and harder questions carry more weight. Multi-select and ordering questions typically award no partial credit, so treat 700 as a comfortable target rather than a line to scrape over."
+              "text": "700 out of 1000. The score is scaled, not a raw percentage, so it doesn't map to a fixed number of correct answers, and harder questions carry more weight. Multi-select and ordering questions typically give no partial credit, so treat 700 as a comfortable target, not a line to scrape over."
             }
           },
           {
@@ -233,7 +233,7 @@
             "name": "Does the AI-103 certification expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Like other Microsoft Associate certifications, AI-103 expires annually, and renewal is free. It is a short online assessment on Microsoft Learn that opens in the six-month window before your expiration date and targets recent updates to the skills outline, so staying current is manageable if you keep working with Foundry."
+              "text": "Yes, annually, and renewal is free: a short assessment on Microsoft Learn inside the six-month window before expiry. It targets recent skills-outline updates, so staying current is manageable if you keep working with Foundry."
             }
           },
           {
@@ -241,7 +241,7 @@
             "name": "How much does AI-103 cost and can I retake it if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Exam pricing varies by country, so check Microsoft's certification page for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt needs a new booking."
+              "text": "Pricing varies by country — check Microsoft's certification page for your local fee. If you don't pass: First retake: after 24 hours Second and third retakes: a 14-day wait each Maximum five attempts per rolling 12 months, each a fresh booking"
             }
           }
         ]
@@ -384,27 +384,57 @@
       <ol class="guide-plan">
         <li>
           <h3>Plan and manage an Azure AI solution</h3>
-          <p>Choosing the right Foundry service for a generative or agentic task, including model families, grounding, vector search, and memory or tool integration. Then Azure infrastructure design for AI apps and agents, deployment options, and CI/CD integration for Foundry projects, followed by quotas, scaling, and monitoring, and responsible AI: guardrails, evaluators, trace logging, and oversight modes.</p>
+          <p>The foundation domain: choosing the right Foundry service for a task before you build anything.</p>
+          <ul>
+            <li>Model families, grounding, vector search, memory and tool integration.</li>
+            <li>Infrastructure design, deployment options, CI/CD for Foundry projects; quotas, scaling, monitoring.</li>
+            <li>Responsible AI: guardrails, evaluators, trace logging, oversight modes.</li>
+          </ul>
         </li>
         <li>
           <h3>Build generative applications with Foundry</h3>
-          <p>Deploy and consume large language models, small models, code models, and multimodal models through Foundry. Implement retrieval-augmented generation in an application, design tool-augmented and multistep reasoning workflows, and practise evaluating models and apps for fabrications, relevance, quality, and safety before you connect an app to a Foundry project with the SDKs.</p>
+          <p>The largest domain, so give it real hands-on time, not just reading.</p>
+          <ul>
+            <li>Deploy and consume LLMs, small models, code models, multimodal models through Foundry.</li>
+            <li>Implement RAG; design tool-augmented and multistep reasoning workflows.</li>
+            <li>Evaluate models for fabrications, relevance, quality, safety; connect an app via the SDKs.</li>
+          </ul>
         </li>
         <li>
           <h3>Build and optimise agents with Foundry</h3>
-          <p>Define agent roles, goals, and tool schemas, then build agents combining retrieval, function-calling, and conversation memory. Cover orchestrated multi-agent solutions and autonomous workflows with approval safeguards, then optimisation: prompt engineering, self-critique loops, and observability through tracing, token analytics, and latency breakdowns.</p>
+          <p>Define the agent, then tune it.</p>
+          <ul>
+            <li>Agent roles, goals, tool schemas; combine retrieval, function-calling, conversation memory.</li>
+            <li>Orchestrated multi-agent solutions and autonomous workflows with approval safeguards.</li>
+            <li>Prompt engineering, self-critique loops, tracing, token analytics, latency breakdowns.</li>
+          </ul>
         </li>
         <li>
           <h3>Computer vision solutions</h3>
-          <p>Image- and video-generation from text prompts and reference media, plus inpainting and mask-based editing. Then multimodal understanding — captioning, visual question-answering, alt-text generation, and Azure Content Understanding pipelines for extracting visual characteristics. Close with responsible AI for visual content, including filters for unsafe imagery and indirect prompt injection through embedded image text.</p>
+          <p>Split generation from understanding — the two get blurred constantly.</p>
+          <ul>
+            <li>Image and video generation from text and reference media; inpainting and mask-based editing.</li>
+            <li>Multimodal understanding: captioning, visual question-answering, alt-text, Content Understanding pipelines.</li>
+            <li>Responsible AI for visual content: unsafe-imagery filters, indirect prompt injection via embedded text.</li>
+          </ul>
         </li>
         <li>
           <h3>Text analysis and information extraction</h3>
-          <p>Language-model text analysis: entity, topic, and structured JSON extraction, sentiment and safety detection, and translation through Azure Translator or LLM-powered flows, plus speech-to-text and text-to-speech for agentic interactions. Then retrieval and grounding pipelines — semantic, hybrid, and vector search, RAG ingestion with OCR, and document extraction using Content Understanding analysers.</p>
+          <p>Two lighter domains that reward the same retrieval instinct.</p>
+          <ul>
+            <li>Entity, topic, structured JSON extraction; sentiment and safety detection; Azure Translator versus LLM-powered flows.</li>
+            <li>Speech-to-text and text-to-speech for agentic interactions.</li>
+            <li>Semantic, hybrid, and vector search; RAG ingestion with OCR; Content Understanding analysers.</li>
+          </ul>
         </li>
         <li>
           <h3>Review and exam simulation</h3>
-          <p>Revisit responsible AI instrumentation and Foundry deployment detail across all five domains, since both thread through every section rather than sitting in one place. Then focus your practice: drill your weakest domains daily and sit two full-length timed practice runs. Book the exam once your readiness sits comfortably above the pass mark, not just at it.</p>
+          <p>Responsible AI and Foundry deployment detail thread through every domain, so revisit both before you sit down.</p>
+          <ul>
+            <li>Re-walk responsible AI instrumentation and deployment detail across all five domains.</li>
+            <li>Drill your weakest domain daily.</li>
+            <li>Sit two full-length timed practice runs before you book.</li>
+          </ul>
         </li>
       </ol>
     </section>
@@ -417,23 +447,38 @@
       <div class="topic-cards">
         <div class="topic-card">
           <h3>Choosing a retrieval and grounding method</h3>
-          <p>Semantic search, hybrid search, vector search, and plain keyword search all show up as options, and the exam expects you to match the method to the data shape and the accuracy requirement rather than default to the newest-sounding one. Practise reading a scenario and naming the exact retrieval approach it calls for, plus which Foundry service hosts it.</p>
+          <ul>
+            <li>Semantic, hybrid, vector, and plain keyword search all show up as options, and defaulting to the newest-sounding one is the common mistake.</li>
+            <li>Match the method to the data shape and accuracy requirement, and know which Foundry service hosts each one.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Multi-agent orchestration and safeguards</h3>
-          <p>Questions test whether you can design an orchestrated multi-agent solution with the right balance of autonomy and approval control — when a workflow should run unattended, when it needs a human-in-the-loop checkpoint, and how tool-access constraints limit what an agent can do. The wording is subtle, so learn what each safeguard actually restricts.</p>
+          <ul>
+            <li>Questions test the balance of autonomy and approval control: when a workflow runs unattended versus when it needs a human-in-the-loop checkpoint.</li>
+            <li>Learn what each safeguard actually restricts, including how tool-access constraints limit an agent's reach.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Generation versus understanding in vision</h3>
-          <p>The computer vision domain splits into generating new images and video and understanding existing ones, and it is easy to blur the two. Know which controls belong to image and video generation (inpainting, mask-based edits) versus multimodal understanding (captioning, visual question-answering, Content Understanding pipelines), because they solve different problems with different services.</p>
+          <ul>
+            <li>The vision domain splits into generating new images and video and understanding existing ones, and the two blur easily.</li>
+            <li>Sort controls correctly: inpainting and mask-based edits are generation; captioning and visual question-answering are understanding.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Speech and translation service boundaries</h3>
-          <p>Text analysis blends dedicated services with LLM-powered flows: Azure Translator versus prompt-based translation, and standard speech-to-text versus custom speech models for agentic interactions. Questions built around accuracy, latency, or customisation requirements expect you to pick the right one without defaulting to whichever you learned first.</p>
+          <ul>
+            <li>Text analysis blends dedicated services with LLM-powered flows, and defaulting to whichever you learned first costs marks.</li>
+            <li>Weigh Azure Translator against prompt-based translation, and standard speech-to-text against custom speech models, by accuracy, latency, and customisation needs.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Responsible AI instrumentation, not just policy</h3>
-          <p>AI-103 tests the mechanics of responsible AI — evaluators, safety evaluations, explanation tooling, trace-based auditing, and provenance metadata — rather than the general principles. Expect a scenario that names a specific risk (fabrication, indirect prompt injection through an image, an ungrounded response) and asks which instrumentation catches it.</p>
+          <ul>
+            <li>AI-103 tests the mechanics — evaluators, safety evaluations, trace-based auditing, provenance metadata — not the general principles.</li>
+            <li>Expect a scenario naming a specific risk, such as an ungrounded response or indirect prompt injection through an image, and asking which instrumentation catches it.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -456,9 +501,9 @@
         <figcaption>Azure Mastery rebuilds its study plan from your answer history, surfacing the weakest domains first.</figcaption>
       </figure>
       <div class="cta-panel">
-        <h3>Put your study plan into practice</h3>
+        <h3>A rationale for every Foundry decision</h3>
         <p>
-          Make Azure Mastery part of your study plan for AI-103. Practise exam-style questions mapped to all five current domains, get an on-device readiness score from Exam IQ, follow an adaptive study plan that targets your weak spots, and let knowledge-decay alerts tell you what to revise before you forget it. The Practice tab includes a timed, full-length practice simulator. It works offline and needs no account to start.
+          Azure Mastery writes a rationale for every option on every AI-103 question, so a wrong call on retrieval method or agent safeguard teaches you the reasoning, not just the score. Exam IQ gives you an on-device readiness score with a confidence range, the study plan re-targets your weak domain automatically, and the simulator runs blueprint-weighted at real exam length. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -473,20 +518,20 @@
     <section id="exam-day" class="container">
       <p class="label-eyebrow section-eyebrow">Exam day</p>
       <h2 class="display-small section-title">Tactics for exam day</h2>
-      <p>
-        If you are sitting online, run the system check the day before and clear your desk, because proctors will ask you to show the room and remove anything within reach. Arrive early either way, since a rushed start eats into your focus during the dense scenario questions.
-      </p>
-      <p>
-        With 100 minutes for 40 to 60 questions you have roughly a minute and a half to two minutes each, which is comfortable if you keep moving. Use the <strong>mark-for-review</strong> flag on anything that makes you pause and return to it once you have banked the easy marks. Read Foundry SDK and pipeline configuration questions twice: the trap is usually a single parameter, service choice, or scope, and a slower second read pays off.
-      </p>
-      <p>
-        Case studies bundle several questions around one Foundry project scenario, and once you move past a case you generally cannot return to it, so answer everything inside a case fully before advancing. Remember the score is scaled: you need 700 out of 1000, not a perfect run, so an unfamiliar question is not a disaster. Flag it, make your best call, and keep your momentum.
-      </p>
+      <p>A few habits protect the marks you've already earned.</p>
+      <ol>
+        <li>Sitting online? Run the system check the day before and clear your desk — proctors ask you to show the room first.</li>
+        <li>Arrive early either way; a rushed start eats into your focus during the dense scenario questions.</li>
+        <li>Budget roughly ninety seconds to two minutes per question, and flag anything you pause on with <strong>mark-for-review</strong>.</li>
+        <li>Read Foundry SDK and pipeline configuration questions twice — the trap is usually one parameter, service choice, or scope.</li>
+        <li>Answer everything inside a case study before you advance; you generally cannot return to one once you leave it.</li>
+        <li>Remember the pass mark is 700 out of 1000, scaled. An unfamiliar question isn't a disaster: make your call and keep moving.</li>
+      </ol>
     </section>
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style AI-103 questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>Which retrieval method fits?</strong> Drill AI-103 scenario questions with a rationale on every option and track your Exam IQ score — free to start.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -496,27 +541,32 @@
       <div class="faqs">
         <details class="faq">
           <summary>How hard is the AI-103 exam?</summary>
-          <div class="faq__answer"><p>AI-103 is demanding because it assumes working Python experience and asks you to reason about Foundry SDK behaviour, not just recall service names. Expect scenarios that show you a model deployment, an agent workflow, or a retrieval pipeline and ask what to change or why it is behaving a certain way. If generative AI development is new to you, budget extra hands-on time before relying on practice results.</p></div>
+          <div class="faq__answer"><p>Demanding, because it assumes working Python experience and asks you to reason about Foundry SDK behaviour, not just recall service names. Expect scenarios showing a model deployment, agent workflow, or retrieval pipeline that ask what to change or why it behaves a certain way. New to generative AI development? Budget extra hands-on time.</p></div>
         </details>
         <details class="faq">
           <summary>How long should I study for AI-103?</summary>
-          <div class="faq__answer"><p>The six-week plan on this page is a practical starting point if you already write Python against AI or Azure services professionally. Extend it when Foundry, agent orchestration, and retrieval-augmented generation are new territory, because the exam rewards hands-on time with the SDKs over reading alone. Use your domain-level practice results to decide when to add or repeat a week.</p></div>
+          <div class="faq__answer"><p>The six-week plan above is a practical start if you already write Python against AI or Azure services professionally. Extend it when Foundry, agent orchestration, and RAG are new territory — the exam rewards hands-on SDK time over reading alone. Use your domain-level results to decide when to add or repeat a week.</p></div>
         </details>
         <details class="faq">
           <summary>Do I need AI-901 before AI-103?</summary>
-          <div class="faq__answer"><p>AI-901 is not a formal prerequisite, but Microsoft's own certification path lists it as the current fundamentals route into AI-103. If you are new to AI concepts, responsible AI, and Microsoft Foundry at a conceptual level, sitting <a href="/exams/ai-901/">AI-901</a> first gives you vocabulary the associate exam assumes. If you already work with Python and Azure AI services day to day, you can go straight to AI-103.</p></div>
+          <div class="faq__answer"><p>Not a formal prerequisite, but Microsoft's own path lists it as the current fundamentals route in. New to AI concepts, responsible AI, and Foundry at a conceptual level? Sit <a href="/exams/ai-901/">AI-901</a> first. Already working with Python and Azure AI services day to day? Go straight to AI-103.</p></div>
         </details>
         <details class="faq">
           <summary>What is the passing score for AI-103?</summary>
-          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map to a fixed number of correct answers, and harder questions carry more weight. Multi-select and ordering questions typically award no partial credit, so treat 700 as a comfortable target rather than a line to scrape over.</p></div>
+          <div class="faq__answer"><p>700 out of 1000. The score is scaled, not a raw percentage, so it doesn't map to a fixed number of correct answers, and harder questions carry more weight. Multi-select and ordering questions typically give no partial credit, so treat 700 as a comfortable target, not a line to scrape over.</p></div>
         </details>
         <details class="faq">
           <summary>Does the AI-103 certification expire?</summary>
-          <div class="faq__answer"><p>Yes. Like other Microsoft Associate certifications, AI-103 expires annually, and renewal is free. It is a short online assessment on <a href="https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> that opens in the six-month window before your expiration date and targets recent updates to the skills outline, so staying current is manageable if you keep working with Foundry.</p></div>
+          <div class="faq__answer"><p>Yes, annually, and renewal is free: a short assessment on <a href="https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> inside the six-month window before expiry. It targets recent skills-outline updates, so staying current is manageable if you keep working with Foundry.</p></div>
         </details>
         <details class="faq">
           <summary>How much does AI-103 cost and can I retake it if I fail?</summary>
-          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/" rel="noopener">Microsoft's certification page</a> for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt needs a new booking.</p></div>
+          <div class="faq__answer"><p>Pricing varies by country — check <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/" rel="noopener">Microsoft's certification page</a> for your local fee. If you don't pass:</p>
+          <ul>
+            <li>First retake: after 24 hours</li>
+            <li>Second and third retakes: a 14-day wait each</li>
+            <li>Maximum five attempts per rolling 12 months, each a fresh booking</li>
+          </ul></div>
         </details>
       </div>
     </section>
@@ -558,7 +608,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AI-103?</h2>
-      <p>Practise exam-style AI-103 questions across all five domains, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>Every AI-103 question comes with a rationale for every option, Exam IQ predicts your score on-device with a confidence range, and the simulator is weighted to the exam blueprint. Free to start, works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

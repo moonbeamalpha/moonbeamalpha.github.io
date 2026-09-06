@@ -506,11 +506,19 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the SC-200 exam?</h2>
       <p>
-        SC-200 is the <strong>Microsoft Certified: Security Operations Analyst Associate</strong> exam — the credential hiring managers expect when posting "SOC Analyst", "Security Operations Engineer", "Threat Hunter", or "Incident Responder" roles on the Microsoft stack. SC-200 covers the SOC analyst's day-to-day in <em>Microsoft Sentinel</em> and <em>Microsoft Defender XDR</em>, plus the broader Defender product family. It pairs with <a href="/exams/sc-900/">SC-900</a> on the way in, and is one of the prereqs for <a href="/exams/sc-100/">SC-100 (Cybersecurity Architect Expert)</a>.
+        SC-200 is the <strong>Microsoft Certified: Security Operations Analyst Associate</strong> exam — the credential hiring managers expect when posting "SOC Analyst", "Security Operations Engineer", "Threat Hunter", or "Incident Responder" roles on the Microsoft stack.
       </p>
       <p>
-        SC-200 is <strong>hands-on and KQL-aware</strong>. It validates that you can configure and manage <em>Microsoft Sentinel</em> (workspaces, data connectors, analytics rules, watchlists, automation, hunting), investigate incidents end-to-end across <em>Microsoft Defender XDR</em> (Defender for Endpoint, Identity, Office 365, Cloud Apps), use <em>Microsoft Defender for Cloud</em> for posture and workload protection, and write KQL queries to hunt threats and build custom detections. Expect scenario questions that show a KQL snippet, an alert payload, or an incident graph and ask what you'd do next.
+        SC-200 covers the SOC analyst's day-to-day in <em>Microsoft Sentinel</em> and <em>Microsoft Defender XDR</em>, plus the broader Defender product family. It pairs with <a href="/exams/sc-900/">SC-900</a> on the way in, and is one of the prereqs for <a href="/exams/sc-100/">SC-100 (Cybersecurity Architect Expert)</a>.
       </p>
+      <p>SC-200 is <strong>hands-on and KQL-aware</strong>. It validates that you can:</p>
+      <ul>
+        <li>Configure and manage <em>Microsoft Sentinel</em> — workspaces, data connectors, analytics rules, watchlists, automation, hunting</li>
+        <li>Investigate incidents end-to-end across <em>Microsoft Defender XDR</em> (Defender for Endpoint, Identity, Office 365, Cloud Apps)</li>
+        <li>Use <em>Microsoft Defender for Cloud</em> for posture and workload protection</li>
+        <li>Write KQL queries to hunt threats and build custom detections</li>
+      </ul>
+      <p>Expect scenario questions that show a KQL snippet, an alert payload, or an incident graph and ask what you'd do next.</p>
       <p>
         Microsoft updated the SC-200 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -579,8 +587,8 @@
                 <li>Investigate Microsoft 365 activities to identify threats</li>
               </ul>
               <ul class="domain__tips">
-                <li>This domain tests investigating and remediating across the whole Defender XDR surface, now including agentic AI tooling.</li>
-                <li>Candidates treat case management and the evidence graph as the same feature, but one tracks tasks, the other traces movement.</li>
+                <li>Investigating and remediating across the whole Defender XDR surface, now including agentic AI tooling, is the real focus here.</li>
+                <li>Case management and the evidence graph often get treated as one feature, though one tracks tasks and the other traces movement.</li>
                 <li>Reach for the attack-story graph specifically whenever a scenario asks how an attack actually moved.</li>
               </ul>
             </div>
@@ -598,7 +606,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>This domain is the most KQL-heavy: picking the right table and writing a query that actually returns results.</li>
-                <li>Candidates write syntactically correct KQL against the wrong table and get an empty result they can't explain.</li>
+                <li>Syntactically correct KQL against the wrong table returns an empty result that's hard to explain.</li>
                 <li>Identify the correct table for a described signal before writing any KQL; that choice is itself assessed.</li>
               </ul>
             </div>
@@ -619,7 +627,7 @@
           <h3>Defender for Cloud measures posture; Defender XDR handles response</h3>
           <p>Defender for Cloud surfacing an alert doesn't make the follow-up question a posture-management one.</p>
           <ul>
-            <li>The exam is testing whether you route an in-progress attack to Defender XDR investigation, not back to Defender for Cloud.</li>
+            <li>An in-progress attack routes to Defender XDR investigation, never back to Defender for Cloud, whichever product raised the alert.</li>
             <li>Treat Defender for Cloud as where risk is measured and Defender XDR as where an active incident gets handled.</li>
           </ul>
         </article>
@@ -627,7 +635,7 @@
           <h3>Analytics rules, automation rules, and playbooks are three separate layers</h3>
           <p>Candidates reach for an analytics rule when a scenario actually needs automated remediation of an existing incident.</p>
           <ul>
-            <li>The exam is testing whether you know an analytics rule detects, an automation rule routes, and a playbook remediates.</li>
+            <li>An analytics rule detects, an automation rule routes, and only a playbook actually remediates.</li>
             <li>Pick a playbook whenever the scenario names a remediation action like isolating a device or disabling an account.</li>
           </ul>
         </article>
@@ -635,7 +643,7 @@
           <h3>The right data connector depends on the source, not habit</h3>
           <p>AMA, WEF, and Syslog/CEF connectors all bring log data into Sentinel, so candidates default to whichever they know best.</p>
           <ul>
-            <li>The exam is testing whether you match a described source and topology to the one connector actually built for it.</li>
+            <li>Matching a described source and topology to its one purpose-built connector is what earns the mark here.</li>
             <li>Pick WEF for centralised on-premises forwarding and CEF/Syslog for third-party appliances, not whichever connector feels familiar.</li>
           </ul>
         </article>
@@ -643,7 +651,7 @@
           <h3>KQL table choice changes what a query can even see</h3>
           <p>Correct KQL syntax against the wrong table still returns an empty or misleading result.</p>
           <ul>
-            <li>The exam is testing whether you can identify the table holding the telemetry a scenario describes before writing any query.</li>
+            <li>Naming the table that actually holds the described telemetry is itself a scored step, before any query gets written.</li>
             <li>Name the correct table first; treat that identification as a scored step, not a formality before the real answer.</li>
           </ul>
         </article>
@@ -651,7 +659,7 @@
           <h3>Case management tracks the incident; the graph explains it</h3>
           <p>Candidates reach for case management when a scenario is actually asking how an attack moved between hosts.</p>
           <ul>
-            <li>The exam is testing whether you pick the evidence and attack-story graph, or Sentinel Graph, for a lateral-movement question.</li>
+            <li>A lateral-movement question calls for the evidence and attack-story graph, or Sentinel Graph, not the case list.</li>
             <li>Save case management for tracking tasks and status; use the graph whenever the question is about how an attack spread.</li>
           </ul>
         </article>

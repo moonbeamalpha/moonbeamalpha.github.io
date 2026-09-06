@@ -371,7 +371,7 @@ A: Different altitudes. AB-900 is the hands-on-governance Fundamentals cert: it 
 Q: Can I try Azure Mastery's AB-900 bank before paying?
 A: The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise AB-900 offline?
-A: Yes. You do not need an internet connection to practise. No account is needed either, and your data only leaves your device if you opt into private iCloud sync.
+A: Yes. Nothing in the study loop needs a connection: practice, scoring and the readiness prediction all happen on the device. No account is needed either, and your data only leaves your device if you opt into private iCloud sync.
 
 ## /exams/ai-102/ — AI-102 Retired Exam & AI-103 Next Step | Azure Mastery
 Page last modified: 2026-08-09

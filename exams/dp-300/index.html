@@ -517,11 +517,20 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the DP-300 exam?</h2>
       <p>
-        DP-300 is the <strong>Microsoft Certified: Azure Database Administrator Associate</strong> exam — the credential hiring managers expect when posting "Database Administrator", "Azure SQL DBA", or "Cloud Database Engineer" roles on the Microsoft data platform. It's the natural next step after <a href="/exams/dp-900/">DP-900</a> for anyone whose day job has shifted from generalist data work into running and securing SQL workloads in production. DP-300 is the only Microsoft Associate cert dedicated to operating the SQL family on Azure.
+        DP-300 is the <strong>Microsoft Certified: Azure Database Administrator Associate</strong> exam — the credential hiring managers expect when posting "Database Administrator", "Azure SQL DBA", or "Cloud Database Engineer" roles on the Microsoft data platform.
       </p>
       <p>
-        DP-300 is <strong>hands-on and operational</strong>. It validates that you can plan and implement <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong>; secure data with Microsoft Entra authentication, Always Encrypted, dynamic data masking, row-level security, TDE, and Microsoft Defender for SQL; tune workloads via Query Store, automatic tuning, indexes, partitioning, and Resource Governor; automate operations with SQL Agent, elastic jobs, PowerShell, and ARM/Bicep; and design HA/DR with Always On availability groups, geo-replication, auto-failover groups, and PITR. Expect scenario questions that show you a query plan, a config snippet, or a recovery requirement and ask what you'd do.
+        It's the natural next step after <a href="/exams/dp-900/">DP-900</a> for anyone whose day job has shifted from generalist data work into running and securing SQL workloads in production. DP-300 is the only Microsoft Associate cert dedicated to operating the SQL family on Azure.
       </p>
+      <p>DP-300 is <strong>hands-on and operational</strong>. It validates that you can:</p>
+      <ul>
+        <li>Plan and implement <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong></li>
+        <li>Secure data with Microsoft Entra authentication, Always Encrypted, dynamic data masking, row-level security, TDE, and Microsoft Defender for SQL</li>
+        <li>Tune workloads via Query Store, automatic tuning, indexes, partitioning, and Resource Governor</li>
+        <li>Automate operations with SQL Agent, elastic jobs, PowerShell, and ARM/Bicep</li>
+        <li>Design HA/DR with Always On availability groups, geo-replication, auto-failover groups, and PITR</li>
+      </ul>
+      <p>Expect scenario questions that show you a query plan, a config snippet, or a recovery requirement and ask what you'd do.</p>
       <p>
         Microsoft updated the DP-300 skills outline on <strong>24 April 2026</strong>. Every question in Azure Mastery's DP-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -540,7 +549,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 24 April 2026</p>
       <h2 class="display-small section-title">DP-300 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft's <strong>24 April 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Five domains, with weights set by Microsoft's <strong>24 April 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">official skills outline</a>, and Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -589,8 +598,8 @@
                 <li>Implement compliance controls for sensitive data</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests matching an authentication, encryption, or compliance control to a named requirement across the three SQL deployment targets.</li>
-                <li>Candidates reach for Transparent Data Encryption when the scenario actually needs Always Encrypted to hide data from a privileged DBA.</li>
+                <li>Matching an authentication, encryption, or compliance control to a named requirement across the three SQL deployment targets is the core ask.</li>
+                <li>Transparent Data Encryption often gets reached for when the scenario actually needs Always Encrypted to hide data from a privileged DBA.</li>
                 <li>Ask whether the requirement is protecting data at rest or hiding it from an authorised administrator before picking an encryption feature.</li>
               </ul>
             </div>
@@ -627,8 +636,8 @@
                 <li>Create and manage database tasks in Azure</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests knowing which automation tool is even available on the deployment target the scenario names.</li>
-                <li>Candidates assume SQL Server Agent runs everywhere, but a single Azure SQL Database has no built-in Agent at all.</li>
+                <li>Which automation tool is even available on the named deployment target is what trips people up first.</li>
+                <li>SQL Server Agent is often assumed to run everywhere, but a single Azure SQL Database has no built-in Agent at all.</li>
                 <li>Reach for an elastic job the moment a scenario names scheduled T-SQL running across a fleet of Azure SQL databases.</li>
               </ul>
             </div>
@@ -646,8 +655,8 @@
                 <li>Configure HA/DR for database solutions</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests matching an HA/DR feature to a stated recovery-time or recovery-point requirement, not just to a familiar service name.</li>
-                <li>Candidates pick active geo-replication when the scenario actually wants a failover group's automatic failover behind one listener.</li>
+                <li>Matching an HA/DR feature to the stated recovery-time and recovery-point numbers matters more than recognising a familiar service name.</li>
+                <li>Active geo-replication gets picked when the scenario actually wants a failover group's automatic failover behind one listener.</li>
                 <li>Work out the RPO and RTO the scenario states first, then choose the HA/DR feature built to hit both numbers.</li>
               </ul>
             </div>
@@ -667,35 +676,35 @@
         <article class="trap">
           <h3>Azure SQL Database can't run cross-database queries, linked servers, SQL Server Agent, or CLR code that a scenario names.</h3>
           <ul>
-            <li>The exam is testing whether you can spot an instance-scoped feature and rule out a single Azure SQL Database immediately.</li>
+            <li>Spotting an instance-scoped feature and ruling out a single Azure SQL Database immediately is the real skill tested.</li>
             <li>Check for cross-database queries, linked servers, Agent jobs, or CLR before you weigh cost or management overhead.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>TDE and Always Encrypted stop different people from reading your data.</h3>
           <ul>
-            <li>The exam is testing whether you know TDE hides data from someone stealing the files, not from a DBA running a query.</li>
+            <li>TDE hides data from someone stealing the files; it does nothing to stop a DBA running a query.</li>
             <li>Pick Always Encrypted specifically when the requirement says even a privileged administrator must not see the values.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Geo-replication and failover groups solve the same problem with different guarantees.</h3>
           <ul>
-            <li>The exam is testing whether you can match automatic, transparent failover to a failover group and manual control to geo-replication.</li>
+            <li>Automatic, transparent failover belongs to a failover group; manual control is what geo-replication actually offers.</li>
             <li>Read the failover requirement for the word "automatic" before choosing between the two options.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Dynamic management views reset on every restart or failover.</h3>
           <ul>
-            <li>The exam is testing whether you reach for Query Store, not a DMV, when the scenario needs history after a restart.</li>
+            <li>Query Store, not a DMV, is what holds history that survives a restart.</li>
             <li>Save DMVs for a live, in-the-moment symptom and Query Store for anything asking about change over time.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>SQL Server Agent has no equivalent on a standalone Azure SQL Database.</h3>
           <ul>
-            <li>The exam is testing whether you know a single or pooled Azure SQL Database needs an elastic job agent for scheduled T-SQL.</li>
+            <li>A single or pooled Azure SQL Database needs an elastic job agent to run any scheduled T-SQL at all.</li>
             <li>Confirm the deployment target first: Agent works on Managed Instance and SQL VM, elastic jobs work on Azure SQL Database.</li>
           </ul>
         </article>

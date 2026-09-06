@@ -468,24 +468,24 @@ Exam domains:
   - Design and implement a GenAIOps infrastructure (20–25%)
   - Implement generative AI quality assurance and observability (10–15%)
   - Optimize generative AI systems and model performance (10–15%)
-Q: How much does the AI-300 exam cost?
-A: The AI-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-300 also requires annual renewal (free, online), so factor that into long-term cost planning.
-Q: Does the AI-300 certification expire?
-A: Yes. Microsoft Associate certifications including AI-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the AI-300 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AI-300?
-A: Allow four to eight weeks of focused study if you already work with Azure Machine Learning or generative AI systems. Spend longer if MLOps, GenAIOps, deployment infrastructure, observability, quality evaluation, or model lifecycle automation are new to you. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
 Q: Did AI-300 replace DP-100?
-A: Yes. Microsoft retired DP-100 and the Azure Data Scientist Associate certification on 1 June 2026 and identifies AI-300, Machine Learning Operations Engineer Associate, as its replacement. The emphasis changed: DP-100 focused on data-science model development, while AI-300 focuses on operationalizing machine learning and generative AI through MLOps, GenAIOps, observability, quality, and lifecycle automation.
+A: Yes. DP-100 (Azure Data Scientist Associate) retired on 1 June 2026, and AI-300 is its named successor. The scope has grown to match: DP-100 covered training and deploying traditional ML models, while AI-300 adds GenAIOps — deploying, evaluating, and monitoring generative AI built with Microsoft Foundry.
 Q: AI-300 vs AI-200 — which next?
-A: AI-200 first. AI-200 (AI Cloud Developer Associate) builds the cloud platform that AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform. AI-200 is upstream of AI-300 in most roles.
-Q: Is Azure Mastery free for AI-300 prep?
-A: The app is free to download and includes a free allowance of AI-300 questions so you can try every feature. The full bank of 362 AI-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AI-300 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AI-300 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: AI-200 first. AI-200 (AI Cloud Developer Associate) builds the cloud platform AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform. AI-200 is upstream of AI-300 in most roles.
+Q: Are there prerequisites for AI-300?
+A: Microsoft sets no mandatory prerequisite exam for AI-300. Its published audience profile expects MLOps and GenAIOps subject-matter expertise, a data-science background with Python, and entry-level DevOps familiarity such as GitHub Actions. Without hands-on Azure Machine Learning or Foundry experience, preparation typically takes longer.
+Q: What format is the AI-300 exam?
+A: Like most Associate exams, AI-300 runs a general 40–60 question format that Microsoft varies by sitting. Azure Mastery's bank leans on single-answer and scenario-based items for most of its weight, then rounds out with drag-to-match, dropdown-select, and hot-area questions plus linked case studies.
+Q: Is AI-300 a permanent credential, or does it need renewing?
+A: It needs renewing. Microsoft Associate certifications including AI-300 expire annually. Renewal is free: a 25–30 question online assessment on Microsoft Learn within the six months before expiry. Fundamentals certifications such as AZ-900 don't expire.
+Q: What does the AI-300 exam voucher cost?
+A: The AI-300 voucher is USD $165 in the United States, or around £128 in the UK. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking. Renewal itself is free, but it happens every year.
+Q: How soon can I resit AI-300 after a fail?
+A: The wait depends on your attempt number, and every attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Can I revise for AI-300 without a connection?
+A: Yes — the whole loop stays on your device: answering questions, scoring them, and building the readiness prediction. There's no account to sign into, and your study history stays local unless you switch on private iCloud sync.
+Q: Is Azure Mastery free to try for AI-300?
+A: Yes — the app is free to download, with a free allowance of AI-300 questions so you can try every feature. The full bank of 362 AI-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
 Page last modified: 2026-08-23
@@ -494,24 +494,24 @@ Exam domains:
   - Develop Multi-Agent Solutions in Azure (30–35%)
   - Evaluate, Optimize, and Monitor Multi-Agent Solutions (20–25%)
   - Secure, Govern, and Deploy Multi-Agent Solutions (20–25%)
-Q: How much does the AI-500 exam cost?
-A: Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee.
-Q: Does the AI-500 certification expire?
-A: Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the AI-500 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AI-500?
-A: Allow six to ten weeks of focused study if you already build agentic solutions on Microsoft Foundry with Python. Spend longer if orchestration frameworks, Model Context Protocol, agent identity and RBAC, or evaluation and observability tooling are new to you. This is an expert-level exam that expects hands-on production experience, not just familiarity — Azure Mastery's readiness gauge helps you decide when to schedule it.
 Q: AI-500 vs AI-103 — which do I need?
-A: Different tiers and different scope. AI-103 (Azure AI Apps and Agents Developer Associate) validates building AI apps and single agents on Microsoft Foundry with Python — models, retrieval, vision, speech, and one agent talking to its own tools. AI-500 (Multi-Agent AI Solutions Expert) is the expert tier above it: architecting, orchestrating, evaluating, and securing systems where multiple agents coordinate in production, including Microsoft Agent Framework orchestration patterns, Agent2Agent and MCP integration, and per-agent identity and guardrails. The dependency is also formal: Microsoft lists the Azure AI Apps and Agents Developer Associate certification (earned via AI-103) as a required prerequisite, so you receive the Multi-Agent AI Solutions Expert credential only once you hold it and pass AI-500.
+A: Different tiers. AI-103 (AI Apps and Agents Developer Associate) builds AI apps and single agents on Foundry with Python. AI-500 (Multi-Agent AI Solutions Expert) is the expert tier above it: orchestrating, evaluating, and securing multi-agent production systems. Microsoft requires AI-103 as a formal prerequisite before issuing the AI-500 credential.
+Q: Is there a formal prerequisite for AI-500?
+A: Yes — AI-500 enforces a hard prerequisite gate. You must already hold the Azure AI Apps and Agents Developer Associate certification, earned via AI-103, before Microsoft issues the Multi-Agent AI Solutions Expert credential, even if you pass AI-500 first. Plan the AI-103 route first if you don't hold it.
 Q: AI-500 vs AB-100 — architect or engineer?
-A: Different roles at a similar level. AB-100 (Agentic AI Business Solutions Architect) is the business-architecture view of agentic AI — ROI analysis, build-vs-buy across Copilot Studio, Microsoft Foundry, and Power Platform, governance, and ALM, aimed at architects who plan agentic solutions across an enterprise. AI-500 is the hands-on engineering expert exam — designing, coding, evaluating, and securing the multi-agent systems themselves, with Microsoft Agent Framework, MCP servers, orchestration patterns, and agent identity. Pick AB-100 if you're deciding which agentic patterns a business should adopt; pick AI-500 if you're the one building and running them.
-Q: Is Azure Mastery free for AI-500 prep?
-A: The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AI-500 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AI-500 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Different roles at a similar level. AB-100 (Agentic AI Business Solutions Architect) is the business-architecture view — ROI, build-vs-buy, governance. AI-500 is the hands-on engineering exam — designing, evaluating, and securing multi-agent systems with the Agent Framework. Pick AB-100 to decide patterns; AI-500 to build them.
+Q: What format is the AI-500 exam?
+A: AI-500, like most Expert exams, follows Microsoft's general 40–60 question format. Azure Mastery's bank leans on single-answer and scenario-based questions, with multi-select for evaluator selection and drag-and-match plus hot-area for orchestration ordering — original content throughout.
+Q: What happens if I don't pass AI-500 the first time?
+A: A 24-hour wait applies to your first retake, extending to 14 days for a second or third attempt. Five attempts is the ceiling Microsoft allows in a rolling 12-month window, and each one is booked and paid for separately.
+Q: Does the AI-500 credential need annual renewal?
+A: Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free: a short online assessment on Microsoft Learn within the six months before expiry. Fundamentals certifications such as AZ-900 are different — those don't expire.
+Q: What's the AI-500 exam fee, and does the beta change it?
+A: Microsoft prices AI-500 by proctoring region and hasn't published one flat beta fee — check the official exam page for your local price. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite. Renewal is a free annual online assessment.
+Q: Will AI-500 revision work without Wi-Fi?
+A: Yes. Nothing about practising AI-500 needs a live connection — questions, scoring, and the Exam IQ readiness read all happen on-device. No sign-up, no account; your data sits on your device, and iCloud sync is opt-in.
+Q: Does Azure Mastery let me try AI-500 before paying?
+A: Yes. The app is free to download, with a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/ai-900/ — AI-900 Retired Exam & AI-901 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -789,24 +789,26 @@ Exam domains:
   - Monitor, configure, and optimize database resources (20–25%)
   - Configure and manage automation of tasks (15–20%)
   - Plan and configure a high availability and disaster recovery (HA/DR) environment (20–25%)
-Q: How much does the DP-300 exam cost?
-A: The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning.
-Q: Does the DP-300 certification expire?
-A: Yes. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the DP-300 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for DP-300?
-A: Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready.
 Q: DP-300 vs DP-900 — which should I take first?
-A: DP-900 first if databases aren't already your day job. DP-900 (Microsoft Azure Data Fundamentals) teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.
+A: DP-900 first if databases aren't already your day job. DP-900 teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to run Azure SQL workloads in production.
+Q: Auto-failover group or active geo-replication — which does DP-300 want?
+A: Pick an auto-failover group when the requirement is automatic, transparent failover behind a stable listener endpoint. Pick active geo-replication when the requirement is manual control over failover timing, or more secondaries than a failover group allows. Naming the wrong one for a stated recovery-time requirement is one of the exam's most repeated misses.
+Q: What format does the DP-300 exam use?
+A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank runs a similar spread: mostly single-answer multiple choice, a real slice of scenario-based, drag-to-match, and multi-select questions, and a smaller mix of dropdown-select, yes/no, and hotspot items. T-SQL snippets and config JSON appear throughout.
+Q: What's the DP-300 exam fee, and does renewal cost extra?
+A: The voucher is USD $165 in the United States, or around £128 in the UK. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking. Renewal itself is free, but it happens every year.
+Q: Is a DP-300 pass permanent, or does it lapse?
+A: It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free 25–30 question online assessment on Microsoft Learn within the six months before expiry. Fundamentals certs such as AZ-900 are different — those don't expire at all.
+Q: Query Store or Extended Events — which does DP-300 expect for troubleshooting?
+A: Query Store answers a regression over time — a query that used to run fast and now doesn't. Extended Events answers a live, event-level symptom, such as a deadlock, right now. DP-300 names the symptom, not the tool, so matching the two is the real skill.
 Q: DP-300 vs AI-300 — different data roles?
-A: They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role.
-Q: Is Azure Mastery free for DP-300 prep?
-A: The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does DP-300 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a DP-300 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads in production. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role you're in.
+Q: I need to resit DP-300 — how soon can I book again?
+A: Each retake needs its own voucher, and the wait depends on your attempt number. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Can I try Azure Mastery's DP-300 bank before paying?
+A: Yes — the app is free to download, with a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+Q: Does DP-300 revision still work with no connection?
+A: Yes. The whole loop stays on-device: practice, scoring, and the readiness read. No signal, no problem, and no account is needed either. Your study data stays local unless you switch on optional private iCloud sync.
 
 ## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
 Page last modified: 2026-08-09
@@ -814,24 +816,26 @@ Exam domains:
   - Implement and manage an analytics solution (30–35%)
   - Ingest and transform data (30–35%)
   - Monitor and optimize an analytics solution (30–35%)
-Q: How much does the DP-700 exam cost?
-A: The DP-700 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.
-Q: Does the DP-700 certification expire?
-A: Yes. DP-700 earns the Microsoft Certified: Fabric Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as DP-900, which never expire.)
-Q: What is the DP-700 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for DP-700?
-A: DP-700 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL, PySpark, or KQL before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
 Q: DP-700 vs DP-600 — which should I take?
-A: Both are Microsoft Fabric associate certifications, and your role should decide. DP-600 (Fabric Analytics Engineer) leans toward analytics — semantic models, Power BI, DAX, and serving data for reporting. DP-700 (Fabric Data Engineer) leans toward data engineering — ingestion and transformation with pipelines, Dataflows Gen2, notebooks and PySpark, real-time streaming with Eventstream and KQL, plus Lakehouse and Warehouse optimisation. If you build the pipelines that load and shape data, take DP-700; if you model and serve it for analytics, take DP-600. Many engineers eventually earn both.
+A: Both are Fabric associate certifications, and your role decides. DP-600 (Analytics Engineer) leans toward semantic models, Power BI, and DAX. DP-700 (Data Engineer) leans toward ingestion and transformation — pipelines, Dataflows Gen2, notebooks, PySpark, Eventstream, and KQL. Build the pipelines, take DP-700; model and serve the data, take DP-600.
+Q: OneLake shortcut or mirroring — how does DP-700 test the choice?
+A: A shortcut references data in place — no copy, no ongoing compute cost — for reading data another workspace already owns. Mirroring actually replicates the source into Fabric's Delta format, near-real time, for when engines need to query it directly. DP-700 names the access pattern, not the mechanism, so inferring it is the real skill.
+Q: What question formats appear on DP-700?
+A: Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's bank runs a similar mix: mostly single-answer multiple choice, a meaningful mix of scenario-based and multi-select questions, and a smaller set of yes/no, dropdown, hotspot, drag-to-match, and ordering items, plus a handful of case studies.
+Q: What's the DP-700 voucher price?
+A: The DP-700 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Learn profile before booking.
+Q: Once earned, does DP-700 need renewing?
+A: Yes. DP-700 earns the Fabric Data Engineer Associate credential, and like all Microsoft associate certifications it needs renewing every year. Renewal is free: a short online assessment on Microsoft Learn, available in the six months before expiry. Fundamentals certs such as DP-900 never expire.
+Q: Dataflow Gen2 or a Data pipeline — which does DP-700 expect for a given ingestion task?
+A: Dataflow Gen2 is the low-code, Power Query choice for transformation-heavy loads. A Data pipeline is the orchestration choice for scheduling and chaining activities across sources. DP-700 scenarios describe the requirement, transform-in-place or orchestrate-and-schedule, rather than naming the tool, so spotting which one it implies is the real skill.
 Q: Is DP-700 a technical, hands-on exam?
-A: Yes. DP-700 expects you to reason about real data-engineering work in Microsoft Fabric — writing and debugging T-SQL, PySpark, and KQL; designing full and incremental load patterns; working with Delta tables, OneLake shortcuts, mirroring, and pipelines; and optimising Lakehouse, Warehouse, and Spark performance. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
-Q: Is Azure Mastery free for DP-700 prep?
-A: The app is free to download and includes a free allowance of DP-700 questions so you can try every feature. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does DP-700 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a DP-700 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes. DP-700 expects real data-engineering work in Fabric: writing T-SQL, PySpark, and KQL; designing load patterns; working with Delta tables, shortcuts, mirroring, and pipelines; and optimising Lakehouse and Spark performance. It's a working engineer's exam, not a conceptual overview. Try DP-900 first for a vocabulary-level on-ramp.
+Q: I failed DP-700 — how long until I can retake it?
+A: Each retake needs a fresh voucher, and the wait grows with every attempt. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Can I try Azure Mastery's DP-700 bank before paying?
+A: Yes — the app is free to download, with a free allowance of DP-700 questions so you can try every feature. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+Q: Does DP-700 practice hold up without a connection?
+A: Yes. The app doesn't need a connection for question practice, scoring, or the readiness prediction — all of that runs on-device. No account is required, and your data stays on your device unless you switch on optional iCloud sync.
 
 ## /exams/dp-750/ — DP-750 Practice Questions — 442 Qs for Databricks (2026)
 Page last modified: 2026-08-09
@@ -840,24 +844,26 @@ Exam domains:
   - Secure and govern Unity Catalog objects (15–20%)
   - Prepare and process data (30–35%)
   - Deploy and maintain data pipelines and workloads (30–35%)
-Q: How much does the DP-750 exam cost?
-A: The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.
-Q: Does the DP-750 certification expire?
-A: Yes. DP-750 earns the Microsoft Certified: Azure Databricks Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as DP-900, which never expire.)
-Q: What is the DP-750 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for DP-750?
-A: DP-750 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL and Python before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data in Azure Databricks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.
 Q: DP-750 vs DP-700 — which should I take?
-A: Both are associate-level Microsoft data-engineering certifications, but they target different platforms. DP-750 (Azure Databricks Data Engineer) is for teams building on Azure Databricks — Unity Catalog governance, Lakeflow Jobs and Declarative Pipelines, Delta tables, Spark and Photon tuning, and Databricks Asset Bundles. DP-700 (Fabric Data Engineer) covers the same data-engineering craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream, Lakehouse and Warehouse. Pick the exam that matches your platform: if your organisation runs Azure Databricks, take DP-750; if it standardises on Microsoft Fabric, take DP-700. Many engineers eventually earn both.
-Q: Is DP-750 a technical, hands-on exam?
-A: Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
-Q: Is Azure Mastery free for DP-750 prep?
-A: The app is free to download and includes a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does DP-750 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a DP-750 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Both are associate Microsoft data-engineering certs, but the platform differs. DP-750 (Databricks Data Engineer) covers Unity Catalog, Lakeflow, Delta tables, and Spark tuning on Azure Databricks. DP-700 (Fabric Data Engineer) covers the same craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream. Pick by platform; many engineers earn both.
+Q: Liquid clustering or partitioning — which does DP-750 expect for a Delta table?
+A: Liquid clustering is the current recommendation when query patterns change over time or cardinality is high; it re-clusters incrementally without a full rewrite. Partitioning still suits low-cardinality columns with stable filters. DP-750 describes the query pattern, not the strategy name, so inferring the right approach is the real skill.
+Q: DP-750 vs DP-800 — different data engineering roles?
+A: Both are Microsoft associate certs for hands-on data work, but the platform differs. DP-750 (Databricks Data Engineer) builds production pipelines on Azure Databricks — Unity Catalog, Lakeflow, Delta tables, Spark tuning. DP-800 (SQL AI Developer) builds AI-enabled database solutions — T-SQL, embeddings, vector search, RAG. Choose by platform and role.
+Q: What question formats does DP-750 use?
+A: Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's bank runs a similar mix: mostly single-answer multiple choice, a real share of scenario-based questions, and a smaller mix of drag-to-match, yes/no, dropdown-select, and drag-and-drop items — Unity Catalog grants and pipeline YAML appear throughout.
+Q: What's the DP-750 voucher price?
+A: The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Learn profile before booking.
+Q: Does a DP-750 pass need annual renewal?
+A: Yes. DP-750 earns the Azure Databricks Data Engineer Associate credential, and like all Microsoft associate certifications it needs renewing every year. Renewal is free: a short online assessment on Microsoft Learn, available in the six months before expiry. Fundamentals certs such as DP-900 never expire.
+Q: Lakeflow Job or Declarative Pipeline — how does DP-750 tell them apart?
+A: A Lakeflow Job orchestrates arbitrary tasks, notebooks, SQL, other jobs, on a schedule or trigger, useful when the work isn't purely a transform flow. A Declarative Pipeline expresses a transform graph with dependency management and data-quality expectations built in. Confusing the two is a recurring DP-750 miss.
+Q: I need to resit DP-750 — what's the wait?
+A: How long you wait scales with your attempt count, and each one needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Can I try Azure Mastery's DP-750 bank before paying?
+A: Yes — the app is free to download, with a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+Q: Does DP-750 revision work without a connection?
+A: Yes. Question practice, scoring, and the readiness prediction all run locally on your device, so studying with no signal works the same as with a full connection. No account is needed, and sync via iCloud stays optional and private.
 
 ## /exams/dp-800/ — DP-800 Practice Questions — 393 Qs for SQL AI Developer (2026)
 Page last modified: 2026-08-09
@@ -865,24 +871,26 @@ Exam domains:
   - Design and develop database solutions (35–40%)
   - Secure, optimize, and deploy database solutions (35–40%)
   - Implement AI capabilities in database solutions (25–30%)
-Q: How much does the DP-800 exam cost?
-A: The DP-800 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-800 is an Associate-tier credential and requires annual renewal (free, online), so factor that into long-term cost planning.
-Q: Does the DP-800 certification expire?
-A: Yes. Microsoft Associate certifications including DP-800 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active building on SQL Server, Azure SQL, and SQL in Microsoft Fabric. (Fundamentals certifications such as DP-900 are different — those don't expire.)
-Q: What is the DP-800 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design.
-Q: How long should I study for DP-800?
-A: Most candidates pass DP-800 after six to ten weeks of focused study, assuming working T-SQL fluency and basic awareness of embeddings and vector search. If T-SQL is new to you, plan for three months — the exam expects you to write CTEs, window functions, JSON shaping queries, and regex/fuzzy-match patterns from memory, not just describe what they do. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 750 or higher with reasonable confidence.
 Q: DP-800 vs DP-300 — which should I take?
-A: Different jobs. DP-300 (Microsoft Azure Database Administrator Associate) is for DBAs — running, securing, tuning, and recovering Azure SQL workloads (Azure SQL Database, Managed Instance, SQL on VM) including HA/DR, performance tuning, and automation. DP-800 is for SQL developers bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL. DP-300 administers; DP-800 develops. Many SQL pros take both because AI-enabled apps need both DBA discipline and developer fluency.
-Q: DP-800 vs AI-103 — what's the difference?
-A: Different stacks. AI-103 is for building generative AI solutions and agents with Microsoft Foundry, including model selection, orchestration, tools, knowledge sources, and operational readiness. DP-800 is for SQL developers bringing AI primitives such as embeddings, vector indexes, RAG, and structured outputs directly into SQL Server, Azure SQL, and Microsoft Fabric with T-SQL. AI-103 is application and agent-layer; DP-800 is data-layer.
-Q: Is Azure Mastery free for DP-800 prep?
-A: The app is free to download and includes a free allowance of DP-800 questions so you can try every feature. The full bank of 393 DP-800 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does DP-800 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a DP-800 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Different jobs. DP-300 (Database Administrator Associate) runs, secures, tunes, and recovers Azure SQL workloads — HA/DR, performance, automation. DP-800 is for SQL developers bringing AI primitives, embeddings, vector search, RAG, into the data tier through T-SQL. DP-300 administers; DP-800 develops. Many SQL pros take both.
+Q: Dynamic Data Masking or Always Encrypted — which does DP-800 want for a given scenario?
+A: Dynamic Data Masking hides column values from ordinary users at query time, but a DBA can still see plaintext. Always Encrypted keeps data encrypted client-side, so even a DBA with full access cannot read it. Masking suits ordinary users; Always Encrypted suits protecting data from privileged insiders.
+Q: What question formats appear on DP-800?
+A: Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's bank runs a similar mix: mostly single-answer multiple choice, a real slice of drag-to-match and dropdown-select items, and a smaller mix of yes/no, drag-and-drop, and hotspot questions.
+Q: What's the DP-800 exam fee, and is renewal extra?
+A: The DP-800 voucher is USD $165 in the United States, or around £128 in the UK. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking. Renewal itself is free, but it happens every year.
+Q: Does a DP-800 pass need renewing, or is it permanent?
+A: It needs renewing. Associate certifications including DP-800 expire annually; renewal is a free online assessment on Microsoft Learn within the six months before expiry. Fundamentals certs such as DP-900 are different — those don't expire at all.
+Q: Vector index or full-text index — how does DP-800 test the choice?
+A: A vector index suits semantic retrieval, finding rows whose embeddings are close even when the wording differs. A full-text index suits keyword and phrase matching where exact terms matter. DP-800 checks whether you can name the single index type a stated requirement calls for.
+Q: DP-800 vs PL-300 — different data roles?
+A: They sit on opposite ends of the data stack. DP-800 brings AI primitives, embeddings, vector search, RAG, into the data tier through T-SQL. PL-300 (Power BI Data Analyst) models and publishes data with Power BI and DAX. Choose based on whether your role writes the data layer or reports on it.
+Q: I failed DP-800 — how soon can I book a retake?
+A: Every attempt needs its own voucher, and the wait grows the more times you've sat it. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Can I try Azure Mastery's DP-800 bank before paying?
+A: Yes — the app is free to download, with a free allowance of DP-800 questions so you can try every feature. The full bank of 393 DP-800 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+Q: Can I revise DP-800 with no data connection?
+A: Yes. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync.
 
 ## /exams/dp-900/ — DP-900 Practice Questions — 346 Qs for Data Basics (2026)
 Page last modified: 2026-08-09

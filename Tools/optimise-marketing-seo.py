@@ -41,6 +41,7 @@ SEO_UPDATED = "2026-08-09"
 SEO_UPDATED_OVERRIDES = {
     # New pages launched after the 2026-08-09 site-wide SEO pass.
     "AB-650": "2026-08-23",
+    "AI-500": "2026-08-23",
     # Wave-1 de-templating pass (Task B, final-review fix wave).
     "AI-103": "2026-09-04",
     "AB-620": "2026-09-04",
@@ -50,35 +51,19 @@ SEO_UPDATED_OVERRIDES = {
     "AZ-104": "2026-09-04",
     "AZ-900": "2026-09-04",
     # Wave-2a de-templating pass (fundamentals cluster).
-    "DP-900": "2026-09-05",
-    "PL-900": "2026-09-05",
-    "SC-900": "2026-09-05",
-    "AB-900": "2026-09-05",
+    "DP-900": "2026-09-06",
+    "PL-900": "2026-09-06",
+    "SC-900": "2026-09-06",
+    "AB-900": "2026-09-06",
     # Wave-2a de-templating pass (security cluster).
-    "SC-100": "2026-09-05",
-    "SC-200": "2026-09-05",
-    "SC-300": "2026-09-05",
+    "SC-100": "2026-09-06",
+    "SC-200": "2026-09-06",
+    "SC-300": "2026-09-06",
     # Wave-2a de-templating pass (data cluster).
-    "DP-300": "2026-09-05",
-    "DP-700": "2026-09-05",
-    "DP-750": "2026-09-05",
-    "DP-800": "2026-09-05",
-    # Wave-2b de-templating pass (AI/BI cluster). W4 review fixes (18c9997)
-    # substantively edited these on 09-06; dateModified had been left at 09-05.
-    "AI-300": "2026-09-06",
-    "AI-500": "2026-09-06",
-    "AI-901": "2026-09-06",
-    "PL-300": "2026-09-06",
-    # Wave-2b de-templating pass (Azure role cluster).
-    "AZ-305": "2026-09-06",
-    "AZ-400": "2026-09-06",
-    "AZ-700": "2026-09-06",
-    # Wave-2b de-templating pass (Copilot/GitHub cluster, Task W6).
-    "AB-410": "2026-09-06",
-    "AB-650": "2026-09-06",
-    "AB-731": "2026-09-06",
-    "GH-300": "2026-09-06",
-    "GH-900": "2026-09-06",
+    "DP-300": "2026-09-06",
+    "DP-700": "2026-09-06",
+    "DP-750": "2026-09-06",
+    "DP-800": "2026-09-06",
 }
 RETIRED_EXAMS = {
     "AI-900": {
@@ -101,14 +86,13 @@ RETIRED_EXAMS = {
         "replacement": "AI-200",
         "replacement_label": "Microsoft's replacement developer course and current AI cloud route",
     },
-}
-RETIRING_EXAMS = {
     "AZ-500": {
         "date": "31 August 2026",
         "replacement": "SC-500",
         "replacement_label": "Microsoft's Cloud and AI Security Engineer successor",
     },
 }
+RETIRING_EXAMS = {}
 ACTIVE_SEO = {
     "AB-650": {
         "description": (
@@ -223,10 +207,10 @@ ACTIVE_SEO = {
     "AI-200": {
         "title": 'AI-200 Practice Questions — {count} Qs for AI Developer (2026)',
         "description": (
-            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+            '{count} AI-200 practice questions for Azure AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
         ),
         "social_description": (
-            '{count} AI-200 practice questions for Microsoft AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
+            '{count} AI-200 practice questions for Azure AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.'
         ),
     },
     "AI-300": {

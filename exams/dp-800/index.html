@@ -245,7 +245,7 @@
             "name": "I failed DP-800 — how soon can I book a retake?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design."
+              "text": "First retake: wait 24 hours. Second and third: 14 days each. Microsoft won't allow more than five attempts in a rolling 12-month period, and each attempt needs a new voucher. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design."
             }
           },
           {
@@ -261,7 +261,7 @@
             "name": "Can I revise DP-800 with no data connection?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
+              "text": "You can. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync."
             }
           }
         ]
@@ -507,7 +507,7 @@
                 <li>Design and implement SQL solutions by using AI-assisted tools</li>
               </ul>
               <p>
-                The schema and code foundation. Candidates design tables and specialised table types — column store, in-memory, temporal, ledger, external, and graph — plus JSON columns, constraints, sequences, and partitioning, then implement programmability objects (views, scalar and table-valued functions, stored procedures, triggers) and know when each is an anti-pattern. Advanced T-SQL covers CTEs, window functions, JSON shaping functions, regex and fuzzy-matching functions, graph MATCH queries, correlated queries, and structured error handling. The domain closes with AI-assisted development — configuring GitHub Copilot, Copilot in Fabric, MCP tool options, and Copilot instruction files, and interpreting the security impact of each.
+                The schema and code foundation. Candidates design tables and specialised table types (column store, in-memory, temporal, ledger, external, and graph) plus JSON columns, constraints, sequences, and partitioning, then implement programmability objects (views, scalar and table-valued functions, stored procedures, triggers) and know when each is an anti-pattern. Advanced T-SQL covers CTEs, window functions, JSON shaping functions, regex and fuzzy-matching functions, graph MATCH queries, correlated queries, and structured error handling. The domain closes with AI-assisted development: configuring GitHub Copilot, Copilot in Fabric, MCP tool options, and Copilot instruction files, and interpreting the security impact of each.
               </p>
             </div>
           </details>
@@ -589,7 +589,7 @@
         Azure Mastery ships with <strong>393 DP-800 practice questions</strong>, every one written specifically against the current (12 March 2026) skills outline. Each question carries a domain tag mapped to the official three domains (design and develop database solutions, secure/optimise/deploy database solutions, AI capabilities in database solutions), so you always know which area you're being tested on and where your weak spots are clustered. The overwhelming majority are single-answer multiple choice, with a real slice of drag-to-match and dropdown-select items, plus a smaller mix of yes/no, drag-and-drop, and hotspot questions — T-SQL snippets, JSON shaping, vector index DDL, and RAG flow stubs appear throughout, so reading code matters as much as recalling a feature name.
       </p>
       <p>
-        The on-device <strong>Exam IQ</strong> engine predicts your DP-800 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
+        After about 30 answers, <strong>Exam IQ</strong> has enough of your DP-800 history to forecast a score on-device, confidence range included ("786 ±37, 68% confidence" is typical this early). It names the actual topic behind a low number too, a vector-search or data-protection distinction, say, instead of telling you to study more.
       </p>
       <p>
         The adaptive <strong>study plan</strong> rebuilds itself from your answer history and leans hardest on designing and developing database solutions and on securing, optimising, and deploying them — the two domains Microsoft weights heaviest at 35–40% each, ahead of the smaller AI domain. Get an Always Encrypted vs Dynamic Data Masking scenario wrong? You'll see another data-protection-choice question in the next session. Master "full-text vs vector vs hybrid search with reciprocal rank fusion" three sessions running and the engine backs off, surfacing fresh JSON_MODIFY or SQL Database Projects scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
@@ -604,10 +604,10 @@
         DP-800's hardest questions rarely test whether you know a feature exists — they test whether you picked the right one of two similar-looking features. <strong>Answer Coach</strong> is aimed squarely at that gap: choose Dynamic Data Masking when a scenario actually needed Always Encrypted, or the wrong distance metric for a normalised embedding set, and it names the exact boundary you crossed and the rule for next time, rather than only confirming the correct pick. Some candidates want the explanation the instant they submit; others prefer to finish a whole session and review every miss together — both paths keep the note pinned to its question afterwards. Authored guidance covers every question, and supported devices can additionally re-word one on-device once grounding checks pass.
       </p>
       <p>
-        During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
+        <strong>Aura</strong> adapts what it recommends through your first week of DP-800 practice, learning from each session as it goes. You get a brief recap at the end of every one: what changed, what to focus on, and the next step.
       </p>
       <p>
-        Everything essential runs <strong>on-device</strong>. Your answer history, readiness gauge, and coaching stay private. Optional sync uses your private iCloud account; there is no Azure Mastery account, tracking, or external processing server.
+        Your DP-800 answer history, readiness gauge, and Answer Coach notes stay on-device unless you turn on iCloud sync through your own account. There's no Azure Mastery account to sign into, nothing tracked, and no external server handling your data.
       </p>
     </section>
 
@@ -815,7 +815,7 @@
         <details class="faq">
           <summary>I failed DP-800 — how soon can I book a retake?</summary>
           <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design.</p>
+            <p>First retake: wait 24 hours. Second and third: 14 days each. Microsoft won't allow more than five attempts in a rolling 12-month period, and each attempt needs a new voucher. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design.</p>
           </div>
         </details>
         <details class="faq">
@@ -827,7 +827,7 @@
         <details class="faq">
           <summary>Can I revise DP-800 with no data connection?</summary>
           <div class="faq__answer">
-            <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+            <p>You can. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync.</p>
           </div>
         </details>
       </div>

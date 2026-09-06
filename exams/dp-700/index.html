@@ -475,11 +475,21 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the DP-700 exam?</h2>
       <p>
-        DP-700 — <strong>Implementing Data Engineering Solutions Using Microsoft Fabric</strong> — earns the Microsoft Certified: Fabric Data Engineer Associate credential. It's a role-based, hands-on exam for working data engineers who ingest and transform data and build analytics solutions on Microsoft Fabric. The audience profile assumes you're already fluent in at least one of <strong>SQL, PySpark, or KQL</strong> and comfortable with data loading patterns, data architectures, and orchestration. You'll work alongside analytics engineers, architects, analysts, and administrators to design and deploy data engineering solutions.
+        DP-700 — <strong>Implementing Data Engineering Solutions Using Microsoft Fabric</strong> — earns the Microsoft Certified: Fabric Data Engineer Associate credential. It's a role-based, hands-on exam for working data engineers who ingest and transform data and build analytics solutions on Microsoft Fabric.
       </p>
       <p>
-        This is not a vocabulary exam. DP-700 expects you to reason about real engineering decisions: <strong>full vs incremental load</strong> patterns; choosing between <strong>Dataflow Gen2, pipelines, and notebooks</strong>; transforming data with <strong>PySpark, T-SQL, and KQL</strong>; wiring up <strong>OneLake shortcuts</strong> and database <strong>mirroring</strong>; processing streams with <strong>Eventstream and Spark Structured Streaming</strong>; securing data with <strong>row-, column-, and object-level security</strong> and OneLake security; and optimising <strong>Lakehouse, Warehouse, pipeline, and Spark</strong> performance.
+        The audience profile assumes you're already fluent in at least one of <strong>SQL, PySpark, or KQL</strong> and comfortable with data loading patterns, data architectures, and orchestration. You'll work alongside analytics engineers, architects, analysts, and administrators to design and deploy data engineering solutions.
       </p>
+      <p>This is not a vocabulary exam. DP-700 expects you to reason about real engineering decisions, covering:</p>
+      <ul>
+        <li><strong>Full vs incremental load</strong> patterns</li>
+        <li>Choosing between <strong>Dataflow Gen2, pipelines, and notebooks</strong></li>
+        <li>Transforming data with <strong>PySpark, T-SQL, and KQL</strong></li>
+        <li>Wiring up <strong>OneLake shortcuts</strong> and database <strong>mirroring</strong></li>
+        <li>Processing streams with <strong>Eventstream and Spark Structured Streaming</strong></li>
+        <li>Securing data with <strong>row-, column-, and object-level security</strong> and OneLake security</li>
+        <li>Optimising <strong>Lakehouse, Warehouse, pipeline, and Spark</strong> performance</li>
+      </ul>
       <p>
         Microsoft refreshed the DP-700 skills outline on <strong>21 July 2026</strong>. Every question in Azure Mastery's DP-700 bank is mapped to the current outline — no leftover questions on retired features. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-700" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -548,8 +558,8 @@
                 <li>Ingest and transform streaming data</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests picking a load pattern and a transform tool that fit the stated data volume and refresh window.</li>
-                <li>Candidates reach for a full load by habit when the scenario's volume and refresh window call for incremental.</li>
+                <li>Picking a load pattern and a transform tool that fit the stated data volume and refresh window is the core skill here.</li>
+                <li>A full load often gets reached for by habit when the scenario's volume and refresh window call for incremental.</li>
                 <li>Match Dataflow Gen2, a notebook, T-SQL, or KQL to the skillset and store the scenario names, not the flashiest option.</li>
               </ul>
             </div>
@@ -567,8 +577,8 @@
                 <li>Optimize performance</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests tracing a failure to the specific Fabric item, pipeline, notebook, or shortcut named in the scenario.</li>
-                <li>Candidates under-revise this domain relative to its weight, since its breadth outpaces how often it feels tested.</li>
+                <li>Tracing a failure to the specific Fabric item, pipeline, notebook, or shortcut named in the scenario is what's actually graded.</li>
+                <li>This domain gets under-revised relative to its weight, since its breadth outpaces how often it feels tested.</li>
                 <li>Learn the Lakehouse tuning levers by name: V-Order, OPTIMIZE, VACUUM, and partitioning each fix a different symptom.</li>
               </ul>
             </div>
@@ -588,35 +598,35 @@
         <article class="trap">
           <h3>Lakehouse, Warehouse, and Eventhouse are built for different workloads, not ranked by preference.</h3>
           <ul>
-            <li>The exam is testing whether you can match files-and-Spark, relational T-SQL, or streaming telemetry to the right store.</li>
+            <li>Files-and-Spark, relational T-SQL, and streaming telemetry each point to one specific store, never a matter of preference.</li>
             <li>Read the scenario for its workload shape first, then pick the Fabric item built to hold that shape.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>A shortcut, mirroring, and a Copy activity move data in three different ways.</h3>
           <ul>
-            <li>The exam is testing whether "no duplicated storage" points you at a shortcut or mirroring rather than a Copy activity.</li>
+            <li>A requirement for "no duplicated storage" points at a shortcut or mirroring, never at a Copy activity.</li>
             <li>Check whether the requirement forbids a physical copy before you reach for a pipeline Copy activity.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Dataflow Gen2, a notebook, a pipeline, T-SQL, and KQL each own a different kind of job.</h3>
           <ul>
-            <li>The exam is testing whether you pick the tool that matches the stated skillset and store, not the most powerful one.</li>
+            <li>The tool that matches the stated skillset and store wins here, whatever else looks more powerful.</li>
             <li>Name the store and the skill level in the scenario before choosing between low-code and code-first tools.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>A full load and an incremental load answer different volume and refresh constraints.</h3>
           <ul>
-            <li>The exam is testing whether large volume or a tight refresh window in the scenario points you at incremental loading.</li>
+            <li>Large volume or a tight refresh window in the scenario is what should point you at incremental loading.</li>
             <li>Look for a stated watermark or change-tracking need before assuming a full reload is good enough.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>RLS, CLS, OLS, and dynamic data masking each protect a different slice of the data.</h3>
           <ul>
-            <li>The exam is testing whether "hide the values but leave the row visible" points you at masking, not CLS or OLS.</li>
+            <li>A requirement to hide values while leaving the row visible names masking specifically, not CLS or OLS.</li>
             <li>Match the protection to what must disappear: rows, columns, the whole object, or just the displayed value.</li>
           </ul>
         </article>

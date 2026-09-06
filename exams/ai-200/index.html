@@ -477,7 +477,17 @@
         AI-200 is the <strong>Microsoft Certified: AI Cloud Developer Associate</strong> exam — the credential hiring managers expect when posting "AI Cloud Developer", "AI Platform Engineer", or "Vector Database Developer" roles. AI-200 covers building AI-powered cloud solutions on Azure: compute, vector storage, integration pipelines, security and identity for AI workloads, and operational monitoring.
       </p>
       <p>
-        AI-200 is <strong>hands-on and infrastructure-aware</strong>. It validates that you can develop AI-powered <em>compute solutions</em> (Azure Functions, Container Apps, AKS for AI workloads), develop for <em>vector-enabled storage and data</em> (Azure Cosmos DB vector search, Azure SQL vector capabilities, Azure AI Search vector indexes), implement <em>AI pipelines and integration</em> (Azure Data Factory, Logic Apps, event-driven patterns), implement <em>security and identity for AI</em> (managed identities, Microsoft Entra, Private Link, content filters), and monitor and optimise AI solutions (Application Insights, cost controls, performance tuning). Expect scenario questions that combine compute, data, and identity choices.
+        AI-200 is <strong>hands-on and infrastructure-aware</strong>. It covers:
+      </p>
+      <ul>
+        <li>Develop AI-powered <em>compute solutions</em> — Azure Functions, Container Apps, AKS for AI workloads</li>
+        <li>Develop for <em>vector-enabled storage and data</em> — Azure Cosmos DB vector search, Azure SQL vector capabilities, Azure AI Search vector indexes</li>
+        <li>Implement <em>AI pipelines and integration</em> — Azure Data Factory, Logic Apps, event-driven patterns</li>
+        <li>Implement <em>security and identity for AI</em> — managed identities, Microsoft Entra, Private Link, content filters</li>
+        <li>Monitor and optimise AI solutions — Application Insights, cost controls, performance tuning</li>
+      </ul>
+      <p>
+        Expect scenario questions that combine compute, data, and identity choices.
       </p>
       <p>
         Microsoft updated the AI-200 skills outline on <strong>5 May 2026</strong>, consolidating the previous five-domain structure into four. Every question in Azure Mastery's AI-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200" rel="noopener">learn.microsoft.com</a>.
@@ -497,7 +507,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 5 May 2026</p>
       <h2 class="display-small section-title">AI-200 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's <strong>5 May 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Four domains, with weights set by Microsoft's <strong>5 May 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -527,8 +537,8 @@
               </ul>
               <ul class="domain__tips">
                 <li>Hosts the compute layer AI workloads run on: building images, deploying to App Service, and orchestrating with Container Apps or AKS.</li>
-                <li>Candidates stand up a deployment and stop, but the exam expects troubleshooting via logs, events, and connectivity too.</li>
-                <li>Practise reading a live deployment's failure signal, not just the manifest that created it.</li>
+                <li>A deployment that's merely stood up isn't enough — the exam expects troubleshooting via logs, events, and connectivity too.</li>
+                <li>Practise reading a live deployment's failure signal as closely as the manifest that created it.</li>
               </ul>
             </div>
           </details>
@@ -564,8 +574,8 @@
               </ul>
               <ul class="domain__tips">
                 <li>Covers choosing Service Bus or Event Grid for a reliability or fan-out need, plus building serverless Azure Functions.</li>
-                <li>Candidates define each messaging service correctly but can't pick the one a described reliability need actually calls for.</li>
-                <li>Practise choosing between queued and event-driven patterns for a described AI workload, not just definitions.</li>
+                <li>Each messaging service gets defined correctly on its own, yet picking the one a described reliability need actually calls for trips people up.</li>
+                <li>Practise choosing between queued and event-driven patterns for a described AI workload — knowing the definitions alone isn't enough.</li>
               </ul>
             </div>
           </details>
@@ -603,7 +613,7 @@
           <h3>Studying the old five-domain outline</h3>
           <p>Candidates study an outdated five-domain outline and underweight how much Container Apps and data services now carry.</p>
           <ul>
-            <li>The exam is testing the consolidated four-domain outline from 5 May 2026, not the retired five-domain structure.</li>
+            <li>Container Apps and data services carry more combined weight under the current four-domain structure than under the retired one.</li>
             <li>Check your study source's date before trusting its domain breakdown — Foundry and AI Search are supporting context now, not headings.</li>
           </ul>
         </article>
@@ -611,7 +621,7 @@
           <h3>Treating every vector store the same way</h3>
           <p>Candidates apply generic "vector database" knowledge instead of a named service's own configuration surface.</p>
           <ul>
-            <li>The exam is testing whether you know Cosmos DB, PostgreSQL, and Managed Redis each tune vector search differently.</li>
+            <li>Cosmos DB, PostgreSQL, and Managed Redis each tune vector search through a different set of settings entirely.</li>
             <li>Match the scenario's named service to its own indexing or connection settings before answering.</li>
           </ul>
         </article>
@@ -619,7 +629,7 @@
           <h3>Service Bus vs Event Grid — reliability vs reaction</h3>
           <p>Candidates can't tell a guaranteed-delivery requirement from a many-subscribers reaction requirement.</p>
           <ul>
-            <li>The exam is testing whether you know Service Bus guarantees ordered delivery while Event Grid reacts to discrete events.</li>
+            <li>Service Bus guarantees ordered delivery to a queue; Event Grid reacts to discrete events across many subscribers.</li>
             <li>Pick Service Bus for a specific back-end queue, Event Grid for many subscribers reacting to a change.</li>
           </ul>
         </article>
@@ -627,7 +637,7 @@
           <h3>Key Vault secrets vs App Configuration settings</h3>
           <p>Candidates reach for Key Vault to store ordinary configuration that App Configuration was built to hold.</p>
           <ul>
-            <li>The exam is testing whether you know Key Vault holds secrets while App Configuration holds non-secret, centralised settings.</li>
+            <li>Key Vault is scoped to secrets; App Configuration is the intended home for non-secret, centralised settings.</li>
             <li>Ask whether the described value is confidential before choosing Key Vault over App Configuration.</li>
           </ul>
         </article>
@@ -635,7 +645,7 @@
           <h3>OpenTelemetry traces vs KQL log queries</h3>
           <p>Candidates pick a trace-based answer for an aggregate question, or the reverse.</p>
           <ul>
-            <li>The exam is testing whether you know tracing follows one request while KQL answers aggregate questions across many.</li>
+            <li>Tracing follows a single request end to end; a KQL query answers aggregate questions across many requests at once.</li>
             <li>Match "where did this one request fail" to tracing, and "what's the error rate" to a KQL query.</li>
           </ul>
         </article>

@@ -194,7 +194,7 @@
             "name": "How hard is the AI-901 exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-901 is a Fundamentals-level exam, so it stays conceptual rather than hands-on. There is no code to write and no model to configure. The difficulty comes from precision: you need to recognise which AI workload type a scenario describes, which of the six responsible-AI principles it touches, and which specific Azure AI service fits — computer vision questions in particular expect you to distinguish classification, detection, OCR, and facial detection cleanly. Most candidates with some general IT or cloud background pass after three to four weeks of focused study."
+              "text": "Conceptual rather than hands-on — no code to write, no model to configure. The difficulty is precision: recognising the workload type, the responsible-AI principle at play, and the specific Azure AI service, especially in computer vision, where classification, detection, OCR, and facial detection must stay distinct. Some IT background: three to four weeks."
             }
           },
           {
@@ -202,7 +202,7 @@
             "name": "How long should I study for AI-901?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Three to four weeks of steady study is realistic for most candidates, and it can compress to two if you already work with machine learning or generative AI tools. If AI concepts are genuinely new to you, allow six to eight weeks so the vocabulary across the exam domains has time to settle, especially the responsible-AI principles and the ML terminology in the second domain."
+              "text": "Three to four weeks for most candidates, compressing to two if you already work with ML or generative AI tools. Allow six to eight weeks if AI concepts are genuinely new, so the vocabulary — especially responsible-AI principles and ML terminology — has time to settle."
             }
           },
           {
@@ -210,7 +210,7 @@
             "name": "What is the passing score for AI-901?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map directly onto a fixed number of correct answers, and harder questions carry more weight. Treat 700 as a comfortable target to clear rather than a line to scrape over."
+              "text": "700 out of 1000. The score is scaled rather than a raw percentage, so it doesn't map directly onto a fixed number of correct answers, and harder questions carry more weight. Treat 700 as a comfortable target, not a line to scrape over."
             }
           },
           {
@@ -370,19 +370,37 @@
       <ol class="guide-plan">
         <li>
           <h3>AI workloads and responsible AI</h3>
-          <p>Identify the four common workload types — computer vision, natural language processing, document processing, and generative AI — from a scenario, then work through the six responsible-AI principles: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Questions often ask which single principle a situation violates.</p>
+          <p>Questions often ask which single principle a situation violates, so learn the six by name.</p>
+          <ul>
+            <li>Identify the four workload types from a scenario: computer vision, NLP, document processing, generative AI.</li>
+            <li>Fairness, reliability and safety, privacy and security, inclusiveness, transparency, accountability.</li>
+          </ul>
         </li>
         <li>
           <h3>Machine learning principles on Azure</h3>
-          <p>Learn the difference between regression, classification, and clustering, and between features and labels and training versus validation data. Add a basic sense of the Transformer architecture, then Azure Machine Learning's capabilities: automated ML, the data and compute services, and model management and deployment.</p>
+          <p>Pin down the vocabulary before the services.</p>
+          <ul>
+            <li>Regression versus classification versus clustering; features versus labels; training versus validation data.</li>
+            <li>A basic sense of the Transformer architecture.</li>
+            <li>Azure Machine Learning: automated ML, data and compute services, model management and deployment.</li>
+          </ul>
         </li>
         <li>
           <h3>Computer vision and NLP workloads</h3>
-          <p>Cover image classification versus object detection versus OCR versus facial detection, and which of Azure AI Vision or Azure AI Face handles each. Then the NLP taxonomy — key phrase extraction, entity recognition, sentiment analysis, speech recognition and synthesis — mapped to Azure AI Language for text and Azure AI Speech for spoken input and output.</p>
+          <p>Both domains reward the same skill: matching a scenario to the exact service.</p>
+          <ul>
+            <li>Image classification versus object detection versus OCR versus facial detection, mapped to Azure AI Vision or Azure AI Face.</li>
+            <li>Key phrase extraction, entity recognition, sentiment analysis, speech recognition and synthesis, mapped to Azure AI Language and Azure AI Speech.</li>
+          </ul>
         </li>
         <li>
           <h3>Generative AI and exam sharpening</h3>
-          <p>Finish with the largest domain: generative AI model scenarios such as chat, code generation, and summarisation, the services involved — Microsoft Foundry, Azure OpenAI Service — and the responsible-AI considerations specific to generative AI. Then focus your practice: drill your weakest domain daily and sit one or two full-length simulator runs before you book.</p>
+          <p>The largest domain, then the stretch where you prove it stuck.</p>
+          <ul>
+            <li>Generative AI scenarios (chat, code generation, summarisation), Microsoft Foundry, Azure OpenAI Service.</li>
+            <li>The responsible-AI considerations specific to generative AI.</li>
+            <li>Drill your weakest domain daily, then sit one or two full-length simulator runs before you book.</li>
+          </ul>
         </li>
       </ol>
     </section>
@@ -395,23 +413,38 @@
       <div class="topic-cards">
         <div class="topic-card">
           <h3>The six responsible-AI principles</h3>
-          <p>Fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability sound similar in the abstract, and questions test whether you can name the <em>one</em> principle a scenario is really about — a model that performs worse for one demographic group is a fairness problem, not a generic "ethics" issue. Learn each principle with a concrete example, not just its name.</p>
+          <ul>
+            <li>The six sound similar in the abstract, and questions test whether you can name the one a scenario is really about.</li>
+            <li>A model performing worse for one demographic group is a fairness problem, not a generic "ethics" issue — learn each with a concrete example.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Regression, classification, and clustering</h3>
-          <p>These three get confused constantly, particularly classification versus clustering: classification predicts a known label from labelled data, while clustering groups unlabelled data by similarity with no predefined categories. Regression predicts a continuous number rather than a category. Practise labelling scenarios with the right one of the three.</p>
+          <ul>
+            <li>These three get confused constantly, particularly classification versus clustering.</li>
+            <li>Classification predicts a known label from labelled data, clustering groups unlabelled data by similarity, regression predicts a continuous number.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Matching a computer-vision task to a service</h3>
-          <p>Image classification, object detection, optical character recognition, and facial detection are four distinct tasks, and Azure splits them across Azure AI Vision and Azure AI Face. Questions describe a use case — identifying products in a shelf photo versus extracting a tax reference from a scanned form — and expect the specific task and service, without hesitation.</p>
+          <ul>
+            <li>Four distinct tasks split across two services, and questions expect the specific task and service without hesitation.</li>
+            <li>Identifying products in a shelf photo is object detection via Azure AI Vision; extracting a tax reference from a scan is OCR via the same service.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>NLP scenario to the right Azure service</h3>
-          <p>Key phrase extraction, entity recognition, sentiment analysis, and translation route through Azure AI Language, while speech recognition and synthesis route through Azure AI Speech. The trap is a scenario mentioning both text and spoken input in one sentence — read for which stage of the pipeline the question is actually asking about.</p>
+          <ul>
+            <li>The trap is a scenario mentioning both text and spoken input in one sentence.</li>
+            <li>Key phrase extraction, entity recognition, sentiment analysis, and translation route through Azure AI Language; speech recognition and synthesis route through Azure AI Speech.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Generative AI's own responsible-AI considerations</h3>
-          <p>The largest domain is also the newest, and it repeats the responsible-AI theme with generative-AI-specific twists: hallucination, content filtering, and grounding responses in your own data don't apply the same way to a classic classification model. Do not assume week one's principles cover everything generative AI raises.</p>
+          <ul>
+            <li>The largest domain is also the newest, and it repeats the responsible-AI theme with its own twists.</li>
+            <li>Hallucination, content filtering, and grounding responses in your own data don't apply the same way to a classic classification model — don't assume week one's principles cover everything here.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -427,9 +460,9 @@
         Third, <strong>full-length simulation</strong>. A timed, mixed-domain run at the exam's real 45-minute pace is the only way to find out whether you can sustain quick recall across 40 to 60 questions back to back. Run at least one before you book, and review every wrong answer rather than just noting the score.
       </p>
       <div class="cta-panel">
-        <h3>Put your study plan into practice</h3>
+        <h3>Precision beats recognition</h3>
         <p>
-          Make Azure Mastery part of your study plan for AI-901. Answer original practice questions mapped to the published exam domains, get an on-device readiness score from Exam IQ, follow an adaptive study plan that targets your weak spots, and let knowledge-decay alerts tell you what to revise before you forget it. Use the Practice tab for a timed rehearsal before exam day. Study offline, with no account needed.
+          Azure Mastery writes a rationale for every option on every AI-901 question, so a wrong guess between classification and clustering, or vision and NLP, teaches you the distinction instead of just costing a mark. Exam IQ gives you an on-device readiness score with a confidence range, and the adaptive plan keeps circling back to your weak domain. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -444,15 +477,15 @@
     <section id="exam-day" class="container">
       <p class="label-eyebrow section-eyebrow">Exam day</p>
       <h2 class="display-small section-title">Tactics for exam day</h2>
-      <p>
-        If you are sitting online, run the system check the day before and clear your desk down to the surface, because the proctor will have you pan the camera around the room and put away anything within arm's reach. Arrive early whichever way you sit; a rushed start eats into the concentration precise recall needs.
-      </p>
-      <p>
-        With 45 minutes for 40 to 60 questions, you have well under a minute and a half per question, so keep moving rather than dwelling on any one of them. Use the <strong>mark-for-review</strong> flag on anything that makes you hesitate between two related terms, and come back to it once you have banked the easier marks. Unlike associate-level exams, AI-901 has no multi-question case studies, so every question stands alone and can be revisited freely before you submit.
-      </p>
-      <p>
-        Read each option carefully — the wrong answers are usually real Azure AI services that are simply the wrong fit, so precision matters more than quick elimination. The score is scaled: you need 700 out of 1000, not every question right, so an unfamiliar scenario is not a disaster. Flag it, make your best call, and keep your pace.
-      </p>
+      <p>A few habits protect precise recall under the clock.</p>
+      <ol>
+        <li>Sitting online? Run the system check the day before and clear your desk — the proctor pans the camera around the room first.</li>
+        <li>Arrive early either way; a rushed start eats into the concentration precise recall needs.</li>
+        <li>Budget well under ninety seconds per question, and flag anything that makes you hesitate between two related terms with <strong>mark-for-review</strong>.</li>
+        <li>Every question stands alone — no multi-question case studies here — so revisit flagged ones freely before you submit.</li>
+        <li>Read each option carefully: wrong answers are usually real Azure AI services that are simply the wrong fit, so precision beats quick elimination.</li>
+        <li>Remember the pass mark is 700 out of 1000, scaled. An unfamiliar scenario isn't a disaster: make your call and keep your pace.</li>
+      </ol>
     </section>
 
     <!-- What's next -->
@@ -472,7 +505,7 @@
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>Classification or clustering?</strong> Drill AI-901 questions with a rationale for every option and see your Exam IQ score sharpen — free to start.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -486,15 +519,15 @@
         </details>
         <details class="faq">
           <summary>How hard is the AI-901 exam?</summary>
-          <div class="faq__answer"><p>AI-901 is a Fundamentals-level exam, so it stays conceptual rather than hands-on. There is no code to write and no model to configure. The difficulty comes from precision: you need to recognise which AI workload type a scenario describes, which of the six responsible-AI principles it touches, and which specific Azure AI service fits — computer vision questions in particular expect you to distinguish classification, detection, OCR, and facial detection cleanly. Most candidates with some general IT or cloud background pass after three to four weeks of focused study.</p></div>
+          <div class="faq__answer"><p>Conceptual rather than hands-on — no code to write, no model to configure. The difficulty is precision: recognising the workload type, the responsible-AI principle at play, and the specific Azure AI service, especially in computer vision, where classification, detection, OCR, and facial detection must stay distinct. Some IT background: three to four weeks.</p></div>
         </details>
         <details class="faq">
           <summary>How long should I study for AI-901?</summary>
-          <div class="faq__answer"><p>Three to four weeks of steady study is realistic for most candidates, and it can compress to two if you already work with machine learning or generative AI tools. If AI concepts are genuinely new to you, allow six to eight weeks so the vocabulary across the exam domains has time to settle, especially the responsible-AI principles and the ML terminology in the second domain.</p></div>
+          <div class="faq__answer"><p>Three to four weeks for most candidates, compressing to two if you already work with ML or generative AI tools. Allow six to eight weeks if AI concepts are genuinely new, so the vocabulary — especially responsible-AI principles and ML terminology — has time to settle.</p></div>
         </details>
         <details class="faq">
           <summary>What is the passing score for AI-901?</summary>
-          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled rather than a raw percentage, so it does not map directly onto a fixed number of correct answers, and harder questions carry more weight. Treat 700 as a comfortable target to clear rather than a line to scrape over.</p></div>
+          <div class="faq__answer"><p>700 out of 1000. The score is scaled rather than a raw percentage, so it doesn't map directly onto a fixed number of correct answers, and harder questions carry more weight. Treat 700 as a comfortable target, not a line to scrape over.</p></div>
         </details>
         <details class="faq">
           <summary>Does the AI-901 certification expire?</summary>
@@ -544,7 +577,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AI-901?</h2>
-      <p>Practise with original AI-901 practice questions across the exam domains, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>Original AI-901 questions across all five domains, each with a rationale for every option, an on-device Exam IQ score with a confidence range, and an adaptive plan. Free to start, works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

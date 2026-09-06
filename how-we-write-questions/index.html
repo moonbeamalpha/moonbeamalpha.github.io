@@ -226,7 +226,7 @@
       <h1 class="display-large guide-hero__title">
         How we write and <span class="headline-accent">verify practice questions</span>
       </h1>
-      <p class="guide-hero__dek">We write questions against the published exam outline, run automated checks when they change, and check for updates afterwards. Here's what each review covers.</p>
+      <p class="guide-hero__dek">Every question is written against Microsoft's published exam outline, checked automatically when it changes, and watched afterwards for drift.</p>
     </section>
 
     <!-- Based on the published exam outline -->
@@ -252,14 +252,25 @@
       <p class="label-eyebrow section-eyebrow">Every option</p>
       <h2 class="display-small section-title">Every option gets a rationale</h2>
       <p>Where per-option rationales are available, each option has its own explanation. Answer Coach uses those written rationales to explain a wrong choice, so the feedback addresses the answer you selected.</p>
-      <p>Before publication, automated checks look for explanations that merely label an answer "correct", internal review language left in the text, and wrong-option rationales that accidentally reveal the answer. All of these checks must pass.</p>
+      <p>Before publication, automated checks scan every explanation for three defects, and all three must pass:</p>
+      <ul>
+        <li>An explanation that just labels the answer "correct" without saying why.</li>
+        <li>Internal review language accidentally left in the published text.</li>
+        <li>A wrong-option rationale that gives away the answer.</li>
+      </ul>
     </section>
 
     <!-- Checked on every change -->
     <section id="checked-on-every-change" class="container">
       <p class="label-eyebrow section-eyebrow">Checked always</p>
       <h2 class="display-small section-title">Checked on every change</h2>
-      <p>Every change to a question bank runs through automated checks. They validate the data structure and integrity, check the bank's mapping to the exam outline, and look for problems such as question wording that reveals the answer or options that repeat the question. A failed check blocks publication.</p>
+      <p>Every change to a question bank runs through automated checks before it can publish:</p>
+      <ul>
+        <li>Data structure and integrity, so nothing malformed ships.</li>
+        <li>The bank's mapping against the exam outline.</li>
+        <li>Wording problems, such as a stem that gives away its own answer or options that just repeat the question.</li>
+      </ul>
+      <p>A failed check blocks publication outright.</p>
       <p>Several checks track a fixed maximum number of existing defects in each bank. Changes can reduce that number but cannot increase it. This prevents new edits from adding to the known problems.</p>
     </section>
 
@@ -275,9 +286,8 @@
     <section id="what-we-dont-claim" class="container">
       <p class="label-eyebrow section-eyebrow">Limits</p>
       <h2 class="display-small section-title">What we do not claim</h2>
-      <p>
-        This app is not a leaked or memorised question dump, and it does not contain live exam items. Passing consistently in the app does not guarantee passing the real exam — Microsoft controls the live exam's content, format, and scoring, and none of that is available to third parties. The in-app Exam IQ score is a readiness estimate built from your own practice record, not a promise — see <a href="/how-exam-iq-works/">how Exam IQ works</a> for exactly what it measures. Azure Mastery is not affiliated with, endorsed by, or sponsored by Microsoft Corporation.
-      </p>
+      <p>This app is not a leaked or memorised question dump, and it contains no live exam items. Microsoft controls the real exam's content, format and scoring, none of which is available to third parties, so passing consistently here does not guarantee passing on the day.</p>
+      <p>The in-app Exam IQ score is a readiness estimate built from your own practice record, not a promise — see <a href="/how-exam-iq-works/">how Exam IQ works</a> for exactly what it measures. Azure Mastery is not affiliated with, endorsed by, or sponsored by Microsoft Corporation.</p>
     </section>
 
     <!-- FAQs -->

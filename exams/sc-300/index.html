@@ -515,11 +515,20 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the SC-300 exam?</h2>
       <p>
-        SC-300 is the <strong>Microsoft Certified: Identity and Access Administrator Associate</strong> exam — the credential hiring managers expect when posting "Identity Administrator", "IAM Engineer", "Microsoft Entra Administrator", or "Identity and Access Manager" roles. SC-300 covers the day-to-day of operating <em>Microsoft Entra ID</em> at scale — identities, authentication, Conditional Access, workload identities, and identity governance. It pairs with <a href="/exams/sc-900/">SC-900</a> on the way in, and is one of the prereqs for <a href="/exams/sc-100/">SC-100 (Cybersecurity Architect Expert)</a>.
+        SC-300 is the <strong>Microsoft Certified: Identity and Access Administrator Associate</strong> exam — the credential hiring managers expect when posting "Identity Administrator", "IAM Engineer", "Microsoft Entra Administrator", or "Identity and Access Manager" roles.
       </p>
       <p>
-        SC-300 is <strong>hands-on and Entra-deep</strong>. It validates that you can implement and manage user identities (cloud-only, hybrid, guest), configure authentication (passwordless, MFA, password protection, SSPR), design and operate <em>Conditional Access</em> and <em>Microsoft Entra ID Protection</em>, plan workload identities (service principals, managed identities, app registrations, OAuth flows, app proxy), and run identity governance via entitlement management, access reviews, and <em>Privileged Identity Management (PIM)</em>. Expect scenario questions that show you a Conditional Access policy JSON or an access-package configuration and ask what you'd change.
+        SC-300 covers the day-to-day of operating <em>Microsoft Entra ID</em> at scale — identities, authentication, Conditional Access, workload identities, and identity governance. It pairs with <a href="/exams/sc-900/">SC-900</a> on the way in, and is one of the prereqs for <a href="/exams/sc-100/">SC-100 (Cybersecurity Architect Expert)</a>.
       </p>
+      <p>SC-300 is <strong>hands-on and Entra-deep</strong>. It validates that you can:</p>
+      <ul>
+        <li>Implement and manage user identities — cloud-only, hybrid, guest</li>
+        <li>Configure authentication: passwordless, MFA, password protection, SSPR</li>
+        <li>Design and operate <em>Conditional Access</em> and <em>Microsoft Entra ID Protection</em></li>
+        <li>Plan workload identities — service principals, managed identities, app registrations, OAuth flows, app proxy</li>
+        <li>Run identity governance via entitlement management, access reviews, and <em>Privileged Identity Management (PIM)</em></li>
+      </ul>
+      <p>Expect scenario questions that show you a Conditional Access policy JSON or an access-package configuration and ask what you'd change.</p>
       <p>
         Microsoft updated the SC-300 skills outline on <strong>27 April 2026</strong>. Every question in Azure Mastery's SC-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-300" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -590,7 +599,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>This domain covers the widest surface: authentication methods, the full Conditional Access lifecycle, ID Protection, and Global Secure Access.</li>
-                <li>Candidates assume security defaults layer with Conditional Access policies, when enabling one actually requires switching the other off.</li>
+                <li>Security defaults and Conditional Access policies don't layer; turning on the custom policy set means switching security defaults off.</li>
                 <li>Confirm a tenant runs security defaults or custom Conditional Access, never both, before reasoning about a described policy.</li>
               </ul>
             </div>
@@ -609,7 +618,7 @@
                 <li>Manage and monitor app access by using Microsoft Defender for Cloud Apps</li>
               </ul>
               <ul class="domain__tips">
-                <li>This domain tests choosing between managed identities, service principals, and app registrations for an application scenario.</li>
+                <li>Choosing between managed identities, service principals, and app registrations for an application scenario is the core test here.</li>
                 <li>Candidates from a pure end-user background underestimate this domain and confuse a managed identity with a manually created service principal.</li>
                 <li>Pick a managed identity whenever a scenario wants to avoid managing secrets for an Azure-hosted workload.</li>
               </ul>
@@ -630,7 +639,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>This domain tests the full governance lifecycle: entitlement management, access reviews, PIM, and identity activity monitoring.</li>
-                <li>Candidates treat PIM eligibility as equivalent to an active assignment, missing that eligibility grants no standing access at all.</li>
+                <li>PIM eligibility often gets treated as an active assignment, though eligibility alone grants no standing access.</li>
                 <li>Remember an eligible PIM assignment needs activation before permissions apply; only an active assignment applies them immediately.</li>
               </ul>
             </div>
@@ -651,7 +660,7 @@
           <h3>PHS, PTA, and federation behave differently during an on-premises outage</h3>
           <p>Candidates know the three hybrid-identity methods by name but don't connect each one to a specific failure mode.</p>
           <ul>
-            <li>The exam is testing whether you know PHS keeps sign-in working during an outage while PTA fails closed without its on-premises agent.</li>
+            <li>PHS keeps sign-in working through an on-premises outage; PTA fails closed the moment its on-premises agent goes dark.</li>
             <li>Pick PHS whenever a scenario specifically asks for resilience against an on-premises infrastructure outage.</li>
           </ul>
         </article>
@@ -659,7 +668,7 @@
           <h3>Security defaults and Conditional Access can't run together</h3>
           <p>Candidates assume the two layer on top of each other rather than being mutually exclusive.</p>
           <ul>
-            <li>The exam is testing whether you know enabling any Conditional Access policy requires switching security defaults off first.</li>
+            <li>Turning on any Conditional Access policy requires switching security defaults off first, not layering the two.</li>
             <li>Recognise that a tenant with custom Conditional Access policies has already left security defaults behind.</li>
           </ul>
         </article>
@@ -667,7 +676,7 @@
           <h3>PIM eligibility grants no access until it's activated</h3>
           <p>Candidates treat an eligible assignment as equivalent to an active one with a shorter duration.</p>
           <ul>
-            <li>The exam is testing whether you know an eligible assignment needs activation, often through approval, before any permission applies.</li>
+            <li>An eligible assignment needs activation, often through approval, before a single permission actually applies.</li>
             <li>Pick eligible assignment plus activation requirements whenever a scenario asks for just-in-time access to a sensitive role.</li>
           </ul>
         </article>
@@ -675,7 +684,7 @@
           <h3>A managed identity and a service principal solve the same problem differently</h3>
           <p>Both are application identities, so candidates treat them as interchangeable terms for the same thing.</p>
           <ul>
-            <li>The exam is testing whether you know Microsoft creates and rotates a managed identity's credentials automatically, unlike a service principal you manage yourself.</li>
+            <li>Microsoft creates and rotates a managed identity's credentials automatically; a service principal leaves that work to you.</li>
             <li>Pick a managed identity whenever a scenario wants to avoid managing secrets or certificates for an Azure-hosted workload.</li>
           </ul>
         </article>
@@ -683,7 +692,7 @@
           <h3>A catalog and an access package are two different governance objects</h3>
           <p>Candidates use the two entitlement-management terms interchangeably when they describe different layers of the same feature.</p>
           <ul>
-            <li>The exam is testing whether you know a catalog groups resources for requests while a package is the specific bundle a user receives.</li>
+            <li>A catalog groups resources available for request; a package is the specific bundle a user actually receives.</li>
             <li>Configure the catalog first whenever a scenario asks you to add a new resource type available for request.</li>
           </ul>
         </article>

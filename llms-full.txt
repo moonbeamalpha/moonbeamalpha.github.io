@@ -545,24 +545,26 @@ Page last modified: 2026-08-09
 Exam domains:
   - Identify AI concepts and capabilities (40–45%)
   - Implement AI solutions by using Microsoft Foundry (55–60%)
-Q: How much does the AI-901 exam cost?
-A: Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the official scheduling page for the current local price before booking.
-Q: Does the AI-901 certification expire?
-A: No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire.
-Q: What is the AI-901 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AI-901?
-A: Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.
-Q: AI-901 vs AI-900 — different exams?
-A: AI-901 replaced AI-900 on 1 July 2026. AI-900 retired on 30 June 2026 and can no longer be scheduled. AI-901 remains the route to the Azure AI Fundamentals credential and adds a more implementation-oriented focus on Microsoft Foundry and Python examples.
+Q: AI-901 vs AB-900 — which fundamentals exam do I need?
+A: Different subject matter, same tier. AB-900 covers Microsoft 365 Copilot and agent administration; AI-901 covers AI concepts and building AI solutions with Microsoft Foundry. Take AI-901 if you're heading toward building or evaluating AI solutions, AB-900 if you're administering Copilot and agents.
+Q: Did AI-901 replace AI-900?
+A: Yes. AI-901 replaced AI-900 on 1 July 2026, and AI-900 can no longer be scheduled. AI-901 remains the route to the Azure AI Fundamentals credential, with a more implementation-oriented focus on Microsoft Foundry and Python.
 Q: What should I take after AI-901?
-A: Choose the role-based exam that matches how you build agents. AI-103 covers code-first AI apps and agents with Python and Microsoft Foundry. AB-620 covers integrated agents built with Copilot Studio, Power Platform, and Microsoft 365. Both build on the foundations assessed by AI-901.
-Q: Is Azure Mastery free for AI-901 prep?
-A: The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AI-901 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AI-901 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Choose the role-based exam that matches how you build agents. AI-103 covers code-first AI apps and agents with Python and Microsoft Foundry. AB-620 covers integrated agents built with Copilot Studio, Power Platform, and Microsoft 365.
+Q: What format is the AI-901 exam?
+A: Fundamentals exams follow Microsoft's general 40–60 question guidance, with formats varying by sitting. Azure Mastery's AI-901 bank weights single-answer questions heaviest, with multi-select, drag-and-match, and hot-area items alongside linked case studies for the Foundry-heavy topics.
+Q: Does the free tier cover any of AI-901's question bank?
+A: Yes. The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+Q: Can I resit AI-901 immediately if I fail?
+A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Is there a cost to sitting AI-901?
+A: Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the official scheduling page for the current local price before booking.
+Q: Can I study AI-901 on a plane with no signal?
+A: Yes. AI-901 practice, scoring, and your readiness prediction run entirely on-device, so a flight or a dead-zone commute doesn't cost you a session. There's no account to create, and iCloud sync stays optional and private.
+Q: Does an AI-901 pass ever expire?
+A: No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications never expire.
+Q: How much revision time does AI-901 need?
+A: Allow several weeks for concepts plus hands-on practice. The outline expects core cloud knowledge, familiarity with Azure resources, and comfort reading Python syntax that calls AI models. Azure Mastery's readiness gauge helps you decide when to book.
 
 ## /exams/az-104/ — AZ-104 Practice Questions — 481 Qs for Azure Admin (2026)
 Page last modified: 2026-09-04
@@ -627,24 +629,24 @@ Exam domains:
   - Design data storage solutions (20–25%)
   - Design business continuity solutions (15–20%)
   - Design infrastructure solutions (30–35%)
-Q: How much does the AZ-305 exam cost?
-A: The AZ-305 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. AZ-305 is the single exam required for the Microsoft Certified: Azure Solutions Architect Expert certification — the predecessor pair AZ-303 and AZ-304 were retired in March 2022. The Expert-tier certification also requires annual renewal (free, online via Microsoft Learn).
-Q: Does the AZ-305 certification expire?
-A: Yes. Microsoft Expert certifications — including Azure Solutions Architect Expert (which AZ-305 unlocks) — expire annually. Renewal is free: a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain active in solution-architect work.
-Q: What is the AZ-305 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AZ-305 has a higher fail rate than AZ-104 because it tests design judgement (which service for which requirement) over recall — many candidates need a second attempt.
-Q: How long should I study for AZ-305?
-A: Plan eight to twelve weeks of focused study, even if you have already passed AZ-104. AZ-305 tests judgement more than recall — you're given a scenario and asked which combination of Azure services satisfies it. That style takes longer to internalise than the AZ-104 "how do I configure X" style. Azure Mastery's readiness gauge tells you when you're at exam-ready — don't book until it shows roughly 730 or higher with reasonable confidence; AZ-305 is unforgiving of borderline scores.
-Q: AZ-305 vs AZ-104 — which should I take first?
-A: AZ-104 first. Azure Administrator Associate (AZ-104) is the operational certification required alongside AZ-305 to earn Azure Solutions Architect Expert. AZ-305 is the expert-level design exam and assumes you already understand Azure operations.
-Q: Do I need other exams alongside AZ-305?
-A: AZ-305 is the expert-level exam for Microsoft Certified: Azure Solutions Architect Expert. You must also hold Microsoft Certified: Azure Administrator Associate, earned through AZ-104. Passing AZ-305 alone does not award the expert credential.
-Q: Is Azure Mastery free for AZ-305 prep?
-A: The app is free to download and includes a free allowance of AZ-305 questions so you can try every feature. The full bank of 399 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AZ-305 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AZ-305 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+Q: Do I need AZ-104 before AZ-305?
+A: Not to book it — Microsoft lets anyone sit AZ-305 directly. But the Solutions Architect Expert credential is only awarded once you also hold Azure Administrator Associate, earned through AZ-104. Pass AZ-305 first and you're just waiting on AZ-104 to unlock it. AZ-204 isn't an accepted alternative.
+Q: What does the AZ-305 exam format actually look like?
+A: Microsoft's general guidance is 40–60 questions plus case studies, with formats varying by sitting. Azure Mastery's bank weights single-answer, scenario-based, and multi-select items heaviest, then adds case-study sets, drag-and-drop, and hotspot questions — all original practice content, not a copy of Microsoft's live item mix.
+Q: Why does AZ-305 feel harder than AZ-104 even with the same pass mark?
+A: AZ-104 mostly checks whether you can configure a service; AZ-305 gives you a business constraint and asks which combination of services satisfies it, with rarely one "correct config" to recall. That judgement style takes longer to internalise, which is why AZ-305 has a higher first-attempt fail rate.
+Q: Which AZ-305 domain catches candidates most off guard?
+A: Business continuity, despite being the smallest domain by weight. Candidates who've only configured single VMs or databases under-prepare for scenarios mixing backup, disaster recovery, and high-availability requirements across compute, relational data, and unstructured data at once.
+Q: What's the current AZ-305 exam voucher price?
+A: The AZ-305 voucher is USD $165 in the United States, or around £128 in the UK — pricing varies by region. The Expert-tier certification it unlocks also needs annual renewal, free and online via Microsoft Learn.
+Q: Does the Solutions Architect Expert badge need renewing?
+A: Yes. Expert certifications including Azure Solutions Architect Expert expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.
+Q: I didn't pass AZ-305 — how soon can I try again?
+A: Not immediately, and each sitting needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Realistically, how many weeks does AZ-305 prep take?
+A: Plan eight to twelve weeks of focused study, even after passing AZ-104. AZ-305 tests judgement more than recall — you're given a scenario and asked which services satisfy it. Don't book until the readiness gauge holds around 730 or higher; AZ-305 is unforgiving of borderline scores.
+Q: Can I try Azure Mastery's AZ-305 content before paying?
+A: Yes. The app is free to download, with a free allowance of AZ-305 questions so you can try every feature. The full bank of 399 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-400/ — AZ-400 Practice Questions — 467 Qs for DevOps Engineer (2026)
 Page last modified: 2026-08-09
@@ -654,24 +656,24 @@ Exam domains:
   - Design and implement build and release pipelines (50–55%)
   - Develop a security and compliance plan (10–15%)
   - Implement an instrumentation strategy (5–10%)
-Q: What prerequisite do I need for AZ-400?
-A: Microsoft currently accepts either Azure Administrator Associate (AZ-104) or Azure Developer Associate (AZ-204) alongside AZ-400. Azure Developer Associate retires on 31 July 2026, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page.
-Q: How much does the AZ-400 exam cost?
-A: The AZ-400 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during Microsoft Build or Microsoft Ignite — worth checking your Microsoft Learn profile for active offers. The DevOps Engineer Expert tier also requires annual renewal (free, online via Microsoft Learn) once earned.
-Q: Does the AZ-400 certification expire?
-A: Yes. Microsoft Expert certifications — including DevOps Engineer Expert (which AZ-400 unlocks) — expire annually. Renewal is free: a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in DevOps work.
-Q: What is the AZ-400 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Later attempts require longer waits under Microsoft's exam retake policy, with a maximum of five attempts in a 12-month period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AZ-400?
-A: Plan eight to twelve weeks for AZ-400, even if you already hold AZ-104 or AZ-204. AZ-400 covers an enormous service surface — Azure Pipelines AND GitHub Actions, both Azure DevOps AND GitHub repositories, Bicep AND ARM templates, Azure Key Vault AND GitHub Secrets, plus security scanning, monitoring, branching strategies, and progressive deployment patterns. The build/release pipelines domain alone is 50–55% of the exam. Don't book until Azure Mastery's readiness gauge shows roughly 730 or higher with reasonable confidence.
+Q: Which exam do I need to have passed before AZ-400?
+A: Azure Developer Associate (AZ-204) retired on 31 July 2026. An Azure Developer Associate credential earned before that date still satisfies the AZ-400 prerequisite, but new candidates now reach it through Azure Administrator Associate (AZ-104) instead.
+Q: What's the going rate for an AZ-400 exam attempt?
+A: The AZ-400 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft sometimes runs free-voucher promotions around Build or Ignite. The DevOps Engineer Expert tier also needs annual renewal, free and online, once earned.
+Q: Will my DevOps Engineer Expert badge lapse if I don't renew?
+A: Yes. Expert certifications including DevOps Engineer Expert expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.
+Q: If I fail AZ-400, how long before I can retake it?
+A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: What's a realistic AZ-400 study timeline?
+A: Plan eight to twelve weeks, even if you already hold AZ-104 or AZ-204. AZ-400 covers an enormous surface: both pipeline ecosystems, both repository platforms, Bicep and ARM, plus security scanning and monitoring. Don't book until the readiness gauge shows around 730 or higher.
 Q: AZ-400 vs AZ-305 — which Expert cert should I take?
-A: Pick the one that matches your role. AZ-400 is for SREs, platform engineers, and developers who own CI/CD; AZ-305 is for architects designing the systems those pipelines deploy. They are complementary and both can use Azure Administrator Associate as a prerequisite. AZ-305 does not accept Azure Developer Associate as an alternative.
-Q: Is Azure Mastery free for AZ-400 prep?
-A: The app is free to download and includes a free allowance of AZ-400 questions so you can try every feature. The full bank of 467 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AZ-400 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AZ-400 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Pick the one that matches your role. AZ-400 is for SREs, platform engineers, and developers who own CI/CD; AZ-305 is for architects designing the systems those pipelines deploy. Both use Azure Administrator Associate as a prerequisite, and they're complementary rather than competing.
+Q: Does AZ-400 really test both Azure DevOps and GitHub equally?
+A: Yes, and it's the exam's defining feature. AZ-400 treats Azure Pipelines and GitHub Actions as parallel tracks, expecting familiarity with both ecosystems throughout. Candidates who've only worked in one typically need dedicated study time in the other before they're exam-ready.
+Q: What does the AZ-400 exam format actually look like?
+A: AZ-400 follows Microsoft's general 40–60 question format, with the mix varying by sitting. Azure Mastery's bank weights single-answer and scenario-based items heaviest, with multi-select, drag-and-drop, and linked case-study questions filling out the rest — all original practice content.
+Q: Can I try Azure Mastery's AZ-400 content before buying the full bank?
+A: Yes. The app is free to download, with a free allowance of AZ-400 questions so you can try every feature. The full bank of 467 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-500/ — AZ-500 Retirement & SC-500 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -707,24 +709,24 @@ Exam domains:
   - Design and implement application delivery services (15–20%)
   - Design and implement private access to Azure services (10–15%)
   - Design and implement Azure network security services (15–20%)
-Q: How much does the AZ-700 exam cost?
-A: The AZ-700 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AZ-700 also requires annual renewal (free, online), so factor that into long-term cost planning.
-Q: Does the AZ-700 certification expire?
-A: Yes. Microsoft Associate certifications including AZ-700 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the AZ-700 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for AZ-700?
-A: Most candidates plan four to eight weeks with prior Azure networking experience. Build and troubleshoot virtual networks, hybrid connectivity, routing, private access, application delivery, and network security in a lab; know when to choose services such as Virtual WAN, ExpressRoute, Application Gateway, Front Door, Azure Firewall, and Private Link. Azure Mastery's readiness gauge tells you when you're exam-ready.
+Q: What does the AZ-700 exam format actually look like?
+A: AZ-700 follows Microsoft's general 40–60 question guidance, with formats varying by sitting. Azure Mastery's bank weights single-answer and scenario-based items heaviest, then adds multi-select, hotspot, and linked case-study questions — every one original, never a copy of Microsoft's live item mix.
 Q: AZ-700 vs AZ-104 — should I do AZ-104 first?
-A: Microsoft strongly recommends AZ-104 first, and it shows. AZ-700 assumes you already know how Azure compute, storage, and the basic VNet model work day-to-day — it's the deep-network specialism on top of that knowledge. If you've never deployed a VM with a public IP or set up a basic NSG outside of fundamentals, take AZ-104 (Microsoft Azure Administrator) first; you'll save weeks on AZ-700 prep. If you're already a working network engineer crossing into Azure, you can skip AZ-104 and go straight in.
-Q: AZ-700 vs SC-500 — which is the right network/security pairing?
-A: They overlap around cloud-network protection, but the roles differ. AZ-700 expects you to design and operate connectivity, including hybrid networks, routing, private access, and application delivery. SC-500 applies security controls across cloud and AI workloads, including identity, posture, threat protection, and workload security. Take AZ-700 for network engineering depth; add SC-500 when your remit includes end-to-end cloud security.
-Q: Is Azure Mastery free for AZ-700 prep?
-A: The app is free to download and includes a free allowance of AZ-700 questions so you can try every feature. The full bank of 569 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does AZ-700 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there an AZ-700 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Microsoft strongly recommends it, and it shows. AZ-700 assumes you already know how Azure compute, storage, and the basic VNet model work day-to-day. If you've never deployed a VM with a public IP or set up a basic NSG, take AZ-104 first. Working network engineers can often skip straight in.
+Q: What's the current AZ-700 voucher price?
+A: The AZ-700 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft sometimes runs free-voucher promotions around Build or Ignite. AZ-700 also needs annual renewal, so factor that into long-term cost planning.
+Q: Does AZ-700 overlap with cloud security certs like SC-500?
+A: A little, but the roles differ. AZ-700 treats network security (Firewall, NSGs, WAF) as one domain among five. SC-500 applies security controls across an entire cloud and AI estate, well beyond networking. Take AZ-700 for network engineering depth; add SC-500 for end-to-end cloud security.
+Q: Does the AZ-700 badge need renewing every year?
+A: Yes. Associate certifications including AZ-700 expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date. Fundamentals certs like AZ-900 are different — those never expire.
+Q: Do I need a home lab to pass AZ-700?
+A: Hands-on time helps more here than on most Associate exams, since AZ-700 is a design-and-build exam, not pure recall. A free-tier subscription is enough to build a hub-and-spoke topology, a site-to-site VPN, and an Application Gateway deployment. Azure Mastery's scenarios cover the harder-to-lab decisions too.
+Q: If I don't pass AZ-700, when can I try again?
+A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: How many weeks of AZ-700 prep is realistic?
+A: Most candidates plan four to eight weeks with prior Azure networking experience. Build and troubleshoot virtual networks, hybrid connectivity, routing, private access, application delivery, and network security in a lab. Azure Mastery's readiness gauge tells you when you're exam-ready.
+Q: Can I test-drive Azure Mastery's AZ-700 content for free?
+A: Yes. The app is free to download, with a free allowance of AZ-700 questions so you can try every feature. The full bank of 569 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-900/ — AZ-900 Practice Questions — 364 Qs for Fundamentals (2026)
 Page last modified: 2026-09-04
@@ -974,24 +976,24 @@ Exam domains:
   - Model the data (25–30%)
   - Visualize and analyze the data (25–30%)
   - Manage and secure Power BI (15–20%)
-Q: How much does the PL-300 exam cost?
-A: The PL-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. PL-300 also requires annual renewal (free, online), so factor that into long-term cost planning.
-Q: Does the PL-300 certification expire?
-A: Yes. Microsoft Associate certifications including PL-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
-Q: What is the PL-300 retake policy if I fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
-Q: How long should I study for PL-300?
-A: Most candidates plan four to eight weeks with regular Power BI practice. Spend hands-on time in Power Query, semantic modelling, DAX, report design, analysis, sharing, and workspace security; the exam rewards choosing the right modelling and visualisation approach for a scenario. Azure Mastery's readiness gauge tells you when you're exam-ready.
 Q: PL-300 vs DP-900 — which should I take first?
-A: DP-900 first if you don't have a working understanding of relational vs non-relational data, transactional vs analytical workloads, or the SQL family on Azure. DP-900 (Microsoft Azure Data Fundamentals) builds that grounding. PL-300 assumes you already know the difference when it asks scenario questions about DirectLake vs DirectQuery vs Import, or about Microsoft Fabric semantic models. If you already do data-analyst work day-to-day, you can skip DP-900 and go straight to PL-300.
+A: Take DP-900 first if relational vs non-relational data, transactional vs analytical workloads, or Azure's SQL family aren't familiar yet. PL-300 assumes you already know the difference when it asks about DirectLake vs DirectQuery vs Import or Fabric semantic models. Skip DP-900 if you already do analyst work day-to-day.
 Q: PL-300 vs DP-300 — different roles?
-A: Different angles on the data stack. PL-300 is the analyst-side cert — it focuses on building Power BI reports from data: Power Query M, DAX, visualisations, governance and sharing. DP-300 is the operational DBA cert — it focuses on running Azure SQL workloads: HA/DR, performance tuning, security, automation. The two complement each other in larger BI teams; small teams often have one person doing both.
-Q: Is Azure Mastery free for PL-300 prep?
-A: The app is free to download and includes a free allowance of PL-300 questions so you can try every feature. The full bank of 378 PL-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
-Q: Does PL-300 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
-Q: Is there a PL-300 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Different angles on the data stack. PL-300 is the analyst-side cert: Power Query M, DAX, visualisations, governance and sharing. DP-300 is the operational DBA cert: HA/DR, performance tuning, security, and automation for Azure SQL. Larger teams often split the two roles.
+Q: Are there formal prerequisites for PL-300?
+A: No mandatory prior exam, but Microsoft's audience profile expects proficiency with Power Query and DAX, plus comfort working with stakeholders on requirements and with data engineers on sourcing. Candidates without hands-on Power BI experience usually need a longer run-up, even though nothing blocks booking directly.
+Q: What's the PL-300 exam format like?
+A: PL-300 sits in Microsoft's 40–60 question Associate band, with formats varying by sitting. Azure Mastery's bank weights single-answer and dropdown-select items heaviest, reflecting how often the exam asks you to predict a DAX result or Power Query step, alongside multi-select, drag-to-match, and case-study questions.
+Q: Does PL-300 prep need a live internet connection?
+A: No. Every part of PL-300 practice, including the Exam IQ prediction, runs on your device rather than a server, so full sessions work on a delayed train or a long-haul flight. No account is needed, and data stays put unless you opt into private iCloud sync.
+Q: Can I test-drive Azure Mastery's PL-300 content for free?
+A: Yes. The app is free to download, with a free allowance of PL-300 questions so you can try every feature. The full bank of 378 PL-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+Q: If I don't pass PL-300, when can I try again?
+A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+Q: Will my PL-300 badge lapse if I don't renew?
+A: Yes. Associate certifications including PL-300 expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date. Fundamentals certs like AZ-900 are different — those never expire.
+Q: What's the going rate for a PL-300 exam attempt?
+A: The PL-300 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite, so check your Learn profile first.
 
 ## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
 Page last modified: 2026-08-09

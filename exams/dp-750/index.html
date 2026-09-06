@@ -483,11 +483,21 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the DP-750 exam?</h2>
       <p>
-        DP-750 — <strong>Implementing Data Engineering Solutions Using Azure Databricks</strong> — earns the Microsoft Certified: Azure Databricks Data Engineer Associate credential. It's a role-based, hands-on exam for working data engineers who integrate and model data, build and deploy optimised pipelines, and troubleshoot workloads on <strong>Azure Databricks</strong>. The audience profile assumes you can ingest and transform data with <strong>SQL and Python</strong>, apply software-development-lifecycle practices including <strong>Git</strong>, and are familiar with <strong>Microsoft Entra, Azure Data Factory, and Azure Monitor</strong>. You'll work alongside administrators, platform and solution architects, data scientists, and data analysts to design, deploy, and secure data-engineering solutions.
+        DP-750 — <strong>Implementing Data Engineering Solutions Using Azure Databricks</strong> — earns the Microsoft Certified: Azure Databricks Data Engineer Associate credential. It's a role-based, hands-on exam for working data engineers who integrate and model data, build and deploy optimised pipelines, and troubleshoot workloads on <strong>Azure Databricks</strong>.
       </p>
       <p>
-        This is not a vocabulary exam. DP-750 expects you to reason about real engineering decisions: choosing and configuring <strong>compute</strong> (job, serverless, warehouse, classic, and shared); creating catalogs, schemas, volumes, and tables in <strong>Unity Catalog</strong>; governing data with <strong>grants, row-, column-, and table-level security</strong>, ABAC tags, row filters, and column masks; modelling data with <strong>Delta tables, partitioning, SCD types, and liquid clustering</strong>; ingesting batch and streaming data with <strong>Lakeflow Connect, Auto Loader, COPY INTO, CDC, and Spark Structured Streaming</strong>; building <strong>Lakeflow Jobs and Declarative Pipelines</strong> with Databricks Asset Bundles; and optimising Spark workloads with <strong>OPTIMIZE, VACUUM, and the Spark UI</strong>.
+        The audience profile assumes you can ingest and transform data with <strong>SQL and Python</strong>, apply software-development-lifecycle practices including <strong>Git</strong>, and are familiar with <strong>Microsoft Entra, Azure Data Factory, and Azure Monitor</strong>. You'll work alongside administrators, platform and solution architects, data scientists, and data analysts to design, deploy, and secure data-engineering solutions.
       </p>
+      <p>This is not a vocabulary exam. DP-750 expects you to reason about real engineering decisions, covering:</p>
+      <ul>
+        <li>Choosing and configuring <strong>compute</strong> — job, serverless, warehouse, classic, and shared</li>
+        <li>Creating catalogs, schemas, volumes, and tables in <strong>Unity Catalog</strong></li>
+        <li>Governing data with <strong>grants, row-, column-, and table-level security</strong>, ABAC tags, row filters, and column masks</li>
+        <li>Modelling data with <strong>Delta tables, partitioning, SCD types, and liquid clustering</strong></li>
+        <li>Ingesting batch and streaming data with <strong>Lakeflow Connect, Auto Loader, COPY INTO, CDC, and Spark Structured Streaming</strong></li>
+        <li>Building <strong>Lakeflow Jobs and Declarative Pipelines</strong> with Databricks Asset Bundles</li>
+        <li>Optimising Spark workloads with <strong>OPTIMIZE, VACUUM, and the Spark UI</strong></li>
+      </ul>
       <p>
         Microsoft's DP-750 skills outline is current as of <strong>11 March 2026</strong>. Every question in Azure Mastery's DP-750 bank is mapped to the current outline — no leftover questions on retired features. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -536,7 +546,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests matching a compute type, job, serverless, or classic, to a stated cost or startup-latency need.</li>
-                <li>Candidates treat every Unity Catalog object the same, missing when a scenario needs a foreign catalog specifically.</li>
+                <li>Every Unity Catalog object often gets treated the same, missing when a scenario needs a foreign catalog specifically.</li>
                 <li>Learn which performance settings (autoscaling, pooling, Photon) actually solve the symptom the scenario describes.</li>
               </ul>
             </div>
@@ -554,7 +564,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests picking the right access control, a grant, a row filter, or ABAC, for the described governance scale.</li>
-                <li>Candidates reach for a single row filter when a scenario governing hundreds of tables actually needs ABAC.</li>
+                <li>A single row filter often gets reached for when a scenario governing hundreds of tables actually needs ABAC.</li>
                 <li>Check whether the scenario is protecting one table or standardising a rule across many before answering.</li>
               </ul>
             </div>
@@ -573,7 +583,7 @@
                 <li>Implement and manage data quality constraints in Unity Catalog</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests choosing a clustering and ingestion strategy that fits the stated table shape and update pattern.</li>
+                <li>Choosing a clustering and ingestion strategy that fits the stated table shape and update pattern is the core ask here.</li>
                 <li>Candidates default to partitioning out of habit when a scenario's changing query pattern calls for liquid clustering.</li>
                 <li>Match Lakeflow Connect, CTAS, or Structured Streaming to whether the source is batch or continuous.</li>
               </ul>
@@ -593,7 +603,7 @@
                 <li>Monitor, troubleshoot, and optimize workloads in Azure Databricks</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests choosing between a Lakeflow Job and a Declarative Pipeline for the orchestration or quality need described.</li>
+                <li>Choosing between a Lakeflow Job and a Declarative Pipeline for the stated orchestration or quality need is what's graded.</li>
                 <li>Candidates reach for a bare Job when a bronze-to-gold flow needing automatic quality checks wants Declarative Pipelines.</li>
                 <li>Learn to read the Spark UI for skew, spilling, and shuffle before assuming a job just needs more compute.</li>
               </ul>
@@ -614,35 +624,35 @@
         <article class="trap">
           <h3>Managed and external tables leave the underlying data in different states when dropped.</h3>
           <ul>
-            <li>The exam is testing whether "without deleting the underlying files" points you at an external table, not a managed one.</li>
+            <li>A requirement to keep the underlying files after a drop points specifically at an external table, not a managed one.</li>
             <li>Check whether Unity Catalog owns the storage before assuming a dropped table just removes a catalog entry.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Liquid clustering, Z-ordering, and partitioning solve the same problem at different levels of effort.</h3>
           <ul>
-            <li>The exam is testing whether you know liquid clustering adapts automatically where the other two need a fixed scheme.</li>
+            <li>Liquid clustering adapts automatically; Z-ordering and partitioning both lock you into a fixed scheme upfront.</li>
             <li>Pick liquid clustering by default for a new table unless the scenario names a reason to partition instead.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>ABAC scales governance; a row filter or column mask is still the mechanism underneath it.</h3>
           <ul>
-            <li>The exam is testing whether "hundreds of tables the same way" points you at ABAC rather than one hand-written rule.</li>
+            <li>A requirement to apply "hundreds of tables the same way" points at ABAC, not one hand-written rule.</li>
             <li>Reach for ABAC only when the scenario is about applying a rule at scale, not securing a single table.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>A Lakeflow Job orchestrates a workflow; a Declarative Pipeline builds and enforces the ETL itself.</h3>
           <ul>
-            <li>The exam is testing whether automatic quality enforcement on a bronze-to-gold flow points you at Declarative Pipelines.</li>
+            <li>Automatic quality enforcement on a bronze-to-gold flow is the signal that points specifically at Declarative Pipelines.</li>
             <li>Reach for a bare Job only when the requirement is scheduling and chaining, not built-in data-quality expectations.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Job compute and serverless compute trade isolation for a different cost and startup profile.</h3>
           <ul>
-            <li>The exam is testing whether near-zero startup latency for frequent, short jobs points you at serverless compute.</li>
+            <li>Near-zero startup latency for frequent, short jobs is what should point you at serverless compute.</li>
             <li>Pick job compute when isolation matters more than startup delay for the described workload.</li>
           </ul>
         </article>

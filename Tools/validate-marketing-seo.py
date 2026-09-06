@@ -9,6 +9,7 @@ import json
 import re
 import subprocess
 import sys
+from datetime import date
 from html import unescape
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -348,6 +349,59 @@ def validate_sitemap_lastmod(errors: list[str], sitemap: str) -> None:
             errors.append(
                 f"sitemap entry for {loc} has lastmod {current_label!r}, expected {expected!r} "
                 f"(run Tools/update-sitemap-lastmod.py)"
+            )
+
+
+def validate_exam_dateModified_vs_sitemap(errors: list[str], sitemap: str) -> None:
+    """An exam page's JSON-LD `dateModified` and its sitemap.xml `lastmod`
+    must not drift apart. `lastmod` is derived from git history/today (see
+    `validate_sitemap_lastmod`); `dateModified` is hand-set per page (via
+    `SEO_UPDATED_OVERRIDES` in Tools/optimise-marketing-seo.py) whenever a
+    page's prose is rewritten. If `lastmod` runs more than 7 days ahead of
+    `dateModified` it means the page changed (bumping `lastmod`) without its
+    `dateModified` being updated to match -- the regression this guards
+    against. Any page whose prose is rewritten must get a
+    `SEO_UPDATED_OVERRIDES` entry in the same commit so the two stay in sync.
+    """
+    lastmod_by_loc: dict[str, str] = {}
+    for block in re.findall(r"<url>.*?</url>", sitemap, re.S):
+        loc_match = re.search(r"<loc>(.*?)</loc>", block)
+        lastmod_match = re.search(r"<lastmod>(.*?)</lastmod>", block)
+        if loc_match and lastmod_match:
+            lastmod_by_loc[loc_match.group(1)] = lastmod_match.group(1)
+
+    for code in sorted(COUNTS):
+        page = ROOT / "exams" / code.lower() / "index.html"
+        loc = f"https://azuremastery.app/exams/{code.lower()}/"
+        lastmod = lastmod_by_loc.get(loc)
+        if lastmod is None:
+            continue
+        text = page.read_text()
+        schemas = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', text, re.S)
+        date_modified = None
+        for schema in schemas:
+            try:
+                payload = json.loads(schema)
+            except json.JSONDecodeError:
+                continue
+            for item in payload.get("@graph", []):
+                if isinstance(item, dict) and "dateModified" in item:
+                    date_modified = item["dateModified"]
+                    break
+            if date_modified:
+                break
+        if date_modified is None:
+            continue
+        try:
+            lastmod_date = date.fromisoformat(lastmod)
+            modified_date = date.fromisoformat(date_modified)
+        except ValueError:
+            continue
+        if (lastmod_date - modified_date).days > 7:
+            errors.append(
+                f"{page.relative_to(ROOT)}: sitemap lastmod {lastmod!r} is more than 7 days "
+                f"newer than JSON-LD dateModified {date_modified!r} "
+                "(add a SEO_UPDATED_OVERRIDES entry and re-run optimise-marketing-seo.py)"
             )
 
 
@@ -888,6 +942,7 @@ def main() -> None:
 
     sitemap = (ROOT / "sitemap.xml").read_text()
     validate_sitemap_lastmod(errors, sitemap)
+    validate_exam_dateModified_vs_sitemap(errors, sitemap)
 
     guide_pages = validate_guide_pages(errors, llms)
     static_pages = validate_static_content_pages(errors, llms)

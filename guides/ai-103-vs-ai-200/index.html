@@ -351,9 +351,11 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        Planning covers choosing the right Foundry service and model family for a task, designing infrastructure and deployment options, monitoring quotas and drift, and applying responsible AI guardrails and audit trails. The generative and agentic domain covers building applications with LLMs and multimodal models, implementing retrieval-augmented generation, and building agents with tool integration, orchestrated multi-agent workflows, and observability through tracing and token analytics. The three smaller domains round out the practical surface: image and video generation with responsible-AI content filters, language-model text analysis and speech workflows, and retrieval pipelines that combine semantic, hybrid, and vector search with document extraction through Content Understanding.
-      </p>
+      <ul>
+        <li>Planning covers choosing the right Foundry service and model family for a task, designing infrastructure and deployment options, monitoring quotas and drift, and applying responsible AI guardrails and audit trails.</li>
+        <li>The generative and agentic domain covers building applications with LLMs and multimodal models, implementing retrieval-augmented generation, and building agents with tool integration, orchestrated multi-agent workflows, and observability through tracing and token analytics.</li>
+        <li>The three smaller domains round out the practical surface: image and video generation with responsible-AI content filters, language-model text analysis and speech workflows, and retrieval pipelines combining semantic, hybrid, and vector search with document extraction through Content Understanding.</li>
+      </ul>
     </section>
 
     <!-- What AI-200 actually tests -->
@@ -375,56 +377,58 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        Containerised solutions covers building and versioning images with Azure Container Registry, deploying to Azure Container Apps with event-driven scaling through KEDA, and running manifests on Azure Kubernetes Service. The largest domain, AI data services, is where AI-200 earns its name: connecting to Azure Cosmos DB for NoSQL and running vector similarity search, modelling schemas and running pgvector workloads in Azure Database for PostgreSQL, and implementing caching and vector indexing in Azure Managed Redis. Connect and consume covers Service Bus, Event Grid, and Azure Functions, and the final domain covers Key Vault, App Configuration, OpenTelemetry tracing, and writing KQL queries to diagnose a solution once it's live.
-      </p>
+      <ul>
+        <li>Containerised solutions covers building and versioning images with Azure Container Registry, deploying to Azure Container Apps with event-driven scaling through KEDA, and running manifests on Azure Kubernetes Service.</li>
+        <li>AI data services, the largest domain, is where AI-200 earns its name: Azure Cosmos DB for NoSQL with vector similarity search, pgvector workloads in Azure Database for PostgreSQL, and caching and vector indexing in Azure Managed Redis.</li>
+        <li>Connect and consume covers Service Bus, Event Grid, and Azure Functions; the final domain covers Key Vault, App Configuration, OpenTelemetry tracing, and writing KQL queries to diagnose a solution once it's live.</li>
+      </ul>
     </section>
 
     <!-- Prerequisite / ordering -->
     <section id="prerequisite" class="container">
       <p class="label-eyebrow section-eyebrow">Prerequisite question</p>
       <h2 class="display-small section-title">Is one a prerequisite for the other?</h2>
-      <p>
-        No. AI-103 and AI-200 are both standalone Associate exams, and Microsoft does not require either as a prerequisite for the other. Each optionally follows AI-901 (Azure AI Fundamentals) as a conceptual lead-in, but AI-103 and AI-200 do not lead into each other — they run in parallel as two different specialisations within the same broad Azure AI field.
+      <p class="section-lede">
+        No. AI-103 and AI-200 are both standalone Associate exams, and Microsoft does not require either as a prerequisite for the other.
       </p>
-      <p>
-        That parallel structure is deliberate. AI-103 assumes the Foundry project, the deployed model, and the underlying data store already exist, and tests what you build with them. AI-200 assumes none of that is your concern and tests whether you can stand the infrastructure up, connect it, secure it, and keep it running. A team building a production AI product typically needs both skill sets, but rarely from the same person on day one.
-      </p>
-      <p>
-        If you're deciding which to sit first with no strong pull either way, pick based on which domain list reads as more familiar right now: AI-103 if Foundry SDKs, prompts, and RAG pipelines already feel comfortable; AI-200 if Cosmos DB, Container Apps, and Service Bus already feel comfortable. There is no efficiency gained from sitting one before the other, since the domain content barely overlaps.
-      </p>
+      <ul>
+        <li>Each optionally follows AI-901 (Azure AI Fundamentals) as a conceptual lead-in, but the two don't lead into each other — they run in parallel as different specialisations in the same broad Azure AI field.</li>
+        <li>That's deliberate: AI-103 assumes the Foundry project, the deployed model, and the underlying data store already exist and tests what you build with them; AI-200 tests whether you can stand the infrastructure up, connect it, secure it, and keep it running.</li>
+        <li>A team building a production AI product typically needs both skill sets, but rarely from the same person on day one.</li>
+        <li>No strong pull either way? Pick the one whose domain list reads as more familiar right now — AI-103 if Foundry SDKs, prompts, and RAG pipelines feel comfortable; AI-200 if Cosmos DB, Container Apps, and Service Bus do.</li>
+        <li>There's no efficiency gained from sitting one before the other, since the domain content barely overlaps.</li>
+      </ul>
     </section>
 
     <!-- Career value framing (no invented numbers) -->
     <section id="career-value" class="container">
       <p class="label-eyebrow section-eyebrow">Career value</p>
       <h2 class="display-small section-title">How each certification helps your career</h2>
-      <p>
-        AI-103 is the credential to point to for "AI engineer", "AI application developer", or "AI agent developer" roles — anywhere the job is choosing models, designing agent behaviour, and shipping generative features. It demonstrates you can evaluate a model or an agent for fabrication, relevance, and safety, not just wire an API call.
-      </p>
-      <p>
-        AI-200 is the credential for "AI cloud developer" or "backend engineer for AI systems" roles, where the job is making sure the vector database, the containerised inference service, and the message queue behind an AI product actually hold up under load. It's also this site's suggested next step for anyone whose AZ-204 (Azure Developer Associate) credential is ageing out, since AZ-204 retired on 31 July 2026 and AI-200's compute, data, and integration domains cover the closest current match to that back-end developer skill set.
-      </p>
-      <p>Neither certification guarantees a job or pay rise. Both give you a Microsoft credential for specific AI skills that you can cite in a job application or promotion discussion.</p>
+      <p class="section-lede">Each certification signals a different layer of the AI product to a hiring manager.</p>
+      <ul>
+        <li>AI-103 is the credential for "AI engineer", "AI application developer", or "AI agent developer" roles — anywhere the job is choosing models, designing agent behaviour, and shipping generative features.</li>
+        <li>It demonstrates you can evaluate a model or agent for fabrication, relevance, and safety, not just wire an API call.</li>
+        <li>AI-200 is the credential for "AI cloud developer" or "backend engineer for AI systems" roles, where the job is making sure the vector database, containerised inference service, and message queue behind an AI product hold up under load.</li>
+        <li>It's also this site's suggested next step for anyone whose AZ-204 (Azure Developer Associate) is ageing out, since AZ-204 retired on 31 July 2026 and AI-200's compute, data, and integration domains are the closest current match to that skill set.</li>
+        <li>Neither guarantees a job or pay rise; both give you a Microsoft credential you can cite in a job application or promotion discussion.</li>
+      </ul>
     </section>
 
     <!-- Take both? -->
     <section id="take-both" class="container">
       <p class="label-eyebrow section-eyebrow">Take both?</p>
       <h2 class="display-small section-title">Should you take both AI-103 and AI-200?</h2>
-      <p>
-        For engineers on a full-stack AI platform team — the kind of team responsible for a product end to end, from the agent's behaviour down to the database it queries — both certifications map cleanly onto real, distinct parts of the job. Together they cover the AI application layer and the cloud infrastructure layer with almost no gap between them.
-      </p>
-      <p>
-        For a specialist who only ever works one side of that line, taking both offers limited extra signal. A model- and agent-focused engineer gets little from AI-200's container and messaging domains, and a backend-infrastructure engineer gets little from AI-103's prompt-engineering and vision domains. In those cases, sit the one that matches your role and revisit the other only if your responsibilities expand.
-      </p>
-      <p>
-        If you do plan to sit both, there is no real efficiency in sequencing them tightly together, since the domain overlap is minimal — treat them as two separate study projects rather than one combined plan. The <a href="/guides/how-to-pass-ai-103/">AI-103 study guide</a> and the <a href="/guides/how-to-pass-ai-200/">AI-200 study guide</a> each lay out their own six-week plan.
-      </p>
+      <p class="section-lede">For engineers on a full-stack AI platform team, both certifications map cleanly onto real, distinct parts of the job.</p>
+      <ul>
+        <li>Responsible for a product end to end, from the agent's behaviour down to the database it queries? Together they cover the AI application layer and the cloud infrastructure layer with almost no gap between them.</li>
+        <li>Only work one side of that line? Taking both offers limited extra signal — a model- and agent-focused engineer gets little from AI-200's container and messaging domains, and a backend-infrastructure engineer gets little from AI-103's prompt-engineering and vision domains.</li>
+        <li>Sit the one that matches your role and revisit the other only if your responsibilities expand.</li>
+        <li>Plan to sit both? There's no real efficiency in sequencing them tightly together, since the domain overlap is minimal — treat them as two separate study projects. The <a href="/guides/how-to-pass-ai-103/">AI-103 study guide</a> and the <a href="/guides/how-to-pass-ai-200/">AI-200 study guide</a> each lay out their own six-week plan.</li>
+      </ul>
       <div class="cta-panel">
-        <h3>Application layer or infrastructure layer, one app</h3>
+        <h3>One download, two independent banks</h3>
         <p>
-          Azure Mastery carries both the AI-103 and AI-200 question banks, each with a rationale for every option, so switching between the application layer and the infrastructure layer doesn't mean switching apps. Every bank gets its own on-device Exam IQ score with a confidence range and its own adaptive plan. Free to start, works offline.
+          Azure Mastery carries both the AI-103 and AI-200 question banks, each with a rationale for every option, so moving between the application layer and the infrastructure layer doesn't mean switching apps. Every bank gets its own on-device Exam IQ score with a confidence range and its own adaptive plan. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -512,7 +516,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AI-103 or AI-200?</h2>
-      <p>The AI-103 or AI-200 question bank, each with a rationale for every option, an on-device Exam IQ score with a confidence range, and a blueprint-weighted simulator. Free to start, works offline.</p>
+      <p>Application layer or infrastructure layer, your bank adapts its plan around your weak domains and predicts your score on-device before you book. Free to start, no account required.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

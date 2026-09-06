@@ -469,9 +469,15 @@
       <p>
         AI-300 is the <strong>Microsoft Certified: ML Operations Engineer Associate</strong> exam — the credential hiring managers expect when posting "MLOps Engineer", "GenAIOps Engineer", "AI Platform Operations", or "ML Reliability Engineer" roles. AI-300 covers the operational lifecycle of ML and generative-AI systems: MLOps infrastructure, model lifecycle, GenAIOps observability, and performance tuning at scale.
       </p>
-      <p>
-        AI-300 is <strong>hands-on and lifecycle-focused</strong>. It validates that you can design and implement an <em>MLOps infrastructure</em> (CI/CD for ML, environment management, registries, governance), implement <em>machine learning model lifecycle and operations</em> (training pipelines, deployment, monitoring, retraining), design and implement a <em>GenAIOps infrastructure</em> (prompt versioning, evaluation pipelines, deployment patterns for LLM apps), implement <em>generative AI quality assurance and observability</em> (groundedness checks, drift, hallucination detection, telemetry), and optimise <em>generative AI systems and model performance</em> (caching, batching, model selection, fine-tuning). Expect scenario questions that span CI/CD configs, monitoring strategies, and trade-off reasoning.
-      </p>
+      <p>AI-300 is <strong>hands-on and lifecycle-focused</strong>. It validates that you can:</p>
+      <ul>
+        <li>Design and implement an <em>MLOps infrastructure</em> — CI/CD for ML, environment management, registries, governance</li>
+        <li>Implement <em>machine learning model lifecycle and operations</em> — training pipelines, deployment, monitoring, retraining</li>
+        <li>Design and implement a <em>GenAIOps infrastructure</em> — prompt versioning, evaluation pipelines, deployment patterns for LLM apps</li>
+        <li>Implement <em>generative AI quality assurance and observability</em> — groundedness checks, drift, hallucination detection, telemetry</li>
+        <li>Optimise <em>generative AI systems and model performance</em> — caching, batching, model selection, fine-tuning</li>
+      </ul>
+      <p>Expect scenario questions that span CI/CD configs, monitoring strategies, and trade-off reasoning.</p>
       <p>
         Microsoft updated the AI-300 skills outline in <strong>March 2026</strong>. Every question in Azure Mastery's AI-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-300" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -521,7 +527,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests whether you reach for a registry, a shared datastore, or IaC to solve a described infrastructure need.</li>
-                <li>Candidates configure a network restriction that then blocks the exact workflow it was meant to secure.</li>
+                <li>A network restriction configured too tightly can block the exact workflow it was meant to secure.</li>
                 <li>Learn which Bicep or CLI script handles reproducible workspace deployment versus a manual portal setup.</li>
               </ul>
             </div>
@@ -540,7 +546,7 @@
                 <li>Monitor and maintain machine learning models in production</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests matching a training, registration, deployment, or monitoring step to what the scenario actually needs done.</li>
+                <li>Matching a training, registration, deployment, or monitoring step to what the scenario actually needs done is the core skill.</li>
                 <li>Candidates treat "registered" and "deployed" as the same milestone, missing that deployment is a separate step.</li>
                 <li>Watch for a data-drift signal in monitoring questions; that's the cue for a retraining or alert trigger.</li>
               </ul>
@@ -560,7 +566,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests configuring Foundry environments, model deployment, and prompt versioning for a stated production need.</li>
-                <li>Candidates reach for provisioned throughput on a spiky, low-volume workload where serverless pricing fits better.</li>
+                <li>Provisioned throughput often gets reached for on a spiky, low-volume workload where serverless pricing fits better.</li>
                 <li>Match identity, network, and deployment choices to the described security and traffic pattern, not habit.</li>
               </ul>
             </div>
@@ -577,8 +583,8 @@
                 <li>Implement observability for generative AI applications and agents</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests building an evaluation harness before launch, not just reacting to problems after they ship.</li>
-                <li>Candidates apply classic drift monitoring to a GenAI system instead of tracking groundedness or relevance decay.</li>
+                <li>Building an evaluation harness before launch is what separates a strong answer, well before problems reach production.</li>
+                <li>Classic drift monitoring often gets applied to a GenAI system instead of tracking groundedness or relevance decay.</li>
                 <li>Learn which metric, groundedness, relevance, coherence, or fluency, actually measures the described failure.</li>
               </ul>
             </div>
@@ -595,7 +601,7 @@
                 <li>Implement advanced fine-tuning and model customization</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests knowing when tuning retrieval beats fine-tuning the model, or neither beats a better base model.</li>
+                <li>Knowing when tuning retrieval beats fine-tuning the model, or neither beats a better base model, is the core test.</li>
                 <li>Candidates tune an embedding model when a compound query was never fully expressed to the retriever.</li>
                 <li>Prove any RAG or fine-tuning improvement with a relevance metric or A/B test rather than instinct.</li>
               </ul>
@@ -616,35 +622,35 @@
         <article class="trap">
           <h3>Registering an MLflow model captures the artifact; it doesn't mean the model is production-ready.</h3>
           <ul>
-            <li>The exam is testing whether you notice a model sitting in the registry with no traffic hasn't been deployed yet.</li>
+            <li>A model sitting in the registry with no traffic hasn't been deployed yet, whatever the registration status suggests.</li>
             <li>Check for a real-time or batch endpoint and a rollout strategy before assuming registration finished the job.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Data drift and prompt drift are caught by different monitoring mechanisms.</h3>
           <ul>
-            <li>The exam is testing whether you reach for evaluation-metric decay, not classic drift monitoring, on a GenAIOps workload.</li>
+            <li>A GenAIOps workload calls for evaluation-metric decay, not classic drift monitoring, as the signal to watch.</li>
             <li>Match feature-distribution drift to traditional models and groundedness or relevance decay to generative systems.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>A better embedding model doesn't fix a query the retriever never saw.</h3>
           <ul>
-            <li>The exam is testing whether a missed compound question is a query-construction problem, not a scoring problem.</li>
+            <li>A missed compound question is a query-construction problem first, not a scoring problem.</li>
             <li>Check whether every condition in the question was actually expressed before tuning the embedding model.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Provisioned throughput solves capacity and latency, not cost, for a spiky workload.</h3>
           <ul>
-            <li>The exam is testing whether a low-volume, spiky workload with a cost constraint should use serverless instead of PTUs.</li>
+            <li>A low-volume, spiky workload with a cost constraint calls for serverless, not PTUs.</li>
             <li>Match billed-regardless-of-usage PTUs to steady high volume, and pay-per-token to unpredictable traffic.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>A network restriction can silently block the pipeline it was meant to protect.</h3>
           <ul>
-            <li>The exam is testing whether you spot a missing rule or managed identity after locking down a workspace or project.</li>
+            <li>A missing rule or managed identity is what typically breaks right after a workspace or project gets locked down.</li>
             <li>Grant the specific pipeline, registry share, or monitoring integration through the boundary you just added.</li>
           </ul>
         </article>

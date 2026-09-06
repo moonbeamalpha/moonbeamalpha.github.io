@@ -451,3 +451,7 @@ html[data-theme="light"] .theme-toggle__moon { display: block; }
   ::view-transition-new(root) { animation-duration: 0.01ms; }
   .theme-fade-ready body { transition: none; }
 }
+
+/* Scannable recipe: domain tip bullets */
+html[data-theme="light"] #objectives .domain__tips { border-top-color: rgba(13, 30, 55, 0.12); }
+html[data-theme="light"] #objectives .domain__tips::before { color: #0E7490; }

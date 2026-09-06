@@ -1437,3 +1437,21 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
     left: 20px;
   }
 }
+
+/* Tip bullets under each domain's skill-group list (scannable recipe, 2026-09-06). */
+#objectives .domain__tips {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+#objectives .domain__tips::before {
+  content: "Tips";
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azure-cyan, #22d3ee);
+}
+#objectives .domain__tips li { color: var(--text-primary, #e6edf3); }

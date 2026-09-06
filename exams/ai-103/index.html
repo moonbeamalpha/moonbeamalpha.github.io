@@ -231,7 +231,7 @@
             "name": "AI-103 vs AI-102 — different roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-102 retired on 30 June 2026. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, and it reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content — not just a renamed version of the old outline."
+              "text": "AI-102 retired on 30 June 2026. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, a genuinely new outline that reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content since AI-102."
             }
           },
           {
@@ -499,7 +499,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 16 April 2026</p>
       <h2 class="display-small section-title">AI-103 exam objectives</h2>
       <p class="section-lede">
-        Five domains from Microsoft's current outline. Every summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103" rel="noopener">official study guide</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Five domains from Microsoft's current outline. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103" rel="noopener">official study guide</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -531,7 +531,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests architecture decisions made before any agent code: model-class choice, Foundry CI/CD, and keeping a live system observable and secure.</li>
-                <li>Candidates jump straight to model choice and skip the governance basics — managed identity, private networking, and responsible-AI guardrails.</li>
+                <li>Governance basics — managed identity, private networking, responsible-AI guardrails — get skipped in favour of jumping straight to model choice.</li>
                 <li>Match a workload's stated latency, cost, and accuracy needs to a specific Foundry service before picking a model.</li>
               </ul>
             </div>
@@ -550,8 +550,8 @@
               </ul>
               <ul class="domain__tips">
                 <li>The heaviest domain: covers RAG, multistep reasoning, and agents that call tools, hold memory, and hand off work to an orchestrator.</li>
-                <li>Candidates treat evaluation as an afterthought, but the exam tests detecting fabrications and scoring relevance and safety directly.</li>
-                <li>Practise reading a production agent's tracing, token, and latency data, not just building the agent itself.</li>
+                <li>Evaluation gets treated as an afterthought, but the exam tests detecting fabrications and scoring relevance and safety directly.</li>
+                <li>Practise reading a production agent's tracing, token, and latency data as closely as you practise building the agent.</li>
               </ul>
             </div>
           </details>
@@ -626,7 +626,7 @@
           <h3>Right-sizing the model, not maximising it</h3>
           <p>Candidates default to the largest multimodal model offered, when the scenario's latency, cost, and context needs point to a smaller one.</p>
           <ul>
-            <li>The exam is testing whether you can match model class to a task's stated requirements rather than picking the biggest option.</li>
+            <li>Latency, cost, and context length are the three levers Microsoft actually tests — raw capability rarely decides the answer.</li>
             <li>Treat every "which model" question as a sizing problem first: check latency, cost, and context before capability.</li>
           </ul>
         </article>
@@ -634,7 +634,7 @@
           <h3>RAG is not fine-tuning</h3>
           <p>Candidates reach for RAG when a scenario actually needs model customisation through fine-tuning, or the reverse.</p>
           <ul>
-            <li>The exam is testing whether you know RAG grounds answers in your content at query time without changing the model's weights.</li>
+            <li>RAG grounds answers in your own content at query time; fine-tuning changes the model's weights permanently instead.</li>
             <li>Read for "answer from our current documents" — that phrase means retrieval, never fine-tuning.</li>
           </ul>
         </article>
@@ -642,7 +642,7 @@
           <h3>One agent with tools vs. orchestrated agents</h3>
           <p>A single agent calling several tools and an orchestrator delegating to separate agents solve different shapes of problem entirely.</p>
           <ul>
-            <li>The exam is testing whether you can tell a one-agent-many-tools task from one needing an orchestrator and specialised agents.</li>
+            <li>Scope is the tell: one agent's tools share its memory, while an orchestrator hands each specialised agent its own context.</li>
             <li>Check whether the scenario needs one agent's shared memory and scope, or separate agents each with their own.</li>
           </ul>
         </article>
@@ -650,16 +650,16 @@
           <h3>Filters, evaluators, and governance aren't the same control</h3>
           <p>Content filters, evaluators, and governance controls all sound like "safety", but each operates at a different point in the pipeline.</p>
           <ul>
-            <li>The exam is testing whether you can place a described control into runtime filtering, offline evaluation, or upfront governance.</li>
+            <li>Runtime filtering blocks content as it flows, evaluation scores it afterwards, and governance sets the rules before either runs.</li>
             <li>Ask when the control acts — before, during, or after the agent runs — to sort it into the right category.</li>
           </ul>
         </article>
         <article class="trap">
-          <h3>Content Understanding is a pipeline, not just OCR</h3>
+          <h3>Content Understanding is a full extraction pipeline</h3>
           <p>Candidates treat Content Understanding as simple OCR, missing the structured output and multimodal analysis the exam actually tests.</p>
           <ul>
-            <li>The exam is testing whether you know Content Understanding spans structured output, multimodal analysis, and direct RAG-pipeline connection.</li>
-            <li>Look for what happens after extraction — structured JSON, Markdown, or a pipeline handoff — not just the text itself.</li>
+            <li>Structured JSON or Markdown output, multimodal analysis, and a direct connection into a RAG pipeline all sit inside Content Understanding.</li>
+            <li>Look for what happens after extraction: structured JSON, Markdown, or a handoff into the next pipeline stage.</li>
           </ul>
         </article>
       </div>
@@ -949,7 +949,7 @@
         <details class="faq">
           <summary>AI-103 vs AI-102 — different roles?</summary>
           <div class="faq__answer">
-            <p><a href="/exams/ai-102/">AI-102 retired on 30 June 2026</a>. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, and it reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content — not just a renamed version of the old outline.</p>
+            <p><a href="/exams/ai-102/">AI-102 retired on 30 June 2026</a>. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, a genuinely new outline that reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content since AI-102.</p>
           </div>
         </details>
         <details class="faq">

@@ -180,7 +180,7 @@
             "name": "Is AZ-900 hard for a complete beginner?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AZ-900 is the easiest Microsoft certification, but it is not trivial if cloud computing is genuinely new to you. It is entirely conceptual — no PowerShell, no Azure CLI, no hands-on configuration — but it still expects precise recall of terms such as region pairs, availability zones, and the shared responsibility model. Most people with some general IT background pass after one to two weeks; complete beginners should plan for three to four."
+              "text": "It's the easiest Microsoft certification, but not trivial if cloud is genuinely new to you. It's entirely conceptual — no CLI, no hands-on configuration — but expects precise recall of terms like region pairs and the shared responsibility model. Some IT background: one to two weeks. Complete beginners: three to four."
             }
           },
           {
@@ -188,7 +188,7 @@
             "name": "Do I need AZ-900 before other Azure certifications?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No, it is not a formal prerequisite for any Microsoft Azure certification, including AZ-104. It is optional but strongly recommended if you have less than six months of hands-on Azure experience, because it builds the conceptual map that every higher-level exam assumes you already have. If you already work with Azure day to day, you can skip straight to an Associate-level exam."
+              "text": "No, it's not a formal prerequisite anywhere, including AZ-104. It's optional but worthwhile with under six months of hands-on Azure experience, since it builds the conceptual map every higher-level exam assumes. Already working with Azure day to day? Skip straight to an Associate exam."
             }
           },
           {
@@ -196,7 +196,7 @@
             "name": "Is AZ-900 worth it if I am not a developer or engineer?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — that is exactly who it is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles or simply to speak the same language as the engineers they work with. The exam never expects you to write a script; it expects you to explain concepts such as consumption-based pricing or defence-in-depth in plain terms."
+              "text": "Yes — that's exactly who it's for. Account managers, project managers, sales engineers, and finance partners sit AZ-900 for Microsoft Partner Network roles or to speak the same language as the engineers around them. It never expects a script, just plain-terms explanations of ideas like consumption-based pricing."
             }
           },
           {
@@ -204,7 +204,7 @@
             "name": "What is the passing score for AZ-900?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You need 700 out of 1000 to pass. The score is scaled rather than a simple percentage of questions answered correctly, so it does not map to a fixed number of right answers. Treat 700 as a comfortable floor to clear rather than a target to scrape past."
+              "text": "700 out of 1000. The score is scaled rather than a simple percentage, so it doesn't map to a fixed number of right answers. Treat 700 as a comfortable floor to clear, not a target to scrape past."
             }
           },
           {
@@ -212,7 +212,7 @@
             "name": "Does the AZ-900 certification expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. AZ-900 is a Fundamentals-level certification, and Fundamentals certifications do not expire. Once you pass, it is yours permanently. This is different from Associate and Expert certifications such as AZ-104, which require a free annual renewal assessment on Microsoft Learn."
+              "text": "No. Fundamentals-level certifications don't expire, so once you pass it's yours permanently. That's different from Associate and Expert certifications such as AZ-104, which need a free annual renewal assessment on Microsoft Learn."
             }
           },
           {
@@ -220,7 +220,7 @@
             "name": "How much does AZ-900 cost and can I retake it if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Exam pricing varies by country, so check Microsoft's exam page for the fee where you live rather than trusting a figure you read elsewhere. Fail it and you can rebook after 24 hours for the first retry; the next two retries each carry a 14-day wait, and Microsoft allows no more than five sittings within any 12 months. Every attempt is a fresh booking."
+              "text": "Pricing varies by country — check Microsoft's exam page for your local fee. If you don't pass: First retake: after 24 hours Second and third retakes: a 14-day wait each Maximum five sittings per rolling 12 months, each a fresh booking"
             }
           }
         ]
@@ -377,15 +377,30 @@
       <ol class="guide-plan">
         <li>
           <h3>Cloud concepts</h3>
-          <p>Start with the vocabulary everything else depends on: the shared responsibility model, public versus private versus hybrid cloud, consumption-based pricing, serverless computing, and the three service models — IaaS, PaaS, and SaaS — with a concrete example of each. Do not rush this week; it is small in weight but it is the foundation the other two domains are written in terms of.</p>
+          <p>Small in weight, but it's the vocabulary the other two domains are written in terms of, so don't rush it.</p>
+          <ul>
+            <li>Shared responsibility model; public, private, and hybrid cloud.</li>
+            <li>Consumption-based pricing and serverless computing.</li>
+            <li>The three service models — IaaS, PaaS, SaaS — with a real example of each.</li>
+          </ul>
         </li>
         <li>
           <h3>Azure architecture and services</h3>
-          <p>The largest domain, so it gets a full week. Begin with the architectural hierarchy — regions, region pairs, availability zones, resource groups, subscriptions, and management groups — because almost every later question assumes you know where these sit relative to each other. Then compute and networking basics: virtual machines, scale sets, containers, Azure Functions, virtual networks, and the difference between a public and a private endpoint. Finish with storage tiers, then identity and security: Microsoft Entra ID, multi-factor authentication, Conditional Access, Azure RBAC, Zero Trust, and defence-in-depth.</p>
+          <p>The largest domain, so it gets a full week: almost every later question assumes you already know this hierarchy.</p>
+          <ul>
+            <li>Regions, region pairs, availability zones, resource groups, subscriptions, management groups.</li>
+            <li>Compute and networking: VMs, scale sets, containers, Functions, virtual networks, public versus private endpoints.</li>
+            <li>Storage tiers, then identity and security: Entra ID, MFA, Conditional Access, RBAC, Zero Trust, defence-in-depth.</li>
+          </ul>
         </li>
         <li>
           <h3>Management, governance, and exam simulation</h3>
-          <p>Cover cost management and the pricing calculator, Azure Policy and resource locks, the difference between the Azure portal, Cloud Shell, and the CLI, and monitoring tools such as Azure Advisor, Service Health, and Azure Monitor. Then focus your practice: run Focus Weak Spots drills daily against whatever is still shaky, and sit two full-length, timed practice exams before you book the real one. Review every wrong answer properly rather than just noting the score.</p>
+          <p>Cover the last domain, then spend the closing days proving you're ready.</p>
+          <ul>
+            <li>Cost management, the pricing calculator, Azure Policy, resource locks.</li>
+            <li>Portal versus Cloud Shell versus CLI; Azure Advisor, Service Health, Azure Monitor.</li>
+            <li>Run Focus Weak Spots daily, then sit two full-length timed practice exams.</li>
+          </ul>
         </li>
       </ol>
     </section>
@@ -400,23 +415,38 @@
       <div class="topic-cards">
         <div class="topic-card">
           <h3>Service model boundaries (IaaS, PaaS, SaaS)</h3>
-          <p>Practise classifying a workload as IaaS, PaaS, or SaaS, then explain who is responsible for each part. Who patches the operating system? Who manages the hardware? Who protects the data? Working through those questions makes the shared responsibility model easier to apply.</p>
+          <ul>
+            <li>Beginners can name the three models but stumble on who is responsible for what inside each one — the OS, the hardware, the data.</li>
+            <li>Practise classifying a workload as IaaS, PaaS, or SaaS, then say out loud who patches, who manages, and who protects it.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Regions, availability zones, and region pairs</h3>
-          <p>These three terms sound similar and questions rely on you telling them apart precisely. A region is a geographic area with one or more datacentres; an availability zone is a physically separate group of datacentres within a region that protects against local failure; a region pair is two regions in the same geography that Azure uses together for disaster recovery. Confusing these three is the single most common beginner mistake.</p>
+          <ul>
+            <li>These three terms sound alike, and confusing them is the single most common beginner mistake on this exam.</li>
+            <li>Fix the distinction: a region is a geographic area, an availability zone protects against local failure inside one, a region pair is two regions used together for disaster recovery.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Identity and access terms</h3>
-          <p>Microsoft Entra ID, multi-factor authentication, Conditional Access, and Azure RBAC all show up in the same domain and get blended together in memory. Learn what each one actually controls: Entra ID is the identity store, MFA proves who you are, Conditional Access decides when extra proof is required, and RBAC decides what an already-verified identity is allowed to do.</p>
+          <ul>
+            <li>Entra ID, MFA, Conditional Access, and RBAC live in the same domain and blur together in memory.</li>
+            <li>Separate what each controls: Entra ID is the identity store, MFA proves who you are, Conditional Access decides when extra proof is needed, RBAC decides what a verified identity can do.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Governance tools: Policy, locks, and Purview</h3>
-          <p>Azure Policy enforces rules about how resources can be configured; a resource lock stops a resource being deleted or changed regardless of who has permission; Microsoft Purview governs and catalogues data across the organisation. Questions often describe a requirement and expect you to pick the one tool built for that specific job rather than a plausible-sounding alternative.</p>
+          <ul>
+            <li>Questions describe a requirement and expect the one tool built for that job, not a plausible-sounding alternative.</li>
+            <li>Know that Azure Policy enforces configuration rules, a resource lock blocks deletion or change, and Microsoft Purview catalogues data across the organisation.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Pricing and cost management factors</h3>
-          <p>The exam expects you to know what actually drives an Azure bill — resource type, region, consumption tier, and bandwidth among them — and which tool answers which cost question. The pricing calculator estimates cost before you deploy anything; Azure Cost Management analyses and controls spend on resources you already have. Mixing those two up is an easy way to lose a mark that should be free.</p>
+          <ul>
+            <li>Two cost tools get swapped for each other, and that mix-up costs a mark that should be free.</li>
+            <li>Remember the pricing calculator estimates cost before you deploy, while Azure Cost Management analyses and controls spend on what you already have.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -433,9 +463,9 @@
         Finally, run at least one <strong>full-length, timed simulation</strong> before you book the real exam. Forty-five minutes for 40 to 60 questions is roughly a minute each, which is comfortable if you keep moving, but the only way to know you can sustain that pace is to actually try it under the clock.
       </p>
       <div class="cta-panel">
-        <h3>Put your study plan into practice</h3>
+        <h3>Retrieval practice, built in</h3>
         <p>
-          Make Azure Mastery part of your study plan for AZ-900. Answer original practice questions mapped to the three January 2026 domains, get an on-device readiness score from Exam IQ, follow an adaptive study plan that targets your weak spots, and let knowledge-decay alerts tell you what to revise before you forget it. Try a timed practice test in the Practice tab when you're ready for a longer session. Study offline, with no account needed.
+          Azure Mastery is the retrieval-practice habit above, packaged: original AZ-900 questions across all three domains, an adaptive plan that keeps circling back to your weak spots, and knowledge-decay alerts before a term like "region pair" has time to fade. Exam IQ gives you an on-device readiness score with a confidence range, so you know when a full timed run is actually worth sitting. Free to start, no account needed.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -463,7 +493,7 @@
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>New to cloud?</strong> Start with a handful of free AZ-900 questions and see your Exam IQ readiness score climb as the vocabulary sticks.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -473,27 +503,32 @@
       <div class="faqs">
         <details class="faq">
           <summary>Is AZ-900 hard for a complete beginner?</summary>
-          <div class="faq__answer"><p>AZ-900 is the easiest Microsoft certification, but it is not trivial if cloud computing is genuinely new to you. It is entirely conceptual — no PowerShell, no Azure CLI, no hands-on configuration — but it still expects precise recall of terms such as region pairs, availability zones, and the shared responsibility model. Most people with some general IT background pass after one to two weeks; complete beginners should plan for three to four.</p></div>
+          <div class="faq__answer"><p>It's the easiest Microsoft certification, but not trivial if cloud is genuinely new to you. It's entirely conceptual — no CLI, no hands-on configuration — but expects precise recall of terms like region pairs and the shared responsibility model. Some IT background: one to two weeks. Complete beginners: three to four.</p></div>
         </details>
         <details class="faq">
           <summary>Do I need AZ-900 before other Azure certifications?</summary>
-          <div class="faq__answer"><p>No, it is not a formal prerequisite for any Microsoft Azure certification, including <a href="/exams/az-104/">AZ-104</a>. It is optional but strongly recommended if you have less than six months of hands-on Azure experience, because it builds the conceptual map that every higher-level exam assumes you already have. If you already work with Azure day to day, you can skip straight to an Associate-level exam.</p></div>
+          <div class="faq__answer"><p>No, it's not a formal prerequisite anywhere, including <a href="/exams/az-104/">AZ-104</a>. It's optional but worthwhile with under six months of hands-on Azure experience, since it builds the conceptual map every higher-level exam assumes. Already working with Azure day to day? Skip straight to an Associate exam.</p></div>
         </details>
         <details class="faq">
           <summary>Is AZ-900 worth it if I am not a developer or engineer?</summary>
-          <div class="faq__answer"><p>Yes — that is exactly who it is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles or simply to speak the same language as the engineers they work with. The exam never expects you to write a script; it expects you to explain concepts such as consumption-based pricing or defence-in-depth in plain terms.</p></div>
+          <div class="faq__answer"><p>Yes — that's exactly who it's for. Account managers, project managers, sales engineers, and finance partners sit AZ-900 for Microsoft Partner Network roles or to speak the same language as the engineers around them. It never expects a script, just plain-terms explanations of ideas like consumption-based pricing.</p></div>
         </details>
         <details class="faq">
           <summary>What is the passing score for AZ-900?</summary>
-          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled rather than a simple percentage of questions answered correctly, so it does not map to a fixed number of right answers. Treat 700 as a comfortable floor to clear rather than a target to scrape past.</p></div>
+          <div class="faq__answer"><p>700 out of 1000. The score is scaled rather than a simple percentage, so it doesn't map to a fixed number of right answers. Treat 700 as a comfortable floor to clear, not a target to scrape past.</p></div>
         </details>
         <details class="faq">
           <summary>Does the AZ-900 certification expire?</summary>
-          <div class="faq__answer"><p>No. AZ-900 is a Fundamentals-level certification, and Fundamentals certifications do not expire. Once you pass, it is yours permanently. This is different from Associate and Expert certifications such as AZ-104, which require a free annual renewal assessment on Microsoft Learn.</p></div>
+          <div class="faq__answer"><p>No. Fundamentals-level certifications don't expire, so once you pass it's yours permanently. That's different from Associate and Expert certifications such as AZ-104, which need a free annual renewal assessment on Microsoft Learn.</p></div>
         </details>
         <details class="faq">
           <summary>How much does AZ-900 cost and can I retake it if I fail?</summary>
-          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-fundamentals/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. Fail it and you can rebook after 24 hours for the first retry; the next two retries each carry a 14-day wait, and Microsoft allows no more than five sittings within any 12 months. Every attempt is a fresh booking.</p></div>
+          <div class="faq__answer"><p>Pricing varies by country — check <a href="https://learn.microsoft.com/credentials/certifications/azure-fundamentals/" rel="noopener">Microsoft's exam page</a> for your local fee. If you don't pass:</p>
+          <ul>
+            <li>First retake: after 24 hours</li>
+            <li>Second and third retakes: a 14-day wait each</li>
+            <li>Maximum five sittings per rolling 12 months, each a fresh booking</li>
+          </ul></div>
         </details>
       </div>
     </section>
@@ -535,7 +570,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AZ-900?</h2>
-      <p>Practise with original AZ-900 practice questions across all three domains, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>Original AZ-900 questions across all three domains, an on-device Exam IQ score with a confidence range, and an adaptive plan that adjusts as you learn. Free to start, works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

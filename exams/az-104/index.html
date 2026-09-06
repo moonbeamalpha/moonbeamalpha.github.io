@@ -255,7 +255,7 @@
             "name": "Does AZ-104 practice work offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
+              "text": "Yes — questions, scoring, and the readiness prediction all run on-device, so a commute or a flight with no signal doesn't stop your AZ-104 prep. There's no account requirement, and study data stays on your device unless you turn on private iCloud sync."
             }
           },
           {
@@ -263,7 +263,7 @@
             "name": "Is there an AZ-104 practice test mode?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "Yes. Timed sessions pull from the same blueprint-weighted question pool, follow Microsoft's published timing, and support every interactive item type AZ-104 uses. Between sessions, adaptive study and Focus Weak Spots keep steering you back to your lowest-accuracy domains."
             }
           }
         ]
@@ -534,7 +534,17 @@
         AZ-104 is the <strong>Microsoft Certified: Azure Administrator Associate</strong> exam — the credential most hiring managers expect when posting "Cloud Administrator (Azure)" or "Azure Sysadmin" roles. It's the natural next step after <a href="/exams/az-900/">AZ-900</a> for anyone who administers Azure environments day-to-day, and the foundation underneath architecture (<a href="/exams/az-305/">AZ-305</a>), cloud and AI security (<a href="/exams/sc-500/">SC-500</a>), and networking (<a href="/exams/az-700/">AZ-700</a>) specialisms.
       </p>
       <p>
-        Unlike Fundamentals exams, AZ-104 is <strong>hands-on and practical</strong>. It validates that you can manage identities and RBAC at scale, implement storage with the right redundancy and access strategy, deploy and configure VMs, containers, and App Service, manage virtual networks and security groups, and monitor a live environment with Backup and Site Recovery in place for disaster recovery. Expect questions that show you a Bicep file or Azure CLI command and ask you to predict the outcome — not just describe a concept.
+        Unlike Fundamentals exams, AZ-104 is <strong>hands-on and practical</strong>. It covers:
+      </p>
+      <ul>
+        <li>Manage identities and RBAC at scale</li>
+        <li>Implement storage with the right redundancy and access strategy</li>
+        <li>Deploy and configure VMs, containers, and App Service</li>
+        <li>Manage virtual networks and security groups</li>
+        <li>Monitor a live environment, with Backup and Site Recovery in place for disaster recovery</li>
+      </ul>
+      <p>
+        Expect questions that show you a Bicep file or Azure CLI command and ask you to predict the outcome.
       </p>
       <p>
         Microsoft updated the AZ-104 skills outline on <strong>17 April 2026</strong>, with minor updates to storage configuration, virtual machine management, container provisioning, and monitoring. Every question in Azure Mastery's AZ-104 bank is mapped to the current outline — no leftover questions on retired features. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-104" rel="noopener">learn.microsoft.com</a>.
@@ -554,7 +564,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 17 April 2026</p>
       <h2 class="display-small section-title">AZ-104 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft's <strong>17 April 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-104" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Five domains, with weights set by Microsoft's <strong>17 April 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-104" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--azure">
         <div class="exam-family-visual__media">
@@ -603,7 +613,7 @@
                 <li>Configure Azure Files and Azure Blob Storage</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests configuring an account correctly for a stated need — redundancy tier, access method, encryption — not just creating one.</li>
+                <li>Configuring an account correctly for a stated need — redundancy tier, access method, encryption — matters more than simply creating one.</li>
                 <li>Candidates mix up four access mechanisms: firewall rules, SAS tokens, access keys, and identity-based Azure Files access.</li>
                 <li>Pair each scenario with its access mechanism on paper first; the exam rewards distinguishing them, not naming them.</li>
               </ul>
@@ -644,7 +654,7 @@
               <ul class="domain__tips">
                 <li>Tests VNet configuration, secure access with NSGs and Bastion, and DNS or load-balancer troubleshooting.</li>
                 <li>NSGs and application security groups get treated as interchangeable, but an ASG alone blocks nothing without an NSG rule.</li>
-                <li>Practise reading effective security rules, not just the rules you wrote — inherited rules are what the exam probes.</li>
+                <li>Practise reading a resource's effective security rules — the inherited ones are what the exam actually probes.</li>
               </ul>
             </div>
           </details>
@@ -662,7 +672,7 @@
               <ul class="domain__tips">
                 <li>Smallest domain by weight but often decides a borderline score: Monitor metrics, log queries, alerts, backup, and Site Recovery.</li>
                 <li>Soft delete, versioning, and backup restore get treated as one control when they solve three separate recovery problems.</li>
-                <li>Set up one alert rule and one backup policy yourself; the exam expects you to interpret the output, not just configure it.</li>
+                <li>Set up one alert rule and one backup policy yourself, then practise interpreting their output — that's what the exam expects.</li>
               </ul>
             </div>
           </details>
@@ -682,7 +692,7 @@
           <h3>Subscription scope vs resource-group scope</h3>
           <p>Candidates read which role was assigned but miss the scope it was assigned at, so cascading access catches them off guard.</p>
           <ul>
-            <li>The exam is testing whether you can trace a role's reach from subscription level down through every resource group inside it.</li>
+            <li>Subscription-level roles cascade down into every resource group and resource inside it; resource-group roles never reach back up.</li>
             <li>Note the exact scope named in the scenario before you pick an answer — the role name alone rarely settles it.</li>
           </ul>
         </article>
@@ -690,7 +700,7 @@
           <h3>Soft delete, versioning, and lifecycle management aren't the same control</h3>
           <p>These three storage features sound like one thing but each recovers from a different kind of loss.</p>
           <ul>
-            <li>The exam is testing whether you can tell soft delete, versioning, and lifecycle rules apart by the failure each one actually fixes.</li>
+            <li>Soft delete recovers a deletion, versioning recovers an overwrite, and lifecycle rules only ever move or expire ageing data.</li>
             <li>Match the scenario's exact failure — deleted, overwritten, or simply old — to the one control that actually fixes it.</li>
           </ul>
         </article>
@@ -698,7 +708,7 @@
           <h3>NSGs and application security groups aren't two names for the same thing</h3>
           <p>An application security group looks like a firewall rule on its own, but it filters nothing until an NSG references it.</p>
           <ul>
-            <li>The exam is testing whether you know an NSG filters traffic while an ASG only groups VMs by role for an NSG rule to use.</li>
+            <li>An NSG is the only object that actually filters traffic; an ASG just groups VMs by role for an NSG rule to reference.</li>
             <li>Check for an NSG rule actually referencing the ASG before assuming any traffic is being filtered.</li>
           </ul>
         </article>
@@ -706,7 +716,7 @@
           <h3>Availability sets, availability zones, and scale sets protect against different failures</h3>
           <p>These three sound interchangeable, but each guards against a different scale of hardware or datacentre failure.</p>
           <ul>
-            <li>The exam is testing whether you know sets, zones, and scale sets guard against three different scales of hardware failure.</li>
+            <li>An availability set spans fault domains in one datacentre, a zone spans separate datacentres, and a scale set adds or removes instances automatically.</li>
             <li>Match "protect against a datacentre outage" to zones specifically — this is one of the exam's most common misses.</li>
           </ul>
         </article>
@@ -714,7 +724,7 @@
           <h3>Service endpoints still leave a public IP; private endpoints don't</h3>
           <p>A service endpoint keeps traffic on the Azure backbone, but the resource still keeps its public IP unless firewalled off.</p>
           <ul>
-            <li>The exam is testing whether you know a service endpoint routes traffic privately without removing the resource's public exposure entirely.</li>
+            <li>A private endpoint assigns the resource a private IP inside your VNet and removes the public endpoint outright.</li>
             <li>For a "no public endpoint at all" requirement, pick a private endpoint — a service endpoint alone won't satisfy it.</li>
           </ul>
         </article>
@@ -1085,13 +1095,13 @@
         <details class="faq">
           <summary>Does AZ-104 practice work offline?</summary>
           <div class="faq__answer">
-            <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+            <p>Yes — questions, scoring, and the readiness prediction all run on-device, so a commute or a flight with no signal doesn't stop your AZ-104 prep. There's no account requirement, and study data stays on your device unless you turn on private iCloud sync.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Is there an AZ-104 practice test mode?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>Yes. Timed sessions pull from the same blueprint-weighted question pool, follow Microsoft's published timing, and support every interactive item type AZ-104 uses. Between sessions, adaptive study and Focus Weak Spots keep steering you back to your lowest-accuracy domains.</p>
           </div>
         </details>
       </div>

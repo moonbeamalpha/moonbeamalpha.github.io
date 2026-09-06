@@ -487,11 +487,21 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the SC-900 exam?</h2>
       <p>
-        SC-900 is the <strong>Microsoft Certified: Security, Compliance, and Identity Fundamentals</strong> credential — the entry-level exam for anyone working with (or making decisions about) Microsoft's security stack across both Azure and Microsoft 365. It's pitched at business stakeholders, new and existing IT professionals, and students who want a credible foundation in Microsoft SCI solutions. Common audiences include security analysts about to step into <strong>SC-200</strong>, identity administrators heading toward <strong>SC-300</strong>, and architects on the path to <strong>SC-100 (Cybersecurity Architect Expert)</strong>.
+        SC-900 is the <strong>Microsoft Certified: Security, Compliance, and Identity Fundamentals</strong> credential — the entry-level exam for anyone working with (or making decisions about) Microsoft's security stack across both Azure and Microsoft 365. It's pitched at business stakeholders, new and existing IT professionals, and students who want a credible foundation in Microsoft SCI solutions.
       </p>
       <p>
-        The exam doesn't ask you to configure a Conditional Access policy or write a KQL query. It expects you to recognise scenarios across the SCI surface: the <strong>shared responsibility model</strong>, <strong>defence-in-depth</strong>, <strong>Zero Trust</strong>, <strong>encryption vs hashing</strong>, identity vs authentication vs authorization, the role of <strong>Microsoft Entra ID</strong> and its identity types, the capabilities of <strong>Microsoft Defender</strong> products and <strong>Microsoft Sentinel</strong>, and Microsoft's compliance solutions including <strong>Microsoft Purview</strong>.
+        Common audiences include security analysts about to step into <strong>SC-200</strong>, identity administrators heading toward <strong>SC-300</strong>, and architects on the path to <strong>SC-100 (Cybersecurity Architect Expert)</strong>.
       </p>
+      <p>
+        The exam doesn't ask you to configure a Conditional Access policy or write a KQL query. It expects you to recognise scenarios across the SCI surface:
+      </p>
+      <ul>
+        <li>The <strong>shared responsibility model</strong>, <strong>defence-in-depth</strong>, and <strong>Zero Trust</strong></li>
+        <li><strong>Encryption vs hashing</strong>, and identity vs authentication vs authorization</li>
+        <li>The role of <strong>Microsoft Entra ID</strong> and its identity types</li>
+        <li>The capabilities of <strong>Microsoft Defender</strong> products and <strong>Microsoft Sentinel</strong></li>
+        <li>Microsoft's compliance solutions, including <strong>Microsoft Purview</strong></li>
+      </ul>
       <p>
         Microsoft updated the SC-900 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-900 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -510,7 +520,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 28 July 2026</p>
       <h2 class="display-small section-title">SC-900 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's <strong>28 July 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Four domains, with weights set by Microsoft's <strong>28 July 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -540,7 +550,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>This domain sets the vocabulary every later domain assumes: shared responsibility, defence-in-depth, Zero Trust, and identity as the perimeter.</li>
-                <li>Candidates confuse authentication with authorization here, then carry the same confusion into every Entra question that follows.</li>
+                <li>Authentication and authorization get confused here, and that confusion carries into every Entra question that follows.</li>
                 <li>Lock down authentication versus authorization before moving on; the exam keeps testing that one distinction.</li>
               </ul>
             </div>
@@ -600,7 +610,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>This domain is almost entirely Microsoft Purview: compliance management, information protection, data lifecycle, insider risk, and eDiscovery.</li>
-                <li>Candidates treat compliance score as a separate tool rather than the numeric output Compliance Manager actually produces.</li>
+                <li>Compliance score often gets treated as a separate tool rather than the numeric output Compliance Manager actually produces.</li>
                 <li>Learn compliance score as Compliance Manager's output, not a standalone product, before the exam tests that pairing.</li>
               </ul>
             </div>
@@ -621,7 +631,7 @@
           <h3>Authentication and authorization answer two different questions</h3>
           <p>Candidates use the two terms almost interchangeably in conversation, then mix them up the moment the exam tests them.</p>
           <ul>
-            <li>The exam is testing whether you know MFA and passwordless sign-in are authentication, while Conditional Access and RBAC are authorization.</li>
+            <li>MFA and passwordless sign-in sit under authentication; Conditional Access and RBAC sit under authorization instead.</li>
             <li>Ask which question the scenario answers, who you are or what you're allowed to do, before picking either term.</li>
           </ul>
         </article>
@@ -629,7 +639,7 @@
           <h3>Defender is a family of products, not one product</h3>
           <p>SC-900 expects you to match a described surface to the specific Defender product that covers it, and the brand name alone will not get you there.</p>
           <ul>
-            <li>The exam is testing whether you can place email, devices, SaaS apps, and on-premises AD signals with the right Defender product.</li>
+            <li>Email, devices, SaaS apps, and on-premises AD signals each map to a different named Defender product.</li>
             <li>Name the exact surface in the scenario, such as email or endpoint, before choosing which Defender product answers it.</li>
           </ul>
         </article>
@@ -637,7 +647,7 @@
           <h3>Microsoft Sentinel and Defender XDR cover different scopes</h3>
           <p>Both correlate security signal, so candidates treat Sentinel as just another Defender product rather than a separate platform.</p>
           <ul>
-            <li>The exam is testing whether you know Sentinel ingests non-Microsoft sources and automates response, while Defender XDR stays scoped to Microsoft telemetry.</li>
+            <li>Sentinel ingests non-Microsoft sources and automates response; Defender XDR stays scoped to Microsoft's own telemetry.</li>
             <li>Pick Sentinel whenever a scenario mentions third-party log sources or custom automation playbooks.</li>
           </ul>
         </article>
@@ -645,7 +655,7 @@
           <h3>Sensitivity labels and retention labels solve different problems in Purview</h3>
           <p>Both live inside Microsoft Purview, so candidates assume one label type covers both classification and retention.</p>
           <ul>
-            <li>The exam is testing whether you know sensitivity labels protect content by what it is, while retention labels govern how long it's kept.</li>
+            <li>Sensitivity labels protect content based on what it is; retention labels govern how long that content is kept.</li>
             <li>Pick retention over sensitivity whenever the scenario is about a legally required keep-or-delete period.</li>
           </ul>
         </article>
@@ -653,7 +663,7 @@
           <h3>Compliance score is an output, not a separate tool</h3>
           <p>Candidates describe compliance score as its own product rather than a number that Compliance Manager calculates.</p>
           <ul>
-            <li>The exam is testing whether you know compliance score is the weighted output Compliance Manager produces from your chosen assessments.</li>
+            <li>Compliance score is the weighted output Compliance Manager produces from whichever assessments you've chosen to run.</li>
             <li>Remember compliance score reports on Compliance Manager's controls; it isn't a tool you configure on its own.</li>
           </ul>
         </article>
@@ -1114,7 +1124,7 @@
         <a class="related-card" href="/exams/az-900/">
           <span class="related-card__code">AZ-900</span>
           <span class="related-card__name">Microsoft Azure Fundamentals</span>
-          <span class="related-card__hint">Sibling fundamentals. Useful pairing — SC-900 leans on Azure concepts SC-900 doesn't introduce. 364 practice questions.</span>
+          <span class="related-card__hint">Sibling fundamentals. Useful pairing — SC-900 leans on Azure concepts that AZ-900 introduces. 364 practice questions.</span>
         </a>
         <a class="related-card" href="/exams/ai-901/">
           <span class="related-card__code">AI-901</span>

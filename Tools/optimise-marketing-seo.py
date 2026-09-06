@@ -39,17 +39,45 @@ DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-08-09"
 SEO_UPDATED_OVERRIDES = {
-    # New pages launched after the 2026-08-09 site-wide SEO pass.
-    "AB-650": "2026-08-23",
-    "AI-500": "2026-08-23",
-    # Wave-1 de-templating pass (Task B, final-review fix wave).
-    "AI-103": "2026-09-04",
-    "AB-620": "2026-09-04",
-    "AB-100": "2026-09-04",
-    "SC-500": "2026-09-04",
-    "AI-200": "2026-09-04",
-    "AZ-104": "2026-09-04",
-    "AZ-900": "2026-09-04",
+    # S6 close-out (2026-09-06): every current exam page re-ported/touched by
+    # the scannable-recipe and tooling/lifecycle re-port work, so sitemap
+    # lastmod and JSON-LD dateModified agree (validate_exam_dateModified_vs_sitemap).
+    "AB-100": "2026-09-06",
+    "AB-410": "2026-09-06",
+    "AB-620": "2026-09-06",
+    "AB-650": "2026-09-06",
+    "AB-731": "2026-09-06",
+    "AB-900": "2026-09-06",
+    "AI-103": "2026-09-06",
+    "AI-200": "2026-09-06",
+    "AI-300": "2026-09-06",
+    "AI-500": "2026-09-06",
+    "AI-901": "2026-09-06",
+    "AZ-104": "2026-09-06",
+    "AZ-305": "2026-09-06",
+    "AZ-400": "2026-09-06",
+    "AZ-700": "2026-09-06",
+    "AZ-900": "2026-09-06",
+    "DP-300": "2026-09-06",
+    "DP-700": "2026-09-06",
+    "DP-750": "2026-09-06",
+    "DP-800": "2026-09-06",
+    "DP-900": "2026-09-06",
+    "GH-300": "2026-09-06",
+    "GH-900": "2026-09-06",
+    "PL-300": "2026-09-06",
+    "PL-900": "2026-09-06",
+    "SC-100": "2026-09-06",
+    "SC-200": "2026-09-06",
+    "SC-300": "2026-09-06",
+    "SC-500": "2026-09-06",
+    "SC-900": "2026-09-06",
+    # Retired-exam pages this branch re-ported (past-tense/humanizer passes).
+    "AI-102": "2026-09-06",
+    "AI-900": "2026-09-06",
+    "AZ-204": "2026-09-06",
+    "AZ-500": "2026-09-06",
+    "DP-100": "2026-09-06",
 }
 RETIRED_EXAMS = {
     "AI-900": {

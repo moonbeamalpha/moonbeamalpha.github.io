@@ -469,9 +469,14 @@
       <p>
         AI-500 is the <strong>Microsoft Certified: Multi-Agent AI Solutions Expert</strong> exam — an expert-level credential for practitioners who take a multi-agent system from a whiteboard sketch to a governed, observable production deployment on Azure. It's currently in <strong>beta</strong>: you take it as normal, but scores are released after Microsoft closes the beta window and finalises the item statistics.
       </p>
-      <p>
-        AI-500 is <strong>design-heavy and production-focused</strong>. It validates that you can architect multi-agent solutions (decomposing goals into workflows, agents, and tools; specifying protocols, memory architecture, and Zero Trust components), develop them in Azure (advanced prompt engineering, multi-agent RAG and context management, MCP tool ecosystems, and orchestration patterns via the Microsoft Agent Framework, LangChain, and LangGraph), evaluate and monitor them (agent evaluators, context-window diagnostics, tracing and cost management), and secure, govern, and deploy them (identity and RBAC, layered guardrails, and release strategy). Expect long, constraint-laden scenarios — a control loop that never terminates, a retrieval layer that drops one condition of a compound question, an agent whose tool calls started failing the moment it was published — and a question about which change actually fixes it.
-      </p>
+      <p>AI-500 is <strong>design-heavy and production-focused</strong>. It validates that you can:</p>
+      <ul>
+        <li>Architect multi-agent solutions — decomposing goals into workflows, agents, and tools; specifying protocols, memory architecture, and Zero Trust components</li>
+        <li>Develop them in Azure — advanced prompt engineering, multi-agent RAG and context management, MCP tool ecosystems, and orchestration patterns via the Microsoft Agent Framework, LangChain, and LangGraph</li>
+        <li>Evaluate and monitor them — agent evaluators, context-window diagnostics, tracing and cost management</li>
+        <li>Secure, govern, and deploy them — identity and RBAC, layered guardrails, and release strategy</li>
+      </ul>
+      <p>Expect long, constraint-laden scenarios — a control loop that never terminates, a retrieval layer that drops one condition of a compound question, an agent whose tool calls started failing the moment it was published — and a question about which change actually fixes it.</p>
       <p>
         Every question in Azure Mastery's AI-500 bank is mapped to the current Microsoft skills outline for multi-agent solution design, development, evaluation, and security. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -520,7 +525,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests matching an orchestration pattern, sequential, concurrent, handoff, group chat, or magentic, to a real requirement.</li>
-                <li>Candidates pick an orchestration pattern by familiarity rather than by the coordination the scenario actually describes.</li>
+                <li>An orchestration pattern often gets picked by familiarity rather than by the coordination the scenario actually describes.</li>
                 <li>Learn the Zero Trust specifics: per-agent identity scoping and tenant-isolation policies aren't optional extras.</li>
               </ul>
             </div>
@@ -539,7 +544,7 @@
                 <li>Implement Multi-Agent Orchestration</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests distinguishing short-term session context from Foundry Agent Service's long-term memory store.</li>
+                <li>Distinguishing short-term session context from Foundry Agent Service's long-term memory store is the core skill here.</li>
                 <li>Candidates reach for a single vector query when a compound question actually needs agentic retrieval's query planning.</li>
                 <li>Learn the five built-in orchestration patterns plus human-in-the-loop, caching, and scaling controls in detail.</li>
               </ul>
@@ -559,7 +564,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests matching a narrow agent evaluator, Task Adherence, Task Completion, Tool Selection, and the rest, to a failure.</li>
-                <li>Candidates pick the evaluator that sounds closest rather than the one that measures the described failure.</li>
+                <li>The evaluator that sounds closest often gets picked over the one that actually measures the described failure.</li>
                 <li>Learn to name sliding-window amnesia, summary drift, and vector-only recall as distinct context-window symptoms.</li>
               </ul>
             </div>
@@ -577,7 +582,7 @@
                 <li>Deploy Multi-Agent Solutions to Azure</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests knowing that role assignments never follow an identity change when an agent is published or migrated.</li>
+                <li>Role assignments never follow an identity change when an agent is published or migrated, and that's the core trap tested.</li>
                 <li>Candidates assume RBAC carries over automatically, missing that tool calls break until roles are reassigned.</li>
                 <li>Learn the multi-intervention guardrail points: user inputs, tool calls, tool responses, and outputs each need coverage.</li>
               </ul>
@@ -598,28 +603,28 @@
         <article class="trap">
           <h3>Publishing an agent doesn't carry its role assignments with it.</h3>
           <ul>
-            <li>The exam is testing whether you know tool calls start failing with authorisation errors the moment an agent goes live.</li>
+            <li>Tool calls start failing with authorisation errors the moment an agent goes live, before anyone notices the identity gap.</li>
             <li>Reassign RBAC to the identity now making the call before assuming a publish or migration finished cleanly.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Group chat agents don't share one literal session object.</h3>
           <ul>
-            <li>The exam is testing whether you know the orchestrator broadcasts each response to keep participants synchronised.</li>
+            <li>The orchestrator broadcasts each response to keep participants synchronised; there's no shared session object underneath.</li>
             <li>Debug a participant missing context by checking the broadcast, not by assuming a shared session is corrupt.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>A better retrieval score doesn't fix a question the query never asked.</h3>
           <ul>
-            <li>The exam is testing whether a dropped clause in a compound question points you at agentic retrieval's query planning.</li>
+            <li>A dropped clause in a compound question points at agentic retrieval's query planning, not the embedding model.</li>
             <li>Check whether every condition in the question was actually decomposed before tuning the embedding model.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>The wrong evaluator measures the wrong failure entirely.</h3>
           <ul>
-            <li>The exam is testing whether you can pick the narrow evaluator that matches the failure described, not the closest-sounding one.</li>
+            <li>The narrow evaluator that matches the described failure is what earns the mark, not the closest-sounding one.</li>
             <li>Match Task Completion, Task Adherence, Tool Selection, and Groundedness to their specific, non-overlapping jobs.</li>
           </ul>
         </article>

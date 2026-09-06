@@ -158,7 +158,9 @@ union to the app's non-current set, and exits with instructions when they drift.
 Keep them in lockstep with `optimise-marketing-seo.py`'s `RETIRED_EXAMS` /
 `RETIRING_EXAMS`. Do not add bare-number stale-phrase guards there — one for
 `"full 319-question bank"` false-positived the moment AI-300 legitimately reached
-319 exam-scoped questions.
+319 exam-scoped questions. Any page whose prose is rewritten gets a
+`SEO_UPDATED_OVERRIDES` entry in the same commit; sitemap `lastmod` and JSON-LD
+`dateModified` must agree (the validator checks it).
 
 ## CI, and what it cannot see
 

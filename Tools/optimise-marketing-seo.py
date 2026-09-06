@@ -73,6 +73,15 @@ SEO_UPDATED_OVERRIDES = {
     "AZ-700": "2026-09-06",
     "AB-410": "2026-09-06",
     "AB-650": "2026-09-06",
+
+    # Retired-exam pages whose retirement-copy edits (schema syncs, humanizer
+    # passes) bumped sitemap lastmod without a matching dateModified entry —
+    # caught by validate-marketing-seo.py's new dateModified-vs-lastmod gate.
+    "AI-102": "2026-09-04",
+    "AI-900": "2026-09-04",
+    "DP-100": "2026-09-04",
+    "AZ-204": "2026-09-06",
+    "AZ-500": "2026-09-06",
     "AB-731": "2026-09-06",
     "GH-300": "2026-09-06",
     "GH-900": "2026-09-06",

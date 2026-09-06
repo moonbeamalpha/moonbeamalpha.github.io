@@ -221,7 +221,7 @@
             "name": "How long should I study for AB-100?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions, not just describe the pieces."
+              "text": "Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions rather than describe the individual pieces."
             }
           },
           {
@@ -501,9 +501,21 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AB-100 exam?</h2>
       <p>
-        AB-100 is the <strong>Microsoft Agentic AI Business Solutions Architect</strong> credential — the senior-architect exam for designing, deploying, and governing agentic-first business solutions across the full Microsoft AI stack: <em>Copilot Studio</em>, <em>Microsoft Foundry</em>, <em>Microsoft 365 Copilot</em>, <em>Dynamics 365 Copilot</em>, and <em>Power Platform AI</em>. AB-100 covers planning AI-powered business solutions (ROI analysis, multi-agent strategy), designing agents and orchestration (task / autonomous / prompt-and-response agents, MCP extensibility, Foundry Tools), and deploying with full ALM, telemetry, responsible AI, and security.
+        AB-100 is the <strong>Microsoft Agentic AI Business Solutions Architect</strong> credential — the senior-architect exam for designing, deploying, and governing agentic-first business solutions across the full Microsoft AI stack: <em>Copilot Studio</em>, <em>Microsoft Foundry</em>, <em>Microsoft 365 Copilot</em>, <em>Dynamics 365 Copilot</em>, and <em>Power Platform AI</em>. It covers:
       </p>
-      <p>AB-100 tests architecture decisions across several Microsoft platforms. You'll analyse business requirements, choose whether to build or buy an agent solution, and design multi-agent systems with Agent2Agent (A2A) and Model Context Protocol (MCP). It also covers Microsoft 365 Copilot for Sales and Service, Dynamics 365 AI, and lifecycle management, governance, and audit trails for agents and models. Scenarios ask you to choose a component, deployment slot, or control that fits the wider business system.</p>
+      <ul>
+        <li>Plan AI-powered business solutions — ROI analysis, multi-agent strategy</li>
+        <li>Design agents and orchestration — task, autonomous, and prompt-and-response agents, MCP extensibility, Foundry Tools</li>
+        <li>Deploy with full ALM, telemetry, responsible AI, and security</li>
+      </ul>
+      <p>AB-100 tests architecture decisions across several Microsoft platforms. You'll:</p>
+      <ul>
+        <li>Analyse business requirements and choose whether to build or buy an agent solution</li>
+        <li>Design multi-agent systems with Agent2Agent (A2A) and Model Context Protocol (MCP)</li>
+        <li>Work across Microsoft 365 Copilot for Sales and Service and Dynamics 365 AI</li>
+        <li>Manage lifecycle, governance, and audit trails for agents and models</li>
+      </ul>
+      <p>Scenarios ask you to choose a component, deployment slot, or control that fits the wider business system.</p>
       <p>
         Microsoft's current AB-100 skills are measured as of <strong>22 July 2026</strong>. Every question in Azure Mastery's AB-100 bank is mapped to the current outline — including the new MCP extensibility, Computer Use, agent feed, and DSPM-for-AI topics. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -522,7 +534,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 22 July 2026</p>
       <h2 class="display-small section-title">AB-100 exam objectives</h2>
       <p class="section-lede">
-        Three domains from Microsoft's current outline, skills measured as of <strong>22 July 2026</strong>. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100" rel="noopener">official study guide</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Three domains from Microsoft's current outline, skills measured as of <strong>22 July 2026</strong>. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100" rel="noopener">official study guide</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -553,7 +565,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Covers assessing where agents genuinely help, checking grounding-data quality, and sequencing adoption with the Cloud Adoption Framework's AI track.</li>
-                <li>Candidates skip the ROI and total-cost-of-ownership case, jumping straight to a build-versus-buy answer without the numbers behind it.</li>
+                <li>The ROI and total-cost-of-ownership case gets skipped in favour of jumping straight to a build-versus-buy answer without the numbers.</li>
                 <li>Practise arguing when a model router beats a single model on cost versus capability before picking either.</li>
               </ul>
             </div>
@@ -613,7 +625,7 @@
           <h3>The right answer matches the stated constraint</h3>
           <p>Candidates pick a design that's correct for a different constraint than the one the scenario actually states.</p>
           <ul>
-            <li>The exam is testing whether you can spot the specific named constraint — cost, residency, governance, or time-to-market — before answering.</li>
+            <li>Cost, residency, governance, and time-to-market are the four constraints that repeatedly decide the correct answer here.</li>
             <li>Read the stem for its stated constraint first, then evaluate every option only against that one requirement.</li>
           </ul>
         </article>
@@ -621,7 +633,7 @@
           <h3>Smallest sufficient capability beats the most powerful one</h3>
           <p>Candidates reach for the most powerful platform option when the scenario's requirements are satisfied by a lighter one.</p>
           <ul>
-            <li>The exam is testing whether you default to restraint: a declarative extension or prebuilt feature over a custom build.</li>
+            <li>A declarative extension or prebuilt feature beats a custom build whenever it already satisfies the stated requirement.</li>
             <li>Ask whether the scenario actually demands the heavier option's extra capability before choosing it.</li>
           </ul>
         </article>
@@ -629,7 +641,7 @@
           <h3>Know which platform owns a capability by default</h3>
           <p>Candidates can't say which platform is the intended surface when several technically overlap on the same capability.</p>
           <ul>
-            <li>The exam is testing whether you know the primary, intended surface for a task, not just what's technically possible.</li>
+            <li>Several platforms can technically do the same job, but the exam rewards naming the one Microsoft intends for it.</li>
             <li>Decide whether the scenario is extending an existing Copilot experience or building a new agent from scratch.</li>
           </ul>
         </article>
@@ -637,7 +649,7 @@
           <h3>Responsible AI is the tie-breaker, not an afterthought</h3>
           <p>Candidates treat responsible AI as a separate checklist item instead of the deciding factor between two sound designs.</p>
           <ul>
-            <li>The exam is testing whether you pick the option that adds a responsible-AI control when two designs are otherwise equal.</li>
+            <li>When two designs are otherwise equal, the one adding a responsible-AI control is the correct answer.</li>
             <li>Look for an impact assessment, content-safety classifier, audit trail, or refusal pattern as the tie-breaking detail.</li>
           </ul>
         </article>
@@ -645,8 +657,8 @@
           <h3>The scenario paragraph carries the answer</h3>
           <p>Candidates miss a compliance requirement or staffing limit buried in the setup that decides the correct design.</p>
           <ul>
-            <li>The exam is testing whether you carry a detail from the scenario setup forward, since it may not repeat in the question.</li>
-            <li>Read the full business scenario once before touching any option, not just the question line.</li>
+            <li>A compliance requirement or staffing limit stated once in the setup often isn't repeated anywhere in the question itself.</li>
+            <li>Read the full business scenario once before touching any option, including the setup paragraph and the question line.</li>
           </ul>
         </article>
       </div>
@@ -963,7 +975,7 @@
         <details class="faq">
           <summary>How long should I study for AB-100?</summary>
           <div class="faq__answer">
-            <p>Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions, not just describe the pieces.</p>
+            <p>Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions rather than describe the individual pieces.</p>
           </div>
         </details>
         <details class="faq">

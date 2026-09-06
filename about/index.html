@@ -191,23 +191,30 @@
       <p>
         Azure Mastery is a native SwiftUI exam-prep app for iPhone, iPad, and Apple Watch, built for Microsoft certification exams across Azure, AI, Data, Security, Power Platform, and GitHub. It runs on iOS 18 and iPadOS 18 or later, with an Apple Watch companion for streaks and daily progress.
       </p>
-      <p>Exam IQ estimates your likely exam score on your device and shows a confidence range as you practise. Your adaptive study plan uses your answers to decide what to revise next. Answer Coach explains missed answers using the app's written rationales, and knowledge-decay tracking flags topics you're starting to forget before exam day.</p>
-      <p>The app is free to download. You can buy full question banks with one-time in-app purchases, and core study features need no subscription or account. Questions, Exam IQ, the adaptive study plan, and Answer Coach's written explanations all work offline. Azure Mastery has no server for your study data and does not track your activity.</p>
+      <p>Exam IQ, the adaptive study plan, Answer Coach and knowledge-decay tracking work together, all on your device:</p>
+      <ul>
+        <li>Exam IQ predicts your likely exam score, with a confidence range that narrows as you practise.</li>
+        <li>The adaptive study plan reorders what to revise next based on your actual answers.</li>
+        <li>Answer Coach turns a missed question into a private explanation, grounded in the app's own written rationales.</li>
+        <li>Knowledge-decay tracking flags topics fading from memory before they cost you marks on exam day.</li>
+      </ul>
+      <p>The app is free to download, and one-time in-app purchases unlock full per-exam question banks. Core study features need no subscription and no account. The question bank, Exam IQ, the adaptive study plan and Answer Coach's explanations all work offline, with no study-data server and no behavioural tracking.</p>
     </section>
 
     <!-- Why it exists -->
     <section id="why-it-exists" class="container">
       <p class="label-eyebrow section-eyebrow">Why it exists</p>
       <h2 class="display-small section-title">Why Azure Mastery exists</h2>
-      <p>Understanding why an answer is right or wrong is more useful than memorising an answer key. Azure Mastery puts those explanations alongside the questions so you can learn from each attempt.</p>
-      <p>Every question includes an explanation. Where individual option rationales are available, they explain the wrong answers as well as the right one, giving you something specific to review after a mistake.</p>
+      <p>Most exam-prep apps optimise for volume: thousands of questions, each with barely more than a correct answer marked. Azure Mastery works from a different premise. You learn faster from understanding why an option is right or wrong than from memorising an answer key.</p>
+      <p>Every question carries an explanation, and where an option-by-option rationale exists, it covers the wrong answers as well as the right one. Get a question wrong, and you walk away with a study session, not just a red mark.</p>
     </section>
 
     <!-- How it's built -->
     <section id="how-its-built" class="container">
       <p class="label-eyebrow section-eyebrow">How it's built</p>
       <h2 class="display-small section-title">How it's built</h2>
-      <p>Every practice question follows Microsoft's published skills outline for its exam. Automated checks run whenever a bank changes, and scheduled reviews look for outdated content. Read <a href="/how-we-write-questions/">how we write and verify questions</a>. Score prediction and the adaptive study plan use a CoreML model and your practice history on your device. Read <a href="/how-exam-iq-works/">how Exam IQ works</a>.</p>
+      <p>Every practice question follows Microsoft's published skills outline for its exam. Automated checks run whenever a bank changes, and scheduled reviews look for content that's gone stale — see <a href="/how-we-write-questions/">how we write and verify questions</a>.</p>
+      <p>Score prediction and the adaptive study plan run on a CoreML model that reads your practice history on your device, with no server involved — see <a href="/how-exam-iq-works/">how Exam IQ works</a>.</p>
     </section>
 
     <!-- Independence and privacy -->

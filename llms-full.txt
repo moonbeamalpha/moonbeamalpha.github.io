@@ -371,7 +371,7 @@ A: Different altitudes. AB-900 is the hands-on-governance Fundamentals cert: it 
 Q: Can I try Azure Mastery's AB-900 bank before paying?
 A: The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise AB-900 offline?
-A: Yes. Everything from question practice to scoring to the readiness prediction runs on-device, so an internet connection isn't part of the requirement. No account is needed either, and your data only leaves your device if you opt into private iCloud sync.
+A: Yes. You do not need an internet connection to practise. No account is needed either, and your data only leaves your device if you opt into private iCloud sync.
 
 ## /exams/ai-102/ — AI-102 Retired Exam & AI-103 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -910,7 +910,7 @@ A: For most candidates, yes. DP-900 repeatedly asks you to match a workload to t
 Q: I failed DP-900 once — what's the wait before I can resit?
 A: You can resit after 24 hours the first time. A second or third attempt each need a 14-day gap. Microsoft allows five attempts total in any rolling 12-month window, and every attempt needs its own voucher.
 Q: Is DP-900 worth sitting if I'm not a developer or DBA?
-A: It is: Microsoft built DP-900 for technical and non-technical candidates alike. Data analysts about to step into Power BI work sit it, so do software engineers crossing into a data role, and so do product managers who need to speak data architecture credibly. Nobody is asked to write a SQL query. Instead you get scenarios such as "which Azure SQL service for this workload?" and have to pick the right option.
+A: Yes. Microsoft built DP-900 for technical and non-technical candidates alike. Data analysts about to step into Power BI work sit it, so do software engineers crossing into a data role, and so do product managers who need to speak data architecture credibly. Nobody is asked to write a SQL query. Instead you get scenarios such as "which Azure SQL service for this workload?" and have to pick the right option.
 Q: Can I try Azure Mastery's DP-900 bank before paying?
 A: The app is free to download and includes a free allowance of DP-900 questions so you can try every feature. The full bank of 346 DP-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise for DP-900 with no internet connection?
@@ -1067,7 +1067,7 @@ A: Associate exams such as SC-200 and SC-300 test whether you can configure and 
 Q: Can I try Azure Mastery's SC-100 bank before paying?
 A: The app is free to download and includes a free allowance of SC-100 questions so you can try every feature. The full bank of 452 SC-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I rehearse SC-100 scenarios with no internet connection?
-A: You can, for the same reason all the core study features work this way: question practice, scoring, and the readiness prediction run entirely on-device, offline included. No account is required, and iCloud sync is optional and private if you want it.
+A: You can. Question practice, scoring and the readiness prediction all run on the device, so they work with no connection at all. No account is required, and iCloud sync is optional and private if you want it.
 
 ## /exams/sc-200/ — SC-200 Practice Questions — 374 Qs for SOC Analyst (2026)
 Page last modified: 2026-09-06

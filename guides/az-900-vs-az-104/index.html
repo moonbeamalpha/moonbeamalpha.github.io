@@ -352,9 +352,12 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        The first domain covers the shared responsibility model, public versus private versus hybrid cloud, consumption-based pricing, and the IaaS/PaaS/SaaS service types. The largest domain, Azure architecture and services, covers the regions-to-resource-groups hierarchy, compute and networking basics, storage tiers, and identity fundamentals such as Microsoft Entra ID, multi-factor authentication, and Azure RBAC. The third domain covers cost management, Azure Policy, resource locks, and monitoring tools such as Azure Monitor and Microsoft Defender for Cloud. Every question is about recognising the right concept or service, not configuring one.
-      </p>
+      <ul>
+        <li>Cloud concepts covers the shared responsibility model, public versus private versus hybrid cloud, consumption-based pricing, and the IaaS/PaaS/SaaS service types.</li>
+        <li>Azure architecture and services, the largest domain, covers the regions-to-resource-groups hierarchy, compute and networking basics, storage tiers, and identity fundamentals such as Entra ID, MFA, and RBAC.</li>
+        <li>Management and governance covers cost management, Azure Policy, resource locks, and monitoring tools such as Azure Monitor and Microsoft Defender for Cloud.</li>
+        <li>Every question is about recognising the right concept or service, not configuring one.</li>
+      </ul>
     </section>
 
     <!-- What AZ-104 actually tests -->
@@ -379,56 +382,59 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        Identity and governance covers Microsoft Entra ID user and group management and Azure RBAC assigned at management group, subscription, resource group, and resource scope. Storage covers redundancy options, SAS tokens, access keys, and identity-based access for Azure Files. Compute covers reading and deploying ARM templates and Bicep, virtual machine sizing and disks, and containers through Azure Container Registry and Container Apps. Networking covers network security groups, Azure Bastion, private endpoints, and load balancers. Monitoring covers Azure Monitor, Network Watcher, Azure Backup, and Azure Site Recovery. Five domains is a wider surface than AZ-900's three, and each one goes deeper.
-      </p>
+      <ul>
+        <li>Identity and governance covers Entra ID user and group management and Azure RBAC assigned at management group, subscription, resource group, and resource scope.</li>
+        <li>Storage covers redundancy options, SAS tokens, access keys, and identity-based access for Azure Files.</li>
+        <li>Compute covers reading and deploying ARM templates and Bicep, virtual machine sizing and disks, and containers through Azure Container Registry and Container Apps.</li>
+        <li>Networking covers network security groups, Azure Bastion, private endpoints, and load balancers; monitoring covers Azure Monitor, Network Watcher, Azure Backup, and Azure Site Recovery.</li>
+        <li>Five domains is a wider surface than AZ-900's three, and each one goes deeper.</li>
+      </ul>
     </section>
 
     <!-- Do you need AZ-900 before AZ-104? -->
     <section id="prerequisite" class="container">
       <p class="label-eyebrow section-eyebrow">Prerequisite question</p>
       <h2 class="display-small section-title">Do you need AZ-900 before AZ-104?</h2>
-      <p>
-        No. AZ-900 is not a formal prerequisite for AZ-104, and Microsoft's booking system will not stop you sitting AZ-104 first, or as your only Azure exam. Plenty of people go straight to AZ-104, particularly if they already touch Azure at work.
+      <p class="section-lede">
+        No. AZ-900 is not a formal prerequisite for AZ-104, and Microsoft's booking system won't stop you sitting AZ-104 first, or as your only Azure exam.
       </p>
-      <p>
-        Where AZ-900 genuinely helps is when Azure is new to you. If you have less than six months of hands-on experience with the platform, AZ-104's domains assume a conceptual map you have not built yet: what a region pair is, how subscriptions and management groups nest, what "shared responsibility" actually means for security. AZ-900 builds that map in one to two weeks, and it makes the AZ-104 material land faster because you are not learning the vocabulary and the configuration at the same time.
-      </p>
-      <p>
-        If you already administer Azure resources, even informally, you can usually skip AZ-900 without a gap. The conceptual content will be familiar from doing the job, and going straight to AZ-104 gets you to the credential that hiring managers actually screen for. Sitting AZ-900 afterwards, once you already hold AZ-104, adds little beyond a second line on a CV.
-      </p>
+      <ul>
+        <li>Plenty of people go straight to AZ-104, particularly if they already touch Azure at work.</li>
+        <li>AZ-900 genuinely helps if Azure is new to you: under six months of hands-on experience, and AZ-104's domains assume a conceptual map you haven't built yet — what a region pair is, how subscriptions and management groups nest, what "shared responsibility" means for security.</li>
+        <li>AZ-900 builds that map in one to two weeks, so AZ-104 material lands faster because you're not learning the vocabulary and the configuration at once.</li>
+        <li>Already administer Azure resources, even informally? You can usually skip AZ-900 without a gap — the conceptual content is familiar from the job, and AZ-104 is the credential hiring managers actually screen for.</li>
+        <li>Sitting AZ-900 afterwards, once you already hold AZ-104, adds little beyond a second line on a CV.</li>
+      </ul>
     </section>
 
     <!-- Career value framing (no invented numbers) -->
     <section id="career-value" class="container">
       <p class="label-eyebrow section-eyebrow">Career value</p>
       <h2 class="display-small section-title">How each certification helps your career</h2>
-      <p>
-        AZ-900 signals baseline cloud literacy. It is common for organisations to ask non-technical staff, new graduate hires, or people transferring into IT to hold it, because it proves someone can talk about cloud concepts and Azure's shape without needing to be an administrator. It is a reasonable box to tick before an internal move into a cloud-adjacent role, and a low-risk way to test whether Azure work interests you before committing serious study time.
-      </p>
-      <p>
-        AZ-104 signals that you can actually run an Azure environment. It is the certification job adverts mean when they list "Azure Administrator" as a requirement, and it is the assumed groundwork for expert-level architecture certifications such as AZ-305, and for specialist security and networking tracks. Holding it demonstrates operational competence, not just familiarity.
-      </p>
-      <p>Neither certification guarantees a job or pay rise. Both give your study a structure and provide a credential you can cite when applying for a role or promotion.</p>
+      <p class="section-lede">Each certification signals a different level of Azure competence to a hiring manager.</p>
+      <ul>
+        <li>AZ-900 signals baseline cloud literacy: organisations often ask non-technical staff, new graduate hires, or people transferring into IT to hold it, proving they can talk about cloud concepts without needing to be an administrator.</li>
+        <li>It's a reasonable box to tick before an internal move into a cloud-adjacent role, and a low-risk way to test whether Azure work interests you.</li>
+        <li>AZ-104 signals that you can actually run an Azure environment — the certification job adverts mean by "Azure Administrator", and the assumed groundwork for expert-level architecture certifications such as AZ-305 and specialist security and networking tracks.</li>
+        <li>Neither guarantees a job or pay rise; both give your study a structure and a credential you can cite when applying for a role or promotion.</li>
+      </ul>
     </section>
 
     <!-- Take both? -->
     <section id="take-both" class="container">
       <p class="label-eyebrow section-eyebrow">Take both?</p>
       <h2 class="display-small section-title">Should you take both AZ-900 and AZ-104?</h2>
-      <p>
-        For complete beginners, taking both in sequence is a sound plan. AZ-900's one-to-two-week timeline builds study momentum and confidence with the exam format before you take on AZ-104's much larger domain list, and you carry the exam-simulator habit straight into the harder exam.
-      </p>
-      <p>
-        For anyone already administering Azure, taking both is optional rather than necessary. Sitting AZ-104 directly gets you the credential that matters most for the role, and AZ-900 can wait, or simply be skipped, without holding your career back.
-      </p>
-      <p>
-        Where the two do work well together is on a CV that needs to show range: AZ-900 demonstrates that you understand the platform conceptually, and AZ-104 demonstrates that you can operate it. If you have the time, sitting AZ-900 first and rolling straight into AZ-104 preparation is a realistic six-to-ten-week combined project. The <a href="/guides/how-to-pass-az-900/">AZ-900 study guide</a> and the <a href="/guides/how-to-pass-az-104/">AZ-104 study guide</a> each lay out a week-by-week plan you can chain together.
-      </p>
+      <p class="section-lede">For complete beginners, taking both in sequence is a sound plan.</p>
+      <ul>
+        <li>AZ-900's one-to-two-week timeline builds study momentum and confidence with the exam format before you take on AZ-104's much larger domain list, and the exam-simulator habit carries straight into the harder exam.</li>
+        <li>Already administering Azure? Taking both is optional rather than necessary — AZ-104 directly gets you the credential that matters most for the role, and AZ-900 can wait or be skipped without holding your career back.</li>
+        <li>The two work well together on a CV that needs to show range: AZ-900 demonstrates you understand the platform conceptually, AZ-104 that you can operate it.</li>
+        <li>With the time, sitting AZ-900 first and rolling straight into AZ-104 preparation is a realistic six-to-ten-week combined project — the <a href="/guides/how-to-pass-az-900/">AZ-900 study guide</a> and the <a href="/guides/how-to-pass-az-104/">AZ-104 study guide</a> each lay out a week-by-week plan you can chain together.</li>
+      </ul>
       <div class="cta-panel">
-        <h3>One app, whichever route you pick</h3>
+        <h3>Switch exams without switching apps</h3>
         <p>
-          Azure Mastery writes a rationale for every option on every AZ-900 and AZ-104 question, so switching from the conceptual exam to the hands-on one doesn't mean switching apps or losing the habit. Each bank gets its own on-device Exam IQ score with a confidence range, its own adaptive plan, and its own blueprint-weighted simulator. Free to start, works offline.
+          Azure Mastery writes a rationale for every option on every AZ-900 and AZ-104 question, so moving from the conceptual exam to the hands-on one doesn't mean losing the habit. Each bank gets its own on-device Exam IQ score with a confidence range, its own adaptive plan, and its own blueprint-weighted simulator. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -516,7 +522,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AZ-900 or AZ-104?</h2>
-      <p>Original questions for either exam, each with a rationale for every option, an on-device Exam IQ score with a confidence range, and a blueprint-weighted simulator. Free to start, works offline.</p>
+      <p>Whichever one you pick, Azure Mastery writes a rationale for every option and adapts your study plan around your weak spots. Free to start, and it works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

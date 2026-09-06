@@ -323,7 +323,7 @@ def exam_page_edits(code: str, count: int):
         # "with <n> AZ-900 practice" (meta/JSON-LD lead-ins without the word "questions" adjacent)
         (rf'\b\d+(\s+{re.escape(code)}\s+practice\b)', c + r'\1'),
         # "full <n>-question bank" in the exam simulator copy
-        (r'(full\s+)\d+(-question\s+bank)', r'\g<1>' + c + r'\2'),
+        (r'(full\s+)\d+(-question\s+(?:[A-Z]{2}-\d{3}\s+)?bank)', r'\g<1>' + c + r'\2'),
         # title/og:title/twitter:title pattern "AZ-700 Practice Questions — 396 Qs"
         (rf'({re.escape(code)} Practice Questions — )\d+( Qs)', r'\g<1>' + c + r'\2'),
         # app-FAQ JSON-LD/visible copy "full bank of <n> AZ-700 practice questions"

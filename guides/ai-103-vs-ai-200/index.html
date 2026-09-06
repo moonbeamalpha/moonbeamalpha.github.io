@@ -153,7 +153,7 @@
             "name": "Is AI-200 a prerequisite for AI-103, or the other way round?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Neither exam requires the other, and Microsoft's certification paths list them as parallel Associate specialisations rather than a sequence. AI-901 (Azure AI Fundamentals) is an optional conceptual lead-in for both, but AI-103 and AI-200 themselves sit side by side, not one after the other."
+              "text": "No. Neither requires the other; Microsoft's certification paths list them as parallel Associate specialisations, not a sequence. AI-901 is an optional conceptual lead-in for both, but AI-103 and AI-200 sit side by side."
             }
           },
           {
@@ -161,7 +161,7 @@
             "name": "What's the real difference between AI-103 and AI-200?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-103 certifies the AI application and agent layer: choosing and deploying models in Microsoft Foundry, building retrieval-augmented and agentic workflows, and implementing vision, text, and extraction pipelines. AI-200 certifies the cloud infrastructure those solutions run on: containerised hosting, vector-capable data services such as Cosmos DB and PostgreSQL, event-driven messaging, Azure Functions, and securing and monitoring the whole thing. One is model- and agent-facing; the other is back-end and infrastructure-facing."
+              "text": "AI-103 certifies the AI application and agent layer: models in Foundry, RAG and agentic workflows, vision and extraction pipelines. AI-200 certifies the infrastructure those solutions run on: containers, vector-capable data services, event-driven messaging, security and monitoring. One is model-facing, the other is back-end-facing."
             }
           },
           {
@@ -169,7 +169,7 @@
             "name": "Which one should I take if I'm building a chatbot or an AI agent?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-103. Its Implement Generative AI and Agentic Solutions domain, worth 30 to 35%, covers exactly this: building agents with Microsoft Foundry, defining tool schemas and conversation memory, and orchestrating multi-agent workflows. AI-200 does not test conversational or agentic design at all."
+              "text": "AI-103. Its Implement Generative AI and Agentic Solutions domain (30-35%) covers exactly this: building agents with Foundry, tool schemas, conversation memory, multi-agent orchestration. AI-200 doesn't test conversational or agentic design at all."
             }
           },
           {
@@ -177,7 +177,7 @@
             "name": "Which one should I take if I own the data and messaging layer underneath an AI solution?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-200. Its two largest domains cover exactly that: developing AI solutions with Azure Cosmos DB, Azure Database for PostgreSQL, and Azure Managed Redis for vector storage, and connecting services with Azure Service Bus, Event Grid, and Azure Functions. AI-103 assumes those services exist and focuses on what the application does with them, not how they are built or secured."
+              "text": "AI-200. Its two largest domains cover exactly that: Cosmos DB, PostgreSQL, and Managed Redis for vector storage, plus Service Bus, Event Grid, and Functions for connecting services. AI-103 assumes those services exist and focuses on what the application does with them."
             }
           },
           {
@@ -185,7 +185,7 @@
             "name": "Do AI-103 and AI-200 expire the same way?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Both are Microsoft Associate certifications and both require annual renewal, free, through a short online assessment on Microsoft Learn during the six-month window before expiry. Passing one does not affect the other's renewal clock."
+              "text": "Yes. Both are Associate certifications, renewed annually and free, through a short assessment on Microsoft Learn during the six-month window before expiry. Passing one doesn't affect the other's renewal clock."
             }
           },
           {
@@ -193,7 +193,7 @@
             "name": "Can I take both, and does one make the other easier?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, and it's a common pairing for anyone on a full-stack AI platform team. The two domain lists barely overlap, so passing one does not meaningfully shorten study time for the other, but both assume comparable Python fluency and familiarity with Azure identity and monitoring, so that groundwork only needs building once."
+              "text": "Yes, and it's a common pairing on a full-stack AI platform team. The two domain lists barely overlap, so passing one doesn't meaningfully shorten study time for the other, but both assume comparable Python fluency and Azure identity familiarity, so that groundwork only needs building once."
             }
           }
         ]
@@ -282,15 +282,17 @@
       <div class="topic-cards">
         <div class="topic-card">
           <h3>Choose AI-103 if you build the AI itself</h3>
-          <p>
-            AI-103 (Microsoft Certified: Azure AI Apps and Agents Developer Associate) is the right exam if your job is choosing and deploying models in Microsoft Foundry, building generative and agentic applications, implementing retrieval-augmented generation, and shipping computer vision, text analysis, or information-extraction solutions. It expects working Python and hands-on familiarity with Foundry SDKs.
-          </p>
+          <ul>
+            <li>Right if your job is choosing and deploying models in Microsoft Foundry, building generative and agentic applications, implementing RAG, and shipping vision, text, or extraction solutions.</li>
+            <li>Expects working Python and hands-on familiarity with Foundry SDKs.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Choose AI-200 if you build the cloud back end underneath it</h3>
-          <p>
-            AI-200 (Microsoft Certified: AI Cloud Developer Associate) is the right exam if your job is containerised hosting for AI workloads, wiring vector-capable data services such as Cosmos DB, Azure Database for PostgreSQL, and Azure Managed Redis, connecting services through Service Bus, Event Grid, and Azure Functions, and securing and monitoring the resulting system. It expects Azure SDK fluency and infrastructure judgement more than model-behaviour judgement.
-          </p>
+          <ul>
+            <li>Right if your job is containerised hosting, wiring vector-capable data services like Cosmos DB and PostgreSQL, connecting services through Service Bus and Functions, and securing the result.</li>
+            <li>Expects Azure SDK fluency and infrastructure judgement more than model-behaviour judgement.</li>
+          </ul>
         </div>
       </div>
       <p class="section-note">
@@ -420,9 +422,9 @@
         If you do plan to sit both, there is no real efficiency in sequencing them tightly together, since the domain overlap is minimal — treat them as two separate study projects rather than one combined plan. The <a href="/guides/how-to-pass-ai-103/">AI-103 study guide</a> and the <a href="/guides/how-to-pass-ai-200/">AI-200 study guide</a> each lay out their own six-week plan.
       </p>
       <div class="cta-panel">
-        <h3>Prepare for either exam, or both, in one app</h3>
+        <h3>Application layer or infrastructure layer, one app</h3>
         <p>
-          Azure Mastery carries both the AI-103 and AI-200 question banks, each mapped to its own current skills outline. Every bank gets its own on-device Exam IQ readiness score, its own adaptive study plan, and its own full-length exam simulator, so switching between the application layer and the infrastructure layer does not mean switching apps. It works offline and needs no account to start.
+          Azure Mastery carries both the AI-103 and AI-200 question banks, each with a rationale for every option, so switching between the application layer and the infrastructure layer doesn't mean switching apps. Every bank gets its own on-device Exam IQ score with a confidence range and its own adaptive plan. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -435,7 +437,7 @@
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>Model layer or infrastructure layer?</strong> Start free with original questions for whichever matches your work, each with a rationale for every option.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -445,27 +447,27 @@
       <div class="faqs">
         <details class="faq">
           <summary>Is AI-200 a prerequisite for AI-103, or the other way round?</summary>
-          <div class="faq__answer"><p>No. Neither exam requires the other, and Microsoft's certification paths list them as parallel Associate specialisations rather than a sequence. AI-901 (Azure AI Fundamentals) is an optional conceptual lead-in for both, but AI-103 and AI-200 themselves sit side by side, not one after the other.</p></div>
+          <div class="faq__answer"><p>No. Neither requires the other; Microsoft's certification paths list them as parallel Associate specialisations, not a sequence. AI-901 is an optional conceptual lead-in for both, but AI-103 and AI-200 sit side by side.</p></div>
         </details>
         <details class="faq">
           <summary>What's the real difference between AI-103 and AI-200?</summary>
-          <div class="faq__answer"><p>AI-103 certifies the AI application and agent layer: choosing and deploying models in Microsoft Foundry, building retrieval-augmented and agentic workflows, and implementing vision, text, and extraction pipelines. AI-200 certifies the cloud infrastructure those solutions run on: containerised hosting, vector-capable data services such as Cosmos DB and PostgreSQL, event-driven messaging, Azure Functions, and securing and monitoring the whole thing. One is model- and agent-facing; the other is back-end and infrastructure-facing.</p></div>
+          <div class="faq__answer"><p>AI-103 certifies the AI application and agent layer: models in Foundry, RAG and agentic workflows, vision and extraction pipelines. AI-200 certifies the infrastructure those solutions run on: containers, vector-capable data services, event-driven messaging, security and monitoring. One is model-facing, the other is back-end-facing.</p></div>
         </details>
         <details class="faq">
           <summary>Which one should I take if I'm building a chatbot or an AI agent?</summary>
-          <div class="faq__answer"><p>AI-103. Its Implement Generative AI and Agentic Solutions domain, worth 30 to 35%, covers exactly this: building agents with Microsoft Foundry, defining tool schemas and conversation memory, and orchestrating multi-agent workflows. AI-200 does not test conversational or agentic design at all.</p></div>
+          <div class="faq__answer"><p>AI-103. Its Implement Generative AI and Agentic Solutions domain (30-35%) covers exactly this: building agents with Foundry, tool schemas, conversation memory, multi-agent orchestration. AI-200 doesn't test conversational or agentic design at all.</p></div>
         </details>
         <details class="faq">
           <summary>Which one should I take if I own the data and messaging layer underneath an AI solution?</summary>
-          <div class="faq__answer"><p>AI-200. Its two largest domains cover exactly that: developing AI solutions with Azure Cosmos DB, Azure Database for PostgreSQL, and Azure Managed Redis for vector storage, and connecting services with Azure Service Bus, Event Grid, and Azure Functions. AI-103 assumes those services exist and focuses on what the application does with them, not how they are built or secured.</p></div>
+          <div class="faq__answer"><p>AI-200. Its two largest domains cover exactly that: Cosmos DB, PostgreSQL, and Managed Redis for vector storage, plus Service Bus, Event Grid, and Functions for connecting services. AI-103 assumes those services exist and focuses on what the application does with them.</p></div>
         </details>
         <details class="faq">
           <summary>Do AI-103 and AI-200 expire the same way?</summary>
-          <div class="faq__answer"><p>Yes. Both are Microsoft Associate certifications and both require annual renewal, free, through a short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> during the six-month window before expiry. Passing one does not affect the other's renewal clock.</p></div>
+          <div class="faq__answer"><p>Yes. Both are Associate certifications, renewed annually and free, through a short assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> during the six-month window before expiry. Passing one doesn't affect the other's renewal clock.</p></div>
         </details>
         <details class="faq">
           <summary>Can I take both, and does one make the other easier?</summary>
-          <div class="faq__answer"><p>Yes, and it's a common pairing for anyone on a full-stack AI platform team. The two domain lists barely overlap, so passing one does not meaningfully shorten study time for the other, but both assume comparable Python fluency and familiarity with Azure identity and monitoring, so that groundwork only needs building once.</p></div>
+          <div class="faq__answer"><p>Yes, and it's a common pairing on a full-stack AI platform team. The two domain lists barely overlap, so passing one doesn't meaningfully shorten study time for the other, but both assume comparable Python fluency and Azure identity familiarity, so that groundwork only needs building once.</p></div>
         </details>
       </div>
     </section>
@@ -510,7 +512,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AI-103 or AI-200?</h2>
-      <p>Practise with the AI-103 or AI-200 question bank in Azure Mastery, each with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>The AI-103 or AI-200 question bank, each with a rationale for every option, an on-device Exam IQ score with a confidence range, and a blueprint-weighted simulator. Free to start, works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

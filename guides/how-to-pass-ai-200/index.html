@@ -241,7 +241,7 @@
             "name": "How much does AI-200 cost and can I retake it if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Prices differ from country to country, so use Microsoft's certification page as your source rather than a figure passed around online. Not passing doesn't shut the door: rebook after 24 hours for a first retake, wait 14 days for either the second or third, and stop after five attempts in any rolling 12-month period, which is Microsoft's ceiling. You book and sit each attempt separately."
+              "text": "If your employer covers certification costs, check with them before you pay out of pocket — otherwise Microsoft's certification page has the fee for your country. Not passing doesn't shut the door: rebook after 24 hours for a first retake, wait 14 days for either the second or third, and note Microsoft's ceiling of five attempts in any rolling 12-month period. Each attempt is booked separately."
             }
           }
         ]
@@ -913,7 +913,7 @@
           <p>Cosmos DB for NoSQL, Azure Database for PostgreSQL with pgvector, and Azure Managed Redis all support vector similarity search, and the exam expects you to match consistency requirements, latency budget, and relational needs to the right service rather than defaulting to whichever you know best.</p>
         </div>
         <div class="topic-card">
-          <h3>Tuning under load, not just scaling up</h3>
+          <h3>Tuning under load beats scaling up</h3>
           <p>Cosmos DB questions expect specific indexing-policy and consistency-level choices to control Request Unit cost, and PostgreSQL questions expect connection-optimisation and compute-sizing decisions to control latency and pgvector overhead. "Scale up the tier" is rarely the answer the exam is looking for.</p>
         </div>
         <div class="topic-card">
@@ -922,11 +922,11 @@
         </div>
         <div class="topic-card">
           <h3>Service Bus vs Event Grid for a given integration</h3>
-          <p>Service Bus suits ordered, transactional, dead-letter-aware messaging between known producers and consumers. Event Grid suits fan-out, filtered, retryable event delivery to many subscribers. The exam names a specific integration requirement and expects the messaging pattern that fits it, not just "a queue".</p>
+          <p>Service Bus suits ordered, transactional, dead-letter-aware messaging between known producers and consumers. Event Grid suits fan-out, filtered, retryable event delivery to many subscribers. The exam names a specific integration requirement and expects you to name the actual messaging pattern it calls for, down to which of the two services owns it.</p>
         </div>
         <div class="topic-card">
           <h3>Observability with real instrumentation detail</h3>
-          <p>AI-200 tests actual OpenTelemetry SDK instrumentation and KQL query-writing rather than "turn on Application Insights". Expect a scenario describing a specific tracing gap or a log query requirement and asking you to write or fix the instrumentation, not just recognise the monitoring tool.</p>
+          <p>AI-200 tests actual OpenTelemetry SDK instrumentation and KQL query-writing rather than "turn on Application Insights". Expect a scenario describing a specific tracing gap or a log query requirement and asking you to write or fix the instrumentation yourself.</p>
         </div>
       </div>
     </section>
@@ -951,7 +951,7 @@
       <div class="cta-panel">
         <h3>Build all three habits in one app</h3>
         <p>
-          Azure Mastery runs this exact loop for AI-200: questions across all four current domains, an on-device readiness score that Exam IQ rebuilds from your own answers, and a study plan that keeps dragging your weakest domain back to the top of the list. Sit a full-length simulator in the Practice tab when you're ready — free to start, and it works with no signal at all.
+          Pick Service Bus when the scenario wanted Event Grid, and the useful lesson isn't "try again" — it's seeing why the other option was wrong, which is what Answer Coach gives you on every question across all four domains. The adaptive plan keeps steering you back to whichever of those four is weakest, and the blueprint-weighted simulator runs the whole thing at real exam pace when you're ready. Free to start; it doesn't care whether you have signal.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -1009,7 +1009,7 @@
         </details>
         <details class="faq">
           <summary>How much does AI-200 cost and can I retake it if I fail?</summary>
-          <div class="faq__answer"><p>Prices differ from country to country, so use <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-cloud-developer-associate/" rel="noopener">Microsoft's certification page</a> as your source rather than a figure passed around online. Not passing doesn't shut the door: rebook after 24 hours for a first retake, wait 14 days for either the second or third, and stop after five attempts in any rolling 12-month period, which is Microsoft's ceiling. You book and sit each attempt separately.</p></div>
+          <div class="faq__answer"><p>If your employer covers certification costs, check with them before you pay out of pocket — otherwise <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-cloud-developer-associate/" rel="noopener">Microsoft's certification page</a> has the fee for your country. Not passing doesn't shut the door: rebook after 24 hours for a first retake, wait 14 days for either the second or third, and note Microsoft's ceiling of five attempts in any rolling 12-month period. Each attempt is booked separately.</p></div>
         </details>
       </div>
     </section>

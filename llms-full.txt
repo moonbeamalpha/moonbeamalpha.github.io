@@ -347,7 +347,7 @@ Q: Is there an AB-731 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ab-900/ — AB-900 Practice Questions — 323 Qs for Copilot Admin (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Identify the core features and objects of Microsoft 365 services (30–35%)
   - Understand data protection and governance tasks for Microsoft 365 and Copilot (35–40%)
@@ -365,13 +365,13 @@ A: No. AB-900, like other Microsoft Fundamentals certifications (AZ-900, AI-901,
 Q: DSPM for AI vs standard DLP — how does AB-900 tell them apart?
 A: AB-900 tests whether you know DSPM for AI is scoped specifically to Copilot and agent interactions — flagging oversharing risk and sensitive-data exposure in prompts and grounding data — while standard Data Loss Prevention policies govern data movement across email, Teams, and file storage generally. Picking the AI-specific tool for a plain document-sharing scenario, or vice versa, is the exact mix-up Answer Coach is built to catch.
 Q: I failed AB-900 — how soon can I book a retake?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics.
+A: Microsoft's retake policy is the same across its certifications: 24 hours before the first resit, 14 days before the second and third, and a hard cap of five attempts in a rolling 12 months, with a new voucher required each time. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics.
 Q: AB-900 vs AB-731 — what's the difference?
 A: Different altitudes. AB-900 is the hands-on-governance Fundamentals cert: it expects you to identify Microsoft 365 admin-centre objects, Purview governance surfaces, and day-to-day Copilot administration controls (licensing, usage analytics, agent approval flow). AB-731 (AI Transformation Leader) is an Associate-tier strategy cert — it expects you to reason about organisation-wide AI adoption, Microsoft Foundry, and responsible AI at a leadership level, not configure individual admin centres. AB-900 administers what's already rolled out; AB-731 plans the rollout and the governance strategy behind it. IT admins usually want AB-900 first; those setting AI strategy across a team or organisation are better served starting with AB-731.
 Q: Can I try Azure Mastery's AB-900 bank before paying?
 A: The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise AB-900 offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. Everything from question practice to scoring to the readiness prediction runs on-device, so an internet connection isn't part of the requirement. No account is needed either, and your data only leaves your device if you opt into private iCloud sync.
 
 ## /exams/ai-102/ — AI-102 Retired Exam & AI-103 Next Step | Azure Mastery
 Page last modified: 2026-08-09
@@ -778,7 +778,7 @@ Q: Is there a DP-100 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-300/ — DP-300 Practice Questions — 405 Qs for Database Admin (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Plan and implement data platform resources (15–20%)
   - Implement a secure environment (20–25%)
@@ -800,14 +800,14 @@ A: Query Store is the go-to when the scenario is about regression over time — 
 Q: DP-300 vs AI-300 — different data roles?
 A: They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role.
 Q: I need to resit DP-300 — how soon can I book again?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: You're eligible to resit 24 hours after a first fail. A second and third attempt each require 14 days' wait. Microsoft caps the total at five attempts in a rolling 12-month period, and a new voucher is needed every time.
 Q: Can I try Azure Mastery's DP-300 bank before paying?
 A: The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-300 revision still work with no connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: You can. On-device is how question practice, scoring, and the DP-300 readiness prediction all work, so a lack of signal doesn't stop your study session. No account is needed, and your data stays put unless you enable private iCloud sync.
 
 ## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Implement and manage an analytics solution (30–35%)
   - Ingest and transform data (30–35%)
@@ -827,14 +827,14 @@ A: Dataflow Gen2 is the low-code, Power Query-driven choice for transformation-h
 Q: Is DP-700 a technical, hands-on exam?
 A: Yes. DP-700 expects you to reason about real data-engineering work in Microsoft Fabric — writing and debugging T-SQL, PySpark, and KQL; designing full and incremental load patterns; working with Delta tables, OneLake shortcuts, mirroring, and pipelines; and optimising Lakehouse, Warehouse, and Spark performance. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
 Q: I failed DP-700 — how long until I can retake it?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: The first resit is open after 24 hours. Attempts two and three each need a 14-day gap first. Five attempts is the ceiling within any rolling 12 months, and every attempt requires buying a new voucher.
 Q: Can I try Azure Mastery's DP-700 bank before paying?
 A: The app is free to download and includes a free allowance of DP-700 questions so you can try every feature. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-700 practice hold up without a connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. The app doesn't need a connection for question practice, scoring, or the readiness prediction — all of that runs on-device. No account is required, and your data stays on your device unless you switch on optional iCloud sync.
 
 ## /exams/dp-750/ — DP-750 Practice Questions — 442 Qs for Databricks (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Set up and configure an Azure Databricks environment (15–20%)
   - Secure and govern Unity Catalog objects (15–20%)
@@ -853,16 +853,16 @@ A: Yes. DP-750 earns the Microsoft Certified: Azure Databricks Data Engineer Ass
 Q: Lakeflow Job or Declarative Pipeline — how does DP-750 tell them apart?
 A: A Lakeflow Job orchestrates arbitrary tasks — notebooks, SQL, other jobs — on a schedule or trigger, useful when the work isn't purely a data-transformation flow. A Declarative Pipeline is purpose-built for expressing a data-transformation graph with dependency management and data-quality expectations handled for you. Picking a Job when the scenario describes a declarative transform graph (or vice versa) is one of DP-750's recurring misses.
 Q: I need to resit DP-750 — what's the wait?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: A 24-hour wait applies before your first retake. Second and third attempts each need 14 days. Microsoft's cap is five attempts per rolling 12-month window, with a fresh voucher purchase required each time.
 Q: Is DP-750 a technical, hands-on exam?
 A: Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp.
 Q: Can I try Azure Mastery's DP-750 bank before paying?
 A: The app is free to download and includes a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does DP-750 revision work without a connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. Question practice, scoring, and the DP-750 readiness prediction all run locally on your device, so studying with no signal works exactly the same as studying with a full connection. No account is needed, and sync via iCloud stays optional and private.
 
 ## /exams/dp-800/ — DP-800 Practice Questions — 393 Qs for SQL AI Developer (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Design and develop database solutions (35–40%)
   - Secure, optimize, and deploy database solutions (35–40%)
@@ -882,14 +882,14 @@ A: A vector index suits semantic, meaning-based retrieval — finding rows whose
 Q: DP-800 vs PL-300 — different data roles?
 A: They sit on opposite ends of the data stack. DP-800 is for SQL developers bringing AI primitives — embeddings, vector search, RAG, MCP endpoints — directly into the data tier through T-SQL on SQL Server, Azure SQL, and Microsoft Fabric. PL-300 (Microsoft Power BI Data Analyst Associate) is for analysts modelling, visualising, and publishing data with Power BI and DAX. Neither is a prerequisite for the other; choose based on whether your role writes the data layer or reports on it.
 Q: I failed DP-800 — how soon can I book a retake?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design.
+A: First retake: wait 24 hours. Second and third: 14 days each. Microsoft won't allow more than five attempts in a rolling 12-month period, and each attempt needs a new voucher. DP-800 retake failures usually come from underestimating the AI domain — most candidates over-study T-SQL and JSON shaping and under-study embeddings, vector indexes, and RAG flow design.
 Q: Can I try Azure Mastery's DP-800 bank before paying?
 A: The app is free to download and includes a free allowance of DP-800 questions so you can try every feature. The full bank of 393 DP-800 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise DP-800 with no data connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: You can. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync.
 
 ## /exams/dp-900/ — DP-900 Practice Questions — 346 Qs for Data Basics (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Describe core data concepts (25–30%)
   - Identify considerations for relational data on Azure (20–25%)
@@ -908,13 +908,13 @@ A: No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-90
 Q: Is relational vs non-relational the hardest DP-900 call?
 A: For most candidates, yes. DP-900 repeatedly asks you to match a workload to the right storage model — a relational schema with joins and transactions vs a document, key-value, column-family, or graph store built for a different access pattern. Azure Mastery's Answer Coach flags exactly which property of the scenario (structure, consistency need, query shape) should have driven the choice, rather than leaving you to memorise service names in isolation.
 Q: I failed DP-900 once — what's the wait before I can resit?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: You can resit after 24 hours the first time. A second or third attempt each need a 14-day gap. Microsoft allows five attempts total in any rolling 12-month window, and every attempt needs its own voucher.
 Q: Is DP-900 worth sitting if I'm not a developer or DBA?
-A: Yes — Microsoft positions DP-900 for both technical and non-technical candidates. Data analysts about to step into Power BI work, software engineers crossing into a data role, and product managers responsible for analytics architecture all sit DP-900. The exam doesn't ask you to write SQL queries. It asks you to recognise scenarios — "which Azure SQL service for this workload?" or "which storage tier for this access pattern?" — and pick the correct option.
+A: It is: Microsoft built DP-900 for technical and non-technical candidates alike. Data analysts about to step into Power BI work sit it, so do software engineers crossing into a data role, and so do product managers who need to speak data architecture credibly. Nobody is asked to write a SQL query. Instead you get scenarios such as "which Azure SQL service for this workload?" and have to pick the right option.
 Q: Can I try Azure Mastery's DP-900 bank before paying?
 A: The app is free to download and includes a free allowance of DP-900 questions so you can try every feature. The full bank of 346 DP-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise for DP-900 with no internet connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. The app runs question practice, scoring, and the DP-900 readiness prediction entirely on-device, so a flight or a commute with no signal is no obstacle. There's no account requirement, and your study data stays on your device unless you turn on private iCloud sync.
 
 ## /exams/gh-300/ — GH-300 Practice Questions — 356 Qs for GitHub Copilot (2026)
 Page last modified: 2026-08-09
@@ -1000,7 +1000,7 @@ Q: Is there a PL-300 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Describe the business value of Microsoft Power Platform (5–10%)
   - Manage the Microsoft Power Platform environment (20–25%)
@@ -1020,13 +1020,13 @@ A: No. Microsoft Fundamentals certifications — including AZ-900, PL-900, AI-90
 Q: Canvas app or model-driven app — how does PL-900 test the difference?
 A: Rather than asking you to define either term, PL-900 gives you a business scenario and expects you to pick the app type that fits it — a canvas app when the requirement is a bespoke, pixel-controlled layout over specific data sources; a model-driven app when the requirement is driven by the underlying Dataverse schema and standard business processes. Azure Mastery's Answer Coach names which property of the scenario should have decided it whenever you pick the wrong one.
 Q: I didn't pass first time — when can I book a PL-900 resit?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: The wait is 24 hours before your first retake. Fail again and it's 14 days before the second attempt, then another 14 before the third. Five attempts is the cap per rolling 12 months, and each one needs a fresh voucher.
 Q: Is PL-900 worth taking if I'm not a developer?
-A: Yes — Microsoft positions PL-900 squarely for both technical and non-technical candidates. Business analysts, "citizen developers" and makers, project managers, and IT pros evaluating low-code all sit PL-900. The exam doesn't ask you to write production code. It asks you to recognise scenarios — "canvas or model-driven app for this case?" or "cloud or desktop flow?" — and pick the correct option. It's the natural first step before building real apps and flows.
+A: Very much so. PL-900 was built for a mixed audience: business analysts, citizen developers and makers, project managers, and IT pros sizing up low-code all sit it regularly. Nobody writes production code here. You get scenarios like "canvas or model-driven app for this case?" and have to pick the right answer, which makes it a sensible first stop before you start building real apps and flows.
 Q: Can I try Azure Mastery's PL-900 bank before paying?
 A: The app is free to download and includes a free allowance of PL-900 questions so you can try every feature. The full bank of 328 PL-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise for PL-900 without a data connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: You can. Practice, scoring, and the PL-900 readiness prediction all happen on-device, with nothing sent anywhere while you study. No account is required, and everything stays local unless you switch on optional private iCloud sync.
 
 ## /exams/retired/ — Retired Microsoft Exams & Successors | Azure Mastery
 Page last modified: 2026-09-04
@@ -1042,7 +1042,7 @@ Q: Which retired exam maps to which successor?
 A: AI-900 to AI-901, AI-102 to AI-103, DP-100 to AI-300, AZ-204 to AI-200, and AZ-500 to SC-500. The table above lists each one with its retirement date.
 
 ## /exams/sc-100/ — SC-100 Practice Questions — 452 Qs for Cyber Architect (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Design solutions that align with security best practices and priorities (20–25%)
   - Design security operations, identity, and compliance capabilities (25–30%)
@@ -1061,16 +1061,16 @@ A: Yes, it needs renewing. Microsoft Associate certifications including SC-100 e
 Q: SC-100 vs AZ-305 — which next for an architect?
 A: Different architectural lenses. SC-100 is the security architect cert — design Zero Trust, ransomware resilience, SecOps strategy, identity governance. AZ-305 is the solutions architect cert — design data, infrastructure, business continuity, and identity/governance/monitoring. The two overlap on identity and governance design, but SC-100 goes much deeper on security and AZ-305 covers a broader Azure surface. Many senior architects hold both.
 Q: How soon can I resit SC-100 after a fail?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: A first retake is available after 24 hours. Second and third attempts each carry a 14-day wait. There's a ceiling of five attempts per rolling 12-month period, and a fresh voucher is needed for every sitting.
 Q: How is SC-100 different from an Associate-level security exam?
 A: Associate exams such as SC-200 and SC-300 test whether you can configure and operate a named product correctly. SC-100 tests whether you can design the strategy those products serve — picking between Microsoft Sentinel automation vs Defender XDR-native response, or the enterprise access model vs legacy AD tiering, for a stated set of business constraints. Multiple options in an SC-100 scenario can be technically valid; the exam is scored on choosing the one that best satisfies the constraints given.
 Q: Can I try Azure Mastery's SC-100 bank before paying?
 A: The app is free to download and includes a free allowance of SC-100 questions so you can try every feature. The full bank of 452 SC-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I rehearse SC-100 scenarios with no internet connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: You can, for the same reason all the core study features work this way: question practice, scoring, and the readiness prediction run entirely on-device, offline included. No account is required, and iCloud sync is optional and private if you want it.
 
 ## /exams/sc-200/ — SC-200 Practice Questions — 374 Qs for SOC Analyst (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Manage a security operations environment (40–45%)
   - Respond to security incidents (35–40%)
@@ -1088,16 +1088,16 @@ A: Yes. Microsoft Associate certifications including SC-200 expire annually. Ren
 Q: Sentinel automation or Defender XDR native response — how does SC-200 test the choice?
 A: SC-200 scenarios routinely give you an incident that could plausibly be handled by a Sentinel automation rule or by Defender XDR's built-in automated investigation and response, and expect you to pick based on where the signal originates and how broad the response needs to be, not on which tool you personally prefer. Azure Mastery's Answer Coach spells out which property of the scenario should have driven that call.
 Q: I need to retake SC-200 — what's the wait?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: 24 hours covers the wait before your first retake. The second and third attempts each need 14 days between them. Microsoft limits you to five attempts in any 12-month rolling window, with a new voucher required each time.
 Q: SC-200 vs SC-500 — different security roles?
 A: Different angles on Microsoft security. SC-500 implements security controls across cloud and AI workloads; SC-200 runs detection, investigation, hunting, and incident response in Microsoft Defender XDR and Sentinel. Choose SC-500 for cloud security engineering and SC-200 for security operations.
 Q: Can I try Azure Mastery's SC-200 bank before paying?
 A: The app is free to download and includes a free allowance of SC-200 questions so you can try every feature. The full bank of 374 SC-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I hunt through SC-200 practice scenarios with no connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. Practice sessions, scoring, and the SC-200 readiness prediction don't need a connection since they all run on-device. There's no account to sign into, and your data stays local unless you turn on optional, private iCloud sync.
 
 ## /exams/sc-300/ — SC-300 Practice Questions — 428 Qs for Identity Admin (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Implement and manage user identities (20–25%)
   - Implement authentication and access management (25–30%)
@@ -1116,13 +1116,13 @@ A: Yes. Microsoft Associate certifications including SC-300 expire annually. Ren
 Q: Pass-through Authentication or Password Hash Sync — which does SC-300 want?
 A: The deciding factor is almost always resilience: Password Hash Sync keeps authenticating even if the on-premises environment goes down, because Entra ID holds a hash of the password; Pass-through Authentication validates against on-premises Active Directory in real time, so it fails when that link is down, but it satisfies requirements that credentials never leave the on-premises boundary. A scenario naming an outage-tolerance requirement wants PHS; one naming a strict on-premises-only password policy wants PTA.
 Q: I need to resit SC-300 — how long before I can rebook?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: Retake number one is available 24 hours after a fail. Retakes two and three each require a 14-day gap. Five attempts per rolling 12 months is the ceiling, and each attempt needs its own voucher purchase.
 Q: SC-300 vs SC-900 — which should I take first?
 A: SC-900 first if security and identity concepts are new to you. SC-900 (Microsoft Security, Compliance, and Identity Fundamentals) builds the cross-cutting Microsoft security vocabulary including identity, but doesn't expect hands-on Conditional Access, PIM, or workload-identity work. SC-300 is the role-based Associate exam: it expects you to operate Microsoft Entra ID at scale day-to-day. Most candidates pass SC-900 in a few weeks then spend two to three months on SC-300.
 Q: Can I try Azure Mastery's SC-300 bank before paying?
 A: The app is free to download and includes a free allowance of SC-300 questions so you can try every feature. The full bank of 428 SC-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Can I revise SC-300 with no data connection?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes, no connection needed. Question practice, scoring, and the readiness prediction are all on-device features, so a commute or a flight works fine for study. No account is required, and iCloud sync stays optional and private.
 
 ## /exams/sc-500/ — SC-500 Practice Questions — 432 Qs for Cloud Security (2026)
 Page last modified: 2026-09-04
@@ -1153,7 +1153,7 @@ Q: Is there an SC-500 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
-Page last modified: 2026-09-05
+Page last modified: 2026-09-06
 Exam domains:
   - Describe the concepts of security, compliance, and identity (10–15%)
   - Describe the capabilities of Microsoft Entra (25–30%)
@@ -1172,11 +1172,11 @@ A: No. Microsoft Fundamentals certifications — including AZ-900, DP-900, AI-90
 Q: Purview compliance solutions — what's the recurring SC-900 trap?
 A: Candidates tend to reach for the Purview tool they've heard of rather than the one built for the stated requirement — confusing, say, a data-loss-prevention policy with an information-protection sensitivity label, or a retention policy with an eDiscovery case. SC-900 rewards knowing which compliance job each Purview capability is actually built to do. Answer Coach spells out that distinction whenever you miss one.
 Q: I need to resit SC-900 — how long is the wait?
-A: The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.
+A: First retake: 24 hours. Second and third retakes: 14 days each. Microsoft won't let you sit more than five times in any 12-month rolling period, and you'll need to buy a new voucher for every attempt.
 Q: Is SC-900 worth taking if I'm not technical?
-A: Yes — Microsoft positions SC-900 for both technical and non-technical candidates. Business stakeholders evaluating Microsoft security procurement, IT generalists adjacent to security, and students entering the field all sit SC-900. The exam doesn't ask you to configure Conditional Access or write KQL. It asks you to recognise scenarios — "which Microsoft Defender product covers this surface?" or "which Purview tool addresses this compliance requirement?" — and pick the correct option.
+A: Absolutely. SC-900 is aimed at a broad audience on purpose: business stakeholders weighing up Microsoft security procurement, IT generalists working near security without owning it, and students entering the field all sit it. You won't be asked to configure Conditional Access or write a line of KQL. Instead you get scenarios such as "which Microsoft Defender product covers this surface?" and have to pick the right one.
 Q: Can I try Azure Mastery's SC-900 bank before paying?
 A: The app is free to download and includes a free allowance of SC-900 questions so you can try every feature. The full bank of 397 SC-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-900 revision work with no signal?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes, and that's true for most of what the app does. Question practice, scoring, and the readiness prediction run on-device rather than through a server, so a train tunnel or an aeroplane mode session works fine. No account is needed, and sync to iCloud is optional and private.
 

@@ -210,7 +210,7 @@
           {
             "@type": "Question",
             "name": "AZ-400 vs GH-300 — do these two GitHub-adjacent certs overlap?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Barely, despite both touching GitHub. AZ-400 is Microsoft's expert-level DevOps engineering cert — pipeline design, release strategy, security scanning, and instrumentation across Azure DevOps and GitHub, where GitHub Actions is one tool among many. GH-300 (GitHub Copilot) certifies effective use of GitHub Copilot itself — prompt technique, IDE integration, enterprise Copilot governance — and has nothing to do with pipeline architecture. A platform engineer standardising Copilot adoption across a team that already runs AZ-400-grade pipelines is a realistic candidate for both, but neither substitutes for the other." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Barely, despite both touching GitHub. AZ-400 is Microsoft's expert-level DevOps engineering cert: pipeline design, release strategy, security scanning, and instrumentation across Azure DevOps and GitHub, where GitHub Actions is one tool among many. GH-300 (GitHub Copilot) certifies effective use of GitHub Copilot itself (prompt technique, IDE integration, enterprise Copilot governance) and has nothing to do with pipeline architecture. A platform engineer standardising Copilot adoption across a team that already runs AZ-400-grade pipelines is a realistic candidate for both, but neither substitutes for the other." }
           },
           {
             "@type": "Question",
@@ -576,8 +576,8 @@
       <h2 class="display-small section-title">Where AZ-400 candidates slip</h2>
       <div class="traps">
         <article class="trap">
-          <h3>A calculated pipeline exam has two ecosystems, and questions won't tell you which one</h3>
-          <p>AZ-400 tests Azure Pipelines and GitHub Actions as parallel, dual first-class citizens rather than one being the "real" answer and the other a footnote. A candidate who only knows Azure DevOps YAML will misread a stem about reusable workflows or environment protection rules written for GitHub Actions, and vice versa — the exam expects fluency in both.</p>
+          <h3>The pipelines domain has two ecosystems, and a question won't tell you which one</h3>
+          <p>AZ-400 treats Azure Pipelines and GitHub Actions as equally examinable, not one as the "real" answer and the other a footnote. A candidate who only knows Azure DevOps YAML will misread a stem about reusable workflows or environment protection rules written for GitHub Actions, and vice versa. The exam expects working fluency in both.</p>
         </article>
         <article class="trap">
           <h3>Managed identities and service principals solve the same problem for different lifetimes</h3>
@@ -589,7 +589,7 @@
         </article>
         <article class="trap">
           <h3>A quality gate and a release gate check different things at different times</h3>
-          <p>A quality gate typically runs inside the pipeline against the build artefact — tests, coverage, static analysis. A release gate runs between pipeline stages and checks external conditions — an approval, a change-management ticket, a monitoring signal staying green for a set window. Placing an approval-style check as a quality gate, or a code-coverage check as a release gate, is a common wrong-answer pattern.</p>
+          <p>A quality gate runs inside the pipeline against the build artefact, checking tests, coverage, and static analysis. A release gate sits between pipeline stages and checks external conditions instead: an approval, a change-management ticket, a monitoring signal that has to stay green for a set window. Placing an approval-style check as a quality gate, or a code-coverage check as a release gate, is a common wrong-answer pattern.</p>
         </article>
         <article class="trap">
           <h3>Workload identity federation removes a secret, not a permission</h3>
@@ -820,7 +820,7 @@ Five domains at wildly uneven weights make the Exam Simulator's job harder than 
         <details class="faq">
           <summary>AZ-400 vs GH-300 — do these two GitHub-adjacent certs overlap?</summary>
           <div class="faq__answer">
-            <p>Barely, despite both touching GitHub. AZ-400 is Microsoft's expert-level DevOps engineering cert — pipeline design, release strategy, security scanning, and instrumentation across Azure DevOps and GitHub, where GitHub Actions is one tool among many. <a href="/exams/gh-300/">GH-300 (GitHub Copilot)</a> certifies effective use of GitHub Copilot itself — prompt technique, IDE integration, enterprise Copilot governance — and has nothing to do with pipeline architecture. A platform engineer standardising Copilot adoption across a team that already runs AZ-400-grade pipelines is a realistic candidate for both, but neither substitutes for the other.</p>
+            <p>Barely, despite both touching GitHub. AZ-400 is Microsoft's expert-level DevOps engineering cert: pipeline design, release strategy, security scanning, and instrumentation across Azure DevOps and GitHub, where GitHub Actions is one tool among many. <a href="/exams/gh-300/">GH-300 (GitHub Copilot)</a> certifies effective use of GitHub Copilot itself (prompt technique, IDE integration, enterprise Copilot governance) and has nothing to do with pipeline architecture. A platform engineer standardising Copilot adoption across a team that already runs AZ-400-grade pipelines is a realistic candidate for both, but neither substitutes for the other.</p>
           </div>
         </details>
         <details class="faq">

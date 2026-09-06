@@ -234,7 +234,7 @@
       <h1 class="display-large guide-hero__title">
         How <span class="headline-accent">Exam IQ</span> predicts your score
       </h1>
-      <p class="guide-hero__dek">Exam IQ estimates your certification exam score from your practice answers. This page explains what it uses, what the confidence range means, and the limits of the estimate.</p>
+      <p class="guide-hero__dek">Exam IQ estimates your certification exam score from your practice answers, on-device, with a confidence range that narrows the more it learns about you.</p>
     </section>
 
     <!-- What Exam IQ is -->
@@ -249,7 +249,14 @@
     <section id="what-the-model-reads" class="container">
       <p class="label-eyebrow section-eyebrow">What it reads</p>
       <h2 class="display-small section-title">What the model reads</h2>
-      <p>The app includes a CoreML model for score prediction and uses a weighted formula if the model is unavailable. Both use your answer history. They consider test scores and consistency; your strongest and weakest domains; question coverage and mastery; practice-test streaks and study hours; improvement over time; remaining weak topics; how long you've been active; answer speed; and how often you read explanations.</p>
+      <p>The app includes a CoreML model for score prediction, with a weighted formula as a fallback if the model is unavailable. Both read the same signals from your answer history:</p>
+      <ul>
+        <li>Test scores and consistency, and your strongest and weakest domains.</li>
+        <li>Question coverage and mastery across the outline.</li>
+        <li>Practice-test streaks, study hours and improvement over time.</li>
+        <li>Remaining weak topics and how long you've been active.</li>
+        <li>Answer speed and how often you read explanations.</li>
+      </ul>
     </section>
 
     <!-- What the confidence range means -->

@@ -50,7 +50,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AI-103 — Developing AI Apps and Agents on Azure](https://azuremastery.app/exams/ai-103/): 557 in-app practice questions for the Azure AI Apps and Agents Developer Associate credential. 100-min duration, pass score 700/1000. Five domains: plan/manage an Azure AI solution (25–30%), generative and agentic solutions (30–35%), computer vision (10–15%), text analysis (10–15%), and information extraction (10–15%). Requires Python and Microsoft Foundry experience. Skills measured as of 16 April 2026.
 
-- [AI-200 — Microsoft Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 220 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Skills outline updated March 2026.
+- [AI-200 — Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 220 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Skills outline updated March 2026.
 
 - [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 362 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
 
@@ -141,7 +141,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 - AI-901 — Microsoft Azure AI Fundamentals
 - AI-102 — Designing and Implementing a Microsoft Azure AI Solution (retired 30 June 2026; current route is AI-103)
 - AI-103 — Developing AI Apps and Agents on Azure
-- AI-200 — Microsoft Azure AI Cloud Developer
+- AI-200 — Azure AI Cloud Developer
 - AI-300 — Microsoft Azure ML Operations Engineer
 - AI-500 — Microsoft Multi-Agent AI Solutions Expert
 - AB-410 — Microsoft Intelligent Applications Builder Associate

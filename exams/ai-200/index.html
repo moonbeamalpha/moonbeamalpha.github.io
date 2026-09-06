@@ -190,7 +190,7 @@
             "name": "How much does the AI-200 exam cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The AI-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-200 also requires annual renewal (free, online), so factor that into long-term cost planning."
+              "text": "The AI-200 voucher is USD $165 in the United States, around £128 in the UK; regional pricing varies. Watch for free-voucher promotions around Microsoft Build or Microsoft Ignite. Renewal is free, but it's an annual Associate certification, so factor that into long-term cost planning."
             }
           },
           {
@@ -198,7 +198,7 @@
             "name": "Does the AI-200 certification expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including AI-200 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
+              "text": "Yes. Microsoft Associate certifications including AI-200 expire annually. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry. Fundamentals certifications like AZ-900 don't expire."
             }
           },
           {
@@ -206,7 +206,7 @@
             "name": "What is the AI-200 retake policy if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+              "text": "Waiting times step up after each fail, and every attempt needs a fresh voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
             }
           },
           {
@@ -222,7 +222,7 @@
             "name": "What prior experience does AI-200 assume?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-200 assumes you already work across the full AI-solution lifecycle on Azure — implementation, deployment, security, monitoring, and troubleshooting — with practical comfort in Azure and third-party SDKs, containerized applications, and Python. It expects you to already know your way around Azure data management services and messaging, not to learn them from the study guide alone. If containers or vector-capable databases are genuinely new to you, budget extra time beyond the usual four-to-eight-week window."
+              "text": "AI-200 assumes you already work across the AI-solution lifecycle on Azure — implementation, deployment, security, monitoring — with practical Python, SDK, and container experience. It expects you to already know your way around Azure data services, not learn them from the guide alone. Budget extra time if containers or vector databases are new."
             }
           },
           {
@@ -238,7 +238,7 @@
             "name": "AI-200 vs AI-300 — which next?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-200 first. AI-200 is the AI Cloud Developer Associate cert — building the platform that AI workloads run on. AI-300 is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it."
+              "text": "AI-200 first. It's the AI Cloud Developer cert, building the platform AI workloads run on. AI-300 is the ML Operations Engineer cert, running ML and generative-AI systems in production. AI-200 sits upstream of AI-300 in most roles."
             }
           },
           {
@@ -525,9 +525,11 @@
                 <li>Implement container application hosting</li>
                 <li>Implement container-orchestrated solutions</li>
               </ul>
-              <p>
-                This domain is about hosting the compute layer AI workloads run on, not writing the AI logic itself. Container application hosting covers building and versioning images with Azure Container Registry, running Registry Tasks, and deploying containers to App Service with the right environment variables and secrets wired in. Container-orchestrated solutions moves up a level: Container Apps environment configuration and revision management, event-driven scaling with KEDA, deploying to AKS from manifest files, and — critically — troubleshooting a live deployment by reading logs, events, and end-to-end connectivity rather than just standing one up and walking away.
-              </p>
+              <ul class="domain__tips">
+                <li>Hosts the compute layer AI workloads run on: building images, deploying to App Service, and orchestrating with Container Apps or AKS.</li>
+                <li>Candidates stand up a deployment and stop, but the exam expects troubleshooting via logs, events, and connectivity too.</li>
+                <li>Practise reading a live deployment's failure signal, not just the manifest that created it.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -542,9 +544,11 @@
                 <li>Develop AI solutions by using Azure Database for PostgreSQL</li>
                 <li>Integrate Azure Managed Redis in AI solutions</li>
               </ul>
-              <p>
-                The exam's largest domain, and the most AI-specific. Cosmos DB for NoSQL objectives go beyond basic querying — indexing policies and consistency levels for Request Unit efficiency, storing and searching vector embeddings, and change feed processors for reacting to new or updated items. PostgreSQL adds schema and indexing design, pgvector-aware performance tuning, connection optimisation, and running retrieval-augmented generation patterns with metadata filters. Managed Redis is smaller but distinct: caching with expiration and invalidation, plus vector indexing for its own similarity search. Treating these three services as interchangeable "vector databases" is the fastest way to lose marks here.
-              </p>
+              <ul class="domain__tips">
+                <li>The largest domain: Cosmos DB indexing and vectors, PostgreSQL pgvector tuning, and Managed Redis vector search.</li>
+                <li>Candidates treat Cosmos DB, PostgreSQL, and Redis as interchangeable vector databases, missing each one's own tuning knobs.</li>
+                <li>Match the named service in the scenario to its specific configuration surface, not a generic vector-store answer.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -558,9 +562,11 @@
                 <li>Develop event- and message-based AI solutions</li>
                 <li>Develop and implement Azure Functions</li>
               </ul>
-              <p>
-                Two skill groups, and both are about moving data and triggering work reliably rather than processing it. Event- and message-based solutions cover Azure Service Bus (dead-letter queues, topics, subscriptions) and Event Grid (filters, custom events, retries) — the exam expects you to know which one fits a given reliability or fan-out requirement. Azure Functions rounds the domain out: building serverless APIs with the right triggers and bindings, then configuring and deploying the function app itself. Expect scenarios that ask you to choose between queued and event-driven patterns for a described AI workload, not just define each service.
-              </p>
+              <ul class="domain__tips">
+                <li>Covers choosing Service Bus or Event Grid for a reliability or fan-out need, plus building serverless Azure Functions.</li>
+                <li>Candidates define each messaging service correctly but can't pick the one a described reliability need actually calls for.</li>
+                <li>Practise choosing between queued and event-driven patterns for a described AI workload, not just definitions.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -574,9 +580,11 @@
                 <li>Implement secure Azure solutions</li>
                 <li>Monitor and troubleshoot Azure solutions</li>
               </ul>
-              <p>
-                The domain most candidates underestimate, because it splits between security and observability rather than AI itself. Secure solutions means Key Vault secret rotation and retrieval plus Azure App Configuration for externalised settings — knowing which store fits secrets versus non-secret config. Monitoring and troubleshooting is where distributed AI pipelines actually get debugged: OpenTelemetry SDK tracing across services, and writing KQL queries against Azure Monitor logs and metrics to find where a request failed or slowed down. Questions here tend to hand you a symptom and ask which telemetry source or query surfaces the cause.
-              </p>
+              <ul class="domain__tips">
+                <li>Splits between security and observability: Key Vault vs App Configuration, and OpenTelemetry tracing vs KQL log queries.</li>
+                <li>Candidates underestimate this domain since it feels less AI-specific, but it carries equal published weight.</li>
+                <li>Given a symptom, practise naming the exact telemetry source or query that surfaces its cause.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -593,23 +601,43 @@
       <div class="traps">
         <article class="trap">
           <h3>Studying the old five-domain outline</h3>
-          <p>AI-200's skills outline was consolidated on 5 May 2026 from a five-domain structure into four. Azure OpenAI, Microsoft Foundry, Azure AI Search, and general AI telemetry can still appear as supporting context inside a scenario, but they are no longer top-level objective headings — Container Apps, Cosmos DB, PostgreSQL, and Managed Redis carry more of the published weight than candidates studying an outdated outline expect.</p>
+          <p>Candidates study an outdated five-domain outline and underweight how much Container Apps and data services now carry.</p>
+          <ul>
+            <li>The exam is testing the consolidated four-domain outline from 5 May 2026, not the retired five-domain structure.</li>
+            <li>Check your study source's date before trusting its domain breakdown — Foundry and AI Search are supporting context now, not headings.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Treating every vector store the same way</h3>
-          <p>All three services in "Develop AI solutions by using Azure data management services" can run vector similarity search, but each has its own configuration surface — Cosmos DB's indexing policies and consistency levels, PostgreSQL's pgvector compute overhead and connection optimisation, Managed Redis's own vector-indexing setup. A scenario naming a specific service is testing that service's tuning knobs, not generic "vector database" knowledge.</p>
+          <p>Candidates apply generic "vector database" knowledge instead of a named service's own configuration surface.</p>
+          <ul>
+            <li>The exam is testing whether you know Cosmos DB, PostgreSQL, and Managed Redis each tune vector search differently.</li>
+            <li>Match the scenario's named service to its own indexing or connection settings before answering.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Service Bus vs Event Grid — reliability vs reaction</h3>
-          <p>Service Bus is built for reliable, ordered message delivery with dead-letter handling when a consumer can't process a message; Event Grid is built for reacting to discrete events with filtering and automatic retries, not guaranteed ordered processing. A scenario asking for guaranteed delivery to a specific back-end queue wants Service Bus; one asking for many subscribers reacting to a state change wants Event Grid.</p>
+          <p>Candidates can't tell a guaranteed-delivery requirement from a many-subscribers reaction requirement.</p>
+          <ul>
+            <li>The exam is testing whether you know Service Bus guarantees ordered delivery while Event Grid reacts to discrete events.</li>
+            <li>Pick Service Bus for a specific back-end queue, Event Grid for many subscribers reacting to a change.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Key Vault secrets vs App Configuration settings</h3>
-          <p>Azure Key Vault is for secrets — connection strings, API keys, certificates — with rotation and access-policy control built around confidentiality. Azure App Configuration is for everything else an app needs to look up centrally: feature flags and non-secret, environment-specific values. Reaching for Key Vault to store ordinary configuration is a common miss the exam is written to catch.</p>
+          <p>Candidates reach for Key Vault to store ordinary configuration that App Configuration was built to hold.</p>
+          <ul>
+            <li>The exam is testing whether you know Key Vault holds secrets while App Configuration holds non-secret, centralised settings.</li>
+            <li>Ask whether the described value is confidential before choosing Key Vault over App Configuration.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>OpenTelemetry traces vs KQL log queries</h3>
-          <p>Distributed tracing with OpenTelemetry shows the path a single request took across services and where time was spent; KQL queries against Azure Monitor answer aggregate questions across many requests — error rates, patterns over time, correlated failures. Troubleshooting scenarios usually need one specifically, and picking a trace-based answer for an aggregate question, or the reverse, is a frequent operations-domain slip.</p>
+          <p>Candidates pick a trace-based answer for an aggregate question, or the reverse.</p>
+          <ul>
+            <li>The exam is testing whether you know tracing follows one request while KQL answers aggregate questions across many.</li>
+            <li>Match "where did this one request fail" to tracing, and "what's the error rate" to a KQL query.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -622,63 +650,63 @@
         <h3>Exam-specific practice</h3>
         <ul>
           <li><strong>220 AI-200 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Coverage follows the official four domains — containerized compute, AI data services, service integration, and secure/monitor/troubleshoot.</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li>Coverage leans hardest on AI data management services, the domain Microsoft weights up to 30%.</li>
+          <li>Practise choosing between Cosmos DB, PostgreSQL, and Managed Redis for a stated vector-search need.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your AI-200 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ forecasts your AI-200 score on-device after roughly 30 questions, confidence range attached.</li>
+          <li>It flags whether data-service tuning or operations and troubleshooting is dragging that number down.</li>
+          <li>See which of the four domains needs the most work before you book the exam.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan leans hardest on AI data management services, the domain Microsoft weights up to 30%.</li>
+          <li>Miss a vector-store or messaging-choice question and the next session surfaces that domain first.</li>
+          <li>Answer a topic correctly three sessions in a row and the plan hands priority to whatever's weakest next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>Forget the Service-Bus-vs-Event-Grid distinction early on and later integration questions get harder too.</li>
+          <li>A decay warning shows up on the Today screen well before a topic actually fades from memory.</li>
+          <li>Open Focus Weak Spots and any topic that's been slipping gets pulled straight back into practice.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 100-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Practise holding focus through a full 100-minute session, matching AI-200's real length.</li>
+          <li>Every rehearsal session mixes the four domains at their published weights, built entirely from original questions.</li>
+          <li>The real exam's screen layout and question order are set by Microsoft, not this app.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles AI-200's near-identical pairs: Service Bus vs Event Grid, and OpenTelemetry traces vs KQL log queries.</li>
+          <li>Answer Coach points straight at the scenario detail you missed whenever you pick the wrong option.</li>
+          <li>Supported devices can rephrase a note on-device, but only after checking it matches the written explanation.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura adjusts its suggestions as your first week of AI-200 practice takes shape.</li>
+          <li>You get a short wrap-up after each session covering progress made, gaps to revisit, and what comes next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Private by design</h3>
         <ul>
-          <li>Practice, scoring, readiness, and coaching run on-device.</li>
-          <li>You don't need an Azure Mastery account or a server to process your study data.</li>
-          <li>Optional sync uses your private iCloud account.</li>
+          <li>Your AI-200 answer history, readiness gauge, and Answer Coach notes stay on your device by default.</li>
+          <li>No Azure Mastery account and no server ever processes your AI-200 study data.</li>
+          <li>Enabling sync keeps everything inside your own private iCloud account and nowhere beyond it.</li>
         </ul>
       </article>
     </section>
@@ -861,19 +889,24 @@
         <details class="faq">
           <summary>How much does the AI-200 exam cost?</summary>
           <div class="faq__answer">
-            <p>The AI-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. AI-200 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+            <p>The AI-200 voucher is USD $165 in the United States, around £128 in the UK; regional pricing varies. Watch for free-voucher promotions around Microsoft Build or Microsoft Ignite. Renewal is free, but it's an annual Associate certification, so factor that into long-term cost planning.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Does the AI-200 certification expire?</summary>
           <div class="faq__answer">
-            <p>Yes. Microsoft Associate certifications including AI-200 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+            <p>Yes. Microsoft Associate certifications including AI-200 expire annually. Renewal is a free, 25–30 question assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>, available in the six-month window before expiry. Fundamentals certifications like <a href="/exams/az-900/">AZ-900</a> don't expire.</p>
           </div>
         </details>
         <details class="faq">
           <summary>What is the AI-200 retake policy if I fail?</summary>
           <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+            <p>Waiting times step up after each fail, and every attempt needs a fresh voucher.</p>
+            <ul>
+              <li>First retake: after 24 hours.</li>
+              <li>Second and third retakes: a 14-day wait each.</li>
+              <li>Cap: five attempts per rolling 12 months.</li>
+            </ul>
           </div>
         </details>
         <details class="faq">
@@ -885,7 +918,7 @@
         <details class="faq">
           <summary>What prior experience does AI-200 assume?</summary>
           <div class="faq__answer">
-            <p>AI-200 assumes you already work across the full AI-solution lifecycle on Azure — implementation, deployment, security, monitoring, and troubleshooting — with practical comfort in Azure and third-party SDKs, containerized applications, and Python. It expects you to already know your way around Azure data management services and messaging, not to learn them from the study guide alone. If containers or vector-capable databases are genuinely new to you, budget extra time beyond the usual four-to-eight-week window.</p>
+            <p>AI-200 assumes you already work across the AI-solution lifecycle on Azure — implementation, deployment, security, monitoring — with practical Python, SDK, and container experience. It expects you to already know your way around Azure data services, not learn them from the guide alone. Budget extra time if containers or vector databases are new.</p>
           </div>
         </details>
         <details class="faq">
@@ -897,7 +930,7 @@
         <details class="faq">
           <summary>AI-200 vs AI-300 — which next?</summary>
           <div class="faq__answer">
-            <p>AI-200 first. AI-200 is the AI Cloud Developer Associate cert — building the platform that AI workloads run on. <a href="/exams/ai-300/">AI-300</a> is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it.</p>
+            <p>AI-200 first. It's the AI Cloud Developer cert, building the platform AI workloads run on. <a href="/exams/ai-300/">AI-300</a> is the ML Operations Engineer cert, running ML and generative-AI systems in production. AI-200 sits upstream of AI-300 in most roles.</p>
           </div>
         </details>
         <details class="faq">

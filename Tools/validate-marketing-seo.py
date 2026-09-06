@@ -9,6 +9,7 @@ import json
 import re
 import subprocess
 import sys
+from datetime import date
 from html import unescape
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -47,15 +48,14 @@ COUNTS = _COUNTS_DOC["exams"]
 NON_CURRENT = set(_COUNTS_DOC.get("retired") or ())
 SITABLE = {code for code in COUNTS if code not in NON_CURRENT}
 RETIRED = {"AI-900": "30 June 2026", "AI-102": "30 June 2026", "DP-100": "1 June 2026",
-           "AZ-204": "31 July 2026"}
-RETIRING = {
-    "AZ-500": ("31 August 2026", "SC-500"),
-}
+           "AZ-204": "31 July 2026", "AZ-500": "31 August 2026"}
+RETIRING = {}
 SUCCESSOR_ROUTES = {
     "AI-900": "AI-901",
     "AI-102": "AI-103",
     "DP-100": "AI-300",
     "AZ-204": "AI-200",
+    "AZ-500": "SC-500",
     **{code: successor for code, (_, successor) in RETIRING.items()},
 }
 # Every non-current exam must carry retirement page metadata, and nothing else
@@ -264,6 +264,10 @@ def matches_once(pattern: str, text: str, label: str, page: Path, errors: list[s
 
 
 def normalise_visible_text(markup: str) -> str:
+    # FAQ answers may carry a <ul> for policy-step lists (retake timings etc.);
+    # insert a space where a list item or paragraph closes so items don't run
+    # together, mirroring Tools/sync-exam-faq-schema.py's normalise().
+    markup = re.sub(r"</(?:li|p)>", " ", markup)
     return " ".join(unescape(re.sub(r"<[^>]+>", "", markup)).split())
 
 
@@ -349,6 +353,59 @@ def validate_sitemap_lastmod(errors: list[str], sitemap: str) -> None:
             errors.append(
                 f"sitemap entry for {loc} has lastmod {current_label!r}, expected {expected!r} "
                 f"(run Tools/update-sitemap-lastmod.py)"
+            )
+
+
+def validate_exam_dateModified_vs_sitemap(errors: list[str], sitemap: str) -> None:
+    """An exam page's JSON-LD `dateModified` and its sitemap.xml `lastmod`
+    must not drift apart. `lastmod` is derived from git history/today (see
+    `validate_sitemap_lastmod`); `dateModified` is hand-set per page (via
+    `SEO_UPDATED_OVERRIDES` in Tools/optimise-marketing-seo.py) whenever a
+    page's prose is rewritten. If `lastmod` runs more than 7 days ahead of
+    `dateModified` it means the page changed (bumping `lastmod`) without its
+    `dateModified` being updated to match -- the regression this guards
+    against. Any page whose prose is rewritten must get a
+    `SEO_UPDATED_OVERRIDES` entry in the same commit so the two stay in sync.
+    """
+    lastmod_by_loc: dict[str, str] = {}
+    for block in re.findall(r"<url>.*?</url>", sitemap, re.S):
+        loc_match = re.search(r"<loc>(.*?)</loc>", block)
+        lastmod_match = re.search(r"<lastmod>(.*?)</lastmod>", block)
+        if loc_match and lastmod_match:
+            lastmod_by_loc[loc_match.group(1)] = lastmod_match.group(1)
+
+    for code in sorted(COUNTS):
+        page = ROOT / "exams" / code.lower() / "index.html"
+        loc = f"https://azuremastery.app/exams/{code.lower()}/"
+        lastmod = lastmod_by_loc.get(loc)
+        if lastmod is None:
+            continue
+        text = page.read_text()
+        schemas = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', text, re.S)
+        date_modified = None
+        for schema in schemas:
+            try:
+                payload = json.loads(schema)
+            except json.JSONDecodeError:
+                continue
+            for item in payload.get("@graph", []):
+                if isinstance(item, dict) and "dateModified" in item:
+                    date_modified = item["dateModified"]
+                    break
+            if date_modified:
+                break
+        if date_modified is None:
+            continue
+        try:
+            lastmod_date = date.fromisoformat(lastmod)
+            modified_date = date.fromisoformat(date_modified)
+        except ValueError:
+            continue
+        if (lastmod_date - modified_date).days > 7:
+            errors.append(
+                f"{page.relative_to(ROOT)}: sitemap lastmod {lastmod!r} is more than 7 days "
+                f"newer than JSON-LD dateModified {date_modified!r} "
+                "(add a SEO_UPDATED_OVERRIDES entry and re-run optimise-marketing-seo.py)"
             )
 
 
@@ -515,7 +572,7 @@ def validate_guide_pages(errors: list[str], llms: str) -> list[Path]:
             ]
             visible_faqs = re.findall(
                 r'<details class="faq">\s*<summary>(.*?)</summary>\s*'
-                r'<div class="faq__answer"><p>(.*?)</p></div>\s*</details>',
+                r'<div class="faq__answer">(.*?)</div>\s*</details>',
                 text,
                 re.S,
             )
@@ -642,7 +699,7 @@ def validate_static_content_pages(errors: list[str], llms: str) -> list[Path]:
         faq_nodes = [item for item in graph if isinstance(item, dict) and item.get("@type") == "FAQPage"]
         visible_faqs = re.findall(
             r'<details class="faq">\s*<summary>(.*?)</summary>\s*'
-            r'<div class="faq__answer"><p>(.*?)</p></div>\s*</details>',
+            r'<div class="faq__answer">(.*?)</div>\s*</details>',
             text,
             re.S,
         )
@@ -862,8 +919,34 @@ def main() -> None:
     if "generated by Apple's Foundation Model" in homepage:
         errors.append("homepage has stale Answer Coach provenance")
 
+    # The "Retired (N)" / "Retired & retiring (N)" disclosure summaries must
+    # match whether RETIRING is populated -- advertising a "retiring" bucket
+    # with nothing in it (or hiding one that exists) is a truthfulness bug.
+    disclosure_summaries = re.findall(
+        r'exam-retired-disclosure__summary">([^<]+)</summary>', homepage
+    )
+    if len(disclosure_summaries) != 2:
+        errors.append(
+            f"homepage: expected 2 retired-disclosure summaries, found {len(disclosure_summaries)}"
+        )
+    if RETIRING:
+        for summary in disclosure_summaries:
+            if "Retired &amp; retiring" not in summary:
+                errors.append(
+                    f"homepage: disclosure summary {summary!r} must read 'Retired &amp; "
+                    "retiring (N)' while RETIRING is non-empty"
+                )
+    else:
+        for summary in disclosure_summaries:
+            if "retiring" in summary.lower():
+                errors.append(
+                    f"homepage: disclosure summary {summary!r} must not say 'retiring' "
+                    "while RETIRING is empty"
+                )
+
     sitemap = (ROOT / "sitemap.xml").read_text()
     validate_sitemap_lastmod(errors, sitemap)
+    validate_exam_dateModified_vs_sitemap(errors, sitemap)
 
     guide_pages = validate_guide_pages(errors, llms)
     static_pages = validate_static_content_pages(errors, llms)

@@ -169,7 +169,7 @@
             "name": "What's actually new in SC-500 that wasn't in AZ-500?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI security. SC-500's Secure Compute domain adds a full skill group on securing Microsoft Copilot and AI agents: Microsoft Entra Agent ID conditional access and blast-radius analysis, Defender for AI Services, Foundry guardrails, AI Gateway in Azure API Management, and Microsoft Purview Data Security Posture Management for Copilot. None of that existed in AZ-500's outline. SC-500 also adds Microsoft Security Copilot workspace and plugin management to its posture-monitoring domain."
+              "text": "AI security. SC-500's Secure Compute domain adds a full skill group on securing Microsoft Copilot and AI agents: Entra Agent ID conditional access, Defender for AI Services, Foundry guardrails, AI Gateway in API Management, and Purview DSPM for Copilot. None of that existed in AZ-500. SC-500 also adds Security Copilot workspace and plugin management to posture monitoring."
             }
           },
           {
@@ -185,7 +185,7 @@
             "name": "Is SC-500 harder than AZ-500 was?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "They are comparably demanding overall, but the difficulty is distributed differently. AZ-500 concentrated 30 to 35% of its weight in Defender for Cloud and Microsoft Sentinel, including hands-on KQL query writing. SC-500 spreads that content more evenly across four domains and trades some of that Sentinel depth for breadth into AI-specific security controls, which is unfamiliar territory for most Azure administrators moving across from AZ-500."
+              "text": "They are comparably demanding overall, but the difficulty is distributed differently. AZ-500 concentrated 30 to 35% of its weight in Defender for Cloud and Sentinel, including hands-on KQL query writing. SC-500 spreads that content more evenly across four domains and trades some Sentinel depth for breadth into AI-specific security controls — unfamiliar territory for most administrators moving across from AZ-500."
             }
           },
           {
@@ -207,7 +207,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/article.css?v=daf473b50230">
-  <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
+  <link rel="stylesheet" href="/theme-light.css?v=abf2709ebf7e">
   <link rel="stylesheet" href="/guides/guide-visuals.css?v=7a102c01857c">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
@@ -352,9 +352,12 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        Identity and governance covers Privileged Identity Management, Conditional Access, and Key Vault, alongside Azure Policy and RBAC remediation. The largest domain, storage/databases/networking, is largely continuous with AZ-500's networking and storage material: NSGs, Private Link, Azure Firewall, Defender for Storage and Databases. Secure compute is where SC-500 diverges hardest from AZ-500: alongside disk encryption, Bastion, and Defender for Servers and Containers, it adds a dedicated AI-security skill group covering Microsoft Entra Agent ID, Defender for AI Services, Foundry guardrails, AI Gateway in API Management, and Purview DSPM for Copilot. Posture management rolls up Defender CSPM, multicloud connectors, Microsoft Sentinel ingestion, and Microsoft Security Copilot into one domain rather than one oversized 30–35% block.
-      </p>
+      <ul>
+        <li>Identity and governance covers Privileged Identity Management, Conditional Access, and Key Vault, alongside Azure Policy and RBAC remediation.</li>
+        <li>Storage/databases/networking, the largest domain, is largely continuous with AZ-500's networking and storage material: NSGs, Private Link, Azure Firewall, Defender for Storage and Databases.</li>
+        <li>Secure compute diverges hardest from AZ-500: alongside disk encryption, Bastion, and Defender for Servers and Containers, it adds a dedicated AI-security skill group — Entra Agent ID, Defender for AI Services, Foundry guardrails, AI Gateway in API Management, Purview DSPM for Copilot.</li>
+        <li>Posture management rolls up Defender CSPM, multicloud connectors, Microsoft Sentinel ingestion, and Microsoft Security Copilot into one domain rather than one oversized 30–35% block.</li>
+      </ul>
     </section>
 
     <!-- What AZ-500 tested -->
@@ -378,54 +381,56 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        Identity and access covered role assignments, PIM, Conditional Access, and Microsoft Entra app registrations and managed identities. Networking covered NSGs, Virtual Network Manager, Virtual WAN, private access patterns, and Azure Firewall. Compute, storage, and databases covered VM and AKS security, storage access control, and Azure SQL protections including Transparent Data Encryption. The largest domain by far was Defender for Cloud and Sentinel: governance policy, Secure Score remediation, threat protection plans, and hands-on Sentinel configuration including data connectors and analytics rules. Three of these four domains map closely onto SC-500's current outline; the fourth is where SC-500 now spends part of its weight on AI security instead.
-      </p>
+      <ul>
+        <li>Identity and access covered role assignments, PIM, Conditional Access, and Microsoft Entra app registrations and managed identities.</li>
+        <li>Networking covered NSGs, Virtual Network Manager, Virtual WAN, private access patterns, and Azure Firewall.</li>
+        <li>Compute, storage, and databases covered VM and AKS security, storage access control, and Azure SQL protections including Transparent Data Encryption.</li>
+        <li>Defender for Cloud and Sentinel, the largest domain by far, covered governance policy, Secure Score remediation, threat protection plans, and hands-on Sentinel configuration including data connectors and analytics rules.</li>
+        <li>Three of these four domains map closely onto SC-500's current outline; the fourth is where SC-500 now spends part of its weight on AI security instead.</li>
+      </ul>
     </section>
 
     <!-- Prerequisite / ordering -->
     <section id="prerequisite" class="container">
       <p class="label-eyebrow section-eyebrow">Prerequisite question</p>
       <h2 class="display-small section-title">Is there a prerequisite for SC-500?</h2>
-      <p>
-        No formal one. SC-500 doesn't require another certification before you can book it, in the same way AZ-500 never did. Microsoft's own guidance recommends practical experience administering Azure and hybrid environments and strong familiarity with Microsoft Entra ID before attempting it, and Azure Mastery's own certification pathing lists <a href="/exams/az-104/">AZ-104</a> as a recommended (not required) lead-in, exactly as it did for AZ-500.
+      <p class="section-lede">
+        No formal one. SC-500 doesn't require another certification before you can book it, in the same way AZ-500 never did.
       </p>
-      <p>
-        SC-500 also does not currently unlock anything further up the security track on its own. Microsoft's published prerequisite guidance for SC-100 (Cybersecurity Architect Expert) does not list SC-500 as an accepted route as of this guide's last update — check the official <a href="/exams/sc-100/">SC-100</a> requirements directly before assuming otherwise, since Microsoft updates prerequisite lists independently of exam retirements.
-      </p>
-      <p>
-        If you're deciding whether SC-900 (Security, Compliance, and Identity Fundamentals) is worth sitting first: it's optional conceptual groundwork, exactly as it was for AZ-500, and mainly useful if security terminology itself — not just Azure — is new to you.
-      </p>
+      <ul>
+        <li>Microsoft's own guidance recommends practical experience administering Azure and hybrid environments and strong familiarity with Microsoft Entra ID before attempting it.</li>
+        <li>Azure Mastery's certification pathing lists <a href="/exams/az-104/">AZ-104</a> as a recommended, not required, lead-in — exactly as it did for AZ-500.</li>
+        <li>SC-500 doesn't currently unlock anything further up the security track on its own; Microsoft's published prerequisite guidance for SC-100 (Cybersecurity Architect Expert) doesn't list SC-500 as an accepted route as of this guide's last update — check the official <a href="/exams/sc-100/">SC-100</a> requirements directly, since Microsoft updates prerequisite lists independently of exam retirements.</li>
+        <li>Deciding whether SC-900 (Security, Compliance, and Identity Fundamentals) is worth sitting first? It's optional conceptual groundwork, exactly as it was for AZ-500, mainly useful if security terminology itself is new to you.</li>
+      </ul>
     </section>
 
     <!-- Career value framing (no invented numbers) -->
     <section id="career-value" class="container">
       <p class="label-eyebrow section-eyebrow">Career value</p>
       <h2 class="display-small section-title">How SC-500 changes what the credential signals</h2>
-      <p>
-        AZ-500 signalled "Cloud Security Engineer" or "Azure Security Specialist" — someone who could lock down identity, networking, compute, and storage, and run day-to-day operations in Defender for Cloud and Sentinel. SC-500 signals the same operational competence, plus a claim AZ-500 never made: that you can extend those same controls to the AI systems now running inside the organisation, from Copilot agents to Foundry-hosted models.
-      </p>
-      <p>
-        That AI-security scope is the reason SC-500 exists rather than a straight AZ-500 renewal cycle. As organisations put Copilot and custom agents into production, "who governs what an AI agent can access" became a real operational question that AZ-500's outline had no domain to answer. Hiring managers posting "Cloud Security Engineer" or "Cloud and AI Security" roles in 2026 are increasingly asking for that AI-specific coverage explicitly.
-      </p>
-      <p>
-        Neither certification guarantees a role or a pay rise on its own. What SC-500 does is keep the underlying credential current and renewable, which AZ-500 — through no fault of the people who hold it — can no longer do.
-      </p>
+      <p class="section-lede">SC-500 signals everything AZ-500 did, plus a claim AZ-500 never made.</p>
+      <ul>
+        <li>AZ-500 signalled "Cloud Security Engineer" or "Azure Security Specialist" — someone who could lock down identity, networking, compute, and storage, and run day-to-day operations in Defender for Cloud and Sentinel.</li>
+        <li>SC-500 signals that same operational competence, plus the ability to extend those controls to the AI systems now running inside the organisation, from Copilot agents to Foundry-hosted models.</li>
+        <li>That AI-security scope is the reason SC-500 exists rather than a straight AZ-500 renewal cycle: "who governs what an AI agent can access" became a real operational question AZ-500's outline had no domain to answer.</li>
+        <li>Hiring managers posting "Cloud Security Engineer" or "Cloud and AI Security" roles in 2026 increasingly ask for that AI-specific coverage explicitly.</li>
+        <li>Neither guarantees a role or a pay rise; what SC-500 does is keep the credential current and renewable, which AZ-500 can no longer do.</li>
+      </ul>
     </section>
 
     <!-- If you hold AZ-500 (replaces "take both" for this retirement-driven pair) -->
     <section id="if-you-hold-az500" class="container">
       <p class="label-eyebrow section-eyebrow">If you hold AZ-500</p>
       <h2 class="display-small section-title">What happens to an AZ-500 credential you already hold</h2>
-      <p>
-        Your certification stays on your Microsoft transcript exactly as it is. Microsoft does not retroactively remove or downgrade a credential because the exam that produced it has since retired — the "Microsoft Certified: Azure Security Engineer Associate" line on your record is permanent proof of what you passed and when.
-      </p>
-      <p>
-        What changes is renewal. Microsoft's own guidance states that renewal assessments are no longer available once a certification's exam has retired, so AZ-500 itself has no ongoing free annual renewal path any more. The entry stays on your transcript as a record of what you passed and when, but there is no mechanism left to formally refresh it against a current skills outline.
-      </p>
-      <p>
-        The practical route for staying current is SC-500. Three of AZ-500's four domains — identity and access, networking, and compute/storage/databases — map closely onto SC-500's identity, storage/database/networking, and compute domains, so an AZ-500 holder is not starting from zero. The genuinely new material sits in two places: the AI-security skill group inside Secure Compute (Entra Agent ID, Defender for AI Services, Foundry guardrails, AI Gateway, Purview DSPM for Copilot), and Microsoft Security Copilot inside posture management. Everything else is a change of emphasis and consolidation, not new content to learn from scratch.
-      </p>
+      <p class="section-lede">Your certification stays on your Microsoft transcript exactly as it is.</p>
+      <ul>
+        <li>Microsoft does not retroactively remove or downgrade a credential because the exam that produced it has since retired — the "Microsoft Certified: Azure Security Engineer Associate" line is permanent proof of what you passed and when.</li>
+        <li>What changes is renewal: assessments are no longer available once a certification's exam has retired, so AZ-500 has no ongoing free annual renewal path.</li>
+        <li>The entry stays on your transcript as a record, but there's no mechanism left to formally refresh it against a current skills outline.</li>
+        <li>The practical route for staying current is SC-500. Three of AZ-500's four domains — identity and access, networking, and compute/storage/databases — map closely onto SC-500's identity, storage/database/networking, and compute domains, so a holder isn't starting from zero.</li>
+        <li>The genuinely new material sits in two places: the AI-security skill group inside Secure Compute, and Microsoft Security Copilot inside posture management. Everything else is a change of emphasis and consolidation, not new content to learn from scratch.</li>
+      </ul>
       <div class="cta-panel">
         <h3>Bring AZ-500 knowledge into SC-500 practice</h3>
         <p>
@@ -442,7 +447,7 @@
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>Moving over from AZ-500?</strong> Start free with original SC-500 questions, each with a rationale for every option, and see what's genuinely new.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -460,7 +465,7 @@
         </details>
         <details class="faq">
           <summary>What's actually new in SC-500 that wasn't in AZ-500?</summary>
-          <div class="faq__answer"><p>AI security. SC-500's Secure Compute domain adds a full skill group on securing Microsoft Copilot and AI agents: Microsoft Entra Agent ID conditional access and blast-radius analysis, Defender for AI Services, Foundry guardrails, AI Gateway in Azure API Management, and Microsoft Purview Data Security Posture Management for Copilot. None of that existed in AZ-500's outline. SC-500 also adds Microsoft Security Copilot workspace and plugin management to its posture-monitoring domain.</p></div>
+          <div class="faq__answer"><p>AI security. SC-500's Secure Compute domain adds a full skill group on securing Microsoft Copilot and AI agents: Entra Agent ID conditional access, Defender for AI Services, Foundry guardrails, AI Gateway in API Management, and Purview DSPM for Copilot. None of that existed in AZ-500. SC-500 also adds Security Copilot workspace and plugin management to posture monitoring.</p></div>
         </details>
         <details class="faq">
           <summary>Do I need to retake anything if I already have AZ-500?</summary>
@@ -468,7 +473,7 @@
         </details>
         <details class="faq">
           <summary>Is SC-500 harder than AZ-500 was?</summary>
-          <div class="faq__answer"><p>They are comparably demanding overall, but the difficulty is distributed differently. AZ-500 concentrated 30 to 35% of its weight in Defender for Cloud and Microsoft Sentinel, including hands-on KQL query writing. SC-500 spreads that content more evenly across four domains and trades some of that Sentinel depth for breadth into AI-specific security controls, which is unfamiliar territory for most Azure administrators moving across from AZ-500.</p></div>
+          <div class="faq__answer"><p>They are comparably demanding overall, but the difficulty is distributed differently. AZ-500 concentrated 30 to 35% of its weight in Defender for Cloud and Sentinel, including hands-on KQL query writing. SC-500 spreads that content more evenly across four domains and trades some Sentinel depth for breadth into AI-specific security controls — unfamiliar territory for most administrators moving across from AZ-500.</p></div>
         </details>
         <details class="faq">
           <summary>Does SC-500 count as a prerequisite for SC-100?</summary>
@@ -507,7 +512,7 @@
         </a>
       </nav>
       <p class="section-note">
-        Browse the full library on the <a href="/guides/">Azure certification guides</a> index.
+        The full guide library, for every exam, is at <a href="/guides/">Azure certification guides</a>.
       </p>
     </section>
 

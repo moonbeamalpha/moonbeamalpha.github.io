@@ -93,7 +93,7 @@
         "description": "405 DP-300 practice questions for Azure Database Administrator. SQL deployment, security, performance tuning, and HA/DR — updated for the 2026 exam.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-08-09",
+        "dateModified": "2026-09-06",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -188,42 +188,50 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the DP-300 exam cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the DP-300 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the DP-300 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for DP-300?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready."
-            }
-          },
-          {
-            "@type": "Question",
             "name": "DP-300 vs DP-900 — which should I take first?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "DP-900 first if databases aren't already your day job. DP-900 (Microsoft Azure Data Fundamentals) teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300."
+              "text": "DP-900 first if databases aren't already your day job. DP-900 teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to run Azure SQL workloads in production."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Auto-failover group or active geo-replication — which does DP-300 want?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pick an auto-failover group when the requirement is automatic, transparent failover behind a stable listener endpoint. Pick active geo-replication when the requirement is manual control over failover timing, or more secondaries than a failover group allows. Naming the wrong one for a stated recovery-time requirement is one of the exam's most repeated misses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What format does the DP-300 exam use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "40–60 questions, with formats that vary by sitting. Azure Mastery's bank runs a similar spread: mostly single-answer multiple choice, a real slice of scenario-based, drag-to-match, and multi-select questions, and a smaller mix of dropdown-select, yes/no, and hotspot items. T-SQL snippets and config JSON appear throughout."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the DP-300 exam fee, and does renewal cost extra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The voucher is USD $165 in the United States, or around £128 in the UK. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking. Renewal itself is free, but it happens every year."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a DP-300 pass permanent, or does it lapse?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free, short online assessment on Microsoft Learn within the six months before expiry. Fundamentals certs such as AZ-900 are different — those don't expire at all."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Query Store or Extended Events — which does DP-300 expect for troubleshooting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Query Store answers a regression over time — a query that used to run fast and now doesn't. Extended Events answers a live, event-level symptom, such as a deadlock, right now. DP-300 names the symptom, not the tool, so matching the two is the real skill."
             }
           },
           {
@@ -231,31 +239,31 @@
             "name": "DP-300 vs AI-300 — different data roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role."
+              "text": "They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads in production. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role you're in."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for DP-300 prep?",
+            "name": "I need to resit DP-300 — how soon can I book again?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
+              "text": "Every attempt is a separate booking, and how long you wait depends on which attempt it is. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
             }
           },
           {
             "@type": "Question",
-            "name": "Does DP-300 practice work offline?",
+            "name": "Can I try Azure Mastery's DP-300 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
+              "text": "Yes — the app is free to download, with a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade."
             }
           },
           {
             "@type": "Question",
-            "name": "Is there a DP-300 practice test mode?",
+            "name": "Does DP-300 revision still work with no connection?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "Yes. The whole loop stays on-device: practice, scoring, and the readiness read. A missing signal doesn't stop a session, and no account is required. Your study data stays local unless you switch on optional private iCloud sync."
             }
           }
         ]
@@ -370,8 +378,8 @@
   <link rel="stylesheet" href="/exams/hero.css?v=7ee0f6ea3299">
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #FFB900; --amh-accent-2: #E08600; }</style>
-  <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
+  <link rel="stylesheet" href="/theme-light.css?v=abf2709ebf7e">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=4bb35566458f">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -397,6 +405,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -508,11 +517,20 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the DP-300 exam?</h2>
       <p>
-        DP-300 is the <strong>Microsoft Certified: Azure Database Administrator Associate</strong> exam — the credential hiring managers expect when posting "Database Administrator", "Azure SQL DBA", or "Cloud Database Engineer" roles on the Microsoft data platform. It's the natural next step after <a href="/exams/dp-900/">DP-900</a> for anyone whose day job has shifted from generalist data work into running and securing SQL workloads in production. DP-300 is the only Microsoft Associate cert dedicated to operating the SQL family on Azure.
+        DP-300 is the <strong>Microsoft Certified: Azure Database Administrator Associate</strong> exam — the credential hiring managers expect when posting "Database Administrator", "Azure SQL DBA", or "Cloud Database Engineer" roles on the Microsoft data platform.
       </p>
       <p>
-        DP-300 is <strong>hands-on and operational</strong>. It validates that you can plan and implement <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong>; secure data with Microsoft Entra authentication, Always Encrypted, dynamic data masking, row-level security, TDE, and Microsoft Defender for SQL; tune workloads via Query Store, automatic tuning, indexes, partitioning, and Resource Governor; automate operations with SQL Agent, elastic jobs, PowerShell, and ARM/Bicep; and design HA/DR with Always On availability groups, geo-replication, auto-failover groups, and PITR. Expect scenario questions that show you a query plan, a config snippet, or a recovery requirement and ask what you'd do.
+        It's the natural next step after <a href="/exams/dp-900/">DP-900</a> for anyone whose day job has shifted from generalist data work into running and securing SQL workloads in production. DP-300 is the only Microsoft Associate cert dedicated to operating the SQL family on Azure.
       </p>
+      <p>DP-300 is <strong>hands-on and operational</strong>. It validates that you can:</p>
+      <ul>
+        <li>Plan and implement <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong></li>
+        <li>Secure data with Microsoft Entra authentication, Always Encrypted, dynamic data masking, row-level security, TDE, and Microsoft Defender for SQL</li>
+        <li>Tune workloads via Query Store, automatic tuning, indexes, partitioning, and Resource Governor</li>
+        <li>Automate operations with SQL Agent, elastic jobs, PowerShell, and ARM/Bicep</li>
+        <li>Design HA/DR with Always On availability groups, geo-replication, auto-failover groups, and PITR</li>
+      </ul>
+      <p>Expect scenario questions that show you a query plan, a config snippet, or a recovery requirement and ask what you'd do.</p>
       <p>
         Microsoft updated the DP-300 skills outline on <strong>24 April 2026</strong>. Every question in Azure Mastery's DP-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -528,10 +546,10 @@
 
     <!-- DP-300 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 24 April 2026</p>
       <h2 class="display-small section-title">DP-300 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">official skills outline</a>; Azure Mastery tags questions by exam objective, so you can see which domains need more practice.
+        Five domains, with weights set by Microsoft's <strong>24 April 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">official skills outline</a>, and Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -550,59 +568,145 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Plan and implement data platform resources<span class="domain__weight">15–20%</span></h3>
+          <h3>Plan and implement data platform resources<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-platform">73</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Platform topics</summary>
             <div class="domain__body">
-              <p>
-                The deployment foundation. Choose between <em>Azure SQL Database</em> (single, elastic pool, hyperscale), <em>Azure SQL Managed Instance</em>, and <em>SQL Server on Azure VMs</em>. Plan for compute and storage requirements, deployment via portal/PowerShell/CLI/Bicep, scaling and elastic pools. Plus migration paths via <em>Azure Database Migration Service</em> and <em>Azure Migrate</em>, including online vs offline approaches. Around 6–12 questions per sitting.
-              </p>
+              <ul>
+                <li>Plan and deploy Azure SQL solutions</li>
+                <li>Configure resources for scale and performance</li>
+                <li>Plan and implement a migration strategy</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Tests choosing the right SQL deployment target and sizing its compute, storage, and scaling for the stated need.</li>
+                <li>Candidates default to Azure SQL Database out of habit, even when the scenario names an instance-scoped feature only Managed Instance supports.</li>
+                <li>Match the migration mode, online or offline, to the downtime the scenario says the business can tolerate.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Implement a secure environment<span class="domain__weight">20–25%</span></h3>
+          <h3>Implement a secure environment<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-security">92</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Security topics</summary>
             <div class="domain__body">
-              <p>
-                The compliance and access surface. Microsoft Entra and SQL authentication, contained users, RBAC and role mappings, server roles, database roles. Encryption — <em>Transparent Data Encryption (TDE)</em>, <em>Always Encrypted</em>, dynamic data masking, row-level security. Auditing, threat detection via <em>Microsoft Defender for SQL</em>, network restrictions (firewall rules, virtual network rules, Private Link). Around 8–15 questions.
-              </p>
+              <ul>
+                <li>Configure database authentication and authorization</li>
+                <li>Implement security for data at rest and data in transit</li>
+                <li>Implement compliance controls for sensitive data</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Matching an authentication, encryption, or compliance control to a named requirement across the three SQL deployment targets is the core ask.</li>
+                <li>Transparent Data Encryption often gets reached for when the scenario actually needs Always Encrypted to hide data from a privileged DBA.</li>
+                <li>Ask whether the requirement is protecting data at rest or hiding it from an authorised administrator before picking an encryption feature.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Monitor, configure, and optimize database resources<span class="domain__weight">20–25%</span></h3>
+          <h3>Monitor, configure, and optimize database resources<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-monitoring">88</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Monitoring topics</summary>
             <div class="domain__body">
-              <p>
-                The performance angle. <em>Query Store</em> for query and plan history, automatic tuning, manual index tuning (clustered, non-clustered, columnstore, filtered, included columns), statistics, partitioning, In-Memory OLTP, Resource Governor, query plan analysis. <em>Dynamic management views (DMVs)</em>, Intelligent Insights, Performance Monitor, blocking and deadlock troubleshooting. Around 8–15 questions.
-              </p>
+              <ul>
+                <li>Monitor resource activity and performance</li>
+                <li>Monitor and optimize query performance</li>
+                <li>Configure database solutions for optimal performance</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Tests reading a query plan, wait type, or metric and picking the tool built to diagnose that specific symptom.</li>
+                <li>Candidates reach for a dynamic management view when the scenario needs history that survives a restart or failover.</li>
+                <li>Use Query Store for a regression that developed over time; use DMVs or Extended Events for what's happening right now.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Configure and manage automation of tasks<span class="domain__weight">15–20%</span></h3>
+          <h3>Configure and manage automation of tasks<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-automation">68</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Automation topics</summary>
             <div class="domain__body">
-              <p>
-                The DBA-as-code layer. SQL Server Agent jobs (steps, schedules, alerts, operators) on Managed Instance and SQL VM. <em>Elastic jobs</em> on Azure SQL Database. PowerShell, Azure CLI, Logic Apps, and Azure Automation runbooks for routine maintenance. ARM/Bicep templates for repeatable deployment. Alerts via Azure Monitor and Action Groups. Around 6–12 questions.
-              </p>
+              <ul>
+                <li>Create and manage SQL Server Agent jobs</li>
+                <li>Automate deployment of database resources</li>
+                <li>Create and manage database tasks in Azure</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Which automation tool is even available on the named deployment target is what trips people up first.</li>
+                <li>SQL Server Agent is often assumed to run everywhere, but a single Azure SQL Database has no built-in Agent at all.</li>
+                <li>Reach for an elastic job the moment a scenario names scheduled T-SQL running across a fleet of Azure SQL databases.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Plan and configure HA/DR environment<span class="domain__weight">20–25%</span></h3>
+          <h3>Plan and configure a high availability and disaster recovery (HA/DR) environment<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp300-hadr">84</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore HA/DR topics</summary>
             <div class="domain__body">
-              <p>
-                The resilience story. <em>Always On availability groups</em> on SQL VM (synchronous vs asynchronous, read-only routing, listener configuration), <em>failover cluster instances</em>. For Azure SQL Database and Managed Instance: active geo-replication, <em>auto-failover groups</em>, business-critical and zone-redundant tiers. Backup strategies — point-in-time restore, long-term retention, geo-restore, RPO/RTO planning. Around 8–15 questions.
-              </p>
+              <ul>
+                <li>Plan an HA/DR strategy for database solutions</li>
+                <li>Plan and perform backup and restore of a database</li>
+                <li>Configure HA/DR for database solutions</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Matching an HA/DR feature to the stated recovery-time and recovery-point numbers matters more than recognising a familiar service name.</li>
+                <li>Active geo-replication gets picked when the scenario actually wants a failover group's automatic failover behind one listener.</li>
+                <li>Work out the RPO and RTO the scenario states first, then choose the HA/DR feature built to hit both numbers.</li>
+              </ul>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where DP-300 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where DP-300 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared DP-300 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Azure SQL Database doesn't expose the instance-scoped feature set of SQL Server or Managed Instance.</h3>
+          <ul>
+            <li>Linked servers, SQL Server Agent, and CLR are strong signals to consider Managed Instance or SQL Server on an Azure VM.</li>
+            <li>Cross-database access is possible through Elastic Query external tables, not ordinary three- or four-part names.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>TDE and Always Encrypted stop different people from reading your data.</h3>
+          <ul>
+            <li>TDE hides data from someone stealing the files; it does nothing to stop a DBA running a query.</li>
+            <li>Pick Always Encrypted specifically when the requirement says even a privileged administrator must not see the values.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Geo-replication and failover groups solve the same problem with different guarantees.</h3>
+          <ul>
+            <li>Automatic, transparent failover belongs to a failover group; manual control is what geo-replication actually offers.</li>
+            <li>Read the failover requirement for the word "automatic" before choosing between the two options.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Dynamic management views reset on every restart or failover.</h3>
+          <ul>
+            <li>Query Store, not a DMV, is what holds history that survives a restart.</li>
+            <li>Save DMVs for a live, in-the-moment symptom and Query Store for anything asking about change over time.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Azure SQL Database has no built-in SQL Server Agent.</h3>
+          <ul>
+            <li>Elastic Jobs is Azure SQL's managed service for running scheduled T-SQL across databases; external schedulers are another option.</li>
+            <li>Confirm the deployment target first: SQL Server Agent is available on Managed Instance and SQL Server on Azure VMs, while Elastic Jobs targets Azure SQL Database.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -614,63 +718,63 @@
       <article class="exam-benefit">
         <h3>Exam-specific practice</h3>
         <ul>
-          <li><strong>405 DP-300 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Coverage follows the official five domains (platform resources, secure environment, monitor/optimize, automation, HA/DR).</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li><strong>405 DP-300 practice questions</strong>, each written against the current 24 April 2026 skills outline.</li>
+          <li>Every question carries a tag for one of DP-300's five official domains.</li>
+          <li>Practise reading a T-SQL snippet, config value, or recovery requirement, the exam's actual scenario style.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your DP-300 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ forecasts your DP-300 score on-device after roughly 30 questions, with a confidence range attached.</li>
+          <li>It names the specific security, monitoring, or HA/DR topic dragging your score down.</li>
+          <li>It flags which of the five domains is weakest before you book the exam.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan leans hardest on security and HA/DR, the two domains Microsoft weights joint-heaviest at 20–25%.</li>
+          <li>Miss an Always Encrypted vs TDE question and the next session surfaces that distinction again.</li>
+          <li>Three clean sessions on a topic and the plan quietly drops it from rotation.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>Five domains is a lot to retain, so a topic mastered early can fade by exam day if you stop revising it.</li>
+          <li>A padlock icon appears on the Today screen once a topic starts to fade.</li>
+          <li>Focus Weak Spots sessions pull decayed topics to the front automatically.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 100-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Sit a full 100-minute session with no going back once you've moved past a question.</li>
+          <li>Question selection follows the published domain weights, all original, none lifted from Microsoft.</li>
+          <li>The live DP-300 interface and question mix are Microsoft's to control, not ours.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles DP-300's near-identical calls: Always Encrypted vs TDE, active geo-replication vs auto-failover groups.</li>
+          <li>Each note names the property of the scenario that should have driven your choice.</li>
+          <li>On capable hardware a note can be reworded on-device, but only after it's checked against the source guidance.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura adjusts what it suggests as your first week of DP-300 sessions goes on.</li>
+          <li>Each session closes with a short recap: what moved, what to revisit, what comes next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Private by design</h3>
         <ul>
-          <li>Practice, scoring, readiness, and coaching run on-device.</li>
-          <li>You don't need an Azure Mastery account or a server to process your study data.</li>
+          <li>Your DP-300 answer history, readiness gauge, and Answer Coach notes stay private by default.</li>
+          <li>There's no Azure Mastery account and no server in the loop at all.</li>
           <li>Optional sync uses your private iCloud account.</li>
         </ul>
       </article>
@@ -901,57 +1005,68 @@
       <h2 class="display-small section-title">DP-300 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the DP-300 exam cost?</summary>
-          <div class="faq__answer">
-            <p>The DP-300 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. DP-300 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the DP-300 certification expire?</summary>
-          <div class="faq__answer">
-            <p>Yes. Microsoft Associate certifications including DP-300 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the DP-300 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for DP-300?</summary>
-          <div class="faq__answer">
-            <p>Most candidates plan four to eight weeks with prior database experience, or longer if Azure SQL is new. Practise deployment and migration, identity and security, performance tuning, automation, and HA/DR across Azure SQL Database, Managed Instance, and SQL Server on Azure VMs. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
-          </div>
-        </details>
-        <details class="faq">
           <summary>DP-300 vs DP-900 — which should I take first?</summary>
           <div class="faq__answer">
-            <p>DP-900 first if databases aren't already your day job. <a href="/exams/dp-900/">DP-900 (Microsoft Azure Data Fundamentals)</a> teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP, the SQL-family service triangle, Cosmos DB API options — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to manage Azure SQL workloads in production. Most candidates pass DP-900 in a few weeks, then spend two to three months on DP-300.</p>
+            <p>DP-900 first if databases aren't already your day job. <a href="/exams/dp-900/">DP-900</a> teaches the data vocabulary — relational vs non-relational, OLTP vs OLAP — without expecting T-SQL. DP-300 is the role-based Associate exam: it expects you to run Azure SQL workloads in production.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Auto-failover group or active geo-replication — which does DP-300 want?</summary>
+          <div class="faq__answer">
+            <p>Pick an auto-failover group when the requirement is automatic, transparent failover behind a stable listener endpoint. Pick active geo-replication when the requirement is manual control over failover timing, or more secondaries than a failover group allows. Naming the wrong one for a stated recovery-time requirement is one of the exam's most repeated misses.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What format does the DP-300 exam use?</summary>
+          <div class="faq__answer">
+            <p>40–60 questions, with formats that vary by sitting. Azure Mastery's bank runs a similar spread: mostly single-answer multiple choice, a real slice of scenario-based, drag-to-match, and multi-select questions, and a smaller mix of dropdown-select, yes/no, and hotspot items. T-SQL snippets and config JSON appear throughout.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the DP-300 exam fee, and does renewal cost extra?</summary>
+          <div class="faq__answer">
+            <p>The voucher is USD $165 in the United States, or around £128 in the UK. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking. Renewal itself is free, but it happens every year.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Is a DP-300 pass permanent, or does it lapse?</summary>
+          <div class="faq__answer">
+            <p>It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free, short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six months before expiry. Fundamentals certs such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire at all.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Query Store or Extended Events — which does DP-300 expect for troubleshooting?</summary>
+          <div class="faq__answer">
+            <p>Query Store answers a regression over time — a query that used to run fast and now doesn't. Extended Events answers a live, event-level symptom, such as a deadlock, right now. DP-300 names the symptom, not the tool, so matching the two is the real skill.</p>
           </div>
         </details>
         <details class="faq">
           <summary>DP-300 vs AI-300 — different data roles?</summary>
           <div class="faq__answer">
-            <p>They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads, including security, performance, automation, and HA/DR. <a href="/exams/ai-300/">AI-300</a> is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role.</p>
+            <p>They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads in production. <a href="/exams/ai-300/">AI-300</a> is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role you're in.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for DP-300 prep?</summary>
+          <summary>I need to resit DP-300 — how soon can I book again?</summary>
           <div class="faq__answer">
-            <p>The app is free to download and includes a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
+            <p>Every attempt is a separate booking, and how long you wait depends on which attempt it is.</p>
+            <ul>
+              <li>First retake: after 24 hours.</li>
+              <li>Second and third retakes: a 14-day wait each.</li>
+              <li>Cap: five attempts per rolling 12 months.</li>
+            </ul>
           </div>
         </details>
         <details class="faq">
-          <summary>Does DP-300 practice work offline?</summary>
+          <summary>Can I try Azure Mastery's DP-300 bank before paying?</summary>
           <div class="faq__answer">
-            <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+            <p>Yes — the app is free to download, with a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is there a DP-300 practice test mode?</summary>
+          <summary>Does DP-300 revision still work with no connection?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>Yes. The whole loop stays on-device: practice, scoring, and the readiness read. A missing signal doesn't stop a session, and no account is required. Your study data stays local unless you switch on optional private iCloud sync.</p>
           </div>
         </details>
       </div>

@@ -52,7 +52,7 @@ CHECK = "--check" in sys.argv[1:]
 
 FAQ_BLOCK_RE = re.compile(
     r'<details class="faq">\s*<summary>(.*?)</summary>\s*'
-    r'<div class="faq__answer">\s*<p>(.*?)</p>\s*</div>\s*</details>',
+    r'<div class="faq__answer">(.*?)</div>\s*</details>',
     re.S,
 )
 
@@ -71,6 +71,7 @@ class FaqSyncError(Exception):
 def normalise(markup: str) -> str:
     """Strip tags, unescape entities, collapse whitespace -- same approach as
     normalise_visible_text() in Tools/validate-marketing-seo.py."""
+    markup = re.sub(r"</(?:li|p)>", " ", markup)
     return " ".join(html.unescape(re.sub(r"<[^>]+>", "", markup)).split())
 
 

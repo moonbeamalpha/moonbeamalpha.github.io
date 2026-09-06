@@ -93,7 +93,7 @@
         "description": "557 AI-103 practice questions for Developing AI Apps and Agents on Azure. Study Microsoft Foundry, RAG, agents, and Python on iPhone and iPad.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-09-04",
+        "dateModified": "2026-09-06",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -199,7 +199,7 @@
             "name": "Does the AI-103 certification expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — like every Microsoft Associate certification, AI-103 expires annually. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry, and it's scoped to whatever changed in the outline since you last certified. AI-901, the Fundamentals-tier exam, doesn't expire — only role-based certifications like AI-103 do."
+              "text": "Yes — like every Microsoft Associate certification, AI-103 expires annually. Renewal is a free, short online assessment on Microsoft Learn, available in the six-month window before expiry and scoped to recent skills-outline updates. AI-901, the Fundamentals-tier exam, doesn't expire — only role-based certifications like AI-103 do."
             }
           },
           {
@@ -207,7 +207,7 @@
             "name": "What is the AI-103 retake policy if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can retake AI-103 24 hours after a failed first attempt; the second and third retakes each require a 14-day wait. Microsoft allows a maximum of five attempts in any rolling 12 months, and every attempt needs its own voucher."
+              "text": "How much time you need before retaking AI-103 depends on your attempt number; every attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
             }
           },
           {
@@ -215,7 +215,7 @@
             "name": "What does the AI-103 exam format look like?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Like most Microsoft Certification exams, AI-103 has 40–60 questions in a mix of formats, with the exact timing confirmed at registration. It runs as a 100-minute session (120 minutes with the seat time Microsoft allows for exam admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. In Azure Mastery's AI-103 bank you'll practise several of those formats yourself — single-answer and multi-select multiple choice, ordering and matching items, and a small number of linked case studies."
+              "text": "AI-103 runs as a 100-minute session (120 minutes with seat time) of 40–60 questions, taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Azure Mastery's bank practises the same formats: multiple choice, multi-select, ordering, matching, and case studies."
             }
           },
           {
@@ -223,7 +223,7 @@
             "name": "How long should I study for AI-103?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Plan for several weeks of focused study if you already write Python and have touched Azure AI services before; extend that if Microsoft Foundry, agents, or multimodal AI are new territory. The exam expects working familiarity across five distinct domains, so breadth of practice matters as much as depth in any one area. Azure Mastery's readiness gauge helps you judge when you've closed that gap."
+              "text": "Plan for several weeks of focused study if you already write Python and know Azure AI services; extend that if Foundry, agents, or multimodal AI are new to you. The exam spans five distinct domains, so breadth matters as much as depth. Azure Mastery's readiness gauge shows when you've closed the gap."
             }
           },
           {
@@ -231,7 +231,7 @@
             "name": "AI-103 vs AI-102 — different roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-102 retired on 30 June 2026. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, and it reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content — not just a renamed version of the old outline."
+              "text": "AI-102 retired on 30 June 2026. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, a genuinely new outline that reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content since AI-102."
             }
           },
           {
@@ -336,8 +336,8 @@
   <link rel="stylesheet" href="/exams/hero.css?v=7ee0f6ea3299">
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #9578E0; --amh-accent-2: #6D54C9; }</style>
-  <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
+  <link rel="stylesheet" href="/theme-light.css?v=abf2709ebf7e">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=4bb35566458f">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -499,7 +499,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 16 April 2026</p>
       <h2 class="display-small section-title">AI-103 exam objectives</h2>
       <p class="section-lede">
-        Five domains from Microsoft's current outline. Every summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103" rel="noopener">official study guide</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Five domains from Microsoft's current outline. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103" rel="noopener">official study guide</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -529,9 +529,11 @@
                 <li>Manage, monitor, and secure AI systems</li>
                 <li>Implement responsible AI across generative AI and agentic systems</li>
               </ul>
-              <p>
-                This domain asks you to make foundational architecture calls before writing agent code: which model class fits a task (a full LLM, a smaller model, or a multimodal model), how to wire CI/CD around Foundry project deployments, and how to keep a live system observable and secure. Expect scenarios that test whether you can read a workload's latency, cost, and accuracy requirements and translate them into a specific Foundry service choice, plus governance basics — managed identity, private networking, and responsible-AI guardrails — that apply before a single agent is built.
-              </p>
+              <ul class="domain__tips">
+                <li>Tests architecture decisions made before any agent code: model-class choice, Foundry CI/CD, and keeping a live system observable and secure.</li>
+                <li>Governance basics — managed identity, private networking, responsible-AI guardrails — get skipped in favour of jumping straight to model choice.</li>
+                <li>Match a workload's stated latency, cost, and accuracy needs to a specific Foundry service before picking a model.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -546,9 +548,11 @@
                 <li>Build agents by using Foundry</li>
                 <li>Optimize and operationalize generative AI systems</li>
               </ul>
-              <p>
-                The heaviest-weighted domain, and the most hands-on. You're expected to build retrieval-augmented generation into an app, wire multistep reasoning pipelines, and stand up agents that call tools, hold conversation memory, and hand off work to other agents under an orchestrator. Evaluation is treated as a first-class step, not an afterthought — detecting fabrications, scoring relevance and safety, and instrumenting production agents with tracing, token analytics, and latency breakdowns so a live deployment stays measurable rather than opaque.
-              </p>
+              <ul class="domain__tips">
+                <li>The heaviest domain: covers RAG, multistep reasoning, and agents that call tools, hold memory, and hand off work to an orchestrator.</li>
+                <li>Evaluation gets treated as an afterthought, but the exam tests detecting fabrications and scoring relevance and safety directly.</li>
+                <li>Practise reading a production agent's tracing, token, and latency data as closely as you practise building the agent.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -563,9 +567,11 @@
                 <li>Design and implement multimodal understanding workflows</li>
                 <li>Implement responsible AI for multimodal content</li>
               </ul>
-              <p>
-                Vision questions split between generation (producing or editing images and video from prompts and reference media) and understanding (extracting captions, answering questions grounded in an image, or classifying objects and regions with Content Understanding). The responsible-AI slice is specific to visual content: filtering unsafe imagery, catching prompt injection hidden inside an uploaded image, and enforcing brand or watermark policy — distinct from the text-based safety controls tested elsewhere in the outline.
-              </p>
+              <ul class="domain__tips">
+                <li>Splits between generation — producing or editing images and video from prompts — and understanding: captions, visual Q&amp;A, and classification.</li>
+                <li>Candidates apply text-based safety rules here, but visual responsible AI covers image-hidden prompt injection and brand-watermark policy too.</li>
+                <li>Decide generation or understanding first from the scenario's verb, then pick the matching Content Understanding feature.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -579,9 +585,11 @@
                 <li>Apply language model text analysis</li>
                 <li>Implement speech solutions</li>
               </ul>
-              <p>
-                This domain covers two related but separate skill sets: language-model-driven text analysis (entity and topic extraction, structured JSON output, sentiment and safety detection, translation) and speech (converting between speech and text, custom speech models, and audio-based reasoning for agent interactions). The exam expects you to know which Foundry Tool or SDK call fits a given text or audio requirement rather than treating "language services" as one interchangeable bucket.
-              </p>
+              <ul class="domain__tips">
+                <li>Covers two separate skill sets, language-model text analysis and speech, that candidates lump together as one "language services" bucket.</li>
+                <li>Struggling to name the exact Foundry tool or SDK call a stated text or audio requirement needs is the common miss.</li>
+                <li>Match the scenario's exact requirement — structured JSON, sentiment, or a custom speech model — to its specific Foundry call.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -595,9 +603,11 @@
                 <li>Build retrieval and grounding pipelines</li>
                 <li>Extract content from documents</li>
               </ul>
-              <p>
-                Information extraction is where retrieval and document intelligence meet. You'll need to choose between semantic, hybrid, and vector search for a grounding scenario, configure enrichment skills for text, image, and layout, and use Content Understanding to turn scanned or multimodal documents into structured or Markdown output that an agent or RAG pipeline can consume directly — the OCR step is a means to that structured end, not the deliverable itself.
-              </p>
+              <ul class="domain__tips">
+                <li>Where retrieval and document intelligence meet: choosing semantic, hybrid, or vector search for a described grounding scenario.</li>
+                <li>Candidates treat OCR as the deliverable, but it's only a step toward structured or Markdown output for a RAG pipeline.</li>
+                <li>Practise configuring enrichment skills for text, image, and layout before assuming Content Understanding needs no setup.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -614,23 +624,43 @@
       <div class="traps">
         <article class="trap">
           <h3>Right-sizing the model, not maximising it</h3>
-          <p>AI-103 scenarios often describe a task a small or code-optimised model handles fine, then list a large multimodal model as a tempting option. The exam rewards matching model class to task — latency, cost, and context needs — not defaulting to the biggest model available. Treat "which model" questions as a sizing problem first.</p>
+          <p>Candidates default to the largest multimodal model offered, when the scenario's latency, cost, and context needs point to a smaller one.</p>
+          <ul>
+            <li>Latency, cost, and context length are the three levers Microsoft actually tests — raw capability rarely decides the answer.</li>
+            <li>Treat every "which model" question as a sizing problem first: check latency, cost, and context before capability.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>RAG is not fine-tuning</h3>
-          <p>Retrieval-augmented generation grounds a model's answers in your own content at query time; it doesn't change the model's weights. Candidates sometimes reach for RAG when a scenario actually needs model customisation, or the reverse. If the requirement is "answer from our current documents," that's retrieval, not training.</p>
+          <p>Candidates reach for RAG when a scenario actually needs model customisation through fine-tuning, or the reverse.</p>
+          <ul>
+            <li>RAG grounds answers in your own content at query time; fine-tuning changes the model's weights permanently instead.</li>
+            <li>Read for "answer from our current documents" — that phrase means retrieval, never fine-tuning.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>One agent with tools vs. orchestrated agents</h3>
-          <p>A single agent equipped with several tools and a multi-agent solution that delegates subtasks to separate agents solve different shapes of problem. AI-103 tests whether you can tell when a task needs one agent calling functions versus an orchestrator handing work to specialised agents with their own memory and scope.</p>
+          <p>A single agent calling several tools and an orchestrator delegating to separate agents solve different shapes of problem entirely.</p>
+          <ul>
+            <li>Scope is the tell: one agent's tools share its memory, while an orchestrator hands each specialised agent its own context.</li>
+            <li>Check whether the scenario needs one agent's shared memory and scope, or separate agents each with their own.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Filters, evaluators, and governance aren't the same control</h3>
-          <p>Content filters block unsafe output at runtime. Evaluators measure quality and safety offline, after the fact. Governance controls — approval workflows, oversight modes, tool-access limits — constrain what an agent is allowed to do in the first place. Responsible-AI questions expect you to place a described control in the right one of these three categories.</p>
+          <p>Content filters, evaluators, and governance controls all sound like "safety", but each operates at a different point in the pipeline.</p>
+          <ul>
+            <li>Runtime filtering blocks content as it flows, evaluation scores it afterwards, and governance sets the rules before either runs.</li>
+            <li>Ask when the control acts — before, during, or after the agent runs — to sort it into the right category.</li>
+          </ul>
         </article>
         <article class="trap">
-          <h3>Content Understanding is a pipeline, not just OCR</h3>
-          <p>Extracting text from a scanned document is one small piece of what Content Understanding does. The exam also tests structured and Markdown output generation, multimodal analysis across documents, images, audio and video, and connecting that output directly into a RAG or agent pipeline — treating it as "just OCR" misses most of what's tested.</p>
+          <h3>Content Understanding is a full extraction pipeline</h3>
+          <p>Candidates treat Content Understanding as simple OCR, missing the structured output and multimodal analysis the exam actually tests.</p>
+          <ul>
+            <li>Structured JSON or Markdown output, multimodal analysis, and a direct connection into a RAG pipeline all sit inside Content Understanding.</li>
+            <li>Look for what happens after extraction: structured JSON, Markdown, or a handoff into the next pipeline stage.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -643,63 +673,63 @@
         <h3>Exam-specific practice</h3>
         <ul>
           <li><strong>557 AI-103 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Coverage follows the current April 2026 skills outline.</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li>Coverage leans hardest on planning and agentic implementation, the two domains Microsoft weights up to 35% each.</li>
+          <li>Practise right-sizing a model to a stated latency, cost, and context budget — the exam's recurring scenario shape.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your AI-103 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ forecasts your AI-103 score on-device after roughly 30 questions, confidence range attached.</li>
+          <li>It names whether generative-agent building or governance and evaluation is dragging that number down.</li>
+          <li>Compare all five domains to see which one is holding your predicted score back before you book.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan leans hardest on implementing generative AI and agents, the domain Microsoft weights up to 35%.</li>
+          <li>Miss a RAG, orchestration, or Content Understanding question and the next session surfaces that domain first.</li>
+          <li>Once a topic sticks across three sessions running, the plan shifts focus to whatever's next weakest.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>Forget the RAG-vs-fine-tuning distinction early on and later evaluation and governance questions get harder too.</li>
+          <li>Watch the Today screen for a decay flag and revisit that topic before it slips for good.</li>
+          <li>Run a Focus Weak Spots session and fading topics come back into rotation without you hunting for them.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 100-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Practise holding focus through a full 100-minute session, matching AI-103's real length.</li>
+          <li>Every question is original, and each session's domain mix tracks the published weighting.</li>
+          <li>The live exam's exact interface and question order are Microsoft's call, not Azure Mastery's.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles AI-103's near-identical pairs: RAG vs fine-tuning, and one agent with tools vs an orchestrated multi-agent solution.</li>
+          <li>Miss a question and Answer Coach points to the exact scenario detail that should have changed your answer.</li>
+          <li>Supported devices can offer an on-device rewrite, but it's always checked against the written explanation first.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura changes its suggestions as your first week of AI-103 practice unfolds.</li>
+          <li>Every session closes with a quick recap covering what improved, what needs another look, and where to go next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Private by design</h3>
         <ul>
-          <li>Practice, scoring, readiness, and coaching run on-device.</li>
-          <li>You don't need an Azure Mastery account or a server to process your study data.</li>
-          <li>Optional sync uses your private iCloud account.</li>
+          <li>Your AI-103 answer history, readiness gauge, and Answer Coach notes never leave your device by default.</li>
+          <li>There's no Azure Mastery account or server that ever sees your AI-103 study data.</li>
+          <li>Turn on sync and it stays inside your own private iCloud account — nothing else.</li>
         </ul>
       </article>
     </section>
@@ -890,31 +920,36 @@
         <details class="faq">
           <summary>Does the AI-103 certification expire?</summary>
           <div class="faq__answer">
-            <p>Yes — like every Microsoft Associate certification, AI-103 expires annually. Renewal is a free, 25–30 question assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>, available in the six-month window before expiry, and it's scoped to whatever changed in the outline since you last certified. <a href="/exams/ai-901/">AI-901</a>, the Fundamentals-tier exam, doesn't expire — only role-based certifications like AI-103 do.</p>
+            <p>Yes — like every Microsoft Associate certification, AI-103 expires annually. Renewal is a free, short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>, available in the six-month window before expiry and scoped to recent skills-outline updates. <a href="/exams/ai-901/">AI-901</a>, the Fundamentals-tier exam, doesn't expire — only role-based certifications like AI-103 do.</p>
           </div>
         </details>
         <details class="faq">
           <summary>What is the AI-103 retake policy if I fail?</summary>
           <div class="faq__answer">
-            <p>You can retake AI-103 24 hours after a failed first attempt; the second and third retakes each require a 14-day wait. Microsoft allows a maximum of five attempts in any rolling 12 months, and every attempt needs its own voucher.</p>
+            <p>How much time you need before retaking AI-103 depends on your attempt number; every attempt needs its own voucher.</p>
+            <ul>
+              <li>First retake: after 24 hours.</li>
+              <li>Second and third retakes: a 14-day wait each.</li>
+              <li>Cap: five attempts per rolling 12 months.</li>
+            </ul>
           </div>
         </details>
         <details class="faq">
           <summary>What does the AI-103 exam format look like?</summary>
           <div class="faq__answer">
-            <p>Like most Microsoft Certification exams, AI-103 has 40–60 questions in a mix of formats, with the exact timing confirmed at registration. It runs as a 100-minute session (120 minutes with the seat time Microsoft allows for exam admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. In Azure Mastery's AI-103 bank you'll practise several of those formats yourself — single-answer and multi-select multiple choice, ordering and matching items, and a small number of linked case studies.</p>
+            <p>AI-103 runs as a 100-minute session (120 minutes with seat time) of 40–60 questions, taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Azure Mastery's bank practises the same formats: multiple choice, multi-select, ordering, matching, and case studies.</p>
           </div>
         </details>
         <details class="faq">
           <summary>How long should I study for AI-103?</summary>
           <div class="faq__answer">
-            <p>Plan for several weeks of focused study if you already write Python and have touched Azure AI services before; extend that if Microsoft Foundry, agents, or multimodal AI are new territory. The exam expects working familiarity across five distinct domains, so breadth of practice matters as much as depth in any one area. Azure Mastery's readiness gauge helps you judge when you've closed that gap.</p>
+            <p>Plan for several weeks of focused study if you already write Python and know Azure AI services; extend that if Foundry, agents, or multimodal AI are new to you. The exam spans five distinct domains, so breadth matters as much as depth. Azure Mastery's readiness gauge shows when you've closed the gap.</p>
           </div>
         </details>
         <details class="faq">
           <summary>AI-103 vs AI-102 — different roles?</summary>
           <div class="faq__answer">
-            <p><a href="/exams/ai-102/">AI-102 retired on 30 June 2026</a>. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, and it reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content — not just a renamed version of the old outline.</p>
+            <p><a href="/exams/ai-102/">AI-102 retired on 30 June 2026</a>. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, a genuinely new outline that reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content since AI-102.</p>
           </div>
         </details>
         <details class="faq">

@@ -113,10 +113,10 @@
     },
     "AZ-400": {
       "az400-monitoring": 45,
-      "az400-pipelines": 236,
+      "az400-pipelines": 239,
       "az400-processes": 68,
       "az400-security": 52,
-      "az400-sourcecontrol": 66
+      "az400-sourcecontrol": 63
     },
     "AZ-700": {
       "az700-access": 64,

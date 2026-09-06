@@ -93,7 +93,7 @@
         "description": "374 SC-200 practice questions for Security Operations Analyst. Defender XDR, Sentinel, KQL hunting, and incident response — updated for the 2026 exam.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-08-09",
+        "dateModified": "2026-09-06",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -186,34 +186,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the SC-200 exam cost?",
+            "name": "Do I need to know KQL before starting SC-200?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The SC-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-200 also requires annual renewal (free, online), so factor that into long-term cost planning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the SC-200 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including SC-200 expire annually. Renewal is free — a 25–30 question online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the SC-200 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for SC-200?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates plan four to eight weeks with security-operations experience. Spend hands-on time in Microsoft Defender XDR and Microsoft Sentinel: investigate incidents, build KQL queries and analytics rules, hunt threats, automate response, and manage exposure. Azure Mastery's readiness gauge tells you when you're exam-ready."
+              "text": "Not on day one, but learn it early: threat hunting is 20–25% of the exam and KQL shows up in the other domains too. Start by reading and modifying existing queries before writing from scratch; the exam tests picking the right table and interpreting results more than raw syntax."
             }
           },
           {
@@ -221,39 +197,63 @@
             "name": "SC-200 vs SC-900 — which should I take first?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "SC-900 first if security concepts are new to you. SC-900 (Microsoft Security, Compliance, and Identity Fundamentals) builds the cross-cutting Microsoft security vocabulary — Defender family, Microsoft Sentinel, Microsoft Entra, Microsoft Purview — without expecting hands-on triage. SC-200 is the role-based Associate exam: it expects you to investigate incidents in Defender XDR and write KQL hunting queries. Most candidates pass SC-900 in a few weeks then spend two to three months on SC-200."
+              "text": "SC-900 first if security concepts are new to you: it builds the cross-cutting vocabulary without expecting hands-on triage. SC-200 is the role-based Associate exam, investigating incidents in Defender XDR and writing KQL hunting queries. Most candidates pass SC-900 in weeks, then spend two to three months on SC-200."
             }
           },
           {
             "@type": "Question",
-            "name": "SC-200 vs SC-500 — different security roles?",
+            "name": "What question formats show up on SC-200?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Different angles on Microsoft security. SC-500 implements security controls across cloud and AI workloads; SC-200 runs detection, investigation, hunting, and incident response in Microsoft Defender XDR and Sentinel. Choose SC-500 for cloud security engineering and SC-200 for security operations."
+              "text": "40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that mix: mostly single-answer, a meaningful share of scenario and multi-select questions in roughly equal measure, a smaller set of yes/no, dropdown, hotspot, and drag-to-match items, and a handful of case studies."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for SC-200 prep?",
+            "name": "What's the SC-200 voucher price, and is renewal extra?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The app is free to download and includes a free allowance of SC-200 questions so you can try every feature. The full bank of 374 SC-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
+              "text": "SC-200's voucher runs USD $165 in the United States, roughly £128 in the UK, with Microsoft occasionally offering free vouchers around Build or Ignite. Renewal itself costs nothing beyond a short annual assessment, so the voucher is the only real ongoing expense."
             }
           },
           {
             "@type": "Question",
-            "name": "Does SC-200 practice work offline?",
+            "name": "Does an SC-200 pass last forever, or do I need to renew?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
+              "text": "No, it needs renewing. Associate certifications including SC-200 expire annually; renewal is a free, short online assessment within six months of expiry, targeting recent outline updates. Fundamentals certifications such as AZ-900 differ: those never expire."
             }
           },
           {
             "@type": "Question",
-            "name": "Is there an SC-200 practice test mode?",
+            "name": "Sentinel automation or Defender XDR native response — how does SC-200 test the choice?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "SC-200 scenarios give you an incident that could plausibly be handled either way, and expect you to pick based on where the signal originates and how broad the response needs to be, not personal preference. Answer Coach spells out which property of the scenario should have driven the call."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I need to retake SC-200 — what's the wait?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "24 hours covers the wait before your first retake. First retake: 24-hour wait. Second and third retakes: 14-day wait each. Microsoft limits you to five attempts in any rolling 12-month window, a new voucher required each time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I try Azure Mastery's SC-200 bank before paying?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The app is free to download with a free allowance of SC-200 questions so you can try every feature. The full 374-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I hunt through SC-200 practice scenarios with no connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Practice sessions, scoring, and the readiness prediction all run on-device, so they work with no connection at all. There's no account to sign into, and data stays local unless you turn on optional, private iCloud sync."
             }
           }
         ]
@@ -368,8 +368,8 @@
   <link rel="stylesheet" href="/exams/hero.css?v=7ee0f6ea3299">
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #20C020; --amh-accent-2: #178A17; }</style>
-  <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=d7710a5a3f87">
+  <link rel="stylesheet" href="/theme-light.css?v=abf2709ebf7e">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=4bb35566458f">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
 </head>
@@ -506,13 +506,21 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the SC-200 exam?</h2>
       <p>
-        SC-200 is the <strong>Microsoft Certified: Security Operations Analyst Associate</strong> exam — the credential hiring managers expect when posting "SOC Analyst", "Security Operations Engineer", "Threat Hunter", or "Incident Responder" roles on the Microsoft stack. SC-200 covers the SOC analyst's day-to-day in <em>Microsoft Sentinel</em> and <em>Microsoft Defender XDR</em>, plus the broader Defender product family. It pairs with <a href="/exams/sc-900/">SC-900</a> on the way in, and is one of the prereqs for <a href="/exams/sc-100/">SC-100 (Cybersecurity Architect Expert)</a>.
+        SC-200 is the <strong>Microsoft Certified: Security Operations Analyst Associate</strong> exam — the credential hiring managers expect when posting "SOC Analyst", "Security Operations Engineer", "Threat Hunter", or "Incident Responder" roles on the Microsoft stack.
       </p>
       <p>
-        SC-200 is <strong>hands-on and KQL-aware</strong>. It validates that you can configure and manage <em>Microsoft Sentinel</em> (workspaces, data connectors, analytics rules, watchlists, automation, hunting), investigate incidents end-to-end across <em>Microsoft Defender XDR</em> (Defender for Endpoint, Identity, Office 365, Cloud Apps), use <em>Microsoft Defender for Cloud</em> for posture and workload protection, and write KQL queries to hunt threats and build custom detections. Expect scenario questions that show a KQL snippet, an alert payload, or an incident graph and ask what you'd do next.
+        SC-200 covers the SOC analyst's day-to-day in <em>Microsoft Sentinel</em> and <em>Microsoft Defender XDR</em>, plus the broader Defender product family. It pairs with <a href="/exams/sc-900/">SC-900</a> on the way in, and is one of the prereqs for <a href="/exams/sc-100/">SC-100 (Cybersecurity Architect Expert)</a>.
       </p>
+      <p>SC-200 is <strong>hands-on and KQL-aware</strong>. It validates that you can:</p>
+      <ul>
+        <li>Configure and manage <em>Microsoft Sentinel</em> — workspaces, data connectors, analytics rules, watchlists, automation, hunting</li>
+        <li>Investigate incidents end-to-end across <em>Microsoft Defender XDR</em> (Defender for Endpoint, Identity, Office 365, Cloud Apps)</li>
+        <li>Use <em>Microsoft Defender for Cloud</em> for posture and workload protection</li>
+        <li>Write KQL queries to hunt threats and build custom detections</li>
+      </ul>
+      <p>Expect scenario questions that show a KQL snippet, an alert payload, or an incident graph and ask what you'd do next.</p>
       <p>
-        Microsoft updated the SC-200 skills outline on <strong>16 April 2026</strong>. Every question in Azure Mastery's SC-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">learn.microsoft.com</a>.
+        Microsoft updated the SC-200 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="SC-200 exam format facts">
         <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
@@ -526,10 +534,10 @@
 
     <!-- SC-200 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · April 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 28 July 2026</p>
       <h2 class="display-small section-title">SC-200 exam objectives</h2>
       <p class="section-lede">
-        Three domains, with weights set by Microsoft's April 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">official skills outline</a>; Azure Mastery tags questions by exam objective, so you can see which domains need more practice.
+        SC-200 has three domains, weighted by Microsoft's <strong>28 July 2026</strong> update. Each summary below follows the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-200" rel="noopener">official skills outline</a>; the counts are the questions in the app tagged to that domain.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -548,37 +556,112 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Manage a security operations environment<span class="domain__weight">40–45%</span></h3>
+          <h3>Manage a security operations environment<span class="domain__weight">Published weight 40–45%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc200-ops">162</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore SecOps topics</summary>
             <div class="domain__body">
-              <p>
-                The largest domain by far. Configure <em>Microsoft Sentinel</em> end-to-end — workspaces, data connectors (Azure activity, Microsoft 365, Defender XDR, third-party CEF/Syslog), log retention and table tiers, RBAC for Sentinel and Defender XDR. Build analytics rules (scheduled, NRT, Microsoft incident creation, anomaly), watchlists, threat-intelligence integration, and automation rules with Logic App playbooks. Configure <em>Microsoft Defender for Cloud</em> — Secure Score, regulatory compliance, workload protection plans (Servers, App Service, Storage, SQL, Containers), JIT VM access, recommendations and exemptions. Around 16–27 questions per sitting.
-              </p>
+              <ul>
+                <li>Configure automation for Microsoft Defender XDR and Microsoft Sentinel</li>
+                <li>Configure the Microsoft Sentinel SIEM and platform</li>
+                <li>Ingest data into the Microsoft Sentinel SIEM and platform</li>
+                <li>Configure detections</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>This domain tests configuring Sentinel end-to-end and picking the right ingestion connector for a described log source.</li>
+                <li>Candidates memorise connector names but mix up which topology, AMA, WEF, or Syslog/CEF, actually fits a given source.</li>
+                <li>Match a described source and network topology to its one correct connector before touching other domain content.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Respond to security incidents<span class="domain__weight">35–40%</span></h3>
+          <h3>Respond to security incidents<span class="domain__weight">Published weight 35–40%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc200-incident">132</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Incidents topics</summary>
             <div class="domain__body">
-              <p>
-                The Defender XDR investigation surface. Triage and investigate incidents using <em>Microsoft Defender for Endpoint</em> (live response, automated investigation, response actions, device groups), <em>Microsoft Defender for Identity</em> (lateral movement, golden ticket, identity scoring), <em>Microsoft Defender for Office 365</em> (anti-phishing, ZAP, attack-simulation training), and <em>Microsoft Defender for Cloud Apps</em> (CASB, anomaly detection, governance actions). Use the Defender XDR attack-story view and evidence graph to follow the kill chain. Around 14–24 questions.
-              </p>
+              <ul>
+                <li>Respond to alerts and incidents in Microsoft Defender XDR</li>
+                <li>Respond to alerts and incidents in Microsoft Defender for Endpoint</li>
+                <li>Investigate Microsoft 365 activities to identify threats</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Investigating and remediating across the whole Defender XDR surface, now including agentic AI tooling, is the real focus here.</li>
+                <li>Case management and the evidence graph often get treated as one feature, though one tracks tasks and the other traces movement.</li>
+                <li>Reach for the attack-story graph specifically whenever a scenario asks how an attack actually moved.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Perform threat hunting<span class="domain__weight">20–25%</span></h3>
+          <h3>Perform threat hunting<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="sc200-hunt">80</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Hunt topics</summary>
             <div class="domain__body">
-              <p>
-                Smallest domain by weight, but the most KQL-heavy. Hunt with <em>Microsoft Sentinel</em> hunting queries and bookmarks, run advanced-hunting queries across Microsoft 365 / Defender XDR tables, build custom detection rules from saved hunts, and run livestream hunting sessions. Map activity to <em>MITRE ATT&amp;CK</em> tactics and techniques, write KQL with joins, parse operators, time windows, and summarise. Around 8–14 questions.
-              </p>
+              <ul>
+                <li>Detect threats by using Microsoft Defender XDR</li>
+                <li>Detect threats by using the Microsoft Sentinel platform</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>This domain is the most KQL-heavy: picking the right table and writing a query that actually returns results.</li>
+                <li>Syntactically correct KQL against the wrong table returns an empty result that's hard to explain.</li>
+                <li>Identify the correct table for a described signal before writing any KQL; that choice is itself assessed.</li>
+              </ul>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where SC-200 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where SC-200 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared SC-200 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Defender for Cloud measures posture; Defender XDR handles response</h3>
+          <p>Defender for Cloud surfacing an alert doesn't make the follow-up question a posture-management one.</p>
+          <ul>
+            <li>Use Defender XDR for cross-product incident investigation; use Defender for Cloud for cloud posture and workload-protection findings, with integrations connecting the two workflows.</li>
+            <li>Treat Defender for Cloud as where risk is measured and Defender XDR as where an active incident gets handled.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Analytics rules, automation rules, and playbooks are three separate layers</h3>
+          <p>Candidates reach for an analytics rule when a scenario actually needs automated remediation of an existing incident.</p>
+          <ul>
+            <li>An analytics rule detects, an automation rule routes, and only a playbook actually remediates.</li>
+            <li>Pick a playbook whenever the scenario names a remediation action like isolating a device or disabling an account.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>The right data connector depends on the source, not habit</h3>
+          <p>AMA, WEF, and Syslog/CEF connectors all bring log data into Sentinel, so candidates default to whichever they know best.</p>
+          <ul>
+            <li>Matching a described source and topology to its one purpose-built connector is what earns the mark here.</li>
+            <li>Pick WEF for centralised on-premises forwarding and CEF/Syslog for third-party appliances, not whichever connector feels familiar.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>KQL table choice changes what a query can even see</h3>
+          <p>Correct KQL syntax against the wrong table still returns an empty or misleading result.</p>
+          <ul>
+            <li>Naming the table that actually holds the described telemetry is itself a scored step, before any query gets written.</li>
+            <li>Name the correct table first; treat that identification as a scored step, not a formality before the real answer.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Case management tracks the incident; the graph explains it</h3>
+          <p>Candidates reach for case management when a scenario is actually asking how an attack moved between hosts.</p>
+          <ul>
+            <li>A lateral-movement question calls for the evidence and attack-story graph, or Sentinel Graph, not the case list.</li>
+            <li>Save case management for tracking tasks and status; use the graph whenever the question is about how an attack spread.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -590,64 +673,64 @@
       <article class="exam-benefit">
         <h3>Exam-specific practice</h3>
         <ul>
-          <li><strong>374 SC-200 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Coverage follows the official three domains (manage SecOps environment, respond to incidents, threat hunting).</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li><strong>374 SC-200 practice questions</strong>, each tagged to one of the three official domains.</li>
+          <li>Coverage weights security operations management heaviest at 40–45%, the widest domain by product surface.</li>
+          <li>Practise reading a KQL snippet or alert payload and deciding what to do next, the exam's real test.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your SC-200 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ forecasts your SC-200 score on-device after about 30 questions, with a confidence range.</li>
+          <li>It names the specific Sentinel rule type or KQL pattern actually holding your score down.</li>
+          <li>Track which of the three domains lags behind before you commit to a booking date.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan leans hardest on managing the SecOps environment, the domain Microsoft weights heaviest at 40–45%.</li>
+          <li>Miss a Sentinel automation-rule question and the next session surfaces another configuration question from the same domain.</li>
+          <li>Master a Defender-product distinction across three sessions and the plan moves toward hunting or incident-response scenarios.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>Three SOC-analyst domains pack a lot of Sentinel and KQL surface; a rule template fades fast if unrevised.</li>
+          <li>Fading topics get flagged on the Today screen well before you'd forget them outright.</li>
+          <li>Weak Spots sessions pull decayed Sentinel or Defender topics back into rotation automatically.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 100-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Rehearse a full 100-minute session with no jumping back to flag-and-review, like the real booking.</li>
+          <li>The domain split matches the published weighting, drawn entirely from Azure Mastery's own bank.</li>
+          <li>Microsoft alone decides the live SC-200 interface and its exact question order.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles SC-200's near-identical layers: analytics vs automation rules, and which Defender product owns a given remediation.</li>
+          <li>Get one wrong and Answer Coach names the exact layer or table the scenario was testing.</li>
+          <li>Every explanation is authored first; an eligible device may reword one on-device only after it passes grounding checks.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura adjusts its recommendations through your first week of SC-200 practice as your patterns emerge.</li>
+          <li>Each session closes with a short summary: what changed, what's still shaky, what to do next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Private by design</h3>
         <ul>
-          <li>Practice, scoring, readiness, and coaching run on-device.</li>
-          <li>You don't need an Azure Mastery account or a server to process your study data.</li>
-          <li>Optional sync uses your private iCloud account.</li>
+          <li>Your SC-200 answers, readiness gauge, and coaching notes live on your device unless you turn on sync.</li>
+          <li>There's no Azure Mastery account and nothing gets processed on an external server.</li>
+          <li>Turning on sync routes everything through your own private iCloud account, nothing else.</li>
         </ul>
       </article>
     </section>
@@ -878,57 +961,62 @@
       <h2 class="display-small section-title">SC-200 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the SC-200 exam cost?</summary>
+          <summary>Do I need to know KQL before starting SC-200?</summary>
           <div class="faq__answer">
-            <p>The SC-200 voucher is USD $165 in the United States. Pricing varies by region — in the UK it's typically around £128. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. SC-200 also requires annual renewal (free, online), so factor that into long-term cost planning.</p>
+            <p>Not on day one, but learn it early: threat hunting is 20–25% of the exam and KQL shows up in the other domains too. Start by reading and modifying existing queries before writing from scratch; the exam tests picking the right table and interpreting results more than raw syntax.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does the SC-200 certification expire?</summary>
+          <summary>SC-200 vs <a href="/exams/sc-900/">SC-900</a> — which should I take first?</summary>
           <div class="faq__answer">
-            <p>Yes. Microsoft Associate certifications including SC-200 expire annually. Renewal is free — a 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+            <p>SC-900 first if security concepts are new to you: it builds the cross-cutting vocabulary without expecting hands-on triage. SC-200 is the role-based Associate exam, investigating incidents in Defender XDR and writing KQL hunting queries. Most candidates pass SC-900 in weeks, then spend two to three months on SC-200.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>What is the SC-200 retake policy if I fail?</summary>
+          <summary>What question formats show up on SC-200?</summary>
           <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+            <p>40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that mix: mostly single-answer, a meaningful share of scenario and multi-select questions in roughly equal measure, a smaller set of yes/no, dropdown, hotspot, and drag-to-match items, and a handful of case studies.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>How long should I study for SC-200?</summary>
+          <summary>What's the SC-200 voucher price, and is renewal extra?</summary>
           <div class="faq__answer">
-            <p>Most candidates plan four to eight weeks with security-operations experience. Spend hands-on time in Microsoft Defender XDR and Microsoft Sentinel: investigate incidents, build KQL queries and analytics rules, hunt threats, automate response, and manage exposure. Azure Mastery's readiness gauge tells you when you're exam-ready.</p>
+            <p>SC-200's voucher runs USD $165 in the United States, roughly £128 in the UK, with Microsoft occasionally offering free vouchers around Build or Ignite. Renewal itself costs nothing beyond a short annual assessment, so the voucher is the only real ongoing expense.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>SC-200 vs SC-900 — which should I take first?</summary>
+          <summary>Does an SC-200 pass last forever, or do I need to renew?</summary>
           <div class="faq__answer">
-            <p>SC-900 first if security concepts are new to you. <a href="/exams/sc-900/">SC-900 (Microsoft Security, Compliance, and Identity Fundamentals)</a> builds the cross-cutting Microsoft security vocabulary — Defender family, Microsoft Sentinel, Microsoft Entra, Microsoft Purview — without expecting hands-on triage. SC-200 is the role-based Associate exam: it expects you to investigate incidents in Defender XDR and write KQL hunting queries. Most candidates pass SC-900 in a few weeks then spend two to three months on SC-200.</p>
+            <p>No, it needs renewing. Associate certifications including SC-200 expire annually; renewal is a free, short online assessment within six months of expiry, targeting recent outline updates. Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> differ: those never expire.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>SC-200 vs SC-500 — different security roles?</summary>
+          <summary>Sentinel automation or Defender XDR native response — how does SC-200 test the choice?</summary>
           <div class="faq__answer">
-            <p>Different angles on Microsoft security. <a href="/exams/sc-500/">SC-500</a> implements security controls across cloud and AI workloads; SC-200 runs detection, investigation, hunting, and incident response in Microsoft Defender XDR and Sentinel. Choose SC-500 for cloud security engineering and SC-200 for security operations.</p>
+            <p>SC-200 scenarios give you an incident that could plausibly be handled either way, and expect you to pick based on where the signal originates and how broad the response needs to be, not personal preference. Answer Coach spells out which property of the scenario should have driven the call.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for SC-200 prep?</summary>
+          <summary>I need to retake SC-200 — what's the wait?</summary>
           <div class="faq__answer">
-            <p>The app is free to download and includes a free allowance of SC-200 questions so you can try every feature. The full bank of 374 SC-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
+            <p>24 hours covers the wait before your first retake.</p>
+            <ul>
+              <li>First retake: 24-hour wait.</li>
+              <li>Second and third retakes: 14-day wait each.</li>
+              <li>Microsoft limits you to five attempts in any rolling 12-month window, a new voucher required each time.</li>
+            </ul>
           </div>
         </details>
         <details class="faq">
-          <summary>Does SC-200 practice work offline?</summary>
+          <summary>Can I try Azure Mastery's SC-200 bank before paying?</summary>
           <div class="faq__answer">
-            <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+            <p>Yes. The app is free to download with a free allowance of SC-200 questions so you can try every feature. The full 374-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is there an SC-200 practice test mode?</summary>
+          <summary>Can I hunt through SC-200 practice scenarios with no connection?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>Yes. Practice sessions, scoring, and the readiness prediction all run on-device, so they work with no connection at all. There's no account to sign into, and data stays local unless you turn on optional, private iCloud sync.</p>
           </div>
         </details>
       </div>

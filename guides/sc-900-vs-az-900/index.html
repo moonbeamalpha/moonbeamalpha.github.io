@@ -153,7 +153,7 @@
             "name": "Is SC-900 harder than AZ-900?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Neither is harder in a general sense — both are Fundamentals-level exams with the same format: 40–60 multiple-choice questions in 45 minutes, passing at 700 out of 1000. Difficulty comes down to your background. SC-900 feels harder if security and identity terminology (Conditional Access, Microsoft Purview, Zero Trust) is new to you. AZ-900 feels harder if you have never touched cloud infrastructure concepts like regions, subscriptions, or the shared responsibility model."
+              "text": "Neither is harder generally — same format, same 700-out-of-1000 pass bar. It's your background that decides. SC-900 feels harder if security and identity terms (Conditional Access, Purview, Zero Trust) are new. AZ-900 feels harder if you've never touched regions, subscriptions, or the shared responsibility model."
             }
           },
           {
@@ -161,7 +161,7 @@
             "name": "Do I need AZ-900 before I can sit SC-900, or the other way round?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Neither exam is a formal prerequisite for the other. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 touches identity and security topics briefly inside its architecture and services domain, and SC-900 assumes you already have a general sense of what \"the cloud\" is, but neither exam expects you to have passed the other first."
+              "text": "No. Neither is a formal prerequisite. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 touches identity and security briefly, and SC-900 assumes a general sense of what \"the cloud\" is, but neither expects you to have passed the other first."
             }
           },
           {
@@ -169,7 +169,7 @@
             "name": "Which certification do employers actually ask for?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It depends entirely on the role. Job adverts for general IT, cloud support, or infrastructure roles more often reference AZ-900 or its associate-level next step AZ-104. Adverts for security analyst, identity administrator, or compliance-adjacent roles more often reference SC-900 or its associate-level follow-ons SC-200 and SC-300. Fundamentals certifications rarely appear as a hard requirement either way — they signal that you have done the groundwork, not that you are job-ready on their own."
+              "text": "Depends on the role. General IT, cloud support, or infrastructure adverts reference AZ-900 or AZ-104. Security analyst, identity, or compliance-adjacent adverts reference SC-900 or its follow-ons SC-200 and SC-300. Fundamentals rarely appear as a hard requirement either way."
             }
           },
           {
@@ -177,7 +177,7 @@
             "name": "Can I study for SC-900 and AZ-900 at the same time?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can, but sitting them back to back in the same week or two is usually a mistake. The two skills outlines only overlap on a handful of concepts — the shared responsibility model, Zero Trust, and the basics of Microsoft Entra ID — so most of your revision time for each exam is spent on material unique to that exam. Finish and sit one, then start the other, rather than trying to hold both domain lists in your head at once."
+              "text": "You can, but sitting them back to back in the same week or two is usually a mistake. The two outlines overlap on only a handful of concepts, so most revision time goes on material unique to each. Finish one, then start the other, rather than holding both domain lists in your head at once."
             }
           },
           {
@@ -185,7 +185,7 @@
             "name": "Do SC-900 and AZ-900 expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Microsoft Fundamentals certifications, including SC-900 and AZ-900, do not expire once you pass. This is different from Associate and Expert certifications such as SC-200, SC-300, AZ-104, or SC-500, which require a free annual renewal assessment on Microsoft Learn."
+              "text": "No. Fundamentals certifications, SC-900 and AZ-900 included, don't expire once you pass. That's different from Associate and Expert certifications such as SC-200, SC-300, or AZ-104, which need a free annual renewal assessment on Microsoft Learn."
             }
           },
           {
@@ -193,7 +193,7 @@
             "name": "I already know I want to work in security — should I skip AZ-900 entirely?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can go straight to SC-900 without ever sitting AZ-900. SC-900 does not require Azure operational knowledge, only conceptual awareness. That said, a lot of Microsoft security tooling sits on top of Azure infrastructure, so if terms like resource group, subscription, or region genuinely mean nothing to you, an hour or two with AZ-900's cloud-concepts material first will make SC-900's Microsoft Entra and Defender content easier to place in context."
+              "text": "You can go straight to SC-900; it needs only conceptual awareness, not Azure operational knowledge. That said, plenty of Microsoft security tooling sits on top of Azure infrastructure, so if \"resource group\" or \"subscription\" mean nothing to you, an hour with AZ-900's cloud-concepts material first helps SC-900 click faster."
             }
           }
         ]
@@ -207,7 +207,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/article.css?v=daf473b50230">
-  <link rel="stylesheet" href="/theme-light.css?v=3e71664ea716">
+  <link rel="stylesheet" href="/theme-light.css?v=abf2709ebf7e">
   <link rel="stylesheet" href="/guides/guide-visuals.css?v=7a102c01857c">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
   <link rel="stylesheet" href="/section-nav.css?v=2b43b6367f12">
@@ -283,11 +283,17 @@
       <div class="topic-cards topic-cards--pair">
         <div class="topic-card">
           <h3>Pick AZ-900 if…</h3>
-          <p>You want the broad grounding: cloud service models, Azure's region and subscription structure, core compute and storage services, and how cost management and governance work. It's the standard on-ramp toward Azure Administrator (<a href="/exams/az-104/">AZ-104</a>) and most general infrastructure roles.</p>
+          <ul>
+            <li>You want the broad grounding: cloud service models, Azure's region and subscription structure, core compute and storage, cost management and governance.</li>
+            <li>It's the standard on-ramp toward Azure Administrator (<a href="/exams/az-104/">AZ-104</a>) and most general infrastructure roles.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Pick SC-900 if…</h3>
-          <p>Your near-term work touches identity, compliance, or the security stack — Microsoft Entra ID, Microsoft Defender products, Microsoft Purview, or Microsoft Sentinel. It's the on-ramp toward the security-analyst and identity-administrator associate tracks.</p>
+          <ul>
+            <li>Your near-term work touches identity, compliance, or the security stack — Entra ID, Defender products, Purview, or Sentinel.</li>
+            <li>It's the on-ramp toward the security-analyst and identity-administrator associate tracks.</li>
+          </ul>
         </div>
       </div>
       <p class="section-note">
@@ -334,9 +340,12 @@
       <p class="section-lede">Compare the domain lists below to see which Fundamentals exam fits the work you want to do.</p>
 
       <h3>AZ-900: cloud concepts, architecture, governance</h3>
-      <p>
-        AZ-900 spends its first domain on <em>why</em> cloud computing exists at all — the shared responsibility model, public versus private versus hybrid cloud, consumption-based pricing, and the IaaS/PaaS/SaaS service models. Its largest domain then covers Azure's actual architecture: regions, availability zones, subscriptions, and management groups, plus compute, networking, and storage services. Identity and security get one section inside that domain — Microsoft Entra ID basics, MFA, Conditional Access, Azure RBAC, Zero Trust, and a mention of Microsoft Defender for Cloud — but it stays at "what is this and when would you use it," not implementation detail. The final domain covers cost management, Azure Policy, resource locks, and monitoring tools such as Azure Monitor.
-      </p>
+      <ul>
+        <li>Its first domain covers <em>why</em> cloud computing exists at all — the shared responsibility model, public versus private versus hybrid cloud, consumption-based pricing, and the IaaS/PaaS/SaaS service models.</li>
+        <li>Its largest domain covers Azure's actual architecture: regions, availability zones, subscriptions, and management groups, plus compute, networking, and storage services.</li>
+        <li>Identity and security get one section inside that domain — Entra ID basics, MFA, Conditional Access, RBAC, Zero Trust, a mention of Defender for Cloud — but it stays at "what is this," not implementation detail.</li>
+        <li>The final domain covers cost management, Azure Policy, resource locks, and monitoring tools such as Azure Monitor.</li>
+      </ul>
       <div class="guide-table-wrap">
         <table class="guide-table">
           <caption>AZ-900 skills measured</caption>
@@ -350,9 +359,12 @@
       </div>
 
       <h3 class="section-note">SC-900: security, compliance, and identity capabilities</h3>
-      <p>
-        SC-900 opens with the concepts domain everything else leans on: the shared responsibility model again, paired with defence-in-depth, Zero Trust, and the difference between authentication and authorisation. From there it goes deep rather than wide. A quarter to nearly a third of the exam is Microsoft Entra alone — identity types, authentication methods, Conditional Access, Microsoft Entra roles, Identity Protection, and Privileged Identity Management. The largest domain, Microsoft security solutions, covers Azure network security tools (NSGs, Azure Firewall, DDoS Protection), the whole Microsoft Defender family, and Microsoft Sentinel for SIEM and SOAR. The final domain is compliance: Microsoft Purview, sensitivity labels and data lifecycle management, insider risk management, and Microsoft Priva.
-      </p>
+      <ul>
+        <li>Opens with the concepts domain everything else leans on: the shared responsibility model again, paired with defence-in-depth, Zero Trust, and the difference between authentication and authorisation.</li>
+        <li>From there it goes deep rather than wide: a quarter to nearly a third of the exam is Microsoft Entra alone — identity types, authentication methods, Conditional Access, Entra roles, Identity Protection, Privileged Identity Management.</li>
+        <li>Microsoft security solutions, the largest domain, covers Azure network security tools (NSGs, Azure Firewall, DDoS Protection), the whole Microsoft Defender family, and Microsoft Sentinel for SIEM and SOAR.</li>
+        <li>The final domain is compliance: Microsoft Purview, sensitivity labels and data lifecycle management, insider risk management, and Microsoft Priva.</li>
+      </ul>
       <div class="guide-table-wrap">
         <table class="guide-table">
           <caption>SC-900 skills measured</caption>
@@ -371,47 +383,46 @@
     <section id="overlap" class="container">
       <p class="label-eyebrow section-eyebrow">The overlap</p>
       <h2 class="display-small section-title">Where SC-900 and AZ-900 actually overlap</h2>
-      <p>
-        The two exams share more conceptual ground than their domain lists suggest, even though neither is a prerequisite for the other. Both introduce the <strong>shared responsibility model</strong> early: AZ-900 treats it as the baseline distinction between what Microsoft manages and what you manage, and SC-900 builds its own opening domain directly on the same idea. Both also introduce <strong>Zero Trust</strong> and <strong>defence-in-depth</strong> — AZ-900 mentions them briefly inside its architecture domain, while SC-900 treats them as core concepts from the first domain onward.
-      </p>
-      <p>
-        <strong>Microsoft Entra ID</strong> is the clearest shared thread. AZ-900 introduces it at a glance — authentication basics, MFA, single sign-on, Conditional Access, and Azure RBAC — inside a broader "identity, access, and security" section. SC-900 dedicates a quarter to nearly a third of the exam to the same product, going into identity types, access management, and identity governance in real depth. The pattern repeats with <strong>Microsoft Defender for Cloud</strong>: AZ-900 name-checks it once, while SC-900 treats it as one entry point into a much larger Microsoft security solutions domain covering the whole Defender family plus Microsoft Sentinel.
-      </p>
-      <p class="section-note">
-        The short version: AZ-900 gives you the vocabulary for these topics, SC-900 gives you the depth. If you've already passed one, expect a handful of familiar terms in the other — not a free pass on study time.
-      </p>
+      <p class="section-lede">The two exams share more conceptual ground than their domain lists suggest, even though neither is a prerequisite for the other.</p>
+      <ul>
+        <li>Both introduce the <strong>shared responsibility model</strong> early: AZ-900 treats it as the baseline distinction between what Microsoft manages and what you manage, and SC-900 builds its opening domain directly on the same idea.</li>
+        <li>Both introduce <strong>Zero Trust</strong> and <strong>defence-in-depth</strong> — AZ-900 mentions them briefly inside its architecture domain, SC-900 treats them as core concepts from the first domain onward.</li>
+        <li><strong>Microsoft Entra ID</strong> is the clearest shared thread: AZ-900 introduces it at a glance inside a broader "identity, access, and security" section, while SC-900 dedicates a quarter to nearly a third of the exam to it.</li>
+        <li>The pattern repeats with <strong>Microsoft Defender for Cloud</strong>: AZ-900 name-checks it once, SC-900 treats it as one entry point into a much larger security solutions domain covering the whole Defender family plus Sentinel.</li>
+        <li>The short version: AZ-900 gives you the vocabulary, SC-900 gives you the depth. Already passed one? Expect a handful of familiar terms in the other, not a free pass on study time.</li>
+      </ul>
     </section>
 
     <!-- Which one first if you want both -->
     <section id="which-first" class="container">
       <p class="label-eyebrow section-eyebrow">Doing both</p>
       <h2 class="display-small section-title">Which one first, if you want both eventually</h2>
-      <p>
-        Plenty of people end up sitting both exams over time, especially in roles that straddle infrastructure and security. If your day job is, or will soon be, general Azure administration, take AZ-900 first — it establishes the resource-hierarchy vocabulary that SC-900 assumes lightly rather than teaches. If security, compliance, or identity is the actual target role, SC-900 first is fine too: it's self-contained and needs only conceptual awareness of what the cloud is, not Azure operational knowledge.
-      </p>
-      <p>
-        If you're genuinely undecided, most people study AZ-900 first because it's the broader on-ramp — more of Microsoft's other Fundamentals and Associate certifications assume the vocabulary it introduces. Either way, avoid sitting both in the same fortnight; the two outlines only overlap on a handful of concepts, so cramming both into one short study block blurs the material rather than reinforcing it. Still not sure which certification or order fits your goals? <a href="/guides/which-azure-certification-first/">Which Microsoft certification first?</a> walks through the wider decision.
-      </p>
+      <p class="section-lede">Plenty of people end up sitting both exams over time, especially in roles that straddle infrastructure and security.</p>
+      <ul>
+        <li>General Azure administration now or soon? Take AZ-900 first — it establishes the resource-hierarchy vocabulary SC-900 assumes lightly rather than teaches.</li>
+        <li>Security, compliance, or identity the actual target role? SC-900 first is fine too — it's self-contained and needs only conceptual awareness of the cloud, not Azure operational knowledge.</li>
+        <li>Genuinely undecided? Most people study AZ-900 first because it's the broader on-ramp — more of Microsoft's other Fundamentals and Associate certifications assume its vocabulary.</li>
+        <li>Either way, avoid sitting both in the same fortnight — the two outlines only overlap on a handful of concepts, and cramming both into one short block blurs the material rather than reinforcing it.</li>
+        <li>Still not sure which certification or order fits? <a href="/guides/which-azure-certification-first/">Which Microsoft certification first?</a> walks through the wider decision.</li>
+      </ul>
     </section>
 
     <!-- Career paths -->
     <section id="career-paths" class="container">
       <p class="label-eyebrow section-eyebrow">Career paths</p>
       <h2 class="display-small section-title">Where each path leads next</h2>
-      <p>
-        After AZ-900, the associate-level credential most job postings actually mean is <a href="/exams/az-104/">AZ-104</a> (Azure Administrator Associate) — hands-on subscription, identity, storage, compute, and networking administration. From there, the expert tracks branch out toward architecture or DevOps engineering.
-      </p>
-      <p>
-        After SC-900, there are two natural associate-level branches depending on which half of the exam interested you more. If the Microsoft security solutions domain — Defender, Sentinel — was the more engaging half, <a href="/exams/sc-200/">SC-200</a> (Security Operations Analyst Associate) is the next step. If the Microsoft Entra domain was more your speed, <a href="/exams/sc-300/">SC-300</a> (Identity and Access Administrator Associate) fits better. Both feed into <a href="/exams/sc-100/">SC-100</a> (Cybersecurity Architect Expert) further up the security track.
-      </p>
-      <p class="section-note">
-        Worth knowing if security engineering specifically is the goal: AZ-500 (Azure Security Engineer Associate) is being retired on 31 August 2026 and replaced by <a href="/exams/sc-500/">SC-500</a> (Cloud and AI Security Engineer Associate), which also pairs with SC-900 on the way in. So the security-track landing point to aim for now is SC-500, SC-200, or SC-300 depending on the specific role — not the retiring AZ-500.
-      </p>
+      <p class="section-lede">Each Fundamentals exam opens onto a different associate-level branch.</p>
+      <ul>
+        <li>After AZ-900, the associate-level credential most job postings actually mean is <a href="/exams/az-104/">AZ-104</a> (Azure Administrator Associate) — hands-on subscription, identity, storage, compute, and networking administration, from where the expert tracks branch toward architecture or DevOps engineering.</li>
+        <li>After SC-900, there are two natural branches depending on which half interested you more: <a href="/exams/sc-200/">SC-200</a> (Security Operations Analyst Associate) if the Microsoft security solutions domain — Defender, Sentinel — was the more engaging half.</li>
+        <li><a href="/exams/sc-300/">SC-300</a> (Identity and Access Administrator Associate) if the Microsoft Entra domain was more your speed; both feed into <a href="/exams/sc-100/">SC-100</a> (Cybersecurity Architect Expert) further up the security track.</li>
+        <li>Security engineering specifically the goal? AZ-500 retired on 31 August 2026 and replaced by <a href="/exams/sc-500/">SC-500</a> (Cloud and AI Security Engineer Associate), which also pairs with SC-900 on the way in — so aim for SC-500, SC-200, or SC-300, not the retired AZ-500.</li>
+      </ul>
     </section>
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>Decided between the two?</strong> Start free with original questions for whichever exam fits your role, each with a rationale for every option.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -421,33 +432,33 @@
       <div class="faqs">
         <details class="faq">
           <summary>Is SC-900 harder than AZ-900?</summary>
-          <div class="faq__answer"><p>Neither is harder in a general sense — both are Fundamentals-level exams with the same format: 40–60 multiple-choice questions in 45 minutes, passing at 700 out of 1000. Difficulty comes down to your background. SC-900 feels harder if security and identity terminology (Conditional Access, Microsoft Purview, Zero Trust) is new to you. AZ-900 feels harder if you have never touched cloud infrastructure concepts like regions, subscriptions, or the shared responsibility model.</p></div>
+          <div class="faq__answer"><p>Neither is harder generally — same format, same 700-out-of-1000 pass bar. It's your background that decides. SC-900 feels harder if security and identity terms (Conditional Access, Purview, Zero Trust) are new. AZ-900 feels harder if you've never touched regions, subscriptions, or the shared responsibility model.</p></div>
         </details>
         <details class="faq">
           <summary>Do I need AZ-900 before I can sit SC-900, or the other way round?</summary>
-          <div class="faq__answer"><p>No. Neither exam is a formal prerequisite for the other. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 touches identity and security topics briefly inside its architecture and services domain, and SC-900 assumes you already have a general sense of what "the cloud" is, but neither exam expects you to have passed the other first.</p></div>
+          <div class="faq__answer"><p>No. Neither is a formal prerequisite. Both are entry-level Fundamentals credentials designed to stand alone. AZ-900 touches identity and security briefly, and SC-900 assumes a general sense of what "the cloud" is, but neither expects you to have passed the other first.</p></div>
         </details>
         <details class="faq">
           <summary>Which certification do employers actually ask for?</summary>
-          <div class="faq__answer"><p>It depends entirely on the role. Job adverts for general IT, cloud support, or infrastructure roles more often reference AZ-900 or its associate-level next step <a href="/exams/az-104/">AZ-104</a>. Adverts for security analyst, identity administrator, or compliance-adjacent roles more often reference SC-900 or its associate-level follow-ons <a href="/exams/sc-200/">SC-200</a> and <a href="/exams/sc-300/">SC-300</a>. Fundamentals certifications rarely appear as a hard requirement either way — they signal that you have done the groundwork, not that you are job-ready on their own.</p></div>
+          <div class="faq__answer"><p>Depends on the role. General IT, cloud support, or infrastructure adverts reference AZ-900 or <a href="/exams/az-104/">AZ-104</a>. Security analyst, identity, or compliance-adjacent adverts reference SC-900 or its follow-ons <a href="/exams/sc-200/">SC-200</a> and <a href="/exams/sc-300/">SC-300</a>. Fundamentals rarely appear as a hard requirement either way.</p></div>
         </details>
         <details class="faq">
           <summary>Can I study for SC-900 and AZ-900 at the same time?</summary>
-          <div class="faq__answer"><p>You can, but sitting them back to back in the same week or two is usually a mistake. The two skills outlines only overlap on a handful of concepts — the shared responsibility model, Zero Trust, and the basics of Microsoft Entra ID — so most of your revision time for each exam is spent on material unique to that exam. Finish and sit one, then start the other, rather than trying to hold both domain lists in your head at once.</p></div>
+          <div class="faq__answer"><p>You can, but sitting them back to back in the same week or two is usually a mistake. The two outlines overlap on only a handful of concepts, so most revision time goes on material unique to each. Finish one, then start the other, rather than holding both domain lists in your head at once.</p></div>
         </details>
         <details class="faq">
           <summary>Do SC-900 and AZ-900 expire?</summary>
-          <div class="faq__answer"><p>No. Microsoft Fundamentals certifications, including SC-900 and AZ-900, do not expire once you pass. This is different from Associate and Expert certifications such as SC-200, SC-300, AZ-104, or SC-500, which require a free annual renewal assessment on Microsoft Learn.</p></div>
+          <div class="faq__answer"><p>No. Fundamentals certifications, SC-900 and AZ-900 included, don't expire once you pass. That's different from Associate and Expert certifications such as SC-200, SC-300, or AZ-104, which need a free annual renewal assessment on Microsoft Learn.</p></div>
         </details>
         <details class="faq">
           <summary>I already know I want to work in security — should I skip AZ-900 entirely?</summary>
-          <div class="faq__answer"><p>You can go straight to SC-900 without ever sitting AZ-900. SC-900 does not require Azure operational knowledge, only conceptual awareness. That said, a lot of Microsoft security tooling sits on top of Azure infrastructure, so if terms like resource group, subscription, or region genuinely mean nothing to you, an hour or two with AZ-900's cloud-concepts material first will make SC-900's Microsoft Entra and Defender content easier to place in context.</p></div>
+          <div class="faq__answer"><p>You can go straight to SC-900; it needs only conceptual awareness, not Azure operational knowledge. That said, plenty of Microsoft security tooling sits on top of Azure infrastructure, so if "resource group" or "subscription" mean nothing to you, an hour with AZ-900's cloud-concepts material first helps SC-900 click faster.</p></div>
         </details>
       </div>
       <div class="cta-panel">
-        <h3>Practise for either exam, or both, in one app</h3>
+        <h3>Cloud concepts or security concepts, covered either way</h3>
         <p>
-          Azure Mastery covers both exams from a single download. Practise with original SC-900 practice questions or original AZ-900 practice questions, each mapped to their own skills outline, with an on-device Exam IQ readiness score, an adaptive study plan that targets your weak spots, and timed practice tests for each exam. Works offline, no account required to start.
+          Azure Mastery covers both exams from a single download, with a rationale for every option so a wrong answer teaches you the distinction, not just costs a mark. Each bank gets its own on-device Exam IQ score and its own adaptive plan. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -493,14 +504,14 @@
         </a>
       </nav>
       <p class="section-note">
-        Browse the full library on the <a href="/guides/">Azure certification guides</a> index.
+        Browse every other guide at <a href="/guides/">Azure certification guides</a>.
       </p>
     </section>
 
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on SC-900 or AZ-900?</h2>
-      <p>Answer original practice questions for either certification, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>Pick whichever fits the role you want and start seeing your Exam IQ readiness score climb from the first session. Free to start, no account required.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

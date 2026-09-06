@@ -500,8 +500,16 @@
         AZ-400 is the expert-level exam for the <strong>Microsoft Certified: DevOps Engineer Expert</strong> credential — Microsoft's senior DevOps certification spanning both Azure DevOps and GitHub. <a href="/exams/az-204/">Azure Developer Associate</a> retired on 31 July 2026; an Azure Developer Associate credential earned before that date still satisfies the AZ-400 prerequisite, but new candidates now reach it through <a href="/exams/az-104/">AZ-104 (Azure Administrator Associate)</a> instead.
       </p>
       <p>
-        AZ-400 is the broadest exam in the Azure family by service surface — you'll be tested across five DevOps domains, with the build/release pipelines domain alone weighted at <strong>50–55%</strong> of the exam. Expect dual coverage of Azure Pipelines AND GitHub Actions, Azure DevOps Repos AND GitHub repositories, Bicep AND ARM templates, plus security scanning (Microsoft Defender for DevOps, GitHub Advanced Security, Dependabot, CodeQL), monitoring (Azure Monitor, Application Insights, KQL queries), and progressive deployment patterns (blue-green, canary, ring, feature flags via Azure App Configuration).
+        AZ-400 is the broadest exam in the Azure family by service surface — you'll be tested across five DevOps domains, with the build/release pipelines domain alone weighted at <strong>50–55%</strong> of the exam. Expect dual coverage throughout:
       </p>
+      <ul>
+        <li>Azure Pipelines <strong>and</strong> GitHub Actions</li>
+        <li>Azure DevOps Repos <strong>and</strong> GitHub repositories</li>
+        <li>Bicep <strong>and</strong> ARM templates</li>
+        <li>Security scanning — Microsoft Defender for DevOps, GitHub Advanced Security, Dependabot, CodeQL</li>
+        <li>Monitoring — Azure Monitor, Application Insights, KQL queries</li>
+        <li>Progressive deployment patterns — blue-green, canary, ring, feature flags via Azure App Configuration</li>
+      </ul>
       <p>
         Microsoft updated the AZ-400 skills outline on <strong>27 July 2026</strong> with minor updates across all five domains — branching strategies, package management, deployments, IaC, auth/secrets, and monitoring. Every question in Azure Mastery's AZ-400 bank is mapped to the current outline. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-400" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -520,7 +528,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 27 July 2026</p>
       <h2 class="display-small section-title">AZ-400 exam objectives</h2>
       <p class="section-lede">
-        Five DevOps domains, with weights set by Microsoft's <strong>27 July 2026</strong> update. The build/release pipelines domain alone is weighted at 50–55% — more than the other four combined. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-400" rel="noopener">official skills outline</a>.
+        Five DevOps domains, with weights set by Microsoft's <strong>27 July 2026</strong> update. The build/release pipelines domain alone is weighted at 50–55% — more than the other four combined. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-400" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--azure">
         <div class="exam-family-visual__media">
@@ -568,8 +576,8 @@
                 <li>Configure and manage repositories</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests weighing trunk-based, feature-branch, and release-branch strategies against a described team's workflow.</li>
-                <li>Candidates forget that recovering or deliberately removing data from Git history is its own examinable skill.</li>
+                <li>Weighing trunk-based, feature-branch, and release-branch strategies against a described team's workflow is the focus here.</li>
+                <li>Recovering or deliberately removing data from Git history often gets forgotten as its own examinable skill.</li>
                 <li>Add history recovery and removal commands to your Git toolkit alongside everyday branching commands.</li>
               </ul>
             </div>
@@ -590,8 +598,8 @@
                 <li>Maintain pipelines</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests fluency in both Azure Pipelines and GitHub Actions, since a stem won't say which one applies.</li>
-                <li>Candidates who know only one pipeline ecosystem misread a stem written for the other platform.</li>
+                <li>Fluency in both Azure Pipelines and GitHub Actions gets checked here, since a stem won't say which one applies.</li>
+                <li>Knowing only one pipeline ecosystem leads to misreading a stem written for the other platform.</li>
                 <li>Translate each pipeline concept into both YAML dialects, including whichever one you use less often.</li>
               </ul>
             </div>
@@ -610,7 +618,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests choosing between a managed identity and a service principal based on how long the identity must live.</li>
-                <li>Candidates swap the two without noticing the scenario's lifetime constraint on the identity.</li>
+                <li>Swapping the two without noticing the scenario's lifetime constraint is the common mistake here.</li>
                 <li>Ask whether the identity dies with one resource or must outlive it before answering.</li>
               </ul>
             </div>
@@ -627,8 +635,8 @@
                 <li>Analyze metrics from instrumentation</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests reading Application Insights telemetry and writing a basic KQL query against the logs.</li>
-                <li>Candidates under-revise this smallest domain, then miss questions on GitHub's own alerts and insights.</li>
+                <li>Reading Application Insights telemetry and writing a basic KQL query against the logs is what's assessed here.</li>
+                <li>This smallest domain gets under-revised, and GitHub's own alerts and insights get missed as a result.</li>
                 <li>Review GitHub Actions and Azure Pipelines alerting alongside Azure Monitor, not instead of it.</li>
               </ul>
             </div>
@@ -665,7 +673,7 @@
           <h3>Blue-green, canary, and ring deployments are not synonyms for gradual rollout</h3>
           <p>Blue-green swaps all traffic at once, canary exposes a small percentage first, and ring moves through defined cohorts in sequence.</p>
           <ul>
-            <li>The exam is testing whether you can match a rollback or blast-radius constraint to exactly one pattern.</li>
+            <li>Matching a rollback or blast-radius constraint to exactly one pattern is the actual skill being scored.</li>
             <li>Define each pattern by its rollback behaviour, the specific trait that separates all three.</li>
           </ul>
         </article>
@@ -673,7 +681,7 @@
           <h3>A quality gate and a release gate check different things at different times</h3>
           <p>A quality gate checks the build artefact inside the pipeline, while a release gate checks external conditions between stages.</p>
           <ul>
-            <li>The exam is testing whether you'd place an approval check as a release gate, not a quality gate.</li>
+            <li>Placing an approval check as a release gate rather than a quality gate is exactly what's being checked.</li>
             <li>Match each gate to when it runs, inside a stage or between two stages, before answering.</li>
           </ul>
         </article>

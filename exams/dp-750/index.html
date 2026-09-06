@@ -187,74 +187,82 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the DP-750 exam cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the DP-750 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. DP-750 earns the Microsoft Certified: Azure Databricks Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as DP-900, which never expire.)"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the DP-750 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for DP-750?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "DP-750 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL and Python before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data in Azure Databricks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence."
-            }
-          },
-          {
-            "@type": "Question",
             "name": "DP-750 vs DP-700 — which should I take?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Both are associate-level Microsoft data-engineering certifications, but they target different platforms. DP-750 (Azure Databricks Data Engineer) is for teams building on Azure Databricks — Unity Catalog governance, Lakeflow Jobs and Declarative Pipelines, Delta tables, Spark and Photon tuning, and Databricks Asset Bundles. DP-700 (Fabric Data Engineer) covers the same data-engineering craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream, Lakehouse and Warehouse. Pick the exam that matches your platform: if your organisation runs Azure Databricks, take DP-750; if it standardises on Microsoft Fabric, take DP-700. Many engineers eventually earn both."
+              "text": "Both are associate Microsoft data-engineering certs, but the platform differs. DP-750 (Databricks Data Engineer) covers Unity Catalog, Lakeflow, Delta tables, and Spark tuning on Azure Databricks. DP-700 (Fabric Data Engineer) covers the same craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream. Pick by platform; many engineers earn both."
             }
           },
           {
             "@type": "Question",
-            "name": "Is DP-750 a technical, hands-on exam?",
+            "name": "Liquid clustering or partitioning — which does DP-750 expect for a Delta table?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at DP-900 (Azure Data Fundamentals) as an on-ramp."
+              "text": "Liquid clustering is the current recommendation when query patterns change over time or cardinality is high; it re-clusters incrementally without a full rewrite. Partitioning still suits low-cardinality columns with stable filters. DP-750 describes the query pattern, not the strategy name, so inferring the right approach is the real skill."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for DP-750 prep?",
+            "name": "DP-750 vs DP-800 — different data engineering roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The app is free to download and includes a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
+              "text": "Both are Microsoft associate certs for hands-on data work, but the platform differs. DP-750 (Databricks Data Engineer) builds production pipelines on Azure Databricks — Unity Catalog, Lakeflow, Delta tables, Spark tuning. DP-800 (SQL AI Developer) builds AI-enabled database solutions — T-SQL, embeddings, vector search, RAG. Choose by platform and role."
             }
           },
           {
             "@type": "Question",
-            "name": "Does DP-750 practice work offline?",
+            "name": "What question formats does DP-750 use?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
+              "text": "Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's bank runs a similar mix: mostly single-answer multiple choice, a real share of scenario-based questions, and a smaller mix of drag-to-match, yes/no, dropdown-select, and drag-and-drop items — Unity Catalog grants and pipeline YAML appear throughout."
             }
           },
           {
             "@type": "Question",
-            "name": "Is there a DP-750 practice test mode?",
+            "name": "What's the DP-750 voucher price?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Learn profile before booking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a DP-750 pass need annual renewal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. DP-750 earns the Azure Databricks Data Engineer Associate credential, and like all Microsoft associate certifications it needs renewing every year. Renewal is free: a short online assessment on Microsoft Learn, available in the six months before expiry. Fundamentals certs such as DP-900 never expire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Lakeflow Job or Declarative Pipeline — how does DP-750 tell them apart?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Lakeflow Job orchestrates arbitrary tasks, notebooks, SQL, other jobs, on a schedule or trigger, useful when the work isn't purely a transform flow. A Declarative Pipeline expresses a transform graph with dependency management and data-quality expectations built in. Confusing the two is a recurring DP-750 miss."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I need to resit DP-750 — what's the wait?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The wait depends on your attempt number, and every attempt needs a new voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I try Azure Mastery's DP-750 bank before paying?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — the app is free to download, with a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does DP-750 revision work without a connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Question practice, scoring, and the readiness prediction all run locally on your device, so studying with no signal works the same as with a full connection. No account is needed, and sync via iCloud stays optional and private."
             }
           }
         ]
@@ -363,6 +371,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -494,10 +503,10 @@
 
     <!-- DP-750 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · March 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 11 March 2026</p>
       <h2 class="display-small section-title">DP-750 exam objectives</h2>
       <p class="section-lede">
-        Four domains — the two data domains carry the most weight (30–35% each), with environment setup and Unity Catalog governance at 15–20% each. Every summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">official skills outline</a>; the bullet-level objectives in Azure Mastery are tagged so you always know which domain you're being tested on.
+        Four domains, skills measured as of <strong>11 March 2026</strong> — the two data domains carry the most weight (30–35% each), with environment setup and Unity Catalog governance at 15–20% each. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -516,48 +525,126 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Set up and configure an Azure Databricks environment<span class="domain__weight">15–20%</span></h3>
+          <h3>Set up and configure an Azure Databricks environment<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp750-environment">79</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Environment topics</summary>
             <div class="domain__body">
-              <p>
-                The platform-setup domain. Selecting and configuring <em>compute</em> — job, serverless, warehouse, classic, and shared — with performance settings (CPU, node count, autoscaling, termination, pooling) and feature settings (<em>Photon acceleration</em>, runtime/Spark version, machine learning); installing libraries and setting compute access permissions; and creating and organising <em>Unity Catalog</em> objects — catalogs, schemas, volumes, tables, views, and materialized views — plus foreign catalogs, DDL on managed and external tables, and AI/BI Genie instructions.
-              </p>
+              <ul>
+                <li>Select and configure compute in a workspace</li>
+                <li>Create and organize objects in Unity Catalog</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Tests matching a compute type, job, serverless, or classic, to a stated cost or startup-latency need.</li>
+                <li>Candidates treat every Unity Catalog object the same, missing when a scenario needs a foreign catalog specifically.</li>
+                <li>Learn which performance settings (autoscaling, pooling, Photon) actually solve the symptom the scenario describes.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Secure and govern Unity Catalog objects<span class="domain__weight">15–20%</span></h3>
+          <h3>Secure and govern Unity Catalog objects<span class="domain__weight">Published weight 15–20%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp750-governance">80</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Governance topics</summary>
             <div class="domain__body">
-              <p>
-                The governance domain. Granting privileges to <em>principals</em> (users, service principals, groups); implementing table-, column-, and <em>row-level security</em>; reading <em>Azure Key Vault</em> secrets and authenticating with service principals and managed identities; and governing with table and column descriptions for discovery, <em>ABAC tags and policies</em>, row filters and column masks, data-retention policies, <em>data lineage</em> in Catalog Explorer, audit logging, and a secure <em>Delta Sharing</em> strategy.
-              </p>
+              <ul>
+                <li>Secure Unity Catalog objects</li>
+                <li>Govern Unity Catalog objects</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Tests picking the right access control, a grant, a row filter, or ABAC, for the described governance scale.</li>
+                <li>Candidates reach for a single row filter when a scenario governing hundreds of tables actually needs ABAC.</li>
+                <li>Check whether the scenario is protecting one table or standardising a rule across many before answering.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Prepare and process data<span class="domain__weight">30–35%</span></h3>
+          <h3>Prepare and process data<span class="domain__weight">Published weight 30–35%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp750-process">141</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Process Data topics</summary>
             <div class="domain__body">
-              <p>
-                The hands-on heart of the exam. Modelling data in Unity Catalog — ingestion logic, table formats (<em>Delta, Parquet, JSON, Iceberg</em>), partitioning, <em>SCD types</em>, temporal history tables, and clustering (<em>liquid clustering, Z-ordering, deletion vectors</em>); ingesting batch and streaming data with <em>Lakeflow Connect, Auto Loader, notebooks, CTAS, COPY INTO, CDC feeds, Spark Structured Streaming, and Azure Event Hubs</em>; cleansing and transforming with joins, aggregation, pivoting, and <em>merge/insert/append</em>; and enforcing <em>data-quality constraints</em> with schema enforcement and pipeline expectations.
-              </p>
+              <ul>
+                <li>Design and implement data modeling in Unity Catalog</li>
+                <li>Ingest data into Unity Catalog</li>
+                <li>Cleanse, transform, and load data into Unity Catalog</li>
+                <li>Implement and manage data quality constraints in Unity Catalog</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Tests choosing a clustering and ingestion strategy that fits the stated table shape and update pattern.</li>
+                <li>Candidates default to partitioning out of habit when a scenario's changing query pattern calls for liquid clustering.</li>
+                <li>Match Lakeflow Connect, CTAS, or Structured Streaming to whether the source is batch or continuous.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Deploy and maintain data pipelines and workloads<span class="domain__weight">30–35%</span></h3>
+          <h3>Deploy and maintain data pipelines and workloads<span class="domain__weight">Published weight 30–35%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="dp750-pipelines">142</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Pipelines topics</summary>
             <div class="domain__body">
-              <p>
-                The operations domain. Designing pipelines and choosing between notebooks and <em>Lakeflow Spark Declarative Pipelines</em>; implementing <em>Lakeflow Jobs</em> with triggers, schedules, alerts, and automatic restarts; applying development-lifecycle practices — <em>Git</em> branching and pull requests, testing strategies, and <em>Databricks Asset Bundles</em> deployed via CLI or REST; and monitoring, troubleshooting, and optimising — cluster cost, Spark <em>skew, spilling, shuffle</em> issues via the DAG and Spark UI, <em>OPTIMIZE and VACUUM</em>, and log streaming with <em>Azure Monitor</em>.
-              </p>
+              <ul>
+                <li>Design and implement data pipelines</li>
+                <li>Implement Lakeflow Jobs</li>
+                <li>Implement development lifecycle processes in Azure Databricks</li>
+                <li>Monitor, troubleshoot, and optimize workloads in Azure Databricks</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>Tests choosing between a Lakeflow Job and a Declarative Pipeline for the orchestration or quality need described.</li>
+                <li>Candidates reach for a bare Job when a bronze-to-gold flow needing automatic quality checks wants Declarative Pipelines.</li>
+                <li>Learn to read the Spark UI for skew, spilling, and shuffle before assuming a job just needs more compute.</li>
+              </ul>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where DP-750 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where DP-750 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared DP-750 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Managed and external tables leave the underlying data in different states when dropped.</h3>
+          <ul>
+            <li>The exam is testing whether "without deleting the underlying files" points you at an external table, not a managed one.</li>
+            <li>Check whether Unity Catalog owns the storage before assuming a dropped table just removes a catalog entry.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Liquid clustering, Z-ordering, and partitioning solve the same problem at different levels of effort.</h3>
+          <ul>
+            <li>The exam is testing whether you know liquid clustering adapts automatically where the other two need a fixed scheme.</li>
+            <li>Pick liquid clustering by default for a new table unless the scenario names a reason to partition instead.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>ABAC scales governance; a row filter or column mask is still the mechanism underneath it.</h3>
+          <ul>
+            <li>The exam is testing whether "hundreds of tables the same way" points you at ABAC rather than one hand-written rule.</li>
+            <li>Reach for ABAC only when the scenario is about applying a rule at scale, not securing a single table.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>A Lakeflow Job orchestrates a workflow; a Declarative Pipeline builds and enforces the ETL itself.</h3>
+          <ul>
+            <li>The exam is testing whether automatic quality enforcement on a bronze-to-gold flow points you at Declarative Pipelines.</li>
+            <li>Reach for a bare Job only when the requirement is scheduling and chaining, not built-in data-quality expectations.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Job compute and serverless compute trade isolation for a different cost and startup profile.</h3>
+          <ul>
+            <li>The exam is testing whether near-zero startup latency for frequent, short jobs points you at serverless compute.</li>
+            <li>Pick job compute when isolation matters more than startup delay for the described workload.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -569,56 +656,56 @@
       <article class="exam-benefit">
         <h3>Exam-specific practice</h3>
         <ul>
-          <li><strong>442 DP-750 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Domain tags help you find the topics you need to practise.</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li><strong>442 DP-750 practice questions</strong>, each written against the current 11 March 2026 skills outline.</li>
+          <li>Every question is tagged to one of the official four domains.</li>
+          <li>Practise reading Unity Catalog grants, Spark config, and pipeline YAML, the exam's actual scenario style.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your DP-750 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ forecasts your DP-750 score on-device after roughly 30 questions, with a confidence range attached.</li>
+          <li>It names the specific Unity Catalog or pipeline-design distinction dragging your score down.</li>
+          <li>See which of the four domains needs the most work before you book.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan leans hardest on preparing data and deploying pipelines, the two domains weighted 30–35%.</li>
+          <li>Miss a notebook vs Declarative Pipeline question and the next session surfaces that choice again.</li>
+          <li>Nail Unity Catalog grants three sessions running and the plan backs off it automatically.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>The Structured Streaming syntax or Asset Bundle workflow you mastered weeks ago fades fastest if you stop revising.</li>
+          <li>A padlock icon flags topics approaching decay so you revisit before you forget.</li>
+          <li>Weak-spot drills automatically pull from decayed topics first.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 100-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Practise a full 100-minute session with no jumping back to flag-and-review, like the real exam.</li>
+          <li>The mix follows the published domain weights, using original questions rather than reproduced content.</li>
+          <li>The live DP-750 interface and question mix are Microsoft's to control, not ours.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles DP-750's near-identical calls: partitioning vs liquid clustering, a Lakeflow Job vs a Declarative Pipeline.</li>
+          <li>See the specific distinction and the rule to apply next time, not just which option was correct.</li>
+          <li>Supported devices can optionally reword a note on-device, always checked against the written guidance first.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura adjusts what it suggests as your first week of DP-750 sessions goes on.</li>
+          <li>Get a short recap after each session: what shifted, what needs another look, where to go next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
@@ -816,57 +903,68 @@
       <h2 class="display-small section-title">DP-750 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the DP-750 exam cost?</summary>
-          <div class="faq__answer">
-            <p>The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the DP-750 certification expire?</summary>
-          <div class="faq__answer">
-            <p>Yes. DP-750 earns the Microsoft Certified: Azure Databricks Data Engineer Associate credential, and like all Microsoft associate, expert, and specialty certifications it must be renewed every year. Renewal is free — you pass a short online assessment on Microsoft Learn, available in the six months before your certification expires. (This is different from Fundamentals certifications such as <a href="/exams/dp-900/">DP-900</a>, which never expire.)</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>What is the DP-750 retake policy if I fail?</summary>
-          <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>How long should I study for DP-750?</summary>
-          <div class="faq__answer">
-            <p>DP-750 is an associate-level data-engineering exam, so plan roughly four to eight weeks of focused study. You should already be comfortable with SQL and Python before you start — the exam assumes hands-on experience ingesting, transforming, and modelling data in Azure Databricks. Azure Mastery's readiness gauge will tell you when you're at exam-ready — don't book until it shows roughly 720 or higher predicted score with reasonable confidence.</p>
-          </div>
-        </details>
-        <details class="faq">
           <summary>DP-750 vs DP-700 — which should I take?</summary>
           <div class="faq__answer">
-            <p>Both are associate-level Microsoft data-engineering certifications, but they target different platforms. DP-750 (Azure Databricks Data Engineer) is for teams building on Azure Databricks — Unity Catalog governance, Lakeflow Jobs and Declarative Pipelines, Delta tables, Spark and Photon tuning, and Databricks Asset Bundles. DP-700 (Fabric Data Engineer) covers the same data-engineering craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream, Lakehouse and Warehouse. Pick the exam that matches your platform: if your organisation runs Azure Databricks, take DP-750; if it standardises on Microsoft Fabric, take <a href="/exams/dp-700/">DP-700</a>. Many engineers eventually earn both.</p>
+            <p>Both are associate Microsoft data-engineering certs, but the platform differs. DP-750 (Databricks Data Engineer) covers Unity Catalog, Lakeflow, Delta tables, and Spark tuning on Azure Databricks. <a href="/exams/dp-700/">DP-700</a> (Fabric Data Engineer) covers the same craft on Microsoft Fabric — OneLake, Dataflows Gen2, Eventstream. Pick by platform; many engineers earn both.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is DP-750 a technical, hands-on exam?</summary>
+          <summary>Liquid clustering or partitioning — which does DP-750 expect for a Delta table?</summary>
           <div class="faq__answer">
-            <p>Yes. DP-750 expects you to reason about real data-engineering work in Azure Databricks — writing and debugging SQL and PySpark; designing batch and streaming ingestion with Lakeflow Connect, Auto Loader, and Spark Structured Streaming; modelling data with Delta tables, liquid clustering, and slowly changing dimensions; governing objects in Unity Catalog with grants, row filters, and column masks; and optimising Spark jobs with OPTIMIZE, VACUUM, and the Spark UI. It's a working data engineer's exam, not a conceptual overview. If you want a non-technical, vocabulary-level data certification first, look at <a href="/exams/dp-900/">DP-900</a> (Azure Data Fundamentals) as an on-ramp.</p>
+            <p>Liquid clustering is the current recommendation when query patterns change over time or cardinality is high; it re-clusters incrementally without a full rewrite. Partitioning still suits low-cardinality columns with stable filters. DP-750 describes the query pattern, not the strategy name, so inferring the right approach is the real skill.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for DP-750 prep?</summary>
+          <summary>DP-750 vs DP-800 — different data engineering roles?</summary>
           <div class="faq__answer">
-            <p>The app is free to download and includes a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
+            <p>Both are Microsoft associate certs for hands-on data work, but the platform differs. DP-750 (Databricks Data Engineer) builds production pipelines on Azure Databricks — Unity Catalog, Lakeflow, Delta tables, Spark tuning. <a href="/exams/dp-800/">DP-800</a> (SQL AI Developer) builds AI-enabled database solutions — T-SQL, embeddings, vector search, RAG. Choose by platform and role.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does DP-750 practice work offline?</summary>
+          <summary>What question formats does DP-750 use?</summary>
           <div class="faq__answer">
-            <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+            <p>Microsoft's own guidance states 40–60 questions with formats that vary by sitting. Azure Mastery's bank runs a similar mix: mostly single-answer multiple choice, a real share of scenario-based questions, and a smaller mix of drag-to-match, yes/no, dropdown-select, and drag-and-drop items — Unity Catalog grants and pipeline YAML appear throughout.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is there a DP-750 practice test mode?</summary>
+          <summary>What's the DP-750 voucher price?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>The DP-750 voucher is USD $165 in the United States — associate-level pricing. Cost varies by region; in the UK it's typically around £113. Microsoft sometimes runs free-voucher promotions for events such as Microsoft Build or Microsoft Ignite, so check your Learn profile before booking.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does a DP-750 pass need annual renewal?</summary>
+          <div class="faq__answer">
+            <p>Yes. DP-750 earns the Azure Databricks Data Engineer Associate credential, and like all Microsoft associate certifications it needs renewing every year. Renewal is free: a short online assessment on Microsoft Learn, available in the six months before expiry. Fundamentals certs such as <a href="/exams/dp-900/">DP-900</a> never expire.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Lakeflow Job or Declarative Pipeline — how does DP-750 tell them apart?</summary>
+          <div class="faq__answer">
+            <p>A Lakeflow Job orchestrates arbitrary tasks, notebooks, SQL, other jobs, on a schedule or trigger, useful when the work isn't purely a transform flow. A Declarative Pipeline expresses a transform graph with dependency management and data-quality expectations built in. Confusing the two is a recurring DP-750 miss.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I need to resit DP-750 — what's the wait?</summary>
+          <div class="faq__answer">
+            <p>The wait depends on your attempt number, and every attempt needs a new voucher.</p>
+            <ul>
+              <li>First retake: after 24 hours.</li>
+              <li>Second and third retakes: a 14-day wait each.</li>
+              <li>Cap: five attempts per rolling 12 months.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Can I try Azure Mastery's DP-750 bank before paying?</summary>
+          <div class="faq__answer">
+            <p>Yes — the app is free to download, with a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does DP-750 revision work without a connection?</summary>
+          <div class="faq__answer">
+            <p>Yes. Question practice, scoring, and the readiness prediction all run locally on your device, so studying with no signal works the same as with a full connection. No account is needed, and sync via iCloud stays optional and private.</p>
           </div>
         </details>
       </div>

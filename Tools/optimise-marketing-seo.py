@@ -68,6 +68,10 @@ SEO_UPDATED_OVERRIDES = {
     "AI-500": "2026-09-05",
     "AI-901": "2026-09-05",
     "PL-300": "2026-09-05",
+    # Wave-2b de-templating pass (Azure role cluster).
+    "AZ-305": "2026-09-06",
+    "AZ-400": "2026-09-06",
+    "AZ-700": "2026-09-06",
 }
 RETIRED_EXAMS = {
     "AI-900": {

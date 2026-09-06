@@ -230,7 +230,7 @@ A: Given how broad AB-100's syllabus is, treat a fail as a signal to target the 
 Q: What does the AB-100 exam format look like?
 A: AB-100 runs as a 100-minute session (120 minutes with seat time) of 40–60 questions, online or at a test centre, scored out of 1000 with a 700 pass mark. Azure Mastery's bank leans heavier on multi-paragraph scenarios than the associate-level agent exams, so you read a business constraint before picking the architecture that fits it.
 Q: How long should I study for AB-100?
-A: Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions, not just describe the pieces.
+A: Eight to twelve weeks if you already have hands-on time with at least one of Copilot Studio, Microsoft Foundry, or Dynamics 365 Copilot. Give it three to four months if multi-agent orchestration is genuinely new — AB-100 expects you to design end-to-end solutions rather than describe the individual pieces.
 Q: AB-100 vs AB-620 — which agent cert should I take?
 A: AB-620 is for makers who build agents in Copilot Studio. AB-100 is for architects who choose the platform, governance, lifecycle management, and business case across Copilot Studio, Foundry, and Dynamics 365. Start with building agents, then move to AB-100 when your work includes those wider architecture decisions.
 Q: AB-100 vs AI-103 vs AB-620 — how do the roles differ?
@@ -424,7 +424,7 @@ A: AI-103 runs as a 100-minute session (120 minutes with seat time) of 40–60 q
 Q: How long should I study for AI-103?
 A: Plan for several weeks of focused study if you already write Python and know Azure AI services; extend that if Foundry, agents, or multimodal AI are new to you. The exam spans five distinct domains, so breadth matters as much as depth. Azure Mastery's readiness gauge shows when you've closed the gap.
 Q: AI-103 vs AI-102 — different roles?
-A: AI-102 retired on 30 June 2026. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, and it reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content — not just a renamed version of the old outline.
+A: AI-102 retired on 30 June 2026. AI-103 replaced it as the current Azure AI Apps and Agents Developer Associate exam, a genuinely new outline that reflects how far the underlying platform has shifted toward Microsoft Foundry, agentic patterns, and multimodal content since AI-102.
 Q: AI-103 vs AI-901 — which should I take first?
 A: Take AI-901 first if generative AI and Microsoft Foundry are unfamiliar concepts — it's the Fundamentals exam and assumes no coding. AI-103 assumes you can already write Python and expects hands-on familiarity with Foundry projects, agent tools, retrieval, and evaluation. Candidates with existing development experience sometimes skip AI-901 and go straight to AI-103.
 Q: Do I need real Foundry or Python experience before I start?
@@ -593,9 +593,9 @@ A: Pass AZ-104 first. It's the Associate operational cert; AZ-305 is the Expert 
 Q: Is Azure Mastery free for AZ-104 prep?
 A: The app is free to download, with a free allowance of AZ-104 questions so you can try every feature. The full bank of 481 AZ-104 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 Q: Does AZ-104 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes — questions, scoring, and the readiness prediction all run on-device, so a commute or a flight with no signal doesn't stop your AZ-104 prep. There's no account requirement, and study data stays on your device unless you turn on private iCloud sync.
 Q: Is there an AZ-104 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes. Timed sessions pull from the same blueprint-weighted question pool, follow Microsoft's published timing, and support every interactive item type AZ-104 uses. Between sessions, adaptive study and Focus Weak Spots keep steering you back to your lowest-accuracy domains.
 
 ## /exams/az-204/ — AZ-204 Retired Exam & AI-200 Next Step | Azure Mastery
 Page last modified: 2026-09-06
@@ -1152,9 +1152,9 @@ A: Different roles. SC-500 covers implementing security controls across identity
 Q: Is Azure Mastery free for SC-500 prep?
 A: The app is free to download and includes a free allowance of SC-500 questions so you can try every feature. The full bank of 432 SC-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-500 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes — every question, score, and readiness read happens on-device, so SC-500 prep keeps going without a connection. No account is needed, and nothing leaves your device unless you switch on private iCloud sync.
 Q: Is there an SC-500 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes. Timed practice sessions draw on original, blueprint-weighted SC-500 questions with published timing and the interactive formats this exam uses. Adaptive study and Focus Weak Spots then push you back toward the domains dragging your accuracy down.
 
 ## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
 Page last modified: 2026-09-06

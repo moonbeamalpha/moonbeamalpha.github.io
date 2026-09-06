@@ -451,11 +451,16 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AB-900 exam?</h2>
       <p>
-        AB-900 is the <strong>Microsoft 365 Copilot and Agent Administration Fundamentals</strong> credential — the entry-level exam for IT admins who deploy, govern, and support <em>Microsoft 365 Copilot</em> and Copilot agents in an enterprise. AB-900 covers the core features and objects of Microsoft 365 (admin centres, identity, security), data protection and governance via Microsoft Purview, and the basic administrative tasks for Copilot and agents (licensing, monitoring, agent approval, lifecycle).
+        AB-900 is the <strong>Microsoft 365 Copilot and Agent Administration Fundamentals</strong> credential — the entry-level exam for IT admins who deploy, govern, and support <em>Microsoft 365 Copilot</em> and Copilot agents in an enterprise.
       </p>
-      <p>
-        AB-900 is <strong>practical and admin-centre-focused</strong>. It validates that you can identify the right Microsoft 365 admin centre and object for a task (Exchange, SharePoint, Teams, M365), recognise Microsoft Purview surfaces (Information Protection, DLP, Insider Risk, DSPM for AI, Data Lifecycle Management), understand how Copilot accesses data via Microsoft Graph and respects M365 / Purview / Defender controls, and perform basic admin tasks (assign Copilot licences, monitor PAYG billing, approve agents, monitor agent usage in M365 and Power Platform admin centres). Expect questions that ask which admin centre or which Purview tool fits a stated business need.
-      </p>
+      <p>AB-900 is <strong>practical and admin-centre-focused</strong>. It covers:</p>
+      <ul>
+        <li>Core Microsoft 365 features and objects across admin centres, identity, and security</li>
+        <li>Data protection and governance through Microsoft Purview — Information Protection, DLP, Insider Risk, DSPM for AI, and Data Lifecycle Management</li>
+        <li>How Copilot accesses data via Microsoft Graph while respecting M365, Purview, and Defender controls</li>
+        <li>Basic admin tasks: assigning Copilot licences, monitoring PAYG billing, approving agents, and tracking agent usage across the M365 and Power Platform admin centres</li>
+      </ul>
+      <p>Expect questions that ask which admin centre or which Purview tool fits a stated business need.</p>
       <p>
         Microsoft published the AB-900 skills outline on <strong>22 July 2026</strong>. Every question in Azure Mastery's AB-900 bank is mapped to the current outline — including the newer DSPM for AI, Copilot Analytics, and SharePoint oversharing topics. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-900" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -474,7 +479,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 22 July 2026</p>
       <h2 class="display-small section-title">AB-900 exam objectives</h2>
       <p class="section-lede">
-        Three domains, weighted by Microsoft's <strong>22 July 2026</strong> release outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-900" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Three domains, weighted by Microsoft's <strong>22 July 2026</strong> release outline. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-900" rel="noopener">official skills outline</a>, and Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -524,8 +529,8 @@
                 <li>Identify and monitor oversharing in SharePoint in Microsoft 365</li>
               </ul>
               <ul class="domain__tips">
-                <li>This domain tests matching a scenario to the right Microsoft Purview surface, from Information Protection to DSPM for AI.</li>
-                <li>Candidates study Purview's older DLP and labelling features but skip newer surfaces like DSPM for AI and oversharing reports.</li>
+                <li>Which Purview surface fits a scenario, from Information Protection through to DSPM for AI, is what this domain actually checks.</li>
+                <li>Older DLP and labelling features often get more study time than newer surfaces like DSPM for AI and oversharing reports.</li>
                 <li>Give DSPM for AI and SharePoint oversharing detection the same attention as classic DLP; this domain weighs heaviest.</li>
               </ul>
             </div>
@@ -543,8 +548,8 @@
                 <li>Perform basic administrative tasks for agents</li>
               </ul>
               <ul class="domain__tips">
-                <li>This domain tests the operational side: licensing, PAYG billing, agent approval, and monitoring usage across two admin centres.</li>
-                <li>Candidates confuse agent administration with agent building, which is separate Copilot Studio maker work outside this exam.</li>
+                <li>Licensing, PAYG billing, agent approval, and monitoring usage across two admin centres make up this domain's operational core.</li>
+                <li>Agent administration gets confused with agent building, which is separate Copilot Studio maker work outside this exam.</li>
                 <li>Separate configuring who can use an agent from designing how it responds; only the former is tested here.</li>
               </ul>
             </div>
@@ -565,7 +570,7 @@
           <h3>Every Microsoft 365 object has exactly one home admin centre</h3>
           <p>Candidates treat the admin centres as interchangeable consoles rather than each owning a distinct set of objects.</p>
           <ul>
-            <li>The exam is testing whether you can name the specific console, Exchange, SharePoint, Teams, or M365, that manages a described object.</li>
+            <li>Object-to-centre mapping is the graded skill, ahead of simply recognising each console by name.</li>
             <li>Match the object named in the scenario to its one owning admin centre before you read the answer options.</li>
           </ul>
         </article>
@@ -573,7 +578,7 @@
           <h3>A Copilot licence and pay-as-you-go billing solve different usage patterns</h3>
           <p>Both are ways to pay for Copilot, so candidates assume the exam only cares that a valid billing method was picked.</p>
           <ul>
-            <li>The exam is testing whether you match predictable, ongoing usage to a monthly licence and variable, occasional usage to PAYG.</li>
+            <li>Usage pattern is the variable under test, since both options technically switch Copilot on for the user.</li>
             <li>Check whether the scenario describes steady or occasional usage before choosing between a licence and pay-as-you-go billing.</li>
           </ul>
         </article>
@@ -581,7 +586,7 @@
           <h3>DSPM for AI is scoped to AI tools, not general data loss</h3>
           <p>Standard DLP and DSPM for AI both stop sensitive content leaking, so candidates default to the more familiar DLP answer.</p>
           <ul>
-            <li>The exam is testing whether you know DSPM for AI covers what Copilot might expose through a prompt, not email or endpoints.</li>
+            <li>AB-900 checks whether you route a prompt-or-grounding-data leak to DSPM for AI instead of standard DLP.</li>
             <li>Pick DSPM for AI whenever the scenario describes a risk coming specifically from a Copilot or agent response.</li>
           </ul>
         </article>
@@ -589,7 +594,7 @@
           <h3>Sensitivity labels protect content; oversharing reports find it after the fact</h3>
           <p>Both sit inside Microsoft Purview, so candidates reach for labelling whenever a question mentions who can access a file.</p>
           <ul>
-            <li>The exam is testing whether you know oversharing reports audit existing access while labels classify and protect content at creation.</li>
+            <li>Telling protection from detection apart is the graded skill, since only one tool shows who has access right now.</li>
             <li>Pick an oversharing report, not a sensitivity label, for any question about auditing who currently has access to a site.</li>
           </ul>
         </article>
@@ -597,7 +602,7 @@
           <h3>Administering an agent is not the same task as building one</h3>
           <p>AB-900 tests who can use, publish, or monitor an agent, never how the agent's own conversation logic works.</p>
           <ul>
-            <li>The exam is testing whether you can separate agent approval and monitoring from designing an agent's topics or knowledge sources.</li>
+            <li>The admin's job, approving and monitoring an agent, is what's graded here, never the maker's conversation design.</li>
             <li>Rule out any answer describing conversation design; that work belongs to a separate Copilot Studio certification, not this exam.</li>
           </ul>
         </article>

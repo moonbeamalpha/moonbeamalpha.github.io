@@ -480,7 +480,10 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AZ-900 exam?</h2>
       <p>
-        AZ-900 is the foundational Azure certification — the standard starting point for cloud careers in the Microsoft ecosystem. It's accessible enough for sales engineers, project managers, and finance partners, but rigorous enough that a meaningful share of candidates fail their first attempt. The exam validates that you can describe core Azure services, recognise cloud computing concepts (IaaS, PaaS, SaaS), and explain Azure architecture, governance, identity, and security.
+        AZ-900 is the foundational Azure certification — the standard starting point for cloud careers in the Microsoft ecosystem. It's accessible enough for sales engineers, project managers, and finance partners, but rigorous enough that a meaningful share of candidates fail their first attempt.
+      </p>
+      <p>
+        The exam validates that you can describe core Azure services, recognise cloud computing concepts (IaaS, PaaS, SaaS), and explain Azure architecture, governance, identity, and security.
       </p>
       <p>
         AZ-900 is intentionally non-technical at the surface — it doesn't expect you to write PowerShell scripts or design network topologies. What it does expect is a clear conceptual map: <strong>regions</strong>, <strong>availability zones</strong>, <strong>resource groups</strong>, the <strong>shared responsibility model</strong>, <strong>Azure Policy</strong>, and the <strong>defence-in-depth</strong> security model — all explained in terms a non-engineer can defend in a meeting.
@@ -503,7 +506,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 20 July 2026</p>
       <h2 class="display-small section-title">AZ-900 exam objectives</h2>
       <p class="section-lede">
-        Three domains, with weights set by Microsoft's <strong>20 July 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-900" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Three domains, with weights set by Microsoft's <strong>20 July 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-900" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--azure">
         <div class="exam-family-visual__media">
@@ -534,8 +537,8 @@
               </ul>
               <ul class="domain__tips">
                 <li>Smallest domain but foundational: shared responsibility, pricing models, and picking the right service type for a scenario.</li>
-                <li>Candidates recite IaaS, PaaS, and SaaS definitions instead of matching a scenario to the model that actually fits it.</li>
-                <li>Practise explaining a benefit like scalability or governance to a non-technical stakeholder, not just naming it.</li>
+                <li>Reciting IaaS, PaaS, and SaaS definitions is easy; matching a scenario to the model that actually fits it is the real test.</li>
+                <li>Practise explaining a benefit like scalability or governance to a non-technical stakeholder — naming it alone won't be enough.</li>
               </ul>
             </div>
           </details>
@@ -574,7 +577,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Covers cost management, governance tools, deployment tools, and monitoring, all tested on purpose rather than mechanics.</li>
-                <li>Candidates learn how to configure a tool when the exam only tests what problem that tool solves.</li>
+                <li>Learning how to configure a tool is beside the point here — the exam only tests what problem that tool solves.</li>
                 <li>Match each governance or monitoring tool to the one problem it solves, not its configuration screen.</li>
               </ul>
             </div>
@@ -592,10 +595,10 @@
       </p>
       <div class="traps">
         <article class="trap">
-          <h3>IaaS vs PaaS vs SaaS — responsibility, not just the acronym</h3>
+          <h3>IaaS vs PaaS vs SaaS: responsibility decides the answer</h3>
           <p>Candidates memorise the three definitions without the responsibility trade-off that actually decides the answer.</p>
           <ul>
-            <li>The exam is testing whether you can place responsibility for a named layer, like OS patching, on the right service type.</li>
+            <li>OS patching and other named layers each sit with either you or Microsoft, depending on the service type in the scenario.</li>
             <li>Match the scenario's described responsibility split to IaaS, PaaS, or SaaS rather than recalling a definition.</li>
           </ul>
         </article>
@@ -603,7 +606,7 @@
           <h3>Availability zones vs region pairs</h3>
           <p>Candidates confuse surviving one datacentre failure with where data replicates during a regional outage.</p>
           <ul>
-            <li>The exam is testing whether you know zones protect within a region while region pairs link two entire regions.</li>
+            <li>Zones protect against a single datacentre failure within one region; region pairs protect against losing the whole region.</li>
             <li>Match "one datacentre goes down" to zones and "regional outage replication" to region pairs.</li>
           </ul>
         </article>
@@ -611,7 +614,7 @@
           <h3>CapEx vs OpEx under the consumption model</h3>
           <p>Candidates try to calculate a bill instead of recognising the CapEx-to-OpEx shift a scenario is testing.</p>
           <ul>
-            <li>The exam is testing whether you recognise a scenario about retiring on-premises hardware as a CapEx-to-OpEx shift.</li>
+            <li>Retiring on-premises hardware for cloud consumption is the classic CapEx-to-OpEx scenario the exam keeps returning to.</li>
             <li>Read for a shift from buying hardware upfront to paying for use — that's the answer, not a cost figure.</li>
           </ul>
         </article>
@@ -619,7 +622,7 @@
           <h3>Azure Policy vs RBAC</h3>
           <p>Candidates can't tell a configuration rule from an access-control rule in the same governance scenario.</p>
           <ul>
-            <li>The exam is testing whether you know Policy enforces configuration rules while RBAC controls who can act at all.</li>
+            <li>Policy enforces what a configuration is allowed to look like; RBAC controls who is allowed to act at all.</li>
             <li>Match "blocking a configuration" to Policy and "restricting who can create resources" to RBAC.</li>
           </ul>
         </article>
@@ -627,7 +630,7 @@
           <h3>Zero Trust is a principle, not a product</h3>
           <p>Candidates look for a single "Zero Trust service" instead of recognising a security philosophy in the scenario.</p>
           <ul>
-            <li>The exam is testing whether you can recognise Zero Trust principles being applied, not name a specific product.</li>
+            <li>Zero Trust is a security philosophy Microsoft applies across its whole stack, not a single purchasable product or service.</li>
             <li>Look for verify-explicitly, least-privilege, or assume-breach language as the cue, not a service name.</li>
           </ul>
         </article>

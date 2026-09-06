@@ -1042,7 +1042,7 @@
           <p>A content exclusion stops Copilot from reading a specific file or path at all — it never enters the prompt. Duplication detection runs after a suggestion is generated, checking it against public code so you can choose to filter matches out. A stem asking how to stop Copilot seeing a secrets file wants a content exclusion; one asking how to avoid shipping code that matches a public repository wants duplication detection.</p>
         </article>
         <article class="trap">
-          <h3>Agent Mode, Edit Mode, and Chat are not just three names for "ask Copilot something"</h3>
+          <h3>Agent Mode, Edit Mode, and Chat each answer a different scope of task</h3>
           <p>Chat answers a question or explains code without touching your files. Edit Mode changes files you've specified, under your review. Agent Mode plans and executes a multi-step task across the workspace on its own, checking in as it goes. GH-300 stems describe a task's scope and autonomy level, then expect you to pick the mode built for exactly that — not the one you happen to use most.</p>
         </article>
         <article class="trap">
@@ -1050,7 +1050,7 @@
           <p>Candidates often assume more examples always produce a better suggestion. GH-300 tests whether you know when a zero-shot prompt — instruction only, no examples — is actually the right call, typically for a simple, well-understood task, versus when a few-shot prompt earns its extra context by disambiguating a pattern Copilot could otherwise guess wrong.</p>
         </article>
         <article class="trap">
-          <h3>Validating Copilot's output is a named, testable skill, not just good practice</h3>
+          <h3>Validating Copilot's output is a named, testable skill on this exam</h3>
           <p>GH-300 doesn't treat "always check the AI's work" as background advice — it asks you to identify specific failure modes (a plausible-looking but insecure pattern, a hallucinated API, a licensing conflict) and the concrete step that catches each one. Candidates who answer these stems with a generic "review the code" miss the more specific, correct option sitting next to it.</p>
         </article>
       </div>

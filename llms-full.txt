@@ -458,9 +458,9 @@ A: AI-200 first. It's the AI Cloud Developer cert, building the platform AI work
 Q: Is Azure Mastery free for AI-200 prep?
 A: The app is free to download and includes a free allowance of AI-200 questions so you can try every feature. The full bank of 220 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-200 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. Everything AI-200 practice needs, from scoring to the readiness prediction, lives on the phone, so a flight or a dead spot changes nothing. There is no account to make, and your history only leaves the device if you turn on private iCloud sync.
 Q: Is there an AI-200 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes. Exam Simulator runs a timed, blueprint-weighted AI-200 session built from the app's own questions, with the clock running and no jumping back to review. It is original practice content, so treat it as rehearsal for the pressure rather than a copy of Microsoft's paper.
 
 ## /exams/ai-300/ — AI-300 Practice Questions — 362 Qs for ML Ops Engineer (2026)
 Page last modified: 2026-09-06
@@ -753,9 +753,9 @@ A: AZ-900 has no formal prerequisites — Microsoft designed it as the common en
 Q: Is Azure Mastery free for AZ-900 prep?
 A: The app is free to download and includes a free allowance of AZ-900 questions so you can try every feature. The full bank of 364 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-900 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. AZ-900 practice, scoring and the readiness prediction all happen on the device, so offline sessions count exactly like online ones. No account is needed, and nothing is uploaded unless you choose private iCloud sync.
 Q: Is there an AZ-900 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes. The simulator gives you a 45-minute, three-domain AZ-900 run built from the app's own questions, weighted the way Microsoft publishes the outline. Use it to practise pacing; the live exam's interface and mix are Microsoft's.
 
 ## /exams/dp-100/ — DP-100 Retired Exam & AI-300 Next Step | Azure Mastery
 Page last modified: 2026-09-06
@@ -806,7 +806,7 @@ A: Query Store answers a regression over time — a query that used to run fast 
 Q: DP-300 vs AI-300 — different data roles?
 A: They cover different parts of the data stack. DP-300 is for administering Azure SQL workloads in production. AI-300 is for MLOps and GenAIOps across Azure Machine Learning and Microsoft Foundry. Neither is a prerequisite for the other; choose based on the role you're in.
 Q: I need to resit DP-300 — how soon can I book again?
-A: Each retake needs its own voucher, and the wait depends on your attempt number. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
+A: Every attempt is a separate booking, and how long you wait depends on which attempt it is. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-300 bank before paying?
 A: Yes — the app is free to download, with a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 Q: Does DP-300 revision still work with no connection?
@@ -1152,9 +1152,9 @@ A: Different roles. SC-500 is the Cloud and AI Security Engineer cert — it's a
 Q: Is Azure Mastery free for SC-500 prep?
 A: The app is free to download and includes a free allowance of SC-500 questions so you can try every feature. The full bank of 432 SC-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does SC-500 practice work offline?
-A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
+A: Yes. Every SC-500 study feature runs locally, so a train with no signal is still a study session. You never create an account, and your answer history stays on the phone unless you enable private iCloud sync.
 Q: Is there an SC-500 practice test mode?
-A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
+A: Yes. A timed SC-500 rehearsal draws a blueprint-weighted set from the app's own bank, runs the 100-minute clock and locks flag-and-review, which is where most people discover their pacing problem. Microsoft controls the real interface and question mix.
 
 ## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
 Page last modified: 2026-09-06

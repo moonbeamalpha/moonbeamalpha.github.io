@@ -235,35 +235,23 @@
           },
           {
             "@type": "Question",
-            "name": "AB-650 vs SC-300 — how much identity overlap is there?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Some overlap, different depth. SC-300 (Identity and Access Administrator) goes far deeper into Microsoft Entra identity architecture — hybrid identity, external identities, application integration, and identity governance at a specialist level. AB-650 covers the identity surface a Microsoft 365 administrator actually touches day to day — users, groups, administrative units, Conditional Access, and Privileged Identity Management — plus the newer agent identity model built on Microsoft Entra Agent ID, which SC-300 does not cover. Candidates who own both Microsoft 365 and deep identity architecture often hold both certifications."
-            }
+            "name": "AB-650 vs AB-731 — administrator or transformation leader?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Different jobs entirely, despite both touching Microsoft's AI stack. AB-731 is a business-leadership credential — no hands-on configuration, no code, just the judgement to frame AI opportunities, champion responsible AI, and lead an adoption programme. AB-650 is a hands-on administrator exam: you're actually configuring Conditional Access policies, Purview DLP rules, and the agent registry, not describing them to a steering committee. A programme lead sponsoring a Copilot rollout might sit AB-731; the person implementing that rollout's guardrails sits AB-650." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the AB-650 exam format actually look like?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Microsoft's general guidance for AB-650 is 40–60 questions, with formats that vary by sitting. In Azure Mastery's AB-650 bank, single-answer and scenario-based items carry most of the weight, alongside multi-select, drag-to-match, dropdown, hot-area, and case-study questions built as original practice content — not a copy of Microsoft's live item mix. Timed practice sessions run to the app's own session clock; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest." }
           },
           {
             "@type": "Question",
             "name": "Is Azure Mastery free for AB-650 prep?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full bank of 506 AB-650 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": "The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full AB-650 bank unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade." }
           },
           {
             "@type": "Question",
             "name": "Does AB-650 practice work offline?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an AB-650 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync." }
           }
         ]
       },
@@ -347,6 +335,7 @@
       <ol class="page-toc__list">
         <li class="page-toc__item"><a class="page-toc__link" href="#what-is">The exam</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#objectives">Objectives</a></li>
+        <li class="page-toc__item"><a class="page-toc__link" href="#where-candidates-slip">Traps</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#how-helps">Why Mastery</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#study-plan">Study plan</a></li>
         <li class="page-toc__item"><a class="page-toc__link" href="#question-types">Inside the app</a></li>
@@ -480,7 +469,7 @@
 
     <!-- AB-650 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Official Microsoft skills outline</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 27 July 2026</p>
       <h2 class="display-small section-title">AB-650 exam objectives</h2>
       <p class="section-lede">
         Three domains from Microsoft's current outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-650" rel="noopener">official study guide</a>; Azure Mastery tags each question so you can see where your weak spots cluster.
@@ -502,10 +491,15 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Configure and manage Microsoft 365 tenants and workloads<span class="domain__weight">20–25%</span></h3>
+          <h3>Configure and manage Microsoft 365 tenants and workloads<span class="domain__weight">Published weight 20–25%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ab650-tenant">103</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Tenant topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Configure and manage a Microsoft 365 tenant</li>
+                <li>Manage Microsoft 365 workloads</li>
+              </ul>
               <p>
                 The baseline layer. Configure the tenant itself — branding, domains, organisational settings, group-based and pay-as-you-go licensing including licences for Microsoft 365 Copilot, Microsoft Agent 365, and Microsoft Copilot Studio — plus Microsoft 365 Backup setup, restore and monitoring, network connectivity insights, and service health. Then manage the workloads themselves: mailboxes, Microsoft Teams (channels, owners, members, and the Copilot meeting-transcription policy), and SharePoint sites configured for Copilot (SharePoint Advanced Management, Microsoft Search in SharePoint, site exclusions).
               </p>
@@ -513,10 +507,17 @@
           </details>
         </article>
         <article class="domain">
-          <h3>Govern and secure Microsoft 365 tenants and workloads<span class="domain__weight">40–45%</span></h3>
+          <h3>Govern and secure Microsoft 365 tenants and workloads<span class="domain__weight">Published weight 40–45%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ab650-govern">207</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Govern topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Manage identities in Microsoft Entra</li>
+                <li>Implement and manage authentication and access in Microsoft Entra</li>
+                <li>Secure Microsoft 365 workloads</li>
+                <li>Protect data in Microsoft 365 by using Microsoft Purview</li>
+              </ul>
               <p>
                 Largest domain by far. Manage identities in <em>Microsoft Entra</em> — users, guest and external access, groups, role assignments and Privileged Identity Management, administrative units, and bulk management through Microsoft Graph PowerShell. Implement authentication and access — methods, Password Protection, self-service password reset, and Conditional Access with ID Protection and multifactor authentication. Secure workloads with <em>Microsoft Defender for Office 365</em> — alerts, threat policies, investigation, and attack simulation training. Protect data with <em>Microsoft Purview</em> — data loss prevention across Exchange, SharePoint, OneDrive, Teams, endpoints and Copilot; sensitivity labels; retention; and Data Security Posture Management for AI activity.
               </p>
@@ -524,10 +525,17 @@
           </details>
         </article>
         <article class="domain">
-          <h3>Manage and secure AI services in Microsoft 365<span class="domain__weight">35–40%</span></h3>
+          <h3>Manage and secure AI services in Microsoft 365<span class="domain__weight">Published weight 35–40%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ab650-aiservices">196</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore AI Services topics</summary>
             <div class="domain__body">
+              <ul>
+                <li>Enable and manage Microsoft 365 Copilot</li>
+                <li>Implement and manage agents in Microsoft 365 and Agent 365</li>
+                <li>Secure and govern agents by using Agent 365</li>
+                <li>Monitor AI services in Microsoft 365</li>
+              </ul>
               <p>
                 The newest, fastest-moving domain. Enable and manage <em>Microsoft 365 Copilot</em> — tenant readiness, data-readiness and oversharing remediation, Copilot Search, tenant settings including the AI disclaimer, Microsoft 365 Copilot Cowork, third-party providers, and connectors. Implement and manage <em>agents in Microsoft 365 and Agent 365</em> — lifecycle workflows through Microsoft Entra Agent ID, agent owners, allowed types and templates, and the agent registry for discovering, reviewing, publishing, blocking, and installing agents. Secure and govern agents with <em>Agent 365</em> — activity monitoring, sensitive-data protection, and compliance-gap evaluation. Monitor AI services — cost, Copilot adoption reporting, and service health through the <em>Copilot Control System</em>.
               </p>
@@ -537,12 +545,39 @@
       </div>
     </section>
 
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where AB-650 candidates slip</h2>
+      <div class="traps">
+        <article class="trap">
+          <h3>Building an agent and governing one are different job functions</h3>
+          <p>AB-650 questions describe an agent that already exists somewhere in the tenant and ask how to license it, register it, monitor it, or lock it down — never how to design its topics or knowledge sources. A candidate who reaches for Copilot Studio maker skills on an AB-650 stem is answering the wrong exam's question; the correct answer usually lives in the agent registry, Microsoft Entra Agent ID, or an Agent 365 policy.</p>
+        </article>
+        <article class="trap">
+          <h3>SC-300 identity depth is not required, but agent identity is exam-specific here</h3>
+          <p>Candidates coming from a deep identity background sometimes skim the Microsoft Entra Agent ID material, assuming it's a footnote on top of familiar Conditional Access and PIM content. It isn't — agent identity has its own lifecycle, ownership model, and registry controls that don't map onto a human user account, and AB-650 tests that lifecycle directly rather than as an aside.</p>
+        </article>
+        <article class="trap">
+          <h3>Data Loss Prevention and Data Security Posture Management answer different questions</h3>
+          <p>A DLP policy stops a specific action — blocking a sensitive file from leaving a workload. Data Security Posture Management for AI activity is about visibility into what Copilot and agents are actually doing with data across the tenant, not enforcement at the point of action. A stem asking how to see oversharing risk before it happens wants DSPM, not a DLP rule.</p>
+        </article>
+        <article class="trap">
+          <h3>Copilot "readiness" is a distinct configuration step, not a licensing checkbox</h3>
+          <p>Assigning a Microsoft 365 Copilot licence doesn't make a tenant ready for it. Oversharing remediation, SharePoint Advanced Management configuration, and Microsoft Search in SharePoint tuning all sit ahead of rollout, and AB-650 stems that describe unexpected content turning up in Copilot answers are almost always testing whether you know that readiness work, not the licence assignment.</p>
+        </article>
+        <article class="trap">
+          <h3>The beta status changes retake rules, and the exam expects you to know it</h3>
+          <p>Because AB-650 is currently in beta, Microsoft holds retake requests until the exam goes fully live rather than applying the usual 24-hour and 14-day windows. It's an administrative fact about the exam itself rather than a technical objective, but it catches candidates who assume every Microsoft Associate exam follows the same retake timetable.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- How Azure Mastery helps -->
     <section id="how-helps" class="container exam-feature-grid">
       <p class="label-eyebrow section-eyebrow">Designed for AB-650</p>
       <h2 class="display-small section-title">How Azure Mastery helps you pass AB-650</h2>
       <p>
-        Azure Mastery ships with the <strong>full 501-question AB-650 bank</strong> mapped to the current outline. Each question carries a domain tag mapped to the official three domains (tenant/workloads, govern/secure, AI services), so you always know which area you're being tested on and where your weak spots cluster. Tenant configuration scenarios, Purview DLP requirements, and agent-registry governance decisions appear throughout.
+        Every question in the AB-650 bank is tagged to whichever of the three published domains it tests — tenant and workload configuration, governance and security, or the AI services layer — so you can see immediately where a wrong answer belongs rather than guessing. Because "govern and secure" alone carries 40–45% of the weight, the adaptive plan spends most of its early sessions there: identity, Conditional Access, Defender, and Purview, before it moves you on to the agent-governance material.
       </p>
       <p>
         The on-device <strong>Exam IQ</strong> engine predicts your AB-650 score before you sit the exam. After roughly 30 questions it has enough signal to give a confidence-scored prediction (e.g. "786 ±37, 68% confidence") — and tells you the <em>specific</em> topics that are dragging your readiness down. No vague "study more" advice; just a ranked list of objectives where improvement would move your score the furthest.
@@ -554,10 +589,10 @@
         <strong>Knowledge decay tracking</strong> matters for AB-650 because the "govern and secure" domain alone covers a lot of ground — identity, threat protection, and data protection together are worth 40–45% of the exam. The topic you mastered three weeks into your study window is the topic you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Blueprint-aligned exam rehearsal</strong> uses a timed, blueprint-weighted session: a randomised 40–60-question set drawn from original practice questions, weighted by domain percentages from the current outline, with the 120-minute timer running and no jumping back to flag-and-review.
+        Rehearsal in Azure Mastery pulls a fresh, randomised set every time you sit the <strong>Exam Simulator</strong>, weighted to the three published domain percentages rather than a fixed script, and runs its own session clock with no going back to flag a question for later — the discipline of a proctored sitting without claiming to be one.
       </p>
       <p>
-        <strong>Answer Coach</strong> pairs the correct reasoning with option-by-option rationale where available, then turns each miss into a private, grounded lesson: the misconception, key distinction, and rule to remember. Choose explanations after each question or at the end of a practice test, then jump straight back to missed answers; session notes stay ready when you revisit. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        AB-650 rewards knowing which control does a job, not just that a control exists — DLP versus DSPM, a business rule versus an Agent 365 policy, a licence assignment versus actual Copilot readiness. <strong>Answer Coach</strong> calls out which of those look-alike controls you reached for before explaining the one the scenario actually needed, so a miss teaches you the boundary rather than just the fact. Every miss becomes a private note you can pull back up from your missed-answers list; authored guidance is always there, and supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -761,27 +796,27 @@
           </div>
         </details>
         <details class="faq">
-          <summary>AB-650 vs SC-300 — how much identity overlap is there?</summary>
+          <summary>AB-650 vs AB-731 — administrator or transformation leader?</summary>
           <div class="faq__answer">
-            <p>Some overlap, different depth. <a href="/exams/sc-300/">SC-300</a> (Identity and Access Administrator) goes far deeper into Microsoft Entra identity architecture — hybrid identity, external identities, application integration, and identity governance at a specialist level. AB-650 covers the identity surface a Microsoft 365 administrator actually touches day to day — users, groups, administrative units, Conditional Access, and Privileged Identity Management — plus the newer agent identity model built on Microsoft Entra Agent ID, which SC-300 does not cover. Candidates who own both Microsoft 365 and deep identity architecture often hold both certifications.</p>
+            <p>Different jobs entirely, despite both touching Microsoft's AI stack. <a href="/exams/ab-731/">AB-731</a> is a business-leadership credential — no hands-on configuration, no code, just the judgement to frame AI opportunities, champion responsible AI, and lead an adoption programme. AB-650 is a hands-on administrator exam: you're actually configuring Conditional Access policies, Purview DLP rules, and the agent registry, not describing them to a steering committee. A programme lead sponsoring a Copilot rollout might sit AB-731; the person implementing that rollout's guardrails sits AB-650.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What does the AB-650 exam format actually look like?</summary>
+          <div class="faq__answer">
+            <p>Microsoft's general guidance for AB-650 is 40–60 questions, with formats that vary by sitting. In Azure Mastery's AB-650 bank, single-answer and scenario-based items carry most of the weight, alongside multi-select, drag-to-match, dropdown, hot-area, and case-study questions built as original practice content — not a copy of Microsoft's live item mix. Timed practice sessions run to the app's own session clock; adaptive study and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Is Azure Mastery free for AB-650 prep?</summary>
           <div class="faq__answer">
-            <p>The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full bank of 506 AB-650 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
+            <p>The app is free to download and includes a free allowance of AB-650 questions so you can try every feature. The full AB-650 bank unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Does AB-650 practice work offline?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Is there an AB-650 practice test mode?</summary>
-          <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
           </div>
         </details>
       </div>

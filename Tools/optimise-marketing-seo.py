@@ -41,13 +41,14 @@ SEO_UPDATED = "2026-08-09"
 SEO_UPDATED_OVERRIDES = {
     # New pages launched after the 2026-08-09 site-wide SEO pass.
     # Wave-1 de-templating pass (Task B, final-review fix wave).
-    "AI-103": "2026-09-04",
-    "AB-620": "2026-09-04",
-    "AB-100": "2026-09-04",
-    "SC-500": "2026-09-04",
-    "AI-200": "2026-09-04",
-    "AZ-104": "2026-09-04",
-    "AZ-900": "2026-09-04",
+    # Humanizer pass H4a (2026-09-06): de-duplicated shared paragraphs.
+    "AI-103": "2026-09-06",
+    "AB-620": "2026-09-06",
+    "AB-100": "2026-09-06",
+    "SC-500": "2026-09-06",
+    "AI-200": "2026-09-06",
+    "AZ-104": "2026-09-06",
+    "AZ-900": "2026-09-06",
     # Wave-2a de-templating pass (fundamentals cluster).
     "DP-900": "2026-09-06",
     "PL-900": "2026-09-06",

@@ -509,10 +509,20 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AZ-700 exam?</h2>
       <p>
-        AZ-700 is the <strong>Microsoft Certified: Azure Network Engineer Associate</strong> exam — the credential hiring managers expect when posting "Cloud Network Engineer", "Azure Networking Specialist", or "Cloud Connectivity Architect" roles. It's the natural next step after <a href="/exams/az-104/">AZ-104</a> for anyone whose day job has shifted from generalist administration into network-specific design and operation. AZ-700 also pairs with <a href="/exams/sc-500/">SC-500</a> for cloud-network security and feeds the AZ-305 architect track when networking is a candidate's specialty area.
+        AZ-700 is the <strong>Microsoft Certified: Azure Network Engineer Associate</strong> exam — the credential hiring managers expect for "Cloud Network Engineer" or "Azure Networking Specialist" roles. It's the natural next step after <a href="/exams/az-104/">AZ-104</a> once your day job shifts from generalist administration into network-specific design. AZ-700 also pairs with <a href="/exams/sc-500/">SC-500</a> for cloud-network security and feeds the AZ-305 architect track for networking specialists.
       </p>
       <p>
-        AZ-700 is <strong>hands-on and design-oriented</strong>. It validates that you can plan and implement Azure network infrastructure (VNets, subnets, IP plans, route tables); hybrid connectivity (VPN Gateway, ExpressRoute, Virtual WAN); application delivery (Azure Load Balancer, Application Gateway, Front Door, Traffic Manager); private access to PaaS (Private Link, Private Endpoints, service endpoints); and network security (Azure Firewall, Firewall Manager, NSGs, DDoS Protection, WAF). Expect scenario questions where a customer has a constraint — "spoke VNets must reach an on-prem subnet without traversing the hub" — and you pick the right service combination.
+        AZ-700 is <strong>hands-on and design-oriented</strong>. It validates that you can plan and implement across five areas:
+      </p>
+      <ul>
+        <li>Network infrastructure — VNets, subnets, IP plans, route tables</li>
+        <li>Hybrid connectivity — VPN Gateway, ExpressRoute, Virtual WAN</li>
+        <li>Application delivery — Azure Load Balancer, Application Gateway, Front Door, Traffic Manager</li>
+        <li>Private access to PaaS — Private Link, Private Endpoints, service endpoints</li>
+        <li>Network security — Azure Firewall, Firewall Manager, NSGs, DDoS Protection, WAF</li>
+      </ul>
+      <p>
+        Expect scenario questions where a customer has a constraint — "spoke VNets must reach an on-prem subnet without traversing the hub" — and you pick the right service combination.
       </p>
       <p>
         Microsoft&rsquo;s current AZ-700 skills outline is effective <strong>27 July 2026</strong>. Every exam-scoped question in Azure Mastery is mapped to a published objective; adjacent material is kept separate as supplemental practice. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-700" rel="noopener">learn.microsoft.com</a>.
@@ -532,7 +542,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 27 July 2026</p>
       <h2 class="display-small section-title">AZ-700 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft&rsquo;s July 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-700" rel="noopener">official skills outline</a>; exam-scoped questions carry objective mappings so you know which domain is being tested and which topics need more practice.
+        Five domains, with weights set by Microsoft&rsquo;s July 2026 update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-700" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--azure">
         <div class="exam-family-visual__media">
@@ -583,8 +593,8 @@
                 <li>Design and implement an Azure Virtual WAN architecture</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests site-to-site VPN, point-to-site VPN, ExpressRoute, and Virtual WAN as four separate hybrid-connectivity skills.</li>
-                <li>Candidates pick a familiar VPN option when the scenario's bandwidth or SLA requirement actually calls for ExpressRoute.</li>
+                <li>Site-to-site VPN, point-to-site VPN, ExpressRoute, and Virtual WAN are tested here as four separate hybrid-connectivity skills.</li>
+                <li>Picking a familiar VPN option when the scenario's bandwidth or SLA requirement actually calls for ExpressRoute is the common slip.</li>
                 <li>Check the scenario's throughput and reliability numbers before choosing between VPN and ExpressRoute options.</li>
               </ul>
             </div>
@@ -620,8 +630,8 @@
                 <li>Design and implement service endpoints</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests choosing a private endpoint over a service endpoint whenever public exposure must be removed entirely.</li>
-                <li>Candidates pick the cheaper service endpoint even when the scenario says no public exposure at all.</li>
+                <li>Choosing a private endpoint over a service endpoint whenever public exposure must be removed entirely is what's checked here.</li>
+                <li>Picking the cheaper service endpoint even when the scenario says no public exposure at all is the trap to avoid.</li>
                 <li>Reach for Private Link whenever the stem rules out any public IP on the resource.</li>
               </ul>
             </div>
@@ -639,8 +649,8 @@
                 <li>Design and implement a Web Application Firewall (WAF) deployment</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests NSGs, Azure Firewall, Firewall Manager, and WAF as distinct network-security layers with different jobs.</li>
-                <li>Candidates forget the WAF story differs slightly between Application Gateway and Azure Front Door.</li>
+                <li>NSGs, Azure Firewall, Firewall Manager, and WAF get tested here as distinct network-security layers with different jobs.</li>
+                <li>The WAF story differing slightly between Application Gateway and Azure Front Door is easy to forget.</li>
                 <li>Check which product, Application Gateway or Front Door, the WAF question is actually describing.</li>
               </ul>
             </div>
@@ -669,7 +679,7 @@
           <h3>Application Gateway and Front Door aren't interchangeable just because both do Layer 7</h3>
           <p>Application Gateway is regional, while Azure Front Door is global with edge points of presence and built-in caching.</p>
           <ul>
-            <li>The exam is testing whether you'd pick a global service for cross-region routing instead of a regional one.</li>
+            <li>Picking a global service for cross-region routing instead of a regional one is exactly what's being tested.</li>
             <li>Match global or regional in the stem to Front Door or Application Gateway before answering.</li>
           </ul>
         </article>
@@ -677,7 +687,7 @@
           <h3>Virtual WAN and hub-and-spoke solve the same problem at different scale</h3>
           <p>Hub-and-spoke via VNet peering suits a handful of spokes, while Virtual WAN automates routing for large branch counts.</p>
           <ul>
-            <li>The exam is testing whether you can match the number of branch sites in a scenario to the right topology.</li>
+            <li>Matching the number of branch sites in a scenario to the right topology is the real test here.</li>
             <li>Count the spokes or branches described before choosing between Virtual WAN and plain peering.</li>
           </ul>
         </article>

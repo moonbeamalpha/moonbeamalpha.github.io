@@ -944,7 +944,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 7 August 2026</p>
       <h2 class="display-small section-title">GH-300 exam objectives</h2>
       <p class="section-lede">
-        Six domains, with weights from GitHub's skills outline as of 7 August 2026. Every domain below lists GitHub's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/gh-300" rel="noopener">official study guide</a>, so you always know which domain you're being tested on and where your weak spots cluster.
+        Six domains, with weights from GitHub's skills outline as of 7 August 2026. GitHub's own skill-group wording appears verbatim under each domain below, taken straight from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/gh-300" rel="noopener">official study guide</a>, so you always know exactly where a weak spot sits.
       </p>
       <figure class="exam-family-visual exam-family-visual--github">
         <div class="exam-family-visual__media">
@@ -993,8 +993,8 @@
                 <li>Manage organization-wide settings and policies</li>
               </ul>
               <ul class="domain__tips">
-                <li>Knowing which surface fits a task — Chat, the CLI, Agent Mode, Edit Mode, or MCP — is what gets checked here.</li>
-                <li>Defaulting to whichever feature you use daily rather than the one a scenario actually needs is the common slip.</li>
+                <li>Chat, the CLI, Agent Mode, Edit Mode, and MCP each fit a different task, and matching them up is the point.</li>
+                <li>Whichever feature you use daily tends to get picked, even when the scenario actually needs a different one.</li>
                 <li>Learn what Agent Mode hands off to sub-agents and what MCP connects outside the editor.</li>
               </ul>
             </div>
@@ -1029,8 +1029,8 @@
                 <li>Engineer prompts for performance</li>
               </ul>
               <ul class="domain__tips">
-                <li>How prompt structure and surrounding context shape what Copilot actually returns is the focus here.</li>
-                <li>Assuming more examples always help is the common slip, missing when a zero-shot prompt is the right call.</li>
+                <li>Prompt structure and surrounding context quietly shape what Copilot actually returns.</li>
+                <li>More examples don't always help — missing that a zero-shot prompt is the right call trips people up here.</li>
                 <li>Learn to read chat history back to see why a reply drifted from what you meant.</li>
               </ul>
             </div>
@@ -1065,7 +1065,7 @@
                 <li>Apply safeguards and troubleshoot</li>
               </ul>
               <ul class="domain__tips">
-                <li>Applying content exclusions and safeguards correctly to a described scenario is what's assessed here.</li>
+                <li>A described scenario needs the specific content exclusion or safeguard that actually fits it, rather than a merely plausible one.</li>
                 <li>Repository-level and organisation-level exclusions get confused when both could plausibly apply.</li>
                 <li>Learn where duplication-detection filtering sits relative to a content exclusion in the pipeline.</li>
               </ul>
@@ -1095,7 +1095,7 @@
           <h3>Agent Mode, Edit Mode, and Chat each answer a different scope of task</h3>
           <p>Chat answers a question without touching files, Edit Mode changes files you've specified, and Agent Mode executes a multi-step task alone.</p>
           <ul>
-            <li>Matching a task's scope and autonomy level to the mode built for it is the real skill scored here.</li>
+            <li>A task's scope and autonomy level point to one specific mode, and reading that correctly is what earns the mark.</li>
             <li>Pick the mode the task actually calls for, not whichever one you happen to use most.</li>
           </ul>
         </article>
@@ -1103,7 +1103,7 @@
           <h3>Zero-shot and few-shot prompting are a spectrum, not a binary choice</h3>
           <p>Candidates assume more examples always produce a better suggestion, but that isn't how GH-300 grades the choice.</p>
           <ul>
-            <li>Knowing a zero-shot prompt is the right call for a simple, well-understood task is exactly what's being tested.</li>
+            <li>A simple, well-understood task calls for a zero-shot prompt, and recognising that is precisely the point being tested.</li>
             <li>Reach for a few-shot prompt only when it disambiguates a pattern Copilot could otherwise guess wrong.</li>
           </ul>
         </article>

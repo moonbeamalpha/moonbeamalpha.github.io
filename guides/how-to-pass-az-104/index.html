@@ -201,7 +201,7 @@
             "name": "How hard is the AZ-104 exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AZ-104 is harder than a Fundamentals exam because it is practical rather than conceptual. It expects you to manage identities and RBAC at scale, choose the right storage redundancy and access model, deploy virtual machines and containers, configure virtual networks, and read Bicep and Azure CLI. Expect questions that show you a snippet and ask you to predict the outcome. Most candidates with some IT or cloud background pass after four to eight weeks of focused study."
+              "text": "Harder than a Fundamentals exam, because it's practical rather than conceptual: identities and RBAC at scale, storage redundancy and access, VMs and containers, virtual networks, and reading Bicep and Azure CLI snippets. Most candidates with some IT background pass after four to eight weeks of focused study."
             }
           },
           {
@@ -209,7 +209,7 @@
             "name": "How long should I study for AZ-104?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Plan for four to eight weeks of focused study if you already have some IT or cloud experience. If Azure is genuinely new to you, allow two to three months, because the exam expects you to know specific PowerShell and Azure CLI behaviour rather than just describe concepts. The six-week plan on this page is a realistic middle path you can compress or stretch to fit your background."
+              "text": "Four to eight weeks with some IT or cloud experience already. Allow two to three months if Azure is genuinely new to you — the exam wants specific PowerShell and CLI behaviour, not just concepts. The six-week plan above is a realistic middle path; compress or stretch it to fit."
             }
           },
           {
@@ -217,7 +217,7 @@
             "name": "Do I need AZ-900 before AZ-104?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AZ-900 is not a formal prerequisite. If you have less than six months of hands-on Azure experience, taking AZ-900 (Microsoft Azure Fundamentals) first builds the conceptual map AZ-104 assumes you already have. If you already work with Azure day to day, you can go straight to AZ-104, which is the credential most hiring managers actually look for."
+              "text": "Not formally. With under six months of hands-on Azure experience, sit AZ-900 (Microsoft Azure Fundamentals) first for the conceptual map AZ-104 assumes. Already working with Azure day to day? Go straight to AZ-104 — it's the credential most hiring managers actually ask for."
             }
           },
           {
@@ -225,7 +225,7 @@
             "name": "What is the passing score for AZ-104?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You need 700 out of 1000 to pass. The score is scaled, not a raw percentage, so it does not translate directly to a fixed number of correct answers. Harder questions carry more weight, and multi-select questions award no partial credit, so treat 700 as a comfortable target rather than a line to scrape over."
+              "text": "700 out of 1000. The score is scaled, not a raw percentage, so it doesn't map to a fixed number of correct answers. Harder questions carry more weight, and multi-select questions give no partial credit, so treat 700 as a comfortable target, not a line to scrape over."
             }
           },
           {
@@ -233,7 +233,7 @@
             "name": "Does the AZ-104 certification expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Microsoft Associate certifications including AZ-104 expire annually, and renewal is free. It is a short online assessment on Microsoft Learn that you can take within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain active in the role. Fundamentals certifications such as AZ-900 do not expire."
+              "text": "Yes, annually, and renewal is free: a short assessment on Microsoft Learn inside the six-month window before expiry. It targets recent skills-outline updates, so staying current is easy if you're still in the role. AZ-900 and other Fundamentals certifications don't expire."
             }
           },
           {
@@ -241,7 +241,7 @@
             "name": "How much does AZ-104 cost and can I retake it if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Exam pricing varies by country, so check Microsoft's exam page for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt requires a new booking."
+              "text": "Pricing varies by country — check Microsoft's exam page for your local fee. If you don't pass: First retake: after 24 hours Second and third retakes: a 14-day wait each Maximum five attempts per rolling 12 months, each a fresh booking"
             }
           }
         ]
@@ -384,27 +384,57 @@
       <ol class="guide-plan">
         <li>
           <h3>Identity and governance</h3>
-          <p>The largest domain, and the one everything else assumes. Microsoft Entra ID users, groups, licence assignment, external users, and self-service password reset; then Azure RBAC with built-in roles at management group, subscription, resource group, and resource scope; then Azure Policy, resource locks, tags, management groups, and cost management with budgets and alerts.</p>
+          <p>The largest domain, and the one everything else assumes.</p>
+          <ul>
+            <li>Microsoft Entra ID: users, groups, licence assignment, external users, self-service password reset.</li>
+            <li>Azure RBAC: built-in roles at management group, subscription, resource group, and resource scope.</li>
+            <li>Governance: Azure Policy, resource locks, tags, management groups, cost budgets and alerts.</li>
+          </ul>
         </li>
         <li>
           <h3>Storage</h3>
-          <p>Storage account configuration and redundancy (LRS, ZRS, GRS and their read-access variants), access via SAS tokens, access keys, and identity-based access for Azure Files, plus encryption. Then Azure Blob Storage tiers, lifecycle management, versioning, and soft delete, and Azure Files shares, snapshots, and soft delete.</p>
+          <p>Storage crosses two axes the exam tests separately: how data survives, and how it's reached.</p>
+          <ul>
+            <li>Redundancy options: LRS, ZRS, GRS, and their read-access variants.</li>
+            <li>Access control: SAS tokens, access keys, identity-based access for Azure Files, plus encryption.</li>
+            <li>Blob tiers, lifecycle management, versioning, and soft delete; Azure Files shares and snapshots.</li>
+          </ul>
         </li>
         <li>
           <h3>Infrastructure as code and virtual machines</h3>
-          <p>Learn to read, modify, deploy, and convert ARM templates and Bicep, because the exam regularly shows you a snippet and asks what it deploys. Then virtual machines: sizing, disks, availability zones and sets, Virtual Machine Scale Sets, and encryption at host. Deploy a VM or two yourself so the portal flow sticks.</p>
+          <p>Learn to read Bicep and ARM before you learn to write it — the exam hands you snippets, not blank pages.</p>
+          <ul>
+            <li>Read, modify, deploy, and convert ARM templates and Bicep files.</li>
+            <li>Virtual machine sizing, disks, availability zones and sets, Virtual Machine Scale Sets.</li>
+            <li>Encryption at host; deploy a VM or two yourself so the portal flow sticks.</li>
+          </ul>
         </li>
         <li>
           <h3>Containers, App Service, and networking basics</h3>
-          <p>Finish compute with Azure Container Registry, Container Instances, and Container Apps, and Azure App Service plans, scaling, deployment slots, custom DNS, and certificates. Then open networking with virtual networks, subnets, and peering, so the security topics next week have somewhere to land.</p>
+          <p>Close out compute, then open networking so next week's security decisions have somewhere to land.</p>
+          <ul>
+            <li>Azure Container Registry, Container Instances, and Container Apps.</li>
+            <li>App Service plans, scaling, deployment slots, custom DNS, and certificates.</li>
+            <li>Virtual networks, subnets, and peering.</li>
+          </ul>
         </li>
         <li>
           <h3>Networking and monitoring</h3>
-          <p>Network security groups versus application security groups, Azure Bastion, service endpoints versus private endpoints, user-defined routes, Azure DNS, and internal versus public load balancers. Then Azure Monitor metrics, logs, alert rules, action groups, and Network Watcher for connection troubleshooting.</p>
+          <p>Finish the networking decisions, then build the monitoring habit you'll keep long after the exam.</p>
+          <ul>
+            <li>NSGs versus application security groups; Azure Bastion; service endpoints versus private endpoints.</li>
+            <li>User-defined routes, Azure DNS, internal and public load balancers.</li>
+            <li>Azure Monitor metrics, logs, alert rules, action groups, and Network Watcher.</li>
+          </ul>
         </li>
         <li>
           <h3>Backup, recovery, and simulation</h3>
-          <p>Recovery Services vaults, Azure Backup, backup policies, and Azure Site Recovery for failover to a second region. Then focus your practice: drill your weakest domains daily and sit two full-length timed practice runs. Book the exam once your readiness sits comfortably above the pass mark, not just at it.</p>
+          <p>Cover the last domain, then spend the rest of the week under exam conditions.</p>
+          <ul>
+            <li>Recovery Services vaults, Azure Backup, backup policies, Azure Site Recovery failover.</li>
+            <li>Drill your weakest domain daily with Focus Weak Spots.</li>
+            <li>Sit two full-length timed simulator runs before you book the real thing.</li>
+          </ul>
         </li>
       </ol>
     </section>
@@ -419,23 +449,38 @@
       <div class="topic-cards">
         <div class="topic-card">
           <h3>RBAC scope and inheritance</h3>
-          <p>Role assignments apply at management group, subscription, resource group, and resource scope, and they inherit downward. Questions test whether you can work out someone's effective permissions when roles are assigned at several levels at once, and where a deny or a resource lock overrides an allow. Practise reading a scenario and naming the exact scope the assignment belongs at.</p>
+          <ul>
+            <li>Role assignments apply at management group, subscription, resource group, and resource scope, and they inherit downward, so effective permissions depend on every level at once.</li>
+            <li>Practise reading a scenario and naming the exact scope an assignment belongs at, including where a deny or a resource lock overrides an allow.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Networking security choices</h3>
-          <p>The virtual networking domain packs in the most "which one" decisions: network security groups versus application security groups, service endpoints versus private endpoints, and when a user-defined route is needed to force traffic through an appliance. The wording is subtle, so learn what each control actually filters and at what layer, not just its name.</p>
+          <ul>
+            <li>The networking domain packs in "which one" decisions: NSGs versus application security groups, service endpoints versus private endpoints, and when a user-defined route forces traffic through an appliance.</li>
+            <li>Learn what each control actually filters and at what layer, not just its name — the exam's wording is deliberately close.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Reading Bicep and ARM</h3>
-          <p>Compute questions often show you a Bicep or ARM snippet and ask what it deploys, or what a small edit would change. This is a reading skill you have to build deliberately. Deploy a few templates yourself and step through the resource declarations until the syntax reads as quickly as prose.</p>
+          <ul>
+            <li>Compute questions often show you a Bicep or ARM snippet and ask what it deploys, or what one small edit would change — a reading skill, not a memorising one.</li>
+            <li>Deploy a few templates yourself and step through the resource declarations until the syntax reads as quickly as prose.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Storage redundancy and access</h3>
-          <p>The storage domain crosses two axes that are easy to confuse: the redundancy tier that protects your data and the access model that exposes it. Know the difference between LRS, ZRS, and geo-redundant options, and between SAS tokens, access keys, and identity-based access for Azure Files, so you can pick the right pair for a given requirement.</p>
+          <ul>
+            <li>The storage domain crosses two axes that are easy to confuse: the redundancy tier protecting your data, and the access model exposing it.</li>
+            <li>Know LRS, ZRS, and geo-redundant options apart from SAS tokens, access keys, and identity-based access, so you can pick the right pair for a given requirement.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Backup versus Site Recovery</h3>
-          <p>The monitoring and maintenance domain lumps together two things that solve different problems. Azure Backup protects and restores data; Azure Site Recovery replicates workloads so they can fail over to another region. Questions built around a recovery-time or recovery-point requirement expect you to reach for the right one without hesitating.</p>
+          <ul>
+            <li>The monitoring domain lumps together two tools that solve different problems: Azure Backup protects and restores data, Azure Site Recovery replicates workloads so they fail over to another region.</li>
+            <li>When a question states a recovery-time or recovery-point requirement, reach for the right one without hesitating.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -458,9 +503,9 @@
         <figcaption>Azure Mastery rebuilds its study plan from your answer history, surfacing the weakest domains first.</figcaption>
       </figure>
       <div class="cta-panel">
-        <h3>Put your study plan into practice</h3>
+        <h3>Every answer comes with a why</h3>
         <p>
-          Make Azure Mastery part of your study plan for AZ-104. Answer original practice questions mapped to the five April 2026 domains, get an on-device readiness score from Exam IQ, follow an adaptive study plan that targets your weak spots, and let knowledge-decay alerts tell you what to revise before you forget it. The Practice tab runs a full-length simulator at real exam length. It works offline and needs no account to start.
+          Azure Mastery writes a rationale for every option on every AZ-104 question, not just the correct one, so a wrong guess about RBAC scope or storage redundancy teaches you something instead of just costing a mark. Exam IQ predicts your score on-device with a confidence range, the study plan re-targets itself around your weakest domain automatically, and the simulator runs blueprint-weighted at real exam length. Free to start, and it works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -475,20 +520,20 @@
     <section id="exam-day" class="container">
       <p class="label-eyebrow section-eyebrow">Exam day</p>
       <h2 class="display-small section-title">Tactics for exam day</h2>
-      <p>
-        If you are sitting the exam online, run the system check the day before and clear your desk, because proctors will ask you to show the room and remove anything within reach. Arrive early either way; a rushed start eats into your focus.
-      </p>
-      <p>
-        With 100 minutes for 40 to 60 questions you have roughly a minute and a half to two minutes each, which is comfortable if you keep moving. Use the <strong>mark-for-review</strong> flag on anything that makes you hesitate and come back once you have banked the easy marks, rather than burning five minutes on one question early on. Read Bicep and Azure CLI questions twice; the trap is usually a single argument or scope, and it rewards slowing down for ten seconds.
-      </p>
-      <p>
-        Case studies work differently from standalone questions. Once you finish a case study section and move on, you generally cannot return to it, so answer every question inside a case fully before you advance. Finally, remember the score is scaled: you do not need to be perfect, you need 700 out of 1000, so an unfamiliar question is not a disaster. Flag it, make your best call, and keep your momentum.
-      </p>
+      <p>A handful of habits protect the marks you've already earned.</p>
+      <ol>
+        <li>Sitting online? Run the system check the day before and clear your desk — proctors ask you to show the room and remove anything within reach.</li>
+        <li>Arrive early either way. A rushed start eats into your focus before question one.</li>
+        <li>Budget roughly ninety seconds to two minutes per question, and flag anything you hesitate on with <strong>mark-for-review</strong> instead of burning five minutes on it early.</li>
+        <li>Read Bicep and Azure CLI questions twice. The trap is usually one argument or scope, and ten seconds of care catches it.</li>
+        <li>Answer every question inside a case study before you move on — you generally cannot return to a case once you leave it.</li>
+        <li>Remember the pass mark is 700 out of 1000, scaled. An unfamiliar question isn't a disaster: make your best call and keep moving.</li>
+      </ol>
     </section>
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>Halfway through the plan?</strong> Run a blueprint-weighted AZ-104 simulator and see your Exam IQ score before you book the real thing — free to start.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -498,27 +543,32 @@
       <div class="faqs">
         <details class="faq">
           <summary>How hard is the AZ-104 exam?</summary>
-          <div class="faq__answer"><p>AZ-104 is harder than a Fundamentals exam because it is practical rather than conceptual. It expects you to manage identities and RBAC at scale, choose the right storage redundancy and access model, deploy virtual machines and containers, configure virtual networks, and read Bicep and Azure CLI. Expect questions that show you a snippet and ask you to predict the outcome. Most candidates with some IT or cloud background pass after four to eight weeks of focused study.</p></div>
+          <div class="faq__answer"><p>Harder than a Fundamentals exam, because it's practical rather than conceptual: identities and RBAC at scale, storage redundancy and access, VMs and containers, virtual networks, and reading Bicep and Azure CLI snippets. Most candidates with some IT background pass after four to eight weeks of focused study.</p></div>
         </details>
         <details class="faq">
           <summary>How long should I study for AZ-104?</summary>
-          <div class="faq__answer"><p>Plan for four to eight weeks of focused study if you already have some IT or cloud experience. If Azure is genuinely new to you, allow two to three months, because the exam expects you to know specific PowerShell and Azure CLI behaviour rather than just describe concepts. The six-week plan on this page is a realistic middle path you can compress or stretch to fit your background.</p></div>
+          <div class="faq__answer"><p>Four to eight weeks with some IT or cloud experience already. Allow two to three months if Azure is genuinely new to you — the exam wants specific PowerShell and CLI behaviour, not just concepts. The six-week plan above is a realistic middle path; compress or stretch it to fit.</p></div>
         </details>
         <details class="faq">
           <summary>Do I need AZ-900 before AZ-104?</summary>
-          <div class="faq__answer"><p>AZ-900 is not a formal prerequisite. If you have less than six months of hands-on Azure experience, taking <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> first builds the conceptual map AZ-104 assumes you already have. If you already work with Azure day to day, you can go straight to AZ-104, which is the credential most hiring managers actually look for.</p></div>
+          <div class="faq__answer"><p>Not formally. With under six months of hands-on Azure experience, sit <a href="/exams/az-900/">AZ-900 (Microsoft Azure Fundamentals)</a> first for the conceptual map AZ-104 assumes. Already working with Azure day to day? Go straight to AZ-104 — it's the credential most hiring managers actually ask for.</p></div>
         </details>
         <details class="faq">
           <summary>What is the passing score for AZ-104?</summary>
-          <div class="faq__answer"><p>You need 700 out of 1000 to pass. The score is scaled, not a raw percentage, so it does not translate directly to a fixed number of correct answers. Harder questions carry more weight, and multi-select questions award no partial credit, so treat 700 as a comfortable target rather than a line to scrape over.</p></div>
+          <div class="faq__answer"><p>700 out of 1000. The score is scaled, not a raw percentage, so it doesn't map to a fixed number of correct answers. Harder questions carry more weight, and multi-select questions give no partial credit, so treat 700 as a comfortable target, not a line to scrape over.</p></div>
         </details>
         <details class="faq">
           <summary>Does the AZ-104 certification expire?</summary>
-          <div class="faq__answer"><p>Yes. Microsoft Associate certifications including AZ-104 expire annually, and renewal is free. It is a short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> that you can take within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain active in the role. Fundamentals certifications such as AZ-900 do not expire.</p></div>
+          <div class="faq__answer"><p>Yes, annually, and renewal is free: a short assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> inside the six-month window before expiry. It targets recent skills-outline updates, so staying current is easy if you're still in the role. AZ-900 and other Fundamentals certifications don't expire.</p></div>
         </details>
         <details class="faq">
           <summary>How much does AZ-104 cost and can I retake it if I fail?</summary>
-          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/credentials/certifications/azure-administrator/" rel="noopener">Microsoft's exam page</a> for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt requires a new booking.</p></div>
+          <div class="faq__answer"><p>Pricing varies by country — check <a href="https://learn.microsoft.com/credentials/certifications/azure-administrator/" rel="noopener">Microsoft's exam page</a> for your local fee. If you don't pass:</p>
+          <ul>
+            <li>First retake: after 24 hours</li>
+            <li>Second and third retakes: a 14-day wait each</li>
+            <li>Maximum five attempts per rolling 12 months, each a fresh booking</li>
+          </ul></div>
         </details>
       </div>
     </section>
@@ -560,7 +610,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AZ-104?</h2>
-      <p>Practise with original AZ-104 practice questions across all five domains, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>Every AZ-104 question comes with a rationale for every option, Exam IQ predicts your score on-device with a confidence range, and the simulator is weighted to the exam blueprint. Free to start, works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

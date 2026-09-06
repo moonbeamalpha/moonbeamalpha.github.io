@@ -264,6 +264,10 @@ def matches_once(pattern: str, text: str, label: str, page: Path, errors: list[s
 
 
 def normalise_visible_text(markup: str) -> str:
+    # FAQ answers may carry a <ul> for policy-step lists (retake timings etc.);
+    # insert a space where a list item or paragraph closes so items don't run
+    # together, mirroring Tools/sync-exam-faq-schema.py's normalise().
+    markup = re.sub(r"</(?:li|p)>", " ", markup)
     return " ".join(unescape(re.sub(r"<[^>]+>", "", markup)).split())
 
 
@@ -568,7 +572,7 @@ def validate_guide_pages(errors: list[str], llms: str) -> list[Path]:
             ]
             visible_faqs = re.findall(
                 r'<details class="faq">\s*<summary>(.*?)</summary>\s*'
-                r'<div class="faq__answer"><p>(.*?)</p></div>\s*</details>',
+                r'<div class="faq__answer">(.*?)</div>\s*</details>',
                 text,
                 re.S,
             )
@@ -695,7 +699,7 @@ def validate_static_content_pages(errors: list[str], llms: str) -> list[Path]:
         faq_nodes = [item for item in graph if isinstance(item, dict) and item.get("@type") == "FAQPage"]
         visible_faqs = re.findall(
             r'<details class="faq">\s*<summary>(.*?)</summary>\s*'
-            r'<div class="faq__answer"><p>(.*?)</p></div>\s*</details>',
+            r'<div class="faq__answer">(.*?)</div>\s*</details>',
             text,
             re.S,
         )

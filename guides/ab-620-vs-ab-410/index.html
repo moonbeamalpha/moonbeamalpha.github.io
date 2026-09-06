@@ -161,7 +161,7 @@
             "name": "What's the real difference between AB-620 and AB-410?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AB-620 tests designing and extending the agent itself: topics, orchestration, knowledge sources, tools, multi-agent protocols. AB-410 tests building the Power Platform application around it: Dataverse, model-driven and canvas apps, cloud flows, AI Hub prompts. AB-410 stays low-code throughout; AB-620 leans more code-first, since MCP schemas and Agent2Agent involve structured configuration Copilot Studio's canvas doesn't fully abstract."
+              "text": "AB-620 tests designing and extending the agent: topics, orchestration, knowledge sources, tools, multi-agent protocols. AB-410 tests building the Power Platform application around it: Dataverse, model-driven and canvas apps, cloud flows, AI Hub prompts. AB-410 stays low-code throughout; AB-620 leans more code-first, since MCP and Agent2Agent involve structured configuration Copilot Studio's canvas doesn't fully abstract."
             }
           },
           {
@@ -353,9 +353,12 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        Planning covers integration with enterprise systems, identity strategy, channel and deployment planning, and responsible AI, then moves into building agent flows and configuring topics: trigger phrases, tools, adaptive cards, and variables. The largest domain, integrate and extend, covers connecting to enterprise knowledge sources such as Azure AI Search and Power Platform connectors, adding tools including MCP and REST APIs, and — the section most candidates underestimate — multi-agent collaboration: wiring a Foundry agent or a Fabric data agent into an orchestrator, and building cross-agent solutions with the Agent2Agent protocol. Test and manage covers evaluation methods and application lifecycle management: solutions, environment variables, and Power Platform Pipelines rather than manual copy-paste between environments.
-      </p>
+      <ul>
+        <li>Planning covers integration with enterprise systems, identity strategy, channel and deployment planning, and responsible AI, then agent flows and configuring topics: trigger phrases, tools, adaptive cards, and variables.</li>
+        <li>Integrate and extend, the largest domain, covers connecting to enterprise knowledge sources such as Azure AI Search and Power Platform connectors, and adding tools including MCP and REST APIs.</li>
+        <li>The section most candidates underestimate is multi-agent collaboration: wiring a Foundry agent or a Fabric data agent into an orchestrator, and cross-agent solutions with the Agent2Agent protocol.</li>
+        <li>Test and manage covers evaluation methods and application lifecycle management — solutions, environment variables, and Power Platform Pipelines rather than manual copy-paste between environments.</li>
+      </ul>
     </section>
 
     <!-- What AB-410 actually tests -->
@@ -378,58 +381,59 @@
           </tbody>
         </table>
       </div>
-      <p class="section-note">
-        The foundation domain covers Dataverse table and column design, relationships, prompt columns, security, and choosing the right AI-enabled build approach and environment type before you start. Create intelligent applications splits between model-driven apps — forms, views, generative pages built from natural language, and dashboards — and canvas apps, where accessibility, reusable components, and error handling matter as much as layout. The largest domain, business logic and automation, is where AB-410 differs most from a plain app-building exam: cloud flow triggers and connectors, AI Hub prompts consumed from both apps and flows, and the distinctions between business rules, business process flows, and calculated, rollup, or formula columns that recur throughout the exam.
-      </p>
+      <ul>
+        <li>The foundation domain covers Dataverse table and column design, relationships, prompt columns, security, and choosing the right AI-enabled build approach and environment type before you start.</li>
+        <li>Create intelligent applications splits between model-driven apps — forms, views, generative pages built from natural language, dashboards — and canvas apps, where accessibility, reusable components, and error handling matter as much as layout.</li>
+        <li>Business logic and automation, the largest domain, is where AB-410 differs most from a plain app-building exam: cloud flow triggers and connectors, AI Hub prompts consumed from both apps and flows.</li>
+        <li>It also tests the distinctions between business rules, business process flows, and calculated, rollup, or formula columns that recur throughout the exam.</li>
+      </ul>
     </section>
 
     <!-- Prerequisite / ordering -->
     <section id="prerequisite" class="container">
       <p class="label-eyebrow section-eyebrow">Prerequisite question</p>
       <h2 class="display-small section-title">Do you need one before the other?</h2>
-      <p>
-        No. AB-620 and AB-410 are both standalone Associate certifications, and Microsoft does not require either one as a prerequisite for the other. You can sit AB-620 without ever touching AB-410's Dataverse and app-building content, and you can sit AB-410 without ever building an agent from scratch in Copilot Studio.
+      <p class="section-lede">
+        No. AB-620 and AB-410 are both standalone Associate certifications, and Microsoft does not require either one as a prerequisite for the other.
       </p>
-      <p>
-        Where the two genuinely connect is in what they build together. AB-620 certifies the agent's internal logic; AB-410 certifies the application, data model, and automation that surrounds it. A single Copilot solution — say, an internal support assistant with a Dataverse-backed case log, a canvas app for agents to review flagged conversations, and an approval flow for escalations — draws on both skill sets at once. If you own that kind of end-to-end solution, sitting both certifications maps directly onto your actual job; if you own only one half, sit the one that matches it and treat the other as optional.
-      </p>
-      <p>
-        If you are deciding purely on order, sit whichever one reflects your stronger existing skill first: candidates who already build in Copilot Studio daily tend to find AB-620 the faster route in, while candidates who already model Dataverse tables and build canvas apps tend to find AB-410 faster. Sitting the exam closer to your current work first also means the second exam's shared Power Platform foundation — solutions, environments, and ALM basics — needs less relearning.
-      </p>
+      <ul>
+        <li>Sit AB-620 without ever touching AB-410's Dataverse and app-building content, or sit AB-410 without ever building an agent from scratch in Copilot Studio.</li>
+        <li>Where they genuinely connect is in what they build together: AB-620 certifies the agent's internal logic, AB-410 certifies the application, data model, and automation around it.</li>
+        <li>A single Copilot solution — say, a support assistant with a Dataverse-backed case log, a canvas app for reviewing flagged conversations, and an approval flow for escalations — draws on both skill sets at once.</li>
+        <li>Own that kind of end-to-end solution? Sitting both maps directly onto your job. Own only one half? Sit the one that matches it and treat the other as optional.</li>
+        <li>Deciding purely on order: sit whichever reflects your stronger existing skill first — daily Copilot Studio builders find AB-620 faster, Dataverse-and-canvas-app builders find AB-410 faster — since the second exam's shared Power Platform foundation then needs less relearning.</li>
+      </ul>
     </section>
 
     <!-- Career value framing (no invented numbers) -->
     <section id="career-value" class="container">
       <p class="label-eyebrow section-eyebrow">Career value</p>
       <h2 class="display-small section-title">How each certification helps your career</h2>
-      <p>
-        AB-620 is the credential to point to when a role description says "Copilot Studio developer", "AI agent builder", or asks specifically for agent orchestration, MCP tooling, or multi-agent design. It signals that you can be trusted with the parts of a Copilot solution that are hardest to get wrong: groundedness, tool access, and how agents hand off to one another.
-      </p>
-      <p>
-        AB-410 is the credential for "Power Platform developer" or "low-code application builder" roles that now expect AI literacy as standard, not as a bonus skill. It is also the direct successor path for anyone who previously built toward PL-200 (Power Platform Functional Consultant Associate) — the PL-200T00 training course has been replaced by AB-410T00, and prior PL-200 experience with Dataverse and canvas apps transfers cleanly into AB-410's foundation and application domains.
-      </p>
-      <p>
-        Neither certification guarantees a role or a pay rise on its own. What both reliably provide is a structured way to demonstrate a specific, in-demand skill set to a hiring manager or an internal promotion panel, backed by a Microsoft-set bar rather than a self-assessment.
-      </p>
+      <p class="section-lede">Each certification signals a different part of the Copilot solution to a hiring manager.</p>
+      <ul>
+        <li>AB-620 is the credential to point to when a role description says "Copilot Studio developer", "AI agent builder", or asks specifically for agent orchestration, MCP tooling, or multi-agent design.</li>
+        <li>It signals you can be trusted with the parts of a Copilot solution that are hardest to get wrong: groundedness, tool access, and how agents hand off to one another.</li>
+        <li>AB-410 is the credential for "Power Platform developer" or "low-code application builder" roles that now expect AI literacy as standard, not a bonus skill.</li>
+        <li>It's also the direct successor path for anyone who previously built toward PL-200 — the PL-200T00 course was replaced by AB-410T00, and prior PL-200 experience with Dataverse and canvas apps transfers cleanly.</li>
+        <li>Neither guarantees a role or pay rise; both give a structured way to demonstrate an in-demand skill set, backed by a Microsoft-set bar rather than a self-assessment.</li>
+      </ul>
     </section>
 
     <!-- Take both? -->
     <section id="take-both" class="container">
       <p class="label-eyebrow section-eyebrow">Take both?</p>
       <h2 class="display-small section-title">Should you take both AB-620 and AB-410?</h2>
-      <p>
-        For anyone who owns a Copilot solution end to end — the agent, the app around it, and the data model underneath — taking both is the strongest option on the table. Microsoft's own certification pathing groups the two together for exactly this reason: one exam proves you can build the agent, the other proves you can build everything the agent depends on and everything that depends on the agent.
-      </p>
-      <p>
-        For a specialist who only ever touches one side of that boundary, taking both is optional. A pure Copilot Studio developer gets little additional signal from AB-410's Dataverse and canvas-app content, and a pure Power Platform app builder who never designs agent logic gets little additional signal from AB-620's orchestration-heavy domains. In those cases, sit the one that matches the job and revisit the other only if the role expands.
-      </p>
-      <p>
-        If you do plan to sit both, studying them in sequence rather than in parallel makes the shared Power Platform foundation work in your favour instead of doubling your workload. The <a href="/guides/how-to-pass-ab-620/">AB-620 study guide</a> lays out a four-week plan you can use as the first half of a combined project.
-      </p>
+      <p class="section-lede">For anyone who owns a Copilot solution end to end, taking both is the strongest option on the table.</p>
+      <ul>
+        <li>Microsoft's own certification pathing groups AB-620 and AB-410 together for exactly this reason: one exam proves you can build the agent, the other proves you can build everything it depends on and everything that depends on it.</li>
+        <li>Only touch one side of that boundary? Taking both is optional — a pure Copilot Studio developer gets little extra signal from AB-410's Dataverse and canvas-app content, and a pure app builder who never designs agent logic gets little extra signal from AB-620's orchestration-heavy domains.</li>
+        <li>Sit the one that matches the job and revisit the other only if the role expands.</li>
+        <li>Plan to sit both? Study them in sequence rather than in parallel so the shared Power Platform foundation works in your favour instead of doubling your workload. The <a href="/guides/how-to-pass-ab-620/">AB-620 study guide</a> lays out a four-week plan you can use as the first half of a combined project.</li>
+      </ul>
       <div class="cta-panel">
-        <h3>Agent-layer or app-layer, one app either way</h3>
+        <h3>Two banks, no app switching</h3>
         <p>
-          Azure Mastery carries both the AB-620 and AB-410 question banks, each with a rationale for every option, so switching between agent-builder and app-builder practice doesn't mean switching apps. Every bank gets its own on-device Exam IQ score with a confidence range and its own adaptive plan. Free to start, works offline.
+          Azure Mastery carries both the AB-620 and AB-410 question banks, each with a rationale for every option, so moving between agent-builder and app-builder practice doesn't mean switching apps. Every bank gets its own on-device Exam IQ score with a confidence range and its own adaptive plan. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -456,7 +460,7 @@
         </details>
         <details class="faq">
           <summary>What's the real difference between AB-620 and AB-410?</summary>
-          <div class="faq__answer"><p>AB-620 tests designing and extending the agent itself: topics, orchestration, knowledge sources, tools, multi-agent protocols. AB-410 tests building the Power Platform application around it: Dataverse, model-driven and canvas apps, cloud flows, AI Hub prompts. AB-410 stays low-code throughout; AB-620 leans more code-first, since MCP schemas and Agent2Agent involve structured configuration Copilot Studio's canvas doesn't fully abstract.</p></div>
+          <div class="faq__answer"><p>AB-620 tests designing and extending the agent: topics, orchestration, knowledge sources, tools, multi-agent protocols. AB-410 tests building the Power Platform application around it: Dataverse, model-driven and canvas apps, cloud flows, AI Hub prompts. AB-410 stays low-code throughout; AB-620 leans more code-first, since MCP and Agent2Agent involve structured configuration Copilot Studio's canvas doesn't fully abstract.</p></div>
         </details>
         <details class="faq">
           <summary>Is AB-410 the same as the old PL-200?</summary>
@@ -517,7 +521,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AB-620 or AB-410?</h2>
-      <p>The AB-620 or AB-410 question bank, each with a rationale for every option, an on-device Exam IQ score with a confidence range, and a blueprint-weighted simulator. Free to start, works offline.</p>
+      <p>Pick the bank that matches your side of the solution — agent logic or the app around it — and get a rationale for every option from question one. Free to start, no account required.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

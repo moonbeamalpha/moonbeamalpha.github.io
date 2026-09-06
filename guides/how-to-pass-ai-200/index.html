@@ -201,7 +201,7 @@
             "name": "How hard is the AI-200 exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-200 is a back-end engineering exam more than an AI-concepts exam: it assumes working Python or SDK experience and asks specific questions about indexing policies, connection pooling, and messaging patterns rather than definitions. If Cosmos DB, pgvector, or Azure Managed Redis are new to you, budget extra hands-on time for the vector-workload tuning detail."
+              "text": "A back-end engineering exam more than an AI-concepts one: it assumes working Python or SDK experience and asks specific questions about indexing policies, connection pooling, and messaging patterns rather than definitions. New to Cosmos DB, pgvector, or Azure Managed Redis? Budget extra hands-on time for the vector-workload tuning detail."
             }
           },
           {
@@ -209,7 +209,7 @@
             "name": "How long should I study for AI-200?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The six-week plan on this page is a practical starting point if you already write backend Azure services against SDKs professionally. Extend it when Cosmos DB, Azure Database for PostgreSQL with pgvector, or containerised deployment on AKS or Container Apps are new territory, since the exam rewards specific configuration knowledge over general familiarity. Use your domain-level practice results to decide when to add or repeat a week."
+              "text": "The six-week plan above is a practical start if you already write backend Azure services against SDKs professionally. Extend it when Cosmos DB, pgvector, or containerised AKS or Container Apps deployment are new territory — the exam rewards specific configuration knowledge over general familiarity."
             }
           },
           {
@@ -217,7 +217,7 @@
             "name": "Do I need AI-901 before AI-200?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI-901 is not a formal prerequisite, but Microsoft's own certification path lists it as the current fundamentals route into AI-200. If AI concepts and vector search are new to you at a conceptual level, sitting AI-901 first gives you vocabulary the associate exam assumes. If you already build backend Azure services and are comfortable with vector data, you can go straight to AI-200."
+              "text": "Not a formal prerequisite, but Microsoft's own path lists it as the current fundamentals route in. New to AI concepts and vector search at a conceptual level? Sit AI-901 first. Already building backend Azure services with vector data? Go straight to AI-200."
             }
           },
           {
@@ -225,7 +225,7 @@
             "name": "Is AI-200 the same as AI-103?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. AI-200 validates back-end Azure engineering for AI solutions: containers, vector-capable data services, messaging, and observability. AI-103 validates building the AI application layer itself — deploying models, building agents, and implementing retrieval-augmented generation against Microsoft Foundry. AI-200 is the platform and integration layer beneath an AI application; AI-103 is the application and agent layer on top of it. Many engineers eventually need both."
+              "text": "No. AI-200 validates back-end engineering for AI solutions — containers, vector-capable data services, messaging, observability. AI-103 validates the application layer itself: deploying models, building agents, RAG against Foundry. Many engineers eventually need both."
             }
           },
           {
@@ -233,7 +233,7 @@
             "name": "What is the passing score for AI-200, and does it expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You need 700 out of 1000 to pass, on a scaled score rather than a raw percentage, so it does not map to a fixed number of correct answers. Like other Microsoft Associate certifications, AI-200 also expires annually, with a free online renewal assessment on Microsoft Learn that opens in the six-month window before your expiration date."
+              "text": "700 out of 1000, scaled rather than a raw percentage, so it doesn't map to a fixed number of correct answers. Like other Associate certifications, AI-200 expires annually, with a free renewal assessment on Microsoft Learn inside the six-month window before expiry."
             }
           },
           {
@@ -241,7 +241,7 @@
             "name": "How much does AI-200 cost and can I retake it if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Exam pricing varies by country, so check Microsoft's certification page for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt needs a new booking."
+              "text": "Pricing varies by country — check Microsoft's certification page for your local fee. If you don't pass: First retake: after 24 hours Second and third retakes: a 14-day wait each Maximum five attempts per rolling 12 months, each a fresh booking"
             }
           }
         ]
@@ -383,27 +383,56 @@
       <ol class="guide-plan">
         <li>
           <h3>Develop containerized solutions on Azure</h3>
-          <p>Container hosting: build, store, version, and manage images with Azure Container Registry and ACR Tasks, then deploy containers to Azure App Service, including environment variables and secrets. Container orchestration: deploying to Azure Container Apps with environment and revision management, event-driven scaling with KEDA, deploying to AKS by manifest, and monitoring and troubleshooting logs, events, and connectivity on both platforms.</p>
+          <p>Hosting first, then orchestration.</p>
+          <ul>
+            <li>Build, store, version, and manage images with Azure Container Registry and ACR Tasks; deploy to App Service.</li>
+            <li>Azure Container Apps: environment and revision management, event-driven scaling with KEDA.</li>
+            <li>Deploy to AKS by manifest; monitor and troubleshoot logs, events, and connectivity on both platforms.</li>
+          </ul>
         </li>
         <li>
           <h3>AI data solutions with Azure Cosmos DB for NoSQL</h3>
-          <p>Connect to Cosmos DB for NoSQL with the SDK and run queries, optimise Request Unit consumption and query performance through indexing policies and consistency levels, store and retrieve embeddings for vector similarity search, and implement a change feed processor to react to new or updated items.</p>
+          <p>The largest domain starts here.</p>
+          <ul>
+            <li>Connect with the SDK and run queries; optimise Request Unit consumption via indexing policies and consistency levels.</li>
+            <li>Store and retrieve embeddings for vector similarity search.</li>
+            <li>Implement a change feed processor to react to new or updated items.</li>
+          </ul>
         </li>
         <li>
           <h3>AI data solutions with PostgreSQL and Azure Managed Redis</h3>
-          <p>Connect and query Azure Database for PostgreSQL by SDK, model schemas and indexing strategies, tune pgvector compute overhead, configure resources for vector workloads, and implement retrieval-augmented generation patterns with metadata filters. Then Azure Managed Redis: caching, expiration, invalidation, and vector indexing for similarity search.</p>
+          <p>Two more vector-capable stores to tell apart from Cosmos DB.</p>
+          <ul>
+            <li>Connect and query PostgreSQL by SDK; model schemas and indexing strategies; tune pgvector overhead.</li>
+            <li>Configure resources for vector workloads; implement RAG patterns with metadata filters.</li>
+            <li>Azure Managed Redis: caching, expiration, invalidation, vector indexing for similarity search.</li>
+          </ul>
         </li>
         <li>
           <h3>Connect to and consume Azure services</h3>
-          <p>Event- and message-based solutions: Azure Service Bus with dead-letter queue handling, topics, and subscriptions, and Azure Event Grid with filters, custom events, and retries. Then Azure Functions: building serverless APIs with triggers and bindings, and configuring and deploying function apps.</p>
+          <p>Messaging first, then serverless compute.</p>
+          <ul>
+            <li>Azure Service Bus: dead-letter queue handling, topics, subscriptions.</li>
+            <li>Azure Event Grid: filters, custom events, retries.</li>
+            <li>Azure Functions: serverless APIs with triggers and bindings; configuring and deploying function apps.</li>
+          </ul>
         </li>
         <li>
           <h3>Secure, monitor, and troubleshoot Azure solutions</h3>
-          <p>Secure secrets with Azure Key Vault, including rotation and retrieval, and store app configuration with Azure App Configuration. Then observability: tracing distributed systems with OpenTelemetry SDKs and writing KQL queries to analyse logs and metrics.</p>
+          <p>Secrets and config, then the observability layer on top.</p>
+          <ul>
+            <li>Azure Key Vault: rotation and retrieval; Azure App Configuration for app settings.</li>
+            <li>Tracing distributed systems with OpenTelemetry SDKs.</li>
+            <li>Writing KQL queries to analyse logs and metrics.</li>
+          </ul>
         </li>
         <li>
           <h3>Review and exam simulation</h3>
-          <p>Revisit the data-service decision the exam leans on hardest: which vector store fits which consistency, latency, and cost profile. Then focus your practice: drill your weakest domain daily and sit two full-length timed practice runs. Book the exam once your readiness sits comfortably above the pass mark.</p>
+          <p>Revisit the data-service decision the exam leans on hardest, then prove you're ready.</p>
+          <ul>
+            <li>Which vector store fits which consistency, latency, and cost profile.</li>
+            <li>Drill your weakest domain daily, then sit two full-length timed practice runs before you book.</li>
+          </ul>
         </li>
       </ol>
     </section>
@@ -418,23 +447,38 @@
       <div class="topic-cards">
         <div class="topic-card">
           <h3>Choosing the right vector store for the workload</h3>
-          <p>Cosmos DB for NoSQL, Azure Database for PostgreSQL with pgvector, and Azure Managed Redis all support vector similarity search, and the exam expects you to match consistency requirements, latency budget, and relational needs to the right service rather than defaulting to whichever you know best.</p>
+          <ul>
+            <li>Cosmos DB, PostgreSQL with pgvector, and Azure Managed Redis all support vector similarity search.</li>
+            <li>Match consistency requirements, latency budget, and relational needs to the right service, not whichever you know best.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Tuning performance under load</h3>
-          <p>Cosmos DB questions expect specific indexing-policy and consistency-level choices to control Request Unit cost, and PostgreSQL questions expect connection-optimisation and compute-sizing decisions to control latency and pgvector overhead. "Scale up the tier" is rarely the answer the exam is looking for.</p>
+          <ul>
+            <li>"Scale up the tier" is rarely the answer the exam is looking for.</li>
+            <li>Cosmos DB expects indexing-policy and consistency-level choices for Request Unit cost; PostgreSQL expects connection-optimisation and compute-sizing for latency and pgvector overhead.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Container hosting vs container orchestration</h3>
-          <p>Deploying a container to Azure App Service, running it on Azure Container Apps with KEDA-driven scaling, and deploying manifests to full AKS solve overlapping problems at different levels of control and complexity. Match the requirement's scaling and orchestration needs to the lightest option that satisfies them.</p>
+          <ul>
+            <li>App Service, Container Apps with KEDA, and full AKS solve overlapping problems at different levels of control and complexity.</li>
+            <li>Match the requirement's scaling and orchestration needs to the lightest option that satisfies them.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Service Bus vs Event Grid for a given integration</h3>
-          <p>Service Bus suits ordered, transactional, dead-letter-aware messaging between known producers and consumers. Event Grid suits fan-out, filtered, retryable event delivery to many subscribers. The exam names a specific integration requirement and expects the messaging pattern that fits it, not just "a queue".</p>
+          <ul>
+            <li>The exam names a specific integration requirement and expects the messaging pattern that fits it, not just "a queue".</li>
+            <li>Service Bus suits ordered, transactional, dead-letter-aware messaging; Event Grid suits fan-out, filtered, retryable delivery to many subscribers.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Observability with real instrumentation detail</h3>
-          <p>AI-200 tests actual OpenTelemetry SDK instrumentation and KQL query-writing rather than "turn on Application Insights". Expect a scenario describing a specific tracing gap or a log query requirement and asking you to write or fix the instrumentation, not just recognise the monitoring tool.</p>
+          <ul>
+            <li>AI-200 tests actual OpenTelemetry instrumentation and KQL query-writing, not "turn on Application Insights".</li>
+            <li>Expect a scenario describing a tracing gap or log query requirement and asking you to write or fix the instrumentation.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -455,9 +499,9 @@
         <figcaption>Azure Mastery rebuilds its study plan from your answer history, surfacing the weakest domains first.</figcaption>
       </figure>
       <div class="cta-panel">
-        <h3>Put your study plan into practice</h3>
+        <h3>Configuration detail, not just definitions</h3>
         <p>
-          Make Azure Mastery part of your study plan for AI-200. Practise exam-style questions mapped to all four current domains, get an on-device readiness score from Exam IQ, follow an adaptive study plan that targets your weak spots, and let knowledge-decay alerts tell you what to revise before you forget it. The Practice tab includes a timed, full-length practice simulator. It works offline and needs no account to start.
+          Azure Mastery writes a rationale for every option on every AI-200 question, so a wrong call on indexing policy or vector store teaches you the configuration detail, not just the score. Exam IQ gives you an on-device readiness score with a confidence range, and the study plan keeps circling back to your weak domain. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -472,20 +516,20 @@
     <section id="exam-day" class="container">
       <p class="label-eyebrow section-eyebrow">Exam day</p>
       <h2 class="display-small section-title">Tactics for exam day</h2>
-      <p>
-        If you are sitting online, run the system check the day before and clear your desk, since proctors will ask you to show the room and remove anything within reach. Arrive early either way, because a rushed start eats into your focus during the configuration-heavy scenario questions.
-      </p>
-      <p>
-        With 100 minutes for 40 to 60 questions you have roughly a minute and a half to two minutes each, which is comfortable if you keep moving. Use the <strong>mark-for-review</strong> flag on anything that makes you pause and return to it once you have banked the easy marks. Read every data-service and messaging question twice: the trap is usually a single consistency level, indexing choice, or delivery guarantee, and a slower second read pays off.
-      </p>
-      <p>
-        Case studies bundle several questions around one back-end architecture scenario, and once you move past a case you generally cannot return to it, so answer everything inside a case fully before advancing. Remember the score is scaled: you need 700 out of 1000, not a perfect run, so an unfamiliar configuration is not a disaster. Flag it, make your best call, and keep your momentum.
-      </p>
+      <p>A few habits protect the marks you've already earned.</p>
+      <ol>
+        <li>Sitting online? Run the system check the day before and clear your desk — proctors ask you to show the room first.</li>
+        <li>Arrive early either way; a rushed start eats into your focus during the configuration-heavy scenarios.</li>
+        <li>Budget roughly ninety seconds to two minutes per question, and flag anything you pause on with <strong>mark-for-review</strong>.</li>
+        <li>Read every data-service or messaging question twice — the trap is usually one consistency level, indexing choice, or delivery guarantee.</li>
+        <li>Answer everything inside a case study before you advance; you generally cannot return to one once you leave it.</li>
+        <li>Remember the pass mark is 700 out of 1000, scaled. An unfamiliar configuration isn't a disaster: make your call and keep moving.</li>
+      </ol>
     </section>
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style AI-200 questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>Cosmos DB, pgvector, or Redis?</strong> Drill AI-200 configuration scenarios with a rationale for every option — free to start.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -495,27 +539,32 @@
       <div class="faqs">
         <details class="faq">
           <summary>How hard is the AI-200 exam?</summary>
-          <div class="faq__answer"><p>AI-200 is a back-end engineering exam more than an AI-concepts exam: it assumes working Python or SDK experience and asks specific questions about indexing policies, connection pooling, and messaging patterns rather than definitions. If Cosmos DB, pgvector, or Azure Managed Redis are new to you, budget extra hands-on time for the vector-workload tuning detail.</p></div>
+          <div class="faq__answer"><p>A back-end engineering exam more than an AI-concepts one: it assumes working Python or SDK experience and asks specific questions about indexing policies, connection pooling, and messaging patterns rather than definitions. New to Cosmos DB, pgvector, or Azure Managed Redis? Budget extra hands-on time for the vector-workload tuning detail.</p></div>
         </details>
         <details class="faq">
           <summary>How long should I study for AI-200?</summary>
-          <div class="faq__answer"><p>The six-week plan on this page is a practical starting point if you already write backend Azure services against SDKs professionally. Extend it when Cosmos DB, Azure Database for PostgreSQL with pgvector, or containerised deployment on AKS or Container Apps are new territory, since the exam rewards specific configuration knowledge over general familiarity. Use your domain-level practice results to decide when to add or repeat a week.</p></div>
+          <div class="faq__answer"><p>The six-week plan above is a practical start if you already write backend Azure services against SDKs professionally. Extend it when Cosmos DB, pgvector, or containerised AKS or Container Apps deployment are new territory — the exam rewards specific configuration knowledge over general familiarity.</p></div>
         </details>
         <details class="faq">
           <summary>Do I need AI-901 before AI-200?</summary>
-          <div class="faq__answer"><p>AI-901 is not a formal prerequisite, but Microsoft's own certification path lists it as the current fundamentals route into AI-200. If AI concepts and vector search are new to you at a conceptual level, sitting <a href="/exams/ai-901/">AI-901</a> first gives you vocabulary the associate exam assumes. If you already build backend Azure services and are comfortable with vector data, you can go straight to AI-200.</p></div>
+          <div class="faq__answer"><p>Not a formal prerequisite, but Microsoft's own path lists it as the current fundamentals route in. New to AI concepts and vector search at a conceptual level? Sit <a href="/exams/ai-901/">AI-901</a> first. Already building backend Azure services with vector data? Go straight to AI-200.</p></div>
         </details>
         <details class="faq">
           <summary>Is AI-200 the same as AI-103?</summary>
-          <div class="faq__answer"><p>No. AI-200 validates back-end Azure engineering for AI solutions: containers, vector-capable data services, messaging, and observability. <a href="/exams/ai-103/">AI-103</a> validates building the AI application layer itself — deploying models, building agents, and implementing retrieval-augmented generation against Microsoft Foundry. AI-200 is the platform and integration layer beneath an AI application; AI-103 is the application and agent layer on top of it. Many engineers eventually need both.</p></div>
+          <div class="faq__answer"><p>No. AI-200 validates back-end engineering for AI solutions — containers, vector-capable data services, messaging, observability. <a href="/exams/ai-103/">AI-103</a> validates the application layer itself: deploying models, building agents, RAG against Foundry. Many engineers eventually need both.</p></div>
         </details>
         <details class="faq">
           <summary>What is the passing score for AI-200, and does it expire?</summary>
-          <div class="faq__answer"><p>You need 700 out of 1000 to pass, on a scaled score rather than a raw percentage, so it does not map to a fixed number of correct answers. Like other Microsoft Associate certifications, AI-200 also expires annually, with a free online renewal assessment on <a href="https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> that opens in the six-month window before your expiration date.</p></div>
+          <div class="faq__answer"><p>700 out of 1000, scaled rather than a raw percentage, so it doesn't map to a fixed number of correct answers. Like other Associate certifications, AI-200 expires annually, with a free renewal assessment on <a href="https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> inside the six-month window before expiry.</p></div>
         </details>
         <details class="faq">
           <summary>How much does AI-200 cost and can I retake it if I fail?</summary>
-          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-cloud-developer-associate/" rel="noopener">Microsoft's certification page</a> for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt needs a new booking.</p></div>
+          <div class="faq__answer"><p>Pricing varies by country — check <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-cloud-developer-associate/" rel="noopener">Microsoft's certification page</a> for your local fee. If you don't pass:</p>
+          <ul>
+            <li>First retake: after 24 hours</li>
+            <li>Second and third retakes: a 14-day wait each</li>
+            <li>Maximum five attempts per rolling 12 months, each a fresh booking</li>
+          </ul></div>
         </details>
       </div>
     </section>
@@ -557,7 +606,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on AI-200?</h2>
-      <p>Practise exam-style AI-200 questions across all four domains, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>Every AI-200 question comes with a rationale for every option, Exam IQ predicts your score on-device with a confidence range, and the simulator is weighted to the exam blueprint. Free to start, works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

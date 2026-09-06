@@ -476,7 +476,15 @@
         AB-620 is the <strong>Microsoft AI Agent Builder</strong> credential — the role-based exam for designing and building integrated AI agent solutions in <em>Microsoft Copilot Studio</em>. AB-620 covers planning agent solutions, building and integrating agents in Copilot Studio (topics, generative answers, tools, MCP integrations, channels), and testing / managing agents in production (analytics, deployment lifecycle, governance).
       </p>
       <p>
-        AB-620 is <strong>hands-on and Copilot-Studio-aware</strong>. It validates that you can plan and configure agent solutions (use cases, environments, conversational design, integrations), integrate and extend agents in <em>Copilot Studio</em> (topics with trigger phrases, generative orchestration, knowledge sources including SharePoint and Dataverse, custom plugins via Power Platform connectors and MCP), and test and manage agents (test pane, analytics, channels, lifecycle, governance, security). Expect scenario questions that show you a Copilot Studio topic configuration or generative-answer setup and ask what to change.
+        AB-620 is <strong>hands-on and Copilot-Studio-aware</strong>. It covers:
+      </p>
+      <ul>
+        <li>Plan and configure agent solutions — use cases, environments, conversational design, integrations</li>
+        <li>Integrate and extend agents in <em>Copilot Studio</em> — trigger-phrase topics, generative orchestration, SharePoint and Dataverse knowledge sources, custom plugins via Power Platform connectors and MCP</li>
+        <li>Test and manage agents — test pane, analytics, channels, lifecycle, governance, security</li>
+      </ul>
+      <p>
+        Expect scenario questions that show you a Copilot Studio topic configuration or generative-answer setup and ask what to change.
       </p>
       <p>
         Microsoft last updated the AB-620 study guide on <strong>21 April 2026</strong>. Every question in Azure Mastery's AB-620 bank is mapped to the current outline. Read the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-620" rel="noopener">official Microsoft study guide</a>.
@@ -496,7 +504,7 @@
       <p class="label-eyebrow section-eyebrow">Study guide updated · 21 April 2026</p>
       <h2 class="display-small section-title">AB-620 exam objectives</h2>
       <p class="section-lede">
-        Three domains from Microsoft's current outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-620" rel="noopener">official study guide</a>; Azure Mastery tags each question so you can see which topics need more practice.
+        Three domains from Microsoft's current outline. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-620" rel="noopener">official study guide</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -527,7 +535,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Covers audience, identity, channel, and governance choices made before any conversation logic gets built.</li>
-                <li>Candidates skip the identity-model decision: a Teams-only agent and a public website agent need different auth models.</li>
+                <li>The identity-model decision gets skipped: a Teams-only agent and a public website agent need different auth models.</li>
                 <li>Learn how a topic calls a flow, a tool, or a custom-prompt node — that's the exam's real question shape.</li>
               </ul>
             </div>
@@ -565,7 +573,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Smallest domain but operational: building a test set, choosing an evaluation method, then packaging the agent for release.</li>
-                <li>Candidates forget environment variables and connection references are what let a pipeline move an agent without manual copying.</li>
+                <li>Environment variables and connection references are what let a pipeline move an agent without manual copying — easy to forget.</li>
                 <li>Trace one agent through a full Power Platform pipeline from dev to production before exam day.</li>
               </ul>
             </div>
@@ -586,7 +594,7 @@
           <h3>Connector vs. MCP tool vs. agent flow</h3>
           <p>Candidates can't tell a connector, an MCP tool, and an agent flow apart when a scenario needs one of the three.</p>
           <ul>
-            <li>The exam is testing whether you can match a stable API, a dynamically discovered schema, or multi-step orchestration to the right tool.</li>
+            <li>A stable API points to a connector, a dynamically discovered schema points to an MCP tool, and multi-step orchestration points to an agent flow.</li>
             <li>Look for the named constraint in the scenario — stability, discovery, or approvals — it picks one of the three for you.</li>
           </ul>
         </article>
@@ -594,7 +602,7 @@
           <h3>Topics handle conversation, flows handle the backend</h3>
           <p>Candidates treat an agent flow as just a topic with extra steps, missing which layer owns a piece of logic.</p>
           <ul>
-            <li>The exam is testing whether you know topics own conversation flow while agent flows own backend orchestration.</li>
+            <li>A topic decides what the agent says next; an agent flow decides what happens in the systems behind it.</li>
             <li>Ask whether the described behaviour is what the agent says or what happens behind the scenes before answering.</li>
           </ul>
         </article>
@@ -602,7 +610,7 @@
           <h3>A2A protocol vs. an embedded sub-agent</h3>
           <p>Candidates read "integrating a Foundry agent" without noticing whether it's a separate A2A agent or an embedded sub-agent.</p>
           <ul>
-            <li>The exam is testing whether you know A2A agents keep separate identities while an embedded sub-agent shares its parent's context.</li>
+            <li>A2A agents keep their own separate identity; an embedded sub-agent shares its parent's context and permissions.</li>
             <li>Check whether the scenario names a standalone endpoint or a component running inside the parent orchestrator.</li>
           </ul>
         </article>
@@ -610,7 +618,7 @@
           <h3>Groundedness rules aren't optional</h3>
           <p>Candidates assume a correct-sounding answer passes, but an uncited response from a connected source counts as ungrounded.</p>
           <ul>
-            <li>The exam is testing whether you treat a missing citation as a grounding failure regardless of whether the content was right.</li>
+            <li>A missing citation counts as a grounding failure on this exam, whatever the underlying answer's accuracy.</li>
             <li>For a "confidently wrong agent" scenario, check the grounding source configuration before blaming the model.</li>
           </ul>
         </article>
@@ -618,7 +626,7 @@
           <h3>Identity choice depends on audience, not habit</h3>
           <p>Candidates default to one identity model out of habit instead of matching it to who or what is calling the agent.</p>
           <ul>
-            <li>The exam is testing whether you can match user-delegated tokens, service principals, or managed identities to the calling audience.</li>
+            <li>User-delegated tokens, service principals, and managed identities each map to a different kind of caller.</li>
             <li>Ask whether a known Entra user or an unauthenticated external caller is making the request before choosing an identity model.</li>
           </ul>
         </article>

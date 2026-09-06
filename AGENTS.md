@@ -108,8 +108,12 @@ re-run `python3 Tools/update-sitemap-lastmod.py` on `main` and commit —
 `warn_retired_markup()` reports hand-edited markup that disagrees with the
 catalogue and fails `--check`. It is what caught AZ-204 sitting in the active
 Azure group a month after it retired, and AB-650 and AI-500 shipping with pages
-but no hub card. The grouping is labelled "Retired & retiring" because a
-non-current exam has not necessarily retired yet.
+but no hub card. The grouping is labelled "Retired & retiring" only while
+`RETIRING` is non-empty (today it reads plain "Retired" — nothing is announced
+as retiring); when an exam is announced as retiring, add it to `RETIRING` in
+both `optimise-marketing-seo.py` and `validate-marketing-seo.py` and switch the
+two homepage summaries (and the `exams/index.html` eyebrow) back to "Retired &
+retiring" — `validate-marketing-seo.py` enforces the wording matches `RETIRING`.
 
 ## Other tools
 

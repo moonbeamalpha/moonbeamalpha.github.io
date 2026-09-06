@@ -514,7 +514,7 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         (r'\b\d+(\s+certification\s+routes)', cp + r'\1'),
         (r'\b\d+(\s+guided\s+certification\s+paths)', cp + r'\1'),
         # ── "Retired & retiring (N)" disclosure summaries (hero + footer) ──
-        (r'(exam-retired-disclosure__summary">Retired &amp; retiring \()\d+(\))',
+        (r'(exam-retired-disclosure__summary">Retired(?: &amp; retiring)? \()\d+(\))',
          r'\g<1>' + str(retired_count) + r'\2'),
         # ── JSON-LD ItemList entity count. This is deliberately NOT exam_count:
         # entity list = sit-able + retired reference pages, not the advertised

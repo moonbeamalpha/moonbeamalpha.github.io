@@ -195,7 +195,7 @@
           {
             "@type": "Question",
             "name": "Which exam do I need to have passed before AZ-400?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Microsoft currently accepts either Azure Administrator Associate (AZ-104) or Azure Developer Associate (AZ-204) alongside AZ-400. Azure Developer Associate retires on 31 July 2026, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Azure Developer Associate (AZ-204) retired on 31 July 2026. An Azure Developer Associate credential earned before that date still satisfies the AZ-400 prerequisite, but new candidates now reach it through Azure Administrator Associate (AZ-104) instead." }
           },
           {
             "@type": "Question",
@@ -248,7 +248,7 @@
         "supply": [
           { "@type": "HowToSupply", "name": "Azure Mastery for iOS or iPadOS" },
           { "@type": "HowToSupply", "name": "AZ-400 exam voucher (USD $165 / approx. £128)" },
-          { "@type": "HowToSupply", "name": "AZ-104 or AZ-204 already passed (required prerequisite for the DevOps Engineer Expert credential)" }
+          { "@type": "HowToSupply", "name": "AZ-104 already passed (or an AZ-204 credential earned before its 31 July 2026 retirement) — required prerequisite for the DevOps Engineer Expert credential" }
         ],
         "step": [
           {
@@ -441,7 +441,7 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AZ-400 exam?</h2>
       <p>
-        AZ-400 is the expert-level exam for the <strong>Microsoft Certified: DevOps Engineer Expert</strong> credential — Microsoft's senior DevOps certification spanning both Azure DevOps and GitHub. Microsoft currently also accepts either <a href="/exams/az-104/">Azure Administrator Associate</a> or <a href="/exams/az-204/">Azure Developer Associate</a>. Azure Developer Associate retires on 31 July 2026, and Microsoft has not yet announced its replacement in the AZ-400 prerequisite list; new candidates should use AZ-104 unless the official credential page changes.
+        AZ-400 is the expert-level exam for the <strong>Microsoft Certified: DevOps Engineer Expert</strong> credential — Microsoft's senior DevOps certification spanning both Azure DevOps and GitHub. <a href="/exams/az-204/">Azure Developer Associate</a> retired on 31 July 2026; an Azure Developer Associate credential earned before that date still satisfies the AZ-400 prerequisite, but new candidates now reach it through <a href="/exams/az-104/">AZ-104 (Azure Administrator Associate)</a> instead.
       </p>
       <p>
         AZ-400 is the broadest exam in the Azure family by service surface — you'll be tested across five DevOps domains, with the build/release pipelines domain alone weighted at <strong>50–55%</strong> of the exam. Expect dual coverage of Azure Pipelines AND GitHub Actions, Azure DevOps Repos AND GitHub repositories, Bicep AND ARM templates, plus security scanning (Microsoft Defender for DevOps, GitHub Advanced Security, Dependabot, CodeQL), monitoring (Azure Monitor, Application Insights, KQL queries), and progressive deployment patterns (blue-green, canary, ring, feature flags via Azure App Configuration).
@@ -455,7 +455,7 @@
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
         <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew annually (Expert)</span></li>
-        <li><span class="exam-format__label">Prerequisite</span><span class="exam-format__value">AZ-104 or AZ-204</span></li>
+        <li><span class="exam-format__label">Prerequisite</span><span class="exam-format__value">AZ-104 (AZ-204 if earned before 31 Jul 2026)</span></li>
       </ul>
     </section>
 
@@ -612,7 +612,7 @@
         The adaptive <strong>study plan</strong> rebuilds itself from your answer history. Get a release-gate or deployment-strategy scenario wrong? You'll see another build-and-release-pipeline question in the next session. Master "branch-protection vs PR validation" three sessions running and the engine backs off, surfacing fresh security-and-compliance or instrumentation scenarios. The plan optimises for the gap between where you are and the 700 pass score, not for blind volume.
       </p>
       <p>
-        <strong>Knowledge decay tracking</strong> matters more for AZ-400 than for foundational exams — five domains is a lot to retain, and the topic you mastered three weeks into your study window is the topic you'll forget by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
+        AZ-400's build/release pipelines domain alone is worth over half the exam, which means most study time goes there and the other four domains quietly fade — instrumentation strategy and communications planning are easy to nail once and then not touch again for a month. <strong>Knowledge decay tracking</strong> watches every domain's curve independently, not just the one you're spending the most hours in, and surfaces the smaller domains again before they slip. The padlock icon on the Today screen marks what's due; weak-spot drills pull from it automatically.
       </p>
       <p>
 Five domains at wildly uneven weights make the Exam Simulator's job harder than most — pull an even spread and you'd over-practise instrumentation and under-practise pipelines. So the app builds its 100-minute run against the 27 July 2026 domain split instead, keeps flag-and-review switched off to match the paper, and draws every item from original AZ-400 practice content rather than reproducing anything Microsoft publishes.
@@ -802,7 +802,7 @@ Five domains at wildly uneven weights make the Exam Simulator's job harder than 
         <details class="faq">
           <summary>Which exam do I need to have passed before AZ-400?</summary>
           <div class="faq__answer">
-            <p>Microsoft currently accepts either <a href="/exams/az-104/">Azure Administrator Associate (AZ-104)</a> or <a href="/exams/az-204/">Azure Developer Associate (AZ-204)</a> alongside AZ-400. Azure Developer Associate retires on <strong>31 July 2026</strong>, and Microsoft has not yet announced a replacement AZ-400 prerequisite, so new candidates should choose AZ-104 unless Microsoft updates the official credential page.</p>
+            <p><a href="/exams/az-204/">Azure Developer Associate (AZ-204)</a> retired on <strong>31 July 2026</strong>. An Azure Developer Associate credential earned before that date still satisfies the AZ-400 prerequisite, but new candidates now reach it through <a href="/exams/az-104/">Azure Administrator Associate (AZ-104)</a> instead.</p>
           </div>
         </details>
         <details class="faq">
@@ -878,7 +878,7 @@ Five domains at wildly uneven weights make the Exam Simulator's job harder than 
       <p class="label-eyebrow section-eyebrow">Where AZ-400 fits</p>
       <h2 class="display-small section-title">Certification path that includes AZ-400</h2>
       <p class="section-lede">
-        AZ-400 is the expert-level exam for Microsoft Certified: DevOps Engineer Expert. Microsoft currently accepts <a href="/exams/az-104/">Azure Administrator Associate</a> or the retiring <a href="/exams/az-204/">Azure Developer Associate</a>. AZ-204's credential retires on 31 July 2026; Microsoft has not yet published a replacement prerequisite for this path.
+        AZ-400 is the expert-level exam for Microsoft Certified: DevOps Engineer Expert. <a href="/exams/az-204/">Azure Developer Associate</a>'s credential retired on 31 July 2026 — a credential earned before that date still satisfies the AZ-400 prerequisite, but new candidates now reach it through <a href="/exams/az-104/">Azure Administrator Associate</a> instead.
       </p>
       <div class="cert-paths">
 
@@ -904,7 +904,7 @@ Five domains at wildly uneven weights make the Exam Simulator's job harder than 
               <span class="cert-path__or">or</span>
               <a class="cert-path__chip" href="/exams/az-204/" data-cert-level="associate">
                 <span class="cert-path__chip-code">AZ-204</span>
-                <span class="cert-path__chip-role">retires 31 July 2026</span>
+                <span class="cert-path__chip-role">retired 31 July 2026</span>
               </a>
             </li>
             <li class="cert-path__station">
@@ -930,13 +930,13 @@ Five domains at wildly uneven weights make the Exam Simulator's job harder than 
       <p class="label-eyebrow section-eyebrow">Prerequisites + sibling Expert</p>
       <h2 class="display-small section-title">Related certifications</h2>
       <p class="section-lede">
-        AZ-400 sits at the Expert tier and currently accepts Azure Administrator Associate or the retiring Azure Developer Associate credential. New candidates should use <a href="/exams/az-104/">AZ-104</a> unless Microsoft announces an updated prerequisite. Architects often add the sibling <a href="/exams/az-305/">AZ-305</a> exam.
+        AZ-400 sits at the Expert tier. Azure Developer Associate satisfied its prerequisite until it retired on 31 July 2026; new candidates now reach that prerequisite through <a href="/exams/az-104/">AZ-104</a> instead. Architects often add the sibling <a href="/exams/az-305/">AZ-305</a> exam.
       </p>
       <nav class="related-grid" aria-label="Related certifications">
         <a class="related-card" href="/exams/az-204/">
           <span class="related-card__code">AZ-204</span>
           <span class="related-card__name">Developing Solutions for Microsoft Azure</span>
-          <span class="related-card__hint">Recommended developer-track prerequisite — most AZ-400 candidates come from here. 405 practice questions. Note: AZ-204 retires 31 July 2026.</span>
+          <span class="related-card__hint">Recommended developer-track prerequisite — most AZ-400 candidates come from here. 405 practice questions. Note: AZ-204 retired 31 July 2026; only credentials earned before then satisfy this route.</span>
         </a>
         <a class="related-card" href="/exams/az-305/">
           <span class="related-card__code">AZ-305</span>

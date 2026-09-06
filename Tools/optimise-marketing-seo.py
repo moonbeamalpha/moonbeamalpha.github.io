@@ -63,11 +63,12 @@ SEO_UPDATED_OVERRIDES = {
     "DP-700": "2026-09-05",
     "DP-750": "2026-09-05",
     "DP-800": "2026-09-05",
-    # Wave-2b de-templating pass (AI/BI cluster).
-    "AI-300": "2026-09-05",
-    "AI-500": "2026-09-05",
-    "AI-901": "2026-09-05",
-    "PL-300": "2026-09-05",
+    # Wave-2b de-templating pass (AI/BI cluster). W4 review fixes (18c9997)
+    # substantively edited these on 09-06; dateModified had been left at 09-05.
+    "AI-300": "2026-09-06",
+    "AI-500": "2026-09-06",
+    "AI-901": "2026-09-06",
+    "PL-300": "2026-09-06",
     # Wave-2b de-templating pass (Azure role cluster).
     "AZ-305": "2026-09-06",
     "AZ-400": "2026-09-06",

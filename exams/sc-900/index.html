@@ -206,7 +206,7 @@
             "name": "What question formats come up on SC-900?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that spread: mostly single-select, a meaningful mix of scenario and multi-select questions, plus a smaller share of drag-to-match, hot-area, dropdown, case-study, and drag-and-drop formats."
+              "text": "SC-900's assessed time is 45 minutes. Microsoft does not promise an exact format in advance, but says most Fundamentals exams contain 35–50 questions. Azure Master's original security-fundamentals bank uses single-select, scenario, multi-select, drag-to-match, hot-area, dropdown, case-study, and drag-and-drop practice."
             }
           },
           {
@@ -506,7 +506,7 @@
         Microsoft updated the SC-900 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-900 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="SC-900 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">Typically 35–50; varies</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">45 minutes (65 min seat)</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $99 (≈ £77 UK)</span></li>
@@ -631,8 +631,8 @@
           <h3>Authentication and authorization answer two different questions</h3>
           <p>Candidates use the two terms almost interchangeably in conversation, then mix them up the moment the exam tests them.</p>
           <ul>
-            <li>MFA and passwordless sign-in sit under authentication; Conditional Access and RBAC sit under authorization instead.</li>
-            <li>Ask which question the scenario answers, who you are or what you're allowed to do, before picking either term.</li>
+            <li>MFA and passwordless methods authenticate identity; RBAC authorises actions. Conditional Access is the policy engine that evaluates signals and can require stronger authentication or block access.</li>
+            <li>Ask whether the scenario is proving identity, assigning permissions, or evaluating access conditions before choosing a feature.</li>
           </ul>
         </article>
         <article class="trap">
@@ -647,8 +647,8 @@
           <h3>Microsoft Sentinel and Defender XDR cover different scopes</h3>
           <p>Both correlate security signal, so candidates treat Sentinel as just another Defender product rather than a separate platform.</p>
           <ul>
-            <li>Sentinel ingests non-Microsoft sources and automates response; Defender XDR stays scoped to Microsoft's own telemetry.</li>
-            <li>Pick Sentinel whenever a scenario mentions third-party log sources or custom automation playbooks.</li>
+            <li>Sentinel is a broad SIEM and automation platform for Microsoft and non-Microsoft data. Defender XDR correlates incidents across Defender products and integrates with Sentinel.</li>
+            <li>Pick Sentinel when the scenario centres on cross-environment log ingestion, analytics rules, or playbooks; pick Defender XDR for unified investigation across Defender workloads.</li>
           </ul>
         </article>
         <article class="trap">
@@ -945,7 +945,7 @@
         <details class="faq">
           <summary>What question formats come up on SC-900?</summary>
           <div class="faq__answer">
-            <p>40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that spread: mostly single-select, a meaningful mix of scenario and multi-select questions, plus a smaller share of drag-to-match, hot-area, dropdown, case-study, and drag-and-drop formats.</p>
+            <p>SC-900's assessed time is 45 minutes. Microsoft does not promise an exact format in advance, but says most Fundamentals exams contain 35–50 questions. Azure Master's original security-fundamentals bank uses single-select, scenario, multi-select, drag-to-match, hot-area, dropdown, case-study, and drag-and-drop practice.</p>
           </div>
         </details>
         <details class="faq">

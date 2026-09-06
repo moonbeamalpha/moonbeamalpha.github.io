@@ -199,7 +199,7 @@
             "name": "Does the AZ-104 certification expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — Microsoft Associate certifications including AZ-104 expire annually. Renewal is a free 25–30 question online assessment on Microsoft Learn, taken within six months of your expiry date. Fundamentals certs such as AZ-900 don't expire the same way."
+              "text": "Yes — Microsoft Associate certifications including AZ-104 expire annually. Renewal is a free, short online assessment on Microsoft Learn, taken within six months of your expiry date. Fundamentals certs such as AZ-900 don't expire the same way."
             }
           },
           {
@@ -708,7 +708,7 @@
           <h3>NSGs and application security groups aren't two names for the same thing</h3>
           <p>An application security group looks like a firewall rule on its own, but it filters nothing until an NSG references it.</p>
           <ul>
-            <li>An NSG is the only object that actually filters traffic; an ASG just groups VMs by role for an NSG rule to reference.</li>
+            <li>Of these two objects, the NSG filters traffic; the ASG groups VM network interfaces by role for an NSG rule to reference.</li>
             <li>Check for an NSG rule actually referencing the ASG before assuming any traffic is being filtered.</li>
           </ul>
         </article>
@@ -716,16 +716,16 @@
           <h3>Availability sets, availability zones, and scale sets protect against different failures</h3>
           <p>These three sound interchangeable, but each guards against a different scale of hardware or datacentre failure.</p>
           <ul>
-            <li>An availability set spans fault domains in one datacentre, a zone spans separate datacentres, and a scale set adds or removes instances automatically.</li>
+            <li>An availability set spreads VMs across fault and update domains; deploying across availability zones adds datacentre-level isolation, while a scale set manages a group of VMs and can autoscale it.</li>
             <li>Match "protect against a datacentre outage" to zones specifically — this is one of the exam's most common misses.</li>
           </ul>
         </article>
         <article class="trap">
-          <h3>Service endpoints still leave a public IP; private endpoints don't</h3>
+          <h3>Private endpoints add a private path; public access is a separate setting</h3>
           <p>A service endpoint keeps traffic on the Azure backbone, but the resource still keeps its public IP unless firewalled off.</p>
           <ul>
-            <li>A private endpoint assigns the resource a private IP inside your VNet and removes the public endpoint outright.</li>
-            <li>For a "no public endpoint at all" requirement, pick a private endpoint — a service endpoint alone won't satisfy it.</li>
+            <li>A private endpoint assigns a network interface a private IP inside your VNet, but it does not automatically disable the resource's public network access.</li>
+            <li>For a "no public access" requirement, use a private endpoint and disable or restrict the service's public network access; a service endpoint alone won't satisfy it.</li>
           </ul>
         </article>
       </div>
@@ -1048,7 +1048,7 @@
         <details class="faq">
           <summary>Does the AZ-104 certification expire?</summary>
           <div class="faq__answer">
-            <p>Yes — Microsoft Associate certifications including AZ-104 expire annually. Renewal is a free 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>, taken within six months of your expiry date. Fundamentals certs such as <a href="/exams/az-900/">AZ-900</a> don't expire the same way.</p>
+            <p>Yes — Microsoft Associate certifications including AZ-104 expire annually. Renewal is a free, short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>, taken within six months of your expiry date. Fundamentals certs such as <a href="/exams/az-900/">AZ-900</a> don't expire the same way.</p>
           </div>
         </details>
         <details class="faq">

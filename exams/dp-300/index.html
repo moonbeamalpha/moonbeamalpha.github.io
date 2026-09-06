@@ -223,7 +223,7 @@
             "name": "Is a DP-300 pass permanent, or does it lapse?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free 25–30 question online assessment on Microsoft Learn within the six months before expiry. Fundamentals certs such as AZ-900 are different — those don't expire at all."
+              "text": "It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free, short online assessment on Microsoft Learn within the six months before expiry. Fundamentals certs such as AZ-900 are different — those don't expire at all."
             }
           },
           {
@@ -674,10 +674,10 @@
       </p>
       <div class="traps">
         <article class="trap">
-          <h3>Azure SQL Database can't run cross-database queries, linked servers, SQL Server Agent, or CLR code that a scenario names.</h3>
+          <h3>Azure SQL Database doesn't expose the instance-scoped feature set of SQL Server or Managed Instance.</h3>
           <ul>
-            <li>Spotting an instance-scoped feature and ruling out a single Azure SQL Database immediately is the real skill tested.</li>
-            <li>Check for cross-database queries, linked servers, Agent jobs, or CLR before you weigh cost or management overhead.</li>
+            <li>Linked servers, SQL Server Agent, and CLR are strong signals to consider Managed Instance or SQL Server on an Azure VM.</li>
+            <li>Cross-database access is possible through Elastic Query external tables, not ordinary three- or four-part names.</li>
           </ul>
         </article>
         <article class="trap">
@@ -702,10 +702,10 @@
           </ul>
         </article>
         <article class="trap">
-          <h3>SQL Server Agent has no equivalent on a standalone Azure SQL Database.</h3>
+          <h3>Azure SQL Database has no built-in SQL Server Agent.</h3>
           <ul>
-            <li>A single or pooled Azure SQL Database needs an elastic job agent to run any scheduled T-SQL at all.</li>
-            <li>Confirm the deployment target first: Agent works on Managed Instance and SQL VM, elastic jobs work on Azure SQL Database.</li>
+            <li>Elastic Jobs is Azure SQL's managed service for running scheduled T-SQL across databases; external schedulers are another option.</li>
+            <li>Confirm the deployment target first: SQL Server Agent is available on Managed Instance and SQL Server on Azure VMs, while Elastic Jobs targets Azure SQL Database.</li>
           </ul>
         </article>
       </div>
@@ -1031,7 +1031,7 @@
         <details class="faq">
           <summary>Is a DP-300 pass permanent, or does it lapse?</summary>
           <div class="faq__answer">
-            <p>It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free 25–30 question online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six months before expiry. Fundamentals certs such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire at all.</p>
+            <p>It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free, short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six months before expiry. Fundamentals certs such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire at all.</p>
           </div>
         </details>
         <details class="faq">

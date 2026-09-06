@@ -26,7 +26,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### Azure infrastructure & solutions (5)
 
-- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 364 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills outline updated 14 January 2026.
+- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 364 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills measured as of 20 July 2026.
 
 - [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 481 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
 
@@ -34,11 +34,11 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-204 — Developing Solutions for Microsoft Azure](https://azuremastery.app/exams/az-204/): 405 in-app practice questions. Associate-tier developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. **⚠ Microsoft retired AZ-204 on 31 July 2026** — it can no longer be scheduled; the current AI cloud developer route is AI-200. Five developer domains: compute (25–30%), storage (15–20%), security (15–20%), monitor/troubleshoot/optimize (5–10%), connect/consume services (20–25%). Heavy on SDK code samples in C#/Python/JavaScript. Skills outline updated 14 January 2026.
 
-- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 467 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 OR AZ-204. Skills outline updated 24 April 2026.
+- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 467 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 or an active Azure Developer Associate credential earned via the retired AZ-204 route. Skills measured as of 27 July 2026.
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Microsoft retired AZ-500 on 31 August 2026** — it can no longer be scheduled; the successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
-- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 569 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills outline updated 24 April 2026.
+- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 569 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills measured as of 27 July 2026.
 
 ### AI, Machine Learning & Copilot Agents (11)
 
@@ -50,27 +50,27 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AI-103 — Developing AI Apps and Agents on Azure](https://azuremastery.app/exams/ai-103/): 557 in-app practice questions for the Azure AI Apps and Agents Developer Associate credential. 100-min duration, pass score 700/1000. Five domains: plan/manage an Azure AI solution (25–30%), generative and agentic solutions (30–35%), computer vision (10–15%), text analysis (10–15%), and information extraction (10–15%). Requires Python and Microsoft Foundry experience. Skills measured as of 16 April 2026.
 
-- [AI-200 — Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 220 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Skills outline updated March 2026.
+- [AI-200 — Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 220 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Study guide updated 5 May 2026.
 
-- [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 362 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Skills outline updated March 2026.
+- [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 362 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Study guide updated 26 July 2026.
 
-- [AI-500 — Microsoft Multi-Agent AI Solutions Expert](https://azuremastery.app/exams/ai-500/): 452 in-app practice questions. Expert-tier cert, launched in beta in 2026. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: architect multi-agent solutions (15–20%), develop multi-agent solutions in Azure (30–35%), evaluate, optimize, and monitor multi-agent solutions (20–25%), and secure, govern, and deploy multi-agent solutions (20–25%). Covers Microsoft Foundry, the Microsoft Agent Framework, orchestration patterns, A2A and MCP protocols, agent observability, and Microsoft Entra Agent ID.
+- [AI-500 — Microsoft Multi-Agent AI Solutions Expert](https://azuremastery.app/exams/ai-500/): 452 in-app practice questions. Expert-tier cert, launched in beta in 2026. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: architect multi-agent solutions (15–20%), develop multi-agent solutions in Azure (30–35%), evaluate, optimize, and monitor multi-agent solutions (20–25%), and secure, govern, and deploy multi-agent solutions (20–25%). Covers Microsoft Foundry, the Microsoft Agent Framework, orchestration patterns, A2A and MCP protocols, agent observability, and Microsoft Entra Agent ID. Study guide updated 16 July 2026.
 
 - [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 424 in-app practice questions. Associate-tier cert with a 120-minute assessment for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Microsoft's study guide was last updated 15 May 2026. Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
 
 - [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 387 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
 
-- [AB-650 — Microsoft AI Services Administrator Associate](https://azuremastery.app/exams/ab-650/): 506 in-app practice questions. Associate-tier admin cert, launched in beta in 2026. 120-min duration, 40–60 questions, pass score 700/1000. Three domains: configure and manage Microsoft 365 tenants and workloads (20–25%), govern and secure Microsoft 365 tenants and workloads (40–45%), and manage and secure AI services in Microsoft 365 (35–40%). For Microsoft 365 administrators taking on Copilot, agent governance with Agent 365 and Microsoft Entra Agent ID, and Microsoft Purview data security for AI.
+- [AB-650 — Microsoft AI Services Administrator Associate](https://azuremastery.app/exams/ab-650/): 506 in-app practice questions. Associate-tier admin cert, launched in beta in 2026. 120-min duration, 40–60 questions, pass score 700/1000. Three domains: configure and manage Microsoft 365 tenants and workloads (20–25%), govern and secure Microsoft 365 tenants and workloads (40–45%), and manage and secure AI services in Microsoft 365 (35–40%). For Microsoft 365 administrators taking on Copilot, agent governance with Agent 365 and Microsoft Entra Agent ID, and Microsoft Purview data security for AI. Study guide updated 27 July 2026.
 
-- [AB-731 — Microsoft AI Transformation Leader](https://azuremastery.app/exams/ab-731/): 335 in-app practice questions. Beginner-tier leadership cert (no-code), does not expire, USD $99 voucher. 45-min duration (65-min seat), 30–40 mixed-format questions, pass score 700/1000. Three domains: identify the business value of generative AI solutions (35–40%), identify benefits/capabilities of Microsoft's AI apps and services (35–40%), identify an implementation and adoption strategy (20–25%). For business decision-makers, programme leads, and AI champions — not builders. Skills outline 2026.
+- [AB-731 — Microsoft AI Transformation Leader](https://azuremastery.app/exams/ab-731/): 335 in-app practice questions. Beginner-tier leadership cert (no-code), does not expire, USD $99 voucher. 45-min duration (65-min seat), 30–40 mixed-format questions, pass score 700/1000. Three domains: identify the business value of generative AI solutions (35–40%), identify benefits/capabilities of Microsoft's AI apps and services (35–40%), identify an implementation and adoption strategy (20–25%). For business decision-makers, programme leads, and AI champions — not builders. Study guide updated 22 July 2026.
 
-- [AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals](https://azuremastery.app/exams/ab-900/): 323 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 35–45 mixed-format questions, pass score 700/1000. Three domains: identify core features/objects of Microsoft 365 (30–35%), data protection and governance for M365 and Copilot (35–40%), basic admin tasks for Copilot and agents (25–30%). For IT admins deploying and governing Copilot. Skills outline published May 2026.
+- [AB-900 — Microsoft 365 Copilot and Agent Administration Fundamentals](https://azuremastery.app/exams/ab-900/): 323 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: identify core features/objects of Microsoft 365 (30–35%), data protection and governance for M365 and Copilot (35–40%), basic admin tasks for Copilot and agents (25–30%). For IT admins deploying and governing Copilot. Skills measured as of 22 July 2026.
 
-- [AB-100 — Microsoft Agentic AI Business Solutions Architect](https://azuremastery.app/exams/ab-100/): 443 in-app practice questions. Expert-tier architect cert, renews annually, USD $165 voucher. 100-min duration, 40–60 mixed-format questions, pass score 700/1000. Validates architecting multi-agent enterprise solutions with the Microsoft 365 Copilot extensibility framework, Microsoft Agent Framework, MCP extensibility, Computer Use, agent feed, and DSPM for AI. Skills outline published May 2026.
+- [AB-100 — Microsoft Agentic AI Business Solutions Architect](https://azuremastery.app/exams/ab-100/): 443 in-app practice questions. Expert-tier architect cert, renews annually, USD $165 voucher. 100-min duration, 40–60 mixed-format questions, pass score 700/1000. Validates architecting multi-agent enterprise solutions with the Microsoft 365 Copilot extensibility framework, Microsoft Agent Framework, MCP extensibility, Computer Use, agent feed, and DSPM for AI. Skills measured as of 22 July 2026.
 
 ### Data (5)
 
-- [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 346 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills outline updated 1 November 2024.
+- [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 346 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills measured as of 21 July 2026.
 
 - [DP-100 — Designing and Implementing a Data Science Solution on Azure (retired)](https://azuremastery.app/exams/dp-100/): 350 in-app practice questions retained for reference. Microsoft retired DP-100 on 1 June 2026; it can no longer be scheduled.
 
@@ -84,23 +84,23 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### Security, Compliance & Identity (5)
 
-- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 397 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills outline updated 7 November 2025.
+- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 397 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills measured as of 28 July 2026.
 
-- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 452 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills outline updated 27 April 2026.
+- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 452 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills measured as of 28 July 2026.
 
-- [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 374 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills outline updated 16 April 2026.
+- [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 374 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills measured as of 28 July 2026.
 
 - [SC-300 — Microsoft Identity and Access Administrator](https://azuremastery.app/exams/sc-300/): 428 in-app practice questions. Associate-tier identity admin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates implementing identities in Microsoft Entra ID, implementing authentication and access management (conditional access, MFA, PIM, passwordless), implementing access management for apps, and planning/implementing identity governance. Skills outline updated 27 April 2026.
-- [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 432 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The successor to AZ-500 (which Microsoft retired on 31 August 2026); beta from May 2026, exam expected July 2026. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Skills outline published May 2026.
+- [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 432 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The current successor to retired AZ-500. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Study guide updated 13 May 2026.
 
 ### Power Platform (2)
 
-- [PL-300 — Microsoft Power BI Data Analyst](https://azuremastery.app/exams/pl-300/): 378 in-app practice questions. Associate-tier data analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates preparing data (Power Query M, data profiling), modelling data (star schemas, DAX measures, calculation groups, row-level security), visualising and analysing data (Power BI reports, dashboards, AI visuals), and deploying/maintaining assets (workspaces, deployment pipelines, refresh, sensitivity labels). Skills outline updated 24 April 2026.
-- [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 328 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration, 40–60 questions, pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
+- [PL-300 — Microsoft Power BI Data Analyst](https://azuremastery.app/exams/pl-300/): 378 in-app practice questions. Associate-tier data analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates preparing data (Power Query M, data profiling), modelling data (star schemas, DAX measures, calculation groups, row-level security), visualising and analysing data (Power BI reports, dashboards, AI visuals), and deploying/maintaining assets (workspaces, deployment pipelines, refresh, sensitivity labels). Skills measured as of 20 April 2026.
+- [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 328 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
 
 ### GitHub (2)
-- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 356 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards.
-- [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 347 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community.
+- [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 356 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards. Skills measured as of 7 August 2026.
+- [GH-900 — GitHub Foundations](https://azuremastery.app/exams/gh-900/): 347 in-app practice questions. Beginner-tier GitHub certification covering Git and GitHub basics, working with repositories, collaboration (issues, pull requests, discussions), modern development practices (GitHub Actions, Codespaces, Copilot), project management, privacy/security/administration, and the GitHub community. Skills measured as of January 2026.
 
 ## Guides
 
@@ -224,7 +224,7 @@ Exam domains:
 Q: How much does the AB-100 exam cost?
 A: The AB-100 voucher costs USD $165 in the United States (around £128 in the UK; pricing varies by region). As an Expert-tier exam, AB-100 is rarely included in free-voucher promotions — if one appears around Microsoft Build or Microsoft Ignite, it's worth grabbing. Renewal itself stays free.
 Q: Does the AB-100 certification expire?
-A: Yes. Like Microsoft's other role-based certifications, AB-100 expires annually, with a free 25–30 question renewal assessment on Microsoft Learn available in the six-month window before expiry — scoped to whatever changed since you last certified (Foundry, Copilot Studio MCP features, Dynamics 365 orchestration, and similar). AB-900, the Fundamentals-tier exam, doesn't expire.
+A: Yes. Like Microsoft's other role-based certifications, AB-100 expires annually, with a free, short online renewal assessment on Microsoft Learn available in the six-month window before expiry — scoped to recent skills-outline updates. AB-900, the Fundamentals-tier exam, doesn't expire.
 Q: What is the AB-100 retake policy if I fail?
 A: Given how broad AB-100's syllabus is, treat a fail as a signal to target the weakest domain rather than rebook immediately. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months, each needing a fresh voucher.
 Q: What does the AB-100 exam format look like?
@@ -278,7 +278,7 @@ Exam domains:
 Q: How much does the AB-620 exam cost?
 A: The AB-620 voucher costs USD $165 in the United States (around £128 in the UK; pricing varies by region). Watch for occasional free-voucher promotions around Microsoft Build or Microsoft Ignite — Microsoft doesn't run them year-round. Renewal itself is free.
 Q: Does the AB-620 certification expire?
-A: Yes — AB-620 expires annually like every Microsoft Associate certification. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry and scoped to whatever changed in the outline since you last certified. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
+A: Yes — AB-620 expires annually like every Microsoft Associate certification. Renewal is a free, short online assessment on Microsoft Learn, available in the six-month window before expiry and scoped to recent skills-outline updates. (Fundamentals certifications such as AZ-900 are different — those don't expire.)
 Q: What is the AB-620 retake policy if I fail?
 A: Retake timing scales up with each failed attempt, and every attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: What does the AB-620 exam format look like?
@@ -307,7 +307,7 @@ A: Microsoft prices AB-650 by region and hasn't published a flat beta fee — ch
 Q: Does the AB-650 certification expire?
 A: Yes. Associate certifications including AB-650 expire annually, renewed free through a short online assessment on Microsoft Learn within the six-month window before expiry. Fundamentals certifications such as AB-900 are different — those don't expire.
 Q: What is the AB-650 retake policy if I fail?
-A: AB-650's beta status changes this for now. During the beta: Microsoft holds retakes until the exam goes fully live. Once live: a 24-hour wait for the first retake, 14-day waits for the second and third. Cap: five attempts per rolling 12 months, each needing its own voucher.
+A: AB-650's beta status changes this for now. During the beta: you can take the exam only once. If you do not pass, you can retake it after the exam becomes generally available; then the standard 24-hour first-retake and 14-day later-retake waits apply. Cap: five attempts per rolling 12 months, each needing its own voucher.
 Q: How long should I study for AB-650?
 A: Four to eight weeks is typical if you already administer Microsoft 365 tenants and Microsoft Entra ID. Spend longer if Purview, Conditional Access, Agent 365, or Microsoft Entra Agent ID are unfamiliar. Azure Mastery's readiness gauge is the better signal for when to book.
 Q: AB-650 vs AB-620 — administer or build?
@@ -361,9 +361,9 @@ A: Yes. AB-900 often gives an object, a mailbox setting, a Teams policy, a Share
 Q: AB-900 vs SC-900 — which should I take first?
 A: Different scopes. SC-900 is the broad Microsoft security overview: Entra, Defender, Purview, identity. AB-900 is narrower and practical, focused on M365 Copilot administration, with Purview coverage scoped to the Copilot threat surface. Passed SC-900 already? AB-900 feels like an extension. New to both? Start with AB-900 if your role is Copilot-focused.
 Q: What question formats should I expect on AB-900?
-A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that spread: mostly single-select, a meaningful slice of scenario-based and yes/no questions, and a smaller mix of multi-select, drag-to-match, hot-area, drag-and-drop, dropdown, and case-study formats.
+A: Most Microsoft Fundamentals exams contain 35–50 questions, but the exact count and formats vary by sitting. Azure Mastery's original practice bank includes single-select, scenario, yes/no, multi-select, drag-to-match, hot-area, drag-and-drop, dropdown, and case-study interactions.
 Q: What's the AB-900 exam fee, and does it vary by region?
-A: The voucher costs USD $99 in the United States, around £75 in the UK. Microsoft regularly offers free vouchers around events like Build and Ignite for Fundamentals certifications, so check your Learn profile before booking. Fundamentals certifications never expire, so there's no annual renewal cost.
+A: The listed US price is USD $99, while regional pricing and promotions can change. Check Microsoft's exam page and current offers before booking. Fundamentals certifications never expire, so there's no annual renewal cost.
 Q: Once earned, does an AB-900 credential ever lapse?
 A: No. AB-900, like other Microsoft Fundamentals certifications (AZ-900, AI-901, SC-900, DP-900), never expires once earned. Associate and Specialty certifications differ: those require annual renewal on Microsoft Learn.
 Q: DSPM for AI vs standard DLP — how does AB-900 tell them apart?
@@ -416,7 +416,7 @@ Exam domains:
 Q: How much does the AI-103 exam cost?
 A: The AI-103 voucher costs USD $165 in the United States (around £128 in the UK; regional pricing varies). Because AI-103 is a role-based Associate exam rather than a Fundamentals-tier one, Microsoft rarely bundles it into free promotional vouchers — watch for occasional offers around Microsoft Build or Microsoft Ignite instead. Renewal itself is free.
 Q: Does the AI-103 certification expire?
-A: Yes — like every Microsoft Associate certification, AI-103 expires annually. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry, and it's scoped to whatever changed in the outline since you last certified. AI-901, the Fundamentals-tier exam, doesn't expire — only role-based certifications like AI-103 do.
+A: Yes — like every Microsoft Associate certification, AI-103 expires annually. Renewal is a free, short online assessment on Microsoft Learn, available in the six-month window before expiry and scoped to recent skills-outline updates. AI-901, the Fundamentals-tier exam, doesn't expire — only role-based certifications like AI-103 do.
 Q: What is the AI-103 retake policy if I fail?
 A: How much time you need before retaking AI-103 depends on your attempt number; every attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: What does the AI-103 exam format look like?
@@ -444,7 +444,7 @@ Exam domains:
 Q: How much does the AI-200 exam cost?
 A: The AI-200 voucher is USD $165 in the United States, around £128 in the UK; regional pricing varies. Watch for free-voucher promotions around Microsoft Build or Microsoft Ignite. Renewal is free, but it's an annual Associate certification, so factor that into long-term cost planning.
 Q: Does the AI-200 certification expire?
-A: Yes. Microsoft Associate certifications including AI-200 expire annually. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry. Fundamentals certifications like AZ-900 don't expire.
+A: Yes. The AI-200 Associate credential has one-year validity. During its final six months, you can extend it free by completing the current online renewal assessment in Microsoft Learn; Microsoft doesn't publish a fixed item count. Fundamentals credentials such as AZ-900 do not have this requirement.
 Q: What is the AI-200 retake policy if I fail?
 A: Waiting times step up after each fail, and every attempt needs a fresh voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: How long should I study for AI-200?
@@ -479,7 +479,7 @@ A: Microsoft sets no mandatory prerequisite exam for AI-300. Its published audie
 Q: What format is the AI-300 exam?
 A: Like most Associate exams, AI-300 runs a general 40–60 question format that Microsoft varies by sitting. Azure Mastery's bank leans on single-answer and scenario-based items for most of its weight, then rounds out with drag-to-match, dropdown-select, and hot-area questions plus linked case studies.
 Q: Is AI-300 a permanent credential, or does it need renewing?
-A: It needs renewing. Microsoft Associate certifications including AI-300 expire annually. Renewal is free: a 25–30 question online assessment on Microsoft Learn within the six months before expiry. Fundamentals certifications such as AZ-900 don't expire.
+A: It needs renewing. Microsoft Associate certifications including AI-300 expire annually. Renewal is a free, short online assessment on Microsoft Learn within the six months before expiry. Fundamentals certifications such as AZ-900 don't expire.
 Q: What does the AI-300 exam voucher cost?
 A: The AI-300 voucher is USD $165 in the United States, or around £128 in the UK. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking. Renewal itself is free, but it happens every year.
 Q: How soon can I resit AI-300 after a fail?
@@ -579,7 +579,7 @@ Exam domains:
 Q: How much does the AZ-104 exam cost?
 A: The AZ-104 voucher costs USD $165 in the United States, or around £128 in the UK. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite — check your Learn profile before booking. Renewal afterwards is free.
 Q: Does the AZ-104 certification expire?
-A: Yes — Microsoft Associate certifications including AZ-104 expire annually. Renewal is a free 25–30 question online assessment on Microsoft Learn, taken within six months of your expiry date. Fundamentals certs such as AZ-900 don't expire the same way.
+A: Yes — Microsoft Associate certifications including AZ-104 expire annually. Renewal is a free, short online assessment on Microsoft Learn, taken within six months of your expiry date. Fundamentals certs such as AZ-900 don't expire the same way.
 Q: What is the AZ-104 retake policy if I fail?
 A: Retake timing depends on your attempt number, and each attempt needs a new voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: How long should I study for AZ-104?
@@ -642,7 +642,7 @@ A: Business continuity, despite being the smallest domain by weight. Candidates 
 Q: What's the current AZ-305 exam voucher price?
 A: The AZ-305 voucher is USD $165 in the United States, or around £128 in the UK — pricing varies by region. The Expert-tier certification it unlocks also needs annual renewal, free and online via Microsoft Learn.
 Q: Does the Solutions Architect Expert badge need renewing?
-A: Yes. Expert certifications including Azure Solutions Architect Expert expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.
+A: Yes. Expert certifications including Azure Solutions Architect Expert expire annually. Renewal is a free, short online assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.
 Q: I didn't pass AZ-305 — how soon can I try again?
 A: Not immediately, and each sitting needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Realistically, how many weeks does AZ-305 prep take?
@@ -663,7 +663,7 @@ A: Azure Developer Associate (AZ-204) retired on 31 July 2026. An Azure Develope
 Q: What's the going rate for an AZ-400 exam attempt?
 A: The AZ-400 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft sometimes runs free-voucher promotions around Build or Ignite. The DevOps Engineer Expert tier also needs annual renewal, free and online, once earned.
 Q: Will my DevOps Engineer Expert badge lapse if I don't renew?
-A: Yes. Expert certifications including DevOps Engineer Expert expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.
+A: Yes. Expert certifications including DevOps Engineer Expert expire annually. Renewal is a free, short online assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.
 Q: If I fail AZ-400, how long before I can retake it?
 A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: What's a realistic AZ-400 study timeline?
@@ -720,7 +720,7 @@ A: The AZ-700 voucher is USD $165 in the US, or around £128 in the UK — prici
 Q: Does AZ-700 overlap with cloud security certs like SC-500?
 A: A little, but the roles differ. AZ-700 treats network security (Firewall, NSGs, WAF) as one domain among five. SC-500 applies security controls across an entire cloud and AI estate, well beyond networking. Take AZ-700 for network engineering depth; add SC-500 for end-to-end cloud security.
 Q: Does the AZ-700 badge need renewing every year?
-A: Yes. Associate certifications including AZ-700 expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date. Fundamentals certs like AZ-900 are different — those never expire.
+A: Yes. Associate certifications including AZ-700 expire annually. Renewal is a free, short online assessment on Microsoft Learn within six months of your expiry date. Fundamentals certs like AZ-900 are different — those never expire.
 Q: Do I need a home lab to pass AZ-700?
 A: Hands-on time helps more here than on most Associate exams, since AZ-700 is a design-and-build exam, not pure recall. A free-tier subscription is enough to build a hub-and-spoke topology, a site-to-site VPN, and an Application Gateway deployment. Azure Mastery's scenarios cover the harder-to-lab decisions too.
 Q: If I don't pass AZ-700, when can I try again?
@@ -800,7 +800,7 @@ A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank ru
 Q: What's the DP-300 exam fee, and does renewal cost extra?
 A: The voucher is USD $165 in the United States, or around £128 in the UK. Microsoft sometimes runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking. Renewal itself is free, but it happens every year.
 Q: Is a DP-300 pass permanent, or does it lapse?
-A: It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free 25–30 question online assessment on Microsoft Learn within the six months before expiry. Fundamentals certs such as AZ-900 are different — those don't expire at all.
+A: It lapses unless renewed. Associate certifications including DP-300 expire annually; renewal is a free, short online assessment on Microsoft Learn within the six months before expiry. Fundamentals certs such as AZ-900 are different — those don't expire at all.
 Q: Query Store or Extended Events — which does DP-300 expect for troubleshooting?
 A: Query Store answers a regression over time — a query that used to run fast and now doesn't. Extended Events answers a live, event-level symptom, such as a deadlock, right now. DP-300 names the symptom, not the tool, so matching the two is the real skill.
 Q: DP-300 vs AI-300 — different data roles?
@@ -904,7 +904,7 @@ Exam domains:
 Q: Do I need database experience before sitting DP-900?
 A: Very little. Microsoft doesn't expect database-administration experience or hands-on SQL — just a basic sense of what a spreadsheet, a database, and "the cloud" are. If you can explain why a company might store data in more than one place, you already have enough of a starting point.
 Q: What does the DP-900 exam actually look like?
-A: 40–60 questions in formats that vary by sitting — mostly single-answer multiple choice, with a real share of scenario and multi-select items, plus a smaller run of drag-and-drop, dropdown, hotspot, and linked case-study questions. Azure Mastery's bank mirrors that mix.
+A: DP-900 gives you 45 minutes for the assessed portion. Microsoft says Fundamentals exams usually contain 35–50 items, although the exact count and interaction types can change. Azure Master's original data-fundamentals bank includes single-answer, scenario, multi-select, drag-and-drop, dropdown, hotspot, and linked case-study practice.
 Q: DP-900 vs PL-900 — which should I take first?
 A: Neither is a prerequisite for the other, so pick based on your role. DP-900 covers data concepts and Azure's data services; PL-900 covers the low-code Power Platform — Power Apps, Power Automate, Dataverse, Copilot Studio. Data people start with DP-900, business makers with PL-900.
 Q: What's the DP-900 exam fee, and does it vary by region?
@@ -932,7 +932,7 @@ Exam domains:
   - Improve Developer Productivity with GitHub Copilot (10–15%)
   - Configure Privacy, Content Exclusions, and Safeguards (10–15%)
 Q: How much does the GH-300 exam cost, and how long is it?
-A: The GitHub Copilot exam is roughly USD $99, though the exact price varies by region. GH-300 runs about 90 minutes and you need 700 out of 1000 to pass. It's delivered through Microsoft's exam platform, but the certification itself is owned and maintained by GitHub.
+A: GitHub lists GH-300 at USD $99 in the United States and gives candidates 100 minutes. Your booking page shows any regional price, and the passing score is 700 out of 1000. Because the blueprint moves between responsible use, Copilot features, data and architecture, prompt engineering, productivity, and privacy safeguards, practise switching context without pausing.
 Q: Does the GH-300 GitHub Copilot certification expire?
 A: GitHub credentials are valid for two years, renewed by re-examination — once you pass GH-300 you stay certified for two years, then re-sit to keep it current. The exam is delivered through Microsoft's platform, but GitHub owns the credential and sets this validity.
 Q: Who is the GH-300 GitHub Copilot exam for?
@@ -969,7 +969,7 @@ A: GH-900 follows the standard Microsoft exam-delivery retake policy even though
 Q: GH-900 vs AZ-900 — what's the difference?
 A: GH-900 validates collaboration on GitHub: Git, repositories, pull requests, Actions, and the open-source community. AZ-900 validates cloud concepts and core Azure services. They're independent credentials in different product families, and DevOps-minded candidates often earn both.
 Q: What should I expect from GH-900's exam format?
-A: GitHub's own guidance is roughly 70–75 questions over a 120-minute session — longer than most Associate exams, reflecting seven domains. Azure Mastery's bank weights single-answer and scenario items most heavily, with multi-select, drag-to-match, and hotspot questions layered in as original practice content.
+A: GitHub gives candidates 100 minutes and says the question count can vary. Azure Master's original practice bank weights single-answer and scenario items most heavily, with multi-select, drag-to-match, and hotspot questions included for broader interaction practice.
 Q: Is GH-900 worth taking if I'm not a developer?
 A: Yes — GH-900 is explicitly designed for non-developers as well as developers. Project managers, technical writers, and product owners all sit it to prove they can collaborate effectively on GitHub. It doesn't ask you to write code, just to explain how the platform's features fit together.
 Q: GH-900 vs GH-300 — foundations or the Copilot-specific exam?
@@ -1001,7 +1001,7 @@ A: Yes. The app is free to download, with a free allowance of PL-300 questions s
 Q: If I don't pass PL-300, when can I try again?
 A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Will my PL-300 badge lapse if I don't renew?
-A: Yes. Associate certifications including PL-300 expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date. Fundamentals certs like AZ-900 are different — those never expire.
+A: Yes. Associate certifications including PL-300 expire annually. Renewal is a free, short online assessment on Microsoft Learn within six months of your expiry date. Fundamentals certs like AZ-900 are different — those never expire.
 Q: What's the going rate for a PL-300 exam attempt?
 A: The PL-300 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite, so check your Learn profile first.
 
@@ -1018,7 +1018,7 @@ A: Yes. The July 2026 refresh folded Copilot Studio agents into the Agents domai
 Q: PL-900 vs PL-300 — which should I take first?
 A: Take PL-900 first if Power Platform is new to you: it teaches the vocabulary — Power Apps vs Power Automate, Dataverse, cloud vs desktop flows, Copilot Studio agents — without expecting production work. PL-300 is the role-based Power BI Data Analyst exam, testing hands-on Power Query, DAX, and report design.
 Q: What format does the PL-900 exam use?
-A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that mix: mostly single-select, a meaningful slice of multi-select and scenario questions, plus a smaller run of yes/no, drag-to-match, and case-study formats.
+A: Plan around a 45-minute assessment, not a guaranteed item count: Microsoft's current Fundamentals guidance says most sittings have 35–50 questions. The app's original PL-900 practice adds single-select, multi-select, scenario, yes/no, drag-to-match, and case-study interactions across the Power Platform domains.
 Q: What's the PL-900 exam fee, and does it vary by region?
 A: The PL-900 voucher costs USD $99 in the United States, and pricing varies by region, around £77 in the UK. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking.
 Q: Once I pass PL-900, does it ever need renewing?
@@ -1055,15 +1055,15 @@ Exam domains:
   - Design security solutions for infrastructure (25–30%)
   - Design security solutions for applications and data (20–25%)
 Q: MCRA vs MCSB — which framework does a given SC-100 scenario want?
-A: MCRA describes what capabilities exist and how they fit together; MCSB is what you measure an existing environment against. A scenario asking you to design new capability wants MCRA-shaped reasoning, not a benchmark recommendation, one of the exam's most repeated traps.
+A: MCRA shows how security capabilities fit together, while MCSB provides prescriptive security recommendations. A posture-management tool can assess an environment against MCSB, but the benchmark itself is guidance rather than a measurement service.
 Q: What's the SC-100 prerequisite?
-A: You can sit SC-100 with no prior certification. What Microsoft withholds is the credential itself: earning it needs AZ-500, SC-200, or SC-300 too, held already or passed within a year. AZ-500 retired 31 August 2026, so SC-200 and SC-300 are the current routes.
+A: You can sit SC-100 with no prior certification. To earn the Cybersecurity Architect Expert credential, you must also hold an active SC-200, SC-300, or SC-500 Associate certification. Microsoft replaced the retired AZ-500 route with SC-500 in the current prerequisite list. An exam pass alone is not the prerequisite; the Associate credential must be active on your profile.
 Q: What format does the SC-100 exam use?
 A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank runs a similar spread: mostly single-answer, a meaningful share of scenario questions, yes/no and multi-select in roughly equal measure, plus a smaller mix of drag-to-match, dropdown, hotspot, ordering, and case-study items.
 Q: What's the SC-100 exam fee, and does renewal add to the cost?
 A: The voucher costs USD $165 in the United States, around £128 in the UK. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite. Renewal itself is free, a short annual online assessment, so factor only the original voucher into long-term cost.
 Q: Is SC-100 a lifetime certification, or does it need renewing?
-A: Yes, it needs renewing. Associate certifications including SC-100 expire annually; renewal is a free 25–30 question online assessment within six months of expiry, targeting recent outline updates. Fundamentals certifications such as AZ-900 differ: those never expire.
+A: The Cybersecurity Architect Expert credential is valid for one year. In the final six months, renew it at no charge through Microsoft's current online assessment; its length can change as the skills outline evolves. Fundamentals credentials such as AZ-900 do not expire.
 Q: SC-100 vs AZ-305 — which next for an architect?
 A: Different lenses. SC-100 is the security architect cert: Zero Trust, ransomware resilience, SecOps strategy, identity governance. AZ-305 is the solutions architect cert: data, infrastructure, business continuity, identity and monitoring. They overlap on identity and governance; many senior architects hold both.
 Q: How soon can I resit SC-100 after a fail?
@@ -1090,7 +1090,7 @@ A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank mi
 Q: What's the SC-200 voucher price, and is renewal extra?
 A: SC-200's voucher runs USD $165 in the United States, roughly £128 in the UK, with Microsoft occasionally offering free vouchers around Build or Ignite. Renewal itself costs nothing beyond a short annual assessment, so the voucher is the only real ongoing expense.
 Q: Does an SC-200 pass last forever, or do I need to renew?
-A: No, it needs renewing. Associate certifications including SC-200 expire annually; renewal is a free 25–30 question online assessment within six months of expiry, targeting recent outline updates. Fundamentals certifications such as AZ-900 differ: those never expire.
+A: No, it needs renewing. Associate certifications including SC-200 expire annually; renewal is a free, short online assessment within six months of expiry, targeting recent outline updates. Fundamentals certifications such as AZ-900 differ: those never expire.
 Q: Sentinel automation or Defender XDR native response — how does SC-200 test the choice?
 A: SC-200 scenarios give you an incident that could plausibly be handled either way, and expect you to pick based on where the signal originates and how broad the response needs to be, not personal preference. Answer Coach spells out which property of the scenario should have driven the call.
 Q: I need to retake SC-200 — what's the wait?
@@ -1116,7 +1116,7 @@ A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank ru
 Q: What's the SC-300 exam fee, and is renewal on top?
 A: The SC-300 voucher is USD $165 in the United States, roughly £128 in the UK. Microsoft occasionally offers free vouchers around events like Build or Ignite. Renewal is free too, a short annual assessment, so budget for the voucher only, not a recurring fee.
 Q: Does an SC-300 pass need renewing each year?
-A: Yes. Associate certifications including SC-300 expire annually; renewal is a free 25–30 question online assessment within six months of expiry, targeting recent outline updates. Fundamentals certifications such as AZ-900 differ: those never expire.
+A: SC-300's Associate credential is annual. When its last six months begin, your Learn profile offers a free online renewal focused on the current identity-and-access outline; the assessment has no guaranteed fixed question count. By contrast, Fundamentals credentials such as AZ-900 do not expire.
 Q: Pass-through Authentication or Password Hash Sync — which does SC-300 want?
 A: The deciding factor is resilience. PHS keeps authenticating during an on-premises outage since Entra ID holds a password hash; PTA validates against on-premises AD in real time and fails if that link drops, but keeps passwords entirely on-premises. Outage-tolerance scenarios want PHS; strict on-premises-only policies want PTA.
 Q: I need to resit SC-300 — how long before I can rebook?
@@ -1168,7 +1168,7 @@ A: Yes, repeatedly. SC-900 expects you to place Defender for Endpoint, Cloud App
 Q: SC-900 vs AZ-900 — which should I take first?
 A: Pick based on which vocabulary you need first. SC-900 teaches Microsoft's security, identity, and compliance stack; AZ-900 teaches general Azure fundamentals like regions, compute, and pricing. Security-adjacent roles start with SC-900; newcomers to Azure generally start with AZ-900. Many candidates sit both.
 Q: What question formats come up on SC-900?
-A: 40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that spread: mostly single-select, a meaningful mix of scenario and multi-select questions, plus a smaller share of drag-to-match, hot-area, dropdown, case-study, and drag-and-drop formats.
+A: SC-900's assessed time is 45 minutes. Microsoft does not promise an exact format in advance, but says most Fundamentals exams contain 35–50 questions. Azure Master's original security-fundamentals bank uses single-select, scenario, multi-select, drag-to-match, hot-area, dropdown, case-study, and drag-and-drop practice.
 Q: What's the SC-900 exam fee, and does it vary by region?
 A: The SC-900 voucher costs USD $99 in the United States, and pricing varies by region, around £77 in the UK. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite, so check your Learn profile before booking.
 Q: Once passed, does an SC-900 certification lapse?

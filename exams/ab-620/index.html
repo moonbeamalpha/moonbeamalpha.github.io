@@ -197,7 +197,7 @@
             "name": "Does the AB-620 certification expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — AB-620 expires annually like every Microsoft Associate certification. Renewal is a free, 25–30 question assessment on Microsoft Learn, available in the six-month window before expiry and scoped to whatever changed in the outline since you last certified. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
+              "text": "Yes — AB-620 expires annually like every Microsoft Associate certification. Renewal is a free, short online assessment on Microsoft Learn, available in the six-month window before expiry and scoped to recent skills-outline updates. (Fundamentals certifications such as AZ-900 are different — those don't expire.)"
             }
           },
           {
@@ -610,16 +610,16 @@
           <h3>A2A protocol vs. an embedded sub-agent</h3>
           <p>Candidates read "integrating a Foundry agent" without noticing whether it's a separate A2A agent or an embedded sub-agent.</p>
           <ul>
-            <li>A2A agents keep their own separate identity; an embedded sub-agent shares its parent's context and permissions.</li>
-            <li>Check whether the scenario names a standalone endpoint or a component running inside the parent orchestrator.</li>
+            <li>A child agent receives the parent agent's context and uses its own tools and knowledge. A connected A2A agent remains a separately managed agent, with context hand-off controlled by the connection.</li>
+            <li>Check the endpoint, context setting, and authentication requirements instead of assuming permissions are inherited.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Groundedness rules aren't optional</h3>
-          <p>Candidates assume a correct-sounding answer passes, but an uncited response from a connected source counts as ungrounded.</p>
+          <p>Candidates assume a correct-sounding answer is enough, but Copilot Studio can withhold a knowledge-source response when ungrounded responses are disabled and the answer lacks an in-text citation.</p>
           <ul>
-            <li>A missing citation counts as a grounding failure on this exam, whatever the underlying answer's accuracy.</li>
-            <li>For a "confidently wrong agent" scenario, check the grounding source configuration before blaming the model.</li>
+            <li>Groundedness evaluation checks whether an answer is supported by the supplied context; citation behaviour is a separate product setting and response requirement.</li>
+            <li>For a "confidently wrong agent" scenario, inspect the knowledge source, orchestration, citation, and ungrounded-response settings before blaming the model.</li>
           </ul>
         </article>
         <article class="trap">
@@ -887,7 +887,7 @@
         <details class="faq">
           <summary>Does the AB-620 certification expire?</summary>
           <div class="faq__answer">
-            <p>Yes — AB-620 expires annually like every Microsoft Associate certification. Renewal is a free, 25–30 question assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>, available in the six-month window before expiry and scoped to whatever changed in the outline since you last certified. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+            <p>Yes — AB-620 expires annually like every Microsoft Associate certification. Renewal is a free, short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>, available in the six-month window before expiry and scoped to recent skills-outline updates. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
           </div>
         </details>
         <details class="faq">

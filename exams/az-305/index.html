@@ -231,7 +231,7 @@
             "name": "Does the Solutions Architect Expert badge need renewing?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Expert certifications including Azure Solutions Architect Expert expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates."
+              "text": "Yes. Expert certifications including Azure Solutions Architect Expert expire annually. Renewal is a free, short online assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates."
             }
           },
           {
@@ -611,7 +611,7 @@
               <ul class="domain__tips">
                 <li>Compute, application-architecture, migration, and network choices all get weighed against a single stated business requirement.</li>
                 <li>A weak spot in one of the four infrastructure sub-areas shows up here first, since it's the largest domain.</li>
-                <li>Place a migration activity in the Cloud Adoption Framework's assess, migrate, or modernise phase correctly.</li>
+                <li>Place migration and modernisation work inside the Cloud Adoption Framework's Adopt methodology, then distinguish the workload-onboarding activity the scenario describes.</li>
               </ul>
             </div>
           </details>
@@ -644,19 +644,19 @@
           </ul>
         </article>
         <article class="trap">
-          <h3>The Cloud Adoption Framework has named phases, and questions test which one applies</h3>
-          <p>Assess, migrate, and modernise are distinct Cloud Adoption Framework phases, not interchangeable labels for the same migration activity.</p>
+          <h3>The Cloud Adoption Framework separates methodologies from workload-onboarding activities</h3>
+          <p>Strategy, Plan, Ready, Adopt, Govern, Secure, and Manage are the core methodologies. Migrate and Modernize are workload-onboarding approaches within Adopt, while assessment informs the plan.</p>
           <ul>
-            <li>A described activity has to land in the correct Cloud Adoption Framework phase, and that placement is the scored step.</li>
-            <li>Match the stem's verb, evaluate, move, or improve, to the phase it actually names.</li>
+            <li>First identify the methodology, then match the workload activity the scenario actually describes.</li>
+            <li>Do not treat assess, migrate, and modernise as peer phases in the framework.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Authorising Azure resources and on-premises resources use different tools</h3>
-          <p>Azure RBAC and Conditional Access govern Azure resources, while hybrid join or a federation trust governs on-premises access.</p>
+          <p>Azure RBAC authorises actions on Azure resources, while Conditional Access uses identity, device, location, and risk signals to grant or block access. Hybrid join and federation integrate identities; they are not substitute authorisation systems.</p>
           <ul>
-            <li>Reaching for the on-premises tool instead of the Azure-only control (or the reverse) is exactly what trips people up.</li>
-            <li>Check whether the requirement names Azure resources, on-premises resources, or a hybrid mix before answering.</li>
+            <li>Separate identity integration, access-policy evaluation, and resource authorisation before choosing a control.</li>
+            <li>Check which resource and trust boundary the requirement names before answering.</li>
           </ul>
         </article>
       </div>
@@ -971,7 +971,7 @@
         <details class="faq">
           <summary>Does the Solutions Architect Expert badge need renewing?</summary>
           <div class="faq__answer">
-            <p>Yes. Expert certifications including Azure Solutions Architect Expert expire annually. Renewal is a free 25–30 question assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.</p>
+            <p>Yes. Expert certifications including Azure Solutions Architect Expert expire annually. Renewal is a free, short online assessment on Microsoft Learn within six months of your expiry date, targeting recent outline updates.</p>
           </div>
         </details>
         <details class="faq">

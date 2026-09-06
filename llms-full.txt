@@ -454,7 +454,7 @@ A: AI-200 assumes you already work across the full AI-solution lifecycle on Azur
 Q: AI-200 vs AI-103 — different roles?
 A: Different emphases. AI-200 validates back-end Azure development for AI solutions, including containers, data services, messaging, security, monitoring, and troubleshooting. AI-103 focuses on developing AI apps and agents with Python and Microsoft Foundry. AI-200 is cloud-platform and service integration; AI-103 is model, agent, retrieval, and AI-application implementation.
 Q: AI-200 vs AI-300 — which next?
-A: AI-200 first. AI-200 is the AI Cloud Developer Associate cert — building the platform that AI workloads run on. AI-300 is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it.
+A: AI-200 first. AI-200 is the Azure AI Cloud Developer Associate cert — building the platform that AI workloads run on. AI-300 is the ML Operations Engineer Associate cert — running and operating ML and generative-AI systems in production (MLOps and GenAIOps). AI-200 is upstream of AI-300 in most roles. Take AI-200 to build the platform, AI-300 to operate models and pipelines on top of it.
 Q: Is Azure Mastery free for AI-200 prep?
 A: The app is free to download and includes a free allowance of AI-200 questions so you can try every feature. The full bank of 220 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-200 practice work offline?

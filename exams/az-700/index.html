@@ -542,7 +542,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 27 July 2026</p>
       <h2 class="display-small section-title">AZ-700 exam objectives</h2>
       <p class="section-lede">
-        Five domains, with weights set by Microsoft&rsquo;s July 2026 update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-700" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
+        Five domains, with weights set by Microsoft&rsquo;s July 2026 update. Microsoft's own skill-group wording appears verbatim under each domain below, taken straight from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-700" rel="noopener">official skills outline</a>, so you always know which domain a topic sits in and where the gaps are.
       </p>
       <figure class="exam-family-visual exam-family-visual--azure">
         <div class="exam-family-visual__media">
@@ -594,7 +594,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Site-to-site VPN, point-to-site VPN, ExpressRoute, and Virtual WAN are tested here as four separate hybrid-connectivity skills.</li>
-                <li>Picking a familiar VPN option when the scenario's bandwidth or SLA requirement actually calls for ExpressRoute is the common slip.</li>
+                <li>A familiar VPN option gets picked even when the scenario's bandwidth or SLA requirement actually calls for ExpressRoute.</li>
                 <li>Check the scenario's throughput and reliability numbers before choosing between VPN and ExpressRoute options.</li>
               </ul>
             </div>
@@ -630,7 +630,7 @@
                 <li>Design and implement service endpoints</li>
               </ul>
               <ul class="domain__tips">
-                <li>Choosing a private endpoint over a service endpoint whenever public exposure must be removed entirely is what's checked here.</li>
+                <li>Whenever public exposure has to be removed entirely, choosing a private endpoint over a service endpoint is the judgement call.</li>
                 <li>Picking the cheaper service endpoint even when the scenario says no public exposure at all is the trap to avoid.</li>
                 <li>Reach for Private Link whenever the stem rules out any public IP on the resource.</li>
               </ul>
@@ -649,7 +649,7 @@
                 <li>Design and implement a Web Application Firewall (WAF) deployment</li>
               </ul>
               <ul class="domain__tips">
-                <li>NSGs, Azure Firewall, Firewall Manager, and WAF get tested here as distinct network-security layers with different jobs.</li>
+                <li>NSGs, Azure Firewall, Firewall Manager, and WAF each do a different job, and telling them apart is the point.</li>
                 <li>The WAF story differing slightly between Application Gateway and Azure Front Door is easy to forget.</li>
                 <li>Check which product, Application Gateway or Front Door, the WAF question is actually describing.</li>
               </ul>
@@ -679,7 +679,7 @@
           <h3>Application Gateway and Front Door aren't interchangeable just because both do Layer 7</h3>
           <p>Application Gateway is regional, while Azure Front Door is global with edge points of presence and built-in caching.</p>
           <ul>
-            <li>Picking a global service for cross-region routing instead of a regional one is exactly what's being tested.</li>
+            <li>Cross-region routing calls for a global service over a regional one, and that swap is precisely what gets scored.</li>
             <li>Match global or regional in the stem to Front Door or Application Gateway before answering.</li>
           </ul>
         </article>
@@ -687,7 +687,7 @@
           <h3>Virtual WAN and hub-and-spoke solve the same problem at different scale</h3>
           <p>Hub-and-spoke via VNet peering suits a handful of spokes, while Virtual WAN automates routing for large branch counts.</p>
           <ul>
-            <li>Matching the number of branch sites in a scenario to the right topology is the real test here.</li>
+            <li>The number of branch sites in a scenario decides the right topology, and that count is worth reading twice.</li>
             <li>Count the spokes or branches described before choosing between Virtual WAN and plain peering.</li>
           </ul>
         </article>

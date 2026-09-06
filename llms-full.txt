@@ -470,8 +470,8 @@ Exam domains:
   - Optimize generative AI systems and model performance (10–15%)
 Q: Did AI-300 replace DP-100?
 A: Yes. DP-100 (Azure Data Scientist Associate) retired on 1 June 2026, and AI-300 is its named successor. The scope has grown to match: DP-100 covered training and deploying traditional ML models, while AI-300 adds GenAIOps — deploying, evaluating, and monitoring generative AI built with Microsoft Foundry.
-Q: AI-300 vs AI-200 — which next?
-A: AI-200 first. AI-200 (AI Cloud Developer Associate) builds the cloud platform AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform. AI-200 is upstream of AI-300 in most roles.
+Q: Do I need AI-200 before AI-300?
+A: Not a formal prerequisite, but it helps. AI-200 (Azure AI Cloud Developer Associate) builds the cloud platform AI workloads run on — compute, vector databases, integration, security. AI-300 (ML Operations Engineer Associate) operates ML and generative-AI systems on that platform, so most candidates take AI-200 first.
 Q: Are there prerequisites for AI-300?
 A: Microsoft sets no mandatory prerequisite exam for AI-300. Its published audience profile expects MLOps and GenAIOps subject-matter expertise, a data-science background with Python, and entry-level DevOps familiarity such as GitHub Actions. Without hands-on Azure Machine Learning or Foundry experience, preparation typically takes longer.
 Q: What format is the AI-300 exam?
@@ -808,7 +808,7 @@ A: Each retake needs its own voucher, and the wait depends on your attempt numbe
 Q: Can I try Azure Mastery's DP-300 bank before paying?
 A: Yes — the app is free to download, with a free allowance of DP-300 questions so you can try every feature. The full bank of 405 DP-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 Q: Does DP-300 revision still work with no connection?
-A: Yes. The whole loop stays on-device: practice, scoring, and the readiness read. No signal, no problem, and no account is needed either. Your study data stays local unless you switch on optional private iCloud sync.
+A: Yes. The whole loop stays on-device: practice, scoring, and the readiness read. A missing signal doesn't stop a session, and no account is required. Your study data stays local unless you switch on optional private iCloud sync.
 
 ## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
 Page last modified: 2026-08-09

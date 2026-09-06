@@ -515,11 +515,21 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the DP-800 exam?</h2>
       <p>
-        DP-800 is the exam that earns the <strong>Microsoft Certified: SQL AI Developer Associate</strong> credential (exam title: "Developing AI-Enabled Database Solutions") — the credential Microsoft introduced for the role hiring managers now post as "SQL AI Developer", "Database Developer (AI)", or "Fabric Data &amp; AI Developer". It's the natural next step after <a href="/exams/dp-900/">DP-900</a> for SQL developers whose day job has expanded from classical schema work into shipping embeddings, vector search, and retrieval-augmented generation (RAG) directly inside SQL Server, Azure SQL, and SQL databases in Microsoft Fabric. DP-800 is the only Microsoft Associate cert dedicated to AI-enabled data-tier development.
+        DP-800 is the exam that earns the <strong>Microsoft Certified: SQL AI Developer Associate</strong> credential (exam title: "Developing AI-Enabled Database Solutions") — the credential Microsoft introduced for the role hiring managers now post as "SQL AI Developer", "Database Developer (AI)", or "Fabric Data &amp; AI Developer".
       </p>
       <p>
-        DP-800 is <strong>code-first and developer-focused</strong>. It validates that you can design tables and indexes (including column store, in-memory, temporal, ledger, external, and graph) and choose the right constraints, sequences, and partitioning; write advanced T-SQL — CTEs, window functions, JSON shaping (JSON_OBJECT/OPENJSON/JSON_MODIFY), regex (REGEXP_LIKE/REPLACE/SUBSTR/INSTR), fuzzy matching (EDIT_DISTANCE, JARO_WINKLER_DISTANCE), graph MATCH queries, error handling; secure data with Always Encrypted, Dynamic Data Masking, Row-Level Security, Managed Identity passwordless access; tune workloads via Query Store and DMVs; deploy with SQL Database Projects and Data API Builder; and bring AI into SQL itself — generating embeddings, building vector indexes, designing RAG flows with <code>sp_invoke_external_rest_endpoint</code>, structuring outputs with JSON. Expect scenario questions that show a snippet of T-SQL or a chunking strategy and ask what's wrong, what's better, or what's required.
+        It's the natural next step after <a href="/exams/dp-900/">DP-900</a> for SQL developers whose day job has expanded from classical schema work into shipping embeddings, vector search, and retrieval-augmented generation (RAG) directly inside SQL Server, Azure SQL, and SQL databases in Microsoft Fabric. DP-800 is the only Microsoft Associate cert dedicated to AI-enabled data-tier development.
       </p>
+      <p>DP-800 is <strong>code-first and developer-focused</strong>. It validates that you can:</p>
+      <ul>
+        <li>Design tables and indexes — including column store, in-memory, temporal, ledger, external, and graph — and choose the right constraints, sequences, and partitioning</li>
+        <li>Write advanced T-SQL: CTEs, window functions, JSON shaping (JSON_OBJECT/OPENJSON/JSON_MODIFY), regex (REGEXP_LIKE/REPLACE/SUBSTR/INSTR), fuzzy matching (EDIT_DISTANCE, JARO_WINKLER_DISTANCE), graph MATCH queries, error handling</li>
+        <li>Secure data with Always Encrypted, Dynamic Data Masking, Row-Level Security, and Managed Identity passwordless access</li>
+        <li>Tune workloads via Query Store and DMVs</li>
+        <li>Deploy with SQL Database Projects and Data API Builder</li>
+        <li>Bring AI into SQL itself — generating embeddings, building vector indexes, designing RAG flows with <code>sp_invoke_external_rest_endpoint</code>, structuring outputs with JSON</li>
+      </ul>
+      <p>Expect scenario questions that show a snippet of T-SQL or a chunking strategy and ask what's wrong, what's better, or what's required.</p>
       <p>
         Microsoft published the DP-800 skills outline on <strong>12 March 2026</strong>. Every question in Azure Mastery's DP-800 bank is mapped to the current outline — no questions on retired services or pre-AI SQL-only patterns. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-800" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -589,8 +599,8 @@
                 <li>Integrate SQL solutions with Azure services</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests matching an encryption, performance, or deployment control to a stated production requirement.</li>
-                <li>Candidates apply Dynamic Data Masking when a scenario actually needs Always Encrypted to hide data from a DBA.</li>
+                <li>Matching an encryption, performance, or deployment control to a stated production requirement is the core test.</li>
+                <li>Dynamic Data Masking often gets applied when a scenario actually needs Always Encrypted to hide data from a DBA.</li>
                 <li>Check whether the requirement is hiding values from ordinary users or from every privileged role before answering.</li>
               </ul>
             </div>
@@ -608,8 +618,8 @@
                 <li>Design and implement retrieval-augmented generation (RAG)</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests choosing a vector-search metric, index, or RAG step order that fits the described embedding pipeline.</li>
-                <li>Candidates under-revise this domain relative to its weight, since it feels newer than the SQL fundamentals.</li>
+                <li>Choosing a vector-search metric, index, or RAG step order that fits the described embedding pipeline is what's graded here.</li>
+                <li>This domain gets under-revised relative to its weight, since it feels newer than the SQL fundamentals.</li>
                 <li>Learn the fixed RAG order, retrieve, augment, generate, ground, so a skipped step stands out immediately.</li>
               </ul>
             </div>
@@ -629,35 +639,35 @@
         <article class="trap">
           <h3>Dynamic Data Masking hides values from ordinary users; Always Encrypted hides them from the DBA too.</h3>
           <ul>
-            <li>The exam is testing whether "administrators must not see the data" points you at Always Encrypted, not masking.</li>
+            <li>A requirement that administrators must not see the data points at Always Encrypted specifically, not masking.</li>
             <li>Check whether the requirement excludes a privileged role before picking a masking or encryption feature.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>The vector-search metric has to match how the embeddings were actually built.</h3>
           <ul>
-            <li>The exam is testing whether you can match cosine, Euclidean, or dot product to the embedding pipeline described.</li>
+            <li>Cosine, Euclidean, and dot product each suit a different embedding pipeline, and picking the wrong one is the trap.</li>
             <li>Name whether the vectors are normalised before choosing a similarity metric.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>ANN trades recall for latency; ENN guarantees the true nearest matches at a compute cost.</h3>
           <ul>
-            <li>The exam is testing whether guaranteed-correct results over speed points you at ENN rather than a tuned ANN index.</li>
+            <li>A requirement for guaranteed-correct results over speed points at ENN, not a tuned ANN index.</li>
             <li>Read for a stated latency or correctness priority before choosing between the two search modes.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>Row counts rule out a scalar UDF before you even read the rest of the question.</h3>
           <ul>
-            <li>The exam is testing whether a scenario citing millions of rows points you toward a set-based rewrite.</li>
+            <li>A scenario citing millions of rows is what should point you toward a set-based rewrite.</li>
             <li>Replace a per-row scalar function with a set-based expression once the scenario names a large row count.</li>
           </ul>
         </article>
         <article class="trap">
           <h3>A RAG flow has a fixed order: retrieve, augment, generate, ground.</h3>
           <ul>
-            <li>The exam is testing whether a language-model call with no retrieval step first is missing the "R" in RAG.</li>
+            <li>A language-model call with no retrieval step first is missing the "R" in RAG entirely.</li>
             <li>Check the scenario names all four RAG steps in order before assuming the flow is complete.</li>
           </ul>
         </article>

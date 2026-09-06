@@ -508,11 +508,17 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the PL-300 exam?</h2>
       <p>
-        PL-300 is the <strong>Microsoft Certified: Power BI Data Analyst Associate</strong> exam — the credential hiring managers expect when posting "Power BI Developer", "BI Analyst", "Reporting Analyst", or "Data Analyst (Power BI)" roles. It validates that you can deliver actionable insights end-to-end with Power BI: prepare and clean data, model relationships and DAX, build reports and dashboards, and manage governance, sharing, and row-level security in production. PL-300 is the natural pairing for <a href="/exams/dp-900/">DP-900</a> on the analyst track.
+        PL-300 is the <strong>Microsoft Certified: Power BI Data Analyst Associate</strong> exam — the credential hiring managers expect for "Power BI Developer" or "Data Analyst" roles. It validates that you can deliver actionable insights end-to-end with Power BI, from cleaning raw data through to governed dashboards. PL-300 pairs naturally with <a href="/exams/dp-900/">DP-900</a> on the analyst track.
       </p>
       <p>
-        PL-300 is <strong>hands-on and tool-aware</strong>. It validates that you can use <em>Power Query (M)</em> to connect to and clean data from heterogeneous sources, design a star-schema model with <em>DAX</em> calculations and time intelligence, build effective visualisations with the right visual choices, drill paths, and AI visuals, and operate Power BI at scale via workspaces, deployment pipelines, gateways, refresh schedules, RLS / OLS, and Microsoft Purview sensitivity labels. Expect scenario questions that show a Power Query step or a DAX measure and ask you to predict the result.
+        PL-300 is <strong>hands-on and tool-aware</strong>: expect scenario questions that show a Power Query step or a DAX measure and ask you to predict the result. Across the outline, you'll cover:
       </p>
+      <ul>
+        <li>Connecting to and cleaning data from heterogeneous sources with <em>Power Query (M)</em></li>
+        <li>Designing a star-schema model with <em>DAX</em> calculations and time intelligence</li>
+        <li>Building effective visualisations — the right visual choices, drill paths, and AI visuals</li>
+        <li>Operating Power BI at scale: workspaces, deployment pipelines, gateways, refresh schedules, RLS / OLS, and Microsoft Purview sensitivity labels</li>
+      </ul>
       <p>
         Microsoft updated the PL-300 skills outline on <strong>20 April 2026</strong>. Every question in Azure Mastery's PL-300 bank is mapped to the current outline — no leftover questions on retired features. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/pl-300" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -531,7 +537,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 20 April 2026</p>
       <h2 class="display-small section-title">PL-300 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's <strong>20 April 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/pl-300" rel="noopener">official skills outline</a>; Azure Mastery tags questions by exam objective, so you can see which domains need more practice.
+        Four domains, with weights set by Microsoft's <strong>20 April 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/pl-300" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--power">
         <div class="exam-family-visual__media">
@@ -580,8 +586,8 @@
                 <li>Optimize model performance</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests DAX filter context, time intelligence, and picking a calculated column against a measure correctly.</li>
-                <li>Candidates reach for a calculated column when the scenario actually needs a measure evaluated at query time.</li>
+                <li>Filter context, time intelligence, and picking a calculated column against a measure are what this domain checks.</li>
+                <li>Reaching for a calculated column when the scenario needs a measure evaluated at query time is the common slip.</li>
                 <li>Ask whether the value should be fixed per row or recalculated for whatever the visual filters.</li>
               </ul>
             </div>
@@ -617,8 +623,8 @@
                 <li>Secure and govern Power BI items</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests workspace roles, deployment pipelines, and choosing row-level versus object-level security correctly.</li>
-                <li>Candidates under-revise this domain, then confuse row-level security with object-level security in governance scenarios.</li>
+                <li>Workspace roles, deployment pipelines, and choosing row-level versus object-level security correctly are the focus here.</li>
+                <li>This domain gets under-revised, and row-level security gets confused with object-level security in governance scenarios.</li>
                 <li>Remember row-level security filters rows, while object-level security hides a whole table or column.</li>
               </ul>
             </div>
@@ -647,7 +653,7 @@
           <h3>DirectQuery changes what a measure can and can't do</h3>
           <p>Switching a table to DirectQuery changes which DAX patterns work and how a calculated column behaves at query time.</p>
           <ul>
-            <li>The exam is testing whether you know DirectQuery, not just speed, changes what a calculated column can do.</li>
+            <li>The exam is testing whether you know DirectQuery changes what a calculated column can do, beyond changing speed.</li>
             <li>Check the storage mode named in the scenario before assuming a calculated column behaves as it would in Import.</li>
           </ul>
         </article>
@@ -663,7 +669,7 @@
           <h3>Object-level security is not the same control as row-level security</h3>
           <p>Row-level security filters which rows a user sees, while object-level security hides an entire table or column outright.</p>
           <ul>
-            <li>The exam is testing whether you'd choose object-level security to hide a whole column, not just filter rows.</li>
+            <li>The exam is testing whether you'd pick object-level security specifically to hide a whole column, the stronger control than row filtering.</li>
             <li>Reach for object-level security whenever the scenario says hide a column or table completely, not restrict rows.</li>
           </ul>
         </article>
@@ -717,7 +723,7 @@
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Names the exact DAX or Power Query mix-up behind a missed answer, not just which option was right.</li>
+          <li>Names the exact DAX or Power Query mix-up behind a missed answer, beyond simply confirming which option was right.</li>
           <li>Explains a calculated column reached for where a measure was needed, and the rule to apply next time.</li>
           <li>A capable device may rephrase a note on-device, but only after checking it against the written answer.</li>
         </ul>

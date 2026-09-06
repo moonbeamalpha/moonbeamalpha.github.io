@@ -254,7 +254,7 @@
             "name": "Does SC-500 practice work offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
+              "text": "Yes — every question, score, and readiness read happens on-device, so SC-500 prep keeps going without a connection. No account is needed, and nothing leaves your device unless you switch on private iCloud sync."
             }
           },
           {
@@ -262,7 +262,7 @@
             "name": "Is there an SC-500 practice test mode?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "Yes. Timed practice sessions draw on original, blueprint-weighted SC-500 questions with published timing and the interactive formats this exam uses. Adaptive study and Focus Weak Spots then push you back toward the domains dragging your accuracy down."
             }
           }
         ]
@@ -516,13 +516,25 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the SC-500 exam?</h2>
       <p>
-        SC-500 is the <strong>Microsoft Certified: Cloud and AI Security Engineer Associate</strong> exam — the credential hiring managers expect when posting "Cloud Security Engineer", "Azure Security Specialist", or "Cloud and AI Security" roles. It's the <strong>direct successor to AZ-500</strong> (Microsoft Azure Security Engineer), which retired on 31 August 2026. SC-500 keeps the core Azure security-engineering content and broadens the role to cover securing cloud and AI workloads. It's a natural next step after <a href="/exams/az-104/">AZ-104</a> and pairs with <a href="/exams/sc-900/">SC-900</a>; Microsoft does not currently list SC-500 as an accepted prerequisite for the <a href="/exams/sc-100/">SC-100</a> Cybersecurity Architect Expert credential.
+        SC-500 is the <strong>Microsoft Certified: Cloud and AI Security Engineer Associate</strong> exam — the credential hiring managers expect when posting "Cloud Security Engineer", "Azure Security Specialist", or "Cloud and AI Security" roles. It's the <strong>direct successor to AZ-500</strong> (Microsoft Azure Security Engineer), which retired on 31 August 2026.
       </p>
       <p>
-        SC-500 is <strong>hands-on and operational</strong>. It validates that you can manage identity, access, and governance (Microsoft Entra ID, Conditional Access, PIM, managed identities, Azure Key Vault, Azure Policy and RBAC); secure storage, databases, and networking (Defender for Storage, Azure SQL security, NSGs, Azure Firewall, Private Link); secure compute and AI workloads (disk encryption, Defender for Servers and Containers, plus <em>securing AI</em> — Microsoft Entra Agent ID, Defender for AI, AI Gateway in API Management for Foundry, and Purview DSPM for Copilot); and manage and monitor security posture with Microsoft Defender for Cloud, Microsoft Sentinel, and Microsoft Security Copilot. Expect scenario questions that show you a config snippet or attack signal and ask what you'd do next.
+        SC-500 keeps the core Azure security-engineering content and broadens the role to cover securing cloud and AI workloads. It's a natural next step after <a href="/exams/az-104/">AZ-104</a> and pairs with <a href="/exams/sc-900/">SC-900</a>; Microsoft does not currently list SC-500 as an accepted prerequisite for the <a href="/exams/sc-100/">SC-100</a> Cybersecurity Architect Expert credential.
       </p>
       <p>
-        Microsoft published the SC-500 skills outline for the <strong>May 2026</strong> beta, with full training and exam expected from July 2026. Every question in Azure Mastery's SC-500 bank is mapped to that outline — including the new AI-security objectives, not just the AZ-500 carry-over. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-500" rel="noopener">learn.microsoft.com</a>.
+        SC-500 is <strong>hands-on and operational</strong>. It covers:
+      </p>
+      <ul>
+        <li>Manage identity, access, and governance — Microsoft Entra ID, Conditional Access, PIM, managed identities, Azure Key Vault, Azure Policy and RBAC</li>
+        <li>Secure storage, databases, and networking — Defender for Storage, Azure SQL security, NSGs, Azure Firewall, Private Link</li>
+        <li>Secure compute and AI workloads — disk encryption, Defender for Servers and Containers, plus <em>securing AI</em> with Microsoft Entra Agent ID, Defender for AI, AI Gateway in API Management for Foundry, and Purview DSPM for Copilot</li>
+        <li>Manage and monitor security posture with Microsoft Defender for Cloud, Microsoft Sentinel, and Microsoft Security Copilot</li>
+      </ul>
+      <p>
+        Expect scenario questions that show you a config snippet or attack signal and ask what you'd do next.
+      </p>
+      <p>
+        Microsoft published the SC-500 skills outline for the <strong>May 2026</strong> beta, with full training and exam expected from July 2026. Every question in Azure Mastery's SC-500 bank is mapped to that outline, including the new AI-security objectives alongside the AZ-500 carry-over content. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-500" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="SC-500 exam format facts">
         <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
@@ -539,7 +551,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 13 May 2026</p>
       <h2 class="display-small section-title">SC-500 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's <strong>13 May 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-500" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Four domains, with weights set by Microsoft's <strong>13 May 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-500" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -570,7 +582,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Covers PIM's eligible-vs-active roles, Conditional Access session controls, and managed identities replacing stored secrets.</li>
-                <li>Candidates treat governance as separate from identity, missing that RBAC hygiene and policy enforcement sit in this same domain.</li>
+                <li>Governance often gets treated as separate from identity, but RBAC hygiene and policy enforcement sit in this same domain.</li>
                 <li>Prove a policy actually blocks what it claims — don't assume a policy existing means it's enforcing anything.</li>
               </ul>
             </div>
@@ -608,7 +620,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Splits three ways: AI security with no AZ-500 equivalent, server hardening, and application-platform controls across hosting models.</li>
-                <li>Candidates can't match a control to its hosting model — a Container Apps control won't fix a Functions app.</li>
+                <li>Matching a control to its hosting model is the trap — a Container Apps control won't fix a Functions app.</li>
                 <li>New to this exam: Purview DSPM, Entra Agent ID, and Defender for AI Services guardrails need dedicated study.</li>
               </ul>
             </div>
@@ -626,7 +638,7 @@
                 <li>Implement Microsoft Security Copilot</li>
               </ul>
               <ul class="domain__tips">
-                <li>The operational half: proving Defender for Cloud and Sentinel controls actually work, not just configuring them.</li>
+                <li>The operational half: proving Defender for Cloud and Sentinel controls actually work, beyond simply configuring them.</li>
                 <li>Candidates guess at Sentinel ingestion mechanics instead of matching a data source to its actual pipeline.</li>
                 <li>Practise picking the right ingestion path — connector, CEF, or a custom log table — for a named data source.</li>
               </ul>
@@ -648,7 +660,7 @@
           <h3>Treating SC-500 as AZ-500 with a new name</h3>
           <p>Candidates study only AZ-500 material and consistently underperform on SC-500's dedicated AI-security slice.</p>
           <ul>
-            <li>The exam is testing whether you've studied Security for AI specifically: Purview DSPM, Entra Agent ID, and Foundry guardrails.</li>
+            <li>Purview DSPM, Entra Agent ID, and Foundry guardrails carry no AZ-500 equivalent, and the exam weights them accordingly.</li>
             <li>Add AI-security topics to your plan even if you already hold AZ-500 — don't assume the overlap is complete.</li>
           </ul>
         </article>
@@ -656,7 +668,7 @@
           <h3>Defender for Storage vs a storage firewall rule</h3>
           <p>Candidates mix up a network-perimeter control with a threat-detection control inside the same storage domain.</p>
           <ul>
-            <li>The exam is testing whether you know a firewall rule blocks before authentication while Defender for Storage detects after access.</li>
+            <li>A firewall rule blocks traffic before authentication; Defender for Storage detects suspicious activity after access has already happened.</li>
             <li>For a scenario describing an attack already underway, pick the detection answer, not the network-perimeter one.</li>
           </ul>
         </article>
@@ -664,7 +676,7 @@
           <h3>Treating Entra Agent ID like a normal app registration</h3>
           <p>Candidates default to classic Conditional Access or PIM patterns for scenarios that actually describe an autonomous agent.</p>
           <ul>
-            <li>The exam is testing whether you know Entra Agent ID governs agents, not human sign-ins or conventional service principals.</li>
+            <li>Entra Agent ID governs autonomous agents specifically, distinct from human sign-ins and conventional service principals.</li>
             <li>Look for an agent chaining actions across systems as the cue to reach for Agent ID's own controls.</li>
           </ul>
         </article>
@@ -672,7 +684,7 @@
           <h3>Defender CSPM vs the free foundational tier</h3>
           <p>Candidates assume the free foundational tier already covers attack-path analysis and multicloud governance.</p>
           <ul>
-            <li>The exam is testing whether you know CSPM is the paid layer adding attack-path analysis and agentless scanning.</li>
+            <li>Attack-path analysis and agentless scanning both sit behind the paid CSPM layer, not the free foundational tier.</li>
             <li>Match multicloud coverage or governance-at-scale requirements to CSPM, not the free tier.</li>
           </ul>
         </article>
@@ -680,7 +692,7 @@
           <h3>Assuming every Sentinel source lands the same way</h3>
           <p>Candidates pick the wrong ingestion mechanism or invent a custom table where a built-in one already exists.</p>
           <ul>
-            <li>The exam is testing whether you can match syslog, Windows events, and genuinely custom sources to their correct ingestion path.</li>
+            <li>Syslog, Windows events, and genuinely custom sources each need a different ingestion path, and mixing them up is the common miss.</li>
             <li>Check for an existing built-in table like CommonSecurityLog before assuming a source needs a custom one.</li>
           </ul>
         </article>
@@ -1037,13 +1049,13 @@
         <details class="faq">
           <summary>Does SC-500 practice work offline?</summary>
           <div class="faq__answer">
-            <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+            <p>Yes — every question, score, and readiness read happens on-device, so SC-500 prep keeps going without a connection. No account is needed, and nothing leaves your device unless you switch on private iCloud sync.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Is there an SC-500 practice test mode?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>Yes. Timed practice sessions draw on original, blueprint-weighted SC-500 questions with published timing and the interactive formats this exam uses. Adaptive study and Focus Weak Spots then push you back toward the domains dragging your accuracy down.</p>
           </div>
         </details>
       </div>

@@ -292,7 +292,7 @@ A: Not to use Azure Mastery, but hands-on practice matters more for AB-620 than 
 Q: Is Azure Mastery free for AB-620 prep?
 A: The app is free to download with a free allowance of AB-620 questions. The full 387-question AB-620 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
 Q: Does AB-620 practice work offline?
-A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
+A: Yes. The whole study loop, from answering questions to the readiness prediction, runs on the phone, so a flight or a signal-free commute is still study time. There is no account to create, and your progress stays on the device unless you switch on private iCloud sync.
 
 ## /exams/ab-650/ — AB-650 Practice Questions — 506 Qs & Exam Prep (2026)
 Page last modified: 2026-08-23

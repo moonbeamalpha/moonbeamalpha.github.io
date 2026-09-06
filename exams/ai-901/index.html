@@ -205,13 +205,8 @@
           },
           {
             "@type": "Question",
-            "name": "Is there a cost to sitting AI-901?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the official scheduling page for the current local price before booking." }
-          },
-          {
-            "@type": "Question",
-            "name": "Does an AI-901 pass ever expire?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire." }
+            "name": "Does the free tier cover any of AI-901's question bank?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade." }
           },
           {
             "@type": "Question",
@@ -220,18 +215,23 @@
           },
           {
             "@type": "Question",
-            "name": "How much revision time does AI-901 need?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam." }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the free tier cover any of AI-901's question bank?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade." }
+            "name": "Is there a cost to sitting AI-901?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the official scheduling page for the current local price before booking." }
           },
           {
             "@type": "Question",
             "name": "Can I study AI-901 on a plane with no signal?",
             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does an AI-901 pass ever expire?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire." }
+          },
+          {
+            "@type": "Question",
+            "name": "How much revision time does AI-901 need?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam." }
           }
         ]
       },
@@ -478,7 +478,7 @@
                 <li>Identify AI workloads</li>
               </ul>
               <p>
-                The knowledge-heavy half of the exam, testing whether you can recognise the right AI approach before you touch Foundry. Responsible AI covers Microsoft's six principles &mdash; fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability &mdash; and how each shows up in a solution's design. AI model components and configurations cover how generative AI models work under the hood, choosing an appropriate model based on its capabilities, and picking sensible deployment options and configuration parameters. AI workloads is the broadest topic: recognising scenarios for generative and agentic AI, text analysis, speech, computer vision, and information extraction; naming core text-analysis techniques like keyword extraction, entity detection, sentiment analysis, and summarisation; identifying speech recognition and speech synthesis features; spotting computer vision and image-generation model capabilities; and matching extraction techniques to text, image, audio, and video sources.
+                The knowledge-heavy half of the exam, testing whether you can recognise the right AI approach before you touch Foundry. Responsible AI covers Microsoft's six principles &mdash; fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability &mdash; and how each shows up in a solution's design. AI model components and configurations cover how generative AI models work under the hood, choosing a model for its capabilities, and picking sensible deployment options. AI workloads is the broadest topic: recognising scenarios for generative and agentic AI, text analysis, speech, computer vision, and information extraction, and naming the core techniques within each, from sentiment analysis to speech synthesis to image generation.
               </p>
             </div>
           </details>
@@ -496,7 +496,7 @@
                 <li>Implement AI solutions for information extraction by using Foundry</li>
               </ul>
               <p>
-                The larger, hands-on half. Generative AI apps and agents cover writing effective system and user prompts, deploying and testing a model directly in the Foundry portal, building a lightweight chat client with the Foundry SDK, and creating and testing a single-agent solution with its own client application. Text and speech solutions cover building a lightweight app with text analysis, responding to spoken prompts through a deployed multimodal model, and using Azure Speech in Foundry Tools. Computer vision and image generation cover interpreting visual input through a deployed multimodal model, generating new visual outputs, and building a lightweight vision-enabled app. Information extraction covers pulling structured data out of documents, forms, images, audio, and video with Azure Content Understanding in Foundry Tools, then wiring those outputs into a lightweight application. You should be comfortable reading foundational Python examples across every topic here &mdash; the exam expects you to interpret short SDK snippets, not just recognise service names.
+                The larger, hands-on half. Generative AI apps and agents cover writing effective prompts, deploying and testing a model in the Foundry portal, and building a chat client or single-agent solution with the Foundry SDK. Text and speech solutions cover building a text-analysis app, responding to spoken prompts through a multimodal model, and using Azure Speech in Foundry Tools. Computer vision and image generation cover interpreting visual input and generating new visual outputs through a deployed model. Information extraction covers pulling structured data from documents, forms, images, audio, and video with Azure Content Understanding, then wiring the output into an app. Expect to read short Python SDK snippets throughout, not just recognise service names.
               </p>
             </div>
           </details>
@@ -540,10 +540,10 @@
         <strong>Knowledge decay tracking</strong> matters because the two assessed areas span a wide range of concepts and practical Foundry skills. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        AI-901's <strong>Exam Simulator</strong> session is shorter by design — a 40–60-question set weighted across the two assessed areas from the 15 April 2026 outline, run against the app's own 45-minute clock with no flag-and-review, so a fundamentals-tier candidate still gets a realistic sense of the time pressure without an artificially long rehearsal. Every item is original Azure Mastery content, not a reproduction of Microsoft's exam.
+        You won't get a 100-minute <strong>Exam Simulator</strong> run for AI-901, because the real exam doesn't give you one either. Azure Mastery matches the 45-minute clock Microsoft actually uses at fundamentals tier, pulls a 40–60-question set weighted to the 15 April 2026 outline's two assessed areas, and switches flag-and-review off. Every question is original material, built to the outline rather than copied from Microsoft's paper.
       </p>
       <p>
-        AI-901 misses often come down to naming the wrong principle or workload — calling something a fairness issue when it's really a transparency one, say, or reaching for a generative capability when the scenario is really agentic. <strong>Answer Coach</strong> spells out the distinction in plain language immediately after you answer, then keeps a private note you can jump back to from the missed-answers list at the end of a session. Authored guidance is always available, and supported devices may optionally rewrite a note on-device only after grounding checks.
+        Naming the wrong principle costs AI-901 candidates more marks than not knowing the principle at all: calling a fairness issue a transparency one, say, or picking a generative capability when the scenario actually describes an agentic one. <strong>Answer Coach</strong> corrects the label immediately, in plain language, and keeps the note waiting in your missed-answers list for the end of the session. Authored guidance is always available, and supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -730,15 +730,9 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Is there a cost to sitting AI-901?</summary>
+          <summary>Does the free tier cover any of AI-901's question bank?</summary>
           <div class="faq__answer">
-            <p>Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/" rel="noopener">official scheduling page</a> for the current local price before booking.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does an AI-901 pass ever expire?</summary>
-          <div class="faq__answer">
-            <p>No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire.</p>
+            <p>Yes. The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
         <details class="faq">
@@ -748,21 +742,27 @@
           </div>
         </details>
         <details class="faq">
-          <summary>How much revision time does AI-901 need?</summary>
+          <summary>Is there a cost to sitting AI-901?</summary>
           <div class="faq__answer">
-            <p>Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the free tier cover any of AI-901's question bank?</summary>
-          <div class="faq__answer">
-            <p>Yes. The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
+            <p>Microsoft prices AI-901 according to the country or region where the exam is proctored. Check the <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/" rel="noopener">official scheduling page</a> for the current local price before booking.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Can I study AI-901 on a plane with no signal?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does an AI-901 pass ever expire?</summary>
+          <div class="faq__answer">
+            <p>No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, and Microsoft Fundamentals certifications do not expire.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How much revision time does AI-901 need?</summary>
+          <div class="faq__answer">
+            <p>Allow several weeks for concepts plus hands-on practice. The current outline expects core cloud knowledge, familiarity with Azure resources, and an understanding of Python syntax and examples that call AI models and services. Azure Mastery's readiness gauge helps you decide when to schedule the exam.</p>
           </div>
         </details>
       </div>

@@ -208,16 +208,6 @@
           },
           {
             "@type": "Question",
-            "name": "What's the AI-500 exam fee, and does the beta change it?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee." }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the AI-500 credential need annual renewal?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)" }
-          },
-          {
-            "@type": "Question",
             "name": "What happens if I don't pass AI-500 the first time?",
             "acceptedAnswer": { "@type": "Answer", "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase." }
           },
@@ -228,13 +218,23 @@
           },
           {
             "@type": "Question",
-            "name": "Does Azure Mastery let me try AI-500 before paying?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade." }
+            "name": "Does the AI-500 credential need annual renewal?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on Microsoft Learn within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as AZ-900 are different — those don't expire.)" }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the AI-500 exam fee, and does the beta change it?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee." }
           },
           {
             "@type": "Question",
             "name": "Will AI-500 revision work without Wi-Fi?",
             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Azure Mastery let me try AI-500 before paying?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade." }
           }
         ]
       },
@@ -543,7 +543,7 @@
       <div class="traps">
         <article class="trap">
           <h3>Publishing an agent doesn't carry its role assignments with it</h3>
-          <p>In the legacy publishing model, role assignments never follow the shared project identity to a published agent's new Agent Application identity; in the new agent object model they don't follow from an Agent Application to the agent object either. Either way, tool calls that worked all through development start failing with authorisation errors the moment an agent is published, until RBAC is reassigned to whichever identity is now making the call. It's the single most reliable source of "it worked in dev" items.</p>
+          <p>Role assignments don't follow an agent when it's published, whichever model you're on: the legacy shared project identity doesn't carry over to the new Agent Application identity, and the new object model doesn't carry it further to the agent object either. Tool calls that worked through development start failing with authorisation errors the moment an agent goes live, until RBAC is reassigned to whichever identity is now making the call.</p>
         </article>
         <article class="trap">
           <h3>Group chat agents don't share one session object</h3>
@@ -577,10 +577,10 @@
         <strong>Knowledge decay tracking</strong> matters at the expert tier more than anywhere else — four dense domains covering everything from memory architecture to release methodology is a lot to retain, and the orchestration pattern or evaluator you nailed three weeks into your study window is the thing you'll blank on by exam day if you stop revising. Azure Mastery tracks every topic's decay curve and flags topics approaching expiry. The padlock icon on the Today screen is your "revisit before you forget" cue, and weak-spot drills automatically pull from decayed topics first.
       </p>
       <p>
-        <strong>Exam Simulator</strong> for AI-500 draws a randomised 40–60-item set across all four domains, weighted to the outline Microsoft published on 16 July 2026, and runs its own 100-minute clock with flag-and-review switched off, so pacing pressure matches what an expert-level sitting actually feels like. The content is original practice material, not a reproduction of Microsoft's live exam.
+        AI-500's <strong>Exam Simulator</strong> run is short on filler and long on pressure: a randomised 40–60-item set drawn from the 16 July 2026 outline's own domain weights, a single 100-minute clock, and no flag-and-review button to lean on. Nothing in the set is copied from Microsoft's exam; all of it is original Azure Mastery material built to the same weighting.
       </p>
       <p>
-        AI-500's costliest misses are usually identity or evaluator mix-ups — an agent published without its RBAC reassigned, or the wrong evaluator picked for a described failure. <strong>Answer Coach</strong> explains what the correct choice recognises that the wrong ones miss, then keeps that explanation filed against the question so you can return to it directly from your missed-answers list rather than hunting for it again. Authored guidance is always available, while supported devices may optionally rewrite a note on-device only after grounding checks.
+        Two mistakes account for most of the damage at this tier. An agent gets published without its RBAC properly reassigned, or the wrong evaluator gets picked for a described failure mode. <strong>Answer Coach</strong> names which of the two happened, explains what the correct choice noticed that the wrong one missed, and files the explanation against that exact question so it's waiting in your missed-answers list rather than lost in a general weak-spot pile. Authored guidance is always available; supported devices may optionally rewrite a note on-device only after grounding checks.
       </p>
       <p>
         During your first week, <strong>Aura</strong> adapts the next step as you go. Every session ends with a concise recap of what changed, what to focus on, and the best follow-up.
@@ -768,18 +768,6 @@
           </div>
         </details>
         <details class="faq">
-          <summary>What's the AI-500 exam fee, and does the beta change it?</summary>
-          <div class="faq__answer">
-            <p>Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee.</p>
-          </div>
-        </details>
-        <details class="faq">
-          <summary>Does the AI-500 credential need annual renewal?</summary>
-          <div class="faq__answer">
-            <p>Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
-          </div>
-        </details>
-        <details class="faq">
           <summary>What happens if I don't pass AI-500 the first time?</summary>
           <div class="faq__answer">
             <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
@@ -792,15 +780,27 @@
           </div>
         </details>
         <details class="faq">
-          <summary>Does Azure Mastery let me try AI-500 before paying?</summary>
+          <summary>Does the AI-500 credential need annual renewal?</summary>
           <div class="faq__answer">
-            <p>Yes. The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
+            <p>Yes. Microsoft Expert certifications including AI-500 expire annually. Renewal is free — a short online assessment on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> within the six-month window before your expiration date. The renewal targets recent skills outline updates, so staying current is straightforward if you remain broadly active in the role. (Fundamentals certifications such as <a href="/exams/az-900/">AZ-900</a> are different — those don't expire.)</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>What's the AI-500 exam fee, and does the beta change it?</summary>
+          <div class="faq__answer">
+            <p>Microsoft prices AI-500 by the country or region where the exam is proctored and has not published a single flat fee for the beta — check the official exam page for your local price when you register. Microsoft sometimes runs free-voucher promotions during events such as Microsoft Build or Microsoft Ignite, so check your Microsoft Learn profile for any active offers before booking. The certification renews annually with a free online assessment, so there is no recurring fee.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Will AI-500 revision work without Wi-Fi?</summary>
           <div class="faq__answer">
             <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Does Azure Mastery let me try AI-500 before paying?</summary>
+          <div class="faq__answer">
+            <p>Yes. The app is free to download and includes a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
           </div>
         </details>
       </div>

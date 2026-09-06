@@ -205,7 +205,7 @@
             "name": "What is the AZ-900 retake policy if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase."
+              "text": "Retake waits get longer the more times you've failed, and every attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
             }
           },
           {
@@ -229,7 +229,7 @@
             "name": "Is AZ-900 worth taking if I'm not technical?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — that's exactly who AZ-900 is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles. The exam doesn't expect you to write a PowerShell script. It expects you to explain concepts such as region pairs, the shared responsibility model, and when a hybrid cloud is appropriate."
+              "text": "Yes — that's exactly who it's designed for. Account managers, sales engineers, and finance partners sit AZ-900 to qualify for Microsoft Partner Network roles. It doesn't expect a PowerShell script, just an ability to explain region pairs, shared responsibility, and when hybrid cloud fits."
             }
           },
           {
@@ -237,7 +237,7 @@
             "name": "What prerequisites does AZ-900 assume?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AZ-900 has no formal prerequisites — Microsoft designed it as the common entry point into the Azure ecosystem. That said, some background in an area of IT (infrastructure, databases, or software development) makes the material easier to absorb quickly, since you'll already have working knowledge of an environment to map Azure's concepts onto. If you're coming from a completely non-technical background, expect the low end of the one-to-two-week study estimate to stretch out."
+              "text": "AZ-900 has no formal prerequisites — Microsoft designed it as the common entry point into Azure. Some IT background makes the material quicker to absorb, since you already have an environment to map its concepts onto. Coming from a fully non-technical background stretches the usual one-to-two-week estimate."
             }
           },
           {
@@ -532,9 +532,11 @@
                 <li>Describe the benefits of using cloud services</li>
                 <li>Describe cloud service types</li>
               </ul>
-              <p>
-                The smallest domain by weight, but the conceptual foundation everything else builds on — skip it and the rest of the exam reads like jargon. Cloud computing objectives cover the shared responsibility model, public/private/hybrid trade-offs, the consumption-based pricing model, and serverless, tested through recognising which model fits a described scenario rather than reciting definitions. The benefits section is genuinely about benefits — high availability, scalability, reliability, security, governance, manageability — as concepts you can explain to a non-technical stakeholder. Service types close the domain: IaaS, PaaS, and SaaS, with an emphasis on picking the right one for a given use case, not just defining the acronyms.
-              </p>
+              <ul class="domain__tips">
+                <li>Smallest domain but foundational: shared responsibility, pricing models, and picking the right service type for a scenario.</li>
+                <li>Candidates recite IaaS, PaaS, and SaaS definitions instead of matching a scenario to the model that actually fits it.</li>
+                <li>Practise explaining a benefit like scalability or governance to a non-technical stakeholder, not just naming it.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -550,9 +552,11 @@
                 <li>Describe Azure storage services</li>
                 <li>Describe Azure identity, access, and security</li>
               </ul>
-              <p>
-                The largest domain by a wide margin, and the one with the most raw factual surface. The architectural hierarchy — regions, region pairs, availability zones, resource groups, subscriptions, and management groups — comes first, because everything else in this domain assumes you already understand where a resource lives. Compute and networking cover VMs, scale sets, containers, functions, and virtual networking basics like peering, DNS, VPN Gateway, and ExpressRoute. Storage covers service comparison, tiers, and redundancy options. Identity, access, and security closes the domain: Microsoft Entra ID, MFA and SSO, Conditional Access, Azure RBAC, Zero Trust, defence-in-depth, and Microsoft Defender for Cloud — described at a conceptual level, not configured hands-on.
-              </p>
+              <ul class="domain__tips">
+                <li>The largest domain: the architectural hierarchy, compute and networking basics, storage tiers, and identity concepts.</li>
+                <li>Candidates skip the regions-to-management-groups hierarchy, but everything else in this domain assumes you already know where a resource lives.</li>
+                <li>Learn identity and security concepts — Entra ID, RBAC, Zero Trust — at a describe level, not a configure level.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -568,9 +572,11 @@
                 <li>Describe features and tools for managing and deploying Azure resources</li>
                 <li>Describe monitoring tools in Azure</li>
               </ul>
-              <p>
-                Cost management is more testable than it sounds: factors that affect Azure spend, the pricing calculator's purpose, cost-management capabilities, and what tags are actually for. Governance and compliance tools — Microsoft Purview, Azure Policy, resource locks — get tested on purpose rather than mechanics: what problem each one solves, not how to configure it. Management and deployment tools cover the Azure portal, Cloud Shell, CLI and PowerShell, Azure Arc, infrastructure as code, and ARM templates at a describe-this-tool level. Monitoring rounds it out — Azure Advisor, Service Health, and Azure Monitor including Log Analytics and Application Insights — as concepts to recognise, not dashboards to build.
-              </p>
+              <ul class="domain__tips">
+                <li>Covers cost management, governance tools, deployment tools, and monitoring, all tested on purpose rather than mechanics.</li>
+                <li>Candidates learn how to configure a tool when the exam only tests what problem that tool solves.</li>
+                <li>Match each governance or monitoring tool to the one problem it solves, not its configuration screen.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -587,23 +593,43 @@
       <div class="traps">
         <article class="trap">
           <h3>IaaS vs PaaS vs SaaS — responsibility, not just the acronym</h3>
-          <p>The exam rarely just asks you to define IaaS, PaaS, and SaaS — it describes a scenario and asks which model fits, or who's responsible for a specific layer, such as patching the OS. IaaS hands the customer the most responsibility, SaaS the least, and the shared responsibility model shifts along that same spectrum. Memorising the three definitions without the responsibility trade-off underneath them is a common way to lose marks.</p>
+          <p>Candidates memorise the three definitions without the responsibility trade-off that actually decides the answer.</p>
+          <ul>
+            <li>The exam is testing whether you can place responsibility for a named layer, like OS patching, on the right service type.</li>
+            <li>Match the scenario's described responsibility split to IaaS, PaaS, or SaaS rather than recalling a definition.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Availability zones vs region pairs</h3>
-          <p>An availability zone protects against failure of a single datacenter within a region; a region pair links two specific regions together for disaster-recovery and data-residency purposes, and Azure controls which pairs exist — you can't invent your own. A question about surviving one datacenter going down wants zones; a question about where your data replicates to during a regional outage wants region pairs.</p>
+          <p>Candidates confuse surviving one datacentre failure with where data replicates during a regional outage.</p>
+          <ul>
+            <li>The exam is testing whether you know zones protect within a region while region pairs link two entire regions.</li>
+            <li>Match "one datacentre goes down" to zones and "regional outage replication" to region pairs.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>CapEx vs OpEx under the consumption model</h3>
-          <p>Azure's consumption-based pricing converts infrastructure spend from CapEx (buying hardware upfront) to OpEx (paying for what you use, as you use it). A scenario framed around retiring on-premises infrastructure in favour of cloud resources is testing whether you recognise that shift — not whether you can calculate a bill.</p>
+          <p>Candidates try to calculate a bill instead of recognising the CapEx-to-OpEx shift a scenario is testing.</p>
+          <ul>
+            <li>The exam is testing whether you recognise a scenario about retiring on-premises hardware as a CapEx-to-OpEx shift.</li>
+            <li>Read for a shift from buying hardware upfront to paying for use — that's the answer, not a cost figure.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Azure Policy vs RBAC</h3>
-          <p>Azure Policy enforces rules about how resources must be configured — only allow a certain VM size, require a tag — regardless of who's making the change; Azure RBAC controls who is allowed to perform an action in the first place. A scenario about blocking a specific resource configuration is Policy; one about restricting which people can create resources at all is RBAC.</p>
+          <p>Candidates can't tell a configuration rule from an access-control rule in the same governance scenario.</p>
+          <ul>
+            <li>The exam is testing whether you know Policy enforces configuration rules while RBAC controls who can act at all.</li>
+            <li>Match "blocking a configuration" to Policy and "restricting who can create resources" to RBAC.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Zero Trust is a principle, not a product</h3>
-          <p>Zero Trust — verify explicitly, use least-privilege access, assume breach — describes a security philosophy that Microsoft Entra ID, Conditional Access, and Defender for Cloud all support, not a single Azure service you turn on. AZ-900 tests whether you can recognise Zero Trust principles being applied in a scenario, not name a specific "Zero Trust service."</p>
+          <p>Candidates look for a single "Zero Trust service" instead of recognising a security philosophy in the scenario.</p>
+          <ul>
+            <li>The exam is testing whether you can recognise Zero Trust principles being applied, not name a specific product.</li>
+            <li>Look for verify-explicitly, least-privilege, or assume-breach language as the cue, not a service name.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -616,63 +642,63 @@
         <h3>Exam-specific practice</h3>
         <ul>
           <li><strong>364 AZ-900 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Coverage follows the official three domains.</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li>Coverage leans hardest on Azure architecture and services, the domain Microsoft weights up to 40%.</li>
+          <li>Practise recognising which service type or benefit a plain-language scenario is describing.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your AZ-900 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ forecasts your AZ-900 score on-device after roughly 30 questions, confidence range attached.</li>
+          <li>It names whether the services domain or governance and management is dragging that number down.</li>
+          <li>Weigh all three domains against each other to spot which one needs attention before you book.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan leans hardest on Azure architecture and services, the domain Microsoft weights up to 40%.</li>
+          <li>Miss a region-pair or governance-tool question and the next session brings that domain round sooner.</li>
+          <li>Answer a topic correctly three sessions running and the plan turns its attention to what's next weakest.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>Forget the Policy-vs-RBAC distinction early on and later governance questions get harder too.</li>
+          <li>A fading topic gets flagged on the Today screen well before you'd notice it slipping yourself.</li>
+          <li>Run a Focus Weak Spots session and any topic that's been fading returns to your rotation.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 45-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Practise holding focus through a full 45-minute session, matching AZ-900's real length.</li>
+          <li>Every rehearsal session mixes the three domains at their published weights, built from original questions.</li>
+          <li>Azure Mastery doesn't control the exam-day interface or question order — that's entirely Microsoft's call.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles AZ-900's near-identical pairs: availability zones vs region pairs, and Azure Policy vs RBAC.</li>
+          <li>Pick the wrong option and Answer Coach shows exactly which scenario clue pointed the other way.</li>
+          <li>Supported devices can rephrase a coaching note on-device, but only after checking it against the written explanation.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura's suggestions shift as your first week of AZ-900 practice takes shape.</li>
+          <li>Every session ends with a quick summary of what went well, what still needs work, and where to focus next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Private by design</h3>
         <ul>
-          <li>Practice, scoring, readiness, and coaching run on-device.</li>
-          <li>You don't need an Azure Mastery account or a server to process your study data.</li>
-          <li>Optional sync uses your private iCloud account.</li>
+          <li>Your AZ-900 answer history, readiness gauge, and Answer Coach notes stay on your device by default.</li>
+          <li>No Azure Mastery account and no server ever processes your AZ-900 study data.</li>
+          <li>Turning sync on keeps it confined to your own private iCloud account, nowhere else.</li>
         </ul>
       </article>
     </section>
@@ -875,7 +901,12 @@
         <details class="faq">
           <summary>What is the AZ-900 retake policy if I fail?</summary>
           <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase.</p>
+            <p>Retake waits get longer the more times you've failed, and every attempt needs its own voucher.</p>
+            <ul>
+              <li>First retake: after 24 hours.</li>
+              <li>Second and third retakes: a 14-day wait each.</li>
+              <li>Cap: five attempts per rolling 12 months.</li>
+            </ul>
           </div>
         </details>
         <details class="faq">
@@ -893,13 +924,13 @@
         <details class="faq">
           <summary>Is AZ-900 worth taking if I'm not technical?</summary>
           <div class="faq__answer">
-            <p>Yes — that's exactly who AZ-900 is designed for. Account managers, project managers, sales engineers, and finance partners all sit AZ-900 to qualify for Microsoft Partner Network roles. The exam doesn't expect you to write a PowerShell script. It expects you to explain concepts such as region pairs, the shared responsibility model, and when a hybrid cloud is appropriate.</p>
+            <p>Yes — that's exactly who it's designed for. Account managers, sales engineers, and finance partners sit AZ-900 to qualify for Microsoft Partner Network roles. It doesn't expect a PowerShell script, just an ability to explain region pairs, shared responsibility, and when hybrid cloud fits.</p>
           </div>
         </details>
         <details class="faq">
           <summary>What prerequisites does AZ-900 assume?</summary>
           <div class="faq__answer">
-            <p>AZ-900 has no formal prerequisites — Microsoft designed it as the common entry point into the Azure ecosystem. That said, some background in an area of IT (infrastructure, databases, or software development) makes the material easier to absorb quickly, since you'll already have working knowledge of an environment to map Azure's concepts onto. If you're coming from a completely non-technical background, expect the low end of the one-to-two-week study estimate to stretch out.</p>
+            <p>AZ-900 has no formal prerequisites — Microsoft designed it as the common entry point into Azure. Some IT background makes the material quicker to absorb, since you already have an environment to map its concepts onto. Coming from a fully non-technical background stretches the usual one-to-two-week estimate.</p>
           </div>
         </details>
         <details class="faq">

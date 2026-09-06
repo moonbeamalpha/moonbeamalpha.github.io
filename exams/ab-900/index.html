@@ -186,34 +186,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How much does the AB-900 exam cost?",
+            "name": "Which admin centre owns a given object — is that a recurring AB-900 trap?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AB-900 is a Fundamentals-tier exam. The voucher is USD $99 in the United States; in the UK it's typically around £75. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events for Fundamentals certifications, so check your Microsoft Learn profile for active offers before booking. Fundamentals certifications do not expire, so there is no annual renewal cost."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the AB-900 certification expire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. AB-900, like other Microsoft Fundamentals certifications (AZ-900, AI-901, SC-900, DP-900), does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate and Specialty certifications which require annual renewal on Microsoft Learn."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the AB-900 retake policy if I fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long should I study for AB-900?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most candidates pass AB-900 after two to four weeks of focused study, assuming basic Microsoft 365 admin familiarity. If Microsoft 365 admin centres and Microsoft Entra are new to you, plan for six weeks — the exam expects you to recognise admin-centre objects (Exchange, SharePoint, Teams, M365), Purview surfaces (Information Protection, DLP, Insider Risk, DSPM for AI), and Defender XDR features. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher."
+              "text": "Yes. AB-900 often gives an object, a mailbox setting, a Teams policy, a SharePoint site, and expects you to know which admin centre actually owns it, rather than treating the centres as interchangeable. Answer Coach names the specific centre a wrong pick would have sent you to instead."
             }
           },
           {
@@ -221,7 +197,47 @@
             "name": "AB-900 vs SC-900 — which should I take first?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Different scopes. SC-900 (Security, Compliance, and Identity Fundamentals) is the broad Microsoft security overview — Entra, Defender, Purview, compliance, identity. AB-900 is narrower and more practical: it focuses on Microsoft 365 Copilot administration, with security and Purview coverage scoped to the Copilot / agent threat surface (DSPM for AI, sensitivity-label flow into Copilot grounding, oversharing in SharePoint). If you already passed SC-900, AB-900 will feel like an extension. If you're starting fresh and your role is M365-Copilot-focused, take AB-900 directly first."
+              "text": "Different scopes. SC-900 is the broad Microsoft security overview: Entra, Defender, Purview, identity. AB-900 is narrower and practical, focused on M365 Copilot administration, with Purview coverage scoped to the Copilot threat surface. Passed SC-900 already? AB-900 feels like an extension. New to both? Start with AB-900 if your role is Copilot-focused."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What question formats should I expect on AB-900?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that spread: mostly single-select, a meaningful slice of scenario-based and yes/no questions, and a smaller mix of multi-select, drag-to-match, hot-area, drag-and-drop, dropdown, and case-study formats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the AB-900 exam fee, and does it vary by region?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The voucher costs USD $99 in the United States, around £75 in the UK. Microsoft regularly offers free vouchers around events like Build and Ignite for Fundamentals certifications, so check your Learn profile before booking. Fundamentals certifications never expire, so there's no annual renewal cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Once earned, does an AB-900 credential ever lapse?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. AB-900, like other Microsoft Fundamentals certifications (AZ-900, AI-901, SC-900, DP-900), never expires once earned. Associate and Specialty certifications differ: those require annual renewal on Microsoft Learn."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "DSPM for AI vs standard DLP — how does AB-900 tell them apart?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AB-900 tests whether you know DSPM for AI is scoped to Copilot and agent interactions, flagging oversharing and exposure risk in prompts and grounding data, while standard DLP governs data movement across email, Teams, and file storage generally. Picking the wrong one is the exact mix-up Answer Coach catches."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I failed AB-900 — how soon can I book a retake?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The wait before your first retake is 24 hours. First retake: 24-hour wait. Second and third retakes: 14-day wait each. Microsoft caps you at five attempts within any rolling 12-month period, a voucher required each time."
             }
           },
           {
@@ -229,31 +245,23 @@
             "name": "AB-900 vs AB-620 — what's the difference?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Different jobs. AB-900 is the Fundamentals-tier admin cert: it expects you to identify Microsoft 365 admin-centre objects, Purview governance surfaces, and Copilot administration controls (licensing, usage analytics, agent approval flow). AB-620 (AI Agent Builder) is the Associate-tier maker cert: it expects you to build agents in Copilot Studio with topics, generative answers, knowledge sources, and channel deployments. AB-900 administers; AB-620 builds. Many M365 admins take both because real-world Copilot rollouts require admin governance and maker support."
+              "text": "Different jobs. AB-900 is the Fundamentals-tier admin cert: identifying M365 admin-centre objects, Purview surfaces, and Copilot administration controls. AB-620 (AI Agent Builder) is the Associate-tier maker cert: building agents in Copilot Studio with topics and knowledge sources. AB-900 administers; AB-620 builds. Many admins take both."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Azure Mastery free for AB-900 prep?",
+            "name": "Can I try Azure Mastery's AB-900 bank before paying?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade."
+              "text": "Yes. The app is free to download with a free allowance of AB-900 questions so you can try every feature. The full 323-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue."
             }
           },
           {
             "@type": "Question",
-            "name": "Does AB-900 practice work offline?",
+            "name": "Can I revise AB-900 offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there an AB-900 practice test mode?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest."
+              "text": "Yes. Nothing in the study loop needs a connection: practice, scoring, and the readiness prediction all happen on-device. No account is needed, and your data only leaves the device if you opt into private iCloud sync."
             }
           }
         ]
@@ -449,7 +457,7 @@
         AB-900 is <strong>practical and admin-centre-focused</strong>. It validates that you can identify the right Microsoft 365 admin centre and object for a task (Exchange, SharePoint, Teams, M365), recognise Microsoft Purview surfaces (Information Protection, DLP, Insider Risk, DSPM for AI, Data Lifecycle Management), understand how Copilot accesses data via Microsoft Graph and respects M365 / Purview / Defender controls, and perform basic admin tasks (assign Copilot licences, monitor PAYG billing, approve agents, monitor agent usage in M365 and Power Platform admin centres). Expect questions that ask which admin centre or which Purview tool fits a stated business need.
       </p>
       <p>
-        Microsoft published the AB-900 skills outline in <strong>May 2026</strong>. Every question in Azure Mastery's AB-900 bank is mapped to the current outline — including the newer DSPM for AI, Copilot Analytics, and SharePoint oversharing topics. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-900" rel="noopener">learn.microsoft.com</a>.
+        Microsoft published the AB-900 skills outline on <strong>22 July 2026</strong>. Every question in Azure Mastery's AB-900 bank is mapped to the current outline — including the newer DSPM for AI, Copilot Analytics, and SharePoint oversharing topics. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-900" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="AB-900 exam format facts">
         <li><span class="exam-format__label">Questions</span><span class="exam-format__value">35–45 mixed format</span></li>
@@ -463,10 +471,10 @@
 
     <!-- AB-900 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · May 2026</p>
+      <p class="label-eyebrow section-eyebrow">Skills measured · 22 July 2026</p>
       <h2 class="display-small section-title">AB-900 exam objectives</h2>
       <p class="section-lede">
-        Three domains, weighted by Microsoft's May 2026 release outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-900" rel="noopener">official skills outline</a>; Azure Mastery tags questions by exam objective, so you can see which domains need more practice.
+        Three domains, weighted by Microsoft's <strong>22 July 2026</strong> release outline. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ab-900" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -485,37 +493,113 @@
       </figure>
       <div class="domains">
         <article class="domain">
-          <h3>Identify the core features and objects of Microsoft 365 services<span class="domain__weight">30–35%</span></h3>
+          <h3>Identify the core features and objects of Microsoft 365 services<span class="domain__weight">Published weight 30–35%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ab900-core">113</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Core topics</summary>
             <div class="domain__body">
-              <p>
-                The M365 admin foundation. Identify the right admin centre and object for a task — M365 admin centre (domain names, org settings, licences), Exchange Online (mailboxes, distribution lists), SharePoint in M365 (sites, libraries, permissions), Teams (teams, channels, policies). Understand Microsoft 365 security principles — Zero Trust, authentication / authorisation methods, Microsoft Defender XDR features. Identify Microsoft Entra capabilities — conditional access, SSO, MFA, Privileged Identity Management (PIM), App registrations and Enterprise apps, audit logs, Identity Secure Score, and tools for common sign-in troubleshooting. Around 11–16 questions per sitting.
-              </p>
+              <ul>
+                <li>Identify the core objects of Microsoft 365 services</li>
+                <li>Understand the Microsoft 365 security principles</li>
+                <li>Identify the core security features of Microsoft 365 services</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>This domain tests naming the right admin centre — Exchange, SharePoint, Teams, or M365 — for a described object or task.</li>
+                <li>Candidates who've only used one or two admin centres regularly under-prepare for questions about the others.</li>
+                <li>Walk through each admin centre once, matching a handful of objects to the console that actually manages them.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Understand data protection and governance tasks for Microsoft 365 and Copilot<span class="domain__weight">35–40%</span></h3>
+          <h3>Understand data protection and governance tasks for Microsoft 365 and Copilot<span class="domain__weight">Published weight 35–40%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ab900-protect">127</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Protect topics</summary>
             <div class="domain__body">
-              <p>
-                The largest domain. Microsoft Purview surfaces — Information Protection, Data Loss Prevention (DLP), Insider Risk Management, Communication Compliance, <em>Data Security Posture Management (DSPM) for AI</em>, and Data Lifecycle Management. Sensitivity labels, data classification, retention. Understand how Copilot accesses data, how Microsoft Graph influences Copilot responses, and how Copilot uses M365 / Purview / Defender controls to protect against risk. Use Compliance Manager, Data Explorer, Insider Risk, Communication Compliance, Activity Explorer, DSPM for AI, and Content search in eDiscovery. Identify and monitor SharePoint oversharing — including SharePoint Advanced Management's restricted site access. Around 14–18 questions.
-              </p>
+              <ul>
+                <li>Understand Microsoft Purview</li>
+                <li>Understand data security implications of Copilot</li>
+                <li>Identify data protection and governance risks for Microsoft 365 and Copilot</li>
+                <li>Identify and monitor oversharing in SharePoint in Microsoft 365</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>This domain tests matching a scenario to the right Microsoft Purview surface, from Information Protection to DSPM for AI.</li>
+                <li>Candidates study Purview's older DLP and labelling features but skip newer surfaces like DSPM for AI and oversharing reports.</li>
+                <li>Give DSPM for AI and SharePoint oversharing detection the same attention as classic DLP; this domain weighs heaviest.</li>
+              </ul>
             </div>
           </details>
         </article>
         <article class="domain">
-          <h3>Perform basic administrative tasks for Copilot and agents<span class="domain__weight">25–30%</span></h3>
+          <h3>Perform basic administrative tasks for Copilot and agents<span class="domain__weight">Published weight 25–30%</span></h3>
+          <p class="domain__inventory"><span class="domain__count" data-domain="ab900-admin">83</span> exam-scoped practice questions in the app</p>
           <details class="domain__details">
-            <summary>Explore key topics</summary>
+            <summary>Explore Admin topics</summary>
             <div class="domain__body">
-              <p>
-                The Copilot ops layer. Compare built-in Copilot and agent capabilities, monthly licence vs pay-as-you-go (including SharePoint), enableable / disableable Copilot features, and use cases for Researcher, Analyst, and custom agents. Assign Copilot licences. Monitor PAYG billing policies. Track Copilot usage and adoption via Copilot Analytics in the M365 admin centre. Manage prompts (save, share, schedule, delete). For agents: configure user access, create an agent, understand the agent approval process, and monitor agents (usage, operational insights, lifecycle) via M365 admin centre and Microsoft Power Platform admin centre. Around 9–14 questions.
-              </p>
+              <ul>
+                <li>Understand features and capabilities of Copilot and agents</li>
+                <li>Perform basic administrative tasks for Copilot</li>
+                <li>Perform basic administrative tasks for agents</li>
+              </ul>
+              <ul class="domain__tips">
+                <li>This domain tests the operational side: licensing, PAYG billing, agent approval, and monitoring usage across two admin centres.</li>
+                <li>Candidates confuse agent administration with agent building, which is separate Copilot Studio maker work outside this exam.</li>
+                <li>Separate configuring who can use an agent from designing how it responds; only the former is tested here.</li>
+              </ul>
             </div>
           </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Where AB-900 candidates slip -->
+    <section id="where-candidates-slip" class="container">
+      <p class="label-eyebrow section-eyebrow">Common traps</p>
+      <h2 class="display-small section-title">Where AB-900 candidates slip</h2>
+      <p class="section-lede">
+        Five recurring misconceptions that trip up otherwise well-prepared AB-900 candidates, grounded in the current skills outline.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>Every Microsoft 365 object has exactly one home admin centre</h3>
+          <p>Candidates treat the admin centres as interchangeable consoles rather than each owning a distinct set of objects.</p>
+          <ul>
+            <li>The exam is testing whether you can name the specific console, Exchange, SharePoint, Teams, or M365, that manages a described object.</li>
+            <li>Match the object named in the scenario to its one owning admin centre before you read the answer options.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>A Copilot licence and pay-as-you-go billing solve different usage patterns</h3>
+          <p>Both are ways to pay for Copilot, so candidates assume the exam only cares that a valid billing method was picked.</p>
+          <ul>
+            <li>The exam is testing whether you match predictable, ongoing usage to a monthly licence and variable, occasional usage to PAYG.</li>
+            <li>Check whether the scenario describes steady or occasional usage before choosing between a licence and pay-as-you-go billing.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>DSPM for AI is scoped to AI tools, not general data loss</h3>
+          <p>Standard DLP and DSPM for AI both stop sensitive content leaking, so candidates default to the more familiar DLP answer.</p>
+          <ul>
+            <li>The exam is testing whether you know DSPM for AI covers what Copilot might expose through a prompt, not email or endpoints.</li>
+            <li>Pick DSPM for AI whenever the scenario describes a risk coming specifically from a Copilot or agent response.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Sensitivity labels protect content; oversharing reports find it after the fact</h3>
+          <p>Both sit inside Microsoft Purview, so candidates reach for labelling whenever a question mentions who can access a file.</p>
+          <ul>
+            <li>The exam is testing whether you know oversharing reports audit existing access while labels classify and protect content at creation.</li>
+            <li>Pick an oversharing report, not a sensitivity label, for any question about auditing who currently has access to a site.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>Administering an agent is not the same task as building one</h3>
+          <p>AB-900 tests who can use, publish, or monitor an agent, never how the agent's own conversation logic works.</p>
+          <ul>
+            <li>The exam is testing whether you can separate agent approval and monitoring from designing an agent's topics or knowledge sources.</li>
+            <li>Rule out any answer describing conversation design; that work belongs to a separate Copilot Studio certification, not this exam.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -527,64 +611,64 @@
       <article class="exam-benefit">
         <h3>Exam-specific practice</h3>
         <ul>
-          <li><strong>323 AB-900 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Coverage follows the official three domains (Core M365 features, Data protection & governance, Copilot / agent admin tasks).</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li><strong>323 AB-900 practice questions</strong>, each tagged to one of the official three domains.</li>
+          <li>Coverage weights data protection and governance heaviest at 35–40%, ahead of core M365 features.</li>
+          <li>Practise naming the right admin centre or Purview surface for a scenario, the exam's real test.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your AB-900 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ starts forecasting your AB-900 score on-device after about 25 answers, with a confidence range.</li>
+          <li>It names the specific Purview or admin-centre topic actually dragging your score down.</li>
+          <li>See which of the three domains needs the most work before you book.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan weights data protection and governance heaviest, matching its 35–40% share of the exam.</li>
+          <li>Miss a Purview-surface question and the next session surfaces another Purview question first.</li>
+          <li>Master a topic across three sessions and the plan moves to your next-highest gap.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>Forget which admin centre owns which object and Purview-surface questions get harder to place too.</li>
+          <li>A padlock icon marks topics as they approach decay, your signal to revisit before they slip.</li>
+          <li>Weak Spots sessions pull decayed admin-centre or Purview topics back into rotation.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 45-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Rehearse 35–45 original questions on a 45-minute clock; once you submit, there's no going back.</li>
+          <li>The mix follows the July 2026 outline's domain split, built from Azure Mastery's own bank.</li>
+          <li>Microsoft alone controls the live AB-900 interface and its exact question set.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles AB-900's recurring mix-ups: which admin centre owns an object, DSPM for AI versus standard DLP.</li>
+          <li>Get one wrong and Answer Coach names the exact boundary the scenario was testing.</li>
+          <li>On an eligible device, a note can be reworded once grounding checks confirm it's safe.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura learns your AB-900 rhythm within a week and adjusts what it recommends.</li>
+          <li>Each session wraps with a quick note: what changed, what needs attention, your next move.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Private by design</h3>
         <ul>
-          <li>Practice, scoring, readiness, and coaching run on-device.</li>
-          <li>You don't need an Azure Mastery account or a server to process your study data.</li>
-          <li>Optional sync uses your private iCloud account.</li>
+          <li>Your AB-900 answers, readiness gauge, and Answer Coach notes stay on-device by default.</li>
+          <li>There's no Azure Mastery account to sign up for and no server in the loop.</li>
+          <li>Sync, if you opt in, runs through your own iCloud account only.</li>
         </ul>
       </article>
     </section>
@@ -743,57 +827,68 @@
       <h2 class="display-small section-title">AB-900 FAQs</h2>
       <div class="faqs">
         <details class="faq">
-          <summary>How much does the AB-900 exam cost?</summary>
+          <summary>Which admin centre owns a given object — is that a recurring AB-900 trap?</summary>
           <div class="faq__answer">
-            <p>AB-900 is a Fundamentals-tier exam. The voucher is USD $99 in the United States; in the UK it's typically around £75. Microsoft regularly offers free vouchers via Microsoft Build, Microsoft Ignite, and free virtual training events for Fundamentals certifications, so check your Microsoft Learn profile for active offers before booking. Fundamentals certifications do not expire, so there is no annual renewal cost.</p>
+            <p>Yes. AB-900 often gives an object, a mailbox setting, a Teams policy, a SharePoint site, and expects you to know which admin centre actually owns it, rather than treating the centres as interchangeable. Answer Coach names the specific centre a wrong pick would have sent you to instead.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Does the AB-900 certification expire?</summary>
+          <summary>AB-900 vs <a href="/exams/sc-900/">SC-900</a> — which should I take first?</summary>
           <div class="faq__answer">
-            <p>No. AB-900, like other Microsoft Fundamentals certifications (<a href="/exams/az-900/">AZ-900</a>, <a href="/exams/ai-901/">AI-901</a>, <a href="/exams/sc-900/">SC-900</a>, <a href="/exams/dp-900/">DP-900</a>), does not expire. Once earned, the credential is yours permanently. This is in contrast to Associate and Specialty certifications which require annual renewal on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>.</p>
+            <p>Different scopes. SC-900 is the broad Microsoft security overview: Entra, Defender, Purview, identity. AB-900 is narrower and practical, focused on M365 Copilot administration, with Purview coverage scoped to the Copilot threat surface. Passed SC-900 already? AB-900 feels like an extension. New to both? Start with AB-900 if your role is Copilot-focused.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>What is the AB-900 retake policy if I fail?</summary>
+          <summary>What question formats should I expect on AB-900?</summary>
           <div class="faq__answer">
-            <p>The first retake is allowed after 24 hours. Second and third retakes each require a 14-day wait. Microsoft caps retakes at five attempts per 12-month rolling period. Each attempt requires a new voucher purchase. AB-900's Fundamentals tier means questions are broader than they are deep, so most retake failures come from skipped Purview / Defender XDR content rather than M365 admin centre topics.</p>
+            <p>40–60 questions, with formats that vary by sitting. Azure Mastery's bank mirrors that spread: mostly single-select, a meaningful slice of scenario-based and yes/no questions, and a smaller mix of multi-select, drag-to-match, hot-area, drag-and-drop, dropdown, and case-study formats.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>How long should I study for AB-900?</summary>
+          <summary>What's the AB-900 exam fee, and does it vary by region?</summary>
           <div class="faq__answer">
-            <p>Most candidates pass AB-900 after two to four weeks of focused study, assuming basic Microsoft 365 admin familiarity. If Microsoft 365 admin centres and Microsoft Entra are new to you, plan for six weeks — the exam expects you to recognise admin-centre objects (Exchange, SharePoint, Teams, M365), Purview surfaces (Information Protection, DLP, Insider Risk, DSPM for AI), and Defender XDR features. Azure Mastery's readiness gauge tells you when you're at exam-ready; don't book until it shows roughly 720 or higher.</p>
+            <p>The voucher costs USD $99 in the United States, around £75 in the UK. Microsoft regularly offers free vouchers around events like Build and Ignite for Fundamentals certifications, so check your Learn profile before booking. Fundamentals certifications never expire, so there's no annual renewal cost.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>AB-900 vs SC-900 — which should I take first?</summary>
+          <summary>Once earned, does an AB-900 credential ever lapse?</summary>
           <div class="faq__answer">
-            <p>Different scopes. <a href="/exams/sc-900/">SC-900</a> (Security, Compliance, and Identity Fundamentals) is the broad Microsoft security overview — Entra, Defender, Purview, compliance, identity. AB-900 is narrower and more practical: it focuses on Microsoft 365 Copilot administration, with security and Purview coverage scoped to the Copilot / agent threat surface (DSPM for AI, sensitivity-label flow into Copilot grounding, oversharing in SharePoint). If you already passed SC-900, AB-900 will feel like an extension. If you're starting fresh and your role is M365-Copilot-focused, take AB-900 directly first.</p>
+            <p>No. AB-900, like other Microsoft Fundamentals certifications (<a href="/exams/az-900/">AZ-900</a>, <a href="/exams/ai-901/">AI-901</a>, <a href="/exams/sc-900/">SC-900</a>, <a href="/exams/dp-900/">DP-900</a>), never expires once earned. Associate and Specialty certifications differ: those require annual renewal on <a href="https://learn.microsoft.com/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a>.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>AB-900 vs AB-620 — what's the difference?</summary>
+          <summary>DSPM for AI vs standard DLP — how does AB-900 tell them apart?</summary>
           <div class="faq__answer">
-            <p>Different jobs. AB-900 is the Fundamentals-tier admin cert: it expects you to identify Microsoft 365 admin-centre objects, Purview governance surfaces, and Copilot administration controls (licensing, usage analytics, agent approval flow). <a href="/exams/ab-620/">AB-620</a> (AI Agent Builder) is the Associate-tier maker cert: it expects you to build agents in Copilot Studio with topics, generative answers, knowledge sources, and channel deployments. AB-900 administers; AB-620 builds. Many M365 admins take both because real-world Copilot rollouts require admin governance and maker support.</p>
+            <p>AB-900 tests whether you know DSPM for AI is scoped to Copilot and agent interactions, flagging oversharing and exposure risk in prompts and grounding data, while standard DLP governs data movement across email, Teams, and file storage generally. Picking the wrong one is the exact mix-up Answer Coach catches.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is Azure Mastery free for AB-900 prep?</summary>
+          <summary>I failed AB-900 — how soon can I book a retake?</summary>
           <div class="faq__answer">
-            <p>The app is free to download and includes a free allowance of AB-900 questions so you can try every feature. The full bank of 323 AB-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.</p>
+            <p>The wait before your first retake is 24 hours.</p>
+            <ul>
+              <li>First retake: 24-hour wait.</li>
+              <li>Second and third retakes: 14-day wait each.</li>
+              <li>Microsoft caps you at five attempts within any rolling 12-month period, a voucher required each time.</li>
+            </ul>
           </div>
         </details>
         <details class="faq">
-          <summary>Does AB-900 practice work offline?</summary>
+          <summary>AB-900 vs <a href="/exams/ab-620/">AB-620</a> — what's the difference?</summary>
           <div class="faq__answer">
-            <p>Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.</p>
+            <p>Different jobs. AB-900 is the Fundamentals-tier admin cert: identifying M365 admin-centre objects, Purview surfaces, and Copilot administration controls. AB-620 (AI Agent Builder) is the Associate-tier maker cert: building agents in Copilot Studio with topics and knowledge sources. AB-900 administers; AB-620 builds. Many admins take both.</p>
           </div>
         </details>
         <details class="faq">
-          <summary>Is there an AB-900 practice test mode?</summary>
+          <summary>Can I try Azure Mastery's AB-900 bank before paying?</summary>
           <div class="faq__answer">
-            <p>Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.</p>
+            <p>Yes. The app is free to download with a free allowance of AB-900 questions so you can try every feature. The full 323-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Can I revise AB-900 offline?</summary>
+          <div class="faq__answer">
+            <p>Yes. Nothing in the study loop needs a connection: practice, scoring, and the readiness prediction all happen on-device. No account is needed, and your data only leaves the device if you opt into private iCloud sync.</p>
           </div>
         </details>
       </div>

@@ -515,11 +515,26 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the SC-100 exam?</h2>
       <p>
-        SC-100 is the exam for the <strong>Microsoft Certified: Cybersecurity Architect Expert</strong> credential — the most senior security cert in Microsoft's track. It's the credential hiring managers expect for "Cybersecurity Architect", "Lead Security Engineer", or "Cloud Security Architect" roles. Passing SC-100 alone doesn't award the certification: Microsoft also requires you to already hold (or pass within a year) one of three Associate-level prerequisites — Azure Security Engineer Associate (AZ-500), <a href="/exams/sc-200/">Security Operations Analyst Associate</a>, or <a href="/exams/sc-300/">Identity and Access Administrator Associate</a>. AZ-500 retired on 31 August 2026, so SC-200 and SC-300 are the current prerequisite routes; an Azure Security Engineer Associate credential already earned before that date still counts.
+        SC-100 is the exam for the <strong>Microsoft Certified: Cybersecurity Architect Expert</strong> credential — the most senior security cert in Microsoft's track. It's the credential hiring managers expect for "Cybersecurity Architect", "Lead Security Engineer", or "Cloud Security Architect" roles.
       </p>
       <p>
-        SC-100 is <strong>design-oriented and trade-off-heavy</strong>. Unlike Associate exams that test individual-service knowledge, SC-100 tests architectural reasoning: pick the right strategy under real-world constraints. It validates that you can apply the <em>Microsoft Cybersecurity Reference Architecture (MCRA)</em>, design a <em>Zero Trust</em> strategy and a <em>ransomware-resilience</em> stance, build SecOps strategies around Microsoft Sentinel and Defender XDR, design identity strategies in Microsoft Entra (Conditional Access, PIM, Identity Governance), design infrastructure security spanning endpoints / servers / containers / networks / keys, and design application and data security including DevSecOps. Expect scenario questions where multiple answers <em>could</em> work — the right answer is the one that best satisfies the constraints.
+        Passing SC-100 alone doesn't award the certification: Microsoft also requires you to already hold, or pass within a year, one of three Associate-level prerequisites — Azure Security Engineer Associate (AZ-500), <a href="/exams/sc-200/">Security Operations Analyst Associate</a> (SC-200), or <a href="/exams/sc-300/">Identity and Access Administrator Associate</a> (SC-300).
       </p>
+      <p>
+        AZ-500 retired on 31 August 2026, so SC-200 and SC-300 are now the current prerequisite routes; an Azure Security Engineer Associate credential earned before that date still counts.
+      </p>
+      <p>
+        SC-100 is <strong>design-oriented and trade-off-heavy</strong>. Unlike Associate exams that test individual-service knowledge, it tests architectural reasoning: picking the right strategy under real-world constraints. It validates that you can:
+      </p>
+      <ul>
+        <li>Apply the <em>Microsoft Cybersecurity Reference Architecture (MCRA)</em></li>
+        <li>Design a <em>Zero Trust</em> strategy and a ransomware-resilience stance</li>
+        <li>Build SecOps strategies around Microsoft Sentinel and Defender XDR</li>
+        <li>Design identity strategies in Microsoft Entra — Conditional Access, PIM, Identity Governance</li>
+        <li>Design infrastructure security spanning endpoints, servers, containers, networks, and keys</li>
+        <li>Design application and data security, including DevSecOps</li>
+      </ul>
+      <p>Expect scenario questions where multiple answers <em>could</em> work; the right one is whichever best satisfies the stated constraints.</p>
       <p>
         Microsoft updated the SC-100 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-100 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-100" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -589,7 +604,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>This domain spans the most products: SecOps design with Sentinel and Defender XDR, identity strategy, privileged access, and compliance.</li>
-                <li>Candidates default to legacy admin tiering language instead of the enterprise access model the exam now expects.</li>
+                <li>Legacy admin-tiering language often replaces the enterprise access model the exam now expects.</li>
                 <li>Learn the enterprise access model's three planes before practising any privileged-access scenario in this domain.</li>
               </ul>
             </div>
@@ -627,8 +642,8 @@
                 <li>Design solutions for securing an organization's data</li>
               </ul>
               <ul class="domain__tips">
-                <li>This domain tests securing Microsoft 365 workloads, application threat modelling, and data protection including AI workloads.</li>
-                <li>Candidates under-revise the newer requirement to evaluate data-security controls in Microsoft Copilot for Microsoft 365.</li>
+                <li>Securing Microsoft 365 workloads, application threat modelling, and data protection including AI workloads all sit in this domain.</li>
+                <li>The newer requirement to evaluate data-security controls in Microsoft Copilot for Microsoft 365 gets under-revised most often.</li>
                 <li>Add Copilot data-security evaluation to your revision list; it's a recent addition many candidates miss.</li>
               </ul>
             </div>
@@ -649,7 +664,7 @@
           <h3>Zero Trust is an architecture, not a single control</h3>
           <p>Candidates who deployed MFA or network segmentation sometimes treat either one alone as doing Zero Trust.</p>
           <ul>
-            <li>The exam is testing whether your answer coordinates identity, endpoint, network, application, and data together, not one control applied harder.</li>
+            <li>A single strong control, deployed harder, still reads as incomplete if the other pillars stay silent.</li>
             <li>Build a Zero Trust answer that touches at least two pillars before you commit to a single-control fix.</li>
           </ul>
         </article>
@@ -657,7 +672,7 @@
           <h3>MCRA, MCSB, and CAF or WAF answer different questions</h3>
           <p>Candidates reach for whichever framework name they remember best rather than the one the scenario actually calls for.</p>
           <ul>
-            <li>The exam is testing whether you know MCRA describes capabilities, MCSB measures an environment, and CAF or WAF governs adoption decisions.</li>
+            <li>MCRA describes capabilities, MCSB measures an existing environment, and CAF or WAF governs adoption decisions.</li>
             <li>Match "design new capability" to MCRA and "measure what's already there" to MCSB before picking either framework.</li>
           </ul>
         </article>
@@ -665,7 +680,7 @@
           <h3>The enterprise access model has replaced legacy admin tiering</h3>
           <p>Candidates who studied older AD-centric tiering default to Tier 0, 1, 2 language on a privileged-access scenario.</p>
           <ul>
-            <li>The exam is testing whether you use the control plane, management plane, and data or workload plane as your framework instead.</li>
+            <li>Reasoning in terms of the control, management, and data-or-workload planes now replaces tier numbers entirely.</li>
             <li>Retire Tier 0/1/2 language from your answers and reason in terms of the three enterprise access model planes.</li>
           </ul>
         </article>
@@ -673,7 +688,7 @@
           <h3>Posture management and active response are different domains</h3>
           <p>Defender for Cloud appearing in a scenario doesn't automatically make the question about security operations.</p>
           <ul>
-            <li>The exam is testing whether you place a SOAR or incident-response design in security operations, not infrastructure posture management.</li>
+            <li>A SOAR or incident-response design belongs in security operations, whatever product name the scenario mentions.</li>
             <li>Ask whether the scenario wants a measurement of risk or a response to an active threat before choosing a domain.</li>
           </ul>
         </article>
@@ -681,7 +696,7 @@
           <h3>The prerequisite gates the certification, not the exam booking</h3>
           <p>Candidates researching "can I take SC-100 first" often assume the prerequisite blocks registration itself.</p>
           <ul>
-            <li>The exam is testing whether you're prepared on content alone; the credential's prerequisite requirement is a separate policy gate.</li>
+            <li>Content readiness is what SC-100 grades; the prerequisite sits outside the exam, as a separate certification-award policy.</li>
             <li>Book SC-100 whenever you're ready on content, and satisfy the AZ-500, SC-200, or SC-300 prerequisite within a year separately.</li>
           </ul>
         </article>

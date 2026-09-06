@@ -205,7 +205,7 @@
             "name": "What is the AB-620 retake policy if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "24 hours before your first retake, then a 14-day wait for the second and third. Microsoft caps you at five attempts in any rolling 12 months, and each attempt needs its own voucher."
+              "text": "Retake timing scales up with each failed attempt, and every attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
             }
           },
           {
@@ -213,7 +213,7 @@
             "name": "What does the AB-620 exam format look like?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Like most Microsoft Certification exams, AB-620 has 40–60 questions in a mix of formats, with the exact timing confirmed at registration. It runs as a 100-minute session (120 minutes with seat time for admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. In Azure Mastery's AB-620 bank you'll practise single-answer and multi-select multiple choice plus a noticeable share of yes/no and matching items, so you're not just drilling straight recall."
+              "text": "AB-620 runs as a 100-minute session (120 minutes with seat time) of 40–60 questions, taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Azure Mastery's bank includes single-answer, multi-select, yes/no, and matching items, so it's not straight recall."
             }
           },
           {
@@ -229,7 +229,7 @@
             "name": "AB-620 vs AI-103 — different agent roles?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Different platforms for different builders. AB-620 is Microsoft Copilot Studio — a low-code environment for building agents with topics, generative answers, and Power Platform integrations. AI-103 is Microsoft Foundry — a code-first platform for Python-based agents, tool calling, and multi-agent orchestration. AB-620 is for Copilot Studio builders; AI-103 is for app developers. Many enterprises use people certified in both."
+              "text": "Different platforms for different builders. AB-620 covers Microsoft Copilot Studio, a low-code environment for topics, generative answers, and Power Platform integrations. AI-103 covers Microsoft Foundry, a code-first platform for Python-based agents and orchestration."
             }
           },
           {
@@ -525,9 +525,11 @@
                 <li>Create and Monitor Agent Flows in Copilot Studio</li>
                 <li>Configure Topics</li>
               </ul>
-              <p>
-                This domain covers everything before you start wiring conversation logic: choosing an internal or external audience, planning identity (which auth model fits a Teams-only agent versus a public website agent), picking channels, and scoping a responsible-AI and governance posture up front. It also folds in agent flows — Copilot Studio's backend orchestration layer for input/output parameters, human-in-the-loop steps, and error handling — and topic configuration, including how a topic calls a flow, a tool, or a custom-prompt node to answer a request.
-              </p>
+              <ul class="domain__tips">
+                <li>Covers audience, identity, channel, and governance choices made before any conversation logic gets built.</li>
+                <li>Candidates skip the identity-model decision: a Teams-only agent and a public website agent need different auth models.</li>
+                <li>Learn how a topic calls a flow, a tool, or a custom-prompt node — that's the exam's real question shape.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -543,9 +545,11 @@
                 <li>Configure Multi-Agent Collaboration from Copilot Studio</li>
                 <li>Integrate Agents with Azure</li>
               </ul>
-              <p>
-                The largest domain by weight, and the one with the most surface area to memorise. Expect questions on grounding an agent against SharePoint, Dataverse, or Azure AI Search; choosing between a custom connector, an MCP tool, and computer-use automation for a given integration; composing multi-agent solutions that delegate to a Foundry agent, an existing Copilot Studio agent, or a Fabric data agent; and wiring Azure AI Search or the Foundry model catalogue directly into a topic's generative-answer configuration.
-              </p>
+              <ul class="domain__tips">
+                <li>The largest domain: grounding sources, connector types, and multi-agent delegation to Foundry, Copilot Studio, or Fabric agents.</li>
+                <li>Candidates can't tell a custom connector, an MCP tool, and computer-use automation apart for a given integration.</li>
+                <li>Practise wiring Azure AI Search or the Foundry model catalogue directly into a topic's generative-answer setup.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -559,9 +563,11 @@
                 <li>Evaluate Agent Performance</li>
                 <li>Implement Application Lifecycle Management (ALM) for Agents in Copilot Studio</li>
               </ul>
-              <p>
-                The smallest domain covers the operational half of the job: building a test set and choosing an evaluation method before trusting an agent's answers, then packaging that agent into a solution for application lifecycle management — environment variables, connection references, and Power Platform pipelines that move it from a dev environment through test and into production without manual copy-paste between environments.
-              </p>
+              <ul class="domain__tips">
+                <li>Smallest domain but operational: building a test set, choosing an evaluation method, then packaging the agent for release.</li>
+                <li>Candidates forget environment variables and connection references are what let a pipeline move an agent without manual copying.</li>
+                <li>Trace one agent through a full Power Platform pipeline from dev to production before exam day.</li>
+              </ul>
             </div>
           </details>
         </article>
@@ -578,23 +584,43 @@
       <div class="traps">
         <article class="trap">
           <h3>Connector vs. MCP tool vs. agent flow</h3>
-          <p>All three let an agent do something outside the conversation, but they fit different jobs. A connector suits a well-defined, stable enterprise API. An MCP tool suits a scenario where the schema needs to be discovered dynamically. An agent flow suits multi-step orchestration that needs approvals or error handling along the way. Scenario questions usually name the constraint that picks one of the three.</p>
+          <p>Candidates can't tell a connector, an MCP tool, and an agent flow apart when a scenario needs one of the three.</p>
+          <ul>
+            <li>The exam is testing whether you can match a stable API, a dynamically discovered schema, or multi-step orchestration to the right tool.</li>
+            <li>Look for the named constraint in the scenario — stability, discovery, or approvals — it picks one of the three for you.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Topics handle conversation, flows handle the backend</h3>
-          <p>A Copilot Studio topic manages what the agent says and when — triggers, branching, fallback. An agent flow manages what happens behind the scenes — calling a system, transforming data, waiting on a long-running action. Treating a flow as "just a topic with extra steps" misses questions that ask which layer owns a given piece of logic.</p>
+          <p>Candidates treat an agent flow as just a topic with extra steps, missing which layer owns a piece of logic.</p>
+          <ul>
+            <li>The exam is testing whether you know topics own conversation flow while agent flows own backend orchestration.</li>
+            <li>Ask whether the described behaviour is what the agent says or what happens behind the scenes before answering.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>A2A protocol vs. an embedded sub-agent</h3>
-          <p>Agent2Agent (A2A) is cross-agent communication between independently deployed agents, each with its own identity and endpoint. An embedded sub-agent runs inside its parent orchestrator and shares that orchestrator's context. Questions about "integrating a Foundry agent" or "a Fabric data agent" expect you to know which integration shape a scenario describes.</p>
+          <p>Candidates read "integrating a Foundry agent" without noticing whether it's a separate A2A agent or an embedded sub-agent.</p>
+          <ul>
+            <li>The exam is testing whether you know A2A agents keep separate identities while an embedded sub-agent shares its parent's context.</li>
+            <li>Check whether the scenario names a standalone endpoint or a component running inside the parent orchestrator.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Groundedness rules aren't optional</h3>
-          <p>When a topic is configured to answer from a connected knowledge source, a response without a citation back to that source is treated as ungrounded — effectively a hallucination — regardless of whether the answer happens to be correct. A "confidently wrong" agent in a scenario usually points at a missing or misconfigured grounding source, not the model itself.</p>
+          <p>Candidates assume a correct-sounding answer passes, but an uncited response from a connected source counts as ungrounded.</p>
+          <ul>
+            <li>The exam is testing whether you treat a missing citation as a grounding failure regardless of whether the content was right.</li>
+            <li>For a "confidently wrong agent" scenario, check the grounding source configuration before blaming the model.</li>
+          </ul>
         </article>
         <article class="trap">
           <h3>Identity choice depends on audience, not habit</h3>
-          <p>User-delegated tokens, service principals, and managed identities solve different access problems, and the exam expects you to match the identity model to who — or what — is making the request. An internal agent authenticating a known Entra user needs a different approach than an external, unauthenticated agent calling a backend service on its own behalf.</p>
+          <p>Candidates default to one identity model out of habit instead of matching it to who or what is calling the agent.</p>
+          <ul>
+            <li>The exam is testing whether you can match user-delegated tokens, service principals, or managed identities to the calling audience.</li>
+            <li>Ask whether a known Entra user or an unauthenticated external caller is making the request before choosing an identity model.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -607,63 +633,63 @@
         <h3>Exam-specific practice</h3>
         <ul>
           <li><strong>387 AB-620 practice questions</strong> aligned to the published skills outline.</li>
-          <li>Coverage follows the current April 2026 outline.</li>
-          <li>Practise decisions from the exam outline with scenarios and interactive questions.</li>
+          <li>Coverage leans hardest on integrating and extending agents, the domain Microsoft weights up to 45%.</li>
+          <li>Practise picking a connector, an MCP tool, or an agent flow for a stated integration need.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Predicted score</h3>
         <ul>
-          <li>Exam IQ predicts your AB-620 score on-device after roughly 30 questions.</li>
-          <li>A confidence range shows how stable the prediction is.</li>
-          <li>See which exam objectives need the most work.</li>
+          <li>Exam IQ forecasts your AB-620 score on-device after roughly 30 questions, confidence range attached.</li>
+          <li>It flags whether integration breadth or agent testing and ALM is dragging that number down.</li>
+          <li>See which of the three domains needs the most work before you book the exam.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Adaptive study plan</h3>
         <ul>
-          <li>Your study plan updates as you answer questions.</li>
-          <li>Missed topics return sooner; consistently mastered topics appear less often.</li>
-          <li>Sessions focus on the gaps most likely to help you reach the 700 pass score.</li>
+          <li>Your plan leans hardest on integrating and extending agents, the domain Microsoft weights up to 45%.</li>
+          <li>Miss a grounding-source or identity-model question and the next session surfaces that domain first.</li>
+          <li>Stay solid on a topic across three sessions and the plan shifts to your next weak spot.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Knowledge decay</h3>
         <ul>
-          <li>Track which topics you're starting to forget.</li>
-          <li>Get reminders to revisit those topics before exam day.</li>
-          <li>Weak-spot sessions bring fading topics back into practice.</li>
+          <li>Forget the connector-vs-MCP-tool distinction early on and later integration questions get harder too.</li>
+          <li>A decay flag on the Today screen tells you which topic to revisit before it fades.</li>
+          <li>Focus Weak Spots sessions bring those fading topics back into rotation for you.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise staying focused through a full 100-minute session.</li>
-          <li>Original questions follow the published domain weighting.</li>
-          <li>Microsoft controls the live interface and exact question mix.</li>
+          <li>Practise holding focus through a full 100-minute session, matching AB-620's real length.</li>
+          <li>Original questions in each session follow the published domain weighting, not a fixed script.</li>
+          <li>Microsoft sets the live exam's interface and exact question order, not Azure Mastery.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Answer Coach</h3>
         <ul>
-          <li>Every answer has a written explanation, with reasons for individual options where available.</li>
-          <li>See why you missed an answer, how the options differ, and what to remember.</li>
-          <li>On supported devices, optional AI can reword notes while checking them against the written explanations.</li>
+          <li>Untangles AB-620's near-identical pairs: connector vs MCP tool vs agent flow, and A2A agents vs embedded sub-agents.</li>
+          <li>Get a question wrong and Answer Coach shows the exact scenario clue that should have picked a different tool or identity model.</li>
+          <li>An optional on-device rewrite is available on supported devices, always checked against the written explanation before it's shown.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Aura guidance</h3>
         <ul>
-          <li>Aura suggests what to do after each session.</li>
-          <li>Recaps show your progress and which topics to practise next.</li>
+          <li>Aura adjusts its suggestions as your first week of AB-620 practice takes shape.</li>
+          <li>Every session closes with a quick recap: what improved, what needs another look, and what's next.</li>
         </ul>
       </article>
       <article class="exam-benefit">
         <h3>Private by design</h3>
         <ul>
-          <li>Practice, scoring, readiness, and coaching run on-device.</li>
-          <li>You don't need an Azure Mastery account or a server to process your study data.</li>
-          <li>Optional sync uses your private iCloud account.</li>
+          <li>Your AB-620 answer history, readiness gauge, and Answer Coach notes stay on your device by default.</li>
+          <li>There's no Azure Mastery account or server that ever sees your study data.</li>
+          <li>Switch on sync and only your own private iCloud account ever carries the data.</li>
         </ul>
       </article>
     </section>
@@ -859,13 +885,18 @@
         <details class="faq">
           <summary>What is the AB-620 retake policy if I fail?</summary>
           <div class="faq__answer">
-            <p>24 hours before your first retake, then a 14-day wait for the second and third. Microsoft caps you at five attempts in any rolling 12 months, and each attempt needs its own voucher.</p>
+            <p>Retake timing scales up with each failed attempt, and every attempt needs its own voucher.</p>
+            <ul>
+              <li>First retake: after 24 hours.</li>
+              <li>Second and third retakes: a 14-day wait each.</li>
+              <li>Cap: five attempts per rolling 12 months.</li>
+            </ul>
           </div>
         </details>
         <details class="faq">
           <summary>What does the AB-620 exam format look like?</summary>
           <div class="faq__answer">
-            <p>Like most Microsoft Certification exams, AB-620 has 40–60 questions in a mix of formats, with the exact timing confirmed at registration. It runs as a 100-minute session (120 minutes with seat time for admin), taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. In Azure Mastery's AB-620 bank you'll practise single-answer and multi-select multiple choice plus a noticeable share of yes/no and matching items, so you're not just drilling straight recall.</p>
+            <p>AB-620 runs as a 100-minute session (120 minutes with seat time) of 40–60 questions, taken online with a proctor or at a test centre, and scored out of 1000 with a 700 pass mark. Azure Mastery's bank includes single-answer, multi-select, yes/no, and matching items, so it's not straight recall.</p>
           </div>
         </details>
         <details class="faq">
@@ -877,7 +908,7 @@
         <details class="faq">
           <summary>AB-620 vs AI-103 — different agent roles?</summary>
           <div class="faq__answer">
-            <p>Different platforms for different builders. AB-620 is <em>Microsoft Copilot Studio</em> — a low-code environment for building agents with topics, generative answers, and Power Platform integrations. <a href="/exams/ai-103/">AI-103</a> is <em>Microsoft Foundry</em> — a code-first platform for Python-based agents, tool calling, and multi-agent orchestration. AB-620 is for Copilot Studio builders; AI-103 is for app developers. Many enterprises use people certified in both.</p>
+            <p>Different platforms for different builders. AB-620 covers <em>Microsoft Copilot Studio</em>, a low-code environment for topics, generative answers, and Power Platform integrations. <a href="/exams/ai-103/">AI-103</a> covers <em>Microsoft Foundry</em>, a code-first platform for Python-based agents and orchestration.</p>
           </div>
         </details>
         <details class="faq">

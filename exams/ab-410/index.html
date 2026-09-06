@@ -443,9 +443,16 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the AB-410 exam?</h2>
       <p>
-        AB-410 is the <strong>Microsoft Intelligent Applications Builder</strong> credential — the role-based exam for makers who build AI-powered business solutions in <em>Microsoft Power Platform</em> using Copilot, natural-language prompts and low-code tools. AB-410 covers laying the foundation (solution design, environments, ALM and the Dataverse data model), creating the applications themselves (model-driven and canvas apps, including generative pages built from a written description), and building the logic and automation behind them (cloud flows, AI Hub prompts and AI Builder models, business rules and process flows). It is the successor route for makers who previously targeted PL-200 — Microsoft replaced the PL-200T00 course with AB-410T00.
+        AB-410 is the <strong>Microsoft Intelligent Applications Builder</strong> credential — the role-based exam for makers who build AI-powered business solutions in <em>Microsoft Power Platform</em> using Copilot, natural-language prompts and low-code tools. It covers:
       </p>
-      <p>AB-410 tests practical Power Platform development. You'll choose a component for a requirement, such as a model-driven app, canvas app, cloud flow, Power Pages site, or agent, then model the data in Dataverse and build the logic. Pay attention to constraints: must a rule apply to every write, avoid blocking a save, or call a service outside Dataverse? Practise Power Fx, prompt columns, generative pages, and the differences between calculated, rollup, and formula columns.</p>
+      <ul>
+        <li>Laying the foundation — solution design, environments, ALM and the Dataverse data model</li>
+        <li>Creating the applications — model-driven and canvas apps, including generative pages built from a written description</li>
+        <li>Building the logic and automation behind them — cloud flows, AI Hub prompts and AI Builder models, business rules and process flows</li>
+      </ul>
+      <p>It is the successor route for makers who previously targeted PL-200 — Microsoft replaced the PL-200T00 course with AB-410T00.</p>
+      <p>AB-410 tests practical Power Platform development: choosing the right component (model-driven app, canvas app, cloud flow, Power Pages site, or agent), modelling data in Dataverse, and building the logic behind it. Constraints matter: must a rule fire on every write, block a save, or call an outside service?</p>
+      <p>Practise Power Fx, prompt columns, and the differences between calculated, rollup, and formula columns.</p>
       <p>
         Microsoft's AB-410 study guide was last updated on <strong>15 May 2026</strong>. Every question in Azure Mastery's AB-410 bank is mapped to that current three-domain outline and was reviewed against it in August 2026. Read the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-410" rel="noopener">official Microsoft study guide</a>.
       </p>
@@ -464,7 +471,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 15 May 2026</p>
       <h2 class="display-small section-title">AB-410 exam objectives</h2>
       <p class="section-lede">
-        Three domains, with weights set by Microsoft's 15 May 2026 update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-410" rel="noopener">official study guide</a>; Azure Mastery tags each question so you can see where your weak spots cluster.
+        Three domains, with weights set by Microsoft's 15 May 2026 update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-410" rel="noopener">official study guide</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -511,8 +518,8 @@
                 <li>Create Canvas Apps</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests recognising whether a scenario needs a model-driven app or a canvas app before any configuration question.</li>
-                <li>Candidates treat generative pages as decoration rather than a real alternative to a hand-built form or view.</li>
+                <li>Recognising whether a scenario needs a model-driven app or a canvas app is the real test before any configuration question.</li>
+                <li>Generative pages get treated as decoration rather than a real alternative to a hand-built form or view.</li>
                 <li>Learn named formulas separately from ordinary variables; the exam distinguishes them by how each one updates.</li>
               </ul>
             </div>
@@ -530,8 +537,8 @@
                 <li>Implement Business and Process Logic</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests picking the right mechanism for a piece of logic: a business rule, a cloud flow, or an AI Hub prompt.</li>
-                <li>Candidates default to a cloud flow for everything, when a save-blocking requirement actually calls for a business rule.</li>
+                <li>Picking the right mechanism for a piece of logic — a business rule, a cloud flow, or an AI Hub prompt — is what's assessed here.</li>
+                <li>Defaulting to a cloud flow for everything is the common slip, when a save-blocking requirement actually calls for a business rule.</li>
                 <li>Learn which of calculated, rollup, and formula columns updates on which schedule before exam day, not during it.</li>
               </ul>
             </div>
@@ -568,7 +575,7 @@
           <h3>A named formula is not the same thing as a global variable</h3>
           <p>Canvas-app questions test whether you reach for App.OnStart out of habit instead of a named formula.</p>
           <ul>
-            <li>The exam is testing whether you know a variable set in OnStart only holds a value if OnStart actually ran.</li>
+            <li>Knowing a variable set in OnStart only holds a value if OnStart actually ran is the real distinction here.</li>
             <li>Use a named formula wherever a value should always be correct, since it recalculates automatically when inputs change.</li>
           </ul>
         </article>
@@ -576,7 +583,7 @@
           <h3>Model-driven, canvas, and Power Pages solve different distribution problems</h3>
           <p>A scenario naming an audience with no Dataverse licence or tenant identity is describing Power Pages, not a canvas app.</p>
           <ul>
-            <li>The exam is testing whether you can match many related tables and generated navigation to model-driven, not canvas.</li>
+            <li>Matching many related tables and generated navigation to model-driven, not canvas, is exactly what's being scored.</li>
             <li>Read who the audience is and whether they hold a Dataverse licence before choosing between the three options.</li>
           </ul>
         </article>

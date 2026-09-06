@@ -488,11 +488,21 @@
       <p class="label-eyebrow section-eyebrow">The exam</p>
       <h2 class="display-small section-title">What is the DP-900 exam?</h2>
       <p>
-        DP-900 is the <strong>Microsoft Certified: Azure Data Fundamentals</strong> credential — the entry-level exam for anyone working with data in the Microsoft Azure cloud. It's pitched at candidates who have basic familiarity with relational vs non-relational data and transactional vs analytical workloads, but doesn't require database-administration experience. Common audiences include data analysts about to step into Power BI work, software engineers crossing into a data role, and product/operations partners who need to discuss data architecture credibly.
+        DP-900 is the <strong>Microsoft Certified: Azure Data Fundamentals</strong> credential — the entry-level exam for anyone working with data in the Microsoft Azure cloud. It's pitched at candidates who have basic familiarity with relational vs non-relational data and transactional vs analytical workloads, but doesn't require database-administration experience.
       </p>
       <p>
-        The exam doesn't ask you to write SQL queries from scratch or design a star schema. It expects you to recognise scenarios: <strong>structured vs semi-structured vs unstructured</strong> data; <strong>OLTP vs OLAP</strong> workloads; the difference between <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong>; when to reach for <strong>Azure Cosmos DB</strong>, <strong>Azure Blob Storage</strong>, or <strong>Azure Data Lake Storage Gen2</strong>; and how Microsoft Fabric's analytics surface fits with <strong>Azure Synapse Analytics</strong>.
+        Common audiences include data analysts about to step into Power BI work, software engineers crossing into a data role, and product/operations partners who need to discuss data architecture credibly.
       </p>
+      <p>
+        The exam doesn't ask you to write SQL queries from scratch or design a star schema. It expects you to recognise scenarios:
+      </p>
+      <ul>
+        <li><strong>Structured vs semi-structured vs unstructured</strong> data</li>
+        <li><strong>OLTP vs OLAP</strong> workloads</li>
+        <li>The difference between <strong>Azure SQL Database</strong>, <strong>Azure SQL Managed Instance</strong>, and <strong>SQL Server on Azure VMs</strong></li>
+        <li>When to reach for <strong>Azure Cosmos DB</strong>, <strong>Azure Blob Storage</strong>, or <strong>Azure Data Lake Storage Gen2</strong></li>
+        <li>How Microsoft Fabric's analytics surface fits with <strong>Azure Synapse Analytics</strong></li>
+      </ul>
       <p>
         Microsoft updated the DP-900 skills outline on <strong>21 July 2026</strong>. Every question in Azure Mastery's DP-900 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-900" rel="noopener">learn.microsoft.com</a>.
       </p>
@@ -511,7 +521,7 @@
       <p class="label-eyebrow section-eyebrow">Skills measured · 21 July 2026</p>
       <h2 class="display-small section-title">DP-900 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's <strong>21 July 2026</strong> update. Every domain summary below is paraphrased from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-900" rel="noopener">official skills outline</a>; Azure Mastery tags each question to its assessed domain so you can see which topics need more practice.
+        Four domains, with weights set by Microsoft's <strong>21 July 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-900" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -542,7 +552,7 @@
                 <li>Identify roles and responsibilities for data workloads</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests telling structured, semi-structured, and unstructured data apart, and matching a dataset to the right database type.</li>
+                <li>Telling structured, semi-structured, and unstructured data apart, then matching a dataset to the right database type, is the core skill here.</li>
                 <li>Get the OLTP vs OLAP split wrong here and every later domain gets harder to reason about.</li>
                 <li>Learn the four data roles by task, not job title: database admin, data engineer, data analyst, data scientist.</li>
               </ul>
@@ -561,7 +571,7 @@
               </ul>
               <ul class="domain__tips">
                 <li>Tests choosing between Azure SQL Database, SQL Managed Instance, and SQL Server on Azure VMs for a stated need.</li>
-                <li>Candidates pick the wrong SQL option because it sounds similar to the right one, not because they misread the scenario.</li>
+                <li>The wrong SQL option usually gets picked because it sounds similar to the right one, not because the scenario was misread.</li>
                 <li>Match migration, compatibility, and management-overhead clues to exactly one of the three options before answering.</li>
               </ul>
             </div>
@@ -578,7 +588,7 @@
                 <li>Describe the capabilities and features of Azure Cosmos DB</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests picking a storage shape — Blob tier, Table storage, or a Cosmos DB API — not writing a query.</li>
+                <li>Picking the right storage shape — Blob tier, Table storage, or a Cosmos DB API — matters more than writing a query.</li>
                 <li>Candidates treat Cosmos DB's five APIs as interchangeable when each is built around a different data model.</li>
                 <li>Match relationships and traversals to Gremlin, existing MongoDB code to the MongoDB API — not whichever sounds newest.</li>
               </ul>
@@ -619,7 +629,7 @@
           <h3>OLTP and OLAP describe workloads, not products</h3>
           <p>Candidates try to memorise which service is OLTP or OLAP, but the same service can support either depending on how it's configured.</p>
           <ul>
-            <li>The exam is testing whether you can classify a described workload by its access pattern — many small transactions vs large aggregated reads.</li>
+            <li>Many small transactions point to OLTP; large aggregated reads point to OLAP — the access pattern is the tell, not the service name.</li>
             <li>Read the workload description, not a product name, before deciding whether it's OLTP or OLAP.</li>
           </ul>
         </article>
@@ -627,7 +637,7 @@
           <h3>Three SQL options solve overlapping but different problems</h3>
           <p>Azure SQL Database, Managed Instance, and SQL Server on a VM all run SQL Server workloads, which makes them feel interchangeable.</p>
           <ul>
-            <li>The exam is testing whether you know Database is fully managed, Managed Instance targets instance-level compatibility, and a VM hands you the whole OS.</li>
+            <li>Azure SQL Database is fully managed, Managed Instance targets instance-level compatibility, and a VM hands you the whole OS.</li>
             <li>A named compatibility or control requirement in the scenario usually rules out two of the three straight away.</li>
           </ul>
         </article>
@@ -635,7 +645,7 @@
           <h3>A Cosmos DB API choice is a data-model choice, not a preference</h3>
           <p>Cosmos DB's five APIs aren't styling options on one database — each commits you to a different underlying data model.</p>
           <ul>
-            <li>The exam is testing whether you match relationships and traversals to Gremlin, or existing MongoDB code to the MongoDB API, by data shape.</li>
+            <li>Relationships and traversals point to Gremlin; existing MongoDB code points to the MongoDB API — the data shape decides it.</li>
             <li>Pick the API the data model calls for, never the one that simply sounds more modern.</li>
           </ul>
         </article>
@@ -643,7 +653,7 @@
           <h3>Microsoft Fabric and Azure Synapse Analytics aren't competitors in every question</h3>
           <p>Candidates default to picking Fabric on every analytics question since it expanded in recent skills-outline updates.</p>
           <ul>
-            <li>The exam is testing whether you can spot a scenario that still points specifically at a Synapse pipeline or dedicated-pool feature.</li>
+            <li>A Synapse pipeline or dedicated-pool feature named specifically in the scenario still rules out the default Fabric answer.</li>
             <li>Read what the scenario is actually asking — ingestion, a unified experience, or one warehousing feature — before choosing.</li>
           </ul>
         </article>
@@ -651,7 +661,7 @@
           <h3>Structured, semi-structured, and unstructured are about shape, not size</h3>
           <p>Unstructured doesn't mean unimportant or small — it means the data doesn't fit a predefined schema.</p>
           <ul>
-            <li>The exam is testing whether you know video files and free text stay unstructured regardless of size, and JSON or XML count as semi-structured.</li>
+            <li>Video files and free text stay unstructured regardless of size, while JSON or XML count as semi-structured whatever their length.</li>
             <li>Get this classification wrong and it cascades into picking the wrong storage service for the described file type.</li>
           </ul>
         </article>
@@ -706,7 +716,7 @@
         <h3>Answer Coach</h3>
         <ul>
           <li>Untangles DP-900's near-identical service choices: SQL Managed Instance vs Azure SQL Database, Gremlin vs MongoDB.</li>
-          <li>See the specific distinction and the rule to apply next time, not just which option was correct.</li>
+          <li>See the specific distinction and the rule to apply next time, beyond simply which option was correct.</li>
           <li>Supported devices can optionally reword a note on-device, always checked against the written guidance first.</li>
         </ul>
       </article>

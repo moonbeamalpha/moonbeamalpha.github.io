@@ -40,8 +40,6 @@ SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-08-09"
 SEO_UPDATED_OVERRIDES = {
     # New pages launched after the 2026-08-09 site-wide SEO pass.
-    "AB-650": "2026-08-23",
-    "AI-500": "2026-08-23",
     # Wave-1 de-templating pass (Task B, final-review fix wave).
     "AI-103": "2026-09-04",
     "AB-620": "2026-09-04",
@@ -64,6 +62,20 @@ SEO_UPDATED_OVERRIDES = {
     "DP-700": "2026-09-06",
     "DP-750": "2026-09-06",
     "DP-800": "2026-09-06",
+
+    # Wave-2b de-templating pass (AI/BI, Azure role, AB/GH clusters).
+    "AI-300": "2026-09-06",
+    "AI-500": "2026-09-06",
+    "AI-901": "2026-09-06",
+    "PL-300": "2026-09-06",
+    "AZ-305": "2026-09-06",
+    "AZ-400": "2026-09-06",
+    "AZ-700": "2026-09-06",
+    "AB-410": "2026-09-06",
+    "AB-650": "2026-09-06",
+    "AB-731": "2026-09-06",
+    "GH-300": "2026-09-06",
+    "GH-900": "2026-09-06",
 }
 RETIRED_EXAMS = {
     "AI-900": {

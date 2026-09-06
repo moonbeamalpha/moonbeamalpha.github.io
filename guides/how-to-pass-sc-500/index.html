@@ -201,7 +201,7 @@
             "name": "How hard is the SC-500 exam?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "SC-500 is broad rather than deep: it spans identity, storage, database, network, compute, and AI security, plus posture management, so the challenge is breadth of recall as much as difficulty of any one topic. Give the newer AI-security material — Entra Agent ID, Purview DSPM, Defender for AI Services, and Foundry guardrails — dedicated hands-on revision rather than treating it as an extension of the older Azure-security objectives."
+              "text": "Broad rather than deep: identity, storage, database, network, compute, and AI security, plus posture management, so breadth of recall matters as much as depth on any one topic. Give the newer AI-security material — Entra Agent ID, Purview DSPM, Defender for AI Services, Foundry guardrails — dedicated hands-on revision."
             }
           },
           {
@@ -209,7 +209,7 @@
             "name": "How long should I study for SC-500?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The six-week plan on this page is a practical starting point if you already administer Azure security day to day. Extend it when Microsoft Sentinel, Microsoft Entra Agent ID, or the newer AI-security controls are unfamiliar, since several of these capabilities are recent additions. Use your domain-level practice results to decide when to add or repeat a week."
+              "text": "The six-week plan above is a practical start if you already administer Azure security day to day. Extend it when Sentinel, Entra Agent ID, or the AI-security controls are unfamiliar, since several are recent additions. Use your domain-level results to decide when to add or repeat a week."
             }
           },
           {
@@ -217,7 +217,7 @@
             "name": "Do I need AZ-500 or SC-200 before SC-500?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Neither is a formal prerequisite. Microsoft expects practical experience administering Azure and hybrid environments, strong familiarity with Microsoft Entra ID, and some Microsoft 365 administration exposure — the kind of background AZ-500 or day-to-day cloud security work already gives you. If you were partway through AZ-500 preparation, that study carries over directly, since SC-500 keeps the core Azure security-engineering content and adds the AI-security domain."
+              "text": "Neither is a formal prerequisite. Microsoft expects practical experience administering Azure and hybrid environments and strong Entra ID familiarity — the background AZ-500 or day-to-day cloud security work already gives you. Partway through AZ-500 prep? That study carries over directly."
             }
           },
           {
@@ -233,7 +233,7 @@
             "name": "What is the passing score for SC-500, and does it expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You need 700 out of 1000 to pass, on a scaled score rather than a raw percentage, so it does not map to a fixed number of correct answers. Like other Microsoft Associate certifications, SC-500 also expires annually, with a free online renewal assessment on Microsoft Learn that opens in the six-month window before your expiration date."
+              "text": "700 out of 1000, scaled rather than a raw percentage, so it doesn't map to a fixed number of correct answers. Like other Associate certifications, SC-500 expires annually, with a free renewal assessment on Microsoft Learn inside the six-month window before expiry."
             }
           },
           {
@@ -241,7 +241,7 @@
             "name": "How much does SC-500 cost and can I retake it if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Exam pricing varies by country, so check Microsoft's certification page for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt needs a new booking."
+              "text": "Pricing varies by country — check Microsoft's certification page for your local fee. If you don't pass: First retake: after 24 hours Second and third retakes: a 14-day wait each Maximum five attempts per rolling 12 months, each a fresh booking"
             }
           }
         ]
@@ -383,27 +383,54 @@
       <ol class="guide-plan">
         <li>
           <h3>Manage identity, access, and governance</h3>
-          <p>Secure access with Microsoft Entra ID: Privileged Identity Management, Conditional Access, multifactor and passwordless authentication, application identities and OAuth consent, and managed identities. Then Key Vault: deployment, access policies, firewall rules, and Defender for Key Vault. Close with governance: Azure Policy, Defender for Cloud compliance standards, resource locks, RBAC and custom roles, and infrastructure-as-code controls.</p>
+          <p>The smallest domain, covered in full this week.</p>
+          <ul>
+            <li>Entra ID: PIM, Conditional Access, MFA and passwordless, application identities, OAuth consent, managed identities.</li>
+            <li>Key Vault: deployment, access policies, firewall rules, Defender for Key Vault.</li>
+            <li>Governance: Azure Policy, Defender for Cloud compliance standards, resource locks, RBAC, IaC controls.</li>
+          </ul>
         </li>
         <li>
           <h3>Secure storage and databases</h3>
-          <p>Secure storage accounts: firewall rules, Defender for Storage threat protection, and access policies. Then secure databases: platform-level security in Azure SQL, database auditing, and Defender for Databases across Azure's database services.</p>
+          <p>The largest domain starts here.</p>
+          <ul>
+            <li>Storage: firewall rules, Defender for Storage, access policies.</li>
+            <li>Databases: Azure SQL platform-level security, database auditing, Defender for Databases.</li>
+          </ul>
         </li>
         <li>
           <h3>Secure Azure network services</h3>
-          <p>Network and application security groups, Azure Virtual Network Manager access policies, Virtual WAN security, VPN connections, Microsoft Entra Private Access, private endpoints and Private Link for platform-as-a-service resources, Azure Firewall, and effective security rules via Network Watcher.</p>
+          <p>Networking closes out the largest domain.</p>
+          <ul>
+            <li>NSGs and ASGs; Virtual Network Manager access policies; Virtual WAN security; VPN connections.</li>
+            <li>Entra Private Access; private endpoints and Private Link for PaaS; Azure Firewall; effective rules via Network Watcher.</li>
+          </ul>
         </li>
         <li>
           <h3>Secure compute: AI, servers, and the application platform</h3>
-          <p>Give the headline addition over AZ-500 a deliberate deep dive: Purview Data Security Posture Management for Copilot and AI apps, real-time protection for Copilot Studio agents, Conditional Access and blast-radius analysis for Microsoft Entra Agent ID, AI Gateway in API Management for Microsoft Foundry, Defender for AI Services, and Foundry agent guardrails. Then servers and VMs (disk encryption, Azure Bastion, just-in-time access, Azure Arc, Defender for Servers, secure boot and vTPM) and the application platform (Defender for Containers, AKS, Container Apps, Functions, Logic Apps, App Service, and the Web Application Firewall).</p>
+          <p>Give the headline addition over AZ-500 a deliberate deep dive before the more familiar compute topics.</p>
+          <ul>
+            <li>AI security: Purview DSPM for Copilot and AI apps, real-time protection for Copilot Studio agents, Conditional Access and blast-radius analysis for Entra Agent ID, AI Gateway, Defender for AI Services, Foundry guardrails.</li>
+            <li>Servers and VMs: disk encryption, Azure Bastion, just-in-time access, Azure Arc, Defender for Servers, secure boot and vTPM.</li>
+            <li>Application platform: Defender for Containers, AKS, Container Apps, Functions, Logic Apps, App Service, WAF.</li>
+          </ul>
         </li>
         <li>
           <h3>Manage and monitor security posture</h3>
-          <p>Defender for Cloud's CSPM, compliance frameworks, workload protection plans, and multicloud AWS/GCP connectors. Then Microsoft Sentinel ingestion: workspaces, data connectors, syslog and CEF collection, Windows event collection, automation rules and playbooks. Finish with Microsoft Security Copilot: workspaces, permissions, plugins, and agents.</p>
+          <p>Three tools, one domain.</p>
+          <ul>
+            <li>Defender for Cloud CSPM, compliance frameworks, workload protection plans, multicloud AWS/GCP connectors.</li>
+            <li>Sentinel ingestion: workspaces, data connectors, syslog/CEF, Windows event collection, automation rules and playbooks.</li>
+            <li>Microsoft Security Copilot: workspaces, permissions, plugins, agents.</li>
+          </ul>
         </li>
         <li>
           <h3>Review and exam simulation</h3>
-          <p>Revisit the control-layering distinctions the exam leans on hardest: which Defender for Cloud plan covers which resource, and which network-access control fits which pattern. Then focus your practice: drill your weakest domain daily and sit two full-length timed practice runs. Book the exam once your readiness sits comfortably above the pass mark.</p>
+          <p>Revisit the control-layering distinctions the exam leans on hardest, then prove you're ready.</p>
+          <ul>
+            <li>Which Defender for Cloud plan covers which resource, and which network-access control fits which pattern.</li>
+            <li>Drill your weakest domain daily, then sit two full-length timed practice runs before you book.</li>
+          </ul>
         </li>
       </ol>
     </section>
@@ -416,23 +443,38 @@
       <div class="topic-cards">
         <div class="topic-card">
           <h3>The AI-security control set</h3>
-          <p>Purview DSPM, Entra Agent ID Conditional Access, AI Gateway, Defender for AI Services, and Foundry guardrails all touch AI workloads but stop different threats — data overexposure, agent identity misuse, model-endpoint abuse, and runtime prompt attacks respectively. Practise matching the named risk in a scenario to the one control that actually addresses it.</p>
+          <ul>
+            <li>Purview DSPM, Entra Agent ID Conditional Access, AI Gateway, Defender for AI Services, and Foundry guardrails all touch AI workloads but stop different threats.</li>
+            <li>Match the named risk to the one control that addresses it: data overexposure, agent identity misuse, model-endpoint abuse, or runtime prompt attacks.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Private network access patterns</h3>
-          <p>Private endpoints, Azure Private Link, Microsoft Entra Private Access, and Azure Virtual Network Manager all restrict access in different ways, and the exam expects you to pick the one that fits the access pattern — a PaaS resource, a user connecting from outside Azure, or centralised policy across many virtual networks — rather than the one you know best.</p>
+          <ul>
+            <li>Private endpoints, Private Link, Entra Private Access, and Virtual Network Manager all restrict access differently.</li>
+            <li>Pick the one that fits the pattern — a PaaS resource, a user outside Azure, or centralised policy across many networks — not the one you know best.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Which Defender for Cloud plan covers what</h3>
-          <p>Defender CSPM, and the individual plans for Storage, Databases, Servers, Containers, and Key Vault, overlap in the dashboard but protect different resource types with different feature sets. Questions naming a specific resource and threat expect the specific plan, not a generic "enable Defender for Cloud" answer.</p>
+          <ul>
+            <li>CSPM and the individual plans for Storage, Databases, Servers, Containers, and Key Vault overlap in the dashboard but protect different resource types.</li>
+            <li>Questions naming a specific resource and threat expect the specific plan, not a generic "enable Defender for Cloud" answer.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Governance layering: policy, RBAC, and locks</h3>
-          <p>Azure Policy, RBAC role assignments, resource locks, and Key Vault access policies each stop a different kind of misconfiguration, and SC-500 tests which layer actually prevents the scenario described — an accidental deletion, an overprivileged assignment, or a non-compliant resource being created in the first place.</p>
+          <ul>
+            <li>Azure Policy, RBAC, resource locks, and Key Vault access policies each stop a different kind of misconfiguration.</li>
+            <li>SC-500 tests which layer actually prevents the scenario: an accidental deletion, an overprivileged assignment, or a non-compliant resource being created.</li>
+          </ul>
         </div>
         <div class="topic-card">
           <h3>Matching a Sentinel ingestion method to the source</h3>
-          <p>Built-in data connectors, syslog/CEF forwarding, data-collection-rule-based Windows Event collection, and custom log tables all get data into Microsoft Sentinel, but each suits a different source type and licensing model. Learn to read a source description and name the correct ingestion path rather than defaulting to whichever method is most familiar.</p>
+          <ul>
+            <li>Built-in connectors, syslog/CEF forwarding, data-collection-rule Windows Event collection, and custom log tables all get data in, but each suits a different source and licensing model.</li>
+            <li>Read a source description and name the correct ingestion path rather than defaulting to whichever is most familiar.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -451,9 +493,9 @@
         <figcaption>Azure Mastery rebuilds its study plan from your answer history, surfacing the weakest domains first.</figcaption>
       </figure>
       <div class="cta-panel">
-        <h3>Put your study plan into practice</h3>
+        <h3>New AI-security content, the same rigour</h3>
         <p>
-          Make Azure Mastery part of your study plan for SC-500. Practise exam-style questions mapped to all four current domains, get an on-device readiness score from Exam IQ, follow an adaptive study plan that targets your weak spots, and let knowledge-decay alerts tell you what to revise before you forget it. The Practice tab includes a timed, full-length practice simulator. It works offline and needs no account to start.
+          Azure Mastery writes a rationale for every option on every SC-500 question, so a wrong call on Purview DSPM versus Defender for AI Services teaches you the distinction, not just the score. Exam IQ gives you an on-device readiness score with a confidence range, and the study plan keeps circling back to your weak domain. Free to start, works offline.
         </p>
         <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -468,20 +510,20 @@
     <section id="exam-day" class="container">
       <p class="label-eyebrow section-eyebrow">Exam day</p>
       <h2 class="display-small section-title">Tactics for exam day</h2>
-      <p>
-        If you are sitting online, run the system check the day before and clear your desk, since proctors will ask you to show the room and remove anything within reach. Arrive early either way, because a rushed start eats into your focus during the dense scenario questions.
-      </p>
-      <p>
-        With 100 minutes for 40 to 60 questions you have roughly a minute and a half to two minutes each, which is comfortable if you keep moving. Use the <strong>mark-for-review</strong> flag on anything that makes you pause and return to it once you have banked the easy marks. Read every network- or Defender-for-Cloud question twice: the trap is usually a single scope, resource type, or plan name, and a slower second read pays off more than on a straightforward recall question.
-      </p>
-      <p>
-        Case studies bundle several questions around one security-engineering scenario, and once you move past a case you generally cannot return to it, so answer everything inside a case fully before advancing. Remember the score is scaled: you need 700 out of 1000, not a perfect run, so an unfamiliar configuration is not a disaster. Flag it, make your best call, and keep your momentum.
-      </p>
+      <p>A few habits protect the marks you've already earned.</p>
+      <ol>
+        <li>Sitting online? Run the system check the day before and clear your desk — proctors ask you to show the room first.</li>
+        <li>Arrive early either way; a rushed start eats into your focus during the dense scenario questions.</li>
+        <li>Budget roughly ninety seconds to two minutes per question, and flag anything you pause on with <strong>mark-for-review</strong>.</li>
+        <li>Read every network or Defender-for-Cloud question twice — the trap is usually one scope, resource type, or plan name.</li>
+        <li>Answer everything inside a case study before you advance; you generally cannot return to one once you leave it.</li>
+        <li>Remember the pass mark is 700 out of 1000, scaled. An unfamiliar configuration isn't a disaster: make your call and keep moving.</li>
+      </ol>
     </section>
 
     <!-- FAQs -->
     <div class="guide-inline-cta">
-      <span class="guide-inline-cta__text"><strong>Put this plan into practice.</strong> Azure Mastery pairs this guide with exam-style SC-500 questions, an on-device readiness score, and a full exam simulator — free to start.</span>
+      <span class="guide-inline-cta__text"><strong>New to the AI-security domain?</strong> Drill SC-500 scenario questions with a rationale for every option — free to start.</span>
       <a class="guide-inline-cta__btn" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">Download free</a>
     </div>
 
@@ -491,15 +533,15 @@
       <div class="faqs">
         <details class="faq">
           <summary>How hard is the SC-500 exam?</summary>
-          <div class="faq__answer"><p>SC-500 is broad rather than deep: it spans identity, storage, database, network, compute, and AI security, plus posture management, so the challenge is breadth of recall as much as difficulty of any one topic. Give the newer AI-security material — Entra Agent ID, Purview DSPM, Defender for AI Services, and Foundry guardrails — dedicated hands-on revision rather than treating it as an extension of the older Azure-security objectives.</p></div>
+          <div class="faq__answer"><p>Broad rather than deep: identity, storage, database, network, compute, and AI security, plus posture management, so breadth of recall matters as much as depth on any one topic. Give the newer AI-security material — Entra Agent ID, Purview DSPM, Defender for AI Services, Foundry guardrails — dedicated hands-on revision.</p></div>
         </details>
         <details class="faq">
           <summary>How long should I study for SC-500?</summary>
-          <div class="faq__answer"><p>The six-week plan on this page is a practical starting point if you already administer Azure security day to day. Extend it when Microsoft Sentinel, Microsoft Entra Agent ID, or the newer AI-security controls are unfamiliar, since several of these capabilities are recent additions. Use your domain-level practice results to decide when to add or repeat a week.</p></div>
+          <div class="faq__answer"><p>The six-week plan above is a practical start if you already administer Azure security day to day. Extend it when Sentinel, Entra Agent ID, or the AI-security controls are unfamiliar, since several are recent additions. Use your domain-level results to decide when to add or repeat a week.</p></div>
         </details>
         <details class="faq">
           <summary>Do I need AZ-500 or SC-200 before SC-500?</summary>
-          <div class="faq__answer"><p>Neither is a formal prerequisite. Microsoft expects practical experience administering Azure and hybrid environments, strong familiarity with Microsoft Entra ID, and some Microsoft 365 administration exposure — the kind of background AZ-500 or day-to-day cloud security work already gives you. If you were partway through AZ-500 preparation, that study carries over directly, since SC-500 keeps the core Azure security-engineering content and adds the AI-security domain.</p></div>
+          <div class="faq__answer"><p>Neither is a formal prerequisite. Microsoft expects practical experience administering Azure and hybrid environments and strong Entra ID familiarity — the background AZ-500 or day-to-day cloud security work already gives you. Partway through AZ-500 prep? That study carries over directly.</p></div>
         </details>
         <details class="faq">
           <summary>Is SC-500 the same as AZ-500?</summary>
@@ -507,11 +549,16 @@
         </details>
         <details class="faq">
           <summary>What is the passing score for SC-500, and does it expire?</summary>
-          <div class="faq__answer"><p>You need 700 out of 1000 to pass, on a scaled score rather than a raw percentage, so it does not map to a fixed number of correct answers. Like other Microsoft Associate certifications, SC-500 also expires annually, with a free online renewal assessment on <a href="https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> that opens in the six-month window before your expiration date.</p></div>
+          <div class="faq__answer"><p>700 out of 1000, scaled rather than a raw percentage, so it doesn't map to a fixed number of correct answers. Like other Associate certifications, SC-500 expires annually, with a free renewal assessment on <a href="https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification" rel="noopener">Microsoft Learn</a> inside the six-month window before expiry.</p></div>
         </details>
         <details class="faq">
           <summary>How much does SC-500 cost and can I retake it if I fail?</summary>
-          <div class="faq__answer"><p>Exam pricing varies by country, so check <a href="https://learn.microsoft.com/en-us/credentials/certifications/cloud-and-ai-security-engineer-associate/" rel="noopener">Microsoft's certification page</a> for the fee where you live rather than trusting a figure you read elsewhere. If you do not pass, the first retake is allowed after 24 hours, the second and third each require a 14-day wait, and Microsoft caps retakes at five attempts per rolling 12-month period. Each attempt needs a new booking.</p></div>
+          <div class="faq__answer"><p>Pricing varies by country — check <a href="https://learn.microsoft.com/en-us/credentials/certifications/cloud-and-ai-security-engineer-associate/" rel="noopener">Microsoft's certification page</a> for your local fee. If you don't pass:</p>
+          <ul>
+            <li>First retake: after 24 hours</li>
+            <li>Second and third retakes: a 14-day wait each</li>
+            <li>Maximum five attempts per rolling 12 months, each a fresh booking</li>
+          </ul></div>
         </details>
       </div>
     </section>
@@ -553,7 +600,7 @@
     <!-- Final CTA -->
     <section class="cta-final" aria-labelledby="cta-final-heading">
       <h2 id="cta-final-heading" class="display-small">Ready to start on SC-500?</h2>
-      <p>Practise exam-style SC-500 questions across all four domains, with an on-device readiness score, an adaptive study plan, and a full-length simulator. Free to start, works offline.</p>
+      <p>Every SC-500 question comes with a rationale for every option, Exam IQ predicts your score on-device with a confidence range, and the simulator is weighted to the exam blueprint. Free to start, works offline.</p>
       <a class="cta-button" href="https://apps.apple.com/app/apple-store/id6760594569" rel="noopener noreferrer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M14.5 10c0-2.07 1.69-3.07 1.77-3.12a3.87 3.87 0 00-3.06-1.65c-1.3-.13-2.53.76-3.19.76s-1.67-.74-2.75-.72A4.07 4.07 0 003.84 7.6c-1.47 2.54-.37 6.3 1.06 8.36.7 1.01 1.53 2.15 2.63 2.11 1.06-.04 1.46-.68 2.74-.68s1.64.68 2.75.66c1.13-.02 1.85-.99 2.55-2.02a8.92 8.92 0 001.15-2.37A3.58 3.58 0 0114.5 10zM12.13 3.94a3.63 3.63 0 00.83-2.6 3.69 3.69 0 00-2.39 1.24 3.46 3.46 0 00-.85 2.51 3.06 3.06 0 002.41-1.15z" fill="currentColor"/>

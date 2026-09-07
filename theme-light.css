@@ -92,14 +92,6 @@ html[data-theme="light"] .am-cert-hero__phone-screen {
   background-color: #F7FAFF;
   background-image: url('/images/cap-home-dashboard-light.webp');
 }
-/* The light capture's baked-in exam CTA sits lower and spans more of the
-   card than the dark capture. Align the per-exam mask to cover it exactly. */
-html[data-theme="light"] .am-cert-hero__cta-overlay {
-  left: 6.8%;
-  right: 6.8%;
-  top: 56%;
-  height: 4.8%;
-}
 html[data-theme="light"] .am-retire-banner__cta { color: #fff; }
 
 /* ── 3. Homepage component overrides ── */

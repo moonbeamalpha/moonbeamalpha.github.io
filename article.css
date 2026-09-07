@@ -519,7 +519,8 @@ section h3 { color: var(--text-primary); font-family: 'Outfit', sans-serif; font
   .guide-inline-cta__btn { width: 100%; }
 
   .guide-table-wrap { overflow: visible; border: 0; background: transparent; }
-  .guide-table, .guide-table tbody, .guide-table tr, .guide-table th, .guide-table td { display: block; width: 100%; }
+  .guide-table, .guide-table caption, .guide-table tbody, .guide-table tr,
+  .guide-table th, .guide-table td { display: block; width: 100%; }
   .guide-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .guide-table tbody { display: grid; gap: 12px; }
   .guide-table tbody tr {

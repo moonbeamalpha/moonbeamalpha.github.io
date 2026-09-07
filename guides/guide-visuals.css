@@ -352,10 +352,17 @@ html[data-theme="light"] .guide-table tbody tr:nth-child(even) {
 
   .guide-table-wrap { overflow: visible; border: 0; background: transparent; }
   .guide-table,
+  .guide-table caption,
   .guide-table tbody,
   .guide-table tr,
   .guide-table th,
   .guide-table td { display: block; width: 100%; min-width: 0; }
+  .guide-table caption,
+  html[data-theme="light"] .guide-table caption {
+    padding: 0 0 12px;
+    background: none;
+    border-bottom: 0;
+  }
   .guide-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .guide-table tbody { display: grid; gap: 12px; }
   .guide-table tbody tr {

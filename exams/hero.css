@@ -294,21 +294,6 @@
     @media (min-width: 880px) {
       .am-cert-hero__phone-screen { border-radius: 46px; }
     }
-    .am-cert-hero__phone-screen::before {
-      content: '';
-      position: absolute;
-      top: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 94px; height: 28px;
-      border-radius: 14px;
-      background: #000;
-      z-index: 20;
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
-    }
-    @media (min-width: 880px) {
-      .am-cert-hero__phone-screen::before { width: 108px; height: 32px; border-radius: 16px; }
-    }
     .am-cert-hero__phone-screen::after {
       content: '';
       position: absolute;

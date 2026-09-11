@@ -169,14 +169,14 @@ vm.runInNewContext(read('sw.js'), {
       if (storageUnavailable) throw new Error('storage unavailable');
       return cache;
     },
-    keys: async () => ['azure-mastery-static-old', 'azure-mastery-static-v1', 'unrelated'],
+    keys: async () => ['azure-mastery-static-old', 'azure-mastery-static-v1', 'azure-mastery-static-v2', 'unrelated'],
     delete: async key => { deleted.push(key); }
   }
 });
 let activation;
 handlers.get('activate')({ waitUntil: promise => { activation = promise; } });
 await activation;
-assert.deepEqual(deleted, ['azure-mastery-static-old']);
+assert.deepEqual(deleted, ['azure-mastery-static-old', 'azure-mastery-static-v1']);
 async function request(destination = 'image', url = 'https://azuremastery.app/images/test.webp', method = 'GET') {
   let result;
   const pending = [];

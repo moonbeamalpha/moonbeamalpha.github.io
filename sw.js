@@ -1,6 +1,6 @@
 /* Repeat-visit cache for same-origin images and fonts only. HTML, styles and
    scripts stay on the normal HTTP cache path to avoid mismatched deployments. */
-const STATIC_CACHE = 'azure-mastery-static-v1';
+const STATIC_CACHE = 'azure-mastery-static-v2';
 const STATIC_DESTINATIONS = new Set(['image', 'font']);
 
 self.addEventListener('install', () => self.skipWaiting());

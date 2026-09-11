@@ -86,6 +86,38 @@
     persist(theme);
   }
 
+  // Decode the incoming visible screenshots before capturing either theme.
+  // Keep below-fold galleries lazy and bound the wait on slow connections.
+  function prepareScreenshots(light) {
+    var elements = document.querySelectorAll('.themed-screenshot, [data-theme-src-light]');
+    var sources = new Set();
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var bounds = element.getBoundingClientRect();
+      if (!bounds.width || !bounds.height || bounds.bottom <= 0 || bounds.top >= window.innerHeight ||
+          bounds.right <= 0 || bounds.left >= window.innerWidth) continue;
+      var source = element.getAttribute(light ? 'data-theme-src-light' : 'data-theme-src-dark') ||
+        element.getAttribute(light ? 'data-theme-bg-light' : 'data-theme-bg-dark');
+      if (!source) {
+        var value = getComputedStyle(element).getPropertyValue(light ? '--screenshot-light' : '--screenshot-dark');
+        var match = value.match(/url\(["']?(.*?)["']?\)/);
+        if (match) source = match[1];
+      }
+      if (source) sources.add(source);
+    }
+    var timer;
+    var pending = Array.from(sources).map(function(source) {
+      var image = new Image();
+      image.src = source;
+      if (image.decode) return image.decode().catch(function() {});
+      return new Promise(function(resolve) { image.onload = image.onerror = resolve; });
+    });
+    return Promise.race([
+      Promise.all(pending),
+      new Promise(function(resolve) { timer = window.setTimeout(resolve, 2000); })
+    ]).then(function() { window.clearTimeout(timer); });
+  }
+
   function fallbackFade(theme) {
     transitioning = true;
     root.classList.add('theme-fade-ready');
@@ -98,8 +130,8 @@
       window.setTimeout(function () {
         root.classList.remove('theme-fade-ready', 'theme-fade-in');
         transitioning = false;
-      }, 170);
-    }, 150);
+      }, 280);
+    }, 260);
   }
 
   function onToggle() {
@@ -111,19 +143,25 @@
       return;
     }
 
-    if (document.startViewTransition) {
-      transitioning = true;
-      try {
-        var transition = document.startViewTransition(function () { commit(next); });
-        transition.finished.then(function () { transitioning = false; }, function () { transitioning = false; });
-      } catch (e) {
+    transitioning = true;
+    prepareScreenshots(next === 'light').then(function () {
+      // The preference can change while images are loading.
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        commit(next);
         transitioning = false;
-        fallbackFade(next);
+        return;
       }
-      return;
-    }
-
-    fallbackFade(next);
+      if (document.startViewTransition) {
+        try {
+          var transition = document.startViewTransition(function () { commit(next); });
+          transition.finished.then(function () { transitioning = false; }, function () { transitioning = false; });
+        } catch (e) {
+          fallbackFade(next);
+        }
+        return;
+      }
+      fallbackFade(next);
+    });
   }
 
   function init() {

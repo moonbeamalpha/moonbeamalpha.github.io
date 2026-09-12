@@ -13,7 +13,7 @@
     "AI-500": 455,
     "AI-900": 340,
     "AI-901": 604,
-    "AZ-104": 651,
+    "AZ-104": 671,
     "AZ-204": 405,
     "AZ-305": 408,
     "AZ-400": 476,
@@ -100,7 +100,7 @@
     },
     "AZ-104": {
       "az104-compute": 133,
-      "az104-identity": 85,
+      "az104-identity": 105,
       "az104-monitoring": 75,
       "az104-networking": 84,
       "az104-storage": 104
@@ -201,9 +201,9 @@
       "sc200-ops": 162
     },
     "SC-300": {
-      "sc300-access": 121,
+      "sc300-access": 122,
       "sc300-governance": 103,
-      "sc300-identities": 102,
+      "sc300-identities": 101,
       "sc300-workload": 102
     },
     "SC-500": {
@@ -233,7 +233,7 @@
     "AI-500": 452,
     "AI-900": 340,
     "AI-901": 572,
-    "AZ-104": 481,
+    "AZ-104": 501,
     "AZ-204": 405,
     "AZ-305": 399,
     "AZ-400": 467,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12275,
+    "questionCount": 12295,
     "questionCountLabel": "12,200+"
   }
 }

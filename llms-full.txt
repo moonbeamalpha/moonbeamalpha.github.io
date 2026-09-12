@@ -28,7 +28,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 364 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills measured as of 20 July 2026.
 
-- [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 481 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
+- [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 501 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
 
 - [AZ-305 — Designing Microsoft Azure Infrastructure Solutions](https://azuremastery.app/exams/az-305/): 399 in-app practice questions. Expert-tier solution architect cert (single exam earns the Microsoft Certified: Azure Solutions Architect Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions plus case studies. Four design domains: identity/governance/monitoring (25–30%), data storage (20–25%), business continuity (15–20%), infrastructure (30–35%). Recommended Associate prerequisite: AZ-104. Skills outline updated 17 April 2026.
 
@@ -568,7 +568,7 @@ A: No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, a
 Q: How much revision time does AI-901 need?
 A: Allow several weeks for concepts plus hands-on practice. The outline expects core cloud knowledge, familiarity with Azure resources, and comfort reading Python syntax that calls AI models. Azure Mastery's readiness gauge helps you decide when to book.
 
-## /exams/az-104/ — AZ-104 Practice Questions — 481 Qs for Azure Admin (2026)
+## /exams/az-104/ — AZ-104 Practice Questions — 501 Qs for Azure Admin (2026)
 Page last modified: 2026-09-06
 Exam domains:
   - Manage Azure identities and governance (20–25%)
@@ -591,7 +591,7 @@ A: Take AZ-900 (Microsoft Azure Fundamentals) first if you have under six months
 Q: AZ-104 vs AZ-305 — which next?
 A: Pass AZ-104 first. It's the Associate operational cert; AZ-305 is the Expert architectural cert that assumes you already know AZ-104's material and adds requirements gathering, capacity planning, and governance design. Most architects hold both — one proves you've done the work, the other that you can design it.
 Q: Is Azure Mastery free for AZ-104 prep?
-A: The app is free to download, with a free allowance of AZ-104 questions so you can try every feature. The full bank of 481 AZ-104 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: The app is free to download, with a free allowance of AZ-104 questions so you can try every feature. The full bank of 501 AZ-104 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 Q: Does AZ-104 practice work offline?
 A: Yes — questions, scoring, and the readiness prediction all run on-device, so a commute or a flight with no signal doesn't stop your AZ-104 prep. There's no account requirement, and study data stays on your device unless you turn on private iCloud sync.
 Q: Is there an AZ-104 practice test mode?
@@ -1101,7 +1101,7 @@ Q: Can I hunt through SC-200 practice scenarios with no connection?
 A: Yes. Practice sessions, scoring, and the readiness prediction all run on-device, so they work with no connection at all. There's no account to sign into, and data stays local unless you turn on optional, private iCloud sync.
 
 ## /exams/sc-300/ — SC-300 Practice Questions — 428 Qs for Identity Admin (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-12
 Exam domains:
   - Implement and manage user identities (20–25%)
   - Implement authentication and access management (25–30%)

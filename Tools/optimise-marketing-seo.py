@@ -69,7 +69,7 @@ SEO_UPDATED_OVERRIDES = {
     "PL-900": "2026-09-06",
     "SC-100": "2026-09-06",
     "SC-200": "2026-09-06",
-    "SC-300": "2026-09-06",
+    "SC-300": "2026-09-12",
     "SC-500": "2026-09-06",
     "SC-900": "2026-09-06",
     # Retired-exam pages this branch re-ported (past-tense/humanizer passes).

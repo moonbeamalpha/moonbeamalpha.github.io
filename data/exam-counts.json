@@ -16,7 +16,7 @@
     "AZ-104": 671,
     "AZ-204": 405,
     "AZ-305": 408,
-    "AZ-400": 476,
+    "AZ-400": 496,
     "AZ-500": 346,
     "AZ-700": 579,
     "AZ-900": 413,
@@ -113,9 +113,9 @@
     },
     "AZ-400": {
       "az400-monitoring": 45,
-      "az400-pipelines": 239,
+      "az400-pipelines": 251,
       "az400-processes": 68,
-      "az400-security": 52,
+      "az400-security": 60,
       "az400-sourcecontrol": 63
     },
     "AZ-700": {
@@ -236,7 +236,7 @@
     "AZ-104": 501,
     "AZ-204": 405,
     "AZ-305": 399,
-    "AZ-400": 467,
+    "AZ-400": 487,
     "AZ-500": 346,
     "AZ-700": 569,
     "AZ-900": 364,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12295,
-    "questionCountLabel": "12,200+"
+    "questionCount": 12315,
+    "questionCountLabel": "12,300+"
   }
 }

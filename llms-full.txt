@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,200+ practice questions cover 30 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,300+ practice questions cover 30 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -34,7 +34,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-204 — Developing Solutions for Microsoft Azure](https://azuremastery.app/exams/az-204/): 405 in-app practice questions. Associate-tier developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. **⚠ Microsoft retired AZ-204 on 31 July 2026** — it can no longer be scheduled; the current AI cloud developer route is AI-200. Five developer domains: compute (25–30%), storage (15–20%), security (15–20%), monitor/troubleshoot/optimize (5–10%), connect/consume services (20–25%). Heavy on SDK code samples in C#/Python/JavaScript. Skills outline updated 14 January 2026.
 
-- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 467 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 or an active Azure Developer Associate credential earned via the retired AZ-204 route. Skills measured as of 27 July 2026.
+- [AZ-400 — Designing and Implementing Microsoft DevOps Solutions](https://azuremastery.app/exams/az-400/): 487 in-app practice questions (largest single-cert bank). Expert-tier DevOps cert (single exam earns the Microsoft Certified: DevOps Engineer Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five DevOps domains: process/communications (10–15%), source control (10–15%), build/release pipelines (50–55%), security/compliance (10–15%), instrumentation (5–10%). Required Associate prerequisite: AZ-104 or an active Azure Developer Associate credential earned via the retired AZ-204 route. Skills measured as of 27 July 2026.
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Microsoft retired AZ-500 on 31 August 2026** — it can no longer be scheduled; the successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
@@ -650,7 +650,7 @@ A: Plan eight to twelve weeks of focused study, even after passing AZ-104. AZ-30
 Q: Can I try Azure Mastery's AZ-305 content before paying?
 A: Yes. The app is free to download, with a free allowance of AZ-305 questions so you can try every feature. The full bank of 399 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
-## /exams/az-400/ — AZ-400 Practice Questions — 467 Qs for DevOps Engineer (2026)
+## /exams/az-400/ — AZ-400 Practice Questions — 487 Qs for DevOps Engineer (2026)
 Page last modified: 2026-09-06
 Exam domains:
   - Design and implement processes and communications (10–15%)
@@ -675,7 +675,7 @@ A: Yes, and it's the exam's defining feature. AZ-400 treats Azure Pipelines and 
 Q: What does the AZ-400 exam format actually look like?
 A: AZ-400 follows Microsoft's general 40–60 question format, with the mix varying by sitting. Azure Mastery's bank weights single-answer and scenario-based items heaviest, with multi-select, drag-and-drop, and linked case-study questions filling out the rest — all original practice content.
 Q: Can I try Azure Mastery's AZ-400 content before buying the full bank?
-A: Yes. The app is free to download, with a free allowance of AZ-400 questions so you can try every feature. The full bank of 467 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with a free allowance of AZ-400 questions so you can try every feature. The full bank of 487 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-500/ — AZ-500 Retired Exam & SC-500 Next Step | Azure Mastery
 Page last modified: 2026-09-06

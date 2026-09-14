@@ -18,7 +18,7 @@
     "AZ-305": 408,
     "AZ-400": 496,
     "AZ-500": 346,
-    "AZ-700": 579,
+    "AZ-700": 599,
     "AZ-900": 413,
     "DP-100": 350,
     "DP-300": 415,
@@ -122,8 +122,8 @@
       "az700-access": 64,
       "az700-connectivity": 138,
       "az700-core": 168,
-      "az700-delivery": 101,
-      "az700-security": 98
+      "az700-delivery": 103,
+      "az700-security": 116
     },
     "AZ-900": {
       "az900-concepts": 109,
@@ -238,7 +238,7 @@
     "AZ-305": 399,
     "AZ-400": 487,
     "AZ-500": 346,
-    "AZ-700": 569,
+    "AZ-700": 589,
     "AZ-900": 364,
     "DP-100": 350,
     "DP-300": 405,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12315,
+    "questionCount": 12335,
     "questionCountLabel": "12,300+"
   }
 }

@@ -30,7 +30,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 501 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
 
-- [AZ-305 — Designing Microsoft Azure Infrastructure Solutions](https://azuremastery.app/exams/az-305/): 399 in-app practice questions. Expert-tier solution architect cert (single exam earns the Microsoft Certified: Azure Solutions Architect Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions plus case studies. Four design domains: identity/governance/monitoring (25–30%), data storage (20–25%), business continuity (15–20%), infrastructure (30–35%). Recommended Associate prerequisite: AZ-104. Skills outline updated 17 April 2026.
+- [AZ-305 — Designing Microsoft Azure Infrastructure Solutions](https://azuremastery.app/exams/az-305/): 419 in-app practice questions. Expert-tier solution architect cert (single exam earns the Microsoft Certified: Azure Solutions Architect Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions plus case studies. Four design domains: identity/governance/monitoring (25–30%), data storage (20–25%), business continuity (15–20%), infrastructure (30–35%). Recommended Associate prerequisite: AZ-104. Skills outline updated 17 April 2026.
 
 - [AZ-204 — Developing Solutions for Microsoft Azure](https://azuremastery.app/exams/az-204/): 405 in-app practice questions. Associate-tier developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. **⚠ Microsoft retired AZ-204 on 31 July 2026** — it can no longer be scheduled; the current AI cloud developer route is AI-200. Five developer domains: compute (25–30%), storage (15–20%), security (15–20%), monitor/troubleshoot/optimize (5–10%), connect/consume services (20–25%). Heavy on SDK code samples in C#/Python/JavaScript. Skills outline updated 14 January 2026.
 
@@ -569,7 +569,7 @@ Q: How much revision time does AI-901 need?
 A: Allow several weeks for concepts plus hands-on practice. The outline expects core cloud knowledge, familiarity with Azure resources, and comfort reading Python syntax that calls AI models. Azure Mastery's readiness gauge helps you decide when to book.
 
 ## /exams/az-104/ — AZ-104 Practice Questions — 501 Qs for Azure Admin (2026)
-Page last modified: 2026-09-14
+Page last modified: 2026-09-15
 Exam domains:
   - Manage Azure identities and governance (20–25%)
   - Implement and manage storage (15–20%)
@@ -598,7 +598,7 @@ Q: Is there an AZ-104 practice test mode?
 A: Yes. Timed sessions pull from the same blueprint-weighted question pool, follow Microsoft's published timing, and support every interactive item type AZ-104 uses. Between sessions, adaptive study and Focus Weak Spots keep steering you back to your lowest-accuracy domains.
 
 ## /exams/az-204/ — AZ-204 Retired Exam & AI-200 Next Step | Azure Mastery
-Page last modified: 2026-09-06
+Page last modified: 2026-09-15
 Exam domains:
   - Develop Azure compute solutions (25–30%)
   - Develop for Azure storage (15–20%)
@@ -624,8 +624,8 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-204 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-305/ — AZ-305 Practice Questions — 399 Qs for Azure Architect (2026)
-Page last modified: 2026-09-14
+## /exams/az-305/ — AZ-305 Practice Questions — 419 Qs for Azure Architect (2026)
+Page last modified: 2026-09-15
 Exam domains:
   - Design identity, governance, and monitoring solutions (25–30%)
   - Design data storage solutions (20–25%)
@@ -648,10 +648,10 @@ A: Not immediately, and each sitting needs its own voucher. First retake: after 
 Q: Realistically, how many weeks does AZ-305 prep take?
 A: Plan eight to twelve weeks of focused study, even after passing AZ-104. AZ-305 tests judgement more than recall — you're given a scenario and asked which services satisfy it. Don't book until the readiness gauge holds around 730 or higher; AZ-305 is unforgiving of borderline scores.
 Q: Can I try Azure Mastery's AZ-305 content before paying?
-A: Yes. The app is free to download, with a free allowance of AZ-305 questions so you can try every feature. The full bank of 399 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with a free allowance of AZ-305 questions so you can try every feature. The full bank of 419 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-400/ — AZ-400 Practice Questions — 487 Qs for DevOps Engineer (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-15
 Exam domains:
   - Design and implement processes and communications (10–15%)
   - Design and implement a source control strategy (10–15%)
@@ -731,7 +731,7 @@ Q: Can I test-drive Azure Mastery's AZ-700 content for free?
 A: Yes. The app is free to download, with a free allowance of AZ-700 questions so you can try every feature. The full bank of 589 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-900/ — AZ-900 Practice Questions — 364 Qs for Fundamentals (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-15
 Exam domains:
   - Describe cloud concepts (25–30%)
   - Describe Azure architecture and services (35–40%)

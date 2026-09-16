@@ -80,7 +80,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [DP-750 — Implementing Data Engineering Solutions Using Azure Databricks](https://azuremastery.app/exams/dp-750/): 442 in-app practice questions. Associate-tier Azure Databricks data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: set up and configure an Azure Databricks environment (15–20%), secure and govern Unity Catalog objects (15–20%), prepare and process data (30–35%), deploy and maintain data pipelines and workloads (30–35%). Covers compute selection, Unity Catalog objects and governance (grants, row/column security, ABAC, lineage, Delta Sharing), Delta modelling and Lakeflow/Auto Loader ingestion, Spark optimisation (OPTIMIZE, VACUUM), and CI/CD with Databricks Asset Bundles. Requires SQL and Python. Skills outline updated 11 March 2026.
 
-- [DP-800 — Microsoft Certified: SQL AI Developer Associate](https://azuremastery.app/exams/dp-800/): 393 in-app practice questions. Associate-tier SQL developer cert focused on AI-enabled SQL workloads (exam title: "Developing AI-Enabled Database Solutions"), renews annually, USD $165 voucher. 100-min duration (120-min seat), 40–60 mixed-format questions, pass score 700/1000. Three domains: design and develop database solutions (35–40%) — advanced T-SQL, JSON, regex, fuzzy matching, graph queries, AI-assisted dev; secure/optimize/deploy (35–40%); implement AI capabilities in database solutions (25–30%) — embeddings, vector indexes, RAG with `sp_invoke_external_rest_endpoint`. Skills outline published 12 March 2026.
+- [DP-800 — Microsoft Certified: SQL AI Developer Associate](https://azuremastery.app/exams/dp-800/): 413 in-app practice questions. Associate-tier SQL developer cert focused on AI-enabled SQL workloads (exam title: "Developing AI-Enabled Database Solutions"), renews annually, USD $165 voucher. 100-min duration (120-min seat), 40–60 mixed-format questions, pass score 700/1000. Three domains: design and develop database solutions (35–40%) — advanced T-SQL, JSON, regex, fuzzy matching, graph queries, AI-assisted dev; secure/optimize/deploy (35–40%); implement AI capabilities in database solutions (25–30%) — embeddings, vector indexes, RAG with `sp_invoke_external_rest_endpoint`. Skills outline published 12 March 2026.
 
 ### Security, Compliance & Identity (5)
 
@@ -867,8 +867,8 @@ A: Yes — the app is free to download, with a free allowance of DP-750 question
 Q: Does DP-750 revision work without a connection?
 A: Yes. Question practice, scoring, and the readiness prediction all run locally on your device, so studying with no signal works the same as with a full connection. No account is needed, and sync via iCloud stays optional and private.
 
-## /exams/dp-800/ — DP-800 Practice Questions — 393 Qs for SQL AI Developer (2026)
-Page last modified: 2026-09-06
+## /exams/dp-800/ — DP-800 Practice Questions — 413 Qs for SQL AI Developer (2026)
+Page last modified: 2026-09-16
 Exam domains:
   - Design and develop database solutions (35–40%)
   - Secure, optimize, and deploy database solutions (35–40%)
@@ -890,7 +890,7 @@ A: They sit on opposite ends of the data stack. DP-800 brings AI primitives, emb
 Q: I failed DP-800 — how soon can I book a retake?
 A: Every attempt needs its own voucher, and the wait grows the more times you've sat it. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-800 bank before paying?
-A: Yes — the app is free to download, with a free allowance of DP-800 questions so you can try every feature. The full bank of 393 DP-800 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes — the app is free to download, with a free allowance of DP-800 questions so you can try every feature. The full bank of 413 DP-800 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 Q: Can I revise DP-800 with no data connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync.
 

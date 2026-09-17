@@ -50,7 +50,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AI-103 — Developing AI Apps and Agents on Azure](https://azuremastery.app/exams/ai-103/): 557 in-app practice questions for the Azure AI Apps and Agents Developer Associate credential. 100-min duration, pass score 700/1000. Five domains: plan/manage an Azure AI solution (25–30%), generative and agentic solutions (30–35%), computer vision (10–15%), text analysis (10–15%), and information extraction (10–15%). Requires Python and Microsoft Foundry experience. Skills measured as of 16 April 2026.
 
-- [AI-200 — Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 220 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Study guide updated 5 May 2026.
+- [AI-200 — Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 240 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Study guide updated 5 May 2026.
 
 - [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 362 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Study guide updated 26 July 2026.
 
@@ -434,8 +434,8 @@ A: The app is free to download, with a free allowance of AI-103 questions to try
 Q: Does AI-103 practice work offline?
 A: All of it — question practice, scoring, and the readiness prediction run on-device, so a flight or an offline commute doesn't interrupt your study streak. No account is required, and your data stays on your device unless you turn on optional private iCloud sync.
 
-## /exams/ai-200/ — AI-200 Practice Questions — 220 Qs for AI Developer (2026)
-Page last modified: 2026-09-06
+## /exams/ai-200/ — AI-200 Practice Questions — 240 Qs for AI Developer (2026)
+Page last modified: 2026-09-17
 Exam domains:
   - Develop containerized solutions on Azure (20–25%)
   - Develop AI solutions by using Azure data management services (25–30%)
@@ -456,14 +456,14 @@ A: Different emphases. AI-200 validates back-end Azure development for AI soluti
 Q: AI-200 vs AI-300 — which next?
 A: AI-200 first. It's the AI Cloud Developer cert, building the platform AI workloads run on. AI-300 is the ML Operations Engineer cert, running ML and generative-AI systems in production. AI-200 sits upstream of AI-300 in most roles.
 Q: Is Azure Mastery free for AI-200 prep?
-A: The app is free to download and includes a free allowance of AI-200 questions so you can try every feature. The full bank of 220 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AI-200 questions so you can try every feature. The full bank of 240 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AI-200 practice work offline?
 A: Yes. Everything AI-200 practice needs, from scoring to the readiness prediction, lives on the phone, so a flight or a dead spot changes nothing. There is no account to make, and your history only leaves the device if you turn on private iCloud sync.
 Q: Is there an AI-200 practice test mode?
 A: Yes. Exam Simulator runs a timed, blueprint-weighted AI-200 session built from the app's own questions, with the clock running and no jumping back to review. It is original practice content, so treat it as rehearsal for the pressure rather than a copy of Microsoft's paper.
 
 ## /exams/ai-300/ — AI-300 Practice Questions — 362 Qs for ML Ops Engineer (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-17
 Exam domains:
   - Design and implement an MLOps infrastructure (15–20%)
   - Implement machine learning model lifecycle and operations (25–30%)

@@ -8,7 +8,7 @@
     "AB-900": 375,
     "AI-102": 334,
     "AI-103": 573,
-    "AI-200": 460,
+    "AI-200": 480,
     "AI-300": 405,
     "AI-500": 455,
     "AI-900": 340,
@@ -76,10 +76,10 @@
       "ai103-vision": 80
     },
     "AI-200": {
-      "ai200-compute": 55,
-      "ai200-data": 62,
-      "ai200-integration": 55,
-      "ai200-operations": 48
+      "ai200-compute": 60,
+      "ai200-data": 67,
+      "ai200-integration": 60,
+      "ai200-operations": 53
     },
     "AI-300": {
       "ai300-genaiops": 84,
@@ -228,7 +228,7 @@
     "AB-900": 323,
     "AI-102": 334,
     "AI-103": 557,
-    "AI-200": 220,
+    "AI-200": 240,
     "AI-300": 362,
     "AI-500": 452,
     "AI-900": 340,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12375,
+    "questionCount": 12395,
     "questionCountLabel": "12,300+"
   }
 }

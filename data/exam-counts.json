@@ -21,7 +21,7 @@
     "AZ-700": 599,
     "AZ-900": 413,
     "DP-100": 350,
-    "DP-300": 415,
+    "DP-300": 435,
     "DP-700": 381,
     "DP-750": 446,
     "DP-800": 419,
@@ -39,8 +39,8 @@
   "cert_path_count": 29,
   "domain_counts": {
     "AB-100": {
-      "ab100-deploy": 187,
-      "ab100-design": 132,
+      "ab100-deploy": 188,
+      "ab100-design": 131,
       "ab100-plan": 124
     },
     "AB-410": {
@@ -131,11 +131,11 @@
       "az900-services": 145
     },
     "DP-300": {
-      "dp300-automation": 68,
-      "dp300-hadr": 84,
-      "dp300-monitoring": 88,
-      "dp300-platform": 73,
-      "dp300-security": 92
+      "dp300-automation": 72,
+      "dp300-hadr": 88,
+      "dp300-monitoring": 92,
+      "dp300-platform": 77,
+      "dp300-security": 96
     },
     "DP-700": {
       "dp700-implement": 108,
@@ -241,7 +241,7 @@
     "AZ-700": 589,
     "AZ-900": 364,
     "DP-100": 350,
-    "DP-300": 405,
+    "DP-300": 425,
     "DP-700": 336,
     "DP-750": 442,
     "DP-800": 413,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12395,
-    "questionCountLabel": "12,300+"
+    "questionCount": 12415,
+    "questionCountLabel": "12,400+"
   }
 }

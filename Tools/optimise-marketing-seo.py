@@ -42,7 +42,7 @@ SEO_UPDATED_OVERRIDES = {
     # S6 close-out (2026-09-06): every current exam page re-ported/touched by
     # the scannable-recipe and tooling/lifecycle re-port work, so sitemap
     # lastmod and JSON-LD dateModified agree (validate_exam_dateModified_vs_sitemap).
-    "AB-100": "2026-09-06",
+    "AB-100": "2026-09-20",
     "AB-410": "2026-09-06",
     "AB-620": "2026-09-06",
     "AB-650": "2026-09-06",
@@ -58,14 +58,14 @@ SEO_UPDATED_OVERRIDES = {
     "AZ-400": "2026-09-15",
     "AZ-700": "2026-09-14",
     "AZ-900": "2026-09-15",
-    "DP-300": "2026-09-06",
+    "DP-300": "2026-09-20",
     "DP-700": "2026-09-06",
     "DP-750": "2026-09-06",
     "DP-800": "2026-09-16",
     "DP-900": "2026-09-06",
     "GH-300": "2026-09-06",
     "GH-900": "2026-09-06",
-    "PL-300": "2026-09-06",
+    "PL-300": "2026-09-20",
     "PL-900": "2026-09-06",
     "SC-100": "2026-09-06",
     "SC-200": "2026-09-06",

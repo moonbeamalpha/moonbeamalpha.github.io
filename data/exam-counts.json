@@ -32,7 +32,7 @@
     "PL-900": 356,
     "SC-100": 458,
     "SC-200": 377,
-    "SC-300": 448,
+    "SC-300": 468,
     "SC-500": 474,
     "SC-900": 409
   },
@@ -201,10 +201,10 @@
       "sc200-ops": 162
     },
     "SC-300": {
-      "sc300-access": 122,
-      "sc300-governance": 103,
-      "sc300-identities": 101,
-      "sc300-workload": 102
+      "sc300-access": 127,
+      "sc300-governance": 108,
+      "sc300-identities": 106,
+      "sc300-workload": 107
     },
     "SC-500": {
       "sc500-compute": 108,
@@ -252,7 +252,7 @@
     "PL-900": 328,
     "SC-100": 452,
     "SC-200": 374,
-    "SC-300": 428,
+    "SC-300": 448,
     "SC-500": 432,
     "SC-900": 397
   },
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12415,
+    "questionCount": 12435,
     "questionCountLabel": "12,400+"
   }
 }

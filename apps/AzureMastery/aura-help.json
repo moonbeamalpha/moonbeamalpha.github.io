@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "revision": "product-help-2026-09-21-v5",
+  "articles": [
+    {
+      "id": "about-azure-mastery",
+      "title": "About Azure Mastery",
+      "text": "**What it is**\n\nAzure Mastery is a privacy-first study app for current Microsoft certification exams across Azure, AI, security, data, Power Platform, GitHub, and Copilot.\n\n**What you can do**\n\nUse reviewed study guides and terminology, exam-style practice questions, timed tests, spaced-repetition review, study plans, and on-device Exam IQ readiness insights.\n\n**How Aura helps**\n\nAsk Aura can explain reviewed material, help you work through questions, and suggest a useful next study step.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-20",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "about-ask-aura",
+      "title": "How Ask Aura works",
+      "text": "Ask Aura is Azure Mastery’s Pro study companion. It starts with reviewed material for your current exam, including study-guide sections, terminology, question explanations, and on-device Exam IQ insights. It can explain concepts, help you reason through reviewed questions, clarify terminology, and suggest a focused next study step. Some natural-language replies use Apple’s on-device Foundation Model. Ask Aura is in preview, so check the cited source when accuracy matters.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-20",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "exam-iq",
+      "title": "How Exam IQ works",
+      "text": "Exam IQ is Azure Mastery’s private, on-device readiness system. It combines your scored practice, exam-blueprint coverage, retained knowledge, and practice-test consistency to estimate readiness when enough evidence is available. It highlights weak or fading topics and recommends what to study next. Its forecast is study guidance, not a guarantee of an exam result.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-20",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "study-tools",
+      "title": "Ways to study in Azure Mastery",
+      "text": "Azure Mastery includes reviewed study guides and terminology, exam-style practice questions, Daily Five and daily challenges, spaced-repetition review, personalised study plans, and a timed exam simulator. Available questions and Pro features depend on your exam access. Use the Study tab for learning and review, and the Exam tab for timed practice and Exam IQ insights.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-20",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "switch-active-exam",
+      "title": "Switch the active exam",
+      "text": "Open the You tab and find My Exams. If the exam is not there, choose Add Exam first. Open the exam’s options menu and choose Switch to This Exam. Switching changes the study content and progress views you are working with; it does not delete progress for your other exams.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-20",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "aura-privacy",
+      "title": "Ask Aura privacy and optional connections",
+      "text": "Ask Aura keeps saved conversations on this device and excludes them from app cloud sync and backups. It starts with bundled study material. Microsoft Learn lookups and Apple Private Cloud Compute explanations stay off until you enable each option. Learn receives only a public topic name or documentation address. When Private Cloud Compute is available and enabled, Aura may send relevant messages and selected study excerpts to Apple for a harder explanation. You can review or change both options from Ask Aura’s privacy screen.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-20",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "aura-voice-input",
+      "title": "Use voice input with Ask Aura",
+      "text": "On iOS 27, tap the microphone in Ask Aura’s message field to dictate with Apple’s on-device speech model. Your words remain an editable draft and are never sent automatically. Microphone audio is used only while dictation is active; Azure Mastery does not save it or include it with your message. If on-device dictation is unavailable for your language, use keyboard dictation or type instead.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-20",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "restore-purchases",
+      "title": "Restore purchases in Azure Mastery",
+      "text": "Open Settings and choose Restore Purchases. Check the purchase summary after restoration. I can explain the steps, but this help article does not tell me which purchases your Apple Account owns.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-16",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "icloud-sync",
+      "title": "Sync study progress with iCloud",
+      "text": "In Settings, check iCloud Sync. Use the same Apple Account on each device and enable iCloud Drive in system settings. After changing the app’s iCloud setting, close Azure Mastery completely and reopen it. Check your connection and available iCloud storage, then keep the app open for the first sync. Study schedules and display preferences stay on this device.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-16",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    },
+    {
+      "id": "aura-conversations",
+      "title": "Ask Aura conversation history and temporary chat",
+      "text": "Saved Ask Aura conversations stay on this device and are excluded from app cloud sync and backups. You can delete saved conversations or use Start temporary chat from the conversation menu. Temporary chats are not saved. Reviewed-question practice uses temporary chat.",
+      "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
+      "reviewedOn": "2026-09-16",
+      "expiresOn": "2026-12-15",
+      "minimumAppVersion": "1.13.0",
+      "maximumAppVersion": "2.0.999"
+    }
+  ],
+  "contentVersion": 4
+}

@@ -4,7 +4,7 @@
     <loc>https://azuremastery.app/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/</loc>
@@ -16,31 +16,31 @@
     <loc>https://azuremastery.app/exams/az-900/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-104/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-305/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-204/</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-400/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ai-900/</loc>
@@ -64,13 +64,13 @@
     <loc>https://azuremastery.app/exams/az-500/</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/sc-500/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/gh-300/</loc>
@@ -88,7 +88,7 @@
     <loc>https://azuremastery.app/exams/az-700/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/dp-100/</loc>
@@ -100,13 +100,13 @@
     <loc>https://azuremastery.app/exams/dp-300/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/pl-300/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/pl-900/</loc>
@@ -130,7 +130,7 @@
     <loc>https://azuremastery.app/exams/sc-300/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ai-102/</loc>
@@ -148,13 +148,13 @@
     <loc>https://azuremastery.app/exams/ai-200/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ai-300/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ai-901/</loc>
@@ -178,7 +178,7 @@
     <loc>https://azuremastery.app/exams/ab-100/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ab-900/</loc>
@@ -208,13 +208,13 @@
     <loc>https://azuremastery.app/exams/dp-800/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ab-650/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-22</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ai-500/</loc>
@@ -350,12 +350,12 @@
   </url>
   <url>
     <loc>https://azuremastery.app/apps/AzureMastery/support.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://azuremastery.app/apps/AzureMastery/privacy.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <priority>0.3</priority>
   </url>
   <url>

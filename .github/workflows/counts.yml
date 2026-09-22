@@ -84,6 +84,12 @@ jobs:
       - name: SEO contract
         run: python3 Tools/validate-marketing-seo.py
 
+      # The app downloads this reviewed public-help snapshot, then validates it
+      # again before it can become Ask Aura evidence. Reject malformed, stale,
+      # oversized, or off-domain content before GitHub Pages publishes it.
+      - name: Ask Aura public help contract
+        run: python3 Tools/validate-aura-help.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

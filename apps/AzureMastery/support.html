@@ -218,6 +218,48 @@
       margin-bottom: 0;
     }
 
+    /* ── Ask Aura Preview ─────────────────────────── */
+    .aura-panel {
+      background: linear-gradient(145deg, rgba(0, 113, 227, 0.08), rgba(88, 86, 214, 0.06));
+      border: 1px solid rgba(0, 113, 227, 0.24);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .aura-panel h2 {
+      margin-top: 0;
+    }
+
+    .aura-panel h3 {
+      font-size: 1rem;
+      margin: 1.25rem 0 0.4rem;
+    }
+
+    .aura-panel ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .preview-badge {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .aura-panel {
+        background: linear-gradient(145deg, rgba(41, 151, 255, 0.12), rgba(94, 92, 230, 0.10));
+        border-color: rgba(41, 151, 255, 0.3);
+      }
+    }
+
     /* ── Footer nav ───────────────────────────────── */
     hr {
       border: none;
@@ -289,6 +331,30 @@
         <li>For purchase or subscription issues, try restoring purchases from Settings first.</li>
       </ul>
     </div>
+
+    <section class="aura-panel" id="ask-aura" aria-labelledby="ask-aura-title">
+      <span class="preview-badge">Preview in version 2.0</span>
+      <h2 id="ask-aura-title">Ask Aura</h2>
+      <p>Ask Aura is the Pro study companion inside Azure Mastery. It starts with reviewed material for your current exam, including study-guide sections, terminology, question explanations, and on-device Exam IQ insights. Source cards let you check the material behind a response.</p>
+
+      <h3>What you can ask</h3>
+      <ul>
+        <li>Explain or compare concepts from your current exam.</li>
+        <li>Clarify terminology and work through reviewed practice questions.</li>
+        <li>Summarise a study-guide section or ask what the exam covers.</li>
+        <li>Use your Exam IQ readiness, weak areas, and due review prompts to choose a next step.</li>
+      </ul>
+
+      <h3>Privacy and optional connections</h3>
+      <ul>
+        <li>Saved conversations stay on this device and are excluded from app cloud sync and backups. Temporary chats are not saved.</li>
+        <li>On supported iOS 27 devices, some natural-language replies use Apple’s on-device Foundation Model.</li>
+        <li>Microsoft Learn lookups are optional and off by default. Only a public topic name or documentation address is sent; your message, answer history, and study progress are not shared with Microsoft.</li>
+        <li>Apple Private Cloud Compute explanations are not enabled in the initial preview build. If a future build enables them, they will remain optional and off until you choose to turn them on.</li>
+        <li>Voice input creates an editable draft on supported iOS 27 devices. Azure Mastery does not save the microphone audio or send the draft automatically.</li>
+      </ul>
+      <p>Ask Aura is a preview feature. Check its cited source when accuracy matters, and use <strong>Needs work</strong> to report an unhelpful response.</p>
+    </section>
 
     <h2>What We Can Help With</h2>
     <ul>

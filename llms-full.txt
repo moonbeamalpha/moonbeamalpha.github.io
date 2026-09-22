@@ -17,7 +17,7 @@ Last updated: 2026-08-09
 - [How Exam IQ predicts your score](https://azuremastery.app/how-exam-iq-works/): How the on-device Exam IQ engine predicts a certification exam score from your practice record with an on-device CoreML model.
 - [Retired Microsoft exams and what replaced them](https://azuremastery.app/exams/retired/): The five retired exams (AI-900, AI-102, DP-100, AZ-204, AZ-500), when each retired, and its current successor exam.
 - [Support](https://azuremastery.app/apps/AzureMastery/support.html): User support, contact, and FAQ.
-- [Privacy Policy](https://azuremastery.app/apps/AzureMastery/privacy.html): Data handling — none collected; everything runs on-device.
+- [Privacy Policy](https://azuremastery.app/apps/AzureMastery/privacy.html): Local-first data handling, Ask Aura conversation storage, and optional Microsoft Learn and Apple service connections.
 - [Terms of Use](https://azuremastery.app/apps/AzureMastery/terms.html): Standard EULA for in-app purchases.
 
 ## Per-exam landing pages

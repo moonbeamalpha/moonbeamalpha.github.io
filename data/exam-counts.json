@@ -8,23 +8,23 @@
     "AB-900": 375,
     "AI-102": 334,
     "AI-103": 573,
-    "AI-200": 460,
+    "AI-200": 480,
     "AI-300": 405,
     "AI-500": 455,
     "AI-900": 340,
     "AI-901": 604,
     "AZ-104": 671,
     "AZ-204": 405,
-    "AZ-305": 408,
-    "AZ-400": 476,
+    "AZ-305": 428,
+    "AZ-400": 496,
     "AZ-500": 346,
-    "AZ-700": 579,
+    "AZ-700": 599,
     "AZ-900": 413,
     "DP-100": 350,
-    "DP-300": 415,
+    "DP-300": 435,
     "DP-700": 381,
     "DP-750": 446,
-    "DP-800": 399,
+    "DP-800": 419,
     "DP-900": 360,
     "GH-300": 367,
     "GH-900": 370,
@@ -32,15 +32,15 @@
     "PL-900": 356,
     "SC-100": 458,
     "SC-200": 377,
-    "SC-300": 448,
-    "SC-500": 474,
+    "SC-300": 468,
+    "SC-500": 494,
     "SC-900": 409
   },
   "cert_path_count": 29,
   "domain_counts": {
     "AB-100": {
-      "ab100-deploy": 187,
-      "ab100-design": 132,
+      "ab100-deploy": 188,
+      "ab100-design": 131,
       "ab100-plan": 124
     },
     "AB-410": {
@@ -76,10 +76,10 @@
       "ai103-vision": 80
     },
     "AI-200": {
-      "ai200-compute": 55,
-      "ai200-data": 62,
-      "ai200-integration": 55,
-      "ai200-operations": 48
+      "ai200-compute": 60,
+      "ai200-data": 67,
+      "ai200-integration": 60,
+      "ai200-operations": 53
     },
     "AI-300": {
       "ai300-genaiops": 84,
@@ -106,24 +106,24 @@
       "az104-storage": 104
     },
     "AZ-305": {
-      "az305-continuity": 72,
+      "az305-continuity": 80,
       "az305-identity": 108,
-      "az305-infra": 133,
+      "az305-infra": 145,
       "az305-storage": 86
     },
     "AZ-400": {
       "az400-monitoring": 45,
-      "az400-pipelines": 239,
+      "az400-pipelines": 251,
       "az400-processes": 68,
-      "az400-security": 52,
+      "az400-security": 60,
       "az400-sourcecontrol": 63
     },
     "AZ-700": {
       "az700-access": 64,
       "az700-connectivity": 138,
       "az700-core": 168,
-      "az700-delivery": 101,
-      "az700-security": 98
+      "az700-delivery": 103,
+      "az700-security": 116
     },
     "AZ-900": {
       "az900-concepts": 109,
@@ -131,11 +131,11 @@
       "az900-services": 145
     },
     "DP-300": {
-      "dp300-automation": 68,
-      "dp300-hadr": 84,
-      "dp300-monitoring": 88,
-      "dp300-platform": 73,
-      "dp300-security": 92
+      "dp300-automation": 72,
+      "dp300-hadr": 88,
+      "dp300-monitoring": 92,
+      "dp300-platform": 77,
+      "dp300-security": 96
     },
     "DP-700": {
       "dp700-implement": 108,
@@ -149,8 +149,8 @@
       "dp750-process": 141
     },
     "DP-800": {
-      "dp800-ai": 102,
-      "dp800-design": 138,
+      "dp800-ai": 114,
+      "dp800-design": 146,
       "dp800-secure": 153
     },
     "DP-900": {
@@ -201,16 +201,16 @@
       "sc200-ops": 162
     },
     "SC-300": {
-      "sc300-access": 122,
-      "sc300-governance": 103,
-      "sc300-identities": 101,
-      "sc300-workload": 102
+      "sc300-access": 127,
+      "sc300-governance": 108,
+      "sc300-identities": 106,
+      "sc300-workload": 107
     },
     "SC-500": {
-      "sc500-compute": 108,
-      "sc500-datanet": 111,
-      "sc500-identity": 105,
-      "sc500-posture": 108
+      "sc500-compute": 113,
+      "sc500-datanet": 116,
+      "sc500-identity": 110,
+      "sc500-posture": 113
     },
     "SC-900": {
       "sc900-compliance": 84,
@@ -228,23 +228,23 @@
     "AB-900": 323,
     "AI-102": 334,
     "AI-103": 557,
-    "AI-200": 220,
+    "AI-200": 240,
     "AI-300": 362,
     "AI-500": 452,
     "AI-900": 340,
     "AI-901": 572,
     "AZ-104": 501,
     "AZ-204": 405,
-    "AZ-305": 399,
-    "AZ-400": 467,
+    "AZ-305": 419,
+    "AZ-400": 487,
     "AZ-500": 346,
-    "AZ-700": 569,
+    "AZ-700": 589,
     "AZ-900": 364,
     "DP-100": 350,
-    "DP-300": 405,
+    "DP-300": 425,
     "DP-700": 336,
     "DP-750": 442,
-    "DP-800": 393,
+    "DP-800": 413,
     "DP-900": 346,
     "GH-300": 356,
     "GH-900": 347,
@@ -252,8 +252,8 @@
     "PL-900": 328,
     "SC-100": 452,
     "SC-200": 374,
-    "SC-300": 428,
-    "SC-500": 432,
+    "SC-300": 448,
+    "SC-500": 452,
     "SC-900": 397
   },
   "names": {
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12295,
-    "questionCountLabel": "12,200+"
+    "questionCount": 12455,
+    "questionCountLabel": "12,400+"
   }
 }

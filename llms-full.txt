@@ -86,7 +86,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 397 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills measured as of 28 July 2026.
 
-- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 452 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills measured as of 28 July 2026.
+- [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 472 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills measured as of 28 July 2026.
 
 - [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 374 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills measured as of 28 July 2026.
 
@@ -1047,8 +1047,8 @@ A: Azure Mastery keeps each retired exam's question bank in the app as reference
 Q: Which retired exam maps to which successor?
 A: AI-900 to AI-901, AI-102 to AI-103, DP-100 to AI-300, AZ-204 to AI-200, and AZ-500 to SC-500. The table above lists each one with its retirement date.
 
-## /exams/sc-100/ — SC-100 Practice Questions — 452 Qs for Cyber Architect (2026)
-Page last modified: 2026-09-06
+## /exams/sc-100/ — SC-100 Practice Questions — 472 Qs for Cyber Architect (2026)
+Page last modified: 2026-09-23
 Exam domains:
   - Design solutions that align with security best practices and priorities (20–25%)
   - Design security operations, identity, and compliance capabilities (25–30%)
@@ -1071,12 +1071,12 @@ A: A first retake is available after 24 hours. First retake: 24-hour wait. Secon
 Q: How is SC-100 different from an Associate-level security exam?
 A: Associate exams like SC-200 and SC-300 test configuring a named product correctly. SC-100 tests designing the strategy those products serve, choosing between Sentinel automation and Defender XDR-native response for stated constraints. Multiple options can be valid; only one best satisfies the scenario.
 Q: Can I try Azure Mastery's SC-100 bank before paying?
-A: Yes. The app is free to download with a free allowance of SC-100 questions so you can try every feature. The full 452-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
+A: Yes. The app is free to download with a free allowance of SC-100 questions so you can try every feature. The full 472-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
 Q: Can I rehearse SC-100 scenarios with no internet connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device, working with no connection at all. No account is required, and iCloud sync stays optional and private if you want it.
 
 ## /exams/sc-200/ — SC-200 Practice Questions — 374 Qs for SOC Analyst (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-23
 Exam domains:
   - Manage a security operations environment (40–45%)
   - Respond to security incidents (35–40%)

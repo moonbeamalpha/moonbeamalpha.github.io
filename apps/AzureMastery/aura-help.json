@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "product-help-2026-09-21-v5",
+  "revision": "product-help-2026-09-23-v6",
   "articles": [
     {
       "id": "about-azure-mastery",
@@ -15,9 +15,9 @@
     {
       "id": "about-ask-aura",
       "title": "How Ask Aura works",
-      "text": "Ask Aura is Azure Mastery’s Pro study companion. It starts with reviewed material for your current exam, including study-guide sections, terminology, question explanations, and on-device Exam IQ insights. It can explain concepts, help you reason through reviewed questions, clarify terminology, and suggest a focused next study step. Some natural-language replies use Apple’s on-device Foundation Model. Ask Aura is in preview, so check the cited source when accuracy matters.",
+      "text": "Ask Aura is Azure Mastery’s Pro study companion. It starts with reviewed material for your current exam, including study-guide sections, terminology, question explanations, and on-device Exam IQ insights. It can explain concepts, help you reason through reviewed questions, clarify terminology, and suggest a focused next study step. Generative explanations are not enabled in this preview. Ask Aura is in preview, so check the cited source when accuracy matters.",
       "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
-      "reviewedOn": "2026-09-20",
+      "reviewedOn": "2026-09-23",
       "expiresOn": "2026-12-15",
       "minimumAppVersion": "1.13.0",
       "maximumAppVersion": "2.0.999"
@@ -55,9 +55,9 @@
     {
       "id": "aura-privacy",
       "title": "Ask Aura privacy and optional connections",
-      "text": "Ask Aura keeps saved conversations on this device and excludes them from app cloud sync and backups. It starts with bundled study material. Microsoft Learn lookups and Apple Private Cloud Compute explanations stay off until you enable each option. Learn receives only a public topic name or documentation address. When Private Cloud Compute is available and enabled, Aura may send relevant messages and selected study excerpts to Apple for a harder explanation. You can review or change both options from Ask Aura’s privacy screen.",
+      "text": "Ask Aura keeps saved conversations on this device and excludes them from app cloud sync and backups. It starts with bundled study material. Microsoft Learn lookups are optional and off until you enable them; Learn receives only a public topic name or documentation address. Private Cloud Compute explanations are not available in this initial preview, so there is no cloud-model switch. If a future build adds that route, it will require a separate choice before relevant messages and selected study excerpts could be sent to Apple. You can review the available connection in Ask Aura’s privacy screen.",
       "sourceURL": "https://azuremastery.app/apps/AzureMastery/support.html",
-      "reviewedOn": "2026-09-20",
+      "reviewedOn": "2026-09-23",
       "expiresOn": "2026-12-15",
       "minimumAppVersion": "1.13.0",
       "maximumAppVersion": "2.0.999"
@@ -103,5 +103,5 @@
       "maximumAppVersion": "2.0.999"
     }
   ],
-  "contentVersion": 4
+  "contentVersion": 5
 }

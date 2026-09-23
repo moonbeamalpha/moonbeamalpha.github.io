@@ -100,7 +100,7 @@
     <loc>https://azuremastery.app/exams/dp-300/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/pl-300/</loc>
@@ -118,19 +118,19 @@
     <loc>https://azuremastery.app/exams/sc-100/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/sc-200/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/sc-300/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ai-102/</loc>
@@ -350,12 +350,12 @@
   </url>
   <url>
     <loc>https://azuremastery.app/apps/AzureMastery/support.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://azuremastery.app/apps/AzureMastery/privacy.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <priority>0.3</priority>
   </url>
   <url>

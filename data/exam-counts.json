@@ -1,7 +1,7 @@
 {
   "bank_totals": {
     "AB-100": 456,
-    "AB-410": 426,
+    "AB-410": 446,
     "AB-620": 455,
     "AB-650": 510,
     "AB-731": 356,
@@ -44,8 +44,8 @@
       "ab100-plan": 124
     },
     "AB-410": {
-      "ab410-apps": 122,
-      "ab410-foundation": 119,
+      "ab410-apps": 138,
+      "ab410-foundation": 123,
       "ab410-logic": 183
     },
     "AB-620": {
@@ -221,7 +221,7 @@
   },
   "exams": {
     "AB-100": 443,
-    "AB-410": 424,
+    "AB-410": 444,
     "AB-620": 387,
     "AB-650": 506,
     "AB-731": 335,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12475,
+    "questionCount": 12495,
     "questionCountLabel": "12,400+"
   }
 }

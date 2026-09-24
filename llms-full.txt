@@ -56,7 +56,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AI-500 — Microsoft Multi-Agent AI Solutions Expert](https://azuremastery.app/exams/ai-500/): 452 in-app practice questions. Expert-tier cert, launched in beta in 2026. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: architect multi-agent solutions (15–20%), develop multi-agent solutions in Azure (30–35%), evaluate, optimize, and monitor multi-agent solutions (20–25%), and secure, govern, and deploy multi-agent solutions (20–25%). Covers Microsoft Foundry, the Microsoft Agent Framework, orchestration patterns, A2A and MCP protocols, agent observability, and Microsoft Entra Agent ID. Study guide updated 16 July 2026.
 
-- [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 424 in-app practice questions. Associate-tier cert with a 120-minute assessment for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Microsoft's study guide was last updated 15 May 2026. Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
+- [AB-410 — Microsoft Intelligent Applications Builder Associate](https://azuremastery.app/exams/ab-410/): 444 in-app practice questions. Associate-tier cert with a 120-minute assessment for makers who build AI-powered business solutions in Microsoft Power Platform using Copilot, natural-language prompts, and low-code tools. Three domains: create a foundation for intelligent applications (25–30%), create intelligent applications (25–30%), and build business application logic and automation (40–45%). Microsoft's study guide was last updated 15 May 2026. Successor route for makers who previously targeted PL-200 — Microsoft replaced course PL-200T00 with AB-410T00.
 
 - [AB-620 — Microsoft AI Agent Builder Associate](https://azuremastery.app/exams/ab-620/): 387 in-app practice questions. Associate-tier cert focused on designing and building integrated AI solutions in Copilot Studio. Three domains: plan/configure agent solutions (30–35%), integrate/extend agents (40–45%), and test/manage agents (20–25%). Official study guide updated 21 April 2026.
 
@@ -242,8 +242,8 @@ A: The app is free to download with a free allowance of AB-100 questions. The fu
 Q: Does AB-100 practice work offline?
 A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
 
-## /exams/ab-410/ — AB-410 Practice Questions — 424 Qs & Exam Prep (2026)
-Page last modified: 2026-09-06
+## /exams/ab-410/ — AB-410 Practice Questions — 444 Qs & Exam Prep (2026)
+Page last modified: 2026-09-24
 Exam domains:
   - Create a foundation for intelligent applications (25–30%)
   - Create intelligent applications (25–30%)
@@ -265,7 +265,7 @@ A: Associate certifications including AB-410 expire annually. Microsoft renews t
 Q: How long should I spend preparing for AB-410?
 A: Four to eight weeks is typical if you already build apps, flows, and Dataverse tables day to day. Give yourself the longer end if Power Fx, prompt columns, or AI Hub are unfamiliar — the logic domain alone carries close to half the exam.
 Q: Can I try Azure Mastery's AB-410 content before paying?
-A: The app is free to download, with a free allowance of AB-410 questions to try every feature first. The full bank of 424 AB-410 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: The app is free to download, with a free allowance of AB-410 questions to try every feature first. The full bank of 444 AB-410 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 Q: Does AB-410 practice hold up on a train with no signal?
 A: Yes — question practice, scoring, and the readiness prediction run entirely on-device, so a dead connection costs you nothing. Starting needs no account, and your study data stays on your phone unless you switch on optional iCloud sync.
 

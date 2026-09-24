@@ -43,7 +43,7 @@ SEO_UPDATED_OVERRIDES = {
     # the scannable-recipe and tooling/lifecycle re-port work, so sitemap
     # lastmod and JSON-LD dateModified agree (validate_exam_dateModified_vs_sitemap).
     "AB-100": "2026-09-20",
-    "AB-410": "2026-09-06",
+    "AB-410": "2026-09-24",
     "AB-620": "2026-09-06",
     "AB-650": "2026-09-21",
     "AB-731": "2026-09-06",

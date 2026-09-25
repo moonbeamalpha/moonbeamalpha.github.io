@@ -28,7 +28,7 @@
     "DP-900": 360,
     "GH-300": 367,
     "GH-900": 370,
-    "PL-300": 390,
+    "PL-300": 410,
     "PL-900": 356,
     "SC-100": 478,
     "SC-200": 377,
@@ -177,10 +177,10 @@
       "gh900-security": 48
     },
     "PL-300": {
-      "pl300-manage": 75,
-      "pl300-model": 95,
-      "pl300-prepare": 95,
-      "pl300-visualize": 113
+      "pl300-manage": 79,
+      "pl300-model": 101,
+      "pl300-prepare": 100,
+      "pl300-visualize": 118
     },
     "PL-900": {
       "pl900-agents": 76,
@@ -248,7 +248,7 @@
     "DP-900": 346,
     "GH-300": 356,
     "GH-900": 347,
-    "PL-300": 378,
+    "PL-300": 398,
     "PL-900": 328,
     "SC-100": 472,
     "SC-200": 374,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12495,
-    "questionCountLabel": "12,400+"
+    "questionCount": 12515,
+    "questionCountLabel": "12,500+"
   }
 }

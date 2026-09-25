@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,400+ practice questions cover 30 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). It uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,500+ practice questions cover 30 Microsoft certification exams. The app runs 100% offline with no tracking and no data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -95,7 +95,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### Power Platform (2)
 
-- [PL-300 — Microsoft Power BI Data Analyst](https://azuremastery.app/exams/pl-300/): 378 in-app practice questions. Associate-tier data analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates preparing data (Power Query M, data profiling), modelling data (star schemas, DAX measures, calculation groups, row-level security), visualising and analysing data (Power BI reports, dashboards, AI visuals), and deploying/maintaining assets (workspaces, deployment pipelines, refresh, sensitivity labels). Skills measured as of 20 April 2026.
+- [PL-300 — Microsoft Power BI Data Analyst](https://azuremastery.app/exams/pl-300/): 398 in-app practice questions. Associate-tier data analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates preparing data (Power Query M, data profiling), modelling data (star schemas, DAX measures, calculation groups, row-level security), visualising and analysing data (Power BI reports, dashboards, AI visuals), and deploying/maintaining assets (workspaces, deployment pipelines, refresh, sensitivity labels). Skills measured as of 20 April 2026.
 - [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 328 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
 
 ### GitHub (2)
@@ -813,7 +813,7 @@ Q: Does DP-300 revision still work with no connection?
 A: Yes. The whole loop stays on-device: practice, scoring, and the readiness read. A missing signal doesn't stop a session, and no account is required. Your study data stays local unless you switch on optional private iCloud sync.
 
 ## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-25
 Exam domains:
   - Implement and manage an analytics solution (30–35%)
   - Ingest and transform data (30–35%)
@@ -979,8 +979,8 @@ A: Yes. The app is free to download, with a free allowance of GH-900 questions t
 Q: Does GH-900 practice work offline?
 A: Yes — GH-900 practice runs its questions, scoring, and readiness prediction entirely on-device, so a commute or flight with no connection doesn't interrupt your revision. No account is needed, and data stays on your device unless you enable iCloud sync.
 
-## /exams/pl-300/ — PL-300 Practice Questions — 378 Qs for Power BI Analyst (2026)
-Page last modified: 2026-09-20
+## /exams/pl-300/ — PL-300 Practice Questions — 398 Qs for Power BI Analyst (2026)
+Page last modified: 2026-09-25
 Exam domains:
   - Prepare the data (25–30%)
   - Model the data (25–30%)
@@ -997,7 +997,7 @@ A: PL-300 sits in Microsoft's 40–60 question Associate band, with formats vary
 Q: Does PL-300 prep need a live internet connection?
 A: No. Every part of PL-300 practice, including the Exam IQ prediction, runs on your device rather than a server, so full sessions work on a delayed train or a long-haul flight. No account is needed, and data stays put unless you opt into private iCloud sync.
 Q: Can I test-drive Azure Mastery's PL-300 content for free?
-A: Yes. The app is free to download, with a free allowance of PL-300 questions so you can try every feature. The full bank of 378 PL-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with a free allowance of PL-300 questions so you can try every feature. The full bank of 398 PL-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 Q: If I don't pass PL-300, when can I try again?
 A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Will my PL-300 badge lapse if I don't renew?

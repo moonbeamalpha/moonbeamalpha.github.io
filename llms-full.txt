@@ -26,7 +26,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### Azure infrastructure & solutions (5)
 
-- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 364 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills measured as of 20 July 2026.
+- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 384 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills measured as of 20 July 2026.
 
 - [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 521 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
 
@@ -516,7 +516,7 @@ Q: Does Azure Mastery let me try AI-500 before paying?
 A: Yes. The app is free to download, with a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/ai-900/ — AI-900 Retired Exam & AI-901 Next Step | Azure Mastery
-Page last modified: 2026-09-06
+Page last modified: 2026-09-27
 Exam domains:
   - Describe Artificial Intelligence workloads and considerations (15–20%)
   - Describe fundamental principles of machine learning on Azure (15–20%)
@@ -569,7 +569,7 @@ Q: How much revision time does AI-901 need?
 A: Allow several weeks for concepts plus hands-on practice. The outline expects core cloud knowledge, familiarity with Azure resources, and comfort reading Python syntax that calls AI models. Azure Mastery's readiness gauge helps you decide when to book.
 
 ## /exams/az-104/ — AZ-104 Practice Questions — 521 Qs for Azure Admin (2026)
-Page last modified: 2026-09-26
+Page last modified: 2026-09-27
 Exam domains:
   - Manage Azure identities and governance (20–25%)
   - Implement and manage storage (15–20%)
@@ -704,7 +704,7 @@ Q: Is there an AZ-500 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-700/ — AZ-700 Practice Questions — 589 Qs for Network Engineer (2026)
-Page last modified: 2026-09-26
+Page last modified: 2026-09-27
 Exam domains:
   - Design and implement core networking infrastructure (25–30%)
   - Design, implement, and manage connectivity services (20–25%)
@@ -730,8 +730,8 @@ A: Most candidates plan four to eight weeks with prior Azure networking experien
 Q: Can I test-drive Azure Mastery's AZ-700 content for free?
 A: Yes. The app is free to download, with a free allowance of AZ-700 questions so you can try every feature. The full bank of 589 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
-## /exams/az-900/ — AZ-900 Practice Questions — 364 Qs for Fundamentals (2026)
-Page last modified: 2026-09-26
+## /exams/az-900/ — AZ-900 Practice Questions — 384 Qs for Fundamentals (2026)
+Page last modified: 2026-09-27
 Exam domains:
   - Describe cloud concepts (25–30%)
   - Describe Azure architecture and services (35–40%)
@@ -751,7 +751,7 @@ A: Yes — that's exactly who it's designed for. Account managers, sales enginee
 Q: What prerequisites does AZ-900 assume?
 A: AZ-900 has no formal prerequisites — Microsoft designed it as the common entry point into Azure. Some IT background makes the material quicker to absorb, since you already have an environment to map its concepts onto. Coming from a fully non-technical background stretches the usual one-to-two-week estimate.
 Q: Is Azure Mastery free for AZ-900 prep?
-A: The app is free to download and includes a free allowance of AZ-900 questions so you can try every feature. The full bank of 364 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes a free allowance of AZ-900 questions so you can try every feature. The full bank of 384 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
 Q: Does AZ-900 practice work offline?
 A: Yes. AZ-900 practice, scoring and the readiness prediction all happen on the device, so offline sessions count exactly like online ones. No account is needed, and nothing is uploaded unless you choose private iCloud sync.
 Q: Is there an AZ-900 practice test mode?
@@ -895,7 +895,7 @@ Q: Can I revise DP-800 with no data connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync.
 
 ## /exams/dp-900/ — DP-900 Practice Questions — 346 Qs for Data Basics (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-27
 Exam domains:
   - Describe core data concepts (25–30%)
   - Identify considerations for relational data on Azure (20–25%)
@@ -951,7 +951,7 @@ Q: Does GH-300 practice work offline?
 A: Yes — practice, scoring, and the readiness prediction all happen on-device, so you can keep going on a plane or through a tunnel with zero signal. No account is required, and your study history stays local unless you switch on iCloud sync.
 
 ## /exams/gh-900/ — GH-900 Practice Questions — 347 Qs for GitHub Basics (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-27
 Exam domains:
   - Understand Git and GitHub Basics (25–30%)
   - Work with GitHub Repositories (10–15%)
@@ -1006,7 +1006,7 @@ Q: What's the going rate for a PL-300 exam attempt?
 A: The PL-300 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite, so check your Learn profile first.
 
 ## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-27
 Exam domains:
   - Describe the business value of Microsoft Power Platform (5–10%)
   - Manage the Microsoft Power Platform environment (20–25%)
@@ -1157,7 +1157,7 @@ Q: Is there an SC-500 practice test mode?
 A: Yes. Timed practice sessions draw on original, blueprint-weighted SC-500 questions with published timing and the interactive formats this exam uses. Adaptive study and Focus Weak Spots then push you back toward the domains dragging your accuracy down.
 
 ## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
-Page last modified: 2026-09-06
+Page last modified: 2026-09-27
 Exam domains:
   - Describe the concepts of security, compliance, and identity (10–15%)
   - Describe the capabilities of Microsoft Entra (25–30%)

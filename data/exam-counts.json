@@ -19,7 +19,7 @@
     "AZ-400": 496,
     "AZ-500": 346,
     "AZ-700": 599,
-    "AZ-900": 413,
+    "AZ-900": 433,
     "DP-100": 350,
     "DP-300": 435,
     "DP-700": 381,
@@ -120,14 +120,14 @@
     },
     "AZ-700": {
       "az700-access": 64,
-      "az700-connectivity": 138,
-      "az700-core": 168,
+      "az700-connectivity": 137,
+      "az700-core": 169,
       "az700-delivery": 103,
       "az700-security": 116
     },
     "AZ-900": {
       "az900-concepts": 109,
-      "az900-governance": 110,
+      "az900-governance": 130,
       "az900-services": 145
     },
     "DP-300": {
@@ -239,7 +239,7 @@
     "AZ-400": 487,
     "AZ-500": 346,
     "AZ-700": 589,
-    "AZ-900": 364,
+    "AZ-900": 384,
     "DP-100": 350,
     "DP-300": 425,
     "DP-700": 336,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12535,
+    "questionCount": 12555,
     "questionCountLabel": "12,500+"
   }
 }

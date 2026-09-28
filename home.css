@@ -201,6 +201,38 @@
     }
     .badge-exam-iq svg { flex-shrink: 0; }
     .badge-exam-iq { white-space: nowrap; }
+    .badge-ask-aura {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border: 1px solid rgba(80,230,255,0.42);
+      border-radius: 999px;
+      background: rgba(80,230,255,0.08);
+      color: var(--azure-cyan);
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .badge-ask-aura span {
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--azure-cyan), #69a7ff);
+      color: #06101d;
+      font-size: 9px;
+      letter-spacing: 0.06em;
+    }
+    .badge-ask-aura:hover,
+    .badge-ask-aura:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(80,230,255,0.72);
+      background: rgba(80,230,255,0.14);
+    }
+    .badge-ask-aura:focus-visible { outline: 2px solid var(--azure-cyan); outline-offset: 3px; }
 
     /* ══════════════════════════════════════════════
        NAV
@@ -631,7 +663,72 @@
       animation-delay: -2.1s;
     }
 
-    /* Meet Aura section portrait */
+    /* Ask Aura launch composition */
+    .ask-aura-stage {
+      position: relative;
+      width: min(100%, 470px);
+      min-height: 670px;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+    .ask-aura-stage__glow {
+      position: absolute;
+      inset: 9% 0 2%;
+      z-index: -1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 52% 42%, rgba(80,230,255,0.26), transparent 48%),
+        radial-gradient(circle at 24% 82%, rgba(149,120,224,0.24), transparent 42%);
+      filter: blur(8px);
+    }
+    .ask-aura-stage__phone {
+      width: 292px;
+      height: 634px;
+      transform: perspective(1100px) rotateY(-7deg) rotateX(2deg) translateX(36px);
+      box-shadow: 0 34px 70px rgba(0,0,0,0.48), 0 0 42px rgba(80,230,255,0.14);
+    }
+    .ask-aura-stage__screen {
+      background-position: center top;
+      background-size: cover;
+    }
+    .ask-aura-stage__aura {
+      position: absolute;
+      z-index: 12;
+      left: -8px;
+      bottom: 2px;
+      width: clamp(150px, 18vw, 210px);
+      height: auto;
+      filter: drop-shadow(0 24px 34px rgba(0,0,0,0.5)) drop-shadow(0 0 32px rgba(80,230,255,0.24));
+    }
+    .ask-aura-stage__bubble {
+      position: absolute;
+      z-index: 13;
+      left: -24px;
+      bottom: 320px;
+      max-width: 180px;
+      padding: 11px 14px;
+      border: 1px solid rgba(80,230,255,0.38);
+      border-radius: 17px 17px 17px 4px;
+      background: rgba(12,18,32,0.9);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.42);
+      color: #eafcff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.38;
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+    .ask-aura-more { margin: 24px 0 0; }
+    .ask-aura-more a {
+      color: var(--azure-cyan);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      text-underline-offset: 4px;
+    }
+
+    /* Legacy portrait treatment retained for other Aura surfaces. */
     .aura-portrait { position: relative; display: flex; justify-content: center; align-items: flex-end; }
     .aura-portrait-img {
       position: relative; z-index: 2;
@@ -2224,6 +2321,14 @@ html, body { overflow-x: clip; }
       }
       .showcase-inner--device-right .showcase-device { order: -1; }
       .showcase-device .phone-wrap { transform: scale(0.85); }
+      .ask-aura-stage { min-height: 600px; }
+      .ask-aura-stage__phone {
+        width: 260px;
+        height: 565px;
+        transform: perspective(1100px) rotateY(-5deg) translateX(28px);
+      }
+      .ask-aura-stage__aura { left: 4px; width: 162px; }
+      .ask-aura-stage__bubble { left: 0; bottom: 245px; max-width: 170px; }
       /* Collapse the whole <li>, not just the <a>, so the flex `gap` between
          hidden nav links doesn't reserve phantom width and shove the CTA off-screen. */
       .nav-links li:has(.hide-mobile) { display: none; }
@@ -2263,6 +2368,10 @@ html, body { overflow-x: clip; }
       .roadmap-filter__button { flex: 0 0 auto; }
       .roadmap-note { text-align: left; }
       .hero-devices { transform: scale(0.45); margin-bottom: -180px; }
+      .ask-aura-stage { min-height: 560px; }
+      .ask-aura-stage__phone { width: 238px; height: 517px; transform: translateX(22px); }
+      .ask-aura-stage__aura { left: 0; width: 145px; }
+      .ask-aura-stage__bubble { left: 4px; bottom: 225px; max-width: 156px; font-size: 11px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .mac-frame { width: 300px; }
       .mac-base { height: 12px; }

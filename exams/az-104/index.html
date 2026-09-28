@@ -651,10 +651,11 @@
                 <li>Configure name resolution and load balancing</li>
               </ul>
               <ul class="domain__tips">
-                <li>Tests VNet configuration, secure access with NSGs and Bastion, and DNS or load-balancer troubleshooting.</li>
-                <li>NSGs and application security groups get treated as interchangeable, but an ASG alone blocks nothing without an NSG rule.</li>
-                <li>Practise reading a resource's effective security rules — the inherited ones are what the exam actually probes.</li>
+                <li>Work through subnet address ranges and public IP allocation before tracing a connection failure; each setting affects a different part of the path.</li>
+                <li>Compare effective rules at the subnet and NIC, including priority and direction, before changing an NSG. An application security group only helps when an NSG rule uses it.</li>
+                <li>For a Storage account restricted to selected networks, check both the subnet service endpoint and the account's virtual-network rule. Use DNS and route diagnostics to isolate other failures.</li>
               </ul>
+              <p>Try a two-subnet lab: place a VM in each subnet, assign a public IP to only one VM, and inspect each NIC's effective security rules. Then restrict a test storage account to one subnet. If access fails, trace name resolution, NSG evaluation, the service endpoint and the account rule in that order. Record which control explains each result before changing a setting. Keep the matched rule priority and observed route beside your notes so you can explain the outcome from evidence.</p>
             </div>
           </details>
         </article>

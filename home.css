@@ -704,9 +704,9 @@
     .ask-aura-stage__bubble {
       position: absolute;
       z-index: 13;
-      left: 4px;
-      bottom: 218px;
-      max-width: 190px;
+      left: -24px;
+      bottom: 320px;
+      max-width: 180px;
       padding: 11px 14px;
       border: 1px solid rgba(80,230,255,0.38);
       border-radius: 17px 17px 17px 4px;
@@ -2328,7 +2328,7 @@ html, body { overflow-x: clip; }
         transform: perspective(1100px) rotateY(-5deg) translateX(28px);
       }
       .ask-aura-stage__aura { left: 4px; width: 162px; }
-      .ask-aura-stage__bubble { left: 16px; bottom: 176px; max-width: 170px; }
+      .ask-aura-stage__bubble { left: 0; bottom: 245px; max-width: 170px; }
       /* Collapse the whole <li>, not just the <a>, so the flex `gap` between
          hidden nav links doesn't reserve phantom width and shove the CTA off-screen. */
       .nav-links li:has(.hide-mobile) { display: none; }
@@ -2371,7 +2371,7 @@ html, body { overflow-x: clip; }
       .ask-aura-stage { min-height: 560px; }
       .ask-aura-stage__phone { width: 238px; height: 517px; transform: translateX(22px); }
       .ask-aura-stage__aura { left: 0; width: 145px; }
-      .ask-aura-stage__bubble { left: 8px; bottom: 158px; max-width: 156px; font-size: 11px; }
+      .ask-aura-stage__bubble { left: 4px; bottom: 225px; max-width: 156px; font-size: 11px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .mac-frame { width: 300px; }
       .mac-base { height: 12px; }

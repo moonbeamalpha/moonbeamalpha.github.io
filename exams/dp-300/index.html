@@ -533,6 +533,9 @@
       <p>
         Microsoft updated the DP-300 skills outline on <strong>24 April 2026</strong>. Every question in Azure Mastery's DP-300 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/dp-300" rel="noopener">learn.microsoft.com</a>.
       </p>
+      <p>
+        Prepare by building a deployment-target matrix rather than memorising one undifferentiated list of SQL features. Track what changes between Azure SQL Database, Azure SQL Managed Instance, SQL Server on Azure VMs, and Azure Arc-enabled SQL Server: who owns patching, which job scheduler is available, where instance-level features live, and which identity crosses each control-plane boundary. Then connect operational evidence to the right tool — Query Store for performance history, Extended Events for event-level symptoms, elastic-job history for fleet automation, and backup or restore telemetry for recovery. That comparison habit is what turns DP-300's long scenarios into a small set of supportability, security, and recovery decisions.
+      </p>
       <ul class="exam-format" aria-label="DP-300 exam format facts">
         <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
         <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
@@ -541,6 +544,20 @@
         <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew annually (Associate)</span></li>
         <li><span class="exam-format__label">Format</span><span class="exam-format__value">Online or test centre</span></li>
       </ul>
+    </section>
+
+    <section class="container" aria-labelledby="dp300-lab-loop">
+      <p class="label-eyebrow section-eyebrow">Practise the DBA loop</p>
+      <h2 id="dp300-lab-loop" class="display-small section-title">Turn each DP-300 topic into an operational decision</h2>
+      <p>
+        Start with one small workload and move it through the same sequence a database administrator owns in production. Choose its deployment target, document the service boundary, configure identity and encryption, collect a performance baseline, automate a repeatable task, and then prove how the database recovers. Keeping one workload throughout makes the trade-offs visible: an elastic job is not a renamed SQL Server Agent job, a database-scoped Extended Events session is not a server trace, and a failover-group listener solves a different operational problem from a manually failed-over geo-replica.
+      </p>
+      <p>
+        Keep the evidence beside the decision. Save the query plan that justified an index, the Query Store interval that exposed a regression, the job execution row that explained a failed target, and the recovery-point and recovery-time numbers used to choose a continuity design. DP-300 scenarios often supply several technically valid features; the answer becomes clear only when you tie the requirement to the observable signal and the deployment target that supports it.
+      </p>
+      <p>
+        Finish each lab by changing one constraint. Require the encryption key to remain outside the database engine, remove direct network access to the job database, delay restores on a log-shipping secondary, or place SQL Server under Azure Arc management. Re-evaluating the design after a single constraint changes trains the exam skill that matters most: explaining why a familiar SQL feature is right in one operating model and wrong in another.
+      </p>
     </section>
 
     <!-- DP-300 exam objectives -->

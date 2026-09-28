@@ -647,6 +647,52 @@
       </div>
     </section>
 
+    <!-- SC-300 identity-control practice loop -->
+    <section id="identity-control-lab" class="container">
+      <p class="label-eyebrow section-eyebrow">Operational practice</p>
+      <h2 class="display-small section-title">Run an SC-300 identity-control lab loop</h2>
+      <p class="section-lede">
+        Use a disposable development tenant to practise the evidence trail behind an identity decision. The useful skill is not memorising a portal path; it is proving which identity, policy, permission, and governance object produced the result.
+      </p>
+      <div class="traps">
+        <article class="trap">
+          <h3>1. Separate attribute definition from assignment</h3>
+          <p>Create a small custom security attribute set, define one constrained attribute, and assign a permitted value to a test user.</p>
+          <ul>
+            <li>Record which role can manage the definition and which role can assign values within that attribute set.</li>
+            <li>Before saving, identify the schema choices that cannot be changed later; then remove the test assignment and note what remains in the directory.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>2. Explain a Conditional Access result from evidence</h3>
+          <p>Build a report-only policy, predict its outcome with What If, and then make one controlled test sign-in.</p>
+          <ul>
+            <li>Capture the user, target resource, conditions, and expected grant controls before the sign-in so the result can be compared with the prediction.</li>
+            <li>Use the sign-in record's Conditional Access details, request ID, and policy evaluation rather than guessing from the final error message.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>3. Trace risky OAuth consent to a response</h3>
+          <p>Review an app's requested permissions, publisher details, consent activity, and usage before deciding whether its access is expected.</p>
+          <ul>
+            <li>Write an app-policy filter that isolates the behaviour you want to monitor, then distinguish the alert condition from the action taken after investigation.</li>
+            <li>Practise choosing among monitoring, revoking consent, and banning an app; each response needs evidence proportional to its impact.</li>
+          </ul>
+        </article>
+        <article class="trap">
+          <h3>4. Model an external access request end to end</h3>
+          <p>Add a test connected organization, choose its identity sources and sponsors, and include it in an access-package policy.</p>
+          <ul>
+            <li>Keep the connected organization, catalog, access package, and assignment policy as separate objects in your notes.</li>
+            <li>Compare proposed and configured connected organizations, then verify what the external requester sees and which approval evidence the sponsor receives.</li>
+          </ul>
+        </article>
+      </div>
+      <p>
+        Finish each exercise with a five-column evidence sheet: expected identity, target resource, predicted control, observed log, and cleanup action. That habit turns a vague identity scenario into an auditable chain you can reason through under exam pressure.
+      </p>
+    </section>
+
     <!-- Where SC-300 candidates slip -->
     <section id="where-candidates-slip" class="container">
       <p class="label-eyebrow section-eyebrow">Common traps</p>

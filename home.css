@@ -620,7 +620,25 @@
        AURA — study-buddy mascot
        ══════════════════════════════════════════════ */
     /* Hero companion (stands beside the phone fan) */
-    .hero-visual { position: relative; display: flex; justify-content: center; align-items: center; min-width: 0; }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+      /* Capture the complete 3D phone fan as one bitmap during theme changes.
+         Root view-transition snapshots can flatten transformed descendants and
+         briefly make the phone angles look reset. */
+      view-transition-name: hero-phone-composition;
+    }
+    ::view-transition-old(hero-phone-composition),
+    ::view-transition-new(hero-phone-composition) {
+      animation-duration: 520ms;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      mix-blend-mode: normal;
+    }
+    ::view-transition-old(hero-phone-composition) { animation: none; }
+    ::view-transition-new(hero-phone-composition) { animation-name: theme-view-in; }
     .hero-aura {
       position: absolute;
       left: 1%;
@@ -2263,6 +2281,8 @@ html, body { overflow-x: clip; }
        ACCESSIBILITY — Reduced Motion
        ══════════════════════════════════════════════ */
     @media (prefers-reduced-motion: reduce) {
+      ::view-transition-old(hero-phone-composition),
+      ::view-transition-new(hero-phone-composition) { animation-duration: 0.01ms; }
       .hero-phone-enter { animation: none !important; translate: none !important; }
       .reveal-in { animation: none !important; opacity: 1 !important; transform: none !important; }
       .screenshots-strip { transform: none !important; }

@@ -60,6 +60,15 @@ assert(entranceScript.includes("remove('hero-phone-enter')"), 'Clean up complete
 const phoneKeyframes = read('home.css').match(/@keyframes hero-phone-settle \{[\s\S]*?\n    \}/)?.[0];
 assert(phoneKeyframes && /translate:/.test(phoneKeyframes));
 assert(!/opacity:|filter:|transform:|width:|height:/.test(phoneKeyframes), 'Hero settling must preserve visibility, angles and layout');
+assert(
+  /\.hero-visual\s*\{[^}]*view-transition-name:\s*hero-phone-composition/s.test(read('home.css')),
+  'Theme transitions must capture the 3D hero phone composition as one stable snapshot'
+);
+assert(
+  /::view-transition-old\(hero-phone-composition\)/.test(read('home.css')) &&
+    /::view-transition-new\(hero-phone-composition\)/.test(read('home.css')),
+  'The isolated hero phone snapshot must follow the theme cross-fade contract'
+);
 assert(/\.reveal-in\.reveal-after-device\s*\{\s*animation-delay: 160ms;/.test(read('home.css')));
 assert(!/\.reveal-pending\s*\{[^}]*opacity:\s*0/.test(read('home.css')), 'Reveals must be additive, not opacity:0 by default');
 assert(

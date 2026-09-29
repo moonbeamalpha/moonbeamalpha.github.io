@@ -15,7 +15,7 @@
     "AI-901": 604,
     "AZ-104": 691,
     "AZ-204": 405,
-    "AZ-305": 428,
+    "AZ-305": 448,
     "AZ-400": 496,
     "AZ-500": 346,
     "AZ-700": 619,
@@ -106,10 +106,10 @@
       "az104-storage": 104
     },
     "AZ-305": {
-      "az305-continuity": 80,
-      "az305-identity": 108,
-      "az305-infra": 145,
-      "az305-storage": 86
+      "az305-continuity": 83,
+      "az305-identity": 113,
+      "az305-infra": 152,
+      "az305-storage": 91
     },
     "AZ-400": {
       "az400-monitoring": 45,
@@ -235,7 +235,7 @@
     "AI-901": 572,
     "AZ-104": 521,
     "AZ-204": 405,
-    "AZ-305": 419,
+    "AZ-305": 439,
     "AZ-400": 487,
     "AZ-500": 346,
     "AZ-700": 609,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12575,
+    "questionCount": 12595,
     "questionCountLabel": "12,500+"
   }
 }

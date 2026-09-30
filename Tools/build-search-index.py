@@ -47,7 +47,9 @@ def build_index(root=ROOT):
     if set(retired) | set(retiring) != set(snapshot['retired']):
         raise ValueError('Search retirement metadata disagrees with the catalogue snapshot')
     entries = []
-    for url, file in published_pages(root):
+    pages = published_pages(root)
+    published_urls = {url for url, _ in pages}
+    for url, file in pages:
         document = Document(file.read_text()).root
         body = content_root(document)
         if not body:
@@ -82,6 +84,9 @@ def build_index(root=ROOT):
         entries.append(entry)
         if url == '/':
             for anchor, label in FEATURES.items():
+                # A dedicated feature page replaces its homepage search destination.
+                if anchor == 'ask-aura' and '/ask-aura/' in published_urls:
+                    continue
                 section = document.find(lambda n: n.attrs.get('id') == anchor)
                 if not section:
                     raise ValueError(f'Missing homepage search feature #{anchor}')

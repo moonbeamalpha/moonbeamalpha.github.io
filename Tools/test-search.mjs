@@ -20,7 +20,7 @@ assert.equal(first('PowerBI'), '/exams/pl-300/');
 assert.equal(first('M365'), '/exams/ab-900/');
 assert.equal(first('identity administrator'), '/exams/sc-300/');
 assert.equal(first('azure administr'), '/exams/az-104/');
-assert.equal(first('Ask Aura'), '/#ask-aura');
+assert.equal(first('Ask Aura'), '/ask-aura/');
 assert.equal(first('privacy policy'), '/apps/AzureMastery/privacy.html');
 assert.equal(first('securty'), first('security'));
 assert.equal(first('netwrok'), first('network'));

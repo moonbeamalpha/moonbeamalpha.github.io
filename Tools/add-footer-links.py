@@ -52,7 +52,7 @@ def target_pages() -> list[Path]:
     pages.extend(sorted((ROOT / "guides").glob("*/index.html")))
     pages.extend(
         ROOT / slug / "index.html"
-        for slug in ("about", "how-we-write-questions", "how-exam-iq-works")
+        for slug in ("about", "ask-aura", "how-we-write-questions", "how-exam-iq-works")
     )
     pages.extend(
         ROOT / "apps" / "AzureMastery" / name

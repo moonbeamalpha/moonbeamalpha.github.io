@@ -12,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def qr_assets():
     snapshot = json.loads((ROOT / 'data/exam-counts.json').read_text())
-    for code in ['app-store', *sorted(code.lower() for code in snapshot['exams'])]:
-        campaign = 'site-home-qr' if code == 'app-store' else 'exam-' + code + '-qr'
+    for code in ['app-store', 'ask-aura', *sorted(code.lower() for code in snapshot['exams'])]:
+        campaign = {'app-store': 'site-home-qr', 'ask-aura': 'ask-aura-qr'}.get(code, 'exam-' + code + '-qr')
         url = 'https://apps.apple.com/app/id6760594569?' + urlencode({'ct': campaign, 'pt': '128558698', 'mt': '8'})
         qr = segno.make(url, error='m', micro=False)
         buffer = io.BytesIO(); qr.save(buffer, kind='svg', scale=4, border=4, dark='#0b1220', light='#fff')

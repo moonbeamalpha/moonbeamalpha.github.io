@@ -49,6 +49,11 @@ class SearchContracts(unittest.TestCase):
         self.assertEqual(clean(document.text(excluded)), 'Useful subject Private networking')
         self.assertEqual([clean(n.text()) for n in document.all(lambda n:n.tag == 'h2', excluded)], [])
 
+    def test_dedicated_aura_page_replaces_home_feature(self):
+        entries = builder.build_index()['entries']
+        self.assertEqual(len([entry for entry in entries if entry['url'] == '/ask-aura/']), 1)
+        self.assertNotIn('/#ask-aura', {entry['url'] for entry in entries})
+
     def test_new_sitemap_page_discovered_without_registration(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

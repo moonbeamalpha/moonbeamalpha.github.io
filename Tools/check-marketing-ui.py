@@ -48,7 +48,7 @@ def main() -> int:
 
     content_pages = [ROOT / "index.html", ROOT / "guides/index.html", ROOT / "exams/index.html", ROOT / "exams/retired/index.html"]
     content_pages += sorted((ROOT / "guides").glob("*/index.html"))
-    content_pages += [ROOT / "about/index.html", ROOT / "how-exam-iq-works/index.html", ROOT / "how-we-write-questions/index.html"]
+    content_pages += [ROOT / "about/index.html", ROOT / "ask-aura/index.html", ROOT / "how-exam-iq-works/index.html", ROOT / "how-we-write-questions/index.html"]
     for path in content_pages:
         text = path.read_text()
         if "/section-nav.css" not in text or "/section-nav.js" not in text:
@@ -59,7 +59,7 @@ def main() -> int:
             if "<td" in table and not re.search(r"<td[^>]+data-label=", table):
                 errors.append(f"{path.relative_to(ROOT)}: guide table cells need mobile labels")
 
-    for path in sorted((ROOT / "guides").glob("*/index.html")) + [ROOT / "about/index.html", ROOT / "how-exam-iq-works/index.html", ROOT / "how-we-write-questions/index.html", ROOT / "exams/retired/index.html"]:
+    for path in sorted((ROOT / "guides").glob("*/index.html")) + [ROOT / "about/index.html", ROOT / "ask-aura/index.html", ROOT / "how-exam-iq-works/index.html", ROOT / "how-we-write-questions/index.html", ROOT / "exams/retired/index.html"]:
         text = path.read_text()
         if '/article.css' not in text:
             errors.append(f"{path.relative_to(ROOT)}: missing canonical article stylesheet")

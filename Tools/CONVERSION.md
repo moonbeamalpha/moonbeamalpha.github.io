@@ -5,6 +5,17 @@ try an authored question, compare access options, then explore tools and downloa
 The roadmap is an optional desktop view. Catalogue-derived cards supply exam
 titles, levels and subject areas; retirement references remain in disclosures.
 
+The Ask Aura feature links to `/ask-aura/`, with a character hero, reviewed
+capability examples, a real in-app session and the existing video. The YouTube
+iframe loads only on play; its external link also works without JavaScript.
+The page states the Pro preview and generative-explanation limits beside the
+hero download action. The search index uses this page instead of `/#ask-aura`.
+
+The practice preview keeps answer choices compact after grading. It presents
+the correct rationale first and keeps every other authored rationale in a
+native disclosure. Lettered choices are grouped under the complete prompt;
+announced feedback, explicit answer labels and reset support keyboard use.
+
 `sync-conversion-ui.py` maintains shared assets, the exact exam purchase/methodology
 component, placement links, Smart App Banner attribution and exam cards. It covers
 published sitemap pages and the exam template. Its `--check` mode is read-only.

@@ -63,10 +63,12 @@ def finder_cards(snapshot, metadata):
         name = snapshot['names'][code]
         if 'Fundamentals' in name or 'Foundations' in name:
             level = 'Fundamentals'
+        # The title already conveys the level for names such as Power BI Data Analyst Associate.
+        meta = LABELS[category] if level.lower() in name.lower() else f'{level} · {LABELS[category]}'
         return (f'<a class="exam-finder__card exam-mini__tag" data-exam-category="{category}" href="/exams/{code.lower()}/">'
                 f'<span class="exam-finder__code">{code}<span aria-hidden="true">↗</span></span>'
                 f'<span class="exam-finder__title">{html.escape(name.removeprefix("Microsoft "))}</span>'
-                f'<span class="exam-finder__meta">{level} · {LABELS[category]}</span></a>')
+                f'<span class="exam-finder__meta">{meta}</span></a>')
     featured = [code for code in FEATURED if code in current]
     return ('<div class="exam-finder__grid">' + '\n'.join(card(code) for code in featured) + '</div>\n'
             '<details class="exam-finder__more"><summary>Browse every current exam</summary><div class="exam-finder__grid">' +
@@ -150,6 +152,7 @@ def render(path, text, snapshot, metadata):
                    ''.join(f'<button type="button" data-exam-filter="{key}" aria-pressed="{str(key == "all").lower()}">{label}</button>'
                            for key, label in [('all', 'All'), *LABELS.items()]) + '</div>'
                    '<p class="exam-finder__count" data-exam-count role="status" aria-live="polite"></p>')
+        filters = '<div class="container exam-finder__controls">' + filters + '</div>'
         text = block(text, 'hub-filters', filters, '<section id="fam-azure"')
         def hub_card(match):
             code, body = match[1].upper(), match[2]

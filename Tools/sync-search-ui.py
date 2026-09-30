@@ -98,7 +98,10 @@ def render_page(path, text):
             if not match:
                 raise ValueError('Missing exam hub family')
             anchor = match[0]
-        text = replace_block(text, 'inline', widget('am-browse-search', True), anchor)
+        inline = widget('am-browse-search', True)
+        if relative == 'exams/index.html':
+            inline = '<div class="container am-search-hub">\n' + inline + '\n</div>'
+        text = replace_block(text, 'inline', inline, anchor)
     return text
 
 

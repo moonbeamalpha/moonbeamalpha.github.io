@@ -363,4 +363,10 @@
     <lastmod>2026-09-30</lastmod>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://azuremastery.app/ask-aura/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-30</lastmod>
+  </url>
 </urlset>

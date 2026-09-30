@@ -118,6 +118,7 @@ NUMBER_WORDS = {
 # bearing slug (Path handles the "/" the same as any other segment), added
 # by Task B4 for the five retired/retiring exams' reference hub.
 STATIC_CONTENT_PAGES = (
+    ("ask-aura", "https://azuremastery.app/ask-aura/", True),
     ("about", "https://azuremastery.app/about/", False),
     ("how-we-write-questions", "https://azuremastery.app/how-we-write-questions/", True),
     ("how-exam-iq-works", "https://azuremastery.app/how-exam-iq-works/", True),

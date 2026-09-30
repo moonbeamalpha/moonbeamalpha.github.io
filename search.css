@@ -57,7 +57,7 @@
   border: 1px solid var(--search-border);
   border-radius: 24px;
   background: var(--search-bg);
-  box-shadow: 0 24px 100px rgba(0, 0, 0, .3);
+  box-shadow: var(--search-shadow, 0 24px 100px rgba(0, 0, 0, .3));
 }
 .am-search-dialog::backdrop { background: rgba(3, 8, 18, .64); }
 .am-search-dialog[open] { display: flex; flex-direction: column; }

@@ -81,6 +81,10 @@ exam and guide navigation remains available.
 - Browser interactions: native dialog, Escape/focus return, shortcut, Tab
   wrapping, result navigation, filters, 8-to-16 pagination, clear/no-results,
   inline results, dark/light themes and same-page feature navigation.
+- Follow-up light-mode styling: the launch badge renders white text; device
+  halos are removed and neutral shadows are smaller across the homepage and
+  exam hero. Browser checks confirmed that dark-mode device filters retain
+  their original values.
 - A separate local fixture server tested loading/clearing before completion,
   HTTP failure/retry, unsupported index versions, literal HTML-like result text
   and browsing with document scripts removed. Fixtures are outside the published

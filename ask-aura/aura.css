@@ -7,6 +7,7 @@
 .aura-badge { display: inline-flex; align-items: center; gap: 10px; margin: 0; padding: 6px 12px 6px 6px; border: 1px solid var(--border-accent); border-radius: 999px; background: var(--bg-card); color: var(--azure-cyan); font: 600 11px/1.5 Outfit, sans-serif; letter-spacing: .05em; }
 .aura-badge span { background: linear-gradient(110deg, #007a99, #145ac1); color: #fff; padding: 5px 9px; border-radius: 999px; }
 .aura-hero__lede { font-size: 18px; line-height: 1.7; }
+.aura-hero__lede strong { color: var(--text-primary); font-weight: 600; }
 .aura-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin: 24px 0 16px; }
 .aura-actions a { min-height: 44px; display: inline-flex; align-items: center; gap: 10px; font: 600 15px/1.4 Outfit, sans-serif; text-decoration: none; }
 .aura-actions .aura-download { padding: 14px 20px; border: 1px solid transparent; border-radius: 999px; background: linear-gradient(110deg, #007a99, #0964c4); color: #fff; }

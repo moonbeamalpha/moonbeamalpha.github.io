@@ -801,7 +801,8 @@ def main() -> None:
         if canonical != expected_canonical:
             errors.append(f"{page.relative_to(ROOT)}: canonical is {canonical}, expected {expected_canonical}")
         expected_banner = (
-            f"app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}"
+            f"app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}, "
+            f"affiliate-data=pt=128558698&amp;ct=exam-{code.lower()}-banner&amp;mt=8"
         )
         if smart_banner != expected_banner:
             errors.append(

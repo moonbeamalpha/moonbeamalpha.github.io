@@ -70,6 +70,8 @@ def build_index(root=ROOT):
         meta = retiring.get(code) or retired.get(code) or {}
         if code:
             title = f'{code} — {snapshot["names"][code]}'
+            if status != 'current':
+                summary = f'{code} is {status}. Use this reference page to compare the final outline and the current successor.'
         entry = dict(url=url, title=title, kind=kind, summary=summary, text=text,
                      headings=' '.join(headings), examCodes=codes, subjects=subjects, status=status)
         if code in snapshot['retirement_dates']:

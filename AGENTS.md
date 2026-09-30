@@ -90,7 +90,7 @@ per-domain question counts inside `#objectives`.
 
 **Hand-edited:** the social-image exam pills (each is hand-coloured and grouped,
 so the tool only warns on drift); the `exam-link--retired` class and grouping on
-homepage links; `exams/index.html` hub cards; `sitemap.xml`'s structure
+homepage links; `exams/index.html` hub editorial copy; `sitemap.xml`'s structure
 (`<loc>`, `<priority>`, `<changefreq>`, entry order).
 
 `sitemap.xml`'s `<lastmod>` values are the one exception: they are tool-owned,
@@ -206,3 +206,19 @@ has gone stale. That check happens only when someone runs `--refresh`.
 So: after the app's catalogue changes, someone has to run `--refresh` here. The
 app repo's `AGENTS.md` says the same thing from its side, and its
 `Tools/check-marketing-claims.py` is what fires when the totals move.
+
+
+## Search and conversion UI
+
+The homepage and exam hub cards are catalogue-derived. Run
+`Tools/sync-conversion-ui.py` after catalogue or shared UI changes; it also owns
+shared conversion assets, exam purchase/methodology copy and placement-specific
+App Store attribution. Its `--check` mode is read-only. Run
+`Tools/build-download-qr.py` with `segno==1.6.6` after changing download campaigns.
+
+`Tools/optimise-marketing-seo.py` refreshes the homepage and exam practice samples
+from independent authored questions, preserving full prompts and per-option
+rationales. `data/practice-previews.json` is generated; do not hand-edit it.
+See `Tools/CONVERSION.md` for maintenance and aggregate funnel measurement, and
+`Tools/SEARCH.md` for index generation, matching and accessibility contracts.
+Retain every existing CI gate and its baseline.

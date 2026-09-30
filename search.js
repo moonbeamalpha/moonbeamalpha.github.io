@@ -70,22 +70,41 @@
         if (item.fields[0].text.includes(normalized)) score += 180;
         if (tokens.some(function (token) { return item.codes.includes(token); })) {
           score += item.entry.kind === 'exam' ? 10000 : 1000;
+          if (item.entry.kind === 'guide' && item.entry.url.includes('/how-to-pass-')) score += 600;
         }
-        return [{ entry: item.entry, score: score, tokens: tokens }];
+        var direct = codeQuery ? tokens.some(function (token) { return item.codes.includes(token); }) :
+          tokens.some(function (token) { return item.fields.slice(0, 2).some(function (value) { return tokenMatch(token, value.words, fuzzy); }); });
+        return [{ entry: item.entry, score: score, tokens: tokens, related: !direct }];
       }).sort(function (a, b) {
         if (!codeQuery) {
           var lifecycle = Number(a.entry.status !== 'current') - Number(b.entry.status !== 'current');
           if (lifecycle) return lifecycle;
         }
+        if (a.related !== b.related) return Number(a.related) - Number(b.related);
+        if (!codeQuery && kind === 'all') {
+          var examFirst = Number(b.entry.kind === 'exam') - Number(a.entry.kind === 'exam');
+          if (examFirst) return examFirst;
+        }
         return b.score - a.score || a.entry.title.localeCompare(b.entry.title) || a.entry.url.localeCompare(b.entry.url);
       });
     }
     var exact = rank(false);
-    return exact.length ? exact : rank(true);
+    var matches = exact.length ? exact : rank(true);
+    if (!codeQuery && kind === 'all') {
+      var exams = matches.filter(function (match) { return !match.related && match.entry.kind === 'exam' && match.entry.status === 'current'; });
+      var guides = matches.filter(function (match) { return !match.related && match.entry.kind === 'guide' && match.entry.status === 'current'; });
+      if (exams.length > 6 && guides.length) {
+        var firstBatch = exams.slice(0, 6).concat(guides.slice(0, 2));
+        matches = firstBatch.concat(matches.filter(function (match) { return !firstBatch.includes(match); }));
+      }
+    }
+    return matches;
   }
   function excerpt(entry, tokens) {
     var summary = entry.summary || entry.title;
-    if (tokens.some(function (token) { return normalize(summary).includes(token); })) return summary.slice(0, 190);
+    if (tokens.some(function (token) { return normalize([summary, entry.title, (entry.subjects || []).join(' ')].join(' ')).includes(token); })) {
+      return summary.length <= 190 ? summary : summary.slice(0, 187).replace(/\s+\S*$/, '') + '…';
+    }
     var source = entry.text || summary;
     var words = source.split(/\s+/);
     var index = words.findIndex(function (word) {
@@ -156,10 +175,15 @@
     var clear = widget.querySelector('[data-search-clear]');
     var examples = widget.querySelector('[data-search-examples]');
     var filters = Array.from(widget.querySelectorAll('[data-search-kind]'));
+    var related = widget.querySelector('[data-search-related]');
+    var relatedList = widget.querySelector('[data-search-related-results]');
     var kind = 'all', limit = 8, revision = 0, timer, composing = false;
     function render() {
       var results = searchEntries(prepared, input.value, kind);
       list.replaceChildren();
+      relatedList.replaceChildren();
+      related.hidden = !results.some(function (match) { return match.related; });
+      var lastGroup;
       results.slice(0, limit).forEach(function (match) {
         var entry = match.entry;
         var item = element('li', 'am-search-result');
@@ -188,10 +212,22 @@
           successor.href = entry.successor.url;
           item.appendChild(successor);
         }
-        list.appendChild(item);
+        if (match.related) relatedList.appendChild(item);
+        else {
+          var group = entry.kind === 'exam' ? 'Exams' : 'Guides & pages';
+          if (kind === 'all' && group !== lastGroup) {
+            var heading = element('li', 'am-search-group');
+            heading.appendChild(element('h3', '', group)); list.appendChild(heading); lastGroup = group;
+          }
+          list.appendChild(item);
+        }
       });
+      related.querySelector('summary').textContent = 'Related results · ' + results.filter(function (match) { return match.related; }).length;
+      var directCount = results.filter(function (match) { return !match.related; }).length;
       status.textContent = results.length ? results.length + (results.length === 1 ? ' result' : ' results') +
-        (limit < results.length ? ' · Showing ' + limit : '') : 'No results. Try an exam code or a broader subject.';
+        (directCount < results.length ? ' · ' + directCount + ' direct matches' : '') +
+        (limit < directCount ? ' · Showing ' + limit : '') : 'No results. Try an exam code or a broader subject.';
+      more.textContent = directCount <= limit && directCount < results.length ? 'Show more related results' : 'Show more';
       more.hidden = results.length <= limit;
       retry.hidden = true;
       widget.removeAttribute('aria-busy');
@@ -202,8 +238,10 @@
       root.clearTimeout(timer);
       clear.hidden = !input.value;
       examples.hidden = normalize(input.value).length >= 2;
+      widget.classList.toggle('am-search--engaged', input.value.length > 0);
       if (normalize(input.value).length < 2) {
         list.replaceChildren(); more.hidden = true; retry.hidden = true;
+        relatedList.replaceChildren(); related.hidden = true;
         widget.removeAttribute('aria-busy');
         status.textContent = input.value ? 'Type at least two characters to search.' : 'Find your next exam, guide or topic.';
         return;
@@ -243,9 +281,10 @@
         if (link) { event.preventDefault(); link.focus(); }
       }
     });
-    list.addEventListener('keydown', function (event) {
-      if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return;
-      var links = Array.from(list.querySelectorAll('a'));
+    widget.addEventListener('keydown', function (event) {
+      if (event.defaultPrevented || !['ArrowDown', 'ArrowUp'].includes(event.key)) return;
+      var links = Array.from(widget.querySelectorAll('.am-search-result a')).filter(function (link) { return link.getClientRects().length; });
+      if (!links.includes(document.activeElement)) return;
       var index = links.indexOf(document.activeElement) + (event.key === 'ArrowDown' ? 1 : -1);
       event.preventDefault();
       if (index < 0) input.focus();
@@ -255,7 +294,8 @@
     retry.addEventListener('click', function () { update(false); });
     more.addEventListener('click', function () {
       var previous = limit; limit += 8; render();
-      var link = list.children[previous] && list.children[previous].querySelector('a');
+      var link = list.querySelectorAll('.am-search-result__link')[previous];
+      if (!link && relatedList.children.length) { related.open = true; link = relatedList.querySelector('a'); }
       if (link) link.focus();
     });
     filters.forEach(function (button) {

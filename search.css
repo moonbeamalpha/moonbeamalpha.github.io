@@ -183,6 +183,15 @@
 }
 .am-search-examples { margin-top: 6px; }
 .am-search-examples button { border: 0; padding-inline: 10px; color: var(--search-accent); }
+.am-search--inline { margin: 20px 0 24px; max-width: none; }
+.am-search--inline:not(.am-search--engaged) .am-search-filters,
+.am-search--inline:not(.am-search--engaged) .am-search-status,
+.am-search--inline:not(.am-search--engaged) .am-search-browse { display: none; }
+.am-search--inline .am-search-label { font-size: 15px; }
+.am-search-related { border-top: 1px solid var(--search-border); margin-top: 12px; }
+.am-search-related summary { min-height: 44px; padding: 12px 0; cursor: pointer; color: var(--search-muted); font-size: 13px; }
+.am-search-group { list-style: none; margin: 16px 0 6px; }
+.am-search-group h3 { font: 600 13px/1.4 'Outfit',sans-serif; color: var(--search-muted); margin: 0; }
 .am-search-status { margin: 16px 0 8px; min-height: 22px; font-size: 13px; color: var(--search-muted); }
 .am-search-scroll { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
 .am-search-results { list-style: none; padding: 0; margin: 0; }

@@ -188,7 +188,7 @@
     });
   });
 })();
-  
+
 
 // App Store link attribution — stamps the exam's campaign token onto every
 // store link so a download can be traced back to the page that produced it.
@@ -233,7 +233,7 @@
     campaign = 'guide-index';
   }
   if (!campaign) return;
-  campaign = campaign.slice(0, 34);
+  campaign = campaign.slice(0, 27);
 
   // Paid/tagged traffic: fold the acquisition source into the campaign token so
   // Apple's campaign report separates ad-driven installs from organic ones.
@@ -290,137 +290,4 @@
     ? '<strong>' + cert + ' was retired by Microsoft on ' + when + '.</strong> Microsoft no longer offers this exam.'
     : '<strong>Microsoft retires ' + cert + ' on ' + when + '.</strong> It won\u2019t be available to book after that date.';
   b.hidden = false;
-})();
-  
-
-// Tappable sample questions — progressive enhancement over the static
-// question-type mockups. Pages mark tappable vizzes with data-quiz="1"
-// (multiple-choice and multi-select only); the authored `is-selected`
-// classes are the answer key, read then stripped before first paint-frame
-// interaction. Without JS the mockups render exactly as before.
-(function () {
-  var vizzes = document.querySelectorAll('.qt__viz[data-quiz]');
-  var reorders = document.querySelectorAll('.qt__viz-drag[data-reorder-live]');
-  if (!vizzes.length && !reorders.length) return;
-
-  var codeEl = document.querySelector('.am-cert-hero__eyebrow-code');
-  var countEl = document.querySelector('.am-cert-hero__stat-count');
-  var code = codeEl ? codeEl.textContent.trim() : 'this exam';
-  var bank = countEl ? countEl.textContent.trim() : '';
-  var storeLink = document.querySelector('a[href*="apps.apple.com"]');
-  var answered = 0, right = 0, total = reorders.length;
-
-  // The per-question "See every ... rationale" link (below) reuses storeLink's
-  // href but must carry its own campaign token, so App Store Connect can
-  // separate quiz-driven installs from the page's general download buttons.
-  // ct= is overwritten (not just set-if-absent, like the first IIFE above);
-  // pt= and mt=, already stamped onto storeLink.href by that IIFE, are left
-  // untouched. Falls back to the unmodified href when the hero eyebrow code
-  // isn't a real exam code (should not happen on a real page).
-  function quizLinkHref(link) {
-    var fallback = 'https://apps.apple.com/app/apple-store/id6760594569';
-    var href = link ? link.href : fallback;
-    if (!/^[A-Za-z]{2,3}-\d{3,4}$/.test(code)) return href;
-    try {
-      var url = new URL(href, window.location.origin);
-      url.searchParams.set('ct', 'exam-' + code.toLowerCase() + '-quiz');
-      return url.toString();
-    } catch (error) {
-      return href;
-    }
-  }
-
-  function summarise() {
-    var grid = document.querySelector('.question-types');
-    if (!grid || document.querySelector('.quiz-summary')) return;
-    var p = document.createElement('p');
-    p.className = 'quiz-summary';
-    var score = '<strong>You got ' + right + ' of ' + total + '.</strong> ';
-    var pitch = bank
-      ? 'There are ' + bank + ' more ' + code + ' practice questions — each with a full rationale for every option — in the app. '
-      : 'Every ' + code + ' question in the app explains every option. ';
-    p.innerHTML = score + pitch;
-    var a = document.createElement('a');
-    a.href = storeLink ? storeLink.href : 'https://apps.apple.com/app/apple-store/id6760594569';
-    a.rel = 'noopener noreferrer';
-    a.textContent = 'Get the full ' + code + ' bank →';
-    p.appendChild(a);
-    grid.parentNode.insertBefore(p, grid.nextSibling);
-    p.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  document.addEventListener('azuremastery:quizcomplete', function (event) {
-    if (!event.target.matches('.qt__viz-drag[data-reorder-live]')) return;
-    if (event.detail && event.detail.correct) right++;
-    answered++;
-    if (answered === total) summarise();
-  });
-
-  Array.prototype.forEach.call(vizzes, function (viz) {
-    var options = viz.querySelectorAll('.qt__viz-options li');
-    if (!options.length) return;
-    var key = [];
-    Array.prototype.forEach.call(options, function (li, i) {
-      if (li.classList.contains('is-selected')) key.push(i);
-      li.classList.remove('is-selected');
-      li.setAttribute('tabindex', '0');
-      li.setAttribute('role', 'button');
-    });
-    if (!key.length) return;
-    total++;
-    viz.removeAttribute('aria-hidden');
-    viz.setAttribute('data-quiz-live', '1');
-
-    var hint = document.createElement('span');
-    hint.className = 'qt__quiz-hint';
-    hint.textContent = key.length > 1
-      ? 'Tap ' + key.length + ' answers to check them'
-      : 'Tap an answer to check it';
-    viz.appendChild(hint);
-
-    var picked = [], done = false;
-    function grade() {
-      done = true;
-      viz.removeAttribute('data-quiz-live');
-      var allRight = picked.length === key.length && picked.every(function (i) { return key.indexOf(i) >= 0; });
-      Array.prototype.forEach.call(options, function (li, i) {
-        li.removeAttribute('tabindex');
-        li.removeAttribute('role');
-        if (key.indexOf(i) >= 0) li.classList.add('is-correct');
-        else if (picked.indexOf(i) >= 0) li.classList.add('is-wrong');
-      });
-      if (allRight) right++;
-      answered++;
-      var note = document.createElement('span');
-      note.className = 'qt__quiz-note';
-      note.innerHTML = allRight
-        ? '<strong>Correct.</strong> The app explains why every other option is wrong, too.'
-        : '<strong>Not quite</strong> — the highlighted ' + (key.length > 1 ? 'answers are' : 'answer is') + ' correct. The app’s Answer Coach explains the misconception.';
-      hint.replaceWith(note);
-      var quizLink = document.createElement('a');
-      quizLink.className = 'qt__quiz-link';
-      quizLink.href = quizLinkHref(storeLink);
-      quizLink.rel = 'noopener noreferrer';
-      quizLink.textContent = 'See every ' + code + ' rationale in the app →';
-      note.appendChild(quizLink);
-      if (answered === total) summarise();
-    }
-    function pick(i) {
-      if (done) return;
-      if (picked.indexOf(i) >= 0) {
-        picked.splice(picked.indexOf(i), 1);
-        options[i].classList.remove('is-picked');
-        return;
-      }
-      picked.push(i);
-      options[i].classList.add('is-picked');
-      if (picked.length >= key.length) grade();
-    }
-    Array.prototype.forEach.call(options, function (li, i) {
-      li.addEventListener('click', function () { pick(i); });
-      li.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(i); }
-      });
-    });
-  });
 })();

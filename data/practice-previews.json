@@ -1,0 +1,2562 @@
+{
+  "AB-100": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "ab100-plan-140",
+      "objectiveID": "ab100-plan.design-overall-ai-strategy-for-business-solutions.01",
+      "optionRationales": {
+        "A": "Govern is where policies, controls and compliance boundaries are defined, which is what a guardrail is.",
+        "B": "Adopt covers the migration and innovation work performed inside guardrails that already exist.",
+        "C": "Strategy sets the motivation and target outcome rather than the operating constraints.",
+        "D": "Ready prepares the landing zone and skills so that adoption can begin."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Govern"
+        },
+        {
+          "id": "B",
+          "text": "Adopt"
+        },
+        {
+          "id": "C",
+          "text": "Strategy"
+        },
+        {
+          "id": "D",
+          "text": "Ready"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview",
+      "text": "Which Cloud Adoption Framework methodology covers establishing the guardrails an AI workload must operate inside?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "id": "ab100-plan-132",
+      "objectiveID": "ab100-plan.design-overall-ai-strategy-for-business-solutions.01",
+      "optionRationales": {
+        "A": "Strategy is the opening stage of the Cloud Adoption Framework AI workflow, where you define motivations, business outcomes, and the case for adopting AI before any technical readiness work begins.",
+        "B": "Plan is a documented stage that turns the strategy into an actionable roadmap, covering skilling, workload prioritization, and the digital estate inventory needed to sequence AI adoption.",
+        "C": "Ready is the stage that prepares the Azure environment and landing zones, establishing the foundational platform and guardrails so AI workloads can be deployed on a governed footing.",
+        "D": "Assess is an activity performed within methodologies such as Strategy, Ready, Govern, and Secure. It is not one of the seven top-level Cloud Adoption Framework methodologies.",
+        "E": "Manage is a documented stage focused on ongoing operations, covering monitoring, optimization, and reliability of AI workloads once they are running in production.",
+        "F": "Secure is a core operational methodology. It applies security controls and continuously protects workloads alongside Govern and Manage."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Strategy"
+        },
+        {
+          "id": "B",
+          "text": "Plan"
+        },
+        {
+          "id": "C",
+          "text": "Ready"
+        },
+        {
+          "id": "D",
+          "text": "Assess"
+        },
+        {
+          "id": "E",
+          "text": "Manage"
+        },
+        {
+          "id": "F",
+          "text": "Secure"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview",
+      "text": "Which of the following are core Cloud Adoption Framework methodologies relevant to AI adoption? (Select all that apply.)"
+    }
+  ],
+  "AB-410": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "ab410-apps-056",
+      "objectiveID": "ab410-apps.create-canvas-apps.01",
+      "optionRationales": {
+        "A": "`Form1.Item` is the record supplied to the form that describes the row as it was loaded from the table, so reading it back yields the original values and silently discards everything the user typed.",
+        "B": "`Form1.Updates` aggregates the `Update` property of each card into one record of pending field values, which is the shape `Patch` and connector actions expect when writing to a table.",
+        "C": "`Form1.Valid` summarises card-level validation into a single true-or-false flag that is useful for enabling a save button, yet the flag holds no field values that could be written anywhere.",
+        "D": "`Form1.LastSubmit` fills in only after a submit succeeds and returns the row as the server stored it, including any generated keys; it cannot carry edits that have not yet been written."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`Form1.Item`"
+        },
+        {
+          "id": "B",
+          "text": "`Form1.Updates`"
+        },
+        {
+          "id": "C",
+          "text": "`Form1.Valid`"
+        },
+        {
+          "id": "D",
+          "text": "`Form1.LastSubmit`"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/power-apps/maker/canvas-apps/controls/control-form-detail",
+      "text": "A canvas app uses an Edit form named Form1 over a Microsoft Dataverse table. Rather than the built-in save, the maker must send the values the user typed into the form to a custom connector action. Which form output supplies those values?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "E"
+      ],
+      "id": "ab410-logic-132",
+      "objectiveID": "ab410-logic.create-prompts-and-models-in-ai-hub.07",
+      "optionRationales": {
+        "A": "The object detector has to be bound to a model the maker tagged, trained and published, and the AI models pane it opens on insert stays empty until such a model exists in the environment.",
+        "B": "This component calls a ready-made model that already extracts `FullName`, `JobTitle`, `Email` and address parts from a photographed card, so it starts returning values the moment it is placed on a screen.",
+        "C": "The form processor requires a published document processing model selected in its AI model property, which means a round of sample uploads and field tagging before it can extract anything at all.",
+        "D": "Prediction is a structured-data model type that scores Microsoft Dataverse rows against historical outcomes; results surface through columns and flows, and no control for it appears on the canvas Insert tab.",
+        "E": "Scanning text off an image runs on a model that ships ready to use, so this control exposes `Results` and `Selected` straight away with no sample images and no training pass first."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Object detector component"
+        },
+        {
+          "id": "B",
+          "text": "Business card reader component"
+        },
+        {
+          "id": "C",
+          "text": "Form processor component"
+        },
+        {
+          "id": "D",
+          "text": "Prediction model component"
+        },
+        {
+          "id": "E",
+          "text": "Text recognizer component"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/ai-builder/use-in-powerapps-overview",
+      "text": "You are building a canvas app and want AI Builder controls from the Insert tab that work with no training round beforehand. Which two components are backed by ready-to-use models? Select two."
+    }
+  ],
+  "AB-620": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "D"
+      ],
+      "id": "ab620-integrate-055",
+      "objectiveID": "ab620-integrate.add-tools-to-agents.02",
+      "optionRationales": {
+        "A": "A prompt in MCP is a reusable instruction template the host can apply, not a function the agent executes with parameters, so it does not model a runnable capability.",
+        "B": "Transport is the communication layer, such as stdio or streamable HTTP, that carries MCP messages; it is the channel rather than a modeled capability the agent invokes.",
+        "C": "A resource in MCP is a readable piece of context the agent fetches for grounding, not an executable capability it calls with arguments, so it does not represent an invocable action.",
+        "D": "In MCP a tool is a callable function with JSON-schema inputs and outputs, and Copilot Studio surfaces those tools as actions the agent's reasoner can invoke with arguments at runtime."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Prompt"
+        },
+        {
+          "id": "B",
+          "text": "Transport"
+        },
+        {
+          "id": "C",
+          "text": "Resource"
+        },
+        {
+          "id": "D",
+          "text": "Tool"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp",
+      "text": "Which primitive in MCP represents an executable capability that the agent can invoke with arguments?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "C",
+        "A"
+      ],
+      "id": "ab620-integrate-094",
+      "objectiveID": "ab620-integrate.configure-multi-agent-collaboration-from-copilot-studio.04",
+      "optionRationales": {
+        "A": "A `Power BI semantic model` contributes its measures, dimensions, and relationships to the agent, letting the planner answer with the model's defined business logic rather than raw tables.",
+        "B": "A `Lakehouse` exposes a SQL analytics endpoint with a queryable schema, so a Fabric Data Agent can ground on its tables and translate natural-language questions into queries against them.",
+        "C": "A `Warehouse` presents a relational schema that the Fabric Data Agent planner can introspect and query directly, making it a supported grounding source for natural-language data questions.",
+        "D": "An `Azure DevOps repository` stores source-control artifacts such as code and pipelines, which carry no queryable analytical schema and are not surfaced as a grounding source in the Fabric Data Agent authoring experience."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Power BI semantic model"
+        },
+        {
+          "id": "B",
+          "text": "Lakehouse"
+        },
+        {
+          "id": "C",
+          "text": "Warehouse"
+        },
+        {
+          "id": "D",
+          "text": "Azure DevOps repository"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/fabric/data-science/concept-data-agent",
+      "text": "Which Microsoft Fabric item types can be attached as data sources when building a Fabric Data Agent? Select all that apply."
+    }
+  ],
+  "AB-650": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "D"
+      ],
+      "id": "ab650-govern-085",
+      "objectiveID": "ab650-govern.secure-microsoft-365-workloads.02",
+      "optionRationales": {
+        "A": "A month leaves too little time to gather a defensible business case, particularly if the evaluation starts slowly.",
+        "B": "Planning around a longer window risks the trial lapsing part-way through an assessment that was scheduled to fit it.",
+        "C": "A year would far exceed what any evaluation entitlement offers, and building a timeline on it would leave the assessment stranded.",
+        "D": "A quarter is long enough to evaluate in detection-only mode, convert to enforcement, and observe the difference across real mail volumes."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "30 days"
+        },
+        {
+          "id": "B",
+          "text": "180 days"
+        },
+        {
+          "id": "C",
+          "text": "12 months"
+        },
+        {
+          "id": "D",
+          "text": "90 days"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/defender-office-365/try-microsoft-defender-for-office-365",
+      "text": "How long does the Defender for Office 365 Plan 2 trial run?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "E",
+        "A"
+      ],
+      "id": "ab650-aiservices-007",
+      "objectiveID": "ab650-aiservices.enable-and-manage-microsoft-365-copilot.05",
+      "optionRationales": {
+        "A": "This is likewise on the documented exclusion list, so a separate approach is needed for the notice to reach its users.",
+        "B": "Mail is among the supported applications, which covers one of the highest-volume generation surfaces.",
+        "C": "Presentation authoring is supported, so generated slide content carries the notice as expected.",
+        "D": "The notice does render here, so a compliance team can rely on it for document authoring.",
+        "E": "This is named among the applications where the notice does not render, which matters for a commitment to display it everywhere."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Whiteboard"
+        },
+        {
+          "id": "B",
+          "text": "Outlook"
+        },
+        {
+          "id": "C",
+          "text": "PowerPoint"
+        },
+        {
+          "id": "D",
+          "text": "Word"
+        },
+        {
+          "id": "E",
+          "text": "SharePoint"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/microsoft-365/copilot/microsoft-365-ai-disclaimers",
+      "text": "In which two applications does the Copilot AI disclaimer NOT appear? Select two."
+    }
+  ],
+  "AB-731": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "ab731-strategy-001",
+      "objectiveID": "ab731-strategy.align-an-ai-strategy-with-microsoft-responsible-ai-policies.04",
+      "optionRationales": {
+        "A": "Twelve is far more than the six principles the Responsible AI Standard defines.",
+        "B": "Ten exceeds the six principles named in the published standard.",
+        "C": "Microsoft's Responsible AI Standard defines six principles: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.",
+        "D": "Three falls short of the six principles Microsoft actually publishes in its Responsible AI Standard."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Twelve"
+        },
+        {
+          "id": "B",
+          "text": "Ten"
+        },
+        {
+          "id": "C",
+          "text": "Six"
+        },
+        {
+          "id": "D",
+          "text": "Three"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai",
+      "text": "How many core principles does Microsoft's Responsible AI Standard define?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "D"
+      ],
+      "id": "ab731-value-047",
+      "objectiveID": "ab731-value.identify-benefits-and-capabilities-of-generative-ai-solutions.09",
+      "optionRationales": {
+        "A": "Defender for SQL protects databases and does not surface Copilot interactions.",
+        "B": "DSPM for AI gives security visibility into Copilot prompts, responses, and data interactions.",
+        "C": "ExpressRoute is a private-network service; it has no Copilot-usage view.",
+        "D": "Copilot Analytics in the M365 admin centre reports adoption and usage patterns."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender for SQL"
+        },
+        {
+          "id": "B",
+          "text": "Purview DSPM for AI"
+        },
+        {
+          "id": "C",
+          "text": "Azure ExpressRoute"
+        },
+        {
+          "id": "D",
+          "text": "Copilot Analytics in the M365 admin centre"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/compliance/assurance/assurance-artificial-intelligence",
+      "text": "Which TWO Microsoft services give a leader the clearest visibility into how Microsoft 365 Copilot is being used and what data is touched? Select two answers."
+    }
+  ],
+  "AB-900": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "ab900-core-029",
+      "objectiveID": "ab900-core.identify-the-core-objects-of-microsoft-365-services.04",
+      "optionRationales": {
+        "A": "Team sites are designed for active collaboration with a bundled M365 group, mailbox, and optional Team.",
+        "B": "Hub sites unify navigation across associated sites — they're a structural pattern, not a broadcast content type.",
+        "C": "Communication sites are designed for read-mostly news and broadcast scenarios with rich pages and news web parts.",
+        "D": "Classic publishing sites are legacy and Microsoft recommends modern communication sites instead."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "A team site"
+        },
+        {
+          "id": "B",
+          "text": "A hub site"
+        },
+        {
+          "id": "C",
+          "text": "A communication site"
+        },
+        {
+          "id": "D",
+          "text": "A classic publishing site"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/sharepoint/",
+      "text": "Which SharePoint site type is intended for read-mostly news and announcements broadcast to a wide audience, rather than for active team collaboration?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "C",
+        "E",
+        "A"
+      ],
+      "id": "ab900-protect-008",
+      "objectiveID": "ab900-protect.understand-data-security-implications-of-copilot.04",
+      "optionRationales": {
+        "A": "Transparency is a Responsible AI principle, requiring that AI behaviour be explainable and understandable to the people it affects.",
+        "B": "Speed of model release is a delivery metric, not a Responsible AI principle, and rushing releases can compromise the careful testing the framework calls for.",
+        "C": "Fairness is one of Microsoft's six Responsible AI principles, requiring systems to treat all groups equitably and avoid biased outcomes.",
+        "D": "Maximum profit is a business objective rather than a Responsible AI principle, and pursuing it without guardrails can undermine equitable, accountable AI.",
+        "E": "Reliability and safety is a Responsible AI principle, requiring systems to perform dependably and fail safely under unexpected conditions."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Transparency"
+        },
+        {
+          "id": "B",
+          "text": "Speed of model release"
+        },
+        {
+          "id": "C",
+          "text": "Fairness"
+        },
+        {
+          "id": "D",
+          "text": "Maximum profit"
+        },
+        {
+          "id": "E",
+          "text": "Reliability and safety"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai",
+      "text": "Which three of the following are recognized as Microsoft's Responsible AI principles? Select three answers."
+    }
+  ],
+  "AI-102": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "ai102-a032",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "In the Azure OpenAI Assistants and Foundry Agent Service object model, a run is one execution of an agent against a thread; it reads thread messages, decides whether to call tools like `file_search` or `code_interpreter`, appends responses, and moves through statuses such as `queued`, `in_progress`, `requires_action`, and `completed`.",
+        "B": "A repository is a version-controlled store of source code and files in services like Azure Repos or GitHub; it holds artifacts at rest and never represents a single agent invocation against a thread.",
+        "C": "A workbook is an Azure Monitor authoring surface for interactive reports and visualizations over telemetry; it presents data for humans and is unrelated to the agent execution lifecycle.",
+        "D": "An indexer is an Azure AI Search component that crawls a data source on a schedule to populate a search index; it is an ingestion job, not the object capturing a single agent execution and its run steps."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "A run"
+        },
+        {
+          "id": "B",
+          "text": "A repository"
+        },
+        {
+          "id": "C",
+          "text": "A workbook"
+        },
+        {
+          "id": "D",
+          "text": "An indexer"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/ai-services/agents/concepts/agents",
+      "text": "What is the name of the object that represents one execution of an agent against a thread?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "id": "ai102-g018",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "The `system` role seeds the conversation with behavioral instructions and persona that steer how the model responds throughout the chat.",
+        "B": "The `user` role carries the end user's input messages that the model is asked to respond to in each turn.",
+        "C": "The `assistant` role holds the model's own generated replies and is included in history so the model can stay consistent across turns.",
+        "D": "`admin` is not a recognized chat message role; the API accepts only `system`, `user`, `assistant`, and `tool`, so this label would be rejected.",
+        "E": "`moderator` is not part of the chat completions role set; content moderation in Azure OpenAI is handled by Content Safety filters, not by a dedicated message role."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "System"
+        },
+        {
+          "id": "B",
+          "text": "User"
+        },
+        {
+          "id": "C",
+          "text": "Assistant"
+        },
+        {
+          "id": "D",
+          "text": "Admin"
+        },
+        {
+          "id": "E",
+          "text": "Moderator"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#chat-completions",
+      "text": "Which THREE message roles are used in the Azure OpenAI chat completions API? (Choose three.)"
+    }
+  ],
+  "AI-103": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "ai103-generative-023",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "8,191 is the maximum number of input tokens text-embedding-3-large can process in a single call — an input length limit, not the dimension count of the output vector.",
+        "B": "256 is a valid reduced dimension setting available through the dimensions parameter on text-embedding-3-large, but it is not the default output size for the model.",
+        "C": "`text-embedding-3-large` outputs 3,072-dimensional vectors by default, making it the highest-resolution Azure OpenAI embedding model and the best choice when retrieval quality outweighs storage cost.",
+        "D": "1,536 dimensions is the output size of text-embedding-ada-002 and text-embedding-3-small, not text-embedding-3-large, which doubles that resolution at its default setting."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "8,191"
+        },
+        {
+          "id": "C",
+          "text": "3,072"
+        },
+        {
+          "id": "B",
+          "text": "256"
+        },
+        {
+          "id": "D",
+          "text": "1,536"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models",
+      "text": "How many dimensions does the text-embedding-3-large model produce by default?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "D"
+      ],
+      "id": "ai103-agentic-062",
+      "objectiveID": "ai103-genagentic.build-agents-by-using-foundry.01",
+      "optionRationales": {
+        "A": "Paused is not a valid status in the Foundry Agent Service run lifecycle — runs progress from queued through in_progress to a terminal state; there is no pause-and-resume mechanism in the standard run model.",
+        "B": "Queued is a valid run/response status indicating the request has been received and is waiting to begin processing — it is the first state entered after a run is created.",
+        "C": "Restarting is not a valid status value — if a run fails, a new run must be created; the service does not have an automatic restart status that a run transitions through.",
+        "D": "Completed is a valid terminal status indicating the run finished successfully and the agent's response is ready to be retrieved from the thread or response output."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Paused"
+        },
+        {
+          "id": "B",
+          "text": "Queued"
+        },
+        {
+          "id": "C",
+          "text": "Restarting"
+        },
+        {
+          "id": "D",
+          "text": "Completed"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses",
+      "text": "Which TWO of the following are valid status values for a background response in the current Foundry runtime? (Select TWO)"
+    }
+  ],
+  "AI-200": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "ai200-monitoring-010",
+      "objectiveID": "ai200-operations.monitor-and-troubleshoot-azure-solutions.02",
+      "optionRationales": {
+        "A": "The summarize operator groups rows and applies aggregation functions such as count(), avg(), or percentile(). It reduces the dataset to one row per group but does not filter rows by a condition.",
+        "B": "The project operator selects, renames, or reorders columns in the output. It shapes the schema of the result set but does not remove rows based on a predicate.",
+        "C": "The where operator evaluates a Boolean expression against every row and passes through only those for which the expression is true. Placing it early in the pipeline minimizes data flowing to downstream operators and improves query performance.",
+        "D": "The extend operator computes new columns and appends them to each row. It enriches the dataset with derived fields but keeps all rows intact without any row-level filtering."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Summarize"
+        },
+        {
+          "id": "B",
+          "text": "Project"
+        },
+        {
+          "id": "C",
+          "text": "Where"
+        },
+        {
+          "id": "D",
+          "text": "Extend"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview",
+      "text": "Which KQL operator is used to filter rows in a Log Analytics query based on a condition?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "id": "ai200-storage-043",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "Cosine is one of Cosmos DB's three supported distance functions — it scores similarity by the angle between vectors, making it robust to differences in embedding magnitude.",
+        "B": "Dot product is one of Cosmos DB's three supported distance functions — it sums element-wise products and is most accurate when embeddings have been normalized to unit length.",
+        "C": "Euclidean is one of Cosmos DB's three supported distance functions — it computes the straight-line (L2) distance between two vectors and is sensitive to magnitude differences.",
+        "D": "Jaccard similarity measures set overlap for binary or sparse vectors and is not available as a Cosmos DB vector distance function — it does not appear in the `distanceFunction` enum.",
+        "E": "Manhattan (L1) distance sums absolute dimension differences and is used in some vector databases, but it is not listed among Cosmos DB for NoSQL's supported distance functions."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Cosine"
+        },
+        {
+          "id": "B",
+          "text": "Dot product"
+        },
+        {
+          "id": "C",
+          "text": "Euclidean"
+        },
+        {
+          "id": "D",
+          "text": "Jaccard"
+        },
+        {
+          "id": "E",
+          "text": "Manhattan"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/vector-search",
+      "text": "Which THREE similarity metrics are supported by Cosmos DB for NoSQL vector search? Choose THREE."
+    }
+  ],
+  "AI-300": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "ai300-genaiops-012",
+      "objectiveID": "ai300-genaiops.implement-foundry-environments-and-platform-configuration.04",
+      "optionRationales": {
+        "A": "Terraform is a third-party HashiCorp tool that provisions Azure resources through the AzureRM provider against its own state model; it does not emit or compile to ARM templates. Because it is not Azure's native language and bypasses ARM transpilation, it does not meet the criterion described.",
+        "B": "Pulumi defines infrastructure in general-purpose programming languages and deploys through its own engine and providers rather than producing ARM JSON. As a third-party tool with no native ARM compilation step, it is not the Azure-native option being sought.",
+        "C": "Bicep is Azure's first-party declarative DSL for infrastructure as code; the `bicep` CLI transpiles a `.bicep` file into an ARM JSON template at deploy time, so any resource type, API version, or property valid in ARM is valid in Bicep. It adds concise syntax, automatic dependency resolution, and type safety while preserving full ARM capability.",
+        "D": "Ansible is an agentless configuration-management and orchestration tool that drives Azure modules imperatively; it is built for post-provisioning configuration, not declarative ARM-based resource definitions. It neither ships with Azure as a native language nor compiles to ARM templates."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Terraform"
+        },
+        {
+          "id": "B",
+          "text": "Pulumi"
+        },
+        {
+          "id": "C",
+          "text": "Bicep"
+        },
+        {
+          "id": "D",
+          "text": "Ansible"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview",
+      "text": "Which infrastructure-as-code language is natively supported by Azure and compiles to ARM templates?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "C"
+      ],
+      "id": "ai300-lifecycle-074",
+      "objectiveID": "ai300-lifecycle.monitor-and-maintain-machine-learning-models-in-production.01",
+      "optionRationales": {
+        "A": "Data drift is a built-in monitoring signal that compares production input feature distributions against a baseline using tests like Jensen-Shannon Distance, Population Stability Index, and Kolmogorov-Smirnov to flag distribution shifts.",
+        "B": "Monitoring inspects data and prediction statistics, not scoring-script source; changes to script syntax are caught by code review and CI/CD pipelines, not by a model monitor.",
+        "C": "Prediction drift is the companion built-in signal that tracks changes in the model's output distribution versus validation or recent production data, catching shifts even when input drift is subtle.",
+        "D": "Endpoint latency is an operational performance metric tracked through Azure Monitor, not a statistical drift signal that the model monitoring service evaluates."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Data drift"
+        },
+        {
+          "id": "B",
+          "text": "Code drift"
+        },
+        {
+          "id": "C",
+          "text": "Prediction drift"
+        },
+        {
+          "id": "D",
+          "text": "Network drift"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/machine-learning/how-to-monitor-model-performance",
+      "text": "Which TWO types of drift can Azure Machine Learning model monitoring detect? (Choose two.)"
+    }
+  ],
+  "AI-500": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "ai500-secure-077",
+      "objectiveID": "ai500-secure.design-and-implement-guardrails.02",
+      "optionRationales": {
+        "A": "`x-policy-id` names an existing guardrail on the resource and takes precedence over the deployment's assignment for the duration of that single request.",
+        "B": "`x-ms-query-source-authorization` forwards a signed-in user's token to drive per-query permission trimming in retrieval, filtering search results rather than screening content for harm.",
+        "C": "`x-functions-key` is the credential an Azure Functions endpoint checks before running a trigger, so it authorises the call rather than selecting a safety configuration.",
+        "D": "`x-memory-user-id` segments a memory store so one user's remembered context is not returned to another, affecting retrieval scope rather than filtering behaviour."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`x-policy-id`"
+        },
+        {
+          "id": "B",
+          "text": "`x-ms-query-source-authorization`"
+        },
+        {
+          "id": "C",
+          "text": "`x-functions-key`"
+        },
+        {
+          "id": "D",
+          "text": "`x-memory-user-id`"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/foundry/guardrails/how-to-create-guardrails",
+      "text": "A Microsoft Foundry resource holds one custom guardrail per business unit. An individual API call must be screened by a guardrail other than the one assigned to the model deployment it targets. Which request header carries that choice?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "C"
+      ],
+      "id": "ai500-evaluate-018",
+      "objectiveID": "ai500-evaluate.design-and-implement-evaluation-and-validation-strategies.02",
+      "optionRationales": {
+        "A": "Intent Resolution measures how accurately the agent identified and addressed the user's intent, making it the evaluator that surfaces a fluent but topically wrong answer as a failure.",
+        "B": "Tool Call Success confirms each call executed without technical errors; the run's calls are already clean, so this evaluator adds no signal about wrong topics or missing disclaimers.",
+        "C": "Task Adherence measures whether the agent followed the rules and constraints in its system message, making it the evaluator that flags a quote delivered without the required disclaimer.",
+        "D": "Fluency rates natural language quality and readability, so a smoothly written answer to the wrong question scores well rather than being flagged as a failure.",
+        "E": "Similarity compares generated text against a reference answer, and this replay carries no reference, so the evaluator has nothing to score against and cannot address either symptom."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Intent Resolution"
+        },
+        {
+          "id": "B",
+          "text": "Tool Call Success"
+        },
+        {
+          "id": "C",
+          "text": "Task Adherence"
+        },
+        {
+          "id": "D",
+          "text": "Fluency"
+        },
+        {
+          "id": "E",
+          "text": "Similarity"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/foundry/concepts/built-in-evaluators",
+      "text": "A compliance reviewer replays a transcript in which the agent produced a polished answer to a question the customer never asked, and then quoted a price without the disclaimer its system message requires on every quote. Every tool call in the run executed cleanly and returned usable data, and no reference answer exists for the conversation. You need the two built-in evaluators that isolate these two failures. Select two."
+    }
+  ],
+  "AI-900": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "ai900-aiworkloads-025",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "Four is too few - it leaves out two of the published principles. Microsoft's Responsible AI Standard documents six in total.",
+        "B": "Five is one short of the published list. The Responsible AI Standard names six principles, so five is incorrect by one.",
+        "C": "Six matches Microsoft's Responsible AI Standard exactly: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.",
+        "D": "Eight overstates the count. Microsoft's framework names six principles, not eight, and there is no published list of eight to draw from."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/8-understand-responsible-ai",
+      "text": "How many principles are included in Microsoft's Responsible AI framework?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "id": "ai900-genai-052",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "GPT-4o is OpenAI's multimodal flagship for text and image understanding and is available through Azure OpenAI for chat completions, function calling, and vision-enabled scenarios.",
+        "B": "DALL-E (DALL-E 3 and the GPT-Image series in current deployments) is hosted on Azure OpenAI for text-to-image generation through the Images API.",
+        "C": "Whisper is OpenAI's speech-recognition model, exposed through Azure OpenAI's audio endpoints for transcribing or translating audio in many languages.",
+        "D": "Azure SQL is a managed relational database service in the Azure data platform. It is not a foundation model and is not part of the Azure OpenAI catalogue.",
+        "E": "Text-embedding-ada-002 is the legacy embedding model in Azure OpenAI; alongside text-embedding-3-small and text-embedding-3-large it converts text into dense vectors for semantic search, RAG retrieval, and clustering."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "GPT-4o"
+        },
+        {
+          "id": "B",
+          "text": "DALL-E"
+        },
+        {
+          "id": "C",
+          "text": "Whisper"
+        },
+        {
+          "id": "D",
+          "text": "Azure SQL"
+        },
+        {
+          "id": "E",
+          "text": "Text-embedding-ada-002"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models",
+      "text": "Which models are available through Azure OpenAI Service? (Select all that apply)"
+    }
+  ],
+  "AI-901": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "ai901-aiworkloads-025",
+      "objectiveID": "ai901-concepts.describe-principles-of-responsible-ai.01",
+      "optionRationales": {
+        "A": "Eight overstates the count. Microsoft's framework defines six named principles, not eight.",
+        "B": "Microsoft's Responsible AI framework includes six principles: Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, and Accountability.",
+        "C": "Four understates the count. Microsoft's framework defines six principles, so four omits two of them.",
+        "D": "Five is one short. The framework lists six principles, so this misses one of them."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/8-understand-responsible-ai",
+      "text": "How many principles are included in Microsoft's Responsible AI framework?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "id": "ai901-genai-052",
+      "objectiveID": "ai901-implement.implement-generative-ai-apps-and-agents-by-using-foundry.02",
+      "optionRationales": {
+        "A": "`text-embedding-ada-002` is provided by `Azure OpenAI Service` to convert text into numeric vector embeddings that power similarity search and retrieval-augmented generation.",
+        "B": "`DALL-E` is offered through `Azure OpenAI Service` to generate original images from natural-language text prompts, covering the image-generation generative AI workload.",
+        "C": "`GPT-4o` is a foundation model hosted in `Azure OpenAI Service` for natural-language and multimodal text generation, handling chat, summarization, and reasoning over prompts.",
+        "D": "`Whisper` is deployable in `Azure OpenAI Service` and performs speech-to-text transcription of spoken audio, extending the service beyond text-only generation.",
+        "E": "Azure SQL is a managed relational database engine for storing and querying structured data with T-SQL; it has no generative or language-model capability and is not part of the `Azure OpenAI Service` model catalog."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Text-embedding-ada-002"
+        },
+        {
+          "id": "B",
+          "text": "DALL-E"
+        },
+        {
+          "id": "C",
+          "text": "GPT-4o"
+        },
+        {
+          "id": "D",
+          "text": "Whisper"
+        },
+        {
+          "id": "E",
+          "text": "Azure SQL"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models",
+      "text": "Which models are available through Azure OpenAI Service? (Select all that apply)"
+    }
+  ],
+  "AZ-104": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "az104-mon-039",
+      "objectiveID": "az104-monitoring.monitor-resources-in-azure.03",
+      "optionRationales": {
+        "A": "The `where` operator evaluates a Boolean predicate against each row and keeps only those that satisfy it, so `Level == \"Error\"` returns just the error records. It is the standard KQL row-level filter, equivalent to a SQL `WHERE` clause, and chains naturally into the rest of a pipeline.",
+        "B": "The `summarize` operator groups rows and computes aggregates such as `count()` or `avg()` per group; it reshapes a table into summary statistics rather than testing a per-row condition. Filtering for a specific `Level` value is not what aggregation does.",
+        "C": "The `render` operator takes an already-computed result set and draws it as a chart such as a `timechart` or `barchart`. It controls visualization at the end of a query and has no ability to evaluate a predicate like `Level == \"Error\"` to drop rows.",
+        "D": "The `join` operator merges two tables by matching rows on shared key columns, combining columns from both sides. It correlates datasets rather than filtering a single table on a field comparison, so it cannot perform the `Level == \"Error\"` restriction."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Where"
+        },
+        {
+          "id": "B",
+          "text": "Summarize"
+        },
+        {
+          "id": "C",
+          "text": "Render"
+        },
+        {
+          "id": "D",
+          "text": "Join"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/get-started-queries",
+      "text": "Which KQL operator filters rows based on a condition such as `Level == \"Error\"`?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "id": "q221",
+      "objectiveID": "az104-storage.configure-and-manage-storage-accounts.01",
+      "optionRationales": {
+        "A": "Standard general-purpose v2 (StorageV2) accounts host HDD-backed Azure file shares under pay-as-you-go or provisioned v2 billing and support SKUs such as Standard_LRS, Standard_ZRS, and Standard_GRS.",
+        "B": "FileStorage is the premium account kind dedicated to SSD-backed Azure file shares billed under the provisioned model, supporting Premium_LRS and Premium_ZRS for low-latency, high-IOPS workloads.",
+        "C": "BlobStorage is a legacy blob-only account kind that supports only block and append blobs; it cannot host the Files service.",
+        "D": "BlockBlobStorage is a premium account kind reserved for high-transaction block and append blob workloads and does not support the Files service."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`StorageV2` (general purpose v2)"
+        },
+        {
+          "id": "B",
+          "text": "`FileStorage`"
+        },
+        {
+          "id": "C",
+          "text": "`BlobStorage`"
+        },
+        {
+          "id": "D",
+          "text": "`BlockBlobStorage`"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview",
+      "text": "Which two storage account kinds can host Azure file shares? Select two."
+    }
+  ],
+  "AZ-204": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "D"
+      ],
+      "id": "az204-232",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "1 MB does not correspond to any Queue Storage message limit; it overstates the per-message capacity, which is far smaller. No tier of Queue Storage permits a message this large.",
+        "B": "4 MB is not a valid per-message size for Queue Storage and exceeds its actual maximum by a wide margin. Such a payload would need to be offloaded to Blob Storage with only a pointer placed on the queue.",
+        "C": "256 KB is the Standard-tier maximum for Azure Service Bus messages, a different service with its own quotas, not the limit for Queue Storage. Queue Storage messages cannot reach this size.",
+        "D": "An individual message in Azure Queue Storage is capped at 64 KB. When a workload needs larger payloads, the common pattern is to store the body in Blob Storage and enqueue only a reference to the blob, keeping the queue message within the limit."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "1 MB"
+        },
+        {
+          "id": "B",
+          "text": "4 MB"
+        },
+        {
+          "id": "C",
+          "text": "256 KB"
+        },
+        {
+          "id": "D",
+          "text": "64 KB"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction",
+      "text": "What is the maximum size of a single message in Azure Queue Storage?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "D",
+        "C"
+      ],
+      "id": "az204-050",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "`Manual` is not an ACI restart policy. The supported restart policies are `Always`, `Never`, and `OnFailure`.",
+        "B": "`OnCrash` is not an ACI restart policy; the failure-only policy name is `OnFailure`.",
+        "C": "`Never` is a supported ACI restart policy for run-to-completion work; the container group runs at most once and remains stopped after the process exits.",
+        "D": "`Always` is a supported ACI restart policy and the default behavior; it continuously restarts the container after exit, which is useful for long-running services that should stay available.",
+        "E": "`Scheduled` is not an ACI restart policy. Restart policy controls what happens after the container process exits, not when a container should run."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Manual"
+        },
+        {
+          "id": "B",
+          "text": "`OnCrash`"
+        },
+        {
+          "id": "C",
+          "text": "Never"
+        },
+        {
+          "id": "D",
+          "text": "Always"
+        },
+        {
+          "id": "E",
+          "text": "Scheduled"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-restart-policy",
+      "text": "Which TWO of the following are restart policy options for Azure Container Instances? Select two."
+    }
+  ],
+  "AZ-305": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "D"
+      ],
+      "id": "az305-storage-080",
+      "objectiveID": "az305-storage.design-data-storage-solutions-for-semi-structured-and-unstructur.03",
+      "optionRationales": {
+        "A": "An Application Insights alert notifies on telemetry conditions for monitored apps; it is an observability signal and provides no place to store media files.",
+        "B": "Azure Bastion delivers secure RDP/SSH connectivity to virtual machines through the portal and holds no object data of any kind.",
+        "C": "A network security group filters network traffic with allow and deny rules; it controls connectivity rather than persisting large binary objects.",
+        "D": "Azure Blob Storage is purpose-built for massive volumes of unstructured objects like images and video, and its hot/cool/cold/archive tiers let you match cost to access frequency."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Application Insights alert only"
+        },
+        {
+          "id": "B",
+          "text": "Azure Bastion only"
+        },
+        {
+          "id": "C",
+          "text": "Network security group only"
+        },
+        {
+          "id": "D",
+          "text": "Azure Blob Storage"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-305#skills-measured-as-of-april-17,-2026",
+      "text": "A solution stores large images and videos at low cost. What should be recommended?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "id": "az305-identity-015",
+      "objectiveID": "az305-identity.design-authentication-and-authorization-solutions.05",
+      "optionRationales": {
+        "A": "A hardware key performs public key authentication bound to the origin, so a credential presented to a lookalike domain will not validate no matter how convincing the page is.",
+        "B": "The credential is bound to the device and to the relying party, and the biometric or PIN unlocks it locally, so there is no shared secret an attacker can relay.",
+        "C": "A texted code is a shared secret the user can read aloud or type into any page, which is exactly what real-time phishing proxies are built to capture.",
+        "D": "Voice approval conveys a secret or a prompt the user can be socially engineered into approving for an attacker's session rather than their own.",
+        "E": "An emailed passcode is a shared secret in transit, and it also inherits the security of the mailbox, which may itself be the account under attack."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "FIDO2 security keys"
+        },
+        {
+          "id": "B",
+          "text": "Windows Hello for Business"
+        },
+        {
+          "id": "C",
+          "text": "SMS one-time passcodes"
+        },
+        {
+          "id": "D",
+          "text": "Voice call approval"
+        },
+        {
+          "id": "E",
+          "text": "Email one-time passcodes"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-strengths",
+      "text": "An architect must design phishing-resistant authentication for administrators. Which two methods satisfy that requirement? Select two."
+    }
+  ],
+  "AZ-400": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "az400-processes-008",
+      "objectiveID": "az400-processes.design-and-implement-traceability-and-flow-of-work.01",
+      "optionRationales": {
+        "A": "The Scrum process uses Epics, Features, Product Backlog Items, Tasks, and Bugs. It tracks requirements as Product Backlog Items rather than User Stories, so it does not match the named types.",
+        "B": "The Agile process template defines Epics, Features, User Stories, Tasks, and Bugs, matching the exact set of work item types in the question and suiting iterative delivery teams.",
+        "C": "The CMMI process targets formal change management with Epics, Features, Requirements, Tasks, Bugs, and Change Requests. It uses Requirements instead of User Stories and is heavier than what is described.",
+        "D": "The Basic process is the lightweight default, offering only Epics, Issues, and Tasks. It deliberately omits Features and User Stories, so it does not provide the full hierarchy listed."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Scrum"
+        },
+        {
+          "id": "B",
+          "text": "Agile"
+        },
+        {
+          "id": "C",
+          "text": "`CMMI`"
+        },
+        {
+          "id": "D",
+          "text": "Basic"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process",
+      "text": "In Azure DevOps, which process template includes work item types for Epics, Features, User Stories, and Tasks?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "C",
+        "D",
+        "B",
+        "E"
+      ],
+      "id": "az400_pipe_q028",
+      "objectiveID": "az400-pipelines.design-and-implement-a-package-management-strategy.01",
+      "optionRationales": {
+        "A": "Cargo crates for Rust are not a supported GitHub Packages registry type; supported ecosystems are npm, NuGet, Maven/Gradle, Docker, and RubyGems.",
+        "B": "GitHub Packages supports Maven (and Gradle), so Java artifacts can be published and resolved directly from the registry.",
+        "C": "GitHub Packages hosts an npm registry, letting teams publish and consume JavaScript packages scoped to their repository or organization.",
+        "D": "GitHub Packages provides a NuGet registry for publishing and restoring .NET packages, authenticated with a GitHub token.",
+        "E": "GitHub Packages hosts Docker and OCI container images through the GitHub Container Registry (ghcr.io)."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Cargo (Rust)"
+        },
+        {
+          "id": "B",
+          "text": "Maven"
+        },
+        {
+          "id": "C",
+          "text": "Npm"
+        },
+        {
+          "id": "D",
+          "text": "NuGet"
+        },
+        {
+          "id": "E",
+          "text": "Docker/Container images"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/devops/artifacts/start-using-azure-artifacts",
+      "text": "Which package types does GitHub Packages support as registries? (Select all that apply)"
+    }
+  ],
+  "AZ-500": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "az500-networking-002",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "A rule's name is only a human-readable label for identification and has no bearing on the sequence in which the NSG engine processes rules.",
+        "B": "Direction simply states whether a rule applies to inbound or outbound traffic; inbound and outbound rules are maintained in separate sets but ordering within each set is still decided by another property.",
+        "C": "Each rule carries a Priority value between 100 and 4096, and the NSG evaluates from the lowest number to the highest, stopping at the first match, so a lower priority number wins over broader, higher-numbered rules.",
+        "D": "Protocol (TCP, UDP, ICMP, or Any) is a match condition that decides whether a rule applies to a packet, not the order in which rules are checked."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Rule name"
+        },
+        {
+          "id": "B",
+          "text": "Direction"
+        },
+        {
+          "id": "C",
+          "text": "Priority"
+        },
+        {
+          "id": "D",
+          "text": "Protocol"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview#security-rules",
+      "text": "Which NSG rule property determines the order in which rules are evaluated?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "C",
+        "D"
+      ],
+      "id": "az500-operations-093",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "Defender for Cloud security alerts top out at High; there is no Critical tier in its alert severity scale, so this is not one of the three values.",
+        "B": "High denotes a high-confidence, high-impact threat that warrants immediate investigation and is the top of the three-level Defender for Cloud alert scale.",
+        "C": "Medium flags suspicious activity that may or may not be malicious and merits review, sitting in the middle of the three severity levels.",
+        "D": "Low marks anomalous behavior that could be benign, forming the lowest of the three Defender for Cloud alert severities.",
+        "E": "Informational is a recommendation/secure-score concept, not a value used to grade Defender for Cloud security alerts, so it falls outside the three-level alert scale.",
+        "F": "Warning is not part of the Defender for Cloud alert severity taxonomy; the scale uses High, Medium, and Low rather than a Warning tier."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Critical"
+        },
+        {
+          "id": "B",
+          "text": "High"
+        },
+        {
+          "id": "C",
+          "text": "Medium"
+        },
+        {
+          "id": "D",
+          "text": "Low"
+        },
+        {
+          "id": "E",
+          "text": "Informational"
+        },
+        {
+          "id": "F",
+          "text": "Warning"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/managing-and-responding-alerts",
+      "text": "Which THREE alert severity levels does Microsoft Defender for Cloud use? Select THREE."
+    }
+  ],
+  "AZ-700": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "az700-003",
+      "objectiveID": "az700-core.design-and-implement-ip-addressing-for-azure-resources.03",
+      "optionRationales": {
+        "A": "This count leaves out two of the platform's reserved entries; Azure withholds the network identifier, the gateway, both DNS mapping addresses, and the broadcast address in every subnet.",
+        "B": "Four is one short of the true reservation, because Azure sets aside the `.0` network address, the `.1` gateway, the `.2` and `.3` DNS mapping addresses, plus the final broadcast address.",
+        "C": "Azure reserves five addresses per subnet: `x.x.x.0` as the network address, `x.x.x.1` as the default gateway, `x.x.x.2` and `x.x.x.3` for Azure DNS mapping, and the final address for broadcast, none of which can be assigned to resources.",
+        "D": "Only the network and broadcast addresses would be reserved under classic IP math, but Azure additionally withholds the gateway and two DNS mapping addresses, raising the total beyond this figure."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets",
+      "text": "How many IP addresses does Azure reserve in each subnet?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "id": "az700-115",
+      "objectiveID": "az700-connectivity.design-implement-and-manage-a-point-to-site-vpn-connection.02",
+      "optionRationales": {
+        "A": "`OpenVPN` is a supported P2S tunnel protocol that runs over TLS and works across Windows, macOS, Linux, iOS, and Android, making it the broadest cross-platform option for Azure VPN Gateway.",
+        "B": "`SSTP` is an SSL/TLS-based P2S protocol supported by Azure VPN Gateway; it traverses firewalls easily over TCP 443 but is limited to Windows clients.",
+        "C": "`IKEv2` is an IPsec-based P2S protocol supported by Azure VPN Gateway for Windows and macOS native clients and strongSwan on Linux when using certificate authentication.",
+        "D": "`L2TP` (typically L2TP/IPsec) is a legacy tunneling protocol that Azure VPN Gateway does not offer for point-to-site connections, so it cannot be selected here.",
+        "E": "`PPTP` is an obsolete protocol with known security weaknesses and is not implemented by Azure VPN Gateway for point-to-site clients."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`OpenVPN`"
+        },
+        {
+          "id": "B",
+          "text": "`SSTP`"
+        },
+        {
+          "id": "C",
+          "text": "`IKEv2`"
+        },
+        {
+          "id": "D",
+          "text": "`L2TP`"
+        },
+        {
+          "id": "E",
+          "text": "`PPTP`"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-about",
+      "text": "Which `THREE` protocols can be used for Azure point-to-site VPN connections? Select three."
+    }
+  ],
+  "AZ-900": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "az900-services-011",
+      "objectiveID": "az900-services.describe-azure-compute-and-networking-services.05",
+      "optionRationales": {
+        "A": "This service hosts domain zones on Microsoft's global name server infrastructure and answers the queries that translate names into IP addresses.",
+        "B": "A firewall inspects and filters traffic according to configured rules, which is a security function rather than name resolution.",
+        "C": "Bastion provides secure browser-based access to virtual machines without giving them public IP addresses, unrelated to resolving names.",
+        "D": "Front Door routes, caches, and accelerates web traffic from global points of presence rather than serving DNS zones."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure DNS"
+        },
+        {
+          "id": "B",
+          "text": "Azure Firewall"
+        },
+        {
+          "id": "C",
+          "text": "Azure Bastion"
+        },
+        {
+          "id": "D",
+          "text": "Azure Front Door"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/dns/dns-overview",
+      "text": "Which Azure service resolves domain names to IP addresses for resources hosted in Azure?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "D"
+      ],
+      "id": "az900-ex-020",
+      "objectiveID": "az900-services.describe-azure-storage-services.05",
+      "optionRationales": {
+        "A": "Azure Advisor is a recommendations engine that analyzes resource configurations and surfaces guidance on cost, security, reliability, and performance; it has no file-transfer capability and cannot move data into a storage account.",
+        "B": "`AzCopy` is a command-line utility purpose-built to copy data to and from Azure Storage, making it ideal for scripted or high-throughput uploads from an on-premises server to Blob Storage.",
+        "C": "Azure Service Health reports on Azure platform incidents, planned maintenance, and health advisories affecting your subscription; it is a status and notification service, not a data-movement tool.",
+        "D": "Azure Storage Explorer is a graphical client that lets you browse storage accounts and drag-and-drop files into Blob containers, giving a user-friendly way to upload data from a local machine.",
+        "E": "Azure Policy evaluates and enforces governance rules so resources stay compliant with organizational standards; it audits and restricts configurations rather than transferring any files to storage."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Advisor"
+        },
+        {
+          "id": "B",
+          "text": "`AzCopy`"
+        },
+        {
+          "id": "C",
+          "text": "Azure Service Health"
+        },
+        {
+          "id": "D",
+          "text": "Azure Storage Explorer"
+        },
+        {
+          "id": "E",
+          "text": "Azure Policy"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10",
+      "text": "Which two tools can be used to copy files from an on-premises server to Azure Blob Storage? Select two."
+    }
+  ],
+  "DP-100": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "dp100-optimize-040",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "Azure OpenAI Service requires a minimum of 10 training examples to initiate fine-tuning; while quality improves substantially with more data, the documented minimum threshold is 10.",
+        "B": "50 examples is the recommended starting point for meaningful fine-tuning results and is above the minimum; the documented minimum is 10, not 50, examples required to begin the process.",
+        "C": "500 examples would produce good fine-tuning results but is far above the documented minimum requirement of 10 examples needed to start fine-tuning in Azure OpenAI Service.",
+        "D": "5,000 examples is a large fine-tuning dataset that supports high-quality specialisation, but it overstates the minimum by 500x; the service allows fine-tuning to begin with as few as 10 examples."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "10 examples"
+        },
+        {
+          "id": "B",
+          "text": "50 examples"
+        },
+        {
+          "id": "C",
+          "text": "500 examples"
+        },
+        {
+          "id": "D",
+          "text": "5,000 examples"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/fine-tuning",
+      "text": "What is the minimum number of training examples required for fine-tuning in Azure OpenAI Service?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "id": "dp100-train-057",
+      "objectiveID": "",
+      "optionRationales": {
+        "A": "The `command` field is mandatory in a command component YAML because it defines the executable instruction the component runs, typically invoking the training or processing script with its bound inputs and outputs.",
+        "B": "The `environment` field is required so the component has a defined runtime image with the Python and package dependencies its `command` needs to execute reproducibly across compute targets.",
+        "C": "Recurrence is configured by creating a schedule against a published pipeline job, not within a component spec, so a timing field has no place in the component definition.",
+        "D": "Serving destinations are declared in online or batch endpoint and deployment YAML; a reusable component only describes a computation step and never names where its results are hosted."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "command"
+        },
+        {
+          "id": "B",
+          "text": "environment"
+        },
+        {
+          "id": "C",
+          "text": "schedule"
+        },
+        {
+          "id": "D",
+          "text": "endpoint"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/machine-learning/reference-yaml-component-command",
+      "text": "Which TWO of the following are required fields in a pipeline component YAML specification? Select TWO."
+    }
+  ],
+  "DP-300": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "dp300-monitoring-067",
+      "objectiveID": "dp300-monitoring.monitor-and-optimize-query-performance.02",
+      "optionRationales": {
+        "A": "The Buffer IO wait category aggregates page-read waits like PAGEIOLATCH; CPU-scheduler waits such as `SOS_SCHEDULER_YIELD` fall under the CPU category.",
+        "B": "Query Store buckets waits into categories; SOS_SCHEDULER_YIELD falls under the CPU category.",
+        "C": "The Lock category aggregates lock-blocking waits (LCK_*); `SOS_SCHEDULER_YIELD` is a CPU-scheduler wait and belongs to the CPU category.",
+        "D": "The Preemptive category covers waits when SQL Server calls out to external code; `SOS_SCHEDULER_YIELD` is cooperative CPU scheduling and falls under the CPU category."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Buffer IO"
+        },
+        {
+          "id": "B",
+          "text": "CPU"
+        },
+        {
+          "id": "C",
+          "text": "Lock"
+        },
+        {
+          "id": "D",
+          "text": "Preemptive"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store",
+      "text": "Which Query Store wait category aggregates CPU waits such as `SOS_SCHEDULER_YIELD`?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "D",
+        "B",
+        "C"
+      ],
+      "id": "dp300-monitoring-018",
+      "objectiveID": "dp300-monitoring.monitor-and-optimize-query-performance.01",
+      "optionRationales": {
+        "A": "`ADHOC_ONLY` is not a defined value for `QUERY_CAPTURE_MODE`; the valid modes are `ALL`, `AUTO`, `CUSTOM`, and `NONE`, so this setting cannot be applied.",
+        "B": "`AUTO` is the default Query Store capture mode on Azure SQL Database, skipping insignificant or ad hoc queries based on execution count, CPU, and duration to focus capture on each query that materially affects workload performance.",
+        "C": "`CUSTOM` lets you tune capture policy thresholds such as execution count and total compile/execution time through `QUERY_CAPTURE_POLICY` settings for fine-grained control.",
+        "D": "`ALL` captures every query that executes against the database, giving the most complete Query Store coverage at the cost of higher capture overhead."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`ADHOC_ONLY`"
+        },
+        {
+          "id": "B",
+          "text": "`AUTO`"
+        },
+        {
+          "id": "C",
+          "text": "`CUSTOM`"
+        },
+        {
+          "id": "D",
+          "text": "`ALL`"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/sql/relational-databases/performance/best-practice-with-the-query-store",
+      "text": "Which capture modes are valid for Query Store `QUERY_CAPTURE_MODE`? (Choose three.)"
+    }
+  ],
+  "DP-700": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "D"
+      ],
+      "id": "dp700-implement-001",
+      "objectiveID": "dp700-implement.configure-security-and-governance.01",
+      "optionRationales": {
+        "A": "This role can manage permissions, add other admins, and delete the workspace, making it the most privileged option and inappropriate for a read-only analyst.",
+        "B": "This role adds write and modify rights, letting the user edit notebooks, run pipelines, and change lakehouse data, which exceeds read-only access.",
+        "C": "This role includes everything a contributor can do plus sharing items and adding people at lower roles, far more than read-only access requires.",
+        "D": "Correct — this role grants view and read access to all items and data in the workspace while blocking any create, modify, write, or delete operation."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Admin"
+        },
+        {
+          "id": "B",
+          "text": "Contributor"
+        },
+        {
+          "id": "C",
+          "text": "Member"
+        },
+        {
+          "id": "D",
+          "text": "Viewer"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/fabric/fundamentals/roles-workspaces",
+      "text": "A new analyst must be able to open every notebook, pipeline, and lakehouse in a workspace and read the data, but must not be allowed to edit any item or write data. Which single workspace role grants exactly this access?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "id": "dp700-monitor-121",
+      "objectiveID": "dp700-monitor.optimize-performance.02",
+      "optionRationales": {
+        "A": "Correct — this setting controls the serverless throughput resources available to the Copy activity, from automatic selection through higher resource levels.",
+        "B": "Correct — this setting caps the number of parallel threads reading from the source or writing to the destination during one copy run.",
+        "C": "Retries repeat a failed activity for resilience and do not increase the throughput of a successful copy attempt.",
+        "D": "Consistency verification checks file or row-count integrity and can reduce performance; it is not a throughput-allocation control.",
+        "E": "Secure output logging limits exposure of activity details and has no role in allocating copy compute or parallel threads."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Intelligent throughput optimization"
+        },
+        {
+          "id": "B",
+          "text": "Degree of copy parallelism"
+        },
+        {
+          "id": "C",
+          "text": "Activity retry count"
+        },
+        {
+          "id": "D",
+          "text": "Data consistency verification"
+        },
+        {
+          "id": "E",
+          "text": "Secure output logging"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/fabric/data-factory/copy-activity-performance-and-scalability-guide",
+      "text": "Which two Copy activity settings directly control the compute and parallelism available to a single Fabric pipeline copy run? (Select two.)"
+    }
+  ],
+  "DP-750": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "dp750-pipelines-014",
+      "objectiveID": "dp750-pipelines.implement-lakeflow-jobs.01",
+      "optionRationales": {
+        "A": "A trigger only defines when a job starts, such as on a schedule or a file-arrival event; it does not own or coordinate the tasks themselves.",
+        "B": "A job owns and coordinates its tasks, trigger, parameters, and notifications, running them as one workflow that is shown as a DAG.",
+        "C": "A task is a single unit of work inside a job, like running a notebook, so it is orchestrated by the job rather than being the container.",
+        "D": "A Lakeflow Spark Declarative Pipeline processes data and can be invoked by a pipeline task, but it is not the resource that schedules multiple tasks."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "A trigger"
+        },
+        {
+          "id": "B",
+          "text": "A job"
+        },
+        {
+          "id": "C",
+          "text": "A task"
+        },
+        {
+          "id": "D",
+          "text": "A pipeline"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/azure/databricks/jobs/",
+      "text": "In Lakeflow Jobs, which resource acts as the top-level container that coordinates, schedules, and runs one or more tasks as a single workflow?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "id": "dp750-pipelines-095",
+      "objectiveID": "dp750-pipelines.monitor-troubleshoot-and-optimize-workloads-in-azure-databricks.05",
+      "optionRationales": {
+        "A": "Automatic file-layout compaction and incremental clustering are queued to keep query performance healthy without manual runs.",
+        "B": "Removing data files no longer referenced by the table is queued automatically to reduce cloud storage costs over time.",
+        "C": "Collecting table statistics for the cost-based optimizer is part of the automatic maintenance set, improving query planning.",
+        "D": "Z-ordering is never applied automatically; on Z-ordered tables the feature compacts but skips the already Z-ordered files.",
+        "E": "Rewriting soft-deleted data with a purge is an explicit manual operation, not something queued by the automatic maintenance feature."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`OPTIMIZE`"
+        },
+        {
+          "id": "B",
+          "text": "`VACUUM`"
+        },
+        {
+          "id": "C",
+          "text": "`ANALYZE`"
+        },
+        {
+          "id": "D",
+          "text": "`ZORDER`"
+        },
+        {
+          "id": "E",
+          "text": "`REORG TABLE`"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/azure/databricks/optimizations/predictive-optimization",
+      "text": "Which maintenance operations does predictive optimization run automatically on Unity Catalog managed tables? (Select three.)"
+    }
+  ],
+  "DP-800": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "dp800-ai-069",
+      "objectiveID": "dp800-ai.design-and-implement-retrieval-augmented-generation-rag.02",
+      "optionRationales": {
+        "A": "`DELETE` is used to remove a resource, not to request a generated completion.",
+        "B": "Chat-completions endpoints accept a `POST` request carrying the prompt and parameters as a JSON body, which is how a RAG procedure submits its call.",
+        "C": "`PATCH` applies a partial update to an existing resource rather than invoking text generation.",
+        "D": "`GET` retrieves resources and carries no request body, so it cannot send the JSON payload a completions call requires."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "DELETE"
+        },
+        {
+          "id": "B",
+          "text": "POST"
+        },
+        {
+          "id": "C",
+          "text": "PATCH"
+        },
+        {
+          "id": "D",
+          "text": "GET"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql",
+      "text": "Which HTTP method does a RAG procedure use to invoke a chat-completions endpoint?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "A"
+      ],
+      "id": "dp800-design-129",
+      "objectiveID": "dp800-design.design-and-implement-database-objects.02",
+      "optionRationales": {
+        "A": "Change data capture records the inserts, updates, and deletes applied to a table so consumers can review or replay the change history.",
+        "B": "Temporal tables automatically retain prior row versions in a history table, enabling point-in-time and trend queries over changes.",
+        "C": "A check constraint validates that values meet a rule on write and does not track historical changes.",
+        "D": "A nonclustered index improves lookup and seek performance but stores no history of how rows changed.",
+        "E": "A computed column derives a value from other columns and keeps no record of past states."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Change data capture (CDC)"
+        },
+        {
+          "id": "B",
+          "text": "System-versioned temporal tables"
+        },
+        {
+          "id": "C",
+          "text": "A check constraint on a numeric range"
+        },
+        {
+          "id": "D",
+          "text": "A nonclustered index on the primary key"
+        },
+        {
+          "id": "E",
+          "text": "A computed column that uppercases a name"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/sql/relational-databases/track-changes/about-change-data-capture-sql-server?view=sql-server-ver17",
+      "text": "Which two features help you retain and review historical changes to rows over time? (Select two.)"
+    }
+  ],
+  "DP-900": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "dp900-coredata-010",
+      "objectiveID": "dp900-coredata.identify-options-for-data-storage.01",
+      "optionRationales": {
+        "A": "\"`ORC`\" (Optimized Row Columnar) is a Hadoop-era columnar format — common in Hive, less default in Azure analytics than Parquet.",
+        "B": "CSV (Comma-Separated Values) is a plain text format where data values are delimited by commas, with each row on a new line.",
+        "C": "\"Avro\" is a binary row-oriented format with embedded schema — common for streaming/Kafka, less ideal for large-scale analytical scans.",
+        "D": "Parquet, Avro, and ORC are binary formats optimized for different data processing scenarios."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`ORC`"
+        },
+        {
+          "id": "B",
+          "text": "`CSV`"
+        },
+        {
+          "id": "C",
+          "text": "Avro"
+        },
+        {
+          "id": "D",
+          "text": "Parquet"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/training/modules/explore-core-data-concepts/",
+      "text": "Which file format stores data as plain text with values separated by commas?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "D",
+        "C"
+      ],
+      "id": "dp900-coredata-038",
+      "objectiveID": "dp900-coredata.identify-options-for-data-storage.01",
+      "optionRationales": {
+        "A": "Avro serializes each record as a contiguous binary row with its schema, which suits write-heavy streaming and row retrieval but is not a columnar layout.",
+        "B": "A `CSV` file stores values row by row as plain text, so reading one field still requires scanning every record; it is a row-based format, not columnar.",
+        "C": "`ORC` (Optimized Row Columnar) lays data out by column with built-in indexes and compression, delivering the efficient column pruning that analytical workloads need.",
+        "D": "Parquet physically groups values by column, allowing analytical queries to read only the needed columns and apply column-level compression for faster scans."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Avro"
+        },
+        {
+          "id": "B",
+          "text": "`CSV`"
+        },
+        {
+          "id": "C",
+          "text": "`ORC`"
+        },
+        {
+          "id": "D",
+          "text": "Parquet"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/training/modules/explore-core-data-concepts/",
+      "text": "Which TWO of the following file formats use columnar storage? Select TWO."
+    }
+  ],
+  "GH-300": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "D"
+      ],
+      "id": "gh300-features-001",
+      "objectiveID": "gh300-features.use-github-copilot-in-the-ide.01",
+      "optionRationales": {
+        "A": "GitHub publishes a plugin on the JetBrains Marketplace that brings completions and chat to IDEs like IntelliJ IDEA and PyCharm, keeping it in the supported set.",
+        "B": "A GitHub-maintained plugin exists for this Java-oriented IDE, letting developers accept suggestions and open chat, so it belongs to the supported group.",
+        "C": "The flagship Copilot experience lives here through a dedicated Marketplace extension delivering completions, chat, and agent mode, so it is firmly supported.",
+        "D": "GitHub maintains no first-party plugin for that editor, leaving it outside the officially supported lineup spanning Visual Studio, VS Code, JetBrains IDEs, Neovim, Eclipse, and Xcode."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "JetBrains IntelliJ IDEA"
+        },
+        {
+          "id": "B",
+          "text": "Eclipse"
+        },
+        {
+          "id": "C",
+          "text": "Visual Studio Code"
+        },
+        {
+          "id": "D",
+          "text": "Sublime Text"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/training/modules/get-started-github-copilot/5-examine-github-copilot-setup-process",
+      "text": "Which of the following code editors does NOT have an officially maintained GitHub Copilot extension or plugin?"
+    }
+  ],
+  "GH-900": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "C"
+      ],
+      "id": "gh900-basics-047",
+      "objectiveID": "gh900-basics.version-control-fundamentals.03",
+      "optionRationales": {
+        "A": "`main` names the default branch, which is a line of commits inside the repository, not a named connection to a remote repository.",
+        "B": "`HEAD` is a pointer to the currently checked-out commit or branch, not a remote connection that clone configures.",
+        "C": "Cloning sets up `origin` automatically as the alias for the source URL, so subsequent push and fetch commands default to that remote.",
+        "D": "`upstream` is a remote contributors add manually in a fork workflow to track the original project; clone never creates it for you."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "main"
+        },
+        {
+          "id": "B",
+          "text": "head"
+        },
+        {
+          "id": "C",
+          "text": "origin"
+        },
+        {
+          "id": "D",
+          "text": "upstream"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/training/modules/intro-to-git/3-basic-git-commands",
+      "text": "After running git clone against a GitHub repository, which remote does Git automatically configure to point at the URL you cloned from?"
+    }
+  ],
+  "PL-300": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "pl300-model-053",
+      "objectiveID": "pl300-model.create-model-calculations-using-dax.02",
+      "optionRationales": {
+        "A": "`SUMX` is a DAX iterator — it walks each row of the supplied table in row context and evaluates the expression per row. The expression reads column references against the current row.",
+        "B": "`SUM` aggregates a single column without iterating. It doesn't evaluate an expression per row, so it doesn't introduce row context.",
+        "C": "`CALCULATE` modifies filter context. It does perform context transition (converting an existing row context into filter context) but doesn't itself create a new row context.",
+        "D": "`VALUES` returns the distinct values of a column as a single-column table. A table-valued function, not an iterator.",
+        "E": "RELATED uses an existing row context to navigate a relationship and pull a value from the related table. It depends on row context but does not create one."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`SUMX`"
+        },
+        {
+          "id": "B",
+          "text": "`SUM`"
+        },
+        {
+          "id": "C",
+          "text": "`CALCULATE`"
+        },
+        {
+          "id": "D",
+          "text": "`VALUES`"
+        },
+        {
+          "id": "E",
+          "text": "RELATED"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/dax/sumx-function-dax",
+      "text": "Which DAX function introduces row context when iterating a table?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "id": "pl300-model-026",
+      "objectiveID": "pl300-model.create-model-calculations-using-dax.04",
+      "optionRationales": {
+        "A": "`AVERAGE` returns the arithmetic mean of a column, a classic measure of central tendency that summarizes where values cluster.",
+        "B": "`MEDIAN` returns the middle value of the sorted set, describing the center of the distribution and resisting the influence of outliers.",
+        "C": "`COUNTROWS` counts the number of rows in a table; a frequency count says nothing about where the values center.",
+        "D": "`MAX` returns the largest value in a column, an extreme of the distribution rather than its center.",
+        "E": "`STDEV.P` quantifies how far values spread around the mean, making it a measure of dispersion, not central tendency."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`AVERAGE`"
+        },
+        {
+          "id": "B",
+          "text": "MEDIAN"
+        },
+        {
+          "id": "C",
+          "text": "`COUNTROWS`"
+        },
+        {
+          "id": "D",
+          "text": "MAX"
+        },
+        {
+          "id": "E",
+          "text": "STDEV.P"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/dax/statistical-functions-dax",
+      "text": "Which two DAX functions return a measure of central tendency? Select two answers."
+    }
+  ],
+  "PL-900": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "A"
+      ],
+      "id": "pl900-environment-056",
+      "objectiveID": "pl900-environment.describe-microsoft-dataverse.02",
+      "optionRationales": {
+        "A": "Correct — a Choice column shows a predefined option list and restricts the user to a single selection.",
+        "B": "Multi Select Choice lets users pick more than one option, which breaks the single-value requirement.",
+        "C": "A Lookup points to a row in a related table rather than a fixed list of static options.",
+        "D": "A Text column accepts free-form characters and does not constrain entries to a predefined option set."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Choice"
+        },
+        {
+          "id": "B",
+          "text": "Multi Select Choice"
+        },
+        {
+          "id": "C",
+          "text": "Lookup"
+        },
+        {
+          "id": "D",
+          "text": "Text"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/power-apps/maker/data-platform/create-edit-field-portal",
+      "text": "A maker needs a column that lets users pick exactly one value from a fixed, predefined set of options. Which column data type fits this requirement?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "E",
+        "D"
+      ],
+      "id": "pl900-agents-012",
+      "objectiveID": "pl900-agents.describe-how-to-manage-agents-in-copilot-studio.02",
+      "optionRationales": {
+        "A": "Correct — a resolved outcome records that the session reached End of Conversation with confirmed or implied success.",
+        "B": "Publishing makes an agent available on a channel and is not a session-level outcome shown in conversation analytics.",
+        "C": "Archiving relates to managing the agent or its content over time, not to how a single user session concludes.",
+        "D": "Correct — an abandoned outcome records an engaged session that ended without resolution or escalation after inactivity.",
+        "E": "Correct — an escalated outcome records that the agent handed the user to a human through the Escalate topic or a Transfer conversation node."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Resolved"
+        },
+        {
+          "id": "B",
+          "text": "Published"
+        },
+        {
+          "id": "C",
+          "text": "Archived"
+        },
+        {
+          "id": "D",
+          "text": "Abandoned"
+        },
+        {
+          "id": "E",
+          "text": "Escalated"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/microsoft-copilot-studio/guidance/measuring-outcomes",
+      "text": "When reviewing the analytics dashboard, which outcomes can an engaged conversational session end with? (Select three.)"
+    }
+  ],
+  "SC-100": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "D"
+      ],
+      "id": "sc100-secops-019",
+      "objectiveID": "sc100-secops.design-solutions-for-identity-and-access-management.03",
+      "optionRationales": {
+        "A": "Network controls such as segmentation and micro-segmentation remain a defense-in-depth layer in Zero Trust, but the model explicitly assumes breach and stops treating network location as the basis for trust, so it is not the primary perimeter.",
+        "B": "Data is the asset being protected through classification, labeling, and encryption in Zero Trust; it is the thing access policy guards, not the perimeter that gates and verifies each request.",
+        "C": "Endpoint is one of the Zero Trust pillars whose health and compliance feed access decisions, but the device signal supports the identity-centered access decision rather than constituting the perimeter itself.",
+        "D": "In Zero Trust, identity is the primary control plane: every access request is authenticated and authorized against continuously evaluated signals about user, device, location, and session risk, replacing the legacy network boundary as the perimeter."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Network"
+        },
+        {
+          "id": "B",
+          "text": "Data"
+        },
+        {
+          "id": "C",
+          "text": "Endpoint"
+        },
+        {
+          "id": "D",
+          "text": "Identity"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/security/zero-trust/",
+      "text": "Which Microsoft pillar is the PRIMARY security perimeter in a Zero Trust architecture?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "C",
+        "A"
+      ],
+      "id": "sc100-bp-033",
+      "objectiveID": "sc100-bp.design-solutions-that-align-with-the-microsoft-cloud-adoption-fr.02",
+      "optionRationales": {
+        "A": "Reliability is one of the five Azure Well-Architected Framework pillars, addressing resilience, availability, and recovery so a workload meets its uptime and recovery objectives despite failures.",
+        "B": "Marketing engagement is a business function with no place in the Azure Well-Architected Framework, which scopes only the technical quality attributes of a workload.",
+        "C": "Security is one of the five Azure Well-Architected Framework pillars, focused on protecting workload confidentiality, integrity, and availability through defense-in-depth, identity controls, and threat protection.",
+        "D": "Procurement is an organizational purchasing activity, not an architectural quality attribute, and does not appear among the framework's five pillars of Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliability"
+        },
+        {
+          "id": "B",
+          "text": "Marketing"
+        },
+        {
+          "id": "C",
+          "text": "Security"
+        },
+        {
+          "id": "D",
+          "text": "Procurement"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/well-architected/",
+      "text": "Which TWO pillars are part of the Azure Well-Architected Framework? (Choose 2)"
+    }
+  ],
+  "SC-200": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "sc200-incident-049",
+      "objectiveID": "sc200-incident.investigate-microsoft-365-activities-to-identify-threats.01",
+      "optionRationales": {
+        "A": "90 days is a common retention figure in other Microsoft services, but it is not the default audit-log retention applied to most activities in Purview Audit (Standard).",
+        "B": "Microsoft increased the default Audit (Standard) retention to 180 days for most activities. Audit (Premium) can extend retention to one year, or ten years with the add-on, but 180 days is the Standard default.",
+        "C": "One year of retention is achievable with Audit (Premium) and an appropriate retention policy, not by default in Audit (Standard) for most activities.",
+        "D": "30 days was an older default for some Audit (Standard) activity, but it is no longer the standard retention period for most activities, so it understates how long events remain searchable."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "90 days"
+        },
+        {
+          "id": "B",
+          "text": "180 days"
+        },
+        {
+          "id": "C",
+          "text": "1 year"
+        },
+        {
+          "id": "D",
+          "text": "30 days"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "text": "What is the default audit log retention for most activities in Microsoft Purview Audit (Standard)?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "C",
+        "D",
+        "B",
+        "E"
+      ],
+      "id": "sc200-hunt-054",
+      "objectiveID": "sc200-hunt.detect-threats-by-using-the-microsoft-sentinel-platform.04",
+      "optionRationales": {
+        "A": "Azure Policy enforces governance and compliance rules on Azure resource configurations. It is a control-plane governance service, not a Sentinel threat-hunting tool.",
+        "B": "Bookmarks preserve interesting query rows during a hunt so analysts can revisit findings, add notes, and promote them into an investigation later.",
+        "C": "Hunting queries are saved KQL queries surfaced on Sentinel's Hunting page, letting analysts proactively search logs for threats that no analytics rule has yet flagged.",
+        "D": "Livestream lets you test a hunting query against incoming events in near real time and get notified when new matches arrive, supporting active hunts.",
+        "E": "Jupyter notebooks in Sentinel run advanced, multi-step hunting and machine-learning analysis over workspace data using languages like Python."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Policy"
+        },
+        {
+          "id": "B",
+          "text": "Bookmarks"
+        },
+        {
+          "id": "C",
+          "text": "Hunting queries"
+        },
+        {
+          "id": "D",
+          "text": "Livestream"
+        },
+        {
+          "id": "E",
+          "text": "Notebooks"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/sentinel/hunting",
+      "text": "Which Microsoft Sentinel features support proactive threat hunting? (Choose four.)"
+    }
+  ],
+  "SC-300": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "sc300-identities-029",
+      "objectiveID": "sc300-identities.create-configure-and-manage-microsoft-entra-identities.02",
+      "optionRationales": {
+        "A": "A single owner is best-practice guidance rather than a platform-enforced floor; the service does not block creation or persistence of an ownerless group, so one is not the minimum it requires.",
+        "B": "The platform permits a Microsoft 365 group to exist with zero owners, which is why orphaned groups can occur and why Microsoft guidance recommends assigning at least two owners to keep a group managed.",
+        "C": "Two owners is the recommended count Microsoft advises to avoid orphaning, but it is advisory guidance, not the minimum the directory actually enforces on a group.",
+        "D": "Three owners exceeds any enforced or recommended threshold; the directory imposes no such requirement, so this overstates the minimum the platform mandates for a group."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups",
+      "text": "What is the minimum number of owners required for a Microsoft 365 group?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "D",
+        "A"
+      ],
+      "id": "sc300-access-020",
+      "objectiveID": "sc300-access.plan-implement-and-manage-microsoft-entra-conditional-access.02",
+      "optionRationales": {
+        "A": "Device platforms is a Conditional Access condition that scopes a policy to client operating systems such as Windows, iOS, Android, or macOS so controls can differ by endpoint type.",
+        "B": "Compute sizing for virtual machines is an Azure Resource Manager infrastructure property and is never surfaced as a Conditional Access signal, which targets users, apps, and sign-in context.",
+        "C": "Network throughput is a performance metric with no representation in the Conditional Access condition model, which evaluates identity and device signals rather than data-transfer volume.",
+        "D": "Sign-in risk is a Conditional Access condition fed by Microsoft Entra ID Protection, letting a policy require MFA or block access when a sign-in is scored low, medium, or high risk in real time."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Device platforms"
+        },
+        {
+          "id": "B",
+          "text": "Azure VM size"
+        },
+        {
+          "id": "C",
+          "text": "Bandwidth usage"
+        },
+        {
+          "id": "D",
+          "text": "Sign-in risk"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "text": "Which TWO conditions are part of a Conditional Access policy? (Choose 2)"
+    }
+  ],
+  "SC-500": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "sc500-posture-customlog-01",
+      "objectiveID": "sc500-posture.implement-activity-and-event-collection-in-microsoft-sentinel.07",
+      "optionRationales": {
+        "A": "There is no `_CEF` table suffix; Common Event Format data lands in the built-in `CommonSecurityLog` table, which uses no custom suffix.",
+        "B": "Custom log tables fed by the Logs Ingestion API or a DCR carry the `_CL` suffix, marking them as customer-defined tables in the workspace.",
+        "C": "A `_SRCH` table holds the output of a search job, not raw ingested custom data; the workspace creates it when you run a search against stored logs.",
+        "D": "A `_RST` table is the hot-cache table produced when you restore archived data for interactive querying, so it represents recovered data rather than a custom ingestion target."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "_CEF"
+        },
+        {
+          "id": "B",
+          "text": "_CL"
+        },
+        {
+          "id": "C",
+          "text": "_SRCH"
+        },
+        {
+          "id": "D",
+          "text": "_RST"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/azure/azure-monitor/logs/data-retention-configure",
+      "text": "Which suffix identifies a custom log table that receives data through the Logs Ingestion API in a Microsoft Sentinel workspace?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "A",
+        "D"
+      ],
+      "id": "sc500-bp-20260922-002",
+      "objectiveID": "sc500-identity.implement-governance-to-enforce-security-and-regulatory-complian.08",
+      "optionRationales": {
+        "A": "Azure Backup marks disabling soft delete or security features as mandatory, preventing an administrator from excluding this destructive security change from MUA.",
+        "B": "Restore is optional and disabled by default in the Resource Guard protected-operation list, so it is not one of the mandatory protections.",
+        "C": "Stopping backup while retaining data is an optional protected operation for a Recovery Services vault, even though it is enabled by default.",
+        "D": "Removing MUA protection is mandatory; otherwise a vault administrator could first remove the authorization control and then perform destructive operations."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Disable soft delete or other vault security features"
+        },
+        {
+          "id": "B",
+          "text": "Run a restore for a protected backup item"
+        },
+        {
+          "id": "C",
+          "text": "Stop backup while retaining the protected data"
+        },
+        {
+          "id": "D",
+          "text": "Remove MUA protection from the vault"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/backup/multi-user-authorization-concept",
+      "text": "Which two Recovery Services vault operations are mandatory Resource Guard protections when MUA is configured? (Choose two.)"
+    }
+  ],
+  "SC-900": [
+    {
+      "context": "",
+      "correctAnswers": [
+        "B"
+      ],
+      "id": "sc900-concepts-008",
+      "objectiveID": "sc900-concepts.describe-security-and-compliance-concepts.04",
+      "optionRationales": {
+        "A": "Asymmetric encryption uses a mathematically related key pair, a public key and a private key, where one key encrypts and the other decrypts. Because it relies on two distinct keys rather than one, it does not match a single-key scheme.",
+        "B": "Symmetric encryption uses a single shared key to both encrypt and decrypt the data, making it fast and efficient but requiring the key to be distributed securely to all parties.",
+        "C": "Hashing is a one-way function that converts input into a fixed-size digest and cannot be reversed to recover the original data. It produces no key and is not used to decrypt, so it is not an encryption type at all.",
+        "D": "Digital signing uses a private key to sign and a public key to verify, providing authenticity and integrity rather than confidentiality. It is built on asymmetric key pairs, not a single shared encryption key."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Asymmetric encryption"
+        },
+        {
+          "id": "B",
+          "text": "Symmetric encryption"
+        },
+        {
+          "id": "C",
+          "text": "Hashing"
+        },
+        {
+          "id": "D",
+          "text": "Digital signing"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/",
+      "text": "Which type of encryption uses a single key for both encryption and decryption?"
+    },
+    {
+      "context": "",
+      "correctAnswers": [
+        "B",
+        "D"
+      ],
+      "id": "sc900-concepts-019",
+      "objectiveID": "sc900-concepts.define-identity-concepts.05",
+      "optionRationales": {
+        "A": "LDAP is the legacy directory-access protocol used to query and modify on-premises Active Directory. It is not one of the modern token-based authentication protocols Microsoft Entra ID uses for cloud sign-in.",
+        "B": "OAuth 2.0 is the industry-standard authorization protocol Microsoft Entra ID uses to issue access tokens that let an application call a protected resource on a user's behalf. It is a core part of modern authentication in Entra ID.",
+        "C": "Kerberos is the ticket-based authentication protocol used by on-premises Active Directory Domain Services. It is a legacy domain protocol, not the cloud authentication mechanism Entra ID relies on.",
+        "D": "OpenID Connect is built on top of OAuth 2.0 and adds an authentication layer, returning an ID token that proves the user's identity. Microsoft Entra ID uses it together with OAuth 2.0 for modern authentication.",
+        "E": "NTLM is the legacy Windows challenge-response protocol used by older on-premises systems. It is not used for Microsoft Entra ID cloud sign-in, which relies on modern token-based protocols."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "`LDAP`"
+        },
+        {
+          "id": "B",
+          "text": "OAuth 2.0"
+        },
+        {
+          "id": "C",
+          "text": "Kerberos"
+        },
+        {
+          "id": "D",
+          "text": "OpenID Connect"
+        },
+        {
+          "id": "E",
+          "text": "`NTLM`"
+        }
+      ],
+      "resourceURL": "https://learn.microsoft.com/en-us/training/modules/describe-identity-principles-concepts/",
+      "text": "Which TWO protocols are used by Microsoft Entra ID for modern authentication? (Choose TWO.)"
+    }
+  ]
+}

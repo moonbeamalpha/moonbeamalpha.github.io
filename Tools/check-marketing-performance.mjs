@@ -50,6 +50,11 @@ for (const [, attributes, source] of home.matchAll(/<script\b([^>]*)>([\s\S]*?)<
   if (!/type="application\/ld\+json"/.test(attributes)) new vm.Script(source);
 }
 new vm.Script(read('theme.js'));
+for (const path of ['conversion.js', 'practice.js', 'section-nav.js']) new vm.Script(read(path));
+const conversionCSS = read('conversion.css');
+const actionGradient = conversionCSS.match(/\.btn-primary, \.badge-ask-aura span, \.badge-exam-iq \{ background: linear-gradient\(135deg, (#[0-9a-f]{6}), (#[0-9a-f]{6})\); color: #fff;/i);
+assert(actionGradient, 'Primary actions and new-feature badges share the accessible gradient');
+for (const color of actionGradient.slice(1)) assert(contrastRatio('#ffffff', color) >= 4.5, 'White action labels must meet AA across the gradient');
 const entranceScript = home.match(/\(function initEntranceAnimations\(\) \{[\s\S]*?\n        \}\)\(\);/)?.[0];
 assert(entranceScript, 'Native entrance animations are missing');
 assert(entranceScript.includes("'.hero-devices > .phone-wrap'"), 'Only decorative hero phones should animate');

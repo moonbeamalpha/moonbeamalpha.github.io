@@ -51,7 +51,7 @@ SITE = Path(__file__).resolve().parent.parent
 EXAMS = SITE / "exams"
 CHECK = "--check" in sys.argv[1:]
 
-STORE_BASE = "https://apps.apple.com/app/apple-store/id6760594569"
+STORE_BASE = "https://apps.apple.com/app/id6760594569"
 
 MARKER = "mobile-cta-bar"                       # idempotency marker: full-edit pages
 HERO_MARKER = "am-cert-hero__lead-code"          # idempotency marker: _hero.html
@@ -94,7 +94,7 @@ def sticky_bar_html(code: str, code_lower: str, retired: bool) -> str:
         '  <!-- Sticky mobile download bar — the hero CTA scrolls away fast on a phone -->\n'
         '  <div class="mobile-cta-bar" id="mobile-cta-bar">\n'
         f'    <span class="mobile-cta-bar__label">{sticky_bar_label(code, retired)}</span>\n'
-        f'    <a class="mobile-cta-bar__btn" href="{STORE_BASE}?ct=exam-{code_lower}-sticky" rel="noopener noreferrer">Download</a>\n'
+        f'    <a class="mobile-cta-bar__btn" href="{STORE_BASE}?ct=exam-{code_lower}-sticky&amp;pt=128558698&amp;mt=8" rel="noopener noreferrer">Download</a>\n'
         '  </div>\n'
     )
 
@@ -133,7 +133,7 @@ def inline_cta_html(code: str, code_lower: str, suffix: str, retired: bool) -> s
     return (
         '  <aside class="exam-inline-cta" aria-label="Download Azure Mastery">\n'
         f'    <p class="exam-inline-cta__text">{cta_copy(code, retired)}</p>\n'
-        f'    <a class="exam-inline-cta__btn" href="{STORE_BASE}?ct=exam-{code_lower}-{suffix}" rel="noopener noreferrer">Download free</a>\n'
+        f'    <a class="exam-inline-cta__btn" href="{STORE_BASE}?ct=exam-{code_lower}-{suffix}&amp;pt=128558698&amp;mt=8" rel="noopener noreferrer">Download free</a>\n'
         '  </aside>\n'
     )
 

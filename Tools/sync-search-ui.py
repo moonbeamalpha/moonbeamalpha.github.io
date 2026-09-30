@@ -32,6 +32,7 @@ def widget(prefix, inline=False):
       <div class="am-search-scroll">
         <div class="am-search-examples" data-search-examples aria-label="Try a search">{examples}</div>
         <ul class="am-search-results" id="{prefix}-results" data-search-results aria-label="Search results"></ul>
+        <details class="am-search-related" data-search-related hidden><summary>Related results</summary><ul class="am-search-results" data-search-related-results aria-label="Related search results"></ul></details>
         <button class="am-search-action" type="button" data-search-more hidden>Show more</button>
         <button class="am-search-action" type="button" data-search-retry hidden>Try again</button>
         <div class="am-search-browse"><a href="/exams/">Browse exams →</a><a href="/guides/">Study guides →</a></div>
@@ -86,11 +87,10 @@ def render_page(path, text):
     text = replace_block(text, 'dialog', dialog, '</body>')
     if relative in {'index.html', 'exams/index.html'}:
         if relative == 'index.html':
-            anchor = '    <div class="roadmap-filters"'
-            # The roadmap toolbar's exact class is discovered once; use its opening tag.
-            match = re.search(r'<[^>]+class="roadmap-filter[^\"]*"[^>]*>', text)
+            # The shared search sits immediately above the ordinary exam finder.
+            match = re.search(r'<[^>]+class="exam-finder__filters"[^>]*>', text)
             if not match:
-                raise ValueError('Missing roadmap filters')
+                raise ValueError('Missing exam finder filters')
             anchor = match[0]
         else:
             anchor = '    <section id="fam-azure"'

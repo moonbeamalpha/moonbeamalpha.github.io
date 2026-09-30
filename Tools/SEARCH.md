@@ -54,7 +54,12 @@ Current pages precede retired references for broad subject queries; exact old
 codes remain findable with lifecycle and successor labels.
 
 All / Exams / Guides / Pages filters use the same matcher in the modal and inline
-search. Results appear in batches of eight. Enter in the search field focuses
+search. Results appear in batches of eight. Exact exam searches show the exam, its how-to
+guide and comparisons first; incidental code mentions sit in a closed Related
+results disclosure. Broad subject searches lead with current exams and include
+useful guides in the first batch. Short metadata matches use the curated summary
+rather than a clipped sentence from deep in the page. Empty inline search stays
+compact until a query is entered. Enter in the search field focuses
 the first result; Enter on a result follows its link. Arrow keys move through
 results, and Tab traverses ordinary links and controls. Escape closes the native
 dialog and restores focus. The dialog explicitly wraps Tab at its boundaries.
@@ -74,7 +79,7 @@ exam and guide navigation remains available.
 - Node contracts: code variants, unknown codes, exact ranking, title prefixes,
   subjects, aliases, misspellings/transpositions, multiword matching, type
   filters, successor routes, excerpts and index budget. Measured p95 about 1ms
-  on the local Node runtime against 68 destinations; index 142,437 bytes gzip.
+  on the local Node runtime against 68 destinations; index remains below the 150 KiB gzip budget.
 - Browser: header controls at 320, 430, 768, 1024 and 1440 CSS pixels across the
   homepage, exam hub, AZ-104, GH-900, guides hub, About, Support and Privacy.
   No search/header controls escaped the viewport in 40 checks.
@@ -97,5 +102,5 @@ exam and guide navigation remains available.
   VoiceOver testing remain manual checks; these browser tests do not establish
   those device results.
 
-All existing marketing CI commands were also run locally. No baseline or
-advertised count was changed. Publishing remains a separate owner decision.
+All existing marketing CI commands were also run locally. Similarity baselines are unchanged. Advertised counts were refreshed from the
+current app export, with count-owned social images regenerated. Publishing remains a separate owner decision.

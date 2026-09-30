@@ -120,6 +120,7 @@ _HEADER_RE = re.compile(r'<header\b[^>]*>.*?</header>', re.I | re.S)
 _FOOTER_RE = re.compile(r'<footer\b[^>]*>.*?</footer>', re.I | re.S)
 # Site search is shared navigation chrome, rather than exam editorial content.
 _SEARCH_DIALOG_RE = re.compile(r'<dialog\b[^>]*id="am-search-dialog"[^>]*>.*?</dialog>', re.I | re.S)
+_CONVERSION_CHROME_RE = re.compile(r'<!-- conversion-hero:start -->\s*(.*?)\s*<!-- conversion-hero:end -->', re.S)
 _PAGE_TOC_RE = re.compile(r'<nav\s+class="page-toc"[^>]*>.*?</nav>', re.I | re.S)
 _GUIDES_SECTION_RE = re.compile(r'<section\s+id="guides"[^>]*>.*?</section>', re.I | re.S)
 _HOW_HELPS_SECTION_RE = re.compile(r'<section\s+id="how-helps"[^>]*>.*?</section>', re.I | re.S)
@@ -165,11 +166,19 @@ def _strip_question_types(text: str) -> str:
 
 def extract_words(path: str) -> list[str]:
     """Visible body text of an exam page, reduced to a lowercase word list."""
-    text = open(path, encoding="utf-8").read()
+    with open(path, encoding="utf-8") as source:
+        text = source.read()
     text = _SCRIPT_STYLE_RE.sub(' ', text)
     text = _HEADER_RE.sub(' ', text)
     text = _FOOTER_RE.sub(' ', text)
     text = _SEARCH_DIALOG_RE.sub(' ', text)
+    # Exclude only the exact generator-owned purchase/navigation component.
+    # Altered prose cannot hide behind these markers; the ratchet still includes it.
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('conversion_ui', os.path.join(ROOT, 'Tools', 'sync-conversion-ui.py'))
+    conversion = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(conversion)
+    text = _CONVERSION_CHROME_RE.sub(lambda match: ' ' if match[1] == conversion.EXAM_HERO_CHROME else match[0], text)
     text = _PAGE_TOC_RE.sub(' ', text)
     text = _GUIDES_SECTION_RE.sub(' ', text)
     text = _HOW_HELPS_SECTION_RE.sub(' ', text)

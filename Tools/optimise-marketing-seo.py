@@ -414,12 +414,14 @@ def choose_question(questions: list[dict], format_name: str, *, options: bool = 
             q for q in candidates
             if 3 <= len(q.get("options", [])) <= 6
             and all(len(o.get("text", "")) <= 105 for o in q.get("options", []))
+            and all(q.get("optionRationales", {}).get(o["id"]) for o in q["options"])
+            and not q.get("caseStudyID") and not q.get("caseStudyParentID") and not q.get("formatData")
         ]
     if not candidates:
         raise ValueError(f"question bank has no usable {format_name} sample")
     return min(
         candidates,
-        key=lambda q: len(q.get("text", ""))
+        key=lambda q: len(q.get("context", "")) + len(q.get("text", ""))
         + sum(len(o.get("text", "")) for o in q.get("options", [])),
     )
 
@@ -431,9 +433,30 @@ def option_list(question: dict, marker: str) -> str:
         selected = ' class="is-selected"' if option.get("id") in correct else ""
         items.append(
             f'              <li{selected}><span class="qt__viz-{marker}"></span>'
-            f'{clean_text(option.get("text", ""), 90)}</li>'
+            f'<span class="qt__option-text">{clean_text(option.get("text", ""))}</span>'
+            f'<span class="qt__rationale" hidden>{clean_text(question["optionRationales"][option["id"]])}</span></li>'
         )
     return "\n".join(items)
+
+
+def question_prompt(question: dict) -> str:
+    """Keep the complete scenario and stem; short demo copy must still be answerable."""
+    context = question.get("context", "")
+    context_html = f'<p class="qt__context">{clean_text(context)}</p>' if context else ""
+    return context_html + f'<p class="qt__viz-q">{clean_text(question.get("text", ""))}</p>'
+
+
+def answer_fallback(question: dict) -> str:
+    answers = ", ".join(o["text"] for o in question["options"] if o["id"] in question["correctAnswers"])
+    return ('<noscript><details class="qt__answer-fallback"><summary>Read the answer and explanation</summary>'
+            f'<p><strong>{clean_text(answers)}</strong> — {clean_text(question["explanation"])}</p></details></noscript>')
+
+
+def single_preview(code: str, question: dict) -> str:
+    return ('      <div class="question-types" data-preview-source="in-app-question-bank"><article class="qt">'
+            f'<div class="qt__viz" data-quiz="1" data-exam-code="{code}" data-question-id="{question["id"]}">'
+            f'{question_prompt(question)}<ul class="qt__viz-options">{option_list(question,"radio")}</ul></div>'
+            f'{answer_fallback(question)}</article></div>')
 
 
 def drag_sample(questions: list[dict]) -> tuple[str, list[str], str]:
@@ -518,24 +541,27 @@ def preview_articles(code: str, questions: list[dict]) -> str:
     return f'''      <div class="question-types" data-preview-source="in-app-question-bank">
 
         <article class="qt">
-          <div class="qt__viz" data-quiz="1">
-            <p class="qt__viz-q">{clean_text(single.get("text", ""), 175)}</p>
+          <div class="qt__viz" data-quiz="1" data-exam-code="{code}" data-question-id="{single['id']}">
+            {question_prompt(single)}
             <ul class="qt__viz-options">
 {option_list(single, "radio")}
             </ul>
           </div>
           <h3>Multiple choice</h3>
-          <p>An original {code} practice question with one correct answer. The app explains every option after you answer.</p>
+          {answer_fallback(single)}
+          <p>An original {code} practice question with one correct answer. Choose an option to read its written rationale.</p>
           <span class="qt__hint">Exam-specific sample</span>
         </article>
 
+        <details class="qt__more"><summary>Explore more question formats</summary><div class="qt__more-grid">
         <article class="qt">
-          <div class="qt__viz" data-quiz="1">
-            <p class="qt__viz-q">{clean_text(multi.get("text", ""), 175)}</p>
+          <div class="qt__viz" data-quiz="1" data-exam-code="{code}" data-question-id="{multi['id']}">
+            {question_prompt(multi)}
             <ul class="qt__viz-options">
 {option_list(multi, "checkbox")}
             </ul>
           </div>
+          {answer_fallback(multi)}
           <h3>Multi-select</h3>
           <p>An original {code} multi-select question. Select all the correct options to earn the mark.</p>
           <span class="qt__hint">All-or-nothing</span>
@@ -599,6 +625,7 @@ def preview_articles(code: str, questions: list[dict]) -> str:
           <span class="qt__hint qt__hint--purple">App exclusive</span>
         </article>
 
+        </div></details>
       </div>'''
 
 
@@ -681,7 +708,8 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
         text, r'<meta name="apple-itunes-app" content="[^"]*">',
         (
             '<meta name="apple-itunes-app" '
-            f'content="app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}">'
+            f'content="app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}, '
+            f'affiliate-data=pt=128558698&amp;ct=exam-{code.lower()}-banner&amp;mt=8">'
         ),
         "exam-scoped Smart App Banner",
     )
@@ -854,12 +882,21 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
         flags=re.S,
     )
 
-    # The two GitHub exam pages use a shorter layout without a preview section.
+    # The GitHub pages also get a complete single-answer sample in their short layout.
+    if '<section id="question-types"' not in text:
+        single = choose_question(questions, 'singleSelect', options=True)
+        sample = (f'    <section id="question-types" class="container"><p class="label-eyebrow section-eyebrow">Try a question</p>'
+                  f'<h2 class="display-small section-title">Practise a {code} decision.</h2>'
+                  f'{single_preview(code,single)}</section>\n')
+        text = text.replace('    <section id="what-is"', sample + '    <section id="what-is"', 1)
     if '<section id="question-types"' in text:
-        preview = preview_articles(code, questions)
+        if code in {'GH-300', 'GH-900'}:
+            preview = single_preview(code, choose_question(questions, 'singleSelect', options=True))
+        else:
+            preview = preview_articles(code, questions)
         text = replace_once(
             text,
-            r'      <div class="question-types"(?: data-preview-source="[^"]+")?>.*?      </div>\s*</section>',
+            r'[ \t]*<div class="question-types"(?: data-preview-source="[^"]+")?>.*?</div>\s*</section>',
             preview + "\n    </section>",
             "question preview section",
             flags=re.S,
@@ -886,6 +923,8 @@ def main() -> None:
     counts = exam_data["exams"]
     names = exam_data.get("names", {})
     changed: list[Path] = []
+    samples = {}
+    home_question = None
 
     for code, count in sorted(counts.items()):
         page = EXAMS_DIR / code.lower() / "index.html"
@@ -897,11 +936,36 @@ def main() -> None:
             after = update_modified_date(before, code)
         else:
             questions = json.loads(resource.read_text())["questions"]
+            samples[code] = [{key: question.get(key, '') for key in
+                              ['id', 'text', 'context', 'options', 'correctAnswers', 'optionRationales', 'resourceURL', 'objectiveID']}
+                             for question in [choose_question(questions, fmt, options=True) for fmt in
+                                              (['singleSelect'] if code in {'GH-300', 'GH-900'} else ['singleSelect', 'multiSelect'])]]
+            if code == "AZ-104":
+                home_question = choose_question(questions, "singleSelect", options=True)
             after = update_page(before, code, count, questions, names.get(code, code))
         if after != before:
             changed.append(page)
             if not args.check:
                 page.write_text(after)
+
+    if home_question is not None:
+        home = ROOT / "index.html"
+        before = home.read_text()
+        replacement = (f'<div class="qt__viz" data-quiz="1" data-exam-code="AZ-104" data-question-id="{home_question["id"]}">'
+                       f'{question_prompt(home_question)}<ul class="qt__viz-options">{option_list(home_question,"radio")}</ul></div>'
+                       f'{answer_fallback(home_question)}')
+        after = replace_once(before, r'<div class="qt__viz" data-quiz="1" data-exam-code="AZ-104".*?</noscript>',
+                             replacement, "homepage authored practice preview", flags=re.S)
+        if after != before:
+            changed.append(home)
+            if not args.check: home.write_text(after)
+
+    if not args.dates_only:
+        sample_file = ROOT / 'data/practice-previews.json'
+        expected = json.dumps(samples, ensure_ascii=False, sort_keys=True, indent=2) + '\n'
+        if not sample_file.exists() or sample_file.read_text() != expected:
+            changed.append(sample_file)
+            if not args.check: sample_file.write_text(expected)
 
     if changed:
         verb = "would update" if args.check else "updated"

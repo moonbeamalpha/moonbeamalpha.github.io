@@ -36,6 +36,7 @@
 .site-nav > .am-search-trigger ~ .theme-toggle { margin-left: 0; }
 .site-nav:has(> .am-search-trigger) { gap: 8px; }
 .site-nav:has(> .am-search-trigger) > .am-search-trigger { margin-right: 0; }
+.site-nav .nav-brand, .site-nav .site-nav__brand { min-width: 44px; min-height: 44px; }
 .am-search-legacy-nav {
   display: flex;
   align-items: center;
@@ -255,14 +256,15 @@
   .am-search-result__link { padding-inline: 4px; }
 }
 @media (max-width: 389px) {
-  .site-nav:has(> .site-nav__context) { gap: 6px; }
+  .site-nav:has(> .site-nav__context) { gap: 4px; padding-inline: 10px; }
   .site-nav:has(> .site-nav__context) .site-nav__brand img { width: 24px; height: 24px; }
   .site-nav:has(> .site-nav__context) .site-nav__brand > span { width: 45px; font-size: 11px; }
-  .site-nav > .site-nav__context { padding-inline: 5px; }
-  .site-nav:has(> .site-nav__context) .site-nav__cta { padding-inline: 10px; }
+  .site-nav > .site-nav__context { padding-inline: 3px; }
+  .site-nav:has(> .site-nav__context) .site-nav__cta { padding-inline: 8px; }
 }
 @media (max-width: 374px) {
   .site-nav .nav-brand > span, .site-nav .site-nav__brand > span { display: none; }
+  .site-nav .nav-brand, .site-nav .site-nav__brand { justify-content: center; }
 }
 @media (max-width: 600px) {
   .am-search-dialog {

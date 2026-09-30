@@ -132,6 +132,20 @@ retiring" — `validate-marketing-seo.py` enforces the wording matches `RETIRING
 | `Tools/test-domain-counts.py` | self-test for `sync-marketing-counts.py`'s per-domain count patcher, against in-memory fixtures — no app-repo checkout needed |
 | `Tools/sync-social-footer.py` | the shared social-follow component on every exam page, `guides/index.html`, and the homepage |
 
+## Site search
+
+Search is generated from the sitemap's published Azure Mastery pages and the
+committed catalogue snapshot. After adding or editing searchable content, run
+`python3 Tools/build-search-index.py`. After adding a page, run
+`python3 Tools/sync-search-ui.py` to add the shared header control and dialog.
+Then run `python3 Tools/version-static-assets.py` so the index, script and style
+references receive content hashes. CI checks all three outputs for drift and
+runs `Tools/test-search-index.py` and `Tools/test-search.mjs`.
+
+See `Tools/SEARCH.md` for matching, content exclusions and browser validation.
+The search index does not read private question banks. Retired-exam metadata is
+read from the existing catalogue/SEO lifecycle sources rather than another list.
+
 ## Adding a guide
 
 A new guide touches every one of these surfaces:

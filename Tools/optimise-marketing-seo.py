@@ -39,45 +39,44 @@ DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-08-09"
 SEO_UPDATED_OVERRIDES = {
-    # S6 close-out (2026-09-06): every current exam page re-ported/touched by
-    # the scannable-recipe and tooling/lifecycle re-port work, so sitemap
-    # lastmod and JSON-LD dateModified agree (validate_exam_dateModified_vs_sitemap).
-    "AB-100": "2026-09-22",
-    "AB-410": "2026-09-28",
-    "AB-620": "2026-09-06",
-    "AB-650": "2026-09-22",
-    "AB-731": "2026-09-06",
-    "AB-900": "2026-09-06",
-    "AI-103": "2026-09-06",
-    "AI-200": "2026-09-22",
-    "AI-300": "2026-09-22",
-    "AI-500": "2026-09-06",
-    "AI-901": "2026-09-06",
-    "AZ-104": "2026-09-28",
-    "AZ-305": "2026-09-28",
-    "AZ-400": "2026-09-22",
-    "AZ-700": "2026-09-28",
-    "AZ-900": "2026-09-28",
-    "DP-300": "2026-09-28",
-    "DP-700": "2026-09-28",
-    "DP-750": "2026-09-06",
-    "DP-800": "2026-09-22",
-    "DP-900": "2026-09-28",
-    "GH-300": "2026-09-06",
-    "GH-900": "2026-09-28",
-    "PL-300": "2026-09-28",
-    "PL-900": "2026-09-28",
-    "SC-100": "2026-09-28",
-    "SC-200": "2026-09-28",
-    "SC-300": "2026-09-28",
-    "SC-500": "2026-09-22",
-    "SC-900": "2026-09-28",
-    # Retired-exam pages this branch re-ported (past-tense/humanizer passes).
-    "AI-102": "2026-09-06",
-    "AI-900": "2026-09-28",
-    "AZ-204": "2026-09-22",
-    "AZ-500": "2026-09-28",
-    "DP-100": "2026-09-06",
+    # Shared search UI (2026-09-30) touched every exam page. Keep sitemap
+    # lastmod and JSON-LD dateModified aligned (validate_exam_dateModified_vs_sitemap).
+    "AB-100": "2026-09-30",
+    "AB-410": "2026-09-30",
+    "AB-620": "2026-09-30",
+    "AB-650": "2026-09-30",
+    "AB-731": "2026-09-30",
+    "AB-900": "2026-09-30",
+    "AI-103": "2026-09-30",
+    "AI-200": "2026-09-30",
+    "AI-300": "2026-09-30",
+    "AI-500": "2026-09-30",
+    "AI-901": "2026-09-30",
+    "AZ-104": "2026-09-30",
+    "AZ-305": "2026-09-30",
+    "AZ-400": "2026-09-30",
+    "AZ-700": "2026-09-30",
+    "AZ-900": "2026-09-30",
+    "DP-300": "2026-09-30",
+    "DP-700": "2026-09-30",
+    "DP-750": "2026-09-30",
+    "DP-800": "2026-09-30",
+    "DP-900": "2026-09-30",
+    "GH-300": "2026-09-30",
+    "GH-900": "2026-09-30",
+    "PL-300": "2026-09-30",
+    "PL-900": "2026-09-30",
+    "SC-100": "2026-09-30",
+    "SC-200": "2026-09-30",
+    "SC-300": "2026-09-30",
+    "SC-500": "2026-09-30",
+    "SC-900": "2026-09-30",
+    # Retired reference pages receive the same shared navigation change.
+    "AI-102": "2026-09-30",
+    "AI-900": "2026-09-30",
+    "AZ-204": "2026-09-30",
+    "AZ-500": "2026-09-30",
+    "DP-100": "2026-09-30",
 }
 RETIRED_EXAMS = {
     "AI-900": {
@@ -782,11 +781,7 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
             "SoftwareApplication description",
             flags=re.S,
         )
-    updated_date = SEO_UPDATED_OVERRIDES.get(code, SEO_UPDATED)
-    text = replace_once(
-        text, r'("dateModified": ")\d{4}-\d{2}-\d{2}("\s*,)',
-        rf'\g<1>{updated_date}\2', "dateModified",
-    )
+    text = update_modified_date(text, code)
     text = replace_once(
         text, r'("keywords": ")[^"]*("\s*,\s*"featureList")',
         lambda m: m.group(1) + schema_keywords + m.group(2),
@@ -872,9 +867,18 @@ def update_page(text: str, code: str, count: int, questions: list[dict], name: s
     return text
 
 
+def update_modified_date(text: str, code: str) -> str:
+    updated_date = SEO_UPDATED_OVERRIDES.get(code, SEO_UPDATED)
+    return replace_once(
+        text, r'("dateModified": ")\d{4}-\d{2}-\d{2}("\s*,)',
+        rf'\g<1>{updated_date}\2', "dateModified",
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="report drift without writing files")
+    parser.add_argument("--dates-only", action="store_true", help="sync structured-data dates after shared UI changes, without loading banks or regenerating previews")
     parser.add_argument("--app-repo", type=Path, default=DEFAULT_APP_REPO)
     args = parser.parse_args()
 
@@ -886,11 +890,14 @@ def main() -> None:
     for code, count in sorted(counts.items()):
         page = EXAMS_DIR / code.lower() / "index.html"
         resource = args.app_repo / "App" / "AzureMastery" / "Resources" / code_to_resource_name(code)
-        if not page.exists() or not resource.exists():
+        if not page.exists() or (not args.dates_only and not resource.exists()):
             sys.exit(f"missing page or question bank for {code}: {page} / {resource}")
-        questions = json.loads(resource.read_text())["questions"]
         before = page.read_text()
-        after = update_page(before, code, count, questions, names.get(code, code))
+        if args.dates_only:
+            after = update_modified_date(before, code)
+        else:
+            questions = json.loads(resource.read_text())["questions"]
+            after = update_page(before, code, count, questions, names.get(code, code))
         if after != before:
             changed.append(page)
             if not args.check:

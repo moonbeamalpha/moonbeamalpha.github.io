@@ -38,7 +38,8 @@ tool-owned discovery surface rather than exam copy), the
 contract is enforced separately by check-marketing-ui.py), the
 <div class="question-types"> block (six tool-generated mock-ups, byte-identical
 in shape across every page by design -- B3b is expressly forbidden from
-touching them), and <script>/<style> blocks.
+touching them), the shared <dialog id="am-search-dialog"> navigation surface,
+and <script>/<style> blocks.
 
 Usage:
   python3 Tools/check-page-similarity.py                  # report: top pairs + mean
@@ -117,6 +118,8 @@ DRIFT_TOLERANCE = 0.005
 _SCRIPT_STYLE_RE = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
 _HEADER_RE = re.compile(r'<header\b[^>]*>.*?</header>', re.I | re.S)
 _FOOTER_RE = re.compile(r'<footer\b[^>]*>.*?</footer>', re.I | re.S)
+# Site search is shared navigation chrome, rather than exam editorial content.
+_SEARCH_DIALOG_RE = re.compile(r'<dialog\b[^>]*id="am-search-dialog"[^>]*>.*?</dialog>', re.I | re.S)
 _PAGE_TOC_RE = re.compile(r'<nav\s+class="page-toc"[^>]*>.*?</nav>', re.I | re.S)
 _GUIDES_SECTION_RE = re.compile(r'<section\s+id="guides"[^>]*>.*?</section>', re.I | re.S)
 _HOW_HELPS_SECTION_RE = re.compile(r'<section\s+id="how-helps"[^>]*>.*?</section>', re.I | re.S)
@@ -166,6 +169,7 @@ def extract_words(path: str) -> list[str]:
     text = _SCRIPT_STYLE_RE.sub(' ', text)
     text = _HEADER_RE.sub(' ', text)
     text = _FOOTER_RE.sub(' ', text)
+    text = _SEARCH_DIALOG_RE.sub(' ', text)
     text = _PAGE_TOC_RE.sub(' ', text)
     text = _GUIDES_SECTION_RE.sub(' ', text)
     text = _HOW_HELPS_SECTION_RE.sub(' ', text)

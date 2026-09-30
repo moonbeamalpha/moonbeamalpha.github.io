@@ -118,6 +118,7 @@ NUMBER_WORDS = {
 # bearing slug (Path handles the "/" the same as any other segment), added
 # by Task B4 for the five retired/retiring exams' reference hub.
 STATIC_CONTENT_PAGES = (
+    ("ask-aura", "https://azuremastery.app/ask-aura/", True),
     ("about", "https://azuremastery.app/about/", False),
     ("how-we-write-questions", "https://azuremastery.app/how-we-write-questions/", True),
     ("how-exam-iq-works", "https://azuremastery.app/how-exam-iq-works/", True),
@@ -801,7 +802,8 @@ def main() -> None:
         if canonical != expected_canonical:
             errors.append(f"{page.relative_to(ROOT)}: canonical is {canonical}, expected {expected_canonical}")
         expected_banner = (
-            f"app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}"
+            f"app-id=6760594569, app-argument=azuremastery://exam/{code.lower()}, "
+            f"affiliate-data=pt=128558698&amp;ct=exam-{code.lower()}-banner&amp;mt=8"
         )
         if smart_banner != expected_banner:
             errors.append(

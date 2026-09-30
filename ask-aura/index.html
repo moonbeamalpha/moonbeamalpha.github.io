@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics — same gtag block as the homepage (G-YTN7LFS04Y, grandfathered) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTN7LFS04Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // QA browsers opt themselves out of reporting once via ?am_internal=1. The flag is a
+    // self-set localStorage marker on this origin only; GA4's Internal Traffic filter
+    // drops events that carry traffic_type=internal.
+    try {
+      if (/[?&]am_internal=1(&|$)/.test(location.search)) localStorage.setItem('am_internal', '1');
+      if (localStorage.getItem('am_internal') === '1') gtag('set', { traffic_type: 'internal' });
+    } catch (e) {}
+    gtag('config', 'G-YTN7LFS04Y');
+  </script>
+
+  <title>Ask Aura — Private Study Companion | Azure Mastery</title>
+  <meta name="description" content="Meet Ask Aura, Azure Mastery&#x27;s private Pro study companion. Explore reviewed exam material, focused study sessions and the version 2.0 preview video.">
+  <link rel="canonical" href="https://azuremastery.app/ask-aura/">
+
+  <!-- Crawler directives — allow rich results, full snippet length, large image previews. -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Moonbeam Alpha Ltd">
+  <meta name="publisher" content="Moonbeam Alpha Ltd">
+  <link rel="alternate" type="application/llms.txt" href="/llms.txt">
+
+  <!-- App Store smart banner — iOS Safari surfaces an install prompt -->
+  <meta name="apple-itunes-app" content="app-id=6760594569, affiliate-data=pt=128558698&amp;ct=ask-aura-banner&amp;mt=8">
+  <meta name="application-name" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-title" content="Azure Mastery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Theme + favicons (consistent with the exam pages) -->
+  <meta name="theme-color" content="#050810">
+  <meta name="color-scheme" content="dark">
+  <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F7FAFF';}}catch(e){}})()</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://azuremastery.app/ask-aura/">
+  <meta property="og:title" content="Ask Aura — Azure Mastery’s Private Study Companion">
+  <meta property="og:description" content="Meet Ask Aura, Azure Mastery&#x27;s private Pro study companion. Explore reviewed exam material, focused study sessions and the version 2.0 preview video.">
+  <meta property="og:image" content="https://azuremastery.app/images/ask-aura-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Azure Mastery. Ask Aura — your private study companion. Preview for Pro members, with Aura waving hello.">
+  <meta property="og:site_name" content="Azure Mastery">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ask Aura — Azure Mastery’s Private Study Companion">
+  <meta name="twitter:description" content="Meet Ask Aura, Azure Mastery&#x27;s private Pro study companion. Explore reviewed exam material, focused study sessions and the version 2.0 preview video.">
+  <meta name="twitter:image" content="https://azuremastery.app/images/ask-aura-og.jpg">
+  <meta name="twitter:image:alt" content="Azure Mastery. Ask Aura — your private study companion. Preview for Pro members, with Aura waving hello.">
+
+
+
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) — same as the exam pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/article.css?v=5699efe36aec">
+  <link rel="stylesheet" href="/theme-light.css?v=17b9efbb6807">
+  <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
+
+  <link rel="stylesheet" href="/section-nav.css?v=eb08cd369978">
+<!-- search-assets:start -->
+<link rel="stylesheet" href="/search.css?v=dd169dcca956">
+<script src="/search.js?v=ce2d33cba6f7" data-search-index="/data/search-index.json?v=b65c04f9fc34" defer></script>
+<!-- search-assets:end -->
+<!-- conversion-assets:start -->
+<link rel="stylesheet" href="/conversion.css?v=e94282e84d26">
+<script src="/conversion.js?v=5b782e52b9d8" defer></script>
+<!-- conversion-assets:end -->
+<link rel="stylesheet" href="/video-overview.css?v=a933df6421cf">
+<link rel="stylesheet" href="/ask-aura/aura.css?v=f1ad30169a06">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://azuremastery.app/ask-aura/#webpage",
+      "url": "https://azuremastery.app/ask-aura/",
+      "name": "Ask Aura — Your Private Study Companion",
+      "description": "Meet Ask Aura, Azure Mastery's private Pro study companion. Explore reviewed exam material, focused study sessions and the version 2.0 preview video.",
+      "inLanguage": "en-GB",
+      "datePublished": "2026-09-30",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Azure Mastery",
+        "url": "https://azuremastery.app/"
+      },
+      "breadcrumb": {
+        "@id": "https://azuremastery.app/ask-aura/#breadcrumbs"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://azuremastery.app/ask-aura/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Azure Mastery",
+          "item": "https://azuremastery.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ask Aura"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://azuremastery.app/ask-aura/#faqs",
+      "inLanguage": "en-GB",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Ask Aura included in the free app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ask Aura Preview is available to Pro members. Azure Mastery is free to download, with starter questions for each supported exam. You can compare the access options in the app before buying."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ask Aura use generative AI in this preview?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generative coaching and explanations are not enabled in this preview. Aura starts with reviewed study-guide sections, terminology, question explanations and your on-device Exam IQ priorities. Check the cited source when accuracy matters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Ask Aura offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The preview starts with bundled study material and on-device study priorities. Optional Microsoft Learn lookups need an internet connection and are off by default."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my conversations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Saved Ask Aura conversations stay on this device and are excluded from app cloud sync and backups. Temporary chats are not saved. If you enable Microsoft Learn lookups, Microsoft receives only a public topic name or documentation address, not your message, answers or study progress."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="site-nav">
+    <a class="site-nav__brand" href="/" aria-label="Azure Mastery home">
+      <img src="/images/app-icon.webp" alt="" width="28" height="28">
+      <span>Azure Mastery</span>
+    </a>
+<!-- search-trigger:start -->
+<button class="am-search-trigger" type="button" data-search-open hidden aria-label="Search exams, guides and topics" aria-haspopup="dialog" aria-controls="am-search-dialog"><svg class="am-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span><kbd aria-hidden="true">⌘ K</kbd></button>
+<!-- search-trigger:end -->
+    <button class="theme-toggle" type="button" hidden aria-pressed="false" aria-label="Switch to light theme">
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="site-nav__cta" href="https://apps.apple.com/app/id6760594569?ct=ask-aura-nav&amp;pt=128558698&amp;mt=8" rel="noopener noreferrer">Download</a>
+  </header>
+<main class="aura-page">
+  <section id="aura-overview" class="aura-hero aura-container" data-nav-label="Overview" aria-labelledby="aura-title">
+    <div class="aura-hero__copy">
+      <p class="aura-badge"><span>NEW IN 2.0</span> ASK AURA PREVIEW</p>
+      <h1 id="aura-title">Ask Aura.<br><span class="headline-accent">Study the hard parts, together.</span></h1>
+      <p class="aura-hero__lede"><strong>Azure Mastery’s private study companion.</strong> Start with reviewed exam material and your on-device priorities, then choose a focused next step.</p>
+      <div class="aura-actions"><a class="aura-download btn-primary" href="https://apps.apple.com/app/id6760594569?ct=ask-aura-hero&amp;pt=128558698&amp;mt=8" rel="noopener noreferrer">Download Azure Mastery <span aria-hidden="true">↗</span></a><a class="aura-watch" href="#preview-video"><span aria-hidden="true">▷</span> Watch the preview</a></div>
+      <p class="aura-preview-note">For Pro members · Generative explanations are not enabled in this preview.</p>
+      <div class="aura-handoff"><img src="/images/qr/ask-aura.svg" alt="QR code: scan with your iPhone to open Azure Mastery on the App Store" width="76" height="76" loading="lazy"><p>On your Mac?<br>Scan with your iPhone to install.</p></div>
+    </div>
+    <figure class="aura-hero__character">
+      <div class="aura-hero__orbit" aria-hidden="true"></div>
+      <img src="/images/aura-meet.webp" alt="Aura, your friendly blue and white study companion, waving hello" width="640" height="960" fetchpriority="high" decoding="async">
+      <figcaption>“Let’s find your next step.”</figcaption>
+    </figure>
+  </section>
+  <section id="study-with-aura" class="aura-container" data-nav-label="What Aura can do" aria-labelledby="aura-capabilities-title">
+    <div class="aura-section-heading"><p class="label-eyebrow">A useful place to start</p><h2 class="display-small" id="aura-capabilities-title">Less searching. More understanding.</h2><p>Start with the topic in front of you, or let your study priorities guide the session.</p></div>
+    <div class="aura-capabilities">
+      <article><span class="aura-capability__icon" aria-hidden="true">?</span><h3>Make a concept click.</h3><p>Find a term, compare concepts or revisit a reviewed explanation. Source cards help you check the material behind the response.</p><p class="aura-prompt">“What’s the difference between an NSG and Azure Firewall?”</p></article>
+      <article><span class="aura-capability__icon" aria-hidden="true">✓</span><h3>Check what you remember.</h3><p>Quiz yourself on a topic or work through a reviewed practice question. Keep the reasoning in view as you build understanding.</p><p class="aura-prompt">“Quiz me on networking.”</p></article>
+      <article><span class="aura-capability__icon" aria-hidden="true">15</span><h3>Give your next session a focus.</h3><p>Use Exam IQ priorities, weak areas and due recall prompts to choose a useful next step. Bring saved takeaways back when they’re due.</p><p class="aura-prompt">“Plan my next 15 minutes of study.”</p></article>
+    </div>
+    <p class="aura-examples-note">Example starting prompts. The preview uses reviewed material; it does not generate open-ended explanations.</p>
+  </section>
+  <section id="preview-video" class="video-overview aura-video" data-nav-label="Watch the preview" aria-labelledby="aura-video-title">
+    <div class="video-overview__intro"><p class="label-eyebrow">Meet your study companion</p><h2 class="display-small" id="aura-video-title">See Ask Aura in action.</h2><p class="body-large">A closer look at the version 2.0 preview.</p></div>
+    <div class="video-overview__player" data-overview-player>
+      <div class="video-overview__poster">
+        <div class="video-overview__message" aria-hidden="true"><span class="label-eyebrow">Ask Aura Preview</span><span class="video-overview__headline">Study the hard parts.<br>Together.</span></div>
+        <img class="video-overview__aura" src="/images/aura-hero-guide.webp" width="172" height="258" alt="" loading="lazy" decoding="async">
+        <img class="video-overview__screen" src="/images/cap-ask-aura-welcome.webp" width="390" height="848" alt="" loading="lazy" decoding="async">
+        <button class="video-overview__play" type="button" aria-label="Play the Ask Aura video advert" hidden><span class="video-overview__play-icon" aria-hidden="true">▶</span><span>Watch Ask Aura</span></button>
+      </div>
+    </div>
+    <p class="video-overview__caption">Plays on YouTube when you choose to watch. <a href="https://www.youtube.com/watch?v=rM3rIjQtx4Y" target="_blank" rel="noopener noreferrer">Watch on YouTube <span class="sr-only">(opens a new tab)</span>↗</a></p>
+  </section>
+  <section id="focused-session" class="aura-container aura-session" data-nav-label="A focused session" aria-labelledby="aura-session-title">
+    <figure class="aura-session__screen"><img src="/images/cap-ask-aura-response.webp" alt="Ask Aura proposes a 15-minute AZ-104 networking session: review for five minutes, practise for seven, then recall for three" width="390" height="848" loading="lazy" decoding="async"><figcaption>Ask Aura Preview · A real in-app session</figcaption></figure>
+    <div class="aura-session__copy"><p class="label-eyebrow">From “what next?” to a next step</p><h2 class="display-small" id="aura-session-title">A little direction goes a long way.</h2><p>Aura can turn your current Exam IQ priority into a short session with a clear focus. Here’s one example from the app.</p>
+      <ol class="aura-session__steps"><li><span>01</span><div><h3>Review the distinction.</h3><p>Revisit the explanation and identify the requirement that decides the answer.</p></div></li><li><span>02</span><div><h3>Put it into practice.</h3><p>Answer a question on the topic, then check the rationale before moving on.</p></div></li><li><span>03</span><div><h3>Recall it in your own words.</h3><p>Close the material and explain the key distinction. A small check that makes the session count.</p></div></li></ol>
+      <a href="/how-exam-iq-works/">See how Exam IQ finds your priorities →</a>
+    </div>
+  </section>
+  <section id="aura-privacy" class="aura-container" data-nav-label="Private by design" aria-labelledby="aura-privacy-title">
+    <div class="aura-privacy"><div><p class="label-eyebrow">Your study stays yours</p><h2 class="display-small" id="aura-privacy-title">A private space to work things out.</h2><p>Ask Aura starts with bundled study material and on-device insights. You choose whether to enable the optional Microsoft Learn connection.</p><a href="/apps/AzureMastery/privacy.html">Read the privacy details →</a></div><ul><li><strong>Conversations stay on this device.</strong><span>Saved chats are excluded from app cloud sync and backups.</span></li><li><strong>Temporary means temporary.</strong><span>Use a temporary chat when you don’t want to keep the conversation.</span></li><li><strong>Optional connections stay optional.</strong><span>Learn lookups are off by default. Your messages, answers and study progress aren’t shared with Microsoft.</span></li></ul></div>
+  </section>
+  <section id="faqs" class="aura-container aura-faqs" data-nav-label="FAQs" aria-labelledby="aura-faq-title"><p class="label-eyebrow">Before you start</p><h2 class="display-small" id="aura-faq-title">A few useful answers.</h2><div class="faqs"><details class="faq"><summary>Is Ask Aura included in the free app?</summary><div class="faq__answer"><p>Ask Aura Preview is available to Pro members. Azure Mastery is free to download, with starter questions for each supported exam. You can compare the access options in the app before buying.</p></div></details>
+<details class="faq"><summary>Does Ask Aura use generative AI in this preview?</summary><div class="faq__answer"><p>Generative coaching and explanations are not enabled in this preview. Aura starts with reviewed study-guide sections, terminology, question explanations and your on-device Exam IQ priorities. Check the cited source when accuracy matters.</p></div></details>
+<details class="faq"><summary>Can I use Ask Aura offline?</summary><div class="faq__answer"><p>The preview starts with bundled study material and on-device study priorities. Optional Microsoft Learn lookups need an internet connection and are off by default.</p></div></details>
+<details class="faq"><summary>What happens to my conversations?</summary><div class="faq__answer"><p>Saved Ask Aura conversations stay on this device and are excluded from app cloud sync and backups. Temporary chats are not saved. If you enable Microsoft Learn lookups, Microsoft receives only a public topic name or documentation address, not your message, answers or study progress.</p></div></details></div><p>Already using Aura? <a href="/apps/AzureMastery/support.html#ask-aura">Get help with the preview →</a></p></section>
+  <section id="download-aura" class="aura-container aura-final" data-nav-label="Get the app" aria-labelledby="aura-final-title"><img src="/images/aura-coach.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><div><p class="label-eyebrow">Your next study session</p><h2 class="display-small" id="aura-final-title">Bring a question. Find a direction.</h2><p>Start free in Azure Mastery. Ask Aura Preview is included with Pro.</p><div class="aura-actions"><a class="aura-download" href="https://apps.apple.com/app/id6760594569?ct=ask-aura-footer&amp;pt=128558698&amp;mt=8" rel="noopener noreferrer">Download Azure Mastery <span aria-hidden="true">↗</span></a><a href="/#pricing">Compare Free &amp; Pro →</a></div></div></section>
+</main>
+  <footer class="site-footer">
+    <!-- social-follow:start -->
+    <section class="social-follow" aria-labelledby="social-follow-title">
+      <div class="social-follow__copy">
+        <span class="social-follow__eyebrow">Stay current</span>
+        <h2 class="social-follow__title" id="social-follow-title">Follow Azure Mastery</h2>
+        <p class="social-follow__description">Exam updates, bite-sized study tips, and new guide alerts.</p>
+      </div>
+      <nav class="social-follow__links" aria-label="Follow Azure Mastery on social media">
+        <a class="social-follow__link" href="https://www.instagram.com/azuremastery.app"
+           target="_blank" rel="noopener me"
+           data-social-platform="instagram" data-social-placement="footer"
+           aria-label="Azure Mastery on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a class="social-follow__link" href="https://x.com/AzureMastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="x" data-social-placement="footer"
+           aria-label="Azure Mastery on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          <span>X</span>
+        </a>
+        <a class="social-follow__link" href="https://www.tiktok.com/@azuremastery"
+           target="_blank" rel="noopener me"
+           data-social-platform="tiktok" data-social-placement="footer"
+           aria-label="Azure Mastery on TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19.32 6.69a5.31 5.31 0 0 1-3.36-1.2 5.32 5.32 0 0 1-1.96-3.49h-3.27v13.17a2.65 2.65 0 1 1-2.65-2.65c.27 0 .53.04.78.11V9.31a5.93 5.93 0 0 0-.78-.05 5.93 5.93 0 1 0 5.93 5.93V8.6a8.55 8.55 0 0 0 5.31 1.83V7.16a5.27 5.27 0 0 1-0-.47z"/>
+          </svg>
+          <span>TikTok</span>
+        </a>
+        <a class="social-follow__link" href="https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg"
+           target="_blank" rel="noopener me"
+           data-social-platform="youtube" data-social-placement="footer"
+           aria-label="Azure Mastery on YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.56 12 3.56 12 3.56s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.2 31.58 31.58 0 0 0 0 12a31.58 31.58 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14A31.58 31.58 0 0 0 24 12a31.58 31.58 0 0 0-.5-5.8zM9.6 15.56V8.44L15.82 12 9.6 15.56z"/>
+          </svg>
+          <span>YouTube</span>
+        </a>
+        <a class="social-follow__link" href="https://www.facebook.com/profile.php?id=61578421530035"
+           target="_blank" rel="noopener me"
+           data-social-platform="facebook" data-social-placement="footer"
+           aria-label="Azure Mastery on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.43-4.91 8.43-9.93z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+      </nav>
+    </section>
+    <!-- social-follow:end -->
+    <p>
+      © Moonbeam Alpha Ltd ·
+      <a href="/">Azure Mastery</a> ·
+      <a href="/exams/">All exams</a> ·
+      <a href="/guides/">Guides</a> ·
+      <a href="/apps/AzureMastery/privacy.html">Privacy</a> ·
+      <a href="/about/">About</a> ·
+      <a href="/how-we-write-questions/">How we write questions</a> ·
+      <a href="/apps/AzureMastery/support.html">Support</a> ·
+      <a href="/apps/AzureMastery/terms.html">Terms</a>
+    </p>
+    <p>
+      Microsoft, Azure, and Microsoft certification names are trademarks of Microsoft Corporation. Azure Mastery is an independent study app and is not affiliated with or endorsed by Microsoft.
+    </p>
+  </footer>
+<script src="/theme.js?v=3963b4057e20" defer></script>
+<script src="/section-nav.js?v=81d70fc882f1" defer></script>
+<script src="/video-overview.js?v=9feb6f8a9ba4" defer></script>
+<!-- search-dialog:start -->
+<dialog class="am-search-dialog" id="am-search-dialog" aria-labelledby="am-search-title">
+  <div class="am-search-dialog__header"><h2 id="am-search-title">Search Azure Mastery</h2><button class="am-search-close" type="button" data-search-close aria-label="Close search">×</button></div>
+<div class="am-search" data-am-search hidden>
+      <div class="am-search-top">
+        <label class="am-search-label" for="am-site-search-query">Find an exam, guide or topic</label>
+        <form class="am-search-form" role="search" aria-label="Site search">
+          <svg class="am-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+          <input class="am-search-input" id="am-site-search-query" type="search" maxlength="120" placeholder="Search exams, guides and topics…" autocomplete="off" spellcheck="false" aria-controls="am-site-search-results">
+          <button class="am-search-clear" type="button" data-search-clear hidden aria-label="Clear search">×</button>
+        </form>
+        <div class="am-search-filters" role="group" aria-label="Result type"><button type="button" data-search-kind="all" aria-pressed="true">All</button><button type="button" data-search-kind="exam" aria-pressed="false">Exams</button><button type="button" data-search-kind="guide" aria-pressed="false">Guides</button><button type="button" data-search-kind="page" aria-pressed="false">Pages</button></div>
+        <p class="am-search-status" data-search-status role="status" aria-live="polite" aria-atomic="true">Find your next exam, guide or topic.</p>
+      </div>
+      <div class="am-search-scroll">
+        <div class="am-search-examples" data-search-examples aria-label="Try a search"><button type="button" data-search-example="AZ-104">AZ-104</button><button type="button" data-search-example="Security">Security</button><button type="button" data-search-example="Copilot">Copilot</button><button type="button" data-search-example="Fabric">Fabric</button></div>
+        <ul class="am-search-results" id="am-site-search-results" data-search-results aria-label="Search results"></ul>
+        <details class="am-search-related" data-search-related hidden><summary>Related results</summary><ul class="am-search-results" data-search-related-results aria-label="Related search results"></ul></details>
+        <button class="am-search-action" type="button" data-search-more hidden>Show more</button>
+        <button class="am-search-action" type="button" data-search-retry hidden>Try again</button>
+        <div class="am-search-browse"><a href="/exams/">Browse exams →</a><a href="/guides/">Study guides →</a></div>
+      </div>
+    </div>
+</dialog>
+<!-- search-dialog:end -->
+</body>
+</html>

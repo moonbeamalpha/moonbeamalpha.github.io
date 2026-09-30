@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Content-version local stylesheet and script URLs across static HTML."""
+"""Content-version local stylesheets, scripts and the search index across static HTML."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ASSET_RE = re.compile(r'(?P<prefix>\b(?:href|src)=")(?P<url>/[^"?#]+\.(?:css|js))(?P<version>\?v=[0-9a-f]{12})?(?P<suffix>")')
+ASSET_RE = re.compile(r'(?P<prefix>\b(?:href|src|data-search-index)=")(?P<url>/[^"?#]+\.(?:css|js)|/data/search-index\.json)(?P<version>\?v=[0-9a-f]{12})?(?P<suffix>")')
 
 
 def digest(path: Path) -> str:

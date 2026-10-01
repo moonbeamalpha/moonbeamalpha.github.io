@@ -882,12 +882,12 @@
 
         <article class="qt">
           <div class="qt__viz" data-quiz="1">
-            <p class="qt__viz-q">How many IP addresses does Azure reserve in each subnet?</p>
+            <p class="qt__viz-q">How many ExpressRoute gateway scale units are required?</p>
             <ul class="qt__viz-options">
-              <li><span class="qt__viz-radio"></span>3</li>
-              <li><span class="qt__viz-radio"></span>4</li>
-              <li class="is-selected"><span class="qt__viz-radio"></span>5</li>
               <li><span class="qt__viz-radio"></span>2</li>
+              <li class="is-selected"><span class="qt__viz-radio"></span>4</li>
+              <li><span class="qt__viz-radio"></span>8</li>
+              <li><span class="qt__viz-radio"></span>10</li>
             </ul>
           </div>
           <h3>Multiple choice</h3>
@@ -964,9 +964,9 @@
 
         <article class="qt">
           <div class="qt__viz" aria-hidden="true">
-            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: 3</div>
+            <div class="qt__viz-ai-wrong"><span class="qt__viz-ai-wrong-mark">✕</span>Your answer: 2</div>
             <div class="qt__viz-ai-explain">
-              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>This count leaves out two of the platform's reserved entries; Azure withholds the network identifier, the gateway, both DNS mapping addresses, and the broadcast address in every subnet.
+              <span class="qt__viz-ai-explain-mark">✨ Answer Coach:</span>At 2 Gbps per unit, two units provide 4 Gbps and fall short of the required aggregate throughput.
               <span class="qt__viz-ai-source">— grounded in authored certification guidance</span>
             </div>
           </div>

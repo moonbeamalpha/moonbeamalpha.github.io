@@ -4,7 +4,7 @@
     <loc>https://azuremastery.app/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/</loc>
@@ -16,31 +16,31 @@
     <loc>https://azuremastery.app/exams/az-900/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-104/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-305/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-204/</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/az-400/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/ai-900/</loc>
@@ -88,7 +88,7 @@
     <loc>https://azuremastery.app/exams/az-700/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://azuremastery.app/exams/dp-100/</loc>

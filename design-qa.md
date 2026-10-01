@@ -166,36 +166,40 @@ Final result: passed
 
 ## WCAG readability and usability review
 
-Reviewed dark-mode reading, keyboard navigation, search, filters, practice,
-FAQ controls, text enlargement and support/legal pages. The complete scope,
-findings, measurements and unverified areas are in `accessibility-audit.md`.
+The detailed findings, measurements and limits are in `accessibility-audit.md`.
+The review includes reading, search, filters, practice, FAQs, text enlargement,
+legal/support pages, high-contrast states and the video preview.
 
-The final axe-core 4.13.0 results contain zero reported A/AA violations across
-85 page/theme/viewport scans and four interactive states. Keyboard checks pass
-for skip navigation, modal entry/containment/Escape/focus restoration, filters,
-answer grading and FAQ expansion. Twenty-seven layout cases pass at 320px,
-with WCAG text spacing and at 200% text size. Remaining automated contrast
-uncertainty on gradients is recorded rather than counted as a pass.
+axe-core 4.13.0 reports zero A/AA violations across 85 Chromium page/theme/width
+cases, four Chromium interactive states and 36 WebKit cases (125 total).
+Keyboard checks pass forward/backward search traversal, focus containment/return,
+filters, grading and FAQ expansion. All 27 reflow/text-spacing/200% text cases pass.
+WebKit refers to installed engine revision 2358 rather than the Safari app.
 
-**P1 fixes:** legal-link identification in dark mode, support badge contrast,
-nested FAQ summary links and enlarged-text navigation clipping.
-**P2 fixes:** light-mode cyan contrast, search input boundaries, consistent
-keyboard focus, bypass navigation and search suggestion grouping.
+The follow-up fixes strengthen purple exam buttons, pathway credential labels,
+small light-mode text, guide links and warm roadmap labels. Rendered-background
+measurements supplement the unresolved automated gradient checks. WebKit search
+now advances through every visible control, including disclosures, and excludes
+hidden links in closed disclosures so Tab cannot stall at their summary. Forced-colour
+matches use system highlight colours, and selected filters retain thicker borders
+and heavier text. Twelve page/palette/width cases were checked in Chromium.
 
-Accepted screenshots: `wcag-after-home.png`, `wcag-after-exams-.png`,
-`wcag-after-exams-az-104-.png`, `wcag-after-ask-aura-.png`,
-`wcag-01-skip-focus.png`, `wcag-02-search-focus.png`,
-`wcag-03-practice-keyboard.png`, `wcag-04-faq-keyboard.png`,
-`wcag-05-text-200.png` and `wcag-06-reflow-320.png`. Each was opened and visually
-inspected; the enlarged-text header keeps Download visible and the phone focus
-indicators remain clear.
+Video disclosure/play/focus transfer pass in WebKit. The external video has a
+visible English (United Kingdom) track and a 15-cue en-GB transcript. Presence is
+verified; audio accuracy, timing and audio-description coverage remain untested.
 
-Current-pathway browser validation also passed 36 route/viewport/theme cases
-across nine affected pages at 390px and 1280px in both themes. No retired stations,
-empty routes, dangling alternatives, document overflow or JavaScript errors.
+Accepted evidence includes the six numbered flow captures, before/after purple
+button and guide-link images, WebKit reading/search, both forced-colour search
+palettes, graded practice and the final roadmap. Each was opened and inspected.
+The temporary capture of a practice card obscured by a modal was rejected and
+replaced after verifying the dialog was closed.
 
-The similarity ratchet now excludes only the exact shared skip-link component;
-an injected-prose fixture confirms these markers cannot hide editorial text.
-Its committed baseline and tolerance remain unchanged.
+Current-pathway validation also passed 36 route/width/theme cases across nine
+affected pages, with no retired stations, empty routes, dangling alternatives,
+document overflow or JavaScript errors. The similarity ratchet excludes only the
+exact shared skip-link component; an injected-prose fixture verifies that the
+markers cannot hide editorial text. Baseline and tolerance remain unchanged.
 
-Final result: passed for the reviewed flows; full WCAG conformance is unverified.
+All 22 site checks pass locally, plus `git diff --check`. Native screen readers,
+Safari/Firefox, physical-device zoom and complete media review remain outstanding.
+The sampled flows pass; full WCAG conformance is unverified. PR46 is unpublished.

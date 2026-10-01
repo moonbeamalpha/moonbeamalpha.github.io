@@ -54,6 +54,9 @@ destination. Focus outlines and scroll margins keep controls visible below the
 header and above the sticky phone action bar. The homepage header wraps with
 enlarged text. FAQ summaries contain one interactive control; related exam links
 belong in their answers. Legal prose links remain underlined in both themes.
+Forced-colour selected filters retain heavier borders and text, while search
+matches use the user's system highlight colours. Gradient button/label and
+light-mode guide-link contrasts were measured separately from automated scans.
 See `accessibility-audit.md` for the WCAG review, measured contrasts and limits.
 
 Run after catalogue or UI changes:

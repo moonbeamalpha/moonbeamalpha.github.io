@@ -243,6 +243,17 @@
 }
 .am-search-result__description { display: block; margin-top: 6px; color: var(--search-muted); font-size: 13px; line-height: 1.55; }
 .am-search-result mark { background: rgba(43, 136, 216, .16); color: inherit; border-radius: 3px; }
+@media (forced-colors: active) {
+  .am-search-result mark {
+    forced-color-adjust: none;
+    background: Highlight;
+    color: HighlightText;
+  }
+  .am-search-filters button[aria-pressed="true"] {
+    border-width: 2px;
+    font-weight: 700;
+  }
+}
 .am-search-result__successor { display: inline-flex; align-items: center; min-height: 44px; margin: -4px 12px 8px; color: var(--search-accent); font-size: 13px; text-decoration: none; }
 .am-search-action { margin-top: 12px; color: var(--search-accent); }
 .am-search-browse { display: flex; flex-wrap: wrap; gap: 18px; margin: 12px 0 0; }

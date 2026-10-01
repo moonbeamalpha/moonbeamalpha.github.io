@@ -910,6 +910,7 @@ html[data-theme="light"] .faq {
   letter-spacing: 0.10em;
   line-height: 1.2;
   text-transform: uppercase;
+  color: color-mix(in srgb, var(--text-primary) 40%, var(--text-secondary));
 }
 
 @media (max-width: 699px) {

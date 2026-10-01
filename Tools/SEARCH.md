@@ -62,7 +62,10 @@ rather than a clipped sentence from deep in the page. Empty inline search stays
 compact until a query is entered. Enter in the search field focuses
 the first result; Enter on a result follows its link. Arrow keys move through
 results, and Tab traverses ordinary links and controls. Escape closes the native
-dialog and restores focus. The dialog explicitly wraps Tab at its boundaries.
+dialog and restores focus. The dialog explicitly advances forward/backward Tab through every visible control,
+including disclosures, excludes hidden links inside closed disclosures, and wraps
+at its boundaries. This also reaches links and
+buttons when WebKit omits them from native Tab navigation.
 The keyboard shortcut does not interrupt typing in editable controls.
 
 Queries and highlighted excerpts use DOM text nodes, never HTML interpolation.
@@ -104,3 +107,18 @@ exam and guide navigation remains available.
 
 All existing marketing CI commands were also run locally. Similarity baselines are unchanged. Advertised counts were refreshed from the
 current app export, with count-owned social images regenerated. Publishing remains a separate owner decision.
+
+## Accessibility follow-up on 1 October 2026
+
+Search entry, arrow results, 25 forward and backward Tab cycles, Escape/focus
+return and keyboard filtering pass in Chromium and the installed WebKit engine.
+Forced-colour matches use system Highlight/HighlightText rather than the browser's
+low-contrast default mark treatment. Selected filters retain a heavier border and
+font weight when their backgrounds are overridden. See `accessibility-audit.md`
+for evidence and remaining native screen-reader/browser verification.
+
+Regression recipe: search AZ-104, leave Related results closed, and Tab from its
+summary to Show more and Browse exams. Expand the disclosure and traverse its
+links in both directions; each Tab press must advance to a visible control.
+Escape must close search and return focus to its trigger. Checking containment
+alone does not catch a stall at a hidden result link.

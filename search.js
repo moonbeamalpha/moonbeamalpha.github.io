@@ -342,13 +342,22 @@
   dialog.addEventListener('keydown', function (event) {
     // A native search input consumes Escape to clear itself before dialog cancellation.
     if (event.key === 'Escape' && !event.isComposing) { event.preventDefault(); dialog.close(); }
-    if (event.key === 'Tab') {
-      var controls = Array.from(dialog.querySelectorAll('button, input, a[href]')).filter(function (node) {
-        return !node.disabled && node.getClientRects().length > 0;
+    if (event.key === 'Tab' && !event.ctrlKey && !event.metaKey) {
+      var controls = Array.from(dialog.querySelectorAll('button, input, a[href], summary, [tabindex]')).filter(function (node) {
+        var closedDetails = node.closest('details:not([open])');
+        return !node.disabled && node.tabIndex >= 0 && node.getClientRects().length > 0 &&
+          !node.closest('[hidden], [inert]') && getComputedStyle(node).visibility !== 'hidden' &&
+          (!closedDetails || closedDetails.querySelector('summary') === node);
       });
-      var first = controls[0], last = controls[controls.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      // WebKit may omit links and buttons from native Tab navigation. Advance
+      // explicitly so every modal control is reachable and focus stays inside.
+      if (controls.length) {
+        event.preventDefault();
+        var current = controls.indexOf(document.activeElement);
+        var next = current < 0 ? (event.shiftKey ? controls.length - 1 : 0) :
+          (current + (event.shiftKey ? -1 : 1) + controls.length) % controls.length;
+        controls[next].focus();
+      }
     }
   });
   dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });

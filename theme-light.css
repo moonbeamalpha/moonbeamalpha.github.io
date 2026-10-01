@@ -17,10 +17,10 @@ html[data-theme="light"] {
   --azure-cyan:      #00738F;
   --azure-blue:      #0067C5;
   --azure-purple:    #6D35D9;
-  --xp-gold:         #C43E00;
+  --xp-gold:         #B93800;
   --success-green:   #067A43;
   --error-red:       #C93655;
-  --warning-orange:  #C43E00;
+  --warning-orange:  #B93800;
 
   --bg-app:          #F7FAFF;
   --bg-deep:         #EAF3FF;
@@ -32,7 +32,7 @@ html[data-theme="light"] {
 
   --text-primary:    #10233F;
   --text-secondary:  #405A74;
-  --text-muted:      #587089;
+  --text-muted:      #536B83;
 
   --border-subtle:   rgba(13,30,55,0.09);
   --border-strong:   rgba(13,30,55,0.18);
@@ -319,6 +319,8 @@ html[data-theme="light"] .qt,
 html[data-theme="light"] .cert-path,
 html[data-theme="light"] .related-card,
 html[data-theme="light"] .trap { background: rgba(13,30,55,0.03); }
+
+html[data-theme="light"] .guide-card:not(.exam-hub-card) .guide-card__more { color: var(--azure-cyan); }
 
 html[data-theme="light"] .domain__weight { background: rgba(0,103,197,0.10); border-color: rgba(0,103,197,0.30); }
 html[data-theme="light"] .qt__hint { background: rgba(0,103,197,0.08); border-color: rgba(0,103,197,0.25); }

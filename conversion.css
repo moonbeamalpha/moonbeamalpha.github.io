@@ -52,6 +52,13 @@
 .am-symbol[data-symbol="git-branch"] { --symbol: url('/assets/icons/phosphor/git-branch-duotone.svg'); }
 .am-symbol[data-symbol="arrow-right"] { --symbol: url('/assets/icons/phosphor/arrow-right-duotone.svg'); }
 .exam-finder__filters [aria-pressed="true"] { background: rgba(80,230,255,.09); border-color: var(--azure-cyan); color: var(--azure-cyan); }
+@media (forced-colors: active) {
+  .exam-finder__filters [aria-pressed="true"],
+  .practice-exams [aria-pressed="true"] {
+    border-width: 2px;
+    font-weight: 700;
+  }
+}
 .exam-finder__count { min-height: 20px; font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
 .exam-finder__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .exam-finder__grid .exam-finder__card { display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 9px; min-width: 0; padding: 20px; border: 1px solid var(--border-strong); border-radius: 16px; background: var(--bg-card); text-decoration: none; white-space: normal; color: var(--text-primary); text-align: left; box-shadow: none; }

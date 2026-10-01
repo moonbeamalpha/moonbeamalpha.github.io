@@ -1,36 +1,43 @@
 # Certification shield artwork
 
 The homepage exam finder, exam library, related-certification cards and certification pathways share
-[`certification-badge-shield-v2.webp`](../exams/images/certification-badge-shield-v2.webp).
+[`certification-badge-shield-v3.webp`](../exams/images/certification-badge-shield-v3.webp).
 It is a refinement of the existing `certification-badge-shield.webp`, produced
-with the built-in ImageGen edit tool on 1 October 2026. The original is preserved.
+with the built-in ImageGen edit tool on 1 October 2026. The original and the
+intermediate v2 artwork are preserved.
 
 ## Production brief
 
-Edit the supplied transparent certification shield. Preserve the square canvas,
-pointed navy shield, white upper face, broad white ribbon and Azure-blue lower
-face. Refine the symmetry, perimeter, ribbon edges and restrained shading to
-look closer to Microsoft certification shields. Remove muddy gray edges, lumpy
-contours, excessive shadow and glossy effects.
+Initial refinement: preserve the transparent square canvas, pointed navy shield,
+broad white ribbon and Azure-blue lower face. Refine symmetry, perimeter, ribbon
+edges and restrained shading; remove muddy edges and excessive shadow.
 
-Keep the existing layout: the shield occupies approximately x=0.16–0.84 and
-y=0.04–0.95; the ribbon extends approximately x=0.04–0.96. The only artwork text
-is crisp navy uppercase `CERTIFICATION`. Leave the ribbon and lower field blank
-for separately rendered exam codes and tier stars. Preserve a transparent
-background and tight square framing. Do not add a Microsoft logo, new copy,
-ticks, stars, seals, ornaments or an external shadow. Edges must remain sharp
-at 82–112 CSS pixels.
+Final edit prompt (built-in ImageGen, transparent background):
+
+> Edit the refined shield. Replace the single-line CERTIFICATION heading with
+> exactly two centred lines: “Microsoft” and “CERTIFIED”. Use the supplied
+> reference's navy upper face and white text. Microsoft is title case in clean
+> bold sans-serif; CERTIFIED is smaller uppercase with modest letter spacing.
+> Preserve the square canvas, shield shape and scale, navy perimeter, blank curved
+> white ribbon, bright Azure-blue lower field, restrained shading and genuinely
+> transparent outer background. Keep the ribbon and lower field blank for
+> code-native exam, tier and star overlays. Do not copy the reference's exam
+> titles, tier text or stars. Do not add a four-square logo, ornaments, external
+> shadow or additional text. Make only the upper-face colour and heading change,
+> with sharp polished edges at small icon sizes.
 
 ## Export and overlays
 
 The 1,254px transparent PNG was resized proportionally to 300×300 with Lanczos
-resampling and exported as WebP, quality 92, method 6. The result is 15,804 bytes.
+resampling and exported as WebP, quality 92, method 6. The final result is 16,734 bytes.
 Only export conversion and resizing happened outside ImageGen.
 
 Each card retains its exam code as accessible link text; the badge repeats it
 decoratively in the centred white ribbon. Pathway codes remain real text. Tier stars use the
 existing Fluent star asset: one for Fundamentals, two for Associate and three
-for Expert. The Expert centre star sits lower to follow the shield's point.
+for Expert. Small `ASSOCIATE` and `EXPERT` labels appear above the corresponding
+stars in the blue field. Fundamentals and retired references omit these labels.
+The Expert centre star sits lower to follow the shield's point.
 All consumers use the same versioned asset so cached images cannot retain the
 old artwork after publication.
 

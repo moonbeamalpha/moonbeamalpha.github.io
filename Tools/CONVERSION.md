@@ -40,9 +40,21 @@ announced feedback, explicit answer labels and reset support keyboard use.
 `sync-conversion-ui.py` maintains shared assets, the exact exam purchase/methodology
 component, truthful free/bank/Pro access FAQs, placement links, Smart App Banner attribution and exam cards. It covers
 published sitemap pages and the exam template. Its `--check` mode is read-only.
+Pathway diagrams exclude every retired catalogue entry. A retired destination
+removes the whole obsolete route; surviving alternatives lose orphaned “or”
+markers. Historical reference pages and their related links remain available.
+Shared shields use the two-line Microsoft Certified artwork with small Associate
+and Expert labels above the appropriate tier stars.
 The similarity baseline and tolerance are unchanged. Only the byte-exact shared
-purchase/navigation component is excluded from editorial similarity; modified
-prose stays in the comparison.
+purchase/navigation and skip-link components are excluded from editorial
+similarity; modified prose stays in the comparison.
+
+Shared search navigation also owns the first-focus skip link and focusable main
+destination. Focus outlines and scroll margins keep controls visible below the
+header and above the sticky phone action bar. The homepage header wraps with
+enlarged text. FAQ summaries contain one interactive control; related exam links
+belong in their answers. Legal prose links remain underlined in both themes.
+See `accessibility-audit.md` for the WCAG review, measured contrasts and limits.
 
 Run after catalogue or UI changes:
 

@@ -20,6 +20,37 @@ seo = tool('optimise-marketing-seo')
 
 
 class ConversionContracts(unittest.TestCase):
+    def test_disclosure_summaries_do_not_nest_interactive_controls(self):
+        for _, page in published_pages():
+            doc = Document(page.read_text()).root
+            for summary in doc.all(lambda n: n.tag == 'summary'):
+                self.assertIsNone(summary.find(lambda n: n.tag in {'a','button','input','select','textarea'}), page)
+
+    def test_pathways_show_current_exams_and_complete_alternatives(self):
+        snapshot = json.loads((ROOT / 'data/exam-counts.json').read_text())
+        for _, page in published_pages():
+            doc = Document(page.read_text()).root
+            for path in doc.all(lambda n: 'cert-path' in n.attrs.get('class', '').split()):
+                codes = list(path.all(lambda n: 'cert-path__chip-code' in n.attrs.get('class', '').split()))
+                self.assertTrue(codes, page)
+                self.assertFalse(set(map(lambda n: clean(n.text()), codes)) & set(snapshot['retired']), page)
+                stations = path.find(lambda n: 'cert-path__stations' in n.attrs.get('class', '').split())
+                first = stations.find(lambda n: 'cert-path__station' in n.attrs.get('class', '').split())
+                self.assertIsNone(first.find(lambda n: 'cert-path__or' in n.attrs.get('class', '').split()), page)
+        def station(code, alternative=False):
+            return ('<li class="cert-path__station">' + ('<span class="cert-path__or">or</span>' if alternative else '') +
+                    f'<span class="cert-path__chip-code">{code}</span></li>')
+        def route(stations):
+            return '<article class="cert-path"><ol class="cert-path__stations">' + stations + '</ol></article>'
+        original = route(station('AZ-204') + station('AZ-104', True) + station('AZ-400'))
+        revised = conversion.current_pathways(original, snapshot)
+        self.assertNotIn('AZ-204', revised)
+        self.assertNotIn('cert-path__or', revised)
+        self.assertIn('AZ-104', revised)
+        self.assertEqual(conversion.current_pathways(route(station('AZ-900') + station('AZ-204')), snapshot), '')
+        self.assertEqual(conversion.current_pathways('        ' + route(station('AZ-900') + station('AZ-204')), snapshot), '')
+        self.assertEqual(conversion.current_pathways(revised, snapshot), revised)
+
     def test_home_decision_path_and_current_cards(self):
         source = (ROOT / 'index.html').read_text(); doc = Document(source).root
         positions = [source.index('id="' + id + '"') for id in ['hero', 'features', 'exam-roadmap', 'try-a-question', 'pricing']]
@@ -108,6 +139,10 @@ class ConversionContracts(unittest.TestCase):
             fixture.write('<!-- conversion-hero:start -->\n' + conversion.EXAM_HERO_CHROME + '\n<!-- conversion-hero:end --><p>Distinct exam objectives</p>'); fixture.flush()
             self.assertEqual(similarity.extract_words(fixture.name), ['distinct', 'exam', 'objectives'])
             fixture.seek(0); fixture.truncate(); fixture.write('<!-- conversion-hero:start -->Injected editorial guidance<!-- conversion-hero:end -->'); fixture.flush()
+            self.assertIn('injected', similarity.extract_words(fixture.name))
+            fixture.seek(0); fixture.truncate(); fixture.write(similarity._SEARCH_SKIP_CHROME + '<p>Distinct exam objectives</p>'); fixture.flush()
+            self.assertEqual(similarity.extract_words(fixture.name), ['distinct', 'exam', 'objectives'])
+            fixture.seek(0); fixture.truncate(); fixture.write(similarity._SEARCH_SKIP_CHROME.replace('Skip to content', 'Injected editorial guidance')); fixture.flush()
             self.assertIn('injected', similarity.extract_words(fixture.name))
         home = (ROOT / 'index.html').read_text(); snapshot = json.loads((ROOT / 'data/exam-counts.json').read_text())
         for _, page in published_pages():

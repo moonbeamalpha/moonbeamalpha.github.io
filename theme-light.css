@@ -14,7 +14,7 @@ html[data-theme="light"] {
 
   /* Saturated, AA-safe inks for light surfaces. Warm semantic accents use
      clear red-orange rather than dark amber, which reads as brown on white. */
-  --azure-cyan:      #007A99;
+  --azure-cyan:      #00738F;
   --azure-blue:      #0067C5;
   --azure-purple:    #6D35D9;
   --xp-gold:         #C43E00;
@@ -105,7 +105,7 @@ html[data-theme="light"] .headline-accent,
 html[data-theme="light"] .page-h1-accent,
 html[data-theme="light"] .hero-app-name,
 html[data-theme="light"] .how-step-num {
-  background: linear-gradient(135deg, #007A99 0%, #0067C5 100%);
+  background: linear-gradient(135deg, #00738F 0%, #0067C5 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -118,7 +118,7 @@ html[data-theme="light"] .site-nav { background: rgba(247,250,255,0.82); }
 html[data-theme="light"] .site-nav--scrolled { background: rgba(247,250,255,0.95); }
 html[data-theme="light"] .btn-nav-cta {
   color: #fff !important;
-  background: linear-gradient(120deg, #007A99, #0067C5);
+  background: linear-gradient(120deg, #00738F, #0067C5);
   border-color: transparent;
   box-shadow: var(--shadow-flat);
 }
@@ -280,7 +280,7 @@ html[data-theme="light"] .exam-mini__dot:hover { background: rgba(13,30,55,0.42)
 /* ── 4. Exam-page component overrides ── */
 html[data-theme="light"] .site-nav__cta {
   color: #fff;
-  background: linear-gradient(120deg, #007A99, #0067C5);
+  background: linear-gradient(120deg, #00738F, #0067C5);
   border-color: transparent;
   box-shadow: var(--shadow-flat);
 }

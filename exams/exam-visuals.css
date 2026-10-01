@@ -661,7 +661,7 @@ html[data-theme="light"] .faq {
 }
 
 #cert-paths .cert-path__chip {
-  --cert-shield-asset: url("images/certification-badge-shield-v2.webp");
+  --cert-shield-asset: url("images/certification-badge-shield-v3.webp");
   --cert-star-asset: url("images/fluent-star-24-filled.svg");
   --cert-star-size: 12px;
   --cert-star-strip-width: 12px;
@@ -733,7 +733,7 @@ html[data-theme="light"] .faq {
     invert(1)
     drop-shadow(0 1px 2px rgba(0, 15, 49, 0.46));
   opacity: 0.96;
-  transform: translateY(20px);
+  transform: translateY(22px);
 }
 
 #cert-paths .cert-path__chip[data-cert-level="associate"] {
@@ -769,6 +769,20 @@ html[data-theme="light"] .faq {
   transition: transform 180ms ease;
 }
 
+#cert-paths .cert-path__chip-tier {
+  grid-area: 1 / 1;
+  place-self: center;
+  color: #fff;
+  font: 750 5px/1 'Outfit', sans-serif;
+  letter-spacing: .07em;
+  transform: translateY(10px);
+  transition: transform 180ms ease;
+}
+
+#cert-paths .cert-path__chip-tier::before {
+  content: attr(data-tier);
+}
+
 #cert-paths .cert-path__chip-role {
   grid-area: 2 / 1;
   place-self: start center;
@@ -794,7 +808,11 @@ html[data-theme="light"] .faq {
 }
 
 #cert-paths a.cert-path__chip[data-cert-level]:not(.cert-path__chip--target):hover::after {
-  transform: translateY(17px);
+  transform: translateY(19px);
+}
+
+#cert-paths a.cert-path__chip:hover .cert-path__chip-tier {
+  transform: translateY(7px);
 }
 
 #cert-paths a.cert-path__chip:hover::before {
@@ -926,12 +944,15 @@ html[data-theme="light"] .faq {
   }
 
   #cert-paths .cert-path__chip[data-cert-level]:not(.cert-path__chip--target)::after {
-    transform: translateY(18px);
+    transform: translateY(20px);
   }
 
   #cert-paths a.cert-path__chip[data-cert-level]:not(.cert-path__chip--target):hover::after {
-    transform: translateY(15px);
+    transform: translateY(17px);
   }
+
+  #cert-paths .cert-path__chip-tier { transform: translateY(9px); }
+  #cert-paths a.cert-path__chip:hover .cert-path__chip-tier { transform: translateY(6px); }
 
   #cert-paths .cert-path__chip-code {
     max-width: 66px;
@@ -960,6 +981,7 @@ html[data-theme="light"] .faq {
   #cert-paths .cert-path__chip::before,
   #cert-paths .cert-path__chip::after,
   #cert-paths .cert-path__chip-code,
+  #cert-paths .cert-path__chip-tier,
   #cert-paths .cert-path__chip-role {
     transition: none;
   }

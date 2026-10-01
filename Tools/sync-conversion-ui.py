@@ -88,13 +88,56 @@ def exam_tier(code, snapshot, metadata):
 
 
 def certification_badge(code, stars):
+    tier = {2: 'ASSOCIATE', 3: 'EXPERT'}.get(stars)
     return ('<span class="certification-badge" aria-hidden="true">'
-            '<img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v2.webp" '
+            '<img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" '
             'alt="" width="300" height="300" loading="lazy" decoding="async">'
             f'<span class="certification-badge__code" data-code="{code}"></span>'
+            + (f'<span class="certification-badge__tier" data-tier="{tier}"></span>' if tier else '') +
             f'<span class="certification-badge__stars" data-stars="{stars}">' +
             '<img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy">' * stars +
             '</span></span>')
+
+
+def current_pathways(text, snapshot):
+    """Remove retired stations and clean alternatives without inventing new routes."""
+    retired = set(snapshot['retired'])
+    station_pattern = r'<li class="cert-path__station">.*?</li>'
+    or_pattern = r'<span class="cert-path__or">.*?</span>\s*'
+
+    def update_path(match):
+        article = match[0]
+        stations = re.search(r'(<ol class="cert-path__stations">)(.*?)(</ol>)', article, re.S)
+        if not stations:
+            return article
+        groups = []
+        for station in re.findall(station_pattern, stations[2], re.S):
+            doc = Document(station).root
+            code_node = doc.find(lambda n: 'cert-path__chip-code' in n.attrs.get('class', '').split())
+            code = clean(code_node.text()) if code_node else ''
+            if not re.search(or_pattern, station, re.S) or not groups:
+                groups.append([])
+            groups[-1].append((station, code))
+        exam_groups = [group for group in groups if any(code in snapshot['exams'] for _, code in group)]
+        # A retired destination cannot leave a misleading prerequisite-only path.
+        if exam_groups and all(code in retired for _, code in exam_groups[-1]):
+            return ''
+        output = []
+        for group in groups:
+            surviving = [(station, code) for station, code in group if code not in retired]
+            for index, (station, code) in enumerate(surviving):
+                if index == 0:
+                    station = re.sub(or_pattern, '', station, flags=re.S)
+                if len(group) > len(surviving) == 1:
+                    station = station.replace('current prereq option', 'Prerequisite')
+                    station = station.replace('current Associate prerequisite', 'Associate prerequisite')
+                    station = station.replace('prereq option', 'Prerequisite')
+                output.append(station)
+        if not output:
+            return ''
+        return article[:stations.start(2)] + '\n            ' + '\n            '.join(output) + '\n          ' + article[stations.end(2):]
+
+    return re.sub(r'[ \t]*<article class="cert-path">.*?</article>', update_path, text, flags=re.S)
 
 
 def hub_card(code, snapshot, metadata, reference_hint):
@@ -294,6 +337,14 @@ def render(path, text, snapshot, metadata):
         text = re.sub(r'<section id="(fam-(?:azure|ai|data|security|github))" class="container"(?: data-exam-section)?>',
                       r'<section id="\1" class="container" data-exam-section>', text)
     text = related_certification_badges(text, snapshot, metadata)
+    text = current_pathways(text, snapshot)
+    def pathway_tier(match):
+        opening, level, body = match[1], match[2], match[3]
+        body = re.sub(r'<span class="cert-path__chip-tier"[^>]*></span>', '', body)
+        return (opening + f'<span class="cert-path__chip-tier" data-tier="{level.upper()}" aria-hidden="true"></span>'
+                + body + match[4])
+    text = re.sub(r'(<(?:a|span)\b[^>]*class="cert-path__chip[^\"]*"[^>]*data-cert-level="(associate|expert)"[^>]*>)(.*?<span class="cert-path__chip-role">.*?</span>\s*)(</(?:a|span)>)',
+                  pathway_tier, text, flags=re.S)
     return campaign_links(text, relative)
 
 

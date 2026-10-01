@@ -30,7 +30,7 @@ def widget(prefix, inline=False):
         <p class="am-search-status" data-search-status role="status" aria-live="polite" aria-atomic="true">Find your next exam, guide or topic.</p>
       </div>
       <div class="am-search-scroll">
-        <div class="am-search-examples" data-search-examples aria-label="Try a search">{examples}</div>
+        <div class="am-search-examples" data-search-examples role="group" aria-label="Try a search">{examples}</div>
         <ul class="am-search-results" id="{prefix}-results" data-search-results aria-label="Search results"></ul>
         <details class="am-search-related" data-search-related hidden><summary>Related results</summary><ul class="am-search-results" data-search-related-results aria-label="Related search results"></ul></details>
         <button class="am-search-action" type="button" data-search-more hidden>Show more</button>
@@ -102,7 +102,19 @@ def render_page(path, text):
         if relative == 'exams/index.html':
             inline = '<div class="container am-search-hub">\n' + inline + '\n</div>'
         text = replace_block(text, 'inline', inline, anchor)
-    return text
+    target = re.search(r'<main\b[^>]*>', text) or re.search(r'<h1\b[^>]*>', text)
+    if not target:
+        raise ValueError('Missing skip-navigation destination')
+    opening = target[0]
+    identifier = re.search(r'\bid="([^"]+)"', opening)
+    target_id = identifier[1] if identifier else 'main-content'
+    if not identifier:
+        opening = opening[:-1] + f' id="{target_id}">'
+    if 'tabindex=' not in opening:
+        opening = opening[:-1] + ' tabindex="-1">'
+    text = text[:target.start()] + opening + text[target.end():]
+    body = re.search(r'<body\b[^>]*>', text)[0]
+    return replace_block(text, 'skip', f'<a class="am-skip-link" href="#{target_id}">Skip to content</a>', body, before=False)
 
 
 def main():

@@ -129,4 +129,73 @@ supplies the accessible code. The editorial similarity ratchet and its baseline
 are unchanged and pass; no authored related-card text was modified. No new
 fidelity findings remain.
 
+## Final heading, level labels and current pathways
+
+The shared v3 artwork now reads `Microsoft` / `CERTIFIED` in white on a navy upper
+face, using the supplied Microsoft shield reference. Small `ASSOCIATE` and
+`EXPERT` overlays sit above the stars in the blue field; the ribbon remains
+centred and the Expert stars keep their pointed arrangement.
+
+Source reference: `/var/folders/dz/dyy7dm995kz71qsjqhv24mq80000gn/T/codex-clipboard-774cbe8c-337c-4079-99fc-916685204d91.png`.
+Full-view evidence: `homepage-certified-light-1280.png`,
+`azure-certified-cards-light.png` and `related-certified-dark-390.png`.
+Focused evidence: `expert-certified-light-1280.png`,
+`finder-certified-light-390.png` and `pathway-certified-light-1280.png`.
+Source and rendered captures were opened together for comparison.
+
+Twelve page/viewport/theme checks cover the home finder, hub and AZ-104 related
+and pathway surfaces at 390 and 1280px, light and dark. Tier overlays do not
+overlap ribbons or stars; pathway hover moves all layers together. No document
+overflow, JavaScript errors or failed local resource requests. The final artwork
+is a 16,734-byte transparent WebP exported from built-in ImageGen; the exact
+production prompt and export are recorded in `Tools/CERTIFICATION-SHIELDS.md`.
+
+**P2 iteration:** a whitespace-sensitive pathway matcher initially omitted some
+level overlays. Corrected it and verified the final 138 eligible pathway chips have exactly
+one direct tier label. The generator is idempotent.
+
+Retired exams are removed from all pathway diagrams using catalogue lifecycle
+data. Obsolete destinations remove their whole route; surviving alternatives
+keep correct connectors without dangling “or” markers. The DevOps route now
+shows AZ-900 → AZ-104 → AZ-400 → DevOps Engineer Expert. The AI-300 heading now
+describes the current ML Operations path. Reference pages and retired hub cards
+are preserved. Evidence: `current-devops-path-light.png` and
+`current-devops-phone-dark.png`, compared with the supplied DevOps screenshot.
+
 Final result: passed
+
+## WCAG readability and usability review
+
+Reviewed dark-mode reading, keyboard navigation, search, filters, practice,
+FAQ controls, text enlargement and support/legal pages. The complete scope,
+findings, measurements and unverified areas are in `accessibility-audit.md`.
+
+The final axe-core 4.13.0 results contain zero reported A/AA violations across
+85 page/theme/viewport scans and four interactive states. Keyboard checks pass
+for skip navigation, modal entry/containment/Escape/focus restoration, filters,
+answer grading and FAQ expansion. Twenty-seven layout cases pass at 320px,
+with WCAG text spacing and at 200% text size. Remaining automated contrast
+uncertainty on gradients is recorded rather than counted as a pass.
+
+**P1 fixes:** legal-link identification in dark mode, support badge contrast,
+nested FAQ summary links and enlarged-text navigation clipping.
+**P2 fixes:** light-mode cyan contrast, search input boundaries, consistent
+keyboard focus, bypass navigation and search suggestion grouping.
+
+Accepted screenshots: `wcag-after-home.png`, `wcag-after-exams-.png`,
+`wcag-after-exams-az-104-.png`, `wcag-after-ask-aura-.png`,
+`wcag-01-skip-focus.png`, `wcag-02-search-focus.png`,
+`wcag-03-practice-keyboard.png`, `wcag-04-faq-keyboard.png`,
+`wcag-05-text-200.png` and `wcag-06-reflow-320.png`. Each was opened and visually
+inspected; the enlarged-text header keeps Download visible and the phone focus
+indicators remain clear.
+
+Current-pathway browser validation also passed 36 route/viewport/theme cases
+across nine affected pages at 390px and 1280px in both themes. No retired stations,
+empty routes, dangling alternatives, document overflow or JavaScript errors.
+
+The similarity ratchet now excludes only the exact shared skip-link component;
+an injected-prose fixture confirms these markers cannot hide editorial text.
+Its committed baseline and tolerance remain unchanged.
+
+Final result: passed for the reviewed flows; full WCAG conformance is unverified.

@@ -5,6 +5,13 @@ try three authored questions, compare access options, then download.
 The roadmap is an optional desktop view. Catalogue-derived cards supply exam
 titles, levels and subject areas; retirement references remain in disclosures.
 
+At 1,200px and above, the homepage hero composes authentic iPad practice,
+iPhone Exam IQ and Apple Watch dashboard captures. The iPhone stays in front;
+the Watch is presented as a progress companion. Smaller screens retain the
+single iPhone, and the hidden device backgrounds are not requested. The iPad
+and iPhone follow the selected theme; the Watch retains its native dark UI.
+The layout lives in `home.css`; regenerate `home.min.css` after editing it.
+
 The Ask Aura feature links to `/ask-aura/`, with a character hero, reviewed
 capability examples, a real in-app session and the existing video. The YouTube
 iframe loads only on play; its external link also works without JavaScript.

@@ -30,7 +30,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 384 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills measured as of 20 July 2026.
 
-- [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 521 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
+- [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 541 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
 
 - [AZ-305 — Designing Microsoft Azure Infrastructure Solutions](https://azuremastery.app/exams/az-305/): 439 in-app practice questions. Expert-tier solution architect cert (single exam earns the Microsoft Certified: Azure Solutions Architect Expert credential). Renews annually, USD $165 voucher. 100-min duration, 40–60 questions plus case studies. Four design domains: identity/governance/monitoring (25–30%), data storage (20–25%), business continuity (15–20%), infrastructure (30–35%). Recommended Associate prerequisite: AZ-104. Skills outline updated 17 April 2026.
 
@@ -240,7 +240,7 @@ A: AI-103 is the code-first developer path (Python, Foundry). AB-620 is the Copi
 Q: Do I need prerequisites before attempting AB-100?
 A: Not formally, but AB-100 assumes it. Microsoft expects candidates to already hold AI-901-level knowledge, plus working experience with at least one of AI-102, AI-103, PL-200, PL-300, PL-400, PL-500, or AB-620. AB-100 tests architectural decisions across platforms you're assumed to already know individually — it isn't where most candidates start their Microsoft AI journey.
 Q: Is Azure Mastery free for AB-100 prep?
-A: The app is free to download with a free allowance of AB-100 questions. The full 443-question AB-100 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
+A: The app is free to download with 50+ free AB-100 questions and written explanations. The full 443-question AB-100 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Does AB-100 practice work offline?
 A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
 
@@ -267,7 +267,7 @@ A: Associate certifications including AB-410 expire annually. Microsoft renews t
 Q: How long should I spend preparing for AB-410?
 A: Four to eight weeks is typical if you already build apps, flows, and Dataverse tables day to day. Give yourself the longer end if Power Fx, prompt columns, or AI Hub are unfamiliar — the logic domain alone carries close to half the exam.
 Q: Can I try Azure Mastery's AB-410 content before paying?
-A: The app is free to download, with a free allowance of AB-410 questions to try every feature first. The full bank of 444 AB-410 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: The app is free to download, with 50+ free AB-410 questions and written explanations. The full bank of 444 AB-410 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does AB-410 practice hold up on a train with no signal?
 A: Yes — question practice, scoring, and the readiness prediction run entirely on-device, so a dead connection costs you nothing. Starting needs no account, and your study data stays on your phone unless you switch on optional iCloud sync.
 
@@ -294,7 +294,7 @@ A: Take AI-901 first if AI concepts are genuinely new to you — it's the Fundam
 Q: Do I need a Copilot Studio licence to prepare for AB-620?
 A: Not to use Azure Mastery, but hands-on practice matters more for AB-620 than for most exams. Microsoft offers trial access to Copilot Studio — check the current terms on Microsoft Learn — and building topics, agent flows, and knowledge-source connections there pairs well with Azure Mastery's scenario questions, rather than relying on question practice alone.
 Q: Is Azure Mastery free for AB-620 prep?
-A: The app is free to download with a free allowance of AB-620 questions. The full 387-question AB-620 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
+A: The app is free to download with 50+ free AB-620 questions and written explanations. The full 387-question AB-620 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Does AB-620 practice work offline?
 A: Yes. The whole study loop, from answering questions to the readiness prediction, runs on the phone, so a flight or a signal-free commute is still study time. There is no account to create, and your progress stays on the device unless you switch on private iCloud sync.
 
@@ -321,7 +321,7 @@ A: SC-300 goes far deeper into Microsoft Entra identity architecture — hybrid 
 Q: What does the AB-650 exam format actually look like?
 A: AB-650 follows Microsoft's general 40–60 question range, varying by sitting. Azure Mastery's bank weights single-answer and scenario items most heavily, with multi-select, drag-to-match, dropdown, hot-area, and case-study questions layered in — all original practice content.
 Q: Can I try Azure Mastery's AB-650 content before paying?
-A: The app is free to download, with a free allowance of AB-650 questions to try every feature first. The full bank unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: The app is free to download, with 50+ free AB-650 questions and written explanations. The full bank unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. For broader Microsoft 365 and Copilot revision, Pro adds readiness guidance and coaching alongside the question banks.
 Q: Does AB-650 practice work without a connection?
 A: Yes — practice, scoring, and the Exam IQ prediction happen entirely on-device, so a commute with no signal works the same as being online. Nothing to sign up for; iCloud sync is available if you want it.
 
@@ -348,7 +348,7 @@ A: Each retake needs its own voucher, and the wait depends on your attempt numbe
 Q: How long should I study for AB-731?
 A: Most decision-makers pass after three to five weeks of focused study, assuming familiarity with Microsoft 365 and basic generative-AI concepts. You don't need to build agents, but you do need to articulate ROI, licensing, and adoption frameworks. Don't book until the readiness gauge shows 720 or higher.
 Q: Can I try Azure Mastery's AB-731 content before paying?
-A: The app is free to download, with a free allowance of AB-731 questions to try every feature first. The full bank of 335 AB-731 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: The app is free to download, with 50+ free AB-731 questions and written explanations. The full bank of 335 AB-731 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does AB-731 practice work offline?
 A: Yes — every part of practice runs locally: questions, scoring, and the readiness read. A flight or a signal-free commute doesn't interrupt a session. No account is needed, and data stays on your device until you turn on optional iCloud sync.
 
@@ -375,7 +375,7 @@ A: The wait before your first retake is 24 hours. First retake: 24-hour wait. Se
 Q: AB-900 vs AB-620 — what's the difference?
 A: Different jobs. AB-900 is the Fundamentals-tier admin cert: identifying M365 admin-centre objects, Purview surfaces, and Copilot administration controls. AB-620 (AI Agent Builder) is the Associate-tier maker cert: building agents in Copilot Studio with topics and knowledge sources. AB-900 administers; AB-620 builds. Many admins take both.
 Q: Can I try Azure Mastery's AB-900 bank before paying?
-A: Yes. The app is free to download with a free allowance of AB-900 questions so you can try every feature. The full 323-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
+A: Yes. The app is free to download with 50+ free AB-900 questions and written explanations. The full 323-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Can I revise AB-900 offline?
 A: Yes. Nothing in the study loop needs a connection: practice, scoring, and the readiness prediction all happen on-device. No account is needed, and your data only leaves the device if you opt into private iCloud sync.
 
@@ -401,7 +401,7 @@ A: AI-901 is the current Azure AI Fundamentals exam, and AI-103 is the current r
 Q: What replaced the retired AI-102 and DP-100 routes?
 A: Microsoft replaced the retired AI-102 route with AI-103 for Azure AI apps and agents, and identifies AI-300 as the replacement for the retired DP-100 data-science route. AI-103 focuses on application and agent development; AI-300 focuses on operationalizing machine learning and generative AI systems.
 Q: Is Azure Mastery free for AI-102 prep?
-A: The app is free to download and includes a free allowance of AI-102 questions so you can try every feature. The full bank of 334 AI-102 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: AI-102 is a retired reference pack. Previously purchased access stays available. For new study, choose a current exam and start with 50+ free questions and written explanations. Pro adds full Exam IQ insights, Answer Coach, the simulator and Ask Aura Preview for supported current exams.
 Q: Does AI-102 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-102 practice test mode?
@@ -432,7 +432,7 @@ A: Take AI-901 first if generative AI and Microsoft Foundry are unfamiliar conce
 Q: Do I need real Foundry or Python experience before I start?
 A: Not to begin studying, but AI-103 is written for candidates who already develop with Python and have touched Azure services — it isn't an intro-to-AI exam. If you're newer to development, working through Microsoft Foundry's own quickstarts alongside Azure Mastery's practice questions will close that gap faster than question practice alone.
 Q: Is Azure Mastery free for AI-103 prep?
-A: The app is free to download, with a free allowance of AI-103 questions to try Answer Coach, the readiness gauge, and the adaptive plan before you commit. The full 557-question AI-103 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue.
+A: The app is free to download, with 50+ free AI-103 questions and written explanations. The full 557-question AI-103 bank unlocks with a one-time exam-pack purchase, or a subscription or lifetime upgrade unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Does AI-103 practice work offline?
 A: All of it — question practice, scoring, and the readiness prediction run on-device, so a flight or an offline commute doesn't interrupt your study streak. No account is required, and your data stays on your device unless you turn on optional private iCloud sync.
 
@@ -458,7 +458,7 @@ A: Different emphases. AI-200 validates back-end Azure development for AI soluti
 Q: AI-200 vs AI-300 — which next?
 A: AI-200 first. It's the AI Cloud Developer cert, building the platform AI workloads run on. AI-300 is the ML Operations Engineer cert, running ML and generative-AI systems in production. AI-200 sits upstream of AI-300 in most roles.
 Q: Is Azure Mastery free for AI-200 prep?
-A: The app is free to download and includes a free allowance of AI-200 questions so you can try every feature. The full bank of 240 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes 50+ free AI-200 questions and written explanations. The full bank of 240 AI-200 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade. Advanced study tools require Pro.
 Q: Does AI-200 practice work offline?
 A: Yes. Everything AI-200 practice needs, from scoring to the readiness prediction, lives on the phone, so a flight or a dead spot changes nothing. There is no account to make, and your history only leaves the device if you turn on private iCloud sync.
 Q: Is there an AI-200 practice test mode?
@@ -489,7 +489,7 @@ A: The wait depends on your attempt number, and every attempt needs its own vouc
 Q: Can I revise for AI-300 without a connection?
 A: Yes — the whole loop stays on your device: answering questions, scoring them, and building the readiness prediction. There's no account to sign into, and your study history stays local unless you switch on private iCloud sync.
 Q: Is Azure Mastery free to try for AI-300?
-A: Yes — the app is free to download, with a free allowance of AI-300 questions so you can try every feature. The full bank of 362 AI-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download. Use 50+ free AI-300 questions and written explanations as a small preview before paying. To own this exam's content, select the one-time exam-pack purchase for the full bank of 362 AI-300 practice questions. Pro unlocks all banks plus the readiness assessment and Answer Coach.
 
 ## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
 Page last modified: 2026-10-01
@@ -515,7 +515,7 @@ A: Microsoft prices AI-500 by proctoring region and hasn't published one flat be
 Q: Will AI-500 revision work without Wi-Fi?
 A: Yes. Nothing about practising AI-500 needs a live connection — questions, scoring, and the Exam IQ readiness read all happen on-device. No sign-up, no account; your data sits on your device, and iCloud sync is opt-in.
 Q: Does Azure Mastery let me try AI-500 before paying?
-A: Yes. The app is free to download, with a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with 50+ free AI-500 questions and written explanations. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 
 ## /exams/ai-900/ — AI-900 Retired Exam & AI-901 Next Step | Azure Mastery
 Page last modified: 2026-10-01
@@ -538,7 +538,7 @@ A: AI-900 first, unless you already build AI applications professionally. AI-900
 Q: Is AI-900 worth taking if I'm not technical?
 A: Yes — that's a large part of the audience. Microsoft positions AI-900 for both technical and non-technical candidates: solution consultants, sales engineers, technical PMs, business stakeholders evaluating Azure AI procurement, and anyone wanting a credible answer to "which Azure AI service should we use for this?" The exam doesn't ask you to write Python. It asks you to recognise scenarios — "which Azure AI service is best suited for redacting PII from a document?" or "which guiding principle of responsible AI applies here?" — and pick the correct option.
 Q: Is Azure Mastery free for AI-900 prep?
-A: The app is free to download and includes a free allowance of AI-900 questions so you can try every feature. The full bank of 340 AI-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: AI-900 is a retired reference pack. Previously purchased access stays available. For new study, choose a current exam and start with 50+ free questions and written explanations. Pro adds full Exam IQ insights, Answer Coach, the simulator and Ask Aura Preview for supported current exams.
 Q: Does AI-900 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AI-900 practice test mode?
@@ -558,7 +558,7 @@ A: Choose the role-based exam that matches how you build agents. AI-103 covers c
 Q: What format is the AI-901 exam?
 A: Fundamentals exams follow Microsoft's general 40–60 question guidance, with formats varying by sitting. Azure Mastery's AI-901 bank weights single-answer questions heaviest, with multi-select, drag-and-match, and hot-area items alongside linked case studies for the Foundry-heavy topics.
 Q: Does the free tier cover any of AI-901's question bank?
-A: Yes. The app is free to download and includes a free allowance of AI-901 questions so you can try every feature. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download and includes 50+ free AI-901 questions and written explanations. The full bank of 572 AI-901 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Start with the fundamentals preview to judge the explanation style. Choose Pro when you want readiness insights and coaching as well as AI practice.
 Q: Can I resit AI-901 immediately if I fail?
 A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Is there a cost to sitting AI-901?
@@ -570,7 +570,7 @@ A: No. AI-901 earns the Microsoft Certified: Azure AI Fundamentals credential, a
 Q: How much revision time does AI-901 need?
 A: Allow several weeks for concepts plus hands-on practice. The outline expects core cloud knowledge, familiarity with Azure resources, and comfort reading Python syntax that calls AI models. Azure Mastery's readiness gauge helps you decide when to book.
 
-## /exams/az-104/ — AZ-104 Practice Questions — 521 Qs for Azure Admin (2026)
+## /exams/az-104/ — AZ-104 Practice Questions — 541 Qs for Azure Admin (2026)
 Page last modified: 2026-10-01
 Exam domains:
   - Manage Azure identities and governance (20–25%)
@@ -593,7 +593,7 @@ A: Take AZ-900 (Microsoft Azure Fundamentals) first if you have under six months
 Q: AZ-104 vs AZ-305 — which next?
 A: Pass AZ-104 first. It's the Associate operational cert; AZ-305 is the Expert architectural cert that assumes you already know AZ-104's material and adds requirements gathering, capacity planning, and governance design. Most architects hold both — one proves you've done the work, the other that you can design it.
 Q: Is Azure Mastery free for AZ-104 prep?
-A: The app is free to download, with a free allowance of AZ-104 questions so you can try every feature. The full bank of 521 AZ-104 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: The app is free to download, with 50+ free AZ-104 questions and written explanations. The full bank of 541 AZ-104 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does AZ-104 practice work offline?
 A: Yes — questions, scoring, and the readiness prediction all run on-device, so a commute or a flight with no signal doesn't stop your AZ-104 prep. There's no account requirement, and study data stays on your device unless you turn on private iCloud sync.
 Q: Is there an AZ-104 practice test mode?
@@ -620,7 +620,7 @@ A: Most candidates pass AZ-204 after four to six weeks of focused study, assumin
 Q: AZ-204 vs AZ-104 — which should I take first?
 A: Take whichever matches your day job. AZ-104 (Microsoft Azure Administrator) is for sysadmins and platform engineers; AZ-204 was for application developers. They cover overlapping infrastructure (App Service, Functions, Storage, Key Vault) but from different angles — AZ-104 asks "how do I configure X in the portal"; AZ-204 asked "how do I call X from the C# / Python SDK". Since AZ-204 is now closed, new candidates should start with AZ-104 or go straight to AI-200 for the current developer route.
 Q: Is Azure Mastery free for AZ-204 prep?
-A: The app is free to download and includes a free allowance of AZ-204 questions so you can try every feature. The full bank of 405 AZ-204 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: AZ-204 is a retired reference pack. Previously purchased access stays available. For new study, choose a current exam and start with 50+ free questions and written explanations. Pro adds full Exam IQ insights, Answer Coach, the simulator and Ask Aura Preview for supported current exams.
 Q: Does AZ-204 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-204 practice test mode?
@@ -650,7 +650,7 @@ A: Not immediately, and each sitting needs its own voucher. First retake: after 
 Q: Realistically, how many weeks does AZ-305 prep take?
 A: Plan eight to twelve weeks of focused study, even after passing AZ-104. AZ-305 tests judgement more than recall — you're given a scenario and asked which services satisfy it. Don't book until the readiness gauge holds around 730 or higher; AZ-305 is unforgiving of borderline scores.
 Q: Can I try Azure Mastery's AZ-305 content before paying?
-A: Yes. The app is free to download, with a free allowance of AZ-305 questions so you can try every feature. The full bank of 439 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with 50+ free AZ-305 questions and written explanations. The full bank of 439 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 
 ## /exams/az-400/ — AZ-400 Practice Questions — 507 Qs for DevOps Engineer (2026)
 Page last modified: 2026-10-01
@@ -677,7 +677,7 @@ A: Yes, and it's the exam's defining feature. AZ-400 treats Azure Pipelines and 
 Q: What does the AZ-400 exam format actually look like?
 A: AZ-400 follows Microsoft's general 40–60 question format, with the mix varying by sitting. Azure Mastery's bank weights single-answer and scenario-based items heaviest, with multi-select, drag-and-drop, and linked case-study questions filling out the rest — all original practice content.
 Q: Can I try Azure Mastery's AZ-400 content before buying the full bank?
-A: Yes. The app is free to download, with a free allowance of AZ-400 questions so you can try every feature. The full bank of 507 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with 50+ free AZ-400 questions and written explanations. The full bank of 507 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 
 ## /exams/az-500/ — AZ-500 Retired Exam & SC-500 Next Step | Azure Mastery
 Page last modified: 2026-10-01
@@ -699,7 +699,7 @@ A: Microsoft strongly recommends AZ-104 first, and it shows. AZ-500 assumes you 
 Q: AZ-500 vs SC-200 — which next on the security track?
 A: Different roles. AZ-500 is the Azure Security Engineer cert — it's about hardening Azure resources end-to-end. SC-200 is the Security Operations Analyst cert — it's about running Microsoft Defender XDR and Sentinel as a SOC analyst, with much heavier focus on M365 and incident triage workflows. If your day job is securing Azure workloads, AZ-500. If it's running detection-and-response across the Microsoft estate, SC-200. Many Cybersecurity Architect Expert candidates hold both, with SC-900 as the connective fundamentals.
 Q: Is Azure Mastery free for AZ-500 prep?
-A: The app is free to download and includes a free allowance of AZ-500 questions so you can try every feature. The full bank of 346 AZ-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: AZ-500 is a retired reference pack. Previously purchased access stays available. For new study, choose a current exam and start with 50+ free questions and written explanations. Pro adds full Exam IQ insights, Answer Coach, the simulator and Ask Aura Preview for supported current exams.
 Q: Does AZ-500 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there an AZ-500 practice test mode?
@@ -730,7 +730,7 @@ A: Not immediately, and each attempt needs its own voucher. First retake: after 
 Q: How many weeks of AZ-700 prep is realistic?
 A: Most candidates plan four to eight weeks with prior Azure networking experience. Build and troubleshoot virtual networks, hybrid connectivity, routing, private access, application delivery, and network security in a lab. Azure Mastery's readiness gauge tells you when you're exam-ready.
 Q: Can I test-drive Azure Mastery's AZ-700 content for free?
-A: Yes. The app is free to download, with a free allowance of AZ-700 questions so you can try every feature. The full bank of 609 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with 50+ free AZ-700 questions and written explanations. The full bank of 609 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 
 ## /exams/az-900/ — AZ-900 Practice Questions — 384 Qs for Fundamentals (2026)
 Page last modified: 2026-10-01
@@ -753,7 +753,7 @@ A: Yes — that's exactly who it's designed for. Account managers, sales enginee
 Q: What prerequisites does AZ-900 assume?
 A: AZ-900 has no formal prerequisites — Microsoft designed it as the common entry point into Azure. Some IT background makes the material quicker to absorb, since you already have an environment to map its concepts onto. Coming from a fully non-technical background stretches the usual one-to-two-week estimate.
 Q: Is Azure Mastery free for AZ-900 prep?
-A: The app is free to download and includes a free allowance of AZ-900 questions so you can try every feature. The full bank of 384 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes 50+ free AZ-900 questions and written explanations. The full bank of 384 AZ-900 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade. Advanced study tools require Pro.
 Q: Does AZ-900 practice work offline?
 A: Yes. AZ-900 practice, scoring and the readiness prediction all happen on the device, so offline sessions count exactly like online ones. No account is needed, and nothing is uploaded unless you choose private iCloud sync.
 Q: Is there an AZ-900 practice test mode?
@@ -779,7 +779,7 @@ A: AI-901 is the current Azure AI Fundamentals exam and DP-900 remains the curre
 Q: Which current credentials cover adjacent skills?
 A: AI-300 is Microsoft's replacement route for operationalizing machine learning and generative AI. AI-103 covers developing AI apps and agents with Python and Microsoft Foundry. Neither recreates the retired DP-100 data-scientist credential exactly, so choose based on whether your work centres on AI operations or application development.
 Q: Is Azure Mastery free for DP-100 prep?
-A: The app is free to download and includes a free allowance of DP-100 questions so you can try every feature. The full bank of 350 DP-100 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: DP-100 is a retired reference pack. Previously purchased access stays available. For new study, choose a current exam and start with 50+ free questions and written explanations. Pro adds full Exam IQ insights, Answer Coach, the simulator and Ask Aura Preview for supported current exams.
 Q: Does DP-100 practice work offline?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so you can study on a flight or a commute with no connection. No account is required, and your study data stays on your device with optional private iCloud sync.
 Q: Is there a DP-100 practice test mode?
@@ -810,7 +810,7 @@ A: They cover different parts of the data stack. DP-300 is for administering Azu
 Q: I need to resit DP-300 — how soon can I book again?
 A: Every attempt is a separate booking, and how long you wait depends on which attempt it is. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-300 bank before paying?
-A: Yes — the app is free to download, with a free allowance of DP-300 questions so you can try every feature. The full bank of 425 DP-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes — the app is free to download, with 50+ free DP-300 questions and written explanations. The full bank of 425 DP-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does DP-300 revision still work with no connection?
 A: Yes. The whole loop stays on-device: practice, scoring, and the readiness read. A missing signal doesn't stop a session, and no account is required. Your study data stays local unless you switch on optional private iCloud sync.
 
@@ -837,7 +837,7 @@ A: Yes. DP-700 expects real data-engineering work in Fabric: writing T-SQL, PySp
 Q: I failed DP-700 — how long until I can retake it?
 A: Each retake needs a fresh voucher, and the wait grows with every attempt. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-700 bank before paying?
-A: Yes — the app is free to download, with a free allowance of DP-700 questions so you can try every feature. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes — the app is free to download, with 50+ free DP-700 questions and written explanations. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does DP-700 practice hold up without a connection?
 A: Yes. The app doesn't need a connection for question practice, scoring, or the readiness prediction — all of that runs on-device. No account is required, and your data stays on your device unless you switch on optional iCloud sync.
 
@@ -865,7 +865,7 @@ A: A Lakeflow Job orchestrates arbitrary tasks, notebooks, SQL, other jobs, on a
 Q: I need to resit DP-750 — what's the wait?
 A: How long you wait scales with your attempt count, and each one needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-750 bank before paying?
-A: Yes — the app is free to download, with a free allowance of DP-750 questions so you can try every feature. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes — the app is free to download, with 50+ free DP-750 questions and written explanations. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does DP-750 revision work without a connection?
 A: Yes. Question practice, scoring, and the readiness prediction all run locally on your device, so studying with no signal works the same as with a full connection. No account is needed, and sync via iCloud stays optional and private.
 
@@ -892,7 +892,7 @@ A: They sit on opposite ends of the data stack. DP-800 brings AI primitives, emb
 Q: I failed DP-800 — how soon can I book a retake?
 A: Every attempt needs its own voucher, and the wait grows the more times you've sat it. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-800 bank before paying?
-A: Yes — the app is free to download, with a free allowance of DP-800 questions so you can try every feature. The full bank of 413 DP-800 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes — the app is free to download, with 50+ free DP-800 questions and written explanations. The full bank of 413 DP-800 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Can I revise DP-800 with no data connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync.
 
@@ -920,7 +920,7 @@ A: Each DP-900 retake needs its own voucher, and the wait time depends on your a
 Q: Is DP-900 worth sitting if I'm not a developer or DBA?
 A: Yes. Microsoft designed DP-900 for technical and non-technical candidates alike — data analysts moving into Power BI, engineers crossing into a data role, product managers who need the vocabulary. Nobody writes a SQL query; you just pick the right service for a described scenario.
 Q: Can I try Azure Mastery's DP-900 bank before paying?
-A: Yes — the app is free to download, with a free allowance of DP-900 questions so you can try every feature. The full bank of 346 DP-900 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes — the app is free to download, with 50+ free DP-900 questions and written explanations. The full bank of 346 DP-900 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Can I revise for DP-900 with no internet connection?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so a flight or a commute with no signal is no obstacle. No account is required, and your study data stays on your device with optional private iCloud sync.
 
@@ -948,7 +948,7 @@ A: GH-300 follows Microsoft's standard retake policy even though GitHub owns the
 Q: What should I expect from GH-300's exam format?
 A: Neither Microsoft nor GitHub publishes a fixed question count — it varies by sitting, and so do the formats. Azure Mastery's bank weights single-answer and scenario items most heavily, with multi-select, drag-to-match, and hotspot questions layered in as original practice content.
 Q: Can I try Azure Mastery's GH-300 content before paying?
-A: Yes. The app is free to download, with a free allowance of GH-300 questions to try every feature. The full bank unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with 50+ free GH-300 questions and written explanations. The full bank unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Pro adds coaching and a readiness forecast while you work towards the GitHub Copilot certification.
 Q: Does GH-300 practice work offline?
 A: Yes — practice, scoring, and the readiness prediction all happen on-device, so you can keep going on a plane or through a tunnel with zero signal. No account is required, and your study history stays local unless you switch on iCloud sync.
 
@@ -977,7 +977,7 @@ A: Yes — GH-900 is explicitly designed for non-developers as well as developer
 Q: GH-900 vs GH-300 — foundations or the Copilot-specific exam?
 A: GH-300 narrows in on one tool: using Copilot responsibly, prompting it well, and administering it at scale. GH-900 is the broad on-ramp with no assumed Copilot depth. Non-developers usually stop at GH-900; developers proving Copilot fluency move on to GH-300.
 Q: Can I try Azure Mastery's GH-900 content before paying?
-A: Yes. The app is free to download, with a free allowance of GH-900 questions to try every feature first. The full bank unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: Yes. The app is free to download, with 50+ free GH-900 questions and written explanations. The full bank unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. A Foundations bank suits one certification. Pro is the option for guided revision and readiness tools across GitHub and the other supported exams.
 Q: Does GH-900 practice work offline?
 A: Yes — GH-900 practice runs its questions, scoring, and readiness prediction entirely on-device, so a commute or flight with no connection doesn't interrupt your revision. No account is needed, and data stays on your device unless you enable iCloud sync.
 
@@ -999,7 +999,7 @@ A: PL-300 sits in Microsoft's 40–60 question Associate band, with formats vary
 Q: Does PL-300 prep need a live internet connection?
 A: No. Every part of PL-300 practice, including the Exam IQ prediction, runs on your device rather than a server, so full sessions work on a delayed train or a long-haul flight. No account is needed, and data stays put unless you opt into private iCloud sync.
 Q: Can I test-drive Azure Mastery's PL-300 content for free?
-A: Yes. The app is free to download, with a free allowance of PL-300 questions so you can try every feature. The full bank of 398 PL-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
+A: The app is free to download. Start with 50+ free PL-300 questions and written explanations to see how the revision flow feels. A one-time exam-pack purchase opens the full 398-question bank for Power BI practice, or you can choose Pro with a subscription or lifetime access. Exam IQ and Answer Coach are Pro benefits, separate from the Power BI bank purchase.
 Q: If I don't pass PL-300, when can I try again?
 A: Not immediately, and each attempt needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Will my PL-300 badge lapse if I don't renew?
@@ -1032,7 +1032,7 @@ A: You can book your first retake after 24 hours. First retake: 24-hour wait. Se
 Q: Is PL-900 worth taking if I'm not a developer?
 A: Yes. PL-900 is built for a mixed audience: business analysts, citizen developers, project managers, and IT pros sizing up low-code all sit it. You're not asked to write code, just to pick the right app or flow type for a scenario, a sensible first stop before building for real.
 Q: Can I try Azure Mastery's PL-900 bank before paying?
-A: Yes. The app is free to download with a free allowance of PL-900 questions so you can try every feature. The full 328-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
+A: Yes. The app is free to download with 50+ free PL-900 questions and written explanations. The full 328-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Can I revise for PL-900 without a data connection?
 A: Yes. Practice, scoring, and the PL-900 readiness prediction all run on-device, with nothing sent anywhere while you study. No account is needed, and everything stays local unless you switch on optional private iCloud sync.
 
@@ -1073,7 +1073,7 @@ A: A first retake is available after 24 hours. First retake: 24-hour wait. Secon
 Q: How is SC-100 different from an Associate-level security exam?
 A: Associate exams like SC-200 and SC-300 test configuring a named product correctly. SC-100 tests designing the strategy those products serve, choosing between Sentinel automation and Defender XDR-native response for stated constraints. Multiple options can be valid; only one best satisfies the scenario.
 Q: Can I try Azure Mastery's SC-100 bank before paying?
-A: Yes. The app is free to download with a free allowance of SC-100 questions so you can try every feature. The full 472-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
+A: Yes. The app is free to download with 50+ free SC-100 questions and written explanations. The full 472-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Can I rehearse SC-100 scenarios with no internet connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device, working with no connection at all. No account is required, and iCloud sync stays optional and private if you want it.
 
@@ -1098,7 +1098,7 @@ A: SC-200 scenarios give you an incident that could plausibly be handled either 
 Q: I need to retake SC-200 — what's the wait?
 A: 24 hours covers the wait before your first retake. First retake: 24-hour wait. Second and third retakes: 14-day wait each. Microsoft limits you to five attempts in any rolling 12-month window, a new voucher required each time.
 Q: Can I try Azure Mastery's SC-200 bank before paying?
-A: Yes. The app is free to download with a free allowance of SC-200 questions so you can try every feature. The full 374-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
+A: Yes. The app is free to download with 50+ free SC-200 questions and written explanations. The full 374-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Can I hunt through SC-200 practice scenarios with no connection?
 A: Yes. Practice sessions, scoring, and the readiness prediction all run on-device, so they work with no connection at all. There's no account to sign into, and data stays local unless you turn on optional, private iCloud sync.
 
@@ -1126,7 +1126,7 @@ A: Retake number one is available 24 hours after a fail. First retake: 24-hour w
 Q: SC-300 vs SC-900 — which should I take first?
 A: SC-900 first if security and identity concepts are new to you: it builds the cross-cutting vocabulary without expecting hands-on Conditional Access or PIM work. SC-300 is the role-based Associate exam, operating Entra ID at scale day-to-day. Most candidates pass SC-900 in weeks, then spend months on SC-300.
 Q: Can I try Azure Mastery's SC-300 bank before paying?
-A: Yes. The app is free to download with a free allowance of SC-300 questions so you can try every feature. The full 448-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
+A: Yes. The app is free to download with 50+ free SC-300 questions and written explanations. The full 448-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Can I revise SC-300 with no data connection?
 A: Yes, no connection needed. Practice, scoring, and the readiness prediction are all on-device, so a commute or a flight works fine for study. No account is required, and iCloud sync stays optional and private.
 
@@ -1152,7 +1152,7 @@ A: SC-500 assumes hands-on Azure and hybrid administration — compute, network,
 Q: SC-500 vs SC-200 — which next on the security track?
 A: Different roles. SC-500 covers implementing security controls across identity, storage, networking, compute, and AI workloads. SC-200 covers running Defender XDR and Sentinel as a SOC analyst, focused on detection and incident response. Many Cybersecurity Architect candidates hold both.
 Q: Is Azure Mastery free for SC-500 prep?
-A: The app is free to download and includes a free allowance of SC-500 questions so you can try every feature. The full bank of 452 SC-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade.
+A: The app is free to download and includes 50+ free SC-500 questions and written explanations. The full bank of 452 SC-500 practice questions unlocks with a one-time exam-pack purchase, or you can unlock every exam in the catalogue with a subscription or a one-time lifetime upgrade. Advanced study tools require Pro.
 Q: Does SC-500 practice work offline?
 A: Yes — every question, score, and readiness read happens on-device, so SC-500 prep keeps going without a connection. No account is needed, and nothing leaves your device unless you switch on private iCloud sync.
 Q: Is there an SC-500 practice test mode?
@@ -1182,7 +1182,7 @@ A: The wait before your first retake is 24 hours. First retake: 24-hour wait. Se
 Q: Is SC-900 worth taking if I'm not technical?
 A: Yes. SC-900 targets a broad audience on purpose: business stakeholders weighing security procurement, IT generalists working near security, and students entering the field all sit it. You won't configure Conditional Access or write KQL, just pick which Defender product covers a described surface.
 Q: Can I try Azure Mastery's SC-900 bank before paying?
-A: Yes. The app is free to download with a free allowance of SC-900 questions so you can try every feature. The full 397-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue.
+A: Yes. The app is free to download with 50+ free SC-900 questions and written explanations. The full 397-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Does SC-900 revision work with no signal?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device rather than through a server, so a train tunnel or aeroplane mode works fine. No account is needed, and iCloud sync stays optional and private.
 

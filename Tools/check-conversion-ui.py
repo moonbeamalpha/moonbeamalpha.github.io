@@ -84,6 +84,24 @@ class ConversionContracts(unittest.TestCase):
             if re.search(r'gtag\([\'"]config[\'"]', text):
                 self.assertEqual(len(re.findall(r'<script src="/app-store-links\.js', text)), 1, page)
 
+    def test_access_faq_distinguishes_free_bank_and_pro(self):
+        snapshot = json.loads((ROOT / 'data/exam-counts.json').read_text())
+        for code in snapshot['exams']:
+            page = ROOT / 'exams' / code.lower() / 'index.html'
+            source = page.read_text()
+            self.assertNotIn('try every feature', source, page)
+            blocks = re.findall(r'<details class="faq">.*?</details>', source, re.S)
+            access = [b for b in blocks if 'app is free to download' in b or 'is a retired reference pack' in b]
+            self.assertEqual(len(access), 1, page)
+            if code in snapshot['retired']:
+                self.assertIn('Previously purchased access', access[0], page)
+                self.assertNotIn('one-time exam-pack purchase', access[0], page)
+            else:
+                self.assertIn(f'50+ free {code} questions', access[0], page)
+                self.assertIn('one-time exam-pack purchase', access[0], page)
+                self.assertIn(conversion.ACCESS_TOOL_DISCLOSURES.get(code, 'Advanced study tools require Pro.'), access[0], page)
+            self.assertEqual(conversion.access_faq(source, code, snapshot), source, page)
+
     def test_generated_chrome_does_not_exempt_editorial_text(self):
         similarity = tool('check-page-similarity')
         with tempfile.NamedTemporaryFile(mode='w+', suffix='.html') as fixture:

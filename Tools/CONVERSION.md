@@ -17,7 +17,7 @@ native disclosure. Lettered choices are grouped under the complete prompt;
 announced feedback, explicit answer labels and reset support keyboard use.
 
 `sync-conversion-ui.py` maintains shared assets, the exact exam purchase/methodology
-component, placement links, Smart App Banner attribution and exam cards. It covers
+component, truthful free/bank/Pro access FAQs, placement links, Smart App Banner attribution and exam cards. It covers
 published sitemap pages and the exam template. Its `--check` mode is read-only.
 The similarity baseline and tolerance are unchanged. Only the byte-exact shared
 purchase/navigation component is excluded from editorial similarity; modified
@@ -27,6 +27,7 @@ Run after catalogue or UI changes:
 
 ```sh
 python3 Tools/sync-conversion-ui.py
+python3 Tools/sync-exam-faq-schema.py    # mirror visible access copy in structured data
 python3 Tools/build-download-qr.py       # requires segno==1.6.6
 python3 Tools/build-search-index.py
 python3 Tools/version-static-assets.py

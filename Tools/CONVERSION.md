@@ -10,7 +10,9 @@ their existing URLs, successor guidance and sitemap entries.
 The exam hub and certification pathways share a refined version of the existing
 shield artwork, exam-code ribbon and Fluent tier stars. The centre Expert star
 sits lower to follow the shield point. Cards add a level label, subject colour
-and detail-page action.
+and detail-page action. Single-certification related cards across exam and guide
+pages and every homepage finder card reuse the same compact badge while retaining their authored descriptions
+and destinations. On phones, descriptions span the full card width.
 Subject filters on the homepage and hub pair
 symbols with their existing text labels. Filtering the hub hides entire current
 exam sections when they contain no matching cards; All restores every section.

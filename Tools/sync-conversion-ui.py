@@ -77,32 +77,58 @@ def subject_filters(home=False):
                     for key, label in labels) + '</div>')
 
 
+def exam_tier(code, snapshot, metadata):
+    if code in snapshot['retired']:
+        return 'retired', 'Retired reference', 0
+    name = snapshot['names'][code]
+    level, category = metadata[code]
+    if 'Fundamentals' in name or 'Foundations' in name:
+        level = 'Fundamentals'
+    return category, level, {'Fundamentals': 1, 'Associate': 2, 'Expert': 3}[level]
+
+
+def certification_badge(code, stars):
+    return ('<span class="certification-badge" aria-hidden="true">'
+            '<img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v2.webp" '
+            'alt="" width="300" height="300" loading="lazy" decoding="async">'
+            f'<span class="certification-badge__code" data-code="{code}"></span>'
+            f'<span class="certification-badge__stars" data-stars="{stars}">' +
+            '<img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy">' * stars +
+            '</span></span>')
+
+
 def hub_card(code, snapshot, metadata, reference_hint):
     retired = code in snapshot['retired']
-    name = snapshot['names'][code]
-    if retired:
-        category, level, stars = 'retired', 'Retired reference', 0
-    else:
-        level, category = metadata[code]
-        if 'Fundamentals' in name or 'Foundations' in name:
-            level = 'Fundamentals'
-        stars = {'Fundamentals': 1, 'Associate': 2, 'Expert': 3}[level]
+    category, level, stars = exam_tier(code, snapshot, metadata)
     category_attr = '' if retired else f' data-exam-category="{category}"'
     hint = reference_hint if retired else LABELS[category]
     return (f'<a class="guide-card exam-hub-card" data-exam-tone="{category}"{category_attr} href="/exams/{code.lower()}/">'
-            '<span class="exam-hub-card__badge" aria-hidden="true">'
-            '<img class="exam-hub-card__shield" src="/exams/images/certification-badge-shield-v2.webp" '
-            'alt="" width="300" height="300" loading="lazy" decoding="async">'
-            f'<span class="exam-hub-card__ribbon">{code}</span>'
-            f'<span class="exam-hub-card__stars" data-stars="{stars}">' +
-            '<img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy">' * stars +
-            '</span></span>'
+            + certification_badge(code, stars) +
             f'<span class="exam-hub-card__level">{level}</span>'
             f'<span class="guide-card__kicker">{code}</span>'
-            f'<span class="guide-card__name">{html.escape(name)}</span>'
+            f'<span class="guide-card__name">{html.escape(snapshot["names"][code])}</span>'
             f'<span class="guide-card__hint">{html.escape(hint)}</span>'
             f'<span class="guide-card__more">{"View next steps" if retired else "View exam"}'
             f'{symbol("arrow-right")}</span></a>')
+
+
+def related_certification_badges(text, snapshot, metadata):
+    """Add a shared badge to single-certification related links without rewriting copy."""
+    def replace(match):
+        attributes, body = match[1], match[2]
+        destination = re.search(r'href="/exams/([a-z]{2}-\d{3})/"', attributes)
+        label = re.search(r'class="related-card__code">([A-Z]{2}-\d{3})</span>', body)
+        code = destination[1].upper() if destination else label[1] if label else None
+        if code not in snapshot['exams']:
+            return match[0]
+        category, _, stars = exam_tier(code, snapshot, metadata)
+        body = re.sub(r'<!-- related-certification-badge:start -->.*?<!-- related-certification-badge:end -->',
+                      '', body, flags=re.S)
+        attributes = re.sub(r' data-certification-card| data-exam-tone="[^"]*"', '', attributes)
+        return (f'<a class="related-card" data-certification-card data-exam-tone="{category}"{attributes}>'
+                '<!-- related-certification-badge:start -->' + certification_badge(code, stars) +
+                '<!-- related-certification-badge:end -->' + body + '</a>')
+    return re.sub(r'<a class="related-card"([^>]*)>(.*?)</a>', replace, text, flags=re.S)
 
 
 def finder_cards(snapshot, metadata):
@@ -110,13 +136,12 @@ def finder_cards(snapshot, metadata):
     if set(current) - set(metadata):
         raise ValueError('Current exams missing roadmap classification: ' + str(set(current) - set(metadata)))
     def card(code):
-        level, category = metadata[code]
+        category, level, stars = exam_tier(code, snapshot, metadata)
         name = snapshot['names'][code]
-        if 'Fundamentals' in name or 'Foundations' in name:
-            level = 'Fundamentals'
         # The title already conveys the level for names such as Power BI Data Analyst Associate.
         meta = LABELS[category] if level.lower() in name.lower() else f'{level} · {LABELS[category]}'
         return (f'<a class="exam-finder__card exam-mini__tag" data-exam-category="{category}" href="/exams/{code.lower()}/">'
+                + certification_badge(code, stars) +
                 f'<span class="exam-finder__code">{code}<span aria-hidden="true">↗</span></span>'
                 f'<span class="exam-finder__title">{html.escape(name.removeprefix("Microsoft "))}</span>'
                 f'<span class="exam-finder__meta">{meta}</span></a>')
@@ -268,6 +293,7 @@ def render(path, text, snapshot, metadata):
                       replace_hub_card, text, flags=re.S)
         text = re.sub(r'<section id="(fam-(?:azure|ai|data|security|github))" class="container"(?: data-exam-section)?>',
                       r'<section id="\1" class="container" data-exam-section>', text)
+    text = related_certification_badges(text, snapshot, metadata)
     return campaign_links(text, relative)
 
 

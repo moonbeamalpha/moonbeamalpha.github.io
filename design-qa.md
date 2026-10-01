@@ -100,4 +100,33 @@ whole-page pixel targets.
 - [x] Current-only homepage and concise caption treatment.
 - [x] Responsive, keyboard, contrast and no-JavaScript verification.
 
+## Related-certification and homepage extension
+
+Added compact shared badges to every homepage finder card, including the
+expanded 24-card set, and single-certification related links on exam and guide
+pages. Existing descriptions, counts and destinations are preserved.
+
+Source references:
+
+- Related cards: `/var/folders/dz/dyy7dm995kz71qsjqhv24mq80000gn/T/codex-clipboard-2c491ecd-94b5-463b-ae87-8b8552548d3b.png` — 1838×1396.
+- Homepage finder: `/var/folders/dz/dyy7dm995kz71qsjqhv24mq80000gn/T/codex-clipboard-3b5939c7-2874-44eb-9a36-3b2b4844dd37.png` — 2246×1848.
+
+Post-fix full-view evidence in the same visualization directory:
+`related-certifications-light-1280.png`, `related-certifications-dark-390.png`,
+`guide-related-certifications.png`, `homepage-exam-badges-light-1280.png` and
+`homepage-exam-badges-light-390.png`. Source and rendered captures were viewed
+together to assess hierarchy, compact badge scale and complete descriptions.
+
+**P2 iteration:** two-column phone finder cards left too little space for the
+badge and title. Changed phones to one column and intermediate widths to two.
+Post-fix browser checks cover 320, 390, 768 and 1280px in both themes: 40 related
+exam/guide cases and eight homepage cases passed, with no document/card overflow
+or JavaScript errors. All 30 expanded homepage badges and filtering are verified.
+Keyboard focus and a related-certification navigation target also pass.
+
+The shared helper renders badge codes decoratively while existing link text
+supplies the accessible code. The editorial similarity ratchet and its baseline
+are unchanged and pass; no authored related-card text was modified. No new
+fidelity findings remain.
+
 Final result: passed

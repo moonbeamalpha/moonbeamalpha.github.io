@@ -1,6 +1,6 @@
 # Certification shield artwork
 
-The exam library and certification pathways share
+The homepage exam finder, exam library, related-certification cards and certification pathways share
 [`certification-badge-shield-v2.webp`](../exams/images/certification-badge-shield-v2.webp).
 It is a refinement of the existing `certification-badge-shield.webp`, produced
 with the built-in ImageGen edit tool on 1 October 2026. The original is preserved.
@@ -27,10 +27,11 @@ The 1,254px transparent PNG was resized proportionally to 300×300 with Lanczos
 resampling and exported as WebP, quality 92, method 6. The result is 15,804 bytes.
 Only export conversion and resizing happened outside ImageGen.
 
-Exam codes remain real text, centred within the white ribbon. Tier stars use the
+Each card retains its exam code as accessible link text; the badge repeats it
+decoratively in the centred white ribbon. Pathway codes remain real text. Tier stars use the
 existing Fluent star asset: one for Fundamentals, two for Associate and three
 for Expert. The Expert centre star sits lower to follow the shield's point.
-Both consumers use the same versioned asset so cached images cannot retain the
+All consumers use the same versioned asset so cached images cannot retain the
 old artwork after publication.
 
 Cards and pathways were checked at phone and desktop widths in light and dark

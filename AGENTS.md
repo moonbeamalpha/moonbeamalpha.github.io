@@ -71,7 +71,8 @@ They keep everything else — their `/exams/<code>/` page, sitemap entry, llms.t
 bullet, and a per-page count that falls back to the full bank size so the page
 still states what it holds. Those pages catch people searching for a dead exam
 and route them to the successor. **Do not delete them.** What they must not do is
-appear in a headline count or an exam-code list introduced by one.
+appear in a headline count, an exam-code list introduced by one, or homepage
+exam links. Keep their reference cards in the exam hub's `#fam-retired` section.
 
 **2. Counts are exam-scoped, not raw bank sizes.** The app's blueprint classifier
 splits every bank into exam-scoped and supplemental questions, and advertises
@@ -82,15 +83,15 @@ per-page numbers must share that one basis or they stop summing.
 
 **Tool-owned — never hand-edit:** aggregate totals everywhere; per-exam counts;
 `roadmap-category__count` pillar chips; `llms.txt` `### Group (N)` headings and
-`## Exams covered (N)`; the `Retired &amp; retiring (N)` disclosure summaries;
+`## Exams covered (N)`;
 the exam-code lists inside the two homepage FAQ answers (visible copy and
 FAQPage JSON-LD); the homepage ItemList `numberOfItems` (entity list =
 sit-able + retired reference pages); `<span class="domain__count" data-domain=…>`
 per-domain question counts inside `#objectives`.
 
 **Hand-edited:** the social-image exam pills (each is hand-coloured and grouped,
-so the tool only warns on drift); the `exam-link--retired` class and grouping on
-homepage links; `exams/index.html` hub editorial copy; `sitemap.xml`'s structure
+so the tool only warns on drift); retired grouping and `exams/index.html` hub
+editorial copy; `sitemap.xml`'s structure
 (`<loc>`, `<priority>`, `<changefreq>`, entry order).
 
 `sitemap.xml`'s `<lastmod>` values are the one exception: they are tool-owned,
@@ -112,8 +113,8 @@ but no hub card. The grouping is labelled "Retired & retiring" only while
 `RETIRING` is non-empty (today it reads plain "Retired" — nothing is announced
 as retiring); when an exam is announced as retiring, add it to `RETIRING` in
 both `optimise-marketing-seo.py` and `validate-marketing-seo.py` and switch the
-two homepage summaries (and the `exams/index.html` eyebrow) back to "Retired &
-retiring" — `validate-marketing-seo.py` enforces the wording matches `RETIRING`.
+`exams/index.html` eyebrow back to "Retired &amp; retiring exams" —
+`validate-marketing-seo.py` enforces the wording matches `RETIRING`.
 
 ## Other tools
 

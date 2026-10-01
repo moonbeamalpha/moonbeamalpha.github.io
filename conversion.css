@@ -37,11 +37,63 @@
 .exam-finder__filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 8px; }
 .exam-finder__filters[hidden] { display: none; }
 .exam-finder__filters button, .qt__check, .qt__reset { min-height: 44px; padding: 9px 14px; border: 1px solid var(--border-strong); border-radius: 12px; font: inherit; color: var(--text-secondary); background: var(--bg-card); cursor: pointer; }
+.exam-finder__filters button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; font-weight: 550; }
+.exam-finder__filters button:focus-visible { outline: 2px solid var(--azure-cyan); outline-offset: 3px; }
+.am-symbol { display: inline-block; flex: none; width: 20px; height: 20px; background: currentColor; -webkit-mask: var(--symbol) center / contain no-repeat; mask: var(--symbol) center / contain no-repeat; }
+.am-symbol[data-symbol="squares-four"] { --symbol: url('/assets/icons/phosphor/squares-four-duotone.svg'); }
+.am-symbol[data-symbol="cloud"] { --symbol: url('/assets/icons/phosphor/cloud-duotone.svg'); }
+.am-symbol[data-symbol="database"] { --symbol: url('/assets/icons/phosphor/database-duotone.svg'); }
+.am-symbol[data-symbol="code"] { --symbol: url('/assets/icons/phosphor/code-duotone.svg'); }
+.am-symbol[data-symbol="brain"] { --symbol: url('/assets/icons/phosphor/brain-duotone.svg'); }
+.am-symbol[data-symbol="lock-key"] { --symbol: url('/assets/icons/phosphor/lock-key-duotone.svg'); }
+.am-symbol[data-symbol="git-branch"] { --symbol: url('/assets/icons/phosphor/git-branch-duotone.svg'); }
+.am-symbol[data-symbol="arrow-right"] { --symbol: url('/assets/icons/phosphor/arrow-right-duotone.svg'); }
 .exam-finder__filters [aria-pressed="true"] { background: rgba(80,230,255,.09); border-color: var(--azure-cyan); color: var(--azure-cyan); }
 .exam-finder__count { min-height: 20px; font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
 .exam-finder__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .exam-finder__grid .exam-finder__card { display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 9px; min-width: 0; padding: 20px; border: 1px solid var(--border-strong); border-radius: 16px; background: var(--bg-card); text-decoration: none; white-space: normal; color: var(--text-primary); text-align: left; box-shadow: none; }
 .exam-finder__card[hidden], .guide-card[hidden] { display: none !important; }
+[data-exam-section][hidden] { display: none !important; }
+main[data-exam-finder] > .container { max-width: 1120px; }
+main[data-exam-finder] > section { padding-block: 48px; }
+/* Exam shields and card accents use the same subject colours as the roadmap. */
+[data-exam-section] .guide-grid, #fam-retired .guide-grid { gap: 20px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.exam-hub-card { --exam-ink: var(--azure-cyan); min-width: 0; align-items: center; text-align: center; gap: 0; padding: 28px 22px 20px; background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 20px; box-shadow: var(--shadow-flat, 0 2px 6px rgba(0,0,0,.12)); transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+.exam-hub-card[data-exam-tone="infra"] { --exam-ink: #6EC1FF; }
+html[data-theme="light"] .exam-hub-card[data-exam-tone="infra"] { --exam-ink: var(--azure-blue); }
+.exam-hub-card[data-exam-tone="data-ai"] { --exam-ink: var(--azure-purple); }
+.exam-hub-card[data-exam-tone="devops"] { --exam-ink: var(--success-green); }
+.exam-hub-card[data-exam-tone="business"] { --exam-ink: var(--warning-orange); }
+.exam-hub-card[data-exam-tone="security"] { --exam-ink: var(--azure-cyan); }
+html[data-theme="light"] .exam-hub-card[data-exam-tone="security"] { --exam-ink: #006F8C; }
+.exam-hub-card[data-exam-tone="github"] { --exam-ink: var(--text-primary); }
+.exam-hub-card[data-exam-tone="retired"] { --exam-ink: var(--text-muted); }
+/* Reuse the certification-pathway artwork, ribbon placement and Fluent stars. */
+.exam-hub-card__badge { position: relative; flex: none; display: block; width: 112px; height: 112px; margin-bottom: 14px; }
+.exam-hub-card__shield { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 5px rgba(0,20,55,.12)); }
+.exam-hub-card__ribbon { position: absolute; top: 46%; left: 12%; width: 76%; transform: translateY(-50%); color: #102750; font: 800 13px/1 'Outfit', sans-serif; letter-spacing: -.015em; text-align: center; }
+.exam-hub-card__stars { position: absolute; top: 69%; left: 0; width: 100%; display: flex; justify-content: center; gap: 3px; }
+.exam-hub-card__stars img { width: 13px; height: 13px; filter: brightness(0) invert(1) drop-shadow(0 1px 1px rgba(0,15,49,.4)); }
+.exam-hub-card__stars[data-stars="3"] img:nth-child(2) { transform: translateY(5px); }
+.exam-hub-card[data-exam-tone="retired"] .exam-hub-card__shield { filter: grayscale(1); }
+.exam-hub-card__level { color: var(--exam-ink); background: color-mix(in srgb, var(--exam-ink) 9%, var(--bg-card)); border: 1px solid color-mix(in srgb, var(--exam-ink) 20%, var(--bg-card)); border-radius: 999px; padding: 3px 10px; font: 550 12px/1.5 'DM Sans', sans-serif; }
+.exam-hub-card[data-exam-tone="retired"] .exam-hub-card__level { color: var(--text-secondary); }
+.exam-hub-card .guide-card__kicker { color: var(--text-primary); font: 650 25px/1.2 'Outfit', sans-serif; letter-spacing: -.015em; margin: 16px 0 10px; }
+.exam-hub-card .guide-card__name { color: var(--text-primary); font: 500 17px/1.5 'DM Sans', sans-serif; }
+.exam-hub-card .guide-card__hint { margin: 10px 0 20px; color: var(--text-secondary); font-size: 12px; }
+.exam-hub-card .guide-card__more { display: flex; justify-content: center; align-items: center; gap: 8px; width: 100%; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-subtle); color: var(--exam-ink); font-size: 13px; }
+.exam-hub-card .guide-card__more .am-symbol { width: 16px; height: 16px; }
+.exam-hub-card:focus-visible { outline: 2px solid var(--exam-ink); outline-offset: 4px; border-color: var(--exam-ink); }
+#fam-retired .exam-reference { padding: 0 20px 20px; border: 1px solid var(--border-strong); border-radius: 16px; background: var(--bg-card); }
+#fam-retired .exam-reference summary { min-height: 52px; padding: 16px 0; font-size: 15px; }
+@media (hover: hover) {
+  .exam-finder__filters button:hover { border-color: var(--azure-cyan); color: var(--text-primary); }
+  .exam-hub-card:hover { transform: translateY(-3px); border-color: var(--exam-ink); background: var(--bg-card); box-shadow: var(--shadow-floating, 0 8px 20px rgba(0,0,0,.2)); }
+}
+@media (min-width: 1200px) { [data-exam-section] .guide-grid, #fam-retired .guide-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 899px) { [data-exam-section] .guide-grid, #fam-retired .guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 539px) { [data-exam-section] .guide-grid, #fam-retired .guide-grid { grid-template-columns: minmax(0, 1fr); } .exam-hub-card { padding: 24px 22px 20px; } }
+@media (prefers-reduced-motion: reduce) { .exam-hub-card { transition: none; } .exam-hub-card:hover { transform: none; } }
 .exam-finder__code { display: flex; justify-content: space-between; gap: 12px; color: var(--azure-cyan); font: 650 17px/1.4 'Outfit', sans-serif; }
 .exam-finder__title { font: 550 18px/1.35 'Outfit', sans-serif; }
 .exam-finder__meta { margin-top: auto; font: 400 12px/1.6 'DM Sans', sans-serif; color: var(--text-secondary); }

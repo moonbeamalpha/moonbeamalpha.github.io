@@ -485,7 +485,7 @@ def patch_related_cards(text: str, counts: dict) -> tuple[str, int]:
 
 
 def homepage_edits(total_label: str, metric_total: str, exam_count: int,
-                   cert_paths: int, retired_count: int, catalogue_count: int):
+                   cert_paths: int, catalogue_count: int):
     """Anchored aggregate edits for index.html. Each pattern is keyed off stable
     surrounding text so per-pillar roadmap counts ('5 exams') are never touched."""
     ec = str(exam_count)
@@ -513,9 +513,6 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         (r'\b\d+(\s+certification\s+paths)', cp + r'\1'),
         (r'\b\d+(\s+certification\s+routes)', cp + r'\1'),
         (r'\b\d+(\s+guided\s+certification\s+paths)', cp + r'\1'),
-        # ── "Retired & retiring (N)" disclosure summaries (hero + footer) ──
-        (r'(exam-retired-disclosure__summary">Retired(?: &amp; retiring)? \()\d+(\))',
-         r'\g<1>' + str(retired_count) + r'\2'),
         # ── JSON-LD ItemList entity count. This is deliberately NOT exam_count:
         # entity list = sit-able + retired reference pages, not the advertised
         # exam count — the ItemList enumerates every /exams/<code>/ page that
@@ -601,10 +598,8 @@ def patch_exam_code_lists(text: str, retired: set):
 def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
     """Report exam links whose retired treatment disagrees with the catalogue.
 
-    The homepage marks retired exams with class="... exam-link--retired"; the
-    /exams/ hub instead groups them under its #fam-retired section. Both are
-    hand-maintained, so this is what catches an exam whose retirement date passed
-    while nobody was looking. It only reports — the markup moves are a human's job
+    The homepage promotes current exams only; the /exams/ hub keeps retired
+    reference pages under #fam-retired. It only reports — the markup moves are a human's job
     (each link carries hand-written aria-label and grouping)."""
     print("retired markup:")
     problems = []
@@ -621,17 +616,17 @@ def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
             if classes and "exam-mini__tag" in classes.group(1).split():
                 carousel_codes.add(code)
             marked = "exam-link--retired" in tag
-            if code in retired and not marked:
+            if code in retired:
                 stale[code] = stale.get(code, 0) + 1
             elif code not in retired and marked:
                 premature[code] = premature.get(code, 0) + 1
         for code, n in sorted(stale.items()):
-            problems.append(f"index.html: {code} is non-current, but {n} link(s) still styled "
-                            f"active — add exam-link--retired and move it into the disclosures")
+            problems.append(f"index.html: remove {n} non-current {code} link(s); "
+                            f"reference links belong in the /exams/ hub")
         for code, n in sorted(premature.items()):
             problems.append(f"index.html: {code} is current, but {n} link(s) styled non-current")
         # The bento card advertises the current exam count, so even a labelled
-        # retired link is misleading here. Keep references in the disclosures.
+        # retired link is misleading here. Keep references in the exam hub.
         current = catalogue - retired
         for code in sorted(carousel_codes - current):
             problems.append(f"index.html: remove non-current {code} from the bento carousel")
@@ -649,6 +644,8 @@ def warn_retired_markup(p: "Patcher", retired: set, catalogue: set) -> None:
             problems.append(f"exams/index.html: {code} is non-current but sits outside #fam-retired")
         for code in sorted(grouped - retired):
             problems.append(f"exams/index.html: {code} is current but sits under #fam-retired")
+        for code in sorted(retired - grouped):
+            problems.append(f"exams/index.html: {code} is missing its retired reference card")
         for code in sorted(catalogue - retired - listed):
             problems.append(f"exams/index.html: {code} is current and has a page but no hub card")
 
@@ -1057,7 +1054,7 @@ def main() -> None:
         print("homepage:")
         p.apply(INDEX_HTML,
                 homepage_edits(total_label, metric_total, exam_count, cert_paths,
-                               len(retired), catalogue_count),
+                               catalogue_count),
                 transforms=[lambda t: patch_exam_code_lists(t, retired),
                             lambda t: patch_roadmap_category_counts(t, retired)])
 

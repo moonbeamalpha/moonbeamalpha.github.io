@@ -3,7 +3,19 @@
 The homepage follows a shorter decision path: understand the app through three real study screens, find an exam,
 try three authored questions, compare access options, then download.
 The roadmap is an optional desktop view. Catalogue-derived cards supply exam
-titles, levels and subject areas; retirement references remain in disclosures.
+titles, levels and subject areas. The homepage promotes current exams only;
+retired reference pages remain in the exam hub's separate disclosure and retain
+their existing URLs, successor guidance and sitemap entries.
+
+The exam hub and certification pathways share a refined version of the existing
+shield artwork, exam-code ribbon and Fluent tier stars. The centre Expert star
+sits lower to follow the shield point. Cards add a level label, subject colour
+and detail-page action.
+Subject filters on the homepage and hub pair
+symbols with their existing text labels. Filtering the hub hides entire current
+exam sections when they contain no matching cards; All restores every section.
+The retired disclosure closes within its own section, keeping the study guides
+independently accessible.
 
 At 1,200px and above, the homepage hero composes authentic iPad practice,
 iPhone Exam IQ and Apple Watch dashboard captures. The iPhone stays in front;

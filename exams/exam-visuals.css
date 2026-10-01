@@ -661,7 +661,7 @@ html[data-theme="light"] .faq {
 }
 
 #cert-paths .cert-path__chip {
-  --cert-shield-asset: url("images/certification-badge-shield.webp");
+  --cert-shield-asset: url("images/certification-badge-shield-v2.webp");
   --cert-star-asset: url("images/fluent-star-24-filled.svg");
   --cert-star-size: 12px;
   --cert-star-strip-width: 12px;
@@ -676,6 +676,7 @@ html[data-theme="light"] .faq {
     brightness(0.94)
     drop-shadow(0 11px 16px rgba(43, 136, 216, 0.30));
   --cert-code-colour: #102750;
+  --cert-code-offset: -4px;
   position: relative;
   isolation: isolate;
   display: grid;
@@ -743,6 +744,14 @@ html[data-theme="light"] .faq {
   --cert-star-strip-width: 42px;
 }
 
+/* Follow the pointed shield: the centre Expert star sits below its neighbours. */
+#cert-paths .cert-path__chip[data-cert-level="expert"]:not(.cert-path__chip--target)::after {
+  height: 18px;
+  background-image: var(--cert-star-asset), var(--cert-star-asset), var(--cert-star-asset);
+  background-position: left top, center bottom, right top;
+  background-repeat: no-repeat;
+}
+
 #cert-paths .cert-path__chip-code {
   position: relative;
   z-index: 1;
@@ -756,7 +765,7 @@ html[data-theme="light"] .faq {
   line-height: 1;
   text-align: center;
   text-wrap: balance;
-  transform: translateY(-1px);
+  transform: translateY(var(--cert-code-offset));
   transition: transform 180ms ease;
 }
 
@@ -793,7 +802,7 @@ html[data-theme="light"] .faq {
 }
 
 #cert-paths a.cert-path__chip:not(.cert-path__chip--target):hover .cert-path__chip-code {
-  transform: translateY(-4px);
+  transform: translateY(calc(var(--cert-code-offset) - 3px));
 }
 
 #cert-paths a.cert-path__chip:hover .cert-path__chip-role {
@@ -902,6 +911,7 @@ html[data-theme="light"] .faq {
   }
 
   #cert-paths .cert-path__chip {
+    --cert-code-offset: -3px;
     grid-template-columns: 1fr;
     grid-template-rows: 76px minmax(28px, auto);
     gap: 5px;

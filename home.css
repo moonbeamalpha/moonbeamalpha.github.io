@@ -2114,81 +2114,6 @@
     }
     a.exam-mini__tag:focus-visible { outline: 2px solid var(--group-color); outline-offset: 2px; }
 
-    /* Retired banks remain available as historical reference, but should not
-       read as currently bookable exams anywhere on the homepage. */
-    /* Retired exams sit behind a disclosure so they do not compete with the
-       exams people can actually sit. The pages stay reachable — candidates who
-       passed pre-retirement still own those packs — they are just not the first
-       thing a visitor reads. */
-    .exam-retired-disclosure { margin: 0; }
-    .exam-retired-disclosure__summary {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      list-style: none;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      color: var(--text-muted);
-      padding: 4px 10px;
-      border: 1px dashed rgba(128,138,150,0.32);
-      border-radius: 999px;
-      transition: color 160ms ease, border-color 160ms ease;
-    }
-    .exam-retired-disclosure__summary::-webkit-details-marker { display: none; }
-    .exam-retired-disclosure__summary::after {
-      content: '';
-      width: 6px; height: 6px;
-      border-right: 1.5px solid currentColor;
-      border-bottom: 1.5px solid currentColor;
-      transform: rotate(45deg) translate(-1px,-1px);
-      transition: transform 160ms ease;
-    }
-    .exam-retired-disclosure[open] .exam-retired-disclosure__summary::after {
-      transform: rotate(-135deg) translate(-1px,-1px);
-    }
-    .exam-retired-disclosure__summary:hover,
-    .exam-retired-disclosure__summary:focus-visible {
-      color: var(--text-secondary);
-      border-color: rgba(128,138,150,0.55);
-    }
-    .exam-retired-disclosure > ul { margin-top: 12px; }
-    /* The group is already labelled "Retired", so the per-pill badge is noise. */
-    .exam-retired-disclosure .exam-link--retired::after { content: none; }
-
-    .exam-link--retired {
-      --group-color: var(--text-muted);
-      --group-bg: rgba(128,138,150,0.08);
-      --group-border: rgba(128,138,150,0.24);
-      --group-bg-hover: rgba(128,138,150,0.14);
-      --group-border-hover: rgba(128,138,150,0.42);
-      --pillar-color: var(--text-muted);
-      --pillar-bg: rgba(128,138,150,0.08);
-      --pillar-border: rgba(128,138,150,0.24);
-      opacity: 0.72;
-      filter: saturate(0.2);
-    }
-    .exam-link--retired::after {
-      content: 'Retired';
-      margin-left: 0.6em;
-      padding: 2px 5px;
-      border: 1px solid rgba(128,138,150,0.30);
-      border-radius: 999px;
-      background: rgba(128,138,150,0.12);
-      color: var(--text-muted);
-      font-size: 0.62em;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-    .exam-link--retired:hover,
-    .exam-link--retired:focus-visible {
-      opacity: 1;
-      filter: saturate(0.35);
-    }
-
     /* Carousel mode (added by JS; static stacked fallback when JS is off).
        All groups share one grid cell so the card height stays fixed to the tallest family. */
     .exam-mini.is-carousel { display: grid; margin-top: 14px; }
@@ -2483,3 +2408,5 @@ html, body { overflow-x: clip; }
       .watch-screen { border-radius: 30px; }
       .watch-frame::before { border-radius: 32px; }
     }
+
+.section-final-cta .final-cta-inner > .conversion-browse { justify-content: center; margin: 24px 0 0; }

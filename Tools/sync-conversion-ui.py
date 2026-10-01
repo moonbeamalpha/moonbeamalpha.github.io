@@ -13,8 +13,16 @@ PROVIDER = '128558698'
 LABELS = {'infra': 'Azure infrastructure', 'data-ai': 'Data & AI', 'devops': 'Apps & DevOps',
           'business': 'Business & Copilot', 'security': 'Security', 'github': 'GitHub'}
 FEATURED = ['AZ-900', 'AZ-104', 'AI-901', 'DP-700', 'PL-300', 'SC-900']
+ACCESS_TOOL_DISCLOSURES = {
+    'AB-650': 'For broader Microsoft 365 and Copilot revision, Pro adds readiness guidance and coaching alongside the question banks.',
+    'AI-300': 'Pro unlocks all banks plus the readiness assessment and Answer Coach.',
+    'AI-901': 'Start with the fundamentals preview to judge the explanation style. Choose Pro when you want readiness insights and coaching as well as AI practice.',
+    'GH-300': 'Pro adds coaching and a readiness forecast while you work towards the GitHub Copilot certification.',
+    'GH-900': 'A Foundations bank suits one certification. Pro is the option for guided revision and readiness tools across GitHub and the other supported exams.',
+    'PL-300': 'Exam IQ and Answer Coach are Pro benefits, separate from the Power BI bank purchase.',
+}
 EXAM_HERO_CHROME = ('<a class="conversion-try" href="#question-types">Try a practice question →</a>\n'
-                   '<p class="conversion-terms">Free starter questions · No account needed.<br>'
+                   '<p class="conversion-terms">50+ free questions per exam · No account needed.<br>'
                    'Full banks: one-time purchase. Pro adds every bank and advanced study tools. '
                    '<a href="/#pricing">Compare access options</a>.</p>\n'
                    '<p class="conversion-proof">Original questions with written explanations. '
@@ -103,7 +111,7 @@ def campaign_links(text, relative):
             placement = 'free-starter'
         if relative == 'exams/_template.html' and 'mobile-cta-bar__btn' in classes:
             params['ct'] = stem + '-sticky'
-        if placement:
+        if placement and not params.get('ct'):
             params['ct'] = stem + '-' + placement
         elif not params.get('ct'):
             params['ct'] = stem + '-body'
@@ -111,7 +119,7 @@ def campaign_links(text, relative):
         if relative != 'exams/_template.html':
             params['ct'] = short_campaign(params['ct'])
         encoded = urlencode(params).replace('%7B', '{').replace('%7D', '}') if relative == 'exams/_template.html' else urlencode(params)
-        return tag.replace(found[0], 'href="' + STORE + '?' + html.escape(encoded, quote=True) + '"')
+        return tag.replace(found[0], 'href="' + html.escape(url._replace(query=encoded).geturl(), quote=True) + '"')
     text = re.sub(r'<a\b[^>]*>', replace, text)
     def banner(match):
         content = html.unescape(match[1])
@@ -123,21 +131,76 @@ def campaign_links(text, relative):
     return re.sub(r'<meta name="apple-itunes-app" content="([^\"]*)">', banner, text)
 
 
+def access_faq(text, code, snapshot):
+    """Keep the visible access answer truthful; the FAQ tool owns its JSON-LD."""
+    if code not in snapshot['exams']:
+        return text
+    changed = 0
+    def replace(match):
+        nonlocal changed
+        current = match[0]
+        if 'app is free to download' not in current and 'is a retired reference pack' not in current:
+            return current
+        changed += 1
+        paragraph = re.search(r'<div class="faq__answer">\s*<p>(.*?)</p>', current, re.S)
+        if not paragraph:
+            raise ValueError(f'{code}: access FAQ must contain one answer paragraph')
+        if code not in snapshot['retired']:
+            # Preserve each exam's authored wording and tool-owned count phrase.
+            answer = re.sub(r'a free allowance of ' + re.escape(code) +
+                            r' questions(?: so you can try every feature| to try every feature(?: first)?|'
+                            r' to try Answer Coach, the readiness gauge, and the adaptive plan before you commit)?',
+                            f'50+ free {code} questions and written explanations', paragraph[1])
+            disclosure = ACCESS_TOOL_DISCLOSURES.get(code, 'Advanced study tools require Pro.')
+            if code == 'PL-300':
+                answer = ('The app is free to download. Start with 50+ free PL-300 questions and written explanations '
+                          'to see how the revision flow feels. A one-time exam-pack purchase opens the full '
+                          f"{snapshot['exams'][code]}-question bank for Power BI practice, or you can choose Pro "
+                          'with a subscription or lifetime access.')
+            elif code == 'AI-300':
+                answer = ('Yes. The app is free to download. Use 50+ free AI-300 questions and written explanations '
+                          "as a small preview before paying. To own this exam's content, select the one-time exam-pack purchase "
+                          f"for the full bank of {snapshot['exams'][code]} AI-300 practice questions.")
+            answer = answer.replace(' Advanced study tools require Pro.', '') if code in ACCESS_TOOL_DISCLOSURES else answer
+            if disclosure not in answer:
+                answer += ' ' + disclosure
+        else:
+            answer = (f'{code} is a retired reference pack. Previously purchased access stays available. '
+                      'For new study, choose a current exam and start with 50+ free questions and written explanations. '
+                      'Pro adds full Exam IQ insights, Answer Coach, the simulator and Ask Aura Preview for supported current exams.')
+        return re.sub(r'(<div class="faq__answer">\s*)<p>.*?</p>',
+                      lambda paragraph: paragraph[1] + '<p>' + answer + '</p>', current, count=1, flags=re.S)
+    result = re.sub(r'<details class="faq">.*?</details>', replace, text, flags=re.S)
+    if changed != 1:
+        raise ValueError(f'{code}: expected exactly one access FAQ, found {changed}')
+    return result
+
+
 def render(path, text, snapshot, metadata):
     relative = path.relative_to(ROOT).as_posix()
     assets = '<link rel="stylesheet" href="/conversion.css">\n<script src="/conversion.js" defer></script>'
     is_exam = re.fullmatch(r'exams/[a-z]{2}-\d{3}/index.html', relative) or relative == 'exams/_template.html'
     if relative == 'index.html' or is_exam:
         assets += '\n<script src="/practice.js" defer></script>'
-    for asset in ['/conversion.css', '/conversion.js', '/practice.js']:
+    if re.search(r'gtag\([\'"]config[\'"]', text):
+        assets += '\n<script src="/app-store-links.js" defer></script>'
+    for asset in ['/conversion.css', '/conversion.js', '/practice.js', '/app-store-links.js']:
         versioned = re.search(re.escape(asset) + r'\?v=[0-9a-f]{12}', text)
         if versioned:
             assets = assets.replace('"' + asset + '"', '"' + versioned[0] + '"')
+    text = re.sub(r'<script src="/app-store-links\.js(?:\?v=[0-9a-f]{12})?" defer></script>\n?', '', text)
     text = block(text, 'assets', assets, '</head>')
     if relative == 'index.html':
         text = block(text, 'cards', finder_cards(snapshot, metadata), '<!-- exam-roadmap-map:start -->')
     if is_exam:
-        text = block(text, 'hero', EXAM_HERO_CHROME, '          <div class="am-cert-hero__ctas">')
+        chrome = EXAM_HERO_CHROME
+        code = path.parent.name.upper()
+        if code in snapshot['retired']:
+            chrome = chrome.replace('50+ free questions per exam', 'Previously purchased pack access')
+            chrome = chrome.replace('Full banks: one-time purchase. Pro adds every bank and advanced study tools.',
+                                    'For new study, choose a current exam. Pro adds advanced study tools.')
+        text = block(text, 'hero', chrome, '          <div class="am-cert-hero__ctas">')
+        text = access_faq(text, code, snapshot)
         # Bring the useful interaction into the decision path without deleting reference material.
         sample = re.search(r'    <section id="question-types".*?</section>', text, re.S)
         hero = re.search(r'<section\b[^>]*class="am-cert-hero".*?</section>', text, re.S)

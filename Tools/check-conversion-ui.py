@@ -22,7 +22,7 @@ seo = tool('optimise-marketing-seo')
 class ConversionContracts(unittest.TestCase):
     def test_home_decision_path_and_current_cards(self):
         source = (ROOT / 'index.html').read_text(); doc = Document(source).root
-        positions = [source.index('id="' + id + '"') for id in ['hero', 'exam-roadmap', 'try-a-question', 'pricing', 'features']]
+        positions = [source.index('id="' + id + '"') for id in ['hero', 'features', 'exam-roadmap', 'try-a-question', 'pricing']]
         self.assertEqual(positions, sorted(positions))
         snapshot = json.loads((ROOT / 'data/exam-counts.json').read_text())
         cards = list(doc.all(lambda n: 'exam-finder__card' in n.attrs.get('class', '').split()))
@@ -36,7 +36,7 @@ class ConversionContracts(unittest.TestCase):
             for link in Document(page.read_text()).root.all(lambda n: n.tag == 'a'):
                 url = urlsplit(link.attrs.get('href', ''))
                 if url.hostname != 'apps.apple.com': continue
-                self.assertEqual(url.path, '/app/id6760594569', page)
+                self.assertRegex(url.path, r'^/(?:gb/app/azure-mastery|app)/id6760594569$', page)
                 query = parse_qs(url.query)
                 self.assertEqual(query.get('pt'), ['128558698'], page)
                 self.assertEqual(query.get('mt'), ['8'], page)
@@ -45,7 +45,8 @@ class ConversionContracts(unittest.TestCase):
     def test_preview_has_full_prompt_and_every_rationale(self):
         samples = json.loads((ROOT / 'data/practice-previews.json').read_text())
         destinations = [(ROOT / 'exams' / code.lower() / 'index.html', questions) for code, questions in samples.items()]
-        destinations.append((ROOT / 'index.html', samples['AZ-104'][:1]))
+        home_samples = json.loads((ROOT / 'data/home-practice.json').read_text())
+        destinations.append((ROOT / 'index.html', [q for questions in home_samples.values() for q in questions]))
         for page, questions in destinations:
             source = page.read_text(); doc = Document(source).root
             if page.parent.name != ROOT.name:
@@ -55,7 +56,7 @@ class ConversionContracts(unittest.TestCase):
                 self.assertIsNotNone(quiz, (page, question['id']))
                 stem = quiz.find(lambda n: 'qt__viz-q' in n.attrs.get('class', '').split())
                 self.assertEqual(clean(stem.text()), html.unescape(seo.clean_text(question['text'])))
-                if question['context']:
+                if question.get('context'):
                     self.assertIn(html.unescape(seo.clean_text(question['context'])), clean(quiz.text()))
                 rationales = list(quiz.all(lambda n: 'qt__rationale' in n.attrs.get('class', '').split()))
                 self.assertEqual(len(rationales), len(question['options']))
@@ -68,6 +69,38 @@ class ConversionContracts(unittest.TestCase):
                 'options':[{'id':letter,'text':letter} for letter in 'ABC'], 'optionRationales':dict.fromkeys('ABC','Written reasoning')}
         dependent = dict(full, id='dependent', text='Which service?', caseStudyParentID='missing-case')
         self.assertEqual(seo.choose_question([dependent,full], 'singleSelect', options=True)['id'], 'standalone')
+
+    def test_attribution_preserves_explicit_campaign_and_storefront(self):
+        original = '<a class="btn-primary" href="https://apps.apple.com/gb/app/azure-mastery/id6760594569?ct=site-pro-options">Pro</a>'
+        result = conversion.campaign_links(original, 'index.html')
+        url = urlsplit(Document(result).root.find(lambda n: n.tag == 'a').attrs['href'])
+        self.assertEqual(url.path, '/gb/app/azure-mastery/id6760594569')
+        self.assertEqual(parse_qs(url.query)['ct'], ['site-pro-options'])
+        self.assertEqual(conversion.campaign_links(result, 'index.html'), result)
+
+    def test_measured_pages_include_one_download_handler(self):
+        for _, page in published_pages():
+            text = page.read_text()
+            if re.search(r'gtag\([\'"]config[\'"]', text):
+                self.assertEqual(len(re.findall(r'<script src="/app-store-links\.js', text)), 1, page)
+
+    def test_access_faq_distinguishes_free_bank_and_pro(self):
+        snapshot = json.loads((ROOT / 'data/exam-counts.json').read_text())
+        for code in snapshot['exams']:
+            page = ROOT / 'exams' / code.lower() / 'index.html'
+            source = page.read_text()
+            self.assertNotIn('try every feature', source, page)
+            blocks = re.findall(r'<details class="faq">.*?</details>', source, re.S)
+            access = [b for b in blocks if 'app is free to download' in b or 'is a retired reference pack' in b]
+            self.assertEqual(len(access), 1, page)
+            if code in snapshot['retired']:
+                self.assertIn('Previously purchased access', access[0], page)
+                self.assertNotIn('one-time exam-pack purchase', access[0], page)
+            else:
+                self.assertIn(f'50+ free {code} questions', access[0], page)
+                self.assertIn('one-time exam-pack purchase', access[0], page)
+                self.assertIn(conversion.ACCESS_TOOL_DISCLOSURES.get(code, 'Advanced study tools require Pro.'), access[0], page)
+            self.assertEqual(conversion.access_faq(source, code, snapshot), source, page)
 
     def test_generated_chrome_does_not_exempt_editorial_text(self):
         similarity = tool('check-page-similarity')
@@ -90,6 +123,8 @@ class ConversionContracts(unittest.TestCase):
         self.assertEqual(rows[0]['downloads_per_click'], .25)
         self.assertEqual(rows[1]['outbound_clicks'], '')
         self.assertEqual(rows[2]['first_time_downloads'], '')
+        named_rows = report.aggregate([{'store_campaign': 'site-home-hero', 'clicks': '20'}], [{'campaign': 'site-home-hero', 'first_time_downloads': '5'}])
+        self.assertEqual(named_rows[0]['downloads_per_click'], .25)
 
 
 if __name__ == '__main__':

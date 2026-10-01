@@ -116,5 +116,8 @@ jobs:
       - name: Performance contracts
         run: node Tools/check-marketing-performance.mjs
 
+      - name: App Store placement measurement privacy
+        run: node Tools/test-app-store-links.mjs
+
       - name: Search matching and performance contracts
         run: node Tools/test-search.mjs

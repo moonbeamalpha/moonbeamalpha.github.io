@@ -557,8 +557,10 @@
       z-index: 20;
       box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
     }
-    /* The supplied app captures already contain their own Dynamic Island. */
+    /* The supplied app captures already contain their own Dynamic Island.
+       The hero's smaller bezel also needs no extra inset border over the UI. */
     .phone-screen.themed-screenshot::before { content: none; }
+    .hero-devices .phone-frame::before { content: none; }
     .phone-screen::after {
       content: '';
       position: absolute;
@@ -639,6 +641,85 @@
     }
     ::view-transition-old(hero-phone-composition) { animation: none; }
     ::view-transition-new(hero-phone-composition) { animation-name: theme-view-in; }
+
+    /* The desktop composition uses unaltered app captures. Companion device
+       backgrounds are applied only at desktop widths, keeping mobile light. */
+    .hero-device--ipad, .hero-device--watch, .hero-caption--desktop { display: none; }
+    @media (min-width: 1200px) {
+      .section-hero .hero-inner {
+        max-width: 1280px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        gap: 44px;
+      }
+      .hero-visual .hero-devices {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 580px;
+        height: 570px;
+        margin: 0 auto;
+        isolation: isolate;
+      }
+      .hero-device--ipad, .hero-device--watch { display: block; position: absolute; }
+      .hero-device--ipad { left: 0; top: 0; z-index: 1; }
+      .hero-ipad-frame {
+        position: relative;
+        width: 354px;
+        height: 506px;
+        padding: 8px;
+        border: 1px solid rgba(255,255,255,.2);
+        border-radius: 25px;
+        background: linear-gradient(145deg, #34353a, #141519 60%, #2b2c31);
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,.4), 0 20px 42px rgba(0,0,0,.24);
+      }
+      .hero-ipad-screen {
+        width: 100%;
+        height: 100%;
+        border-radius: 17px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--bg-app);
+      }
+      .hero-devices .hero-device--phone { position: absolute; right: 20px; bottom: 8px; z-index: 2; }
+      .hero-devices .hero-device--phone .phone-frame {
+        width: 236px;
+        height: 494px;
+        border-radius: 43px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 22px 42px rgba(0,0,0,.3);
+      }
+      .hero-devices .hero-device--phone .phone-screen { border-radius: 34px; }
+      .hero-devices .hero-device--phone:hover .phone-frame { transform: none; }
+      .hero-device--watch { left: 164px; bottom: 45px; z-index: 3; }
+      .hero-device--watch::before, .hero-device--watch::after {
+        content: '';
+        position: absolute;
+        left: 28px;
+        width: 70px;
+        height: 45px;
+        border: 1px solid #393d44;
+        background: linear-gradient(90deg, #1d2128, #343b46 45%, #1d2128);
+      }
+      .hero-device--watch::before { bottom: calc(100% - 10px); border-radius: 18px 18px 5px 5px; }
+      .hero-device--watch::after { top: calc(100% - 10px); border-radius: 5px 5px 18px 18px; }
+      .hero-device--watch .watch-frame {
+        width: 126px;
+        height: 148px;
+        border-radius: 34px;
+        overflow: visible;
+        z-index: 1;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 12px 24px rgba(0,0,0,.32);
+      }
+      .hero-device--watch .watch-frame::before { border-radius: 31px; }
+      .hero-device--watch .watch-frame::after { top: 35%; width: 6px; height: 24px; }
+      .hero-device--watch .watch-screen {
+        inset: 6px;
+        border-radius: 28px;
+        background: #000 url('images/cap-watch-dashboard.webp') center / contain no-repeat;
+      }
+      .hero-caption--compact { display: none; }
+      .hero-caption--desktop { display: inline; }
+    }
     .hero-aura {
       position: absolute;
       left: 1%;

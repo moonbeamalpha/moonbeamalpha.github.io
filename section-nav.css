@@ -15,3 +15,4 @@
   .section-nav :is(button,a):focus-visible { outline: 3px solid var(--azure-cyan, #50e6ff); outline-offset: 2px; }
 }
 html[data-theme="light"] .section-nav, html[data-theme="light"] .section-nav__panel { background: #f8fbff; box-shadow: 0 2px 8px rgba(15,30,60,.08); }
+.section-nav__panel a[hidden] { display: none; }

@@ -24,7 +24,7 @@
       --text: #1d1d1f;
       --muted: #6e6e73;
       --border: #d2d2d7;
-      --accent: #0071e3;
+      --accent: #0067c5;
       --section-bg: #f5f5f7;
     }
 
@@ -115,6 +115,11 @@
       text-decoration: none;
     }
 
+    p a, li a {
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+
     a:hover {
       text-decoration: underline;
     }
@@ -141,15 +146,18 @@
   </style>
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
 <!-- search-assets:start -->
-<link rel="stylesheet" href="/search.css?v=dd169dcca956">
-<script src="/search.js?v=ce2d33cba6f7" data-search-index="/data/search-index.json?v=d34ac8210ec4" defer></script>
+<link rel="stylesheet" href="/search.css?v=b1e778e29e2c">
+<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=e9d76cac70e7" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
-<link rel="stylesheet" href="/conversion.css?v=5de87c15ca77">
-<script src="/conversion.js?v=5b782e52b9d8" defer></script>
+<link rel="stylesheet" href="/conversion.css?v=28d9231f76df">
+<script src="/conversion.js?v=de3579e13909" defer></script>
 <!-- conversion-assets:end -->
 </head>
 <body>
+<!-- search-skip:start -->
+<a class="am-skip-link" href="#main-content">Skip to content</a>
+<!-- search-skip:end -->
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK79R26R"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -158,7 +166,7 @@
 <header class="am-search-legacy-nav"><a href="/">Azure Mastery</a><button class="am-search-trigger" type="button" data-search-open hidden aria-label="Search exams, guides and topics" aria-haspopup="dialog" aria-controls="am-search-dialog"><svg class="am-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span><kbd aria-hidden="true">⌘ K</kbd></button></header>
 <!-- search-trigger:end -->
 <div class="container">
-    <h1>Terms of Use</h1>
+    <h1 id="main-content" tabindex="-1">Terms of Use</h1>
     <p class="meta"><strong>Azure Mastery</strong></p>
     <p class="meta">Effective Date: March 13, 2026</p>
 
@@ -341,7 +349,7 @@
         <p class="am-search-status" data-search-status role="status" aria-live="polite" aria-atomic="true">Find your next exam, guide or topic.</p>
       </div>
       <div class="am-search-scroll">
-        <div class="am-search-examples" data-search-examples aria-label="Try a search"><button type="button" data-search-example="AZ-104">AZ-104</button><button type="button" data-search-example="Security">Security</button><button type="button" data-search-example="Copilot">Copilot</button><button type="button" data-search-example="Fabric">Fabric</button></div>
+        <div class="am-search-examples" data-search-examples role="group" aria-label="Try a search"><button type="button" data-search-example="AZ-104">AZ-104</button><button type="button" data-search-example="Security">Security</button><button type="button" data-search-example="Copilot">Copilot</button><button type="button" data-search-example="Fabric">Fabric</button></div>
         <ul class="am-search-results" id="am-site-search-results" data-search-results aria-label="Search results"></ul>
         <details class="am-search-related" data-search-related hidden><summary>Related results</summary><ul class="am-search-results" data-search-related-results aria-label="Related search results"></ul></details>
         <button class="am-search-action" type="button" data-search-more hidden>Show more</button>

@@ -42,10 +42,12 @@
   document.addEventListener('click', function (event) { if (!nav.contains(event.target)) close(); });
   document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && !panel.hidden) { close(); menu.focus(); } });
   function update() {
-    var current = 0;
-    sections.forEach(function (section, index) { if (section.getBoundingClientRect().top <= 150) current = index; });
+    var current = sections.findIndex(function (section) { return !section.hidden; });
+    if (current === -1) return;
+    sections.forEach(function (section, index) { if (!section.hidden && section.getBoundingClientRect().top <= 150) current = index; });
     nav.querySelector('.section-nav__label').textContent = labelFor(sections[current]);
     Array.from(panel.children).forEach(function (link, index) {
+      link.hidden = sections[index].hidden;
       if (index === current) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
     });
     if (!cta) return;
@@ -62,4 +64,6 @@
     requestAnimationFrame(function () { scheduled = false; update(); });
   }, { passive: true });
   window.addEventListener('resize', update); update();
+  var visibilityObserver = new MutationObserver(update);
+  sections.forEach(function (section) { visibilityObserver.observe(section, { attributes: true, attributeFilter: ['hidden'] }); });
 })();

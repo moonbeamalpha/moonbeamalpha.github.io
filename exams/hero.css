@@ -147,7 +147,7 @@
       font-size: 16px;
       line-height: 1;
       color: #050810;
-      background: linear-gradient(135deg, var(--amh-accent) 0%, var(--amh-accent-2) 100%);
+      background: linear-gradient(135deg, var(--amh-accent) 0%, color-mix(in srgb, var(--amh-accent-2) 75%, #fff) 100%);
       text-decoration: none;
       box-shadow: 0 10px 24px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.4) inset;
       transition: transform 0.2s ease, box-shadow 0.2s ease;

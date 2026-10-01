@@ -365,25 +365,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/exams/hero.css?v=bb5fd9c83c77">
+  <link rel="stylesheet" href="/exams/hero.css?v=5a2798d0bd77">
   <link rel="stylesheet" href="/exams/exam.css?v=4fe66f4dd9ba">
   <style>.am-cert-hero { --amh-accent: #20C020; --amh-accent-2: #178A17; }</style>
-  <link rel="stylesheet" href="/theme-light.css?v=17b9efbb6807">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=4bb35566458f">
+  <link rel="stylesheet" href="/theme-light.css?v=f39ed97d50a6">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=bb3139af0140">
   <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
-  <link rel="stylesheet" href="/section-nav.css?v=eb08cd369978">
+  <link rel="stylesheet" href="/section-nav.css?v=6c724b8db9b0">
 <!-- search-assets:start -->
-<link rel="stylesheet" href="/search.css?v=dd169dcca956">
-<script src="/search.js?v=ce2d33cba6f7" data-search-index="/data/search-index.json?v=d34ac8210ec4" defer></script>
+<link rel="stylesheet" href="/search.css?v=b1e778e29e2c">
+<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=e9d76cac70e7" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
-<link rel="stylesheet" href="/conversion.css?v=5de87c15ca77">
-<script src="/conversion.js?v=5b782e52b9d8" defer></script>
+<link rel="stylesheet" href="/conversion.css?v=28d9231f76df">
+<script src="/conversion.js?v=de3579e13909" defer></script>
 <script src="/practice.js?v=ff4ab43285ed" defer></script>
 <script src="/app-store-links.js?v=22d2db6ebc11" defer></script>
 <!-- conversion-assets:end -->
 </head>
 <body>
+<!-- search-skip:start -->
+<a class="am-skip-link" href="#main-content">Skip to content</a>
+<!-- search-skip:end -->
 
   <header class="site-nav">
     <a class="site-nav__brand" href="/" aria-label="Azure Mastery home">
@@ -401,7 +404,7 @@
     <a class="site-nav__cta" href="https://apps.apple.com/app/id6760594569?ct=exam-sc-200-nav&amp;pt=128558698&amp;mt=8" rel="noopener noreferrer">Download</a>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
 
     <nav class="page-toc" aria-label="On this page">
       <p class="page-toc__title">On this page</p>
@@ -990,9 +993,9 @@
           </div>
         </details>
         <details class="faq">
-          <summary>SC-200 vs <a href="/exams/sc-900/">SC-900</a> — which should I take first?</summary>
+          <summary>SC-200 vs SC-900 — which should I take first?</summary>
           <div class="faq__answer">
-            <p>SC-900 first if security concepts are new to you: it builds the cross-cutting vocabulary without expecting hands-on triage. SC-200 is the role-based Associate exam, investigating incidents in Defender XDR and writing KQL hunting queries. Most candidates pass SC-900 in weeks, then spend two to three months on SC-200.</p>
+            <p><a href="/exams/sc-900/">SC-900</a> first if security concepts are new to you: it builds the cross-cutting vocabulary without expecting hands-on triage. SC-200 is the role-based Associate exam, investigating incidents in Defender XDR and writing KQL hunting queries. Most candidates pass SC-900 in weeks, then spend two to three months on SC-200.</p>
           </div>
         </details>
         <details class="faq">
@@ -1084,7 +1087,7 @@
               </a>
             </li>
             <li class="cert-path__station">
-              <span class="cert-path__chip cert-path__chip--current" data-cert-level="associate">
+              <span class="cert-path__chip cert-path__chip--current" data-cert-level="associate"><span class="cert-path__chip-tier" data-tier="ASSOCIATE" aria-hidden="true"></span>
                 <span class="cert-path__chip-code">SC-200</span>
                 <span class="cert-path__chip-role">Security Operations Analyst Associate</span>
               </span>
@@ -1105,13 +1108,13 @@
               </a>
             </li>
             <li class="cert-path__station">
-              <span class="cert-path__chip cert-path__chip--current" data-cert-level="associate">
+              <span class="cert-path__chip cert-path__chip--current" data-cert-level="associate"><span class="cert-path__chip-tier" data-tier="ASSOCIATE" aria-hidden="true"></span>
                 <span class="cert-path__chip-code">SC-200</span>
                 <span class="cert-path__chip-role">Associate prereq</span>
               </span>
             </li>
             <li class="cert-path__station">
-              <a class="cert-path__chip" href="/exams/sc-100/" data-cert-level="expert">
+              <a class="cert-path__chip" href="/exams/sc-100/" data-cert-level="expert"><span class="cert-path__chip-tier" data-tier="EXPERT" aria-hidden="true"></span>
                 <span class="cert-path__chip-code">SC-100</span>
                 <span class="cert-path__chip-role">Expert exam</span>
               </a>
@@ -1138,7 +1141,7 @@
               </a>
             </li>
             <li class="cert-path__station">
-              <a class="cert-path__chip" href="/exams/sc-500/" data-cert-level="associate">
+              <a class="cert-path__chip" href="/exams/sc-500/" data-cert-level="associate"><span class="cert-path__chip-tier" data-tier="ASSOCIATE" aria-hidden="true"></span>
                 <span class="cert-path__chip-code">SC-500</span>
                 <span class="cert-path__chip-role">Cloud and AI Security Engineer</span>
               </a>
@@ -1157,12 +1160,12 @@
         SC-200 sits at the SOC-analyst Associate tier. SC-900 builds the cross-cutting Microsoft security vocabulary; SC-100 is the Expert next step. SC-500 is the current sibling for cloud-security-focused candidates.
       </p>
       <nav class="related-grid" aria-label="Related certifications">
-        <a class="related-card" href="/exams/sc-900/">
+        <a class="related-card" data-certification-card data-exam-tone="security" href="/exams/sc-900/"><!-- related-certification-badge:start --><span class="certification-badge" aria-hidden="true"><img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="certification-badge__code" data-code="SC-900"></span><span class="certification-badge__stars" data-stars="1"><img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy"></span></span><!-- related-certification-badge:end -->
           <span class="related-card__code">SC-900</span>
           <span class="related-card__name">Microsoft Security, Compliance, and Identity Fundamentals</span>
           <span class="related-card__hint">Recommended fundamentals. Builds the cross-cutting vocabulary SC-200 leans on (Defender family, Sentinel, Microsoft Purview). 397 practice questions.</span>
         </a>
-        <a class="related-card" href="/exams/sc-100/">
+        <a class="related-card" data-certification-card data-exam-tone="security" href="/exams/sc-100/"><!-- related-certification-badge:start --><span class="certification-badge" aria-hidden="true"><img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="certification-badge__code" data-code="SC-100"></span><span class="certification-badge__tier" data-tier="EXPERT"></span><span class="certification-badge__stars" data-stars="3"><img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy"><img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy"><img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy"></span></span><!-- related-certification-badge:end -->
           <span class="related-card__code">SC-100</span>
           <span class="related-card__name">Microsoft Cybersecurity Architect Expert</span>
           <span class="related-card__hint">The next step. SC-200 satisfies Microsoft's Associate prerequisite for the SC-100 Expert credential. 472 practice questions.</span>
@@ -1268,7 +1271,7 @@
   </div>
   <script src="/exams/exam.js?v=6ebed312f5cd" defer></script>
   <script src="/theme.js?v=3963b4057e20" defer></script>
-  <script src="/section-nav.js?v=81d70fc882f1" defer></script>
+  <script src="/section-nav.js?v=2e690ae4471f" defer></script>
 <!-- search-dialog:start -->
 <dialog class="am-search-dialog" id="am-search-dialog" aria-labelledby="am-search-title">
   <div class="am-search-dialog__header"><h2 id="am-search-title">Search Azure Mastery</h2><button class="am-search-close" type="button" data-search-close aria-label="Close search">×</button></div>
@@ -1284,7 +1287,7 @@
         <p class="am-search-status" data-search-status role="status" aria-live="polite" aria-atomic="true">Find your next exam, guide or topic.</p>
       </div>
       <div class="am-search-scroll">
-        <div class="am-search-examples" data-search-examples aria-label="Try a search"><button type="button" data-search-example="AZ-104">AZ-104</button><button type="button" data-search-example="Security">Security</button><button type="button" data-search-example="Copilot">Copilot</button><button type="button" data-search-example="Fabric">Fabric</button></div>
+        <div class="am-search-examples" data-search-examples role="group" aria-label="Try a search"><button type="button" data-search-example="AZ-104">AZ-104</button><button type="button" data-search-example="Security">Security</button><button type="button" data-search-example="Copilot">Copilot</button><button type="button" data-search-example="Fabric">Fabric</button></div>
         <ul class="am-search-results" id="am-site-search-results" data-search-results aria-label="Search results"></ul>
         <details class="am-search-related" data-search-related hidden><summary>Related results</summary><ul class="am-search-results" data-search-related-results aria-label="Related search results"></ul></details>
         <button class="am-search-action" type="button" data-search-more hidden>Show more</button>

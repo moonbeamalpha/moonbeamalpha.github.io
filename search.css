@@ -1,3 +1,27 @@
+/* Shared keyboard affordances follow the host page's theme. */
+.am-skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 2px solid var(--azure-cyan, var(--accent, #0067c5));
+  border-radius: 10px;
+  background: var(--bg-card, var(--bg, #fff));
+  color: var(--text-primary, var(--text, #1d1d1f));
+  font: 600 16px/1.5 'DM Sans', system-ui, sans-serif;
+  transform: translateY(-200%);
+}
+.am-skip-link:focus { transform: none; }
+:where(a, button, summary, input, select, textarea) { scroll-margin-block: max(96px, 6em) max(110px, 4em); }
+:where(a, button, summary, input, select, textarea):focus-visible {
+  outline: 3px solid var(--azure-cyan, var(--accent, #0067c5));
+  outline-offset: 3px;
+}
+#main-content { scroll-margin-top: 96px; }
 /* Search follows the host page's marketing tokens or legacy system-theme tokens. */
 .am-search-dialog, .am-search, .am-search-trigger, .am-search-legacy-nav {
   --search-bg: var(--bg-card, var(--section-bg, #f5f5f7));
@@ -124,7 +148,7 @@
   padding: 0 14px;
   min-height: 54px;
   margin: 0;
-  border: 1px solid var(--search-border);
+  border: 1px solid color-mix(in srgb, var(--search-muted) 80%, var(--search-bg));
   border-radius: 14px;
   background: var(--bg-app, var(--bg, #fff));
   color: var(--search-muted);
@@ -219,6 +243,17 @@
 }
 .am-search-result__description { display: block; margin-top: 6px; color: var(--search-muted); font-size: 13px; line-height: 1.55; }
 .am-search-result mark { background: rgba(43, 136, 216, .16); color: inherit; border-radius: 3px; }
+@media (forced-colors: active) {
+  .am-search-result mark {
+    forced-color-adjust: none;
+    background: Highlight;
+    color: HighlightText;
+  }
+  .am-search-filters button[aria-pressed="true"] {
+    border-width: 2px;
+    font-weight: 700;
+  }
+}
 .am-search-result__successor { display: inline-flex; align-items: center; min-height: 44px; margin: -4px 12px 8px; color: var(--search-accent); font-size: 13px; text-decoration: none; }
 .am-search-action { margin-top: 12px; color: var(--search-accent); }
 .am-search-browse { display: flex; flex-wrap: wrap; gap: 18px; margin: 12px 0 0; }

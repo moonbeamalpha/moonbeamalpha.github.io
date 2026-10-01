@@ -12,6 +12,8 @@ STORE = 'https://apps.apple.com/app/id6760594569'
 PROVIDER = '128558698'
 LABELS = {'infra': 'Azure infrastructure', 'data-ai': 'Data & AI', 'devops': 'Apps & DevOps',
           'business': 'Business & Copilot', 'security': 'Security', 'github': 'GitHub'}
+SYMBOLS = {'all': 'squares-four', 'infra': 'cloud', 'data-ai': 'database',
+           'devops': 'code', 'business': 'brain', 'security': 'lock-key', 'github': 'git-branch'}
 FEATURED = ['AZ-900', 'AZ-104', 'AI-901', 'DP-700', 'PL-300', 'SC-900']
 ACCESS_TOOL_DISCLOSURES = {
     'AB-650': 'For broader Microsoft 365 and Copilot revision, Pro adds readiness guidance and coaching alongside the question banks.',
@@ -62,18 +64,127 @@ def exam_metadata(home):
     return metadata
 
 
+def symbol(name, extra_class=''):
+    """Decorative, locally hosted Phosphor icons; labels supply the accessible name."""
+    return f'<span class="am-symbol {extra_class}" data-symbol="{name}" aria-hidden="true"></span>'
+
+
+def subject_filters(home=False):
+    labels = [('all', 'All'), *LABELS.items()]
+    return ('<div class="exam-finder__filters" data-exam-filters hidden role="group" aria-label="Filter exams by subject">' +
+            ''.join(f'<button type="button" data-exam-filter="{key}" aria-pressed="{str(key == "all").lower()}">'
+                    f'{symbol(SYMBOLS[key])}<span>{html.escape("Azure" if home and key == "infra" else label)}</span></button>'
+                    for key, label in labels) + '</div>')
+
+
+def exam_tier(code, snapshot, metadata):
+    if code in snapshot['retired']:
+        return 'retired', 'Retired reference', 0
+    name = snapshot['names'][code]
+    level, category = metadata[code]
+    if 'Fundamentals' in name or 'Foundations' in name:
+        level = 'Fundamentals'
+    return category, level, {'Fundamentals': 1, 'Associate': 2, 'Expert': 3}[level]
+
+
+def certification_badge(code, stars):
+    tier = {2: 'ASSOCIATE', 3: 'EXPERT'}.get(stars)
+    return ('<span class="certification-badge" aria-hidden="true">'
+            '<img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" '
+            'alt="" width="300" height="300" loading="lazy" decoding="async">'
+            f'<span class="certification-badge__code" data-code="{code}"></span>'
+            + (f'<span class="certification-badge__tier" data-tier="{tier}"></span>' if tier else '') +
+            f'<span class="certification-badge__stars" data-stars="{stars}">' +
+            '<img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy">' * stars +
+            '</span></span>')
+
+
+def current_pathways(text, snapshot):
+    """Remove retired stations and clean alternatives without inventing new routes."""
+    retired = set(snapshot['retired'])
+    station_pattern = r'<li class="cert-path__station">.*?</li>'
+    or_pattern = r'<span class="cert-path__or">.*?</span>\s*'
+
+    def update_path(match):
+        article = match[0]
+        stations = re.search(r'(<ol class="cert-path__stations">)(.*?)(</ol>)', article, re.S)
+        if not stations:
+            return article
+        groups = []
+        for station in re.findall(station_pattern, stations[2], re.S):
+            doc = Document(station).root
+            code_node = doc.find(lambda n: 'cert-path__chip-code' in n.attrs.get('class', '').split())
+            code = clean(code_node.text()) if code_node else ''
+            if not re.search(or_pattern, station, re.S) or not groups:
+                groups.append([])
+            groups[-1].append((station, code))
+        exam_groups = [group for group in groups if any(code in snapshot['exams'] for _, code in group)]
+        # A retired destination cannot leave a misleading prerequisite-only path.
+        if exam_groups and all(code in retired for _, code in exam_groups[-1]):
+            return ''
+        output = []
+        for group in groups:
+            surviving = [(station, code) for station, code in group if code not in retired]
+            for index, (station, code) in enumerate(surviving):
+                if index == 0:
+                    station = re.sub(or_pattern, '', station, flags=re.S)
+                if len(group) > len(surviving) == 1:
+                    station = station.replace('current prereq option', 'Prerequisite')
+                    station = station.replace('current Associate prerequisite', 'Associate prerequisite')
+                    station = station.replace('prereq option', 'Prerequisite')
+                output.append(station)
+        if not output:
+            return ''
+        return article[:stations.start(2)] + '\n            ' + '\n            '.join(output) + '\n          ' + article[stations.end(2):]
+
+    return re.sub(r'[ \t]*<article class="cert-path">.*?</article>', update_path, text, flags=re.S)
+
+
+def hub_card(code, snapshot, metadata, reference_hint):
+    retired = code in snapshot['retired']
+    category, level, stars = exam_tier(code, snapshot, metadata)
+    category_attr = '' if retired else f' data-exam-category="{category}"'
+    hint = reference_hint if retired else LABELS[category]
+    return (f'<a class="guide-card exam-hub-card" data-exam-tone="{category}"{category_attr} href="/exams/{code.lower()}/">'
+            + certification_badge(code, stars) +
+            f'<span class="exam-hub-card__level">{level}</span>'
+            f'<span class="guide-card__kicker">{code}</span>'
+            f'<span class="guide-card__name">{html.escape(snapshot["names"][code])}</span>'
+            f'<span class="guide-card__hint">{html.escape(hint)}</span>'
+            f'<span class="guide-card__more">{"View next steps" if retired else "View exam"}'
+            f'{symbol("arrow-right")}</span></a>')
+
+
+def related_certification_badges(text, snapshot, metadata):
+    """Add a shared badge to single-certification related links without rewriting copy."""
+    def replace(match):
+        attributes, body = match[1], match[2]
+        destination = re.search(r'href="/exams/([a-z]{2}-\d{3})/"', attributes)
+        label = re.search(r'class="related-card__code">([A-Z]{2}-\d{3})</span>', body)
+        code = destination[1].upper() if destination else label[1] if label else None
+        if code not in snapshot['exams']:
+            return match[0]
+        category, _, stars = exam_tier(code, snapshot, metadata)
+        body = re.sub(r'<!-- related-certification-badge:start -->.*?<!-- related-certification-badge:end -->',
+                      '', body, flags=re.S)
+        attributes = re.sub(r' data-certification-card| data-exam-tone="[^"]*"', '', attributes)
+        return (f'<a class="related-card" data-certification-card data-exam-tone="{category}"{attributes}>'
+                '<!-- related-certification-badge:start -->' + certification_badge(code, stars) +
+                '<!-- related-certification-badge:end -->' + body + '</a>')
+    return re.sub(r'<a class="related-card"([^>]*)>(.*?)</a>', replace, text, flags=re.S)
+
+
 def finder_cards(snapshot, metadata):
     current = sorted(set(snapshot['exams']) - set(snapshot['retired']))
     if set(current) - set(metadata):
         raise ValueError('Current exams missing roadmap classification: ' + str(set(current) - set(metadata)))
     def card(code):
-        level, category = metadata[code]
+        category, level, stars = exam_tier(code, snapshot, metadata)
         name = snapshot['names'][code]
-        if 'Fundamentals' in name or 'Foundations' in name:
-            level = 'Fundamentals'
         # The title already conveys the level for names such as Power BI Data Analyst Associate.
         meta = LABELS[category] if level.lower() in name.lower() else f'{level} · {LABELS[category]}'
         return (f'<a class="exam-finder__card exam-mini__tag" data-exam-category="{category}" href="/exams/{code.lower()}/">'
+                + certification_badge(code, stars) +
                 f'<span class="exam-finder__code">{code}<span aria-hidden="true">↗</span></span>'
                 f'<span class="exam-finder__title">{html.escape(name.removeprefix("Microsoft "))}</span>'
                 f'<span class="exam-finder__meta">{meta}</span></a>')
@@ -192,6 +303,8 @@ def render(path, text, snapshot, metadata):
     text = block(text, 'assets', assets, '</head>')
     if relative == 'index.html':
         text = block(text, 'cards', finder_cards(snapshot, metadata), '<!-- exam-roadmap-map:start -->')
+        text = re.sub(r'<div class="exam-finder__filters"[^>]*>.*?</div>',
+                      lambda _: subject_filters(home=True), text, count=1, flags=re.S)
     if is_exam:
         chrome = EXAM_HERO_CHROME
         code = path.parent.name.upper()
@@ -211,26 +324,27 @@ def render(path, text, snapshot, metadata):
             text = text[:hero.end()] + '\n\n' + content + text[hero.end():]
     if relative == 'exams/index.html':
         text = text.replace('<main>', '<main data-exam-finder>')
-        filters = ('<div class="exam-finder__filters" data-exam-filters hidden role="group" aria-label="Filter exams by subject">' +
-                   ''.join(f'<button type="button" data-exam-filter="{key}" aria-pressed="{str(key == "all").lower()}">{label}</button>'
-                           for key, label in [('all', 'All'), *LABELS.items()]) + '</div>'
+        filters = (subject_filters() +
                    '<p class="exam-finder__count" data-exam-count role="status" aria-live="polite"></p>')
         filters = '<div class="container exam-finder__controls">' + filters + '</div>'
         text = block(text, 'hub-filters', filters, '<section id="fam-azure"')
-        def hub_card(match):
+        def replace_hub_card(match):
             code, body = match[1].upper(), match[2]
-            if code not in metadata or code in snapshot['retired']:
-                return match[0]
-            level, category = metadata[code]
-            if 'Fundamentals' in snapshot['names'][code] or 'Foundations' in snapshot['names'][code]:
-                level = 'Fundamentals'
-            body = re.sub(r'<span class="guide-card__hint">.*?</span>',
-                          f'<span class="guide-card__hint">{level} · {LABELS[category]}</span>', body)
-            return f'<a class="guide-card" data-exam-category="{category}" href="/exams/{code.lower()}/">{body}</a>'
-        text = re.sub(r'<a class="guide-card"(?: data-exam-category="[^\"]*")? href="/exams/([a-z]{2}-\d{3})/">(.*?)</a>', hub_card, text, flags=re.S)
-        retired = re.search(r'(<section id="fam-retired".*?)(<nav class="guide-grid".*?</nav>)(\s*</section>)', text, re.S)
-        if retired:
-            text = text[:retired.start()] + retired[1] + '<details class="exam-reference"><summary>Show retired reference pages and next steps</summary>' + retired[2] + '</details>' + retired[3] + text[retired.end():]
+            hint = re.search(r'<span class="guide-card__hint">(.*?)</span>', body, re.S)
+            return hub_card(code, snapshot, metadata, html.unescape(hint[1]) if hint else '')
+        text = re.sub(r'<a class="guide-card(?: exam-hub-card)?"[^>]* href="/exams/([a-z]{2}-\d{3})/">(.*?)</a>',
+                      replace_hub_card, text, flags=re.S)
+        text = re.sub(r'<section id="(fam-(?:azure|ai|data|security|github))" class="container"(?: data-exam-section)?>',
+                      r'<section id="\1" class="container" data-exam-section>', text)
+    text = related_certification_badges(text, snapshot, metadata)
+    text = current_pathways(text, snapshot)
+    def pathway_tier(match):
+        opening, level, body = match[1], match[2], match[3]
+        body = re.sub(r'<span class="cert-path__chip-tier"[^>]*></span>', '', body)
+        return (opening + f'<span class="cert-path__chip-tier" data-tier="{level.upper()}" aria-hidden="true"></span>'
+                + body + match[4])
+    text = re.sub(r'(<(?:a|span)\b[^>]*class="cert-path__chip[^\"]*"[^>]*data-cert-level="(associate|expert)"[^>]*>)(.*?<span class="cert-path__chip-role">.*?</span>\s*)(</(?:a|span)>)',
+                  pathway_tier, text, flags=re.S)
     return campaign_links(text, relative)
 
 

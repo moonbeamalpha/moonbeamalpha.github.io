@@ -76,6 +76,13 @@ class SearchContracts(unittest.TestCase):
             self.assertEqual(text.count('id="am-search-dialog"'), 1)
             self.assertIn('aria-labelledby="am-search-title"', text)
             self.assertIn('aria-live="polite"', text)
+            skip = document.find(lambda n: 'am-skip-link' in n.attrs.get('class', '').split())
+            self.assertIsNotNone(skip, page)
+            target = document.find(lambda n: n.attrs.get('id') == skip.attrs['href'].removeprefix('#'))
+            self.assertIsNotNone(target, page)
+            self.assertEqual(target.attrs.get('tabindex'), '-1', page)
+            for examples in document.all(lambda n: 'am-search-examples' in n.attrs.get('class', '').split()):
+                self.assertEqual(examples.attrs.get('role'), 'group', page)
             self.assertEqual(versions.render(page, text), text, f'Unversioned search assets: {page}')
 
     def test_published_exam_metadata_matches_snapshot(self):

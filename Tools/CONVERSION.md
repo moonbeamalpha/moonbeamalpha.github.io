@@ -3,7 +3,21 @@
 The homepage follows a shorter decision path: understand the app through three real study screens, find an exam,
 try three authored questions, compare access options, then download.
 The roadmap is an optional desktop view. Catalogue-derived cards supply exam
-titles, levels and subject areas; retirement references remain in disclosures.
+titles, levels and subject areas. The homepage promotes current exams only;
+retired reference pages remain in the exam hub's separate disclosure and retain
+their existing URLs, successor guidance and sitemap entries.
+
+The exam hub and certification pathways share a refined version of the existing
+shield artwork, exam-code ribbon and Fluent tier stars. The centre Expert star
+sits lower to follow the shield point. Cards add a level label, subject colour
+and detail-page action. Single-certification related cards across exam and guide
+pages and every homepage finder card reuse the same compact badge while retaining their authored descriptions
+and destinations. On phones, descriptions span the full card width.
+Subject filters on the homepage and hub pair
+symbols with their existing text labels. Filtering the hub hides entire current
+exam sections when they contain no matching cards; All restores every section.
+The retired disclosure closes within its own section, keeping the study guides
+independently accessible.
 
 At 1,200px and above, the homepage hero composes authentic iPad practice,
 iPhone Exam IQ and Apple Watch dashboard captures. The iPhone stays in front;
@@ -26,9 +40,24 @@ announced feedback, explicit answer labels and reset support keyboard use.
 `sync-conversion-ui.py` maintains shared assets, the exact exam purchase/methodology
 component, truthful free/bank/Pro access FAQs, placement links, Smart App Banner attribution and exam cards. It covers
 published sitemap pages and the exam template. Its `--check` mode is read-only.
+Pathway diagrams exclude every retired catalogue entry. A retired destination
+removes the whole obsolete route; surviving alternatives lose orphaned “or”
+markers. Historical reference pages and their related links remain available.
+Shared shields use the two-line Microsoft Certified artwork with small Associate
+and Expert labels above the appropriate tier stars.
 The similarity baseline and tolerance are unchanged. Only the byte-exact shared
-purchase/navigation component is excluded from editorial similarity; modified
-prose stays in the comparison.
+purchase/navigation and skip-link components are excluded from editorial
+similarity; modified prose stays in the comparison.
+
+Shared search navigation also owns the first-focus skip link and focusable main
+destination. Focus outlines and scroll margins keep controls visible below the
+header and above the sticky phone action bar. The homepage header wraps with
+enlarged text. FAQ summaries contain one interactive control; related exam links
+belong in their answers. Legal prose links remain underlined in both themes.
+Forced-colour selected filters retain heavier borders and text, while search
+matches use the user's system highlight colours. Gradient button/label and
+light-mode guide-link contrasts were measured separately from automated scans.
+See `accessibility-audit.md` for the WCAG review, measured contrasts and limits.
 
 Run after catalogue or UI changes:
 

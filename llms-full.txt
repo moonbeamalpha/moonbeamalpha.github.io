@@ -218,7 +218,7 @@ Azure Mastery is built for serious certification candidates who want to know *wh
 Everything below is extracted from each page's own structured data (FAQPage, EducationalOccupationalCredential, WebPage) and regenerated whenever a page changes, so it always matches the live site.
 
 ## /exams/ab-100/ — AB-100 Practice Questions — 443 Qs for AI Architect (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Plan AI-powered business solutions (25–30%)
   - Design AI-powered business solutions (25–30%)
@@ -245,7 +245,7 @@ Q: Does AB-100 practice work offline?
 A: Question practice, scoring, and the readiness prediction all run on-device, so a flight or offline commute won't interrupt your study streak. No account is required, and your data stays on-device unless you turn on optional private iCloud sync.
 
 ## /exams/ab-410/ — AB-410 Practice Questions — 444 Qs & Exam Prep (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Create a foundation for intelligent applications (25–30%)
   - Create intelligent applications (25–30%)
@@ -272,7 +272,7 @@ Q: Does AB-410 practice hold up on a train with no signal?
 A: Yes — question practice, scoring, and the readiness prediction run entirely on-device, so a dead connection costs you nothing. Starting needs no account, and your study data stays on your phone unless you switch on optional iCloud sync.
 
 ## /exams/ab-620/ — AB-620 Practice Questions — 387 Qs & Exam Prep (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Plan and configure agent solutions (30–35%)
   - Integrate and extend agents in Copilot Studio (40–45%)
@@ -299,7 +299,7 @@ Q: Does AB-620 practice work offline?
 A: Yes. The whole study loop, from answering questions to the readiness prediction, runs on the phone, so a flight or a signal-free commute is still study time. There is no account to create, and your progress stays on the device unless you switch on private iCloud sync.
 
 ## /exams/ab-650/ — AB-650 Practice Questions — 506 Qs & Exam Prep (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Configure and manage Microsoft 365 tenants and workloads (20–25%)
   - Govern and secure Microsoft 365 tenants and workloads (40–45%)
@@ -326,7 +326,7 @@ Q: Does AB-650 practice work without a connection?
 A: Yes — practice, scoring, and the Exam IQ prediction happen entirely on-device, so a commute with no signal works the same as being online. Nothing to sign up for; iCloud sync is available if you want it.
 
 ## /exams/ab-731/ — AB-731 Practice Questions — 335 Qs for AI Leadership (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Identify the business value of generative AI solutions (35–40%)
   - Identify benefits, capabilities, and opportunities for Microsoft's AI apps and services (35–40%)
@@ -353,7 +353,7 @@ Q: Does AB-731 practice work offline?
 A: Yes — every part of practice runs locally: questions, scoring, and the readiness read. A flight or a signal-free commute doesn't interrupt a session. No account is needed, and data stays on your device until you turn on optional iCloud sync.
 
 ## /exams/ab-900/ — AB-900 Practice Questions — 323 Qs for Copilot Admin (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Identify the core features and objects of Microsoft 365 services (30–35%)
   - Understand data protection and governance tasks for Microsoft 365 and Copilot (35–40%)
@@ -380,7 +380,7 @@ Q: Can I revise AB-900 offline?
 A: Yes. Nothing in the study loop needs a connection: practice, scoring, and the readiness prediction all happen on-device. No account is needed, and your data only leaves the device if you opt into private iCloud sync.
 
 ## /exams/ai-102/ — AI-102 Retired Exam & AI-103 Next Step | Azure Mastery
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Plan and manage an Azure AI solution (20–25%)
   - Implement generative AI solutions (15–20%)
@@ -408,7 +408,7 @@ Q: Is there an AI-102 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-103/ — AI-103 Practice Questions — 557 Qs & Exam Prep (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Plan and manage an Azure AI solution (25–30%)
   - Implement generative AI and agentic solutions (30–35%)
@@ -437,7 +437,7 @@ Q: Does AI-103 practice work offline?
 A: All of it — question practice, scoring, and the readiness prediction run on-device, so a flight or an offline commute doesn't interrupt your study streak. No account is required, and your data stays on your device unless you turn on optional private iCloud sync.
 
 ## /exams/ai-200/ — AI-200 Practice Questions — 240 Qs for AI Developer (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Develop containerized solutions on Azure (20–25%)
   - Develop AI solutions by using Azure data management services (25–30%)
@@ -465,7 +465,7 @@ Q: Is there an AI-200 practice test mode?
 A: Yes. Exam Simulator runs a timed, blueprint-weighted AI-200 session built from the app's own questions, with the clock running and no jumping back to review. It is original practice content, so treat it as rehearsal for the pressure rather than a copy of Microsoft's paper.
 
 ## /exams/ai-300/ — AI-300 Practice Questions — 362 Qs for ML Ops Engineer (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Design and implement an MLOps infrastructure (15–20%)
   - Implement machine learning model lifecycle and operations (25–30%)
@@ -492,7 +492,7 @@ Q: Is Azure Mastery free to try for AI-300?
 A: Yes — the app is free to download, with a free allowance of AI-300 questions so you can try every feature. The full bank of 362 AI-300 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/ai-500/ — AI-500 Practice Questions — 452 Qs & Exam Prep (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Architect Multi-Agent Solutions (15–20%)
   - Develop Multi-Agent Solutions in Azure (30–35%)
@@ -518,7 +518,7 @@ Q: Does Azure Mastery let me try AI-500 before paying?
 A: Yes. The app is free to download, with a free allowance of AI-500 questions so you can try every feature. The full bank of 452 AI-500 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/ai-900/ — AI-900 Retired Exam & AI-901 Next Step | Azure Mastery
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Describe Artificial Intelligence workloads and considerations (15–20%)
   - Describe fundamental principles of machine learning on Azure (15–20%)
@@ -545,7 +545,7 @@ Q: Is there an AI-900 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/ai-901/ — AI-901 Practice Questions — 572 Qs for AI Fundamentals (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Identify AI concepts and capabilities (40–45%)
   - Implement AI solutions by using Microsoft Foundry (55–60%)
@@ -571,7 +571,7 @@ Q: How much revision time does AI-901 need?
 A: Allow several weeks for concepts plus hands-on practice. The outline expects core cloud knowledge, familiarity with Azure resources, and comfort reading Python syntax that calls AI models. Azure Mastery's readiness gauge helps you decide when to book.
 
 ## /exams/az-104/ — AZ-104 Practice Questions — 521 Qs for Azure Admin (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Manage Azure identities and governance (20–25%)
   - Implement and manage storage (15–20%)
@@ -600,7 +600,7 @@ Q: Is there an AZ-104 practice test mode?
 A: Yes. Timed sessions pull from the same blueprint-weighted question pool, follow Microsoft's published timing, and support every interactive item type AZ-104 uses. Between sessions, adaptive study and Focus Weak Spots keep steering you back to your lowest-accuracy domains.
 
 ## /exams/az-204/ — AZ-204 Retired Exam & AI-200 Next Step | Azure Mastery
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Develop Azure compute solutions (25–30%)
   - Develop for Azure storage (15–20%)
@@ -627,7 +627,7 @@ Q: Is there an AZ-204 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-305/ — AZ-305 Practice Questions — 439 Qs for Azure Architect (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Design identity, governance, and monitoring solutions (25–30%)
   - Design data storage solutions (20–25%)
@@ -653,7 +653,7 @@ Q: Can I try Azure Mastery's AZ-305 content before paying?
 A: Yes. The app is free to download, with a free allowance of AZ-305 questions so you can try every feature. The full bank of 439 AZ-305 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-400/ — AZ-400 Practice Questions — 507 Qs for DevOps Engineer (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Design and implement processes and communications (10–15%)
   - Design and implement a source control strategy (10–15%)
@@ -680,7 +680,7 @@ Q: Can I try Azure Mastery's AZ-400 content before buying the full bank?
 A: Yes. The app is free to download, with a free allowance of AZ-400 questions so you can try every feature. The full bank of 507 AZ-400 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-500/ — AZ-500 Retired Exam & SC-500 Next Step | Azure Mastery
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Secure identity and access (15–20%)
   - Secure networking (20–25%)
@@ -706,7 +706,7 @@ Q: Is there an AZ-500 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/az-700/ — AZ-700 Practice Questions — 609 Qs for Network Engineer (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Design and implement core networking infrastructure (25–30%)
   - Design, implement, and manage connectivity services (20–25%)
@@ -733,7 +733,7 @@ Q: Can I test-drive Azure Mastery's AZ-700 content for free?
 A: Yes. The app is free to download, with a free allowance of AZ-700 questions so you can try every feature. The full bank of 609 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade.
 
 ## /exams/az-900/ — AZ-900 Practice Questions — 384 Qs for Fundamentals (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Describe cloud concepts (25–30%)
   - Describe Azure architecture and services (35–40%)
@@ -760,7 +760,7 @@ Q: Is there an AZ-900 practice test mode?
 A: Yes. The simulator gives you a 45-minute, three-domain AZ-900 run built from the app's own questions, weighted the way Microsoft publishes the outline. Use it to practise pacing; the live exam's interface and mix are Microsoft's.
 
 ## /exams/dp-100/ — DP-100 Retired Exam & AI-300 Next Step | Azure Mastery
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Design and prepare a machine learning solution (20–25%)
   - Explore data, and run experiments (20–25%)
@@ -786,7 +786,7 @@ Q: Is there a DP-100 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
 ## /exams/dp-300/ — DP-300 Practice Questions — 425 Qs for Database Admin (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Plan and implement data platform resources (15–20%)
   - Implement a secure environment (20–25%)
@@ -815,7 +815,7 @@ Q: Does DP-300 revision still work with no connection?
 A: Yes. The whole loop stays on-device: practice, scoring, and the readiness read. A missing signal doesn't stop a session, and no account is required. Your study data stays local unless you switch on optional private iCloud sync.
 
 ## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Implement and manage an analytics solution (30–35%)
   - Ingest and transform data (30–35%)
@@ -842,7 +842,7 @@ Q: Does DP-700 practice hold up without a connection?
 A: Yes. The app doesn't need a connection for question practice, scoring, or the readiness prediction — all of that runs on-device. No account is required, and your data stays on your device unless you switch on optional iCloud sync.
 
 ## /exams/dp-750/ — DP-750 Practice Questions — 442 Qs for Databricks (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Set up and configure an Azure Databricks environment (15–20%)
   - Secure and govern Unity Catalog objects (15–20%)
@@ -870,7 +870,7 @@ Q: Does DP-750 revision work without a connection?
 A: Yes. Question practice, scoring, and the readiness prediction all run locally on your device, so studying with no signal works the same as with a full connection. No account is needed, and sync via iCloud stays optional and private.
 
 ## /exams/dp-800/ — DP-800 Practice Questions — 413 Qs for SQL AI Developer (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Design and develop database solutions (35–40%)
   - Secure, optimize, and deploy database solutions (35–40%)
@@ -897,7 +897,7 @@ Q: Can I revise DP-800 with no data connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device rather than depending on a connection, so travel or dead zones aren't a problem. No account is required, and your study data stays local unless you turn on private iCloud sync.
 
 ## /exams/dp-900/ — DP-900 Practice Questions — 346 Qs for Data Basics (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Describe core data concepts (25–30%)
   - Identify considerations for relational data on Azure (20–25%)
@@ -925,7 +925,7 @@ Q: Can I revise for DP-900 with no internet connection?
 A: Yes. Question practice, scoring, and the readiness prediction all run on-device, so a flight or a commute with no signal is no obstacle. No account is required, and your study data stays on your device with optional private iCloud sync.
 
 ## /exams/gh-300/ — GH-300 Practice Questions — 356 Qs for GitHub Copilot (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Use GitHub Copilot Responsibly (15–20%)
   - Use GitHub Copilot Features (25–30%)
@@ -953,7 +953,7 @@ Q: Does GH-300 practice work offline?
 A: Yes — practice, scoring, and the readiness prediction all happen on-device, so you can keep going on a plane or through a tunnel with zero signal. No account is required, and your study history stays local unless you switch on iCloud sync.
 
 ## /exams/gh-900/ — GH-900 Practice Questions — 347 Qs for GitHub Basics (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Understand Git and GitHub Basics (25–30%)
   - Work with GitHub Repositories (10–15%)
@@ -982,7 +982,7 @@ Q: Does GH-900 practice work offline?
 A: Yes — GH-900 practice runs its questions, scoring, and readiness prediction entirely on-device, so a commute or flight with no connection doesn't interrupt your revision. No account is needed, and data stays on your device unless you enable iCloud sync.
 
 ## /exams/pl-300/ — PL-300 Practice Questions — 398 Qs for Power BI Analyst (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Prepare the data (25–30%)
   - Model the data (25–30%)
@@ -1008,7 +1008,7 @@ Q: What's the going rate for a PL-300 exam attempt?
 A: The PL-300 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite, so check your Learn profile first.
 
 ## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Describe the business value of Microsoft Power Platform (5–10%)
   - Manage the Microsoft Power Platform environment (20–25%)
@@ -1050,7 +1050,7 @@ Q: Which retired exam maps to which successor?
 A: AI-900 to AI-901, AI-102 to AI-103, DP-100 to AI-300, AZ-204 to AI-200, and AZ-500 to SC-500. The table above lists each one with its retirement date.
 
 ## /exams/sc-100/ — SC-100 Practice Questions — 472 Qs for Cyber Architect (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Design solutions that align with security best practices and priorities (20–25%)
   - Design security operations, identity, and compliance capabilities (25–30%)
@@ -1078,7 +1078,7 @@ Q: Can I rehearse SC-100 scenarios with no internet connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device, working with no connection at all. No account is required, and iCloud sync stays optional and private if you want it.
 
 ## /exams/sc-200/ — SC-200 Practice Questions — 374 Qs for SOC Analyst (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Manage a security operations environment (40–45%)
   - Respond to security incidents (35–40%)
@@ -1103,7 +1103,7 @@ Q: Can I hunt through SC-200 practice scenarios with no connection?
 A: Yes. Practice sessions, scoring, and the readiness prediction all run on-device, so they work with no connection at all. There's no account to sign into, and data stays local unless you turn on optional, private iCloud sync.
 
 ## /exams/sc-300/ — SC-300 Practice Questions — 448 Qs for Identity Admin (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Implement and manage user identities (20–25%)
   - Implement authentication and access management (25–30%)
@@ -1131,7 +1131,7 @@ Q: Can I revise SC-300 with no data connection?
 A: Yes, no connection needed. Practice, scoring, and the readiness prediction are all on-device, so a commute or a flight works fine for study. No account is required, and iCloud sync stays optional and private.
 
 ## /exams/sc-500/ — SC-500 Practice Questions — 452 Qs for Cloud Security (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Manage identity, access, and governance (20–25%)
   - Secure storage, databases, and networking (25–30%)
@@ -1159,7 +1159,7 @@ Q: Is there an SC-500 practice test mode?
 A: Yes. Timed practice sessions draw on original, blueprint-weighted SC-500 questions with published timing and the interactive formats this exam uses. Adaptive study and Focus Weak Spots then push you back toward the domains dragging your accuracy down.
 
 ## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
-Page last modified: 2026-09-30
+Page last modified: 2026-10-01
 Exam domains:
   - Describe the concepts of security, compliance, and identity (10–15%)
   - Describe the capabilities of Microsoft Entra (25–30%)

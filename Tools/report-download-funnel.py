@@ -11,10 +11,12 @@ from urllib.parse import urlsplit, parse_qs
 def aggregate(click_rows, download_rows):
     clicks, downloads = Counter(), Counter()
     for row in click_rows:
-        url = urlsplit(row['link_url']); query = parse_qs(url.query)
-        if url.hostname != 'apps.apple.com' or url.path != '/app/id6760594569' or query.get('pt') != ['128558698']:
-            continue
-        campaign = query.get('ct', [''])[0]
+        campaign = row.get('store_campaign')
+        if campaign is None:
+            url = urlsplit(row['link_url']); query = parse_qs(url.query)
+            if url.hostname != 'apps.apple.com' or not re.fullmatch(r'/(?:gb/app/azure-mastery|app)/id6760594569', url.path) or query.get('pt') != ['128558698']:
+                continue
+            campaign = query.get('ct', [''])[0]
         if not re.fullmatch(r'[a-z0-9-]{1,30}', campaign): raise ValueError('Unexpected site campaign token')
         count = int(row['clicks'])
         if count < 0: raise ValueError('Click totals cannot be negative')

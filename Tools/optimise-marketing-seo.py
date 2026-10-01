@@ -39,44 +39,44 @@ DATA_FILE = ROOT / "data" / "exam-counts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SEO_UPDATED = "2026-08-09"
 SEO_UPDATED_OVERRIDES = {
-    # Shared search UI (2026-09-30) touched every exam page. Keep sitemap
+    # Shared practice and conversion UI (2026-10-01) touched every exam page. Keep sitemap
     # lastmod and JSON-LD dateModified aligned (validate_exam_dateModified_vs_sitemap).
-    "AB-100": "2026-09-30",
-    "AB-410": "2026-09-30",
-    "AB-620": "2026-09-30",
-    "AB-650": "2026-09-30",
-    "AB-731": "2026-09-30",
-    "AB-900": "2026-09-30",
-    "AI-103": "2026-09-30",
-    "AI-200": "2026-09-30",
-    "AI-300": "2026-09-30",
-    "AI-500": "2026-09-30",
-    "AI-901": "2026-09-30",
-    "AZ-104": "2026-09-30",
-    "AZ-305": "2026-09-30",
-    "AZ-400": "2026-09-30",
-    "AZ-700": "2026-09-30",
-    "AZ-900": "2026-09-30",
-    "DP-300": "2026-09-30",
-    "DP-700": "2026-09-30",
-    "DP-750": "2026-09-30",
-    "DP-800": "2026-09-30",
-    "DP-900": "2026-09-30",
-    "GH-300": "2026-09-30",
-    "GH-900": "2026-09-30",
-    "PL-300": "2026-09-30",
-    "PL-900": "2026-09-30",
-    "SC-100": "2026-09-30",
-    "SC-200": "2026-09-30",
-    "SC-300": "2026-09-30",
-    "SC-500": "2026-09-30",
-    "SC-900": "2026-09-30",
+    "AB-100": "2026-10-01",
+    "AB-410": "2026-10-01",
+    "AB-620": "2026-10-01",
+    "AB-650": "2026-10-01",
+    "AB-731": "2026-10-01",
+    "AB-900": "2026-10-01",
+    "AI-103": "2026-10-01",
+    "AI-200": "2026-10-01",
+    "AI-300": "2026-10-01",
+    "AI-500": "2026-10-01",
+    "AI-901": "2026-10-01",
+    "AZ-104": "2026-10-01",
+    "AZ-305": "2026-10-01",
+    "AZ-400": "2026-10-01",
+    "AZ-700": "2026-10-01",
+    "AZ-900": "2026-10-01",
+    "DP-300": "2026-10-01",
+    "DP-700": "2026-10-01",
+    "DP-750": "2026-10-01",
+    "DP-800": "2026-10-01",
+    "DP-900": "2026-10-01",
+    "GH-300": "2026-10-01",
+    "GH-900": "2026-10-01",
+    "PL-300": "2026-10-01",
+    "PL-900": "2026-10-01",
+    "SC-100": "2026-10-01",
+    "SC-200": "2026-10-01",
+    "SC-300": "2026-10-01",
+    "SC-500": "2026-10-01",
+    "SC-900": "2026-10-01",
     # Retired reference pages receive the same shared navigation change.
-    "AI-102": "2026-09-30",
-    "AI-900": "2026-09-30",
-    "AZ-204": "2026-09-30",
-    "AZ-500": "2026-09-30",
-    "DP-100": "2026-09-30",
+    "AI-102": "2026-10-01",
+    "AI-900": "2026-10-01",
+    "AZ-204": "2026-10-01",
+    "AZ-500": "2026-10-01",
+    "DP-100": "2026-10-01",
 }
 RETIRED_EXAMS = {
     "AI-900": {
@@ -949,16 +949,20 @@ def main() -> None:
                 page.write_text(after)
 
     if home_question is not None:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("home_practice", ROOT / "Tools/sync-home-practice.py")
+        home_practice = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(home_practice)
+        cards, snapshot = home_practice.render(args.app_repo)
         home = ROOT / "index.html"
         before = home.read_text()
-        replacement = (f'<div class="qt__viz" data-quiz="1" data-exam-code="AZ-104" data-question-id="{home_question["id"]}">'
-                       f'{question_prompt(home_question)}<ul class="qt__viz-options">{option_list(home_question,"radio")}</ul></div>'
-                       f'{answer_fallback(home_question)}')
-        after = replace_once(before, r'<div class="qt__viz" data-quiz="1" data-exam-code="AZ-104".*?</noscript>',
-                             replacement, "homepage authored practice preview", flags=re.S)
-        if after != before:
-            changed.append(home)
-            if not args.check: home.write_text(after)
+        after = replace_once(before, r"<!-- home-practice:start -->.*?<!-- home-practice:end -->",
+                             "<!-- home-practice:start -->\n" + cards + "\n<!-- home-practice:end -->",
+                             "homepage authored practice previews", flags=re.S)
+        for path, expected in [(home, after), (ROOT / "data/home-practice.json", snapshot)]:
+            if not path.exists() or path.read_text() != expected:
+                changed.append(path)
+                if not args.check: path.write_text(expected)
 
     if not args.dates_only:
         sample_file = ROOT / 'data/practice-previews.json'

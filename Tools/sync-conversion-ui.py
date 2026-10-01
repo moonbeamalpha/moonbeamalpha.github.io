@@ -14,7 +14,7 @@ LABELS = {'infra': 'Azure infrastructure', 'data-ai': 'Data & AI', 'devops': 'Ap
           'business': 'Business & Copilot', 'security': 'Security', 'github': 'GitHub'}
 FEATURED = ['AZ-900', 'AZ-104', 'AI-901', 'DP-700', 'PL-300', 'SC-900']
 EXAM_HERO_CHROME = ('<a class="conversion-try" href="#question-types">Try a practice question →</a>\n'
-                   '<p class="conversion-terms">Free starter questions · No account needed.<br>'
+                   '<p class="conversion-terms">50+ free questions per exam · No account needed.<br>'
                    'Full banks: one-time purchase. Pro adds every bank and advanced study tools. '
                    '<a href="/#pricing">Compare access options</a>.</p>\n'
                    '<p class="conversion-proof">Original questions with written explanations. '
@@ -103,7 +103,7 @@ def campaign_links(text, relative):
             placement = 'free-starter'
         if relative == 'exams/_template.html' and 'mobile-cta-bar__btn' in classes:
             params['ct'] = stem + '-sticky'
-        if placement:
+        if placement and not params.get('ct'):
             params['ct'] = stem + '-' + placement
         elif not params.get('ct'):
             params['ct'] = stem + '-body'
@@ -111,7 +111,7 @@ def campaign_links(text, relative):
         if relative != 'exams/_template.html':
             params['ct'] = short_campaign(params['ct'])
         encoded = urlencode(params).replace('%7B', '{').replace('%7D', '}') if relative == 'exams/_template.html' else urlencode(params)
-        return tag.replace(found[0], 'href="' + STORE + '?' + html.escape(encoded, quote=True) + '"')
+        return tag.replace(found[0], 'href="' + html.escape(url._replace(query=encoded).geturl(), quote=True) + '"')
     text = re.sub(r'<a\b[^>]*>', replace, text)
     def banner(match):
         content = html.unescape(match[1])
@@ -129,15 +129,22 @@ def render(path, text, snapshot, metadata):
     is_exam = re.fullmatch(r'exams/[a-z]{2}-\d{3}/index.html', relative) or relative == 'exams/_template.html'
     if relative == 'index.html' or is_exam:
         assets += '\n<script src="/practice.js" defer></script>'
-    for asset in ['/conversion.css', '/conversion.js', '/practice.js']:
+    if re.search(r'gtag\([\'"]config[\'"]', text):
+        assets += '\n<script src="/app-store-links.js" defer></script>'
+    for asset in ['/conversion.css', '/conversion.js', '/practice.js', '/app-store-links.js']:
         versioned = re.search(re.escape(asset) + r'\?v=[0-9a-f]{12}', text)
         if versioned:
             assets = assets.replace('"' + asset + '"', '"' + versioned[0] + '"')
+    text = re.sub(r'<script src="/app-store-links\.js(?:\?v=[0-9a-f]{12})?" defer></script>\n?', '', text)
     text = block(text, 'assets', assets, '</head>')
     if relative == 'index.html':
         text = block(text, 'cards', finder_cards(snapshot, metadata), '<!-- exam-roadmap-map:start -->')
     if is_exam:
-        text = block(text, 'hero', EXAM_HERO_CHROME, '          <div class="am-cert-hero__ctas">')
+        chrome = EXAM_HERO_CHROME
+        code = path.parent.name.upper()
+        if code in snapshot['retired']:
+            chrome = chrome.replace('50+ free questions per exam', 'Previously purchased pack access')
+        text = block(text, 'hero', chrome, '          <div class="am-cert-hero__ctas">')
         # Bring the useful interaction into the decision path without deleting reference material.
         sample = re.search(r'    <section id="question-types".*?</section>', text, re.S)
         hero = re.search(r'<section\b[^>]*class="am-cert-hero".*?</section>', text, re.S)

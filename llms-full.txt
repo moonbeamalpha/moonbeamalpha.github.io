@@ -98,7 +98,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 ### Power Platform (2)
 
 - [PL-300 — Microsoft Power BI Data Analyst](https://azuremastery.app/exams/pl-300/): 398 in-app practice questions. Associate-tier data analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates preparing data (Power Query M, data profiling), modelling data (star schemas, DAX measures, calculation groups, row-level security), visualising and analysing data (Power BI reports, dashboards, AI visuals), and deploying/maintaining assets (workspaces, deployment pipelines, refresh, sensitivity labels). Skills measured as of 20 April 2026.
-- [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 328 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
+- [PL-900 — Microsoft Power Platform Fundamentals](https://azuremastery.app/exams/pl-900/): 348 in-app practice questions. Fundamentals-tier low-code cert, never expires, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates the business value of Power Platform, managing the environment (Dataverse, security model, ALM pipelines), Power Apps (canvas, model-driven and code apps, plus AI-built apps), Power Automate (cloud and desktop flows), and building agents in Microsoft Copilot Studio (topics, knowledge sources, MCP tools, channels). Skills outline updated 24 July 2026.
 
 ### GitHub (2)
 - [GH-300 — GitHub Copilot](https://azuremastery.app/exams/gh-300/): 356 in-app practice questions. Intermediate GitHub certification covering responsible AI use, Copilot features (IDE, Copilot CLI, Agent Mode, Edit Mode, MCP, Copilot Chat, code review, org-wide policies), Copilot data and architecture, prompt engineering and context crafting, developer productivity, and privacy, content exclusions, and safeguards. Skills measured as of 7 August 2026.
@@ -1007,8 +1007,8 @@ A: Yes. Associate certifications including PL-300 expire annually. Renewal is a 
 Q: What's the going rate for a PL-300 exam attempt?
 A: The PL-300 voucher is USD $165 in the US, or around £128 in the UK — pricing varies by region. Microsoft occasionally runs free-voucher promotions around events like Build or Ignite, so check your Learn profile first.
 
-## /exams/pl-900/ — PL-900 Practice Questions — 328 Qs for Power Platform (2026)
-Page last modified: 2026-10-01
+## /exams/pl-900/ — PL-900 Practice Questions — 348 Qs for Power Platform (2026)
+Page last modified: 2026-10-02
 Exam domains:
   - Describe the business value of Microsoft Power Platform (5–10%)
   - Manage the Microsoft Power Platform environment (20–25%)
@@ -1032,7 +1032,7 @@ A: You can book your first retake after 24 hours. First retake: 24-hour wait. Se
 Q: Is PL-900 worth taking if I'm not a developer?
 A: Yes. PL-900 is built for a mixed audience: business analysts, citizen developers, project managers, and IT pros sizing up low-code all sit it. You're not asked to write code, just to pick the right app or flow type for a scenario, a sensible first stop before building for real.
 Q: Can I try Azure Mastery's PL-900 bank before paying?
-A: Yes. The app is free to download with 50+ free PL-900 questions and written explanations. The full 328-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
+A: Yes. The app is free to download with 50+ free PL-900 questions and written explanations. The full 348-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Can I revise for PL-900 without a data connection?
 A: Yes. Practice, scoring, and the PL-900 readiness prediction all run on-device, with nothing sent anywhere while you study. No account is needed, and everything stays local unless you switch on optional private iCloud sync.
 

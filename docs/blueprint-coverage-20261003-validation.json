@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-03",
+  "baseCommit": "e5167cda273aa78757339eb7165eacba941690a6",
+  "basePR": "https://github.com/moonbeamalpha/moonbeamalpha.github.io/pull/48",
+  "appBranch": "codex/blueprint-coverage-20261003",
+  "currentExamCount": 30,
+  "examScopedQuestionTotal": 12715,
+  "questionCountLabel": "12,700+",
+  "az900ExamQuestions": 404,
+  "checks": [
+    {
+      "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/test-domain-counts.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/check-page-similarity.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/update-sitemap-lastmod.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/add-exam-page-cta.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/check-marketing-ui.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/build-search-index.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/sync-search-ui.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/test-search-index.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/version-static-assets.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/sync-conversion-ui.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/check-conversion-ui.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/build-download-qr.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/sync-exam-faq-schema.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/add-ga-internal-flag.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/add-footer-links.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/validate-marketing-seo.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 Tools/validate-aura-help.py",
+      "exitCode": 0
+    },
+    {
+      "command": "bash Tools/build-home-css.sh --check",
+      "exitCode": 0
+    },
+    {
+      "command": "node Tools/check-marketing-performance.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node Tools/test-app-store-links.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node Tools/test-search.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "htmlWithOnlySearchCacheVersionChanges": [
+    "about/index.html",
+    "apps/AzureMastery/privacy.html",
+    "apps/AzureMastery/support.html",
+    "apps/AzureMastery/terms.html",
+    "ask-aura/index.html",
+    "exams/_template.html",
+    "exams/ab-100/index.html",
+    "exams/ab-410/index.html",
+    "exams/ab-620/index.html",
+    "exams/ab-650/index.html",
+    "exams/ab-731/index.html",
+    "exams/ab-900/index.html",
+    "exams/ai-102/index.html",
+    "exams/ai-103/index.html",
+    "exams/ai-200/index.html",
+    "exams/ai-300/index.html",
+    "exams/ai-500/index.html",
+    "exams/ai-901/index.html",
+    "exams/az-204/index.html",
+    "exams/az-305/index.html",
+    "exams/az-400/index.html",
+    "exams/az-500/index.html",
+    "exams/az-700/index.html",
+    "exams/dp-100/index.html",
+    "exams/dp-300/index.html",
+    "exams/dp-700/index.html",
+    "exams/dp-750/index.html",
+    "exams/dp-800/index.html",
+    "exams/gh-300/index.html",
+    "exams/index.html",
+    "exams/pl-300/index.html",
+    "exams/retired/index.html",
+    "exams/sc-100/index.html",
+    "exams/sc-200/index.html",
+    "exams/sc-300/index.html",
+    "exams/sc-500/index.html",
+    "guides/ab-620-vs-ab-410/index.html",
+    "guides/ai-103-vs-ai-200/index.html",
+    "guides/az-900-vs-az-104/index.html",
+    "guides/how-to-pass-ab-100/index.html",
+    "guides/how-to-pass-ab-620/index.html",
+    "guides/how-to-pass-ai-103/index.html",
+    "guides/how-to-pass-ai-200/index.html",
+    "guides/how-to-pass-ai-901/index.html",
+    "guides/how-to-pass-az-104/index.html",
+    "guides/how-to-pass-az-900/index.html",
+    "guides/how-to-pass-dp-900/index.html",
+    "guides/how-to-pass-sc-500/index.html",
+    "guides/how-to-pass-sc-900/index.html",
+    "guides/index.html",
+    "guides/sc-500-vs-az-500/index.html",
+    "guides/sc-900-vs-az-900/index.html",
+    "guides/which-azure-certification-first/index.html",
+    "how-exam-iq-works/index.html",
+    "how-we-write-questions/index.html"
+  ],
+  "renderedImagesReviewed": [
+    "images/linkedin-banner.png",
+    "images/og-image.png",
+    "images/og/az-900.jpg"
+  ],
+  "published": false
+}

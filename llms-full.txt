@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). Version 2.0 introduces Ask Aura Preview, a private Pro study companion grounded in reviewed exam material. It also uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,600+ practice questions cover 30 Microsoft certification exams, with no tracking or data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). Version 2.0 introduces Ask Aura Preview, a private Pro study companion grounded in reviewed exam material. It also uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,700+ practice questions cover 30 Microsoft certification exams, with no tracking or data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -40,7 +40,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Microsoft retired AZ-500 on 31 August 2026** — it can no longer be scheduled; the successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
-- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 609 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills measured as of 27 July 2026.
+- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 629 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills measured as of 27 July 2026.
 
 ### AI, Machine Learning & Copilot Agents (11)
 
@@ -78,9 +78,9 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [DP-300 — Administering Microsoft Azure SQL Solutions](https://azuremastery.app/exams/dp-300/): 425 in-app practice questions. Associate-tier database administrator cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Five domains: plan/implement data platform resources (15–20%), implement secure environment (20–25%), monitor/configure/optimize (20–25%), automation (15–20%), HA/DR (20–25%). Skills outline updated 24 April 2026.
 
-- [DP-700 — Implementing Data Engineering Solutions Using Microsoft Fabric](https://azuremastery.app/exams/dp-700/): 336 in-app practice questions. Associate-tier Microsoft Fabric data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Three domains each weighted 30–35%: implement and manage an analytics solution (Fabric workspaces, Git and deployment pipelines, OneLake security, orchestration), ingest and transform data (full/incremental loads, Dataflows Gen2, notebooks, PySpark, T-SQL, KQL, OneLake shortcuts, mirroring, Eventstream and Spark Structured Streaming), and monitor and optimize an analytics solution (alerts, error resolution, Lakehouse/Warehouse/Spark tuning). Requires SQL, PySpark, or KQL. Skills outline updated 21 July 2026.
+- [DP-700 — Implementing Data Engineering Solutions Using Microsoft Fabric](https://azuremastery.app/exams/dp-700/): 340 in-app practice questions. Associate-tier Microsoft Fabric data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Three domains each weighted 30–35%: implement and manage an analytics solution (Fabric workspaces, Git and deployment pipelines, OneLake security, orchestration), ingest and transform data (full/incremental loads, Dataflows Gen2, notebooks, PySpark, T-SQL, KQL, OneLake shortcuts, mirroring, Eventstream and Spark Structured Streaming), and monitor and optimize an analytics solution (alerts, error resolution, Lakehouse/Warehouse/Spark tuning). Requires SQL, PySpark, or KQL. Skills outline updated 21 July 2026.
 
-- [DP-750 — Implementing Data Engineering Solutions Using Azure Databricks](https://azuremastery.app/exams/dp-750/): 442 in-app practice questions. Associate-tier Azure Databricks data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: set up and configure an Azure Databricks environment (15–20%), secure and govern Unity Catalog objects (15–20%), prepare and process data (30–35%), deploy and maintain data pipelines and workloads (30–35%). Covers compute selection, Unity Catalog objects and governance (grants, row/column security, ABAC, lineage, Delta Sharing), Delta modelling and Lakeflow/Auto Loader ingestion, Spark optimisation (OPTIMIZE, VACUUM), and CI/CD with Databricks Asset Bundles. Requires SQL and Python. Skills outline updated 11 March 2026.
+- [DP-750 — Implementing Data Engineering Solutions Using Azure Databricks](https://azuremastery.app/exams/dp-750/): 441 in-app practice questions. Associate-tier Azure Databricks data engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Four domains: set up and configure an Azure Databricks environment (15–20%), secure and govern Unity Catalog objects (15–20%), prepare and process data (30–35%), deploy and maintain data pipelines and workloads (30–35%). Covers compute selection, Unity Catalog objects and governance (grants, row/column security, ABAC, lineage, Delta Sharing), Delta modelling and Lakeflow/Auto Loader ingestion, Spark optimisation (OPTIMIZE, VACUUM), and CI/CD with Databricks Asset Bundles. Requires SQL and Python. Skills outline updated 11 March 2026.
 
 - [DP-800 — Microsoft Certified: SQL AI Developer Associate](https://azuremastery.app/exams/dp-800/): 413 in-app practice questions. Associate-tier SQL developer cert focused on AI-enabled SQL workloads (exam title: "Developing AI-Enabled Database Solutions"), renews annually, USD $165 voucher. 100-min duration (120-min seat), 40–60 mixed-format questions, pass score 700/1000. Three domains: design and develop database solutions (35–40%) — advanced T-SQL, JSON, regex, fuzzy matching, graph queries, AI-assisted dev; secure/optimize/deploy (35–40%); implement AI capabilities in database solutions (25–30%) — embeddings, vector indexes, RAG with `sp_invoke_external_rest_endpoint`. Skills outline published 12 March 2026.
 
@@ -705,7 +705,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-500 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-700/ — AZ-700 Practice Questions — 609 Qs for Network Engineer (2026)
+## /exams/az-700/ — AZ-700 Practice Questions — 629 Qs for Network Engineer (2026)
 Page last modified: 2026-10-01
 Exam domains:
   - Design and implement core networking infrastructure (25–30%)
@@ -730,7 +730,7 @@ A: Not immediately, and each attempt needs its own voucher. First retake: after 
 Q: How many weeks of AZ-700 prep is realistic?
 A: Most candidates plan four to eight weeks with prior Azure networking experience. Build and troubleshoot virtual networks, hybrid connectivity, routing, private access, application delivery, and network security in a lab. Azure Mastery's readiness gauge tells you when you're exam-ready.
 Q: Can I test-drive Azure Mastery's AZ-700 content for free?
-A: Yes. The app is free to download, with 50+ free AZ-700 questions and written explanations. The full bank of 609 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
+A: Yes. The app is free to download, with 50+ free AZ-700 questions and written explanations. The full bank of 629 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 
 ## /exams/az-900/ — AZ-900 Practice Questions — 384 Qs for Fundamentals (2026)
 Page last modified: 2026-10-01
@@ -814,7 +814,7 @@ A: Yes — the app is free to download, with 50+ free DP-300 questions and writt
 Q: Does DP-300 revision still work with no connection?
 A: Yes. The whole loop stays on-device: practice, scoring, and the readiness read. A missing signal doesn't stop a session, and no account is required. Your study data stays local unless you switch on optional private iCloud sync.
 
-## /exams/dp-700/ — DP-700 Practice Questions — 336 Qs for Fabric Engineer (2026)
+## /exams/dp-700/ — DP-700 Practice Questions — 340 Qs for Fabric Engineer (2026)
 Page last modified: 2026-10-01
 Exam domains:
   - Implement and manage an analytics solution (30–35%)
@@ -837,11 +837,11 @@ A: Yes. DP-700 expects real data-engineering work in Fabric: writing T-SQL, PySp
 Q: I failed DP-700 — how long until I can retake it?
 A: Each retake needs a fresh voucher, and the wait grows with every attempt. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-700 bank before paying?
-A: Yes — the app is free to download, with 50+ free DP-700 questions and written explanations. The full bank of 336 DP-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
+A: Yes — the app is free to download, with 50+ free DP-700 questions and written explanations. The full bank of 340 DP-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does DP-700 practice hold up without a connection?
 A: Yes. The app doesn't need a connection for question practice, scoring, or the readiness prediction — all of that runs on-device. No account is required, and your data stays on your device unless you switch on optional iCloud sync.
 
-## /exams/dp-750/ — DP-750 Practice Questions — 442 Qs for Databricks (2026)
+## /exams/dp-750/ — DP-750 Practice Questions — 441 Qs for Databricks (2026)
 Page last modified: 2026-10-01
 Exam domains:
   - Set up and configure an Azure Databricks environment (15–20%)
@@ -865,7 +865,7 @@ A: A Lakeflow Job orchestrates arbitrary tasks, notebooks, SQL, other jobs, on a
 Q: I need to resit DP-750 — what's the wait?
 A: How long you wait scales with your attempt count, and each one needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months.
 Q: Can I try Azure Mastery's DP-750 bank before paying?
-A: Yes — the app is free to download, with 50+ free DP-750 questions and written explanations. The full bank of 442 DP-750 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
+A: Yes — the app is free to download, with 50+ free DP-750 questions and written explanations. The full bank of 441 DP-750 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 Q: Does DP-750 revision work without a connection?
 A: Yes. Question practice, scoring, and the readiness prediction all run locally on your device, so studying with no signal works the same as with a full connection. No account is needed, and sync via iCloud stays optional and private.
 

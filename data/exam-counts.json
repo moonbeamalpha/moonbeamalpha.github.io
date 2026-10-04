@@ -22,7 +22,7 @@
     "AZ-900": 453,
     "DP-100": 350,
     "DP-300": 435,
-    "DP-700": 381,
+    "DP-700": 385,
     "DP-750": 446,
     "DP-800": 419,
     "DP-900": 360,
@@ -139,19 +139,19 @@
     },
     "DP-700": {
       "dp700-implement": 108,
-      "dp700-ingest": 111,
-      "dp700-monitor": 117
+      "dp700-ingest": 114,
+      "dp700-monitor": 118
     },
     "DP-750": {
       "dp750-environment": 79,
       "dp750-governance": 80,
-      "dp750-pipelines": 142,
-      "dp750-process": 141
+      "dp750-pipelines": 144,
+      "dp750-process": 138
     },
     "DP-800": {
-      "dp800-ai": 114,
+      "dp800-ai": 113,
       "dp800-design": 146,
-      "dp800-secure": 153
+      "dp800-secure": 154
     },
     "DP-900": {
       "dp900-analytics": 103,
@@ -242,8 +242,8 @@
     "AZ-900": 404,
     "DP-100": 350,
     "DP-300": 425,
-    "DP-700": 336,
-    "DP-750": 442,
+    "DP-700": 340,
+    "DP-750": 441,
     "DP-800": 413,
     "DP-900": 346,
     "GH-300": 356,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12715,
+    "questionCount": 12718,
     "questionCountLabel": "12,700+"
   }
 }

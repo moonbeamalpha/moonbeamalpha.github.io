@@ -506,15 +506,18 @@
       color: var(--text-body);
       font-size: clamp(16px, 1.5vw, 18px);
       line-height: 1.65;
-      max-width: 64ch;
+      max-width: 33em;
     }
-    section p { color: var(--text-body); max-width: 64ch; }
+    /* Measure: DM Sans averages ~0.45em per character, so 33em holds about 72
+       characters a line at any size. A ch cap does not work here: DM Sans's "0"
+       is ~0.68em wide, so 64ch was wider than the column itself. */
+    section p { color: var(--text-body); max-width: 33em; }
     section p strong { color: var(--text-primary); font-weight: 600; }
     section a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
     section a:hover { text-decoration-thickness: 2px; }
     /* Prose lists (class-less) read in --text-body instead of inheriting the heading colour.
        Zero specificity so any component rule wins; theme-light.css restores inheritance. */
-    :where(main ul:not([class]), main ol:not([class])) { color: var(--text-body); }
+    :where(main ul:not([class]), main ol:not([class])) { color: var(--text-body); max-width: 33em; }
 
     /* Page-level H1 — sits below the hero, sets the SEO target */
     .page-h1 {
@@ -602,7 +605,7 @@
       border: 1px solid rgba(80,230,255,0.25);
       white-space: nowrap;
     }
-    .domain p { margin: 0; max-width: 60ch; }
+    .domain p { margin: 0; max-width: 33em; }
 
     /* Study plan as ordered list with week labels */
     .study-plan {
@@ -716,7 +719,7 @@
         radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
     }
     .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
-    .cta-final p { margin: 0 auto 28px; max-width: 56ch; color: var(--text-body); }
+    .cta-final p { margin: 0 auto 28px; max-width: 33em; color: var(--text-body); }
     .cta-button {
       display: inline-flex;
       align-items: center;
@@ -783,7 +786,7 @@
 /* 44pt tap targets (Apple HIG minimum) */
 .site-nav__cta { min-height: 44px; display: inline-flex; align-items: center; }
 </style>
-  <link rel="stylesheet" href="/theme-light.css?v=79d0b7ad9512">
+  <link rel="stylesheet" href="/theme-light.css?v=7059485ec73b">
   <link rel="stylesheet" href="/exams/exam-visuals.css?v=0b25ea828a3a">
   <link rel="stylesheet" href="/social-follow.css?v=1eb2212bb94b">
   <link rel="stylesheet" href="/section-nav.css?v=00d690856755">
@@ -792,7 +795,7 @@
 <script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=ff0ac8ded870" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
-<link rel="stylesheet" href="/conversion.css?v=8b5738c39693">
+<link rel="stylesheet" href="/conversion.css?v=548f58dd809e">
 <script src="/conversion.js?v=435d272a3d41" defer></script>
 <script src="/practice.js?v=6d25935e6cd3" defer></script>
 <script src="/app-store-links.js?v=22d2db6ebc11" defer></script>

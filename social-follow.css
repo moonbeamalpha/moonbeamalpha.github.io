@@ -1,7 +1,7 @@
 /* Shared social discovery component. Source markup: /_includes/social-follow.html. */
 .social-follow {
-  --social-text: var(--text-primary, var(--text, #f0f0f0));
-  --social-muted: var(--text-secondary, var(--muted, #8b95a5));
+  --social-text: var(--text-primary, var(--text, #dde3eb));
+  --social-muted: var(--text-secondary, var(--muted, #9ca7b7));
   --social-border: var(--border-strong, var(--border, rgba(255, 255, 255, 0.12)));
   --social-accent: var(--azure-cyan, var(--accent, #2b88d8));
   --social-surface: var(--bg-card, var(--section-bg, rgba(255, 255, 255, 0.04)));
@@ -29,7 +29,7 @@
 .social-follow__eyebrow {
   display: block;
   margin-bottom: 4px;
-  color: var(--social-accent);
+  color: var(--accent-text, var(--social-accent));
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;

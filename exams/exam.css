@@ -16,15 +16,21 @@
       --success-green:   #20C020;
       --warning-orange:  #F7630C;
 
-      --bg-app:          #050810;
-      --bg-deep:         #0A0E1A;
-      --bg-card:         #111827;
-      --bg-elevated:     #182033;
+      --bg-app:          #0B1120;
+      --bg-deep:         #0E1526;
+      --bg-card:         #141C2E;
+      --bg-elevated:     #1A2338;
       --bg-soft-blue:    #10233D;
 
-      --text-primary:    #F0F0F0;
-      --text-secondary:  #8B95A5;
-      --text-muted:      #808A96;
+      --text-primary:    #DDE3EB;
+      --text-secondary:  #9CA7B7;
+      --text-muted:      #8C97A8;
+      /* Running copy; --text-secondary is for captions, hints and labels. */
+      --text-body:       #C8D0DB;
+      /* Cyan for small text; --azure-cyan stays vivid for icons and buttons. */
+      --accent-text:     #86D6EC;
+      /* Large headings are semibold in dark mode; theme-light.css restores 700. */
+      --weight-display:  600;
 
       --border-subtle:   rgba(255,255,255,0.06);
       --border-strong:   rgba(255,255,255,0.12);
@@ -63,12 +69,12 @@
     }
 
     /* Typography classes (homepage parity) */
-    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
-    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
     .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
     .heading-small  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.4; }
     .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
-    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); }
     .headline-accent {
       background: var(--gradient-cyan-blue);
       -webkit-background-clip: text;
@@ -86,7 +92,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 24px;
-      background: rgba(5, 8, 16, 0.86);
+      background: rgba(11, 17, 32, 0.86);
       -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
@@ -141,7 +147,7 @@
         z-index: 40;
         width: 152px;
         padding: 16px 10px;
-        background: rgba(5, 8, 16, 0.55);
+        background: rgba(11, 17, 32, 0.55);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         border: 1px solid var(--border-subtle);
@@ -155,7 +161,7 @@
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--azure-cyan);
+        color: var(--accent-text);
       }
       .page-toc__list { list-style: none; margin: 0; padding: 0; }
       .page-toc__item { margin: 0; }
@@ -176,7 +182,7 @@
         text-decoration: none;
       }
       .page-toc__link[aria-current="true"] {
-        color: var(--azure-cyan);
+        color: var(--accent-text);
         border-left-color: var(--azure-cyan);
         background: rgba(80, 230, 255, 0.08);
       }
@@ -195,15 +201,18 @@
     .section-title { margin: 0 0 36px; color: var(--text-primary); }
     .section-lede {
       margin: 0 0 40px;
-      color: var(--text-secondary);
+      color: var(--text-body);
       font-size: clamp(16px, 1.5vw, 18px);
       line-height: 1.65;
       max-width: 64ch;
     }
-    section p { color: var(--text-secondary); max-width: 64ch; }
+    section p { color: var(--text-body); max-width: 64ch; }
     section p strong { color: var(--text-primary); font-weight: 600; }
-    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
     section a:hover { text-decoration-thickness: 2px; }
+    /* Prose lists (class-less) read in --text-body instead of inheriting the heading colour.
+       Zero specificity so any component rule wins; theme-light.css restores inheritance. */
+    :where(main ul:not([class]), main ol:not([class])) { color: var(--text-body); }
 
     /* Page-level H1 — sits below the hero, sets the SEO target */
     .page-h1 {
@@ -284,7 +293,7 @@
       font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       background: rgba(80,230,255,0.10);
       padding: 4px 10px;
       border-radius: 999px;
@@ -318,7 +327,7 @@
       font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       margin-bottom: 8px;
     }
     .study-plan > li[data-period-label]::before {
@@ -331,7 +340,7 @@
       font-weight: 600;
       font-size: 17px;
     }
-    .study-plan ul { margin: 0; padding-left: 20px; color: var(--text-secondary); }
+    .study-plan ul { margin: 0; padding-left: 20px; color: var(--text-body); }
     .study-plan li li { margin-bottom: 4px; }
 
     /* FAQ items */
@@ -650,6 +659,8 @@
       line-height: 1.3;
     }
     .qt p { margin: 0 0 12px; color: var(--text-secondary); font-size: 14px; line-height: 1.55; flex-grow: 1; }
+    /* Plain descriptions read as body copy; classed hints and notes keep the grey (same specificity as .qt p). */
+    .qt p:where(:not([class])) { color: var(--text-body); }
     .qt__hint {
       display: inline-block;
       align-self: flex-start;
@@ -658,7 +669,7 @@
       font-size: 10px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       padding: 4px 10px;
       background: rgba(80,230,255,0.08);
       border: 1px solid rgba(80,230,255,0.18);
@@ -696,7 +707,7 @@
       font-size: 10px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       padding: 3px 9px;
       background: rgba(80,230,255,0.08);
       border: 1px solid rgba(80,230,255,0.22);
@@ -756,7 +767,7 @@
       border-color: rgba(80,230,255,0.50);
       box-shadow: 0 0 18px rgba(80,230,255,0.20);
     }
-    .cert-path__chip--current .cert-path__chip-code { color: var(--azure-cyan); }
+    .cert-path__chip--current .cert-path__chip-code { color: var(--accent-text); }
     .cert-path__chip--target {
       background: rgba(255,185,0,0.10);
       border-color: rgba(255,185,0,0.32);
@@ -802,7 +813,7 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 18px;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       letter-spacing: 0.04em;
     }
     .related-card__name {
@@ -827,7 +838,7 @@
         radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
     }
     .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
-    .cta-final p { margin: 0 auto 28px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-final p { margin: 0 auto 28px; max-width: 56ch; color: var(--text-body); }
     .cta-button {
       display: inline-flex;
       align-items: center;
@@ -865,7 +876,7 @@
       font-size: 13px;
     }
     .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
-    .site-footer a:hover { color: var(--azure-cyan); }
+    .site-footer a:hover { color: var(--accent-text); }
 
     /* Hero styles: /exams/hero.css — per-page family accent only */
   
@@ -875,9 +886,9 @@
 @media (min-width: 720px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
 .guide-card { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border: 1px solid var(--border-subtle, rgba(255,255,255,0.1)); border-radius: var(--radius-lg, 16px); background: rgba(255,255,255,0.025); text-decoration: none; transition: border-color 0.15s ease, background 0.15s ease; }
 .guide-card:hover { border-color: rgba(80,230,255,0.4); background: rgba(80,230,255,0.05); }
-.guide-card__title { font-weight: 600; color: var(--text-primary, #EAEFF7); font-size: 16px; }
-.guide-card__hint { font-size: 13.5px; line-height: 1.5; color: var(--text-secondary, #9AA3B5); }
-.guide-card__more { font-size: 13px; font-weight: 600; color: var(--amh-accent, #50E6FF); }
+.guide-card__title { font-weight: 600; color: var(--text-primary, #DDE3EB); font-size: 16px; }
+.guide-card__hint { font-size: 13.5px; line-height: 1.5; color: var(--text-secondary, #9CA7B7); }
+.guide-card__more { font-size: 13px; font-weight: 600; color: var(--amh-accent, var(--accent-text, #86D6EC)); }
 
 /* --- Tappable sample questions (progressive enhancement; exam.js) --- */
 .qt__viz[data-quiz-live] .qt__viz-options li { cursor: pointer; border-radius: 10px; transition: background 0.15s ease; }
@@ -885,11 +896,11 @@
 .qt__viz[data-quiz-live] .qt__viz-options li:focus-visible { outline: 2px solid var(--amh-accent, #50E6FF); outline-offset: 2px; }
 .qt__viz-options li.is-correct { background: rgba(31,190,67,0.14); box-shadow: inset 0 0 0 1px rgba(51,210,160,0.55); }
 .qt__viz-options li.is-wrong { background: rgba(255,99,99,0.12); box-shadow: inset 0 0 0 1px rgba(255,99,99,0.45); }
-.qt__quiz-note { display: block; margin-top: 10px; font-size: 13px; line-height: 1.45; color: var(--text-secondary, #9AA3B5); }
-.qt__quiz-note strong { color: var(--text-primary, #EAEFF7); }
-.qt__quiz-hint { display: block; margin-top: 6px; font-size: 12px; color: var(--text-secondary, #9AA3B5); opacity: 0.8; }
+.qt__quiz-note { display: block; margin-top: 10px; font-size: 13px; line-height: 1.45; color: var(--text-secondary, #9CA7B7); }
+.qt__quiz-note strong { color: var(--text-primary, #DDE3EB); }
+.qt__quiz-hint { display: block; margin-top: 6px; font-size: 12px; color: var(--text-secondary, #9CA7B7); opacity: 0.8; }
 .quiz-summary { margin: 18px 0 0; padding: 16px 20px; border-radius: 14px; border: 1px solid rgba(80,230,255,0.25); background: rgba(80,230,255,0.06); font-size: 15px; line-height: 1.5; }
-.quiz-summary a { color: var(--amh-accent, #50E6FF); font-weight: 600; text-decoration: none; }
+.quiz-summary a { color: var(--amh-accent, var(--accent-text, #86D6EC)); font-weight: 600; text-decoration: none; }
 .quiz-summary a:hover { text-decoration: underline; }
 /* 44pt tap targets (Apple HIG minimum) */
 .site-nav__cta { min-height: 44px; display: inline-flex; align-items: center; }

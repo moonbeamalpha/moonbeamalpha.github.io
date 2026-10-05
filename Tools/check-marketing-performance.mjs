@@ -34,15 +34,18 @@ function lightThemeToken(name) {
   return lightTheme.match(new RegExp(`${name}:\\s*(#[0-9A-F]{6})`, 'i'))?.[1];
 }
 const lightBackground = lightThemeToken('--bg-app');
+const darkBackground = read('home.css').match(/--bg-app:\s*(#[0-9A-F]{6})/i)?.[1];
 for (const token of ['--azure-cyan', '--azure-blue', '--azure-purple', '--xp-gold', '--success-green', '--error-red', '--warning-orange']) {
   const value = lightThemeToken(token);
   assert(value && contrastRatio(value, lightBackground) >= 4.5, `${token} must remain AA-safe on the light background`);
 }
 for (const path of htmlFiles(root)) {
   const html = readFileSync(path, 'utf8');
-  if (html.includes('am-theme')) assert(html.includes(`if(t)t.content='${lightBackground}'`), `Stale light theme-color: ${path}`);
+  if (!html.includes('am-theme')) continue;
+  assert(html.includes(`if(t)t.content='${lightBackground}'`), `Stale light theme-color: ${path}`);
+  assert(html.includes(`<meta name="theme-color" content="${darkBackground}">`), `Stale dark theme-color: ${path}`);
 }
-assert(read('theme.js').includes(`light ? '${lightBackground}' : '#050810'`), 'theme.js light tint must match --bg-app');
+assert(read('theme.js').includes(`light ? '${lightBackground}' : '${darkBackground}'`), 'theme.js tints must match --bg-app in both themes');
 assert(/href="\/home\.min\.css(?:\?v=[0-9a-f]{12})?"/.test(home), 'Homepage must use the generated CSS bundle');
 assert(!/src="[^"\n]*(?:gsap|ScrollTrigger)/i.test(home), 'Animation libraries returned to the critical path');
 assert(!/html\.js/.test(read('home.css')), 'Do not hide initial content behind a JS marker');

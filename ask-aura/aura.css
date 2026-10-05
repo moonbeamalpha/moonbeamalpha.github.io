@@ -3,8 +3,8 @@
 .aura-page > section { scroll-margin-top: 104px; }
 .aura-page > .aura-hero { padding-block: clamp(36px, 6vw, 80px) 40px; }
 .aura-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
-.aura-hero h1 { margin: 24px 0; font: 700 clamp(36px, 4.5vw, 60px)/1.06 Outfit, sans-serif; letter-spacing: -.035em; }
-.aura-badge { display: inline-flex; align-items: center; gap: 10px; margin: 0; padding: 6px 12px 6px 6px; border: 1px solid var(--border-accent); border-radius: 999px; background: var(--bg-card); color: var(--azure-cyan); font: 600 11px/1.5 Outfit, sans-serif; letter-spacing: .05em; }
+.aura-hero h1 { margin: 24px 0; font: 700 clamp(36px, 4.5vw, 60px)/1.06 Outfit, sans-serif; font-weight: var(--weight-display, 700); letter-spacing: -.035em; }
+.aura-badge { display: inline-flex; align-items: center; gap: 10px; margin: 0; padding: 6px 12px 6px 6px; border: 1px solid var(--border-accent); border-radius: 999px; background: var(--bg-card); color: var(--accent-text); font: 600 11px/1.5 Outfit, sans-serif; letter-spacing: .05em; }
 .aura-badge span { background: linear-gradient(110deg, #007a99, #145ac1); color: #fff; padding: 5px 9px; border-radius: 999px; }
 .aura-hero__lede { font-size: 18px; line-height: 1.7; }
 .aura-hero__lede strong { color: var(--text-primary); font-weight: 600; }
@@ -12,11 +12,11 @@
 .aura-actions a { min-height: 44px; display: inline-flex; align-items: center; gap: 10px; font: 600 15px/1.4 Outfit, sans-serif; text-decoration: none; }
 .aura-actions .aura-download { padding: 14px 20px; border: 1px solid transparent; border-radius: 999px; background: linear-gradient(110deg, #007a99, #0964c4); color: #fff; }
 .aura-watch > span { font-size: 25px; line-height: 1; }
-.aura-preview-note { font-size: 12px; line-height: 1.6; max-width: 42ch; }
+.aura-preview-note { font-size: 12px; line-height: 1.6; max-width: 42ch; color: var(--text-secondary); }
 .aura-handoff { display: none; }
 @media (min-width: 900px) and (pointer: fine) {
   .aura-handoff { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
-  .aura-handoff img { flex: none; background: #fff; border-radius: 8px; }
+  .aura-handoff img { flex: none; background: #fff; border-radius: 8px; filter: brightness(0.86); }
   .aura-handoff p { margin: 0; font-size: 12px; line-height: 1.5; }
 }
 .aura-hero__character { position: relative; height: 460px; margin: 0; isolation: isolate; }
@@ -31,7 +31,7 @@
 .aura-capabilities p { font-size: 15px; line-height: 1.65; }
 .aura-capability__icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: rgba(80,230,255,.10); color: var(--azure-cyan); border: 1px solid var(--border-accent); font: 600 21px/1 Outfit, sans-serif; }
 .aura-capabilities .aura-prompt { margin: 20px 0 0; padding-top: 16px; border-top: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 14px; }
-.aura-examples-note { font-size: 12px; margin-top: 16px; }
+.aura-examples-note { font-size: 12px; margin-top: 16px; color: var(--text-secondary); }
 .aura-page .aura-video { max-width: 1080px; padding-block: 40px 64px; }
 .aura-video .video-overview__intro p { margin-inline: auto; }
 .aura-video .video-overview__caption { max-width: none; }
@@ -42,7 +42,7 @@
 .aura-session__copy h2 { margin: 12px 0 20px; }
 .aura-session__steps { list-style: none; padding: 0; margin: 28px 0; display: grid; gap: 22px; }
 .aura-session__steps li { display: flex; gap: 18px; }
-.aura-session__steps li > span { color: var(--azure-cyan); font: 600 14px/1.5 Outfit, sans-serif; padding-top: 3px; }
+.aura-session__steps li > span { color: var(--accent-text); font: 600 14px/1.5 Outfit, sans-serif; padding-top: 3px; }
 .aura-session__steps h3 { margin: 0 0 6px; font-size: 18px; }
 .aura-session__steps p { margin: 0; font-size: 15px; }
 .aura-privacy { padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 24px; }
@@ -50,7 +50,7 @@
 .aura-privacy ul { padding: 0; margin: 0; list-style: none; display: grid; gap: 22px; }
 .aura-privacy li { padding-left: 18px; border-left: 2px solid var(--border-accent); }
 .aura-privacy strong { display: block; font: 600 17px/1.4 Outfit, sans-serif; margin-bottom: 6px; }
-.aura-privacy li > span { color: var(--text-secondary); font-size: 14px; line-height: 1.65; }
+.aura-privacy li > span { color: var(--text-body); font-size: 14px; line-height: 1.65; }
 .aura-faqs { max-width: 820px; }
 .aura-faqs h2 { margin: 12px 0 24px; }
 .aura-faqs > p:last-child { font-size: 14px; }

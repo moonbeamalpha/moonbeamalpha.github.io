@@ -15,17 +15,30 @@
       --error-red:       #F05050;
       --warning-orange:  #F7630C;
 
-      --bg-app:          #050810;
-      --bg-deep:         #0A0E1A;
-      --bg-card:         #111827;
-      --bg-surface:      #0F1525;
-      --bg-elevated:     #182033;
-      --bg-overlay:      #0C1220;
+      /* A lifted navy canvas rather than near-black: bright text blooms
+         against near-black, and the page reads as a void. */
+      --bg-app:          #0B1120;
+      --bg-deep:         #0E1526;
+      --bg-card:         #141C2E;
+      --bg-surface:      #111A2B;
+      --bg-elevated:     #1A2338;
+      --bg-overlay:      #0F1627;
       --bg-soft-blue:    #10233D;
 
-      --text-primary:    #F0F0F0;
-      --text-secondary:  #8B95A5;
-      --text-muted:      #808A96;
+      /* A compressed text ramp: headings stay under APCA's Lc 90 ceiling for
+         large bold type, and running copy clears its Lc 75 body-text floor.
+         Body copy uses --text-body; --text-secondary is for captions, hints
+         and labels only. */
+      --text-primary:    #DDE3EB;
+      --text-body:       #C8D0DB;
+      --text-secondary:  #9CA7B7;
+      --text-muted:      #8C97A8;
+      /* Cyan for small text (links, eyebrows, labels). --azure-cyan stays
+         vivid for icons, buttons and fills. */
+      --accent-text:     #86D6EC;
+      /* Light-on-dark type reads heavier than the same weight on white, so
+         large headings drop to semibold. theme-light.css restores 700. */
+      --weight-display:  600;
 
       --border-subtle:   rgba(255,255,255,0.06);
       --border-strong:   rgba(255,255,255,0.12);
@@ -44,7 +57,7 @@
       --shadow-flat:     0 3px 6px rgba(0,0,0,0.12);
       --shadow-raised:   0 5px 9px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
       --shadow-floating: 0 8px 12px rgba(0,0,0,0.24), 0 6px 16px rgba(0,0,0,0.24);
-      --shadow-device:   0 40px 80px rgba(0,0,0,0.6), 0 0 40px rgba(80,230,255,0.08);
+      --shadow-device:   0 40px 80px rgba(0,0,0,0.6);
 
       --gradient-cyan-blue:   linear-gradient(135deg, #50E6FF 0%, #2B88D8 100%);
       --gradient-blue-purple: linear-gradient(135deg, #2B88D8 0%, #9578E0 100%);
@@ -80,17 +93,17 @@
     /* ══════════════════════════════════════════════
        TYPOGRAPHY
        ══════════════════════════════════════════════ */
-    .display-hero   { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(48px, 8vw, 96px); line-height: 1.0; letter-spacing: -0.03em; }
-    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
-    .display-medium { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(28px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
-    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
+    .display-hero   { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(48px, 8vw, 96px); line-height: 1.0; letter-spacing: -0.03em; }
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
+    .display-medium { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(28px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
     .heading-large  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(18px, 2.5vw, 28px); line-height: 1.2; letter-spacing: -0.01em; }
     .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
     .heading-small  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.4; }
     .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
     .body-medium    { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 15px; line-height: 1.6; }
     .body-small     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 13px; line-height: 1.55; }
-    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); }
 
     /* Visually hidden but accessible to screen readers and search engines. */
     .sr-only {
@@ -136,14 +149,14 @@
       border-radius: var(--radius-lg);
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 24px rgba(43,136,216,0.35);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.30);
       transition: transform 0.18s ease, box-shadow 0.18s ease;
       text-decoration: none;
       white-space: nowrap;
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(43,136,216,0.5);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.36);
     }
     .btn-primary--large { padding: 18px 48px; font-size: 19px; }
     .btn-ghost {
@@ -177,7 +190,7 @@
     .app-card--spotlight {
       background: var(--bg-soft-blue);
       border-color: var(--border-accent);
-      box-shadow: var(--shadow-floating), 0 0 32px rgba(80,230,255,0.06);
+      box-shadow: var(--shadow-floating);
     }
 
     /* Exam IQ Badge */
@@ -209,7 +222,7 @@
       border: 1px solid rgba(80,230,255,0.42);
       border-radius: 999px;
       background: rgba(80,230,255,0.08);
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       font-family: 'Outfit', sans-serif;
       font-size: 11px;
       font-weight: 700;
@@ -247,14 +260,14 @@
       height: 64px;
       display: flex;
       align-items: center;
-      background: rgba(5, 8, 16, 0.75);
+      background: rgba(11, 17, 32, 0.75);
       backdrop-filter: blur(20px) saturate(1.8);
       -webkit-backdrop-filter: blur(20px) saturate(1.8);
       border-bottom: 1px solid var(--border-subtle);
       transition: background 0.3s, box-shadow 0.3s;
     }
     .site-nav--scrolled {
-      background: rgba(5, 8, 16, 0.92);
+      background: rgba(11, 17, 32, 0.92);
       box-shadow: 0 1px 0 var(--border-subtle);
     }
     .nav-inner {
@@ -351,7 +364,7 @@
       width: 80px;
       height: 80px;
       border-radius: 20px;
-      box-shadow: 0 0 32px rgba(80,230,255,0.25), 0 0 64px rgba(43,136,216,0.15);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
     }
     .hero-app-name {
       font-family: 'Outfit', sans-serif;
@@ -365,7 +378,7 @@
     }
     .hero-headline { margin: 12px 0 20px; }
     .hero-subline {
-      color: var(--text-secondary);
+      color: var(--text-body);
       max-width: 440px;
       margin-bottom: 32px;
     }
@@ -434,7 +447,7 @@
       font-family: 'Outfit', sans-serif;
       font-size: 13px;
       font-weight: 600;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       text-decoration: none;
     }
     .hero-exam-tags__more:hover,
@@ -481,8 +494,7 @@
       position: relative;
       display: inline-block;
       transform-style: preserve-3d;
-      filter: drop-shadow(0 40px 60px rgba(0,0,0,0.55))
-              drop-shadow(0 0 30px rgba(80,230,255,0.12));
+      filter: drop-shadow(0 40px 60px rgba(0,0,0,0.55));
       transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .phone-wrap::before {
@@ -490,7 +502,7 @@
       position: absolute;
       inset: -12px;
       border-radius: 66px;
-      background: radial-gradient(ellipse at 50% 40%, rgba(80,230,255,0.12) 0%, rgba(43,136,216,0.06) 40%, transparent 70%);
+      background: radial-gradient(ellipse at 50% 40%, rgba(80,230,255,0.06) 0%, rgba(43,136,216,0.03) 40%, transparent 70%);
       pointer-events: none;
       z-index: -1;
     }
@@ -593,7 +605,7 @@
       transform-origin: center center;
       z-index: 10;
       opacity: 1;
-      filter: drop-shadow(0 60px 80px rgba(0,0,0,0.7)) drop-shadow(0 0 50px rgba(80,230,255,0.18));
+      filter: drop-shadow(0 60px 80px rgba(0,0,0,0.7)) drop-shadow(0 0 50px rgba(80,230,255,0.09));
     }
     .phone-angle-right {
       transform: perspective(1200px) rotateY(-22deg) rotateX(-5deg) translateX(20px) scale(0.92);
@@ -729,12 +741,12 @@
       pointer-events: none;
     }
     .aura-img { display: block; width: 100%; height: auto;
-      filter: drop-shadow(0 18px 26px rgba(0,0,0,0.45)) drop-shadow(0 0 26px rgba(80,230,255,0.22)); }
+      filter: drop-shadow(0 18px 26px rgba(0,0,0,0.45)); }
     .aura-img--float { animation: aura-float 6s ease-in-out infinite; }
     .aura-glow {
       position: absolute; left: 50%; bottom: 4%;
       width: 82%; aspect-ratio: 1 / 1; transform: translateX(-50%);
-      background: radial-gradient(circle at 50% 55%, rgba(80,230,255,0.26) 0%, rgba(43,136,216,0.09) 46%, transparent 72%);
+      background: radial-gradient(circle at 50% 55%, rgba(80,230,255,0.13) 0%, rgba(43,136,216,0.045) 46%, transparent 72%);
       z-index: -1; pointer-events: none;
     }
 
@@ -742,17 +754,17 @@
     .aura-pill {
       max-width: 230px;
       padding: 10px 15px;
-      background: rgba(17,24,39,0.86);
+      background: rgba(20,28,46,0.86);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(80,230,255,0.45);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 24px rgba(80,230,255,0.16);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
       font-family: 'DM Sans', system-ui, sans-serif;
       font-size: 13px; line-height: 1.35;
       color: var(--text-primary);
       pointer-events: auto;
     }
-    .aura-pill strong { color: var(--azure-cyan); font-weight: 600; }
+    .aura-pill strong { color: var(--accent-text); font-weight: 600; }
     .hero-aura .aura-pill {
       position: absolute; bottom: 90%; left: 50%;
       width: max-content;
@@ -777,7 +789,7 @@
       z-index: -1;
       border-radius: 50%;
       background:
-        radial-gradient(circle at 52% 42%, rgba(80,230,255,0.26), transparent 48%),
+        radial-gradient(circle at 52% 42%, rgba(80,230,255,0.13), transparent 48%),
         radial-gradient(circle at 24% 82%, rgba(149,120,224,0.24), transparent 42%);
       filter: blur(8px);
     }
@@ -785,7 +797,7 @@
       width: 292px;
       height: 634px;
       transform: perspective(1100px) rotateY(-7deg) rotateX(2deg) translateX(36px);
-      box-shadow: 0 34px 70px rgba(0,0,0,0.48), 0 0 42px rgba(80,230,255,0.14);
+      box-shadow: 0 34px 70px rgba(0,0,0,0.48);
     }
     .ask-aura-stage__screen {
       background-position: center top;
@@ -798,7 +810,7 @@
       bottom: 2px;
       width: clamp(150px, 18vw, 210px);
       height: auto;
-      filter: drop-shadow(0 24px 34px rgba(0,0,0,0.5)) drop-shadow(0 0 32px rgba(80,230,255,0.24));
+      filter: drop-shadow(0 24px 34px rgba(0,0,0,0.5));
     }
     .ask-aura-stage__bubble {
       position: absolute;
@@ -821,7 +833,7 @@
     }
     .ask-aura-more { margin: 24px 0 0; }
     .ask-aura-more a {
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
       text-underline-offset: 4px;
@@ -832,12 +844,12 @@
     .aura-portrait-img {
       position: relative; z-index: 2;
       display: block; width: clamp(220px, 30vw, 320px); height: auto;
-      filter: drop-shadow(0 30px 50px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(80,230,255,0.2));
+      filter: drop-shadow(0 30px 50px rgba(0,0,0,0.5));
     }
     .aura-portrait-glow {
       position: absolute; left: 50%; top: 50%; transform: translate(-50%, -46%);
       width: 92%; aspect-ratio: 1 / 1; z-index: 1; pointer-events: none;
-      background: radial-gradient(circle at 50% 50%, rgba(80,230,255,0.22) 0%, rgba(43,136,216,0.09) 46%, transparent 70%);
+      background: radial-gradient(circle at 50% 50%, rgba(80,230,255,0.11) 0%, rgba(43,136,216,0.045) 46%, transparent 70%);
     }
     .aura-traits { display: flex; flex-wrap: wrap; gap: 10px; }
     .aura-trait {
@@ -848,7 +860,7 @@
     }
     .aura-trait--blue   { border-color: rgba(43,136,216,0.5);  color: #7db8ff; }
     .aura-trait--purple { border-color: rgba(149,120,224,0.5); color: #b9a6f0; }
-    .aura-trait--cyan   { border-color: rgba(80,230,255,0.45); color: var(--azure-cyan); }
+    .aura-trait--cyan   { border-color: rgba(80,230,255,0.45); color: var(--accent-text); }
 
     /* Aura-led session recap — a compact visual story, not a wall of copy */
     .session-story-preview {
@@ -862,7 +874,7 @@
       padding: 17px 13px 15px;
       overflow: hidden;
       background:
-        radial-gradient(circle at 22% 16%, rgba(80,230,255,0.16), transparent 30%),
+        radial-gradient(circle at 22% 16%, rgba(80,230,255,0.08), transparent 30%),
         radial-gradient(circle at 82% 34%, rgba(149,120,224,0.14), transparent 34%),
         linear-gradient(180deg, #0c1422 0%, #070a11 100%);
       color: #f5f7fb;
@@ -925,7 +937,7 @@
       height: 128px;
       transform: translateY(-50%);
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(80,230,255,0.2), rgba(43,136,216,0.07) 48%, transparent 72%);
+      background: radial-gradient(circle, rgba(80,230,255,0.1), rgba(43,136,216,0.035) 48%, transparent 72%);
       filter: blur(2px);
     }
     .session-story-preview__aura {
@@ -944,7 +956,7 @@
       padding: 10px 11px;
       border: 1px solid rgba(80,230,255,0.26);
       border-radius: 13px 13px 13px 4px;
-      background: rgba(17,24,39,0.78);
+      background: rgba(20,28,46,0.78);
       box-shadow: 0 12px 28px rgba(0,0,0,0.25);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
@@ -960,7 +972,7 @@
       border-radius: 20px;
       background:
         linear-gradient(145deg, rgba(80,230,255,0.06), transparent 45%),
-        rgba(17,24,39,0.88);
+        rgba(20,28,46,0.88);
       box-shadow: 0 20px 44px rgba(0,0,0,0.34);
       -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
@@ -995,7 +1007,7 @@
       place-items: center;
       border-radius: 50%;
       background: conic-gradient(var(--recap-accent) var(--score-progress), rgba(255,255,255,0.08) 0);
-      box-shadow: 0 0 26px rgba(80,230,255,0.13);
+      box-shadow: none;
     }
     .session-story-preview__score-ring::before {
       content: '';
@@ -1218,7 +1230,7 @@
     /* Final CTA celebration */
     .cta-aura { position: relative; display: inline-block; margin-bottom: 8px; }
     .cta-aura-img { display: block; width: clamp(112px, 16vw, 146px); height: auto; margin: 0 auto;
-      filter: drop-shadow(0 18px 28px rgba(0,0,0,0.45)) drop-shadow(0 0 30px rgba(80,230,255,0.22)); }
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,0.45)); }
     .cta-aura .aura-pill {
       position: absolute; bottom: 86%; left: 50%;
       transform: translateX(-50%);
@@ -1337,14 +1349,14 @@
       color: #fff;
       background: linear-gradient(135deg, rgba(80,230,255,0.18), rgba(149,120,224,0.18));
       border-color: rgba(80,230,255,0.38);
-      box-shadow: 0 0 24px rgba(80,230,255,0.10);
+      box-shadow: none;
     }
     .roadmap-shell {
       max-width: 1200px;
       margin: 0 auto;
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: var(--radius-2xl);
-      background: rgba(10,14,26,0.78);
+      background: rgba(14,21,38,0.78);
       box-shadow: var(--shadow-floating);
       overflow: hidden;
     }
@@ -1545,7 +1557,7 @@
     .showcase-bullets li {
       font-family: 'DM Sans', sans-serif;
       font-size: 15px;
-      color: var(--text-secondary);
+      color: var(--text-body);
       padding-left: 24px;
       position: relative;
     }
@@ -1605,7 +1617,7 @@
     .how-step p {
       font-family: 'DM Sans', sans-serif;
       font-size: 14px;
-      color: var(--text-secondary);
+      color: var(--text-body);
       line-height: 1.6;
     }
     /* Connector lines between steps */
@@ -1732,8 +1744,7 @@
         inset 0 -1px 0 rgba(0,0,0,0.5),
         inset 1px 0 rgba(255,255,255,0.06),
         inset -1px 0 rgba(255,255,255,0.06),
-        0 32px 60px rgba(0,0,0,0.5),
-        0 0 50px rgba(80,230,255,0.12);
+        0 32px 60px rgba(0,0,0,0.5);
     }
     .ipad-frame::before {
       content: '';
@@ -1851,8 +1862,7 @@
         inset 0 -1px 0 rgba(0,0,0,0.5),
         inset 1px 0 rgba(255,255,255,0.06),
         inset -1px 0 rgba(255,255,255,0.06),
-        0 32px 60px rgba(0,0,0,0.5),
-        0 0 50px rgba(80,230,255,0.10);
+        0 32px 60px rgba(0,0,0,0.5);
     }
     .mac-frame::before {
       content: '';
@@ -1917,9 +1927,7 @@
     .watch-wrap {
       position: relative;
       transform-style: preserve-3d;
-      filter: drop-shadow(0 30px 50px rgba(0,0,0,0.5))
-              drop-shadow(0 0 40px rgba(80,230,255,0.15))
-              drop-shadow(0 0 80px rgba(43,136,216,0.10));
+      filter: drop-shadow(0 30px 50px rgba(0,0,0,0.5));
       margin-bottom: 40px;
     }
     .watch-frame {
@@ -2186,7 +2194,7 @@
     .faq summary::-webkit-details-marker { display: none; }
     .faq summary::after { content: '+'; font-size: 20px; color: var(--text-secondary); flex: none; }
     .faq[open] summary::after { content: '\2013'; }
-    .faq__answer { padding: 0 20px 18px; color: var(--text-secondary); font-size: 15px; line-height: 1.6; }
+    .faq__answer { padding: 0 20px 18px; color: var(--text-body); font-size: 16px; line-height: 1.6; }
     @media (max-width: 768px) { .section-faq { padding: 64px 20px; } }
     /* ── Mid-page CTA band ── */
     .cta-band { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 28px 24px; margin: 0 auto; max-width: 900px; }
@@ -2196,7 +2204,7 @@
     .hero-qr { display: none; }
     @media (min-width: 900px) and (pointer: fine) {
       .hero-qr { display: inline-flex; align-items: center; gap: 10px; margin-left: 6px; }
-      .hero-qr img { border-radius: 10px; background: #fff; padding: 4px; }
+      .hero-qr img { border-radius: 10px; background: #fff; padding: 4px; filter: brightness(0.86); }
       .hero-qr span:last-child { font-size: 12px; line-height: 1.4; color: var(--text-secondary); }
     }
     /* Decorative elements (3-phone fan, showcase devices, screenshots strip)
@@ -2215,7 +2223,7 @@ html, body { overflow-x: clip; }
       justify-content: space-between;
       gap: 12px;
       padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-      background: rgba(7, 11, 22, 0.92);
+      background: rgba(11, 17, 32, 0.92);
       -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
       border-top: 1px solid rgba(255,255,255,0.1);

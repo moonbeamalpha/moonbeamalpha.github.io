@@ -12,10 +12,11 @@
       --amh-gold:   #FFB900;
       --amh-accent:   var(--amh-cyan);
       --amh-accent-2: var(--amh-blue);
-      --amh-bg:     #050810;
-      --amh-card:   #111827;
-      --amh-text:   #F0F0F0;
-      --amh-muted:  #8B95A5;
+      --amh-bg:     #0B1120;
+      --amh-card:   #141C2E;
+      --amh-text:   #DDE3EB;
+      --amh-body:   #C8D0DB;
+      --amh-muted:  #9CA7B7;
       --amh-border: rgba(255,255,255,0.08);
       position: relative;
       isolation: isolate;
@@ -96,7 +97,7 @@
     .am-cert-hero__eyebrow-code { color: var(--amh-accent); letter-spacing: 0.12em; }
     .am-cert-hero__lead {
       font-family: 'Outfit', system-ui, sans-serif;
-      font-weight: 700;
+      font-weight: var(--weight-display, 700);
       font-size: clamp(28px, 4.4vw, 44px);
       line-height: 1.08;
       letter-spacing: -0.02em;
@@ -115,7 +116,7 @@
       font-weight: 400;
       font-size: clamp(15px, 1.4vw, 17px);
       line-height: 1.55;
-      color: var(--amh-muted);
+      color: var(--amh-body);
       margin: 0;
     }
     .am-cert-hero__stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px; }
@@ -149,12 +150,12 @@
       color: #050810;
       background: linear-gradient(135deg, var(--amh-accent) 0%, color-mix(in srgb, var(--amh-accent-2) 75%, #fff) 100%);
       text-decoration: none;
-      box-shadow: 0 10px 24px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.4) inset;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.32), 0 0 0 1px rgba(80,230,255,0.4) inset;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .am-cert-hero__cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 32px rgba(43,136,216,0.45), 0 0 0 1px rgba(80,230,255,0.6) inset;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.38), 0 0 0 1px rgba(80,230,255,0.6) inset;
     }
     .am-cert-hero__cta-icon { flex-shrink: 0; }
     .am-cert-hero__small { font-size: 12px; color: var(--amh-muted); }
@@ -174,12 +175,12 @@
       align-items: center;
       gap: 10px;
       padding: 10px 18px;
-      background: rgba(17, 24, 39, 0.86);
+      background: rgba(20, 28, 46, 0.86);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(80,230,255,0.45);
       border-radius: 999px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 24px rgba(80,230,255,0.16);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
       animation: am-cert-hero-badge-float 5.4s ease-in-out infinite;
     }
     .am-cert-hero__badge-glyph { width: 22px; height: 22px; flex-shrink: 0; }
@@ -211,12 +212,12 @@
       flex-direction: column;
       gap: 2px;
       padding: 14px 20px;
-      background: rgba(17, 24, 39, 0.92);
+      background: rgba(20, 28, 46, 0.92);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border: 1px solid var(--amh-border);
       border-radius: 16px;
-      box-shadow: 0 14px 36px rgba(0,0,0,0.55), 0 0 28px rgba(80,230,255,0.12);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.55);
       animation: am-cert-hero-pill-float 6.2s ease-in-out infinite;
       animation-delay: -2.1s;
     }
@@ -241,7 +242,7 @@
       position: relative;
       transform-style: preserve-3d;
       transform: perspective(1400px) rotateY(-12deg) rotateX(-3deg);
-      filter: drop-shadow(0 50px 70px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(80,230,255,0.10));
+      filter: drop-shadow(0 50px 70px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(80,230,255,0.05));
       animation: am-cert-hero-float 6s ease-in-out infinite;
     }
     .am-cert-hero__phone-frame {
@@ -310,7 +311,7 @@
     .am-cert-hero__qr { display: none; }
     @media (min-width: 900px) and (pointer: fine) {
       .am-cert-hero__qr { display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; }
-      .am-cert-hero__qr img { border-radius: 10px; background: #fff; padding: 4px; }
+      .am-cert-hero__qr img { border-radius: 10px; background: #fff; padding: 4px; filter: brightness(0.86); }
       .am-cert-hero__qr span:last-child { font-size: 12px; line-height: 1.4; color: var(--text-secondary, #9AA3B5); }
     }
     /* Per-exam code chip masking the baked-in "AZ-104 · 30 days left" pill in the

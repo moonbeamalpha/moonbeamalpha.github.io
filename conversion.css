@@ -2,13 +2,19 @@
 .conversion-section { max-width: 1120px; margin: 0 auto; padding: 64px 24px; scroll-margin-top: 88px; }
 .conversion-heading { max-width: 720px; margin-bottom: 28px; }
 .conversion-heading h2 { margin: 8px 0 12px; }
-.conversion-heading > p:last-child, .conversion-section p, .access-card li { color: var(--text-secondary); }
+.conversion-heading > p:last-child, .conversion-section p:where(:not([class])), .access-card li { color: var(--text-body); }
+/* Classed paragraphs (eyebrows, captions, notes, hints) and the class-less footnotes keep the
+   supporting grey. :where() holds both rules at the specificity of the single rule they replace,
+   so every component rule still wins or loses exactly as before. */
+.conversion-section p:where([class]), .study-tools__footer p, .access-card ul ~ p { color: var(--text-secondary); }
+/* Running copy at 16px. Plain paragraphs only: classed notes and proof lines keep their own sizes. */
+.conversion-heading > p:last-child:not([class]), .study-step__copy p:not([class]), .practice-preview__aside > p:not([class]), .aura-preview p:not([class]), .conversion-devices p:not([class]), .access-card li { font-size: 16px; }
 .conversion-section h3 { font: 650 25px/1.25 'Outfit', sans-serif; margin: 14px 0; color: var(--text-primary); }
-.conversion-section a:not(.btn-primary):not(.badge-ask-aura):not(.exam-finder__card), .conversion-terms a, .conversion-proof a { color: var(--azure-cyan); text-underline-offset: 3px; }
+.conversion-section a:not(.btn-primary):not(.badge-ask-aura):not(.exam-finder__card), .conversion-terms a, .conversion-proof a { color: var(--accent-text); text-underline-offset: 3px; }
 .conversion-terms { font-size: 13px; line-height: 1.65; margin: 12px 0 0; color: var(--text-secondary); }
 .conversion-proof { font-size: 13px; line-height: 1.7; color: var(--text-secondary); margin-top: 16px; }
 .conversion-proof--wide { padding-top: 24px; border-top: 1px solid var(--border-subtle); }
-.conversion-try { color: var(--azure-cyan); font-weight: 650; text-underline-offset: 3px; }
+.conversion-try { color: var(--accent-text); font-weight: 650; text-underline-offset: 3px; }
 .conversion-browse { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 20px; }
 .conversion-section summary, .exam-reference summary, .roadmap-map summary { cursor: pointer; padding: 14px 0; font-weight: 600; color: var(--text-primary); }
 .site-nav:has(.nav-inner) { position: sticky; height: auto; min-height: 64px; padding-block: 9px; }
@@ -26,7 +32,7 @@
 .hero-badges { margin-top: 18px; gap: 16px; }
 .hero-visual { display: block; margin: 0; min-width: 0; text-align: center; }
 .hero-visual figcaption { font-size: 13px; line-height: 1.65; color: var(--text-secondary); margin-top: 12px; }
-.hero-visual figcaption a { color: var(--azure-cyan); }
+.hero-visual figcaption a { color: var(--accent-text); }
 .hero-devices { padding: 0; transform: none; margin: 0; }
 .hero-devices .phone-wrap { transform: none; filter: none; }
 .hero-devices .phone-wrap::before { display: none; }
@@ -133,7 +139,7 @@ html[data-theme="light"] .exam-hub-card[data-exam-tone="security"] { --exam-ink:
 @media (max-width: 899px) { [data-exam-section] .guide-grid, #fam-retired .guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 539px) { [data-exam-section] .guide-grid, #fam-retired .guide-grid { grid-template-columns: minmax(0, 1fr); } .exam-hub-card { padding: 24px 22px 20px; } }
 @media (prefers-reduced-motion: reduce) { .exam-hub-card { transition: none; } .exam-hub-card:hover { transform: none; } }
-.exam-finder__code { display: flex; justify-content: space-between; gap: 12px; color: var(--azure-cyan); font: 650 17px/1.4 'Outfit', sans-serif; }
+.exam-finder__code { display: flex; justify-content: space-between; gap: 12px; color: var(--accent-text); font: 650 17px/1.4 'Outfit', sans-serif; }
 .exam-finder__title { font: 550 18px/1.35 'Outfit', sans-serif; }
 .exam-finder__meta { margin-top: auto; font: 400 12px/1.6 'DM Sans', sans-serif; color: var(--text-secondary); }
 .exam-finder__more { margin-top: 8px; }
@@ -144,9 +150,9 @@ html[data-theme="light"] .exam-hub-card[data-exam-tone="security"] { --exam-ink:
 .practice-preview { display: grid; grid-template-columns: 1.3fr .7fr; gap: 32px; align-items: start; }
 .practice-preview .qt { padding: 28px; background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 20px; box-shadow: none; }
 .practice-preview__topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--border-subtle); margin-bottom: 20px; }
-.practice-preview__code { margin: 0; padding: 5px 10px; border: 1px solid var(--border-accent); border-radius: 7px; background: rgba(80,230,255,.07); font: 600 13px/1.5 'Outfit', sans-serif; color: var(--azure-cyan) !important; }
+.practice-preview__code { margin: 0; padding: 5px 10px; border: 1px solid var(--border-accent); border-radius: 7px; background: rgba(80,230,255,.07); font: 600 13px/1.5 'Outfit', sans-serif; color: var(--accent-text) !important; }
 .practice-preview__sample { color: var(--text-muted); font: 500 12px/1.4 'DM Sans', sans-serif; }
-.practice-preview__topic { margin: 0 0 10px; color: var(--azure-cyan) !important; font: 600 12px/1.5 'Outfit', sans-serif; }
+.practice-preview__topic { margin: 0 0 10px; color: var(--accent-text) !important; font: 600 12px/1.5 'Outfit', sans-serif; }
 .practice-preview__topic span { color: var(--text-secondary); font-weight: 400; }
 .practice-preview .qt__viz, html[data-theme="light"] .practice-preview .qt__viz { margin: 0; padding: 0; background: transparent; border: 0; box-shadow: none; min-height: 0; }
 .practice-preview .qt__viz-q { margin: 0 0 22px; font: 500 clamp(19px, 2vw, 23px)/1.45 'DM Sans', sans-serif; letter-spacing: -.015em; }
@@ -174,7 +180,7 @@ html[data-theme="light"] .exam-hub-card[data-exam-tone="security"] { --exam-ink:
 .qt__viz-options .is-wrong .qt__option-state { color: var(--error-red); }
 .practice-preview .qt__viz-options .is-correct, html[data-theme="light"] .practice-preview .qt__viz-options .is-correct { border-color: var(--success-green); background: rgba(16,185,129,.05); }
 .practice-preview .qt__viz-options .is-wrong, html[data-theme="light"] .practice-preview .qt__viz-options .is-wrong { border-color: var(--error-red); background: rgba(244,63,94,.04); }
-.qt__rationale { width: 100%; padding: 2px 14px 14px; font-size: 13px; line-height: 1.65; color: var(--text-secondary); }
+.qt__rationale { width: 100%; padding: 2px 14px 14px; font-size: 13px; line-height: 1.65; color: var(--text-body); }
 .qt__rationale[hidden] { display: none; }
 .qt__quiz-hint, .qt__quiz-note { display: block; margin: 14px 0; font-size: 13px; line-height: 1.6; }
 .qt__quiz-hint { color: var(--text-secondary); }
@@ -183,9 +189,9 @@ html[data-theme="light"] .exam-hub-card[data-exam-tone="security"] { --exam-ink:
 .qt__quiz-note:empty { display: none; }
 .qt__quiz-note.is-right { color: var(--success-green) !important; }
 .qt__explanation h4, .qt__other-rationales h4 { margin: 16px 0 6px; color: var(--text-primary); font: 600 14px/1.4 Outfit, sans-serif; }
-.qt__explanation p, .qt__other-rationales p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+.qt__explanation p, .qt__other-rationales p { margin: 0; color: var(--text-body); font-size: 14px; line-height: 1.7; }
 .qt__other-rationales { margin-top: 16px; }
-.qt__other-rationales summary { min-height: 44px; display: list-item; padding: 12px 0; cursor: pointer; color: var(--azure-cyan); font-size: 13px; }
+.qt__other-rationales summary { min-height: 44px; display: list-item; padding: 12px 0; cursor: pointer; color: var(--accent-text); font-size: 13px; }
 .qt__feedback-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 20px; }
 .qt__quiz-link { display: inline-flex; align-items: center; min-height: 44px; margin: 0; font-size: 13px; font-weight: 600; }
 .qt__reset { min-height: 44px; padding: 8px 14px; border: 1px solid var(--border-strong); border-radius: 999px; background: transparent; color: var(--text-secondary); cursor: pointer; font: 500 13px/1.4 'DM Sans', sans-serif; }
@@ -209,7 +215,7 @@ html[data-theme="light"] .exam-hub-card[data-exam-tone="security"] { --exam-ink:
 .access-grid, .feature-story-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .access-card, .feature-story-grid article { padding: 24px; border: 1px solid var(--border-strong); border-radius: 20px; background: var(--bg-card); }
 .access-card { display: flex; flex-direction: column; }
-.access-card__label { font: 650 14px/1.5 'Outfit', sans-serif; color: var(--azure-cyan); }
+.access-card__label { font: 650 14px/1.5 'Outfit', sans-serif; color: var(--accent-text); }
 .access-card--pro { border-color: var(--azure-blue); }
 .access-card ul { padding-left: 18px; margin: 0 0 20px; }
 .access-card li { padding: 5px 0; }
@@ -224,7 +230,7 @@ html[data-theme="light"] .exam-hub-card[data-exam-tone="security"] { --exam-ink:
 .video-overview__intro { margin-bottom: 24px; }
 .conversion-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 580px; margin: 0 auto; }
 .conversion-faq-more { margin-top: 12px; }
-.conversion-faq-more > summary { min-height: 44px; padding: 12px 16px; cursor: pointer; color: var(--azure-cyan); font-weight: 600; }
+.conversion-faq-more > summary { min-height: 44px; padding: 12px 16px; cursor: pointer; color: var(--accent-text); font-weight: 600; }
 .btn-primary:hover { transform: none; }
 .conversion-screen { width: 100%; aspect-ratio: 390/848; background-size: cover; background-position: top; border: 1px solid var(--border-strong); border-radius: 22px; }
 .conversion-screens figcaption { font-size: 13px; line-height: 1.5; color: var(--text-secondary); margin-top: 14px; }
@@ -337,7 +343,7 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
 .study-tool__top svg { width: 28px; height: 28px; flex: none; color: var(--azure-cyan); }
 .study-tool__pro { padding: 3px 9px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--text-secondary); font: 600 12px/1.5 'DM Sans', sans-serif; }
 .study-tool h3 { margin: 14px 0 9px; font-size: 21px; }
-.study-tool p { margin: 0; font-size: 15px; line-height: 1.7; }
+.study-tool p { margin: 0; font-size: 16px; line-height: 1.7; }
 .study-tool a, .study-tools__footer a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; text-underline-offset: 3px; }
 .study-tool a { margin-top: 8px; }
 .study-tools__footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin-top: 20px; }
@@ -378,7 +384,7 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
 .access-comparison caption { text-align: left; padding: 12px 0 20px; color: var(--text-secondary); }
 .access-comparison th, .access-comparison td { padding: 14px; border-bottom: 1px solid var(--border-strong); vertical-align: top; }
 .access-comparison th { color: var(--text-primary); }
-.access-comparison td { color: var(--text-secondary); }
+.access-comparison td { color: var(--text-body); }
 .conversion-terms, .conversion-proof, .hero-visual figcaption { font-size: 14px; }
 .conversion-browse a, .conversion-proof a, .study-step__copy a, .practice-source a, .feature-story-grid a { display: inline-flex; align-items: center; min-height: 44px; }
 .study-step__image:focus-visible, .aura-preview figure a:focus-visible, .access-comparison-scroll:focus-visible { outline: 3px solid var(--azure-cyan); outline-offset: 4px; }
@@ -414,9 +420,9 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
 .hero-exams__label { margin: 0 0 8px; font: 600 14px/1.4 'Outfit', sans-serif; color: var(--text-primary); }
 .hero-exams__list { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .hero-exams__list a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-card); color: var(--text-primary); font: 600 14px/1 'Outfit', sans-serif; text-decoration: none; transition: border-color .2s, color .2s; }
-.hero-exams__list a:hover { border-color: var(--azure-cyan); color: var(--azure-cyan); }
+.hero-exams__list a:hover { border-color: var(--azure-cyan); color: var(--accent-text); }
 .hero-exams__list a:focus-visible { outline: 3px solid var(--azure-cyan); outline-offset: 2px; }
-.hero-exams__list .hero-exams__all { border-color: transparent; background: none; color: var(--azure-cyan); padding-inline: 6px; }
+.hero-exams__list .hero-exams__all { border-color: transparent; background: none; color: var(--accent-text); padding-inline: 6px; }
 /* The study tools are always open now: the old summary row becomes a plain heading. */
 .study-tools__header { padding: 22px 24px; }
 .study-tools__header h3 { margin: 0; }

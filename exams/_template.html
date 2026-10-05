@@ -103,7 +103,7 @@
   <meta name="apple-itunes-app" content="app-id=6760594569, app-argument=azuremastery://exam/{{CERT_CODE_LOWER}}, affiliate-data=pt=128558698&amp;ct=exam-{{CERT_CODE_LOWER}}-banner&amp;mt=8">
 
   <!-- Theme + favicons (consistent with /apps/AzureMastery/) -->
-  <meta name="theme-color" content="#050810">
+  <meta name="theme-color" content="#0B1120">
   <meta name="color-scheme" content="dark">
   <script>(function(){try{if(localStorage.getItem('am-theme')==='light'){var d=document;d.documentElement.setAttribute('data-theme','light');var c=d.querySelector('meta[name="color-scheme"]'),t=d.querySelector('meta[name="theme-color"]');if(c)c.content='light';if(t)t.content='#F7FAFF';}}catch(e){}})()</script>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -328,7 +328,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/exams/hero.css?v=5a2798d0bd77">
+  <link rel="stylesheet" href="/exams/hero.css?v=4796a965e64b">
   <style>
     /* ==============================================================
        AZURE MASTERY — CERT PAGE TOKENS + TYPOGRAPHY
@@ -344,15 +344,21 @@
       --success-green:   #20C020;
       --warning-orange:  #F7630C;
 
-      --bg-app:          #050810;
-      --bg-deep:         #0A0E1A;
-      --bg-card:         #111827;
-      --bg-elevated:     #182033;
+      --bg-app:          #0B1120;
+      --bg-deep:         #0E1526;
+      --bg-card:         #141C2E;
+      --bg-elevated:     #1A2338;
       --bg-soft-blue:    #10233D;
 
-      --text-primary:    #F0F0F0;
-      --text-secondary:  #8B95A5;
-      --text-muted:      #808A96;
+      --text-primary:    #DDE3EB;
+      --text-secondary:  #9CA7B7;
+      --text-muted:      #8C97A8;
+      /* Running copy; --text-secondary is for captions, hints and labels. */
+      --text-body:       #C8D0DB;
+      /* Cyan for small text; --azure-cyan stays vivid for icons and buttons. */
+      --accent-text:     #86D6EC;
+      /* Large headings are semibold in dark mode; theme-light.css restores 700. */
+      --weight-display:  600;
 
       --border-subtle:   rgba(255,255,255,0.06);
       --border-strong:   rgba(255,255,255,0.12);
@@ -391,12 +397,12 @@
     }
 
     /* Typography classes (homepage parity) */
-    .display-large  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
-    .display-small  { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
+    .display-large  { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.025em; }
+    .display-small  { font-family: 'Outfit', sans-serif; font-weight: var(--weight-display, 700); font-size: clamp(22px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.015em; }
     .heading-medium { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 22px); line-height: 1.3; }
     .heading-small  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.4; }
     .body-large     { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; }
-    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-cyan); }
+    .label-eyebrow  { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); }
     .headline-accent {
       background: var(--gradient-cyan-blue);
       -webkit-background-clip: text;
@@ -414,7 +420,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 24px;
-      background: rgba(5, 8, 16, 0.86);
+      background: rgba(11, 17, 32, 0.86);
       -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
@@ -469,7 +475,7 @@
         z-index: 40;
         width: 152px;
         padding: 16px 10px;
-        background: rgba(5, 8, 16, 0.55);
+        background: rgba(11, 17, 32, 0.55);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         border: 1px solid var(--border-subtle);
@@ -483,7 +489,7 @@
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--azure-cyan);
+        color: var(--accent-text);
       }
       .page-toc__list { list-style: none; margin: 0; padding: 0; }
       .page-toc__item { margin: 0; }
@@ -504,7 +510,7 @@
         text-decoration: none;
       }
       .page-toc__link[aria-current="true"] {
-        color: var(--azure-cyan);
+        color: var(--accent-text);
         border-left-color: var(--azure-cyan);
         background: rgba(80, 230, 255, 0.08);
       }
@@ -517,15 +523,18 @@
     .section-title { margin: 0 0 24px; color: var(--text-primary); }
     .section-lede {
       margin: 0 0 28px;
-      color: var(--text-secondary);
+      color: var(--text-body);
       font-size: clamp(16px, 1.5vw, 18px);
       line-height: 1.65;
       max-width: 64ch;
     }
-    section p { color: var(--text-secondary); max-width: 64ch; }
+    section p { color: var(--text-body); max-width: 64ch; }
     section p strong { color: var(--text-primary); font-weight: 600; }
-    section a { color: var(--azure-cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    section a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
     section a:hover { text-decoration-thickness: 2px; }
+    /* Prose lists (class-less) read in --text-body instead of inheriting the heading colour.
+       Zero specificity so any component rule wins; theme-light.css restores inheritance. */
+    :where(main ul:not([class]), main ol:not([class])) { color: var(--text-body); }
 
     /* Page-level H1 — sits below the hero, sets the SEO target */
     .page-h1 {
@@ -606,7 +615,7 @@
       font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       background: rgba(80,230,255,0.10);
       padding: 4px 10px;
       border-radius: 999px;
@@ -640,7 +649,7 @@
       font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       margin-bottom: 8px;
     }
     .study-plan > li[data-period-label]::before {
@@ -653,7 +662,7 @@
       font-weight: 600;
       font-size: 17px;
     }
-    .study-plan ul { margin: 0; padding-left: 20px; color: var(--text-secondary); }
+    .study-plan ul { margin: 0; padding-left: 20px; color: var(--text-body); }
     .study-plan li li { margin-bottom: 4px; }
 
     /* FAQ items */
@@ -702,7 +711,7 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 18px;
-      color: var(--azure-cyan);
+      color: var(--accent-text);
       letter-spacing: 0.04em;
     }
     .related-card__name {
@@ -727,7 +736,7 @@
         radial-gradient(ellipse 40% 30% at 50% 100%, rgba(149,120,224,0.10) 0%, transparent 65%);
     }
     .cta-final h2 { margin: 0 0 14px; color: var(--text-primary); }
-    .cta-final p { margin: 0 auto 28px; max-width: 56ch; color: var(--text-secondary); }
+    .cta-final p { margin: 0 auto 28px; max-width: 56ch; color: var(--text-body); }
     .cta-button {
       display: inline-flex;
       align-items: center;
@@ -765,21 +774,21 @@
       font-size: 13px;
     }
     .site-footer a { color: var(--text-secondary); text-decoration: none; margin: 0 8px; }
-    .site-footer a:hover { color: var(--azure-cyan); }
+    .site-footer a:hover { color: var(--accent-text); }
 
     /* Hero styles: /exams/hero.css — per-page family accent only */
     .am-cert-hero { --amh-accent: #50E6FF; --amh-accent-2: #2B88D8; }
   </style>
-  <link rel="stylesheet" href="/theme-light.css?v=f39ed97d50a6">
-  <link rel="stylesheet" href="/exams/exam-visuals.css?v=bb3139af0140">
-  <link rel="stylesheet" href="/social-follow.css?v=5133417c62d7">
-  <link rel="stylesheet" href="/section-nav.css?v=6c724b8db9b0">
+  <link rel="stylesheet" href="/theme-light.css?v=79d0b7ad9512">
+  <link rel="stylesheet" href="/exams/exam-visuals.css?v=0b25ea828a3a">
+  <link rel="stylesheet" href="/social-follow.css?v=1eb2212bb94b">
+  <link rel="stylesheet" href="/section-nav.css?v=00d690856755">
 <!-- search-assets:start -->
-<link rel="stylesheet" href="/search.css?v=b1e778e29e2c">
+<link rel="stylesheet" href="/search.css?v=54f0851d7812">
 <script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=ff0ac8ded870" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
-<link rel="stylesheet" href="/conversion.css?v=93afb9ca4c97">
+<link rel="stylesheet" href="/conversion.css?v=8b5738c39693">
 <script src="/conversion.js?v=435d272a3d41" defer></script>
 <script src="/practice.js?v=6d25935e6cd3" defer></script>
 <script src="/app-store-links.js?v=22d2db6ebc11" defer></script>
@@ -1268,7 +1277,7 @@
     <a class="mobile-cta-bar__btn" href="https://apps.apple.com/app/id6760594569?ct=exam-{{CERT_CODE_LOWER}}-sticky&amp;pt=128558698&amp;mt=8" rel="noopener noreferrer">Download</a>
   </div>
   <script src="/exams/exam.js?v=4c7e4388bbaf" defer></script>
-  <script src="/theme.js?v=3963b4057e20" defer></script>
+  <script src="/theme.js?v=ab7b4b8ef165" defer></script>
   <script src="/section-nav.js?v=2e690ae4471f" defer></script>
 <!-- search-dialog:start -->
 <dialog class="am-search-dialog" id="am-search-dialog" aria-labelledby="am-search-title">

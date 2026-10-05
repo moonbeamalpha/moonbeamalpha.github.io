@@ -127,7 +127,7 @@
 }
 
 .domain__inventory .domain__count {
-  color: var(--azure-cyan);
+  color: var(--accent-text);
   font-weight: 700;
 }
 
@@ -198,7 +198,7 @@
 .domain__body ul {
   margin: 0 0 12px;
   padding-left: 20px;
-  color: var(--text-secondary);
+  color: var(--text-body);
   font-size: 14px;
   line-height: 1.7;
 }
@@ -240,7 +240,7 @@
 
 .trap p {
   margin: 0;
-  color: var(--text-secondary);
+  color: var(--text-body);
   font-size: 14px;
   line-height: 1.7;
 }
@@ -280,7 +280,7 @@
   position: absolute;
   top: 18px;
   left: 22px;
-  color: var(--azure-cyan);
+  color: var(--accent-text);
   font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -308,7 +308,7 @@
 #how-helps.exam-feature-grid > .exam-benefit ul {
   margin: 0;
   padding-left: 19px;
-  color: var(--text-secondary);
+  color: var(--text-body);
 }
 
 #how-helps.exam-feature-grid > .exam-benefit li + li {
@@ -655,7 +655,7 @@ html[data-theme="light"] .faq {
     radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.13), transparent 42%),
     rgba(var(--path-rail-accent), 0.09);
   box-shadow: 0 0 18px rgba(var(--path-rail-accent), 0.10);
-  color: var(--azure-cyan);
+  color: var(--accent-text);
   font-size: 10px;
   line-height: 1;
 }
@@ -1295,7 +1295,7 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   justify-content: space-between;
   gap: 12px;
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-  background: rgba(7, 11, 22, 0.92);
+  background: rgba(11, 17, 32, 0.92);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -1369,7 +1369,7 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   border: 1px solid var(--border-accent, rgba(80,230,255,0.30));
   border-radius: 999px;
   background: color-mix(in srgb, var(--azure-cyan) 8%, transparent);
-  color: var(--azure-cyan);
+  color: var(--accent-text);
   font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -1417,7 +1417,7 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
    appended by exams/exam.js inside grade()'s .qt__quiz-note) ── */
 .qt__quiz-link {
   margin-left: 6px;
-  color: var(--amh-accent, var(--azure-cyan));
+  color: var(--amh-accent, var(--accent-text));
   font-weight: 600;
   text-decoration: none;
 }
@@ -1451,7 +1451,7 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   margin-bottom: 0;
 }
 .study-plan > li > ul > li::marker {
-  color: var(--azure-cyan);
+  color: var(--accent-text);
 }
 .study-plan > li > ul > li > strong:first-child {
   display: block;
@@ -1485,6 +1485,6 @@ html[data-theme="light"] .is-wrong .qt__viz-checkbox::after {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--azure-cyan, #22d3ee);
+  color: var(--accent-text, #86d6ec);
 }
-#objectives .domain__tips li { color: var(--text-primary, #e6edf3); }
+#objectives .domain__tips li { color: var(--text-body, #c8d0db); }

@@ -33,6 +33,11 @@ html[data-theme="light"] {
   --text-primary:    #10233F;
   --text-secondary:  #405A74;
   --text-muted:      #536B83;
+  /* Roles added for the dark palette resolve to light's existing inks, so
+     light mode renders exactly as before. */
+  --text-body:       var(--text-secondary);
+  --accent-text:     var(--azure-cyan);
+  --weight-display:  700;
 
   --border-subtle:   rgba(13,30,55,0.09);
   --border-strong:   rgba(13,30,55,0.18);
@@ -57,6 +62,7 @@ html[data-theme="light"] .am-cert-hero {
   --amh-card:   #FFFFFF;
   --amh-text:   #10233F;
   --amh-muted:  #405A74;
+  --amh-body:   var(--amh-muted);
   --amh-border: rgba(13,30,55,0.12);
   /* The light hero uses one cohesive Azure-blue ink. Retaining the dark
      theme's per-exam amber and orange here produced muddy brown text. */
@@ -403,7 +409,17 @@ html[data-theme="light"] .cert-path__chip { background: rgba(13,30,55,0.04); }
 html[data-theme="light"] a.cert-path__chip:hover { background: rgba(0,103,197,0.07); border-color: rgba(0,103,197,0.35); }
 html[data-theme="light"] .related-card:hover { background: rgba(0,103,197,0.05); border-color: rgba(0,103,197,0.30); }
 
-/* ── 5. Theme toggle button (both themes — lives here as theme infra) ── */
+/* ── 5. Dark-palette reading roles: light mode keeps its original treatment ── */
+/* Dark mode gives class-less prose lists --text-body (a zero-specificity rule
+   in each page stylesheet); here they go back to inheriting their container. */
+:where(html[data-theme="light"] main ul:not([class]), html[data-theme="light"] main ol:not([class])) { color: inherit; }
+html[data-theme="light"] #objectives .domain__tips li { color: var(--text-primary); }
+/* The dark theme dims the white QR tiles; on a light page they stay white. */
+html[data-theme="light"] .hero-qr img,
+html[data-theme="light"] .am-cert-hero__qr img,
+html[data-theme="light"] .aura-handoff img { filter: none; }
+
+/* ── 6. Theme toggle button (both themes — lives here as theme infra) ── */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -415,12 +431,12 @@ html[data-theme="light"] .related-card:hover { background: rgba(0,103,197,0.05);
   background: transparent;
   border: 1px solid var(--border-strong, rgba(255,255,255,0.12));
   border-radius: 999px;
-  color: var(--text-secondary, #8B95A5);
+  color: var(--text-secondary, #9CA7B7);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .theme-toggle:hover {
-  color: var(--text-primary, #F0F0F0);
+  color: var(--text-primary, #DDE3EB);
   border-color: var(--border-accent, rgba(80,230,255,0.25));
   background: rgba(128,160,200,0.10);
 }

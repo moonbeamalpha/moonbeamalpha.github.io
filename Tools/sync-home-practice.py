@@ -8,8 +8,10 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SELECTION = {"AZ-900": ("az900-q001", "az900-q054", "az900-q124"),
-             "AZ-104": ("q002", "q013", "q045")}
+# AZ-104 leads: its questions reward reasoning, so the sample shows real exam
+# difficulty. The first exam listed is the one the page opens on.
+SELECTION = {"AZ-104": ("q136", "q013", "q045"),
+             "AZ-900": ("az900-q001", "az900-q054", "az900-q124")}
 
 
 def render(app_repo):

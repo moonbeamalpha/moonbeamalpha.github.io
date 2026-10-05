@@ -28,6 +28,14 @@
     setActive(topSec ? map.get(topSec) : null);
   }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
   map.forEach(function (_, sec) { io.observe(sec); });
+  // Keep the rail clear of the hero; CSS only hides it where the two overlap.
+  var toc = document.querySelector('.page-toc');
+  var hero = document.querySelector('.am-cert-hero');
+  if (toc && hero) {
+    new IntersectionObserver(function (entries) {
+      toc.classList.toggle('page-toc--over-hero', entries[0].isIntersecting);
+    }, { rootMargin: '-64px 0px 0px 0px', threshold: 0 }).observe(hero);
+  }
 })();
 
 // Reorder samples — the authored list is the answer key. JavaScript rotates

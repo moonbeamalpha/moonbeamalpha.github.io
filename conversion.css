@@ -407,3 +407,49 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
   .exam-finder__meta, .hero-visual figcaption { font-size: 13px; }
   .hero-badges { font-size: 13px; line-height: 1.5; }
 }
+
+/* ── Homepage conversion pass (October 2026) ── */
+/* Hero exam picker: jump straight to the exam a visitor came for. */
+.hero-exams { margin-top: 22px; }
+.hero-exams__label { margin: 0 0 8px; font: 600 14px/1.4 'Outfit', sans-serif; color: var(--text-primary); }
+.hero-exams__list { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.hero-exams__list a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-card); color: var(--text-primary); font: 600 14px/1 'Outfit', sans-serif; text-decoration: none; transition: border-color .2s, color .2s; }
+.hero-exams__list a:hover { border-color: var(--azure-cyan); color: var(--azure-cyan); }
+.hero-exams__list a:focus-visible { outline: 3px solid var(--azure-cyan); outline-offset: 2px; }
+.hero-exams__list .hero-exams__all { border-color: transparent; background: none; color: var(--azure-cyan); padding-inline: 6px; }
+/* The study tools are always open now: the old summary row becomes a plain heading. */
+.study-tools__header { padding: 22px 24px; }
+.study-tools__header h3 { margin: 0; }
+.access-details__title { margin: 24px 0 0; font: 600 18px/1.4 'Outfit', sans-serif; color: var(--text-primary); }
+.access-price strong { font-weight: inherit; }
+.access-price b { font-weight: 600; color: var(--text-primary); }
+.qt__sample-score { margin: 0 0 6px; font: 650 20px/1.3 'Outfit', sans-serif; color: var(--text-primary); }
+.qt__sample-complete p:last-child { margin: 0; }
+@media (max-width: 768px) {
+  /* One brand mark per screen: the nav already shows it. */
+  .hero-brand { display: none; }
+  .hero-exams__list { justify-content: center; }
+  .hero-exams__label { text-align: center; }
+  .study-tools__header { padding: 20px; }
+}
+@media (max-width: 480px) {
+  /* Keep the header on one row; the hero button and the sticky bar carry the download action. */
+  .nav-links li:has(> .btn-nav-cta) { display: none; }
+}
+@media (max-width: 600px) {
+  /* Every exam is listed now, so phones get a denser two-column grid. */
+  .exam-finder__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .exam-finder__grid .exam-finder__card { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; }
+  .exam-finder__card .certification-badge, .exam-finder__card .exam-finder__meta { display: none; }
+  .exam-finder__grid .exam-finder__code { min-height: 0; }
+  .exam-finder__title { font-size: 14px; line-height: 1.3; }
+}
+@media (max-width: 350px) {
+  .exam-finder__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  /* Six always-open tool cards would stack ~1,900px tall; swipe through them instead. */
+  .study-tools__grid { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .study-tools__grid > .study-tool { flex: 0 0 82%; scroll-snap-align: start; }
+}
+.study-tools__grid:focus-visible { outline: 3px solid var(--azure-cyan); outline-offset: 4px; }

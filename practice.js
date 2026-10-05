@@ -9,7 +9,9 @@
     var status = flow.querySelector('[data-practice-progress]');
     var restart = flow.querySelector('[data-practice-restart]');
     if (!cards.length || !controls || !status || !restart) return;
-    var selection = 'AZ-900', positions = {}, answered = new Set();
+    // The first exam button is the default, so the authored order decides where the sample starts.
+    var first = controls.querySelector('[data-practice-select]');
+    var selection = first ? first.dataset.practiceSelect : cards[0].dataset.practiceExam, positions = {}, answered = new Set(), results = new Map();
     function selectedCards() { return cards.filter(function (card) { return card.dataset.practiceExam === selection; }); }
     function update(focus) {
       var sample = selectedCards(), position = positions[selection] || 0;
@@ -34,8 +36,14 @@
     controls.hidden = status.hidden = restart.hidden = false;
     cards.forEach(function (card) {
       flows.set(card.querySelector('[data-quiz]'), {
-        grade: function () { answered.add(card); update(false); },
-        reset: function () { answered.delete(card); update(false); },
+        grade: function (right) { answered.add(card); results.set(card, right); update(false); },
+        reset: function () { answered.delete(card); results.delete(card); update(false); },
+        summary: function () {
+          var sample = cards.filter(function (other) { return other.dataset.practiceExam === card.dataset.practiceExam; });
+          var graded = sample.filter(function (other) { return results.has(other); });
+          return { total: sample.length, answered: graded.length,
+            correct: graded.filter(function (other) { return results.get(other); }).length };
+        },
         next: function () { positions[selection] = (positions[selection] || 0) + 1; update(true); },
         isLast: Number(card.dataset.practicePosition) === cards.filter(function (other) { return other.dataset.practiceExam === card.dataset.practiceExam; }).length
       });
@@ -145,13 +153,20 @@
         var next = document.createElement('button'); next.type = 'button'; next.className = 'qt__next'; next.textContent = 'Next question';
         next.addEventListener('click', flow.next); actions.append(next);
       }
+      if (flow) flow.grade(right);
       if (flow && flow.isLast) {
-        var finish = document.createElement('p'); finish.className = 'qt__sample-complete';
-        finish.textContent = 'That’s the end of this sample. Keep going with 50+ free questions per exam in the app.';
+        var finish = document.createElement('div'); finish.className = 'qt__sample-complete';
+        var score = flow.summary();
+        var headline = document.createElement('p'); headline.className = 'qt__sample-score';
+        headline.textContent = score.answered === score.total
+          ? 'You got ' + score.correct + ' of ' + score.total + ' right.'
+          : 'That’s the end of this sample.';
+        var next = document.createElement('p');
+        next.textContent = 'In the app, every answer feeds your predicted score, and your next session goes straight to the topics you missed. Start with 50+ free questions per exam.';
+        finish.append(headline, next);
         feedback.appendChild(finish);
       }
       actions.append(link, reset); feedback.appendChild(actions);
-      if (flow) flow.grade();
       if (wasChecking) options.find(function (option) { return picked.has(option); }).querySelector('button').focus({ preventScroll: true });
     }
     check.addEventListener('click', grade);

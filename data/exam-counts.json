@@ -106,10 +106,10 @@
       "az104-storage": 104
     },
     "AZ-305": {
-      "az305-continuity": 83,
+      "az305-continuity": 85,
       "az305-identity": 117,
       "az305-infra": 156,
-      "az305-storage": 103
+      "az305-storage": 101
     },
     "AZ-400": {
       "az400-monitoring": 45,

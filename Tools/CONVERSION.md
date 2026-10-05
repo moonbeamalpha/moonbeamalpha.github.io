@@ -2,6 +2,13 @@
 
 The homepage follows a shorter decision path: understand the app through three real study screens, find an exam,
 try three authored questions, compare access options, then download.
+The hero carries a catalogue-derived exam picker (`conversion-hero-exams`, the
+`FEATURED` current exams plus "All exams") so a visitor can jump straight to
+their exam page. Main copy leads with outcomes and keeps caveats to the FAQ,
+the linked explainer pages and the footer. Study tools, every current exam card,
+the access comparison and the Ask Aura video poster are visible without a click;
+only the FAQ and the desktop roadmap stay collapsed. On phones the study tools
+become a horizontal swipe row and exam cards a compact two-column grid.
 The roadmap is an optional desktop view. Catalogue-derived cards supply exam
 titles, levels and subject areas. The homepage promotes current exams only;
 retired reference pages remain in the exam hub's separate disclosure and retain
@@ -74,7 +81,9 @@ python3 Tools/check-conversion-ui.py
 `sync-home-practice.py --app-repo <path>` owns the six homepage samples and
 `data/home-practice.json`; every option rationale and the complete prompt are
 retained, with a no-JavaScript answer disclosure. Switching exams preserves
-local progress; Restart clears only that exam.
+local progress; Restart clears only that exam. The first exam in `SELECTION`
+(AZ-104) is the default, and finishing a sample shows the local score with a
+short note on how the app uses it. Scores never leave the page.
 
 `optimise-marketing-seo.py --app-repo <path>` refreshes the practice samples from
 the app's authored banks. Selection requires an independent scenario and written
@@ -85,11 +94,15 @@ answers stay in memory. No answer or search-query events are sent or saved.
 
 Pricing copy follows `EntitlementManager.swift`, `ExamStoreView.swift`,
 `PaywallView.swift` and reviewed Aura product help: free starter sets, one-time
-individual banks, and monthly/annual/lifetime Pro. UK reference prices, verified in App Store Connect on 1 October 2026, are
-£4.99 once for AZ-900/AZ-104 packs, £9.99 monthly Pro and £49.99 annual Pro.
-They are dated and qualified beside the cards; the app confirms the local price.
-Recheck these four products in App Store Connect before changing this copy.
-No lifetime price or universal pack price is inferred. The 50+ free allowance
+individual banks, and monthly/annual/lifetime Pro. Prices were read from App Store
+Connect on 5 October 2026 for both the USA and GBR territories: every exam pack
+4.99 once, Pro 9.99 monthly, 49.99 annual and 99.99 lifetime, identical numbers
+in both currencies. The cards render US dollars statically; `conversion.js` swaps
+to pounds when the browser's time zone is Europe/London or its language ends in
+-GB (`data-price-usd` / `data-price-gbp`). The annual card's "about 4.17 a month"
+and "58% less than paying monthly" are derived from those prices. Other
+storefronts see the US reference price with a note that the App Store shows their
+own. Recheck all products in both territories before changing any figure. The 50+ free allowance
 is checked against every marketing-eligible catalogue entry by `sync-home-practice.py`. Pro includes the full Exam IQ tools, Answer Coach, the simulator
 and Ask Aura preview; the preview does not enable generative explanations.
 

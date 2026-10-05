@@ -181,6 +181,12 @@
         background: rgba(80, 230, 255, 0.08);
       }
     }
+    /* Below 1600px the rail overlaps the hero's device image, so it waits
+       until the hero has scrolled away (exam.js toggles the class). */
+    @media (min-width: 1280px) and (max-width: 1599px) {
+      .page-toc { transition: opacity 0.2s ease, visibility 0.2s; }
+      .page-toc.page-toc--over-hero { opacity: 0; visibility: hidden; }
+    }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }

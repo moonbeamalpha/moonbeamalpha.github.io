@@ -1,4 +1,108 @@
 {
+  "AZ-104": [
+    {
+      "id": "q136",
+      "text": "A VM scale set is configured with a scale-out rule: when average CPU > 70% for 10 minutes, increase instance count by 20%. The current instance count is 5 and maximum is 10. Average CPU reaches 80% for 12 minutes. How many instances will be running after the scale-out action?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "optionRationales": {
+        "A": "Leaving the count at 5 would mean no scale-out happened, but the rule's condition (average CPU above 70% for 10 minutes) is satisfied at 80% over 12 minutes, so the engine does add capacity.",
+        "B": "A 20% increase on the current 5 instances equals 1 additional instance, and 5 + 1 = 6 stays under the configured maximum of 10, so autoscale provisions exactly 6 instances.",
+        "C": "Reaching 10 would require the percentage increase to exceed the maximum cap, but a 20% bump from 5 only yields 6, so the maximum of 10 is never approached by this single action.",
+        "D": "Arriving at 7 implies adding 2 instances, but 20% of 5 rounds to a single instance, so the engine adds 1 rather than 2."
+      },
+      "explanation": "The scale-out rule increases the instance count by 20%. 20% of 5 instances = 1 additional instance. 5 + 1 = 6, which is within the configured maximum of 10. The autoscale engine calculates the new instance count as 6 and scales out to 6 instances. 10 would only apply if the increase were large enough to hit the maximum cap, which it is not in this case.",
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview",
+      "objectiveID": "az104-compute.create-and-configure-virtual-machines.07"
+    },
+    {
+      "id": "q013",
+      "text": "You need the lowest-cost storage redundancy option that copies critical data to a secondary Azure region for disaster recovery. Applications do not need to read from the secondary region unless a failover occurs. Which option should you choose?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Locally Redundant Storage (LRS)"
+        },
+        {
+          "id": "B",
+          "text": "Zone-Redundant Storage (ZRS)"
+        },
+        {
+          "id": "C",
+          "text": "Geo-Redundant Storage (GRS)"
+        },
+        {
+          "id": "D",
+          "text": "Read-Access Geo-Redundant Storage (RA-GRS)"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "optionRationales": {
+        "A": "LRS keeps copies within one datacenter and provides no secondary-region copy.",
+        "B": "ZRS spreads copies across availability zones in the primary region but does not copy data to a secondary region.",
+        "C": "GRS is the lowest-cost listed option that copies data to a secondary region when applications do not require direct secondary read access.",
+        "D": "RA-GRS uses the same geo-replication and adds a readable secondary endpoint, which costs more and is not required by this scenario."
+      },
+      "explanation": "GRS copies data synchronously within the primary region using LRS and asynchronously to a secondary region. It is the lowest-cost listed option that provides a secondary-region copy when direct read access to that copy is not required. RA-GRS adds a readable secondary endpoint, ZRS stays within one region, and LRS stays within one datacenter.",
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+      "objectiveID": "az104-storage.configure-and-manage-storage-accounts.02"
+    },
+    {
+      "id": "q045",
+      "text": "Operations needs an email when a production VM stays above 90% CPU for 5 minutes. The alert should be near real time and should not require writing KQL unless necessary. Which Azure Monitor design is most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Log Analytics query alert paired with a runbook-driven notification workflow"
+        },
+        {
+          "id": "B",
+          "text": "A Metric alert rule with an action group containing an email action"
+        },
+        {
+          "id": "C",
+          "text": "Azure Advisor recommendations reviewed manually by operations staff"
+        },
+        {
+          "id": "D",
+          "text": "Azure Service Health alerts that only report Azure platform incidents"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "optionRationales": {
+        "A": "Log query alerts run KQL against ingested logs in a Log Analytics workspace, adding ingestion latency plus query authoring, and chaining a runbook adds orchestration overhead the scenario explicitly wants to avoid for a simple email.",
+        "B": "Percentage CPU is a native VM platform metric, so a metric alert evaluates it directly at near-real-time frequency with no KQL or log ingestion, and an attached action group with an email action delivers the notification when the 90% threshold holds for 5 minutes.",
+        "C": "Advisor surfaces periodic optimization and right-sizing recommendations on a batch cadence; it does not evaluate a live CPU threshold or send threshold-breach notifications.",
+        "D": "Service Health reports Azure platform incidents and planned maintenance affecting the service itself, not customer workload metrics like a single VM's CPU utilization."
+      },
+      "explanation": "CPU percentage is a platform metric, so a metric alert is the simplest and most responsive approach. The notification path is handled by an action group with an email action. A log query alert adds unnecessary query and ingestion dependencies, while Advisor and Service Health solve different monitoring problems.",
+      "resourceURL": "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview",
+      "objectiveID": "az104-monitoring.monitor-resources-in-azure.04"
+    }
+  ],
   "AZ-900": [
     {
       "id": "az900-q001",
@@ -25,8 +129,8 @@
         "C"
       ],
       "optionRationales": {
-        "A": "Platform as a Service abstracts away the guest operating system: Microsoft patches and maintains the OS and runtime, so the team could not install a custom monitoring agent at the OS level or own application patching the way this migration requires.",
-        "B": "Function as a Service runs short-lived event-driven code on a fully managed runtime with no OS access, which prevents installing custom agents or controlling guest-OS patching and forces an application redesign rather than an unchanged lift-and-shift.",
+        "A": "PaaS has the provider manage the operating system and platform runtime, so it does not give the team guest-OS control to install an OS-level monitoring agent. The customer still maintains its application code, updates, configuration and data; application patching alone does not distinguish PaaS from IaaS.",
+        "B": "A managed function platform handles the underlying operating system and runtime. It does not provide the guest-OS control required to install the monitoring agent or preserve this application’s existing VM deployment model.",
         "C": "Infrastructure as a Service provisions virtual machines where the customer retains full control of the guest operating system, can install custom software such as a monitoring agent, and remains responsible for application patching, which matches a lift-and-shift migration that keeps the existing deployment model unchanged.",
         "D": "Software as a Service delivers a finished, vendor-operated application such as Microsoft 365; there is no guest OS to control, no place to install custom agents, and no application patching for the customer to own, so it cannot host a migrated line-of-business app."
       },
@@ -101,110 +205,6 @@
       "explanation": "Azure SQL Database is the fully managed PaaS option that fits this scenario. Microsoft handles the underlying infrastructure, OS patching, SQL Server engine upgrades, automated backups, and built-in high availability, so the team does not operate servers. It runs on the latest stable SQL Server engine, supports vCore and DTU purchasing, and offers serverless and Hyperscale tiers. SQL Server on Azure VMs is IaaS and would require the customer to manage the OS and SQL patches, while Database Migration Service is a tool, not a long-term database host.",
       "resourceURL": "https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview",
       "objectiveID": ""
-    }
-  ],
-  "AZ-104": [
-    {
-      "id": "q002",
-      "text": "An auditor needs to review every resource in a production resource group, including networking, storage, and compute settings. The auditor must not be able to create, update, or delete any resources. Which built-in role should you assign at the resource group scope?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Reader"
-        },
-        {
-          "id": "B",
-          "text": "Contributor"
-        },
-        {
-          "id": "C",
-          "text": "User Access Administrator"
-        },
-        {
-          "id": "D",
-          "text": "Owner"
-        }
-      ],
-      "correctAnswers": [
-        "A"
-      ],
-      "optionRationales": {
-        "A": "The `Reader` role grants `*/read` across the control plane, letting the auditor view every networking, storage, and compute resource definition and configuration in the resource group. It carries no write or delete actions and no `DataActions`, so it satisfies the read-only auditing requirement while honoring least privilege.",
-        "B": "`Contributor` grants full management of resources, including the ability to create, update, and delete networking, storage, and compute objects. That write-and-delete capability exceeds what an auditor should hold and violates the requirement that nothing can be changed.",
-        "C": "`User Access Administrator` is scoped to managing access — viewing resources plus assigning and removing RBAC role assignments through `Microsoft.Authorization/roleAssignments/*`. Granting an auditor the power to rewrite who has access is unnecessary and exceeds a view-only mandate.",
-        "D": "`Owner` grants full resource management plus `Microsoft.Authorization/*`, so the holder can create, update, delete, and delegate access. That is the broadest level of control and is far beyond the inspect-only privilege an auditor requires."
-      },
-      "explanation": "The Azure RBAC Reader role grants `*/read` on the control plane, allowing the auditor to view every resource definition and configuration in the resource group without permission to create, update, or delete anything. Reader is a General built-in role with no NotActions or DataActions. The full-management role adds write and delete actions, the ownership role additionally grants role assignment, and the access-management role can rewrite role assignments — so each alternative exceeds the read-only auditing scope and breaks least-privilege guidance.",
-      "resourceURL": "https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#reader",
-      "objectiveID": "az104-identity.manage-access-to-azure-resources.01"
-    },
-    {
-      "id": "q013",
-      "text": "You need the lowest-cost storage redundancy option that copies critical data to a secondary Azure region for disaster recovery. Applications do not need to read from the secondary region unless a failover occurs. Which option should you choose?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Locally Redundant Storage (LRS)"
-        },
-        {
-          "id": "B",
-          "text": "Zone-Redundant Storage (ZRS)"
-        },
-        {
-          "id": "C",
-          "text": "Geo-Redundant Storage (GRS)"
-        },
-        {
-          "id": "D",
-          "text": "Read-Access Geo-Redundant Storage (RA-GRS)"
-        }
-      ],
-      "correctAnswers": [
-        "C"
-      ],
-      "optionRationales": {
-        "A": "LRS keeps copies within one datacenter and provides no secondary-region copy.",
-        "B": "ZRS spreads copies across availability zones in the primary region but does not copy data to a secondary region.",
-        "C": "GRS is the lowest-cost listed option that copies data to a secondary region when applications do not require direct secondary read access.",
-        "D": "RA-GRS uses the same geo-replication and adds a readable secondary endpoint, which costs more and is not required by this scenario."
-      },
-      "explanation": "GRS copies data synchronously within the primary region using LRS and asynchronously to a secondary region. It is the lowest-cost listed option that provides a secondary-region copy when direct read access to that copy is not required. RA-GRS adds a readable secondary endpoint, ZRS stays within one region, and LRS stays within one datacenter.",
-      "resourceURL": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy",
-      "objectiveID": "az104-storage.configure-and-manage-storage-accounts.02"
-    },
-    {
-      "id": "q045",
-      "text": "Operations needs an email when a production VM stays above 90% CPU for 5 minutes. The alert should be near real time and should not require writing KQL unless necessary. Which Azure Monitor design is most appropriate?",
-      "options": [
-        {
-          "id": "A",
-          "text": "A Log Analytics query alert paired with a runbook-driven notification workflow"
-        },
-        {
-          "id": "B",
-          "text": "A Metric alert rule with an action group containing an email action"
-        },
-        {
-          "id": "C",
-          "text": "Azure Advisor recommendations reviewed manually by operations staff"
-        },
-        {
-          "id": "D",
-          "text": "Azure Service Health alerts that only report Azure platform incidents"
-        }
-      ],
-      "correctAnswers": [
-        "B"
-      ],
-      "optionRationales": {
-        "A": "Log query alerts run KQL against ingested logs in a Log Analytics workspace, adding ingestion latency plus query authoring, and chaining a runbook adds orchestration overhead the scenario explicitly wants to avoid for a simple email.",
-        "B": "Percentage CPU is a native VM platform metric, so a metric alert evaluates it directly at near-real-time frequency with no KQL or log ingestion, and an attached action group with an email action delivers the notification when the 90% threshold holds for 5 minutes.",
-        "C": "Advisor surfaces periodic optimization and right-sizing recommendations on a batch cadence; it does not evaluate a live CPU threshold or send threshold-breach notifications.",
-        "D": "Service Health reports Azure platform incidents and planned maintenance affecting the service itself, not customer workload metrics like a single VM's CPU utilization."
-      },
-      "explanation": "CPU percentage is a platform metric, so a metric alert is the simplest and most responsive approach. The notification path is handled by an action group with an email action. A log query alert adds unnecessary query and ingestion dependencies, while Advisor and Service Health solve different monitoring problems.",
-      "resourceURL": "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview",
-      "objectiveID": "az104-monitoring.monitor-resources-in-azure.04"
     }
   ]
 }

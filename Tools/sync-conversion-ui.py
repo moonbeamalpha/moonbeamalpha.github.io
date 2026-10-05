@@ -189,9 +189,22 @@ def finder_cards(snapshot, metadata):
                 f'<span class="exam-finder__title">{html.escape(name.removeprefix("Microsoft "))}</span>'
                 f'<span class="exam-finder__meta">{meta}</span></a>')
     featured = [code for code in FEATURED if code in current]
-    return ('<div class="exam-finder__grid">' + '\n'.join(card(code) for code in featured) + '</div>\n'
-            '<details class="exam-finder__more"><summary>Browse every current exam</summary><div class="exam-finder__grid">' +
-            '\n'.join(card(code) for code in current if code not in featured) + '</div></details>')
+    # Every current exam stays visible; the subject filters do the narrowing.
+    return ('<div class="exam-finder__grid">' + '\n'.join(card(code) for code in featured) + '\n' +
+            '\n'.join(card(code) for code in current if code not in featured) + '</div>')
+
+
+def hero_exam_links(snapshot):
+    """Let a visitor jump from the hero to their exam page; retired exams never appear."""
+    current = set(snapshot['exams']) - set(snapshot['retired'])
+    links = ''.join(f'<li><a href="/exams/{code.lower()}/">{code}<span class="sr-only"> '
+                    f'{html.escape(snapshot["names"][code].removeprefix("Microsoft "))}</span></a></li>'
+                    for code in FEATURED if code in current)
+    return ('<nav class="hero-exams" aria-labelledby="hero-exams-label">'
+            '<p class="hero-exams__label" id="hero-exams-label">Which exam are you taking?</p>'
+            '<ul class="hero-exams__list">' + links +
+            '<li><a class="hero-exams__all" href="#exam-roadmap">All exams <span aria-hidden="true">→</span></a></li>'
+            '</ul></nav>')
 
 
 def campaign_links(text, relative):
@@ -303,6 +316,7 @@ def render(path, text, snapshot, metadata):
     text = block(text, 'assets', assets, '</head>')
     if relative == 'index.html':
         text = block(text, 'cards', finder_cards(snapshot, metadata), '<!-- exam-roadmap-map:start -->')
+        text = block(text, 'hero-exams', hero_exam_links(snapshot), '        <div class="hero-badges">')
         text = re.sub(r'<div class="exam-finder__filters"[^>]*>.*?</div>',
                       lambda _: subject_filters(home=True), text, count=1, flags=re.S)
     if is_exam:

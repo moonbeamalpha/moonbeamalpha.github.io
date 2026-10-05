@@ -109,8 +109,7 @@ html[data-theme="light"] .am-retire-banner__cta { color: #fff; }
    (Gradient *backgrounds* — buttons, chips — keep the bright brand hexes.) */
 html[data-theme="light"] .headline-accent,
 html[data-theme="light"] .page-h1-accent,
-html[data-theme="light"] .hero-app-name,
-html[data-theme="light"] .how-step-num {
+html[data-theme="light"] .hero-app-name {
   background: linear-gradient(135deg, #00738F 0%, #0067C5 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -223,9 +222,6 @@ html[data-theme="light"] .ask-aura-stage__bubble,
 html[data-theme="light"] .session-story-preview__bubble,
 html[data-theme="light"] .session-story-preview__card { box-shadow: var(--shadow-raised); }
 html[data-theme="light"] .session-story-preview__score-ring { box-shadow: none; }
-html[data-theme="light"] .aura-trait { background: rgba(13,30,55,0.04); }
-html[data-theme="light"] .aura-trait--blue { color: var(--azure-blue); }
-html[data-theme="light"] .aura-trait--purple { color: var(--azure-purple); }
 html[data-theme="light"] .cta-aura-img { filter: drop-shadow(0 8px 14px rgba(15,30,60,0.12)); }
 
 html[data-theme="light"] .roadmap-filter__button {
@@ -257,14 +253,12 @@ html[data-theme="light"] .roadmap-cell { background: rgba(13,30,55,0.02); }
 html[data-theme="light"] .roadmap-category {
   background: linear-gradient(180deg, var(--pillar-bg), rgba(13,30,55,0.02)), rgba(13,30,55,0.03);
 }
-html[data-theme="light"] .roadmap-pill { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35); }
+html[data-theme="light"] .roadmap-pill { color: var(--pillar-color); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35); }
 html[data-theme="light"] .roadmap-pill--featured::after { background: rgba(13,30,55,0.25); }
 html[data-theme="light"] .roadmap-pill:focus-visible { box-shadow: 0 0 0 3px rgba(0,103,197,0.30); }
 
 /* Brightness makes pale chips recede on light surfaces, so use a denser
    family tint and a small coloured lift for a clear pointer/focus state. */
-html[data-theme="light"] a.hero-exam-tag:hover,
-html[data-theme="light"] a.hero-exam-tag:focus-visible,
 html[data-theme="light"] a.exam-tag:hover,
 html[data-theme="light"] a.exam-tag:focus-visible,
 html[data-theme="light"] a.exam-mini__tag:hover,
@@ -408,6 +402,27 @@ html[data-theme="light"] .qt__viz-checkbox {
 html[data-theme="light"] .cert-path__chip { background: rgba(13,30,55,0.04); }
 html[data-theme="light"] a.cert-path__chip:hover { background: rgba(0,103,197,0.07); border-color: rgba(0,103,197,0.35); }
 html[data-theme="light"] .related-card:hover { background: rgba(0,103,197,0.05); border-color: rgba(0,103,197,0.30); }
+
+/* Pricing cards: the same layered treatment on light surfaces. */
+html[data-theme="light"] .access-card {
+  --tier-ink: #00738F;
+  border-color: rgba(13, 30, 55, 0.10);
+  background:
+    radial-gradient(120% 70% at 0% 0%, rgba(var(--tier), 0.10), transparent 60%),
+    linear-gradient(165deg, #FFFFFF 0%, #F5F9FF 100%);
+  box-shadow: inset 0 1px 0 #FFFFFF, var(--shadow-raised);
+}
+html[data-theme="light"] .access-card--pack { --tier-ink: #0067C5; }
+html[data-theme="light"] .access-card--pro {
+  --tier-ink: #6D35D9;
+  border-color: transparent;
+  background:
+    radial-gradient(110% 80% at 100% 0%, rgba(109, 53, 217, 0.10), transparent 60%) padding-box,
+    radial-gradient(90% 70% at 0% 100%, rgba(0, 103, 197, 0.07), transparent 62%) padding-box,
+    linear-gradient(165deg, #FFFFFF 0%, #F6F2FF 100%) padding-box,
+    linear-gradient(135deg, rgba(0, 115, 143, 0.55), rgba(109, 53, 217, 0.60) 55%, rgba(0, 103, 197, 0.35)) border-box;
+}
+html[data-theme="light"] .access-card .access-price { font-weight: 650; }
 
 /* ── 5. Dark-palette reading roles: light mode keeps its original treatment ── */
 /* Dark mode gives class-less prose lists --text-body (a zero-specificity rule

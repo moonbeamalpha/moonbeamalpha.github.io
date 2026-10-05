@@ -382,76 +382,6 @@
       max-width: 440px;
       margin-bottom: 32px;
     }
-    .hero-exam-tags {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 28px;
-      max-width: 440px;
-    }
-    .hero-exam-group {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 6px;
-    }
-    .hero-exam-group__title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--group-color);
-      margin: 0;
-      opacity: 0.92;
-    }
-    .hero-exam-group__list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .hero-exam-group--azure    { --group-color: var(--azure-cyan);    --group-bg: rgba(80,230,255,0.10);  --group-border: rgba(80,230,255,0.30); }
-    .hero-exam-group--ai       { --group-color: var(--azure-purple);  --group-bg: rgba(149,120,224,0.10); --group-border: rgba(149,120,224,0.32); }
-    .hero-exam-group--data     { --group-color: var(--xp-gold);       --group-bg: rgba(255,185,0,0.10);   --group-border: rgba(255,185,0,0.30); }
-    .hero-exam-group--security { --group-color: var(--success-green); --group-bg: rgba(32,192,32,0.10);   --group-border: rgba(32,192,32,0.30); }
-    .hero-exam-group--github   { --group-color: var(--warning-orange); --group-bg: rgba(247,99,12,0.10);   --group-border: rgba(247,99,12,0.30); }
-    .hero-exam-tag {
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--group-color, var(--text-secondary));
-      background: var(--group-bg, rgba(128,128,128,0.1));
-      border: 1px solid var(--group-border, rgba(128,128,128,0.2));
-      text-decoration: none;
-      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
-    }
-    a.hero-exam-tag:hover,
-    a.hero-exam-tag:focus-visible {
-      transform: translateY(-1px);
-      filter: brightness(1.18);
-    }
-    a.hero-exam-tag:focus-visible {
-      outline: 2px solid var(--group-color);
-      outline-offset: 2px;
-    }
-    /* Mobile chip cloud: keep the first (Azure) group only and hand off to
-       the exam hub instead of stacking every group down the screen. All
-       chips stay in the DOM; hidden ones just aren't rendered under 769px. */
-    .hero-exam-tags__more {
-      display: none;
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--accent-text);
-      text-decoration: none;
-    }
-    .hero-exam-tags__more:hover,
-    .hero-exam-tags__more:focus-visible { text-decoration: underline; }
     .hero-ctas {
       display: flex;
       align-items: center;
@@ -831,13 +761,6 @@
       -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
     }
-    .ask-aura-more { margin: 24px 0 0; }
-    .ask-aura-more a {
-      color: var(--accent-text);
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      text-underline-offset: 4px;
-    }
 
     /* Legacy portrait treatment retained for other Aura surfaces. */
     .aura-portrait { position: relative; display: flex; justify-content: center; align-items: flex-end; }
@@ -851,16 +774,6 @@
       width: 92%; aspect-ratio: 1 / 1; z-index: 1; pointer-events: none;
       background: radial-gradient(circle at 50% 50%, rgba(80,230,255,0.11) 0%, rgba(43,136,216,0.045) 46%, transparent 70%);
     }
-    .aura-traits { display: flex; flex-wrap: wrap; gap: 10px; }
-    .aura-trait {
-      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 13px;
-      letter-spacing: 0.03em; padding: 7px 16px; border-radius: 999px;
-      background: rgba(255,255,255,0.04); border: 1px solid var(--border-strong);
-      color: var(--text-primary);
-    }
-    .aura-trait--blue   { border-color: rgba(43,136,216,0.5);  color: #7db8ff; }
-    .aura-trait--purple { border-color: rgba(149,120,224,0.5); color: #b9a6f0; }
-    .aura-trait--cyan   { border-color: rgba(80,230,255,0.45); color: var(--accent-text); }
 
     /* Aura-led session recap — a compact visual story, not a wall of copy */
     .session-story-preview {
@@ -1479,6 +1392,13 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
       transition: transform 0.2s ease, filter 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
+    /* Dark mode lifts the darker family inks (purple, blue, green, orange) to an OKLCH
+       lightness floor of 0.8, taking 13px pill labels from ~4.6:1 to at least ~7.4:1.
+       Hue and chroma stay; cyan and gold are already lighter and do not change.
+       Browsers without relative colour keep the raw ink; theme-light.css keeps it too. */
+    @supports (color: oklch(from red l c h)) {
+      .roadmap-pill { color: oklch(from var(--pillar-color) max(l, 0.8) c h); }
+    }
     .roadmap-pill:hover,
     .roadmap-pill:focus-visible {
       transform: translateY(-2px);
@@ -1546,91 +1466,6 @@
     .showcase-inner--device-right .showcase-device { order: 2; }
     .showcase-inner--device-right .showcase-text   { order: 1; }
     .showcase-device { display: flex; justify-content: center; }
-    .showcase-bullets {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .showcase-bullets li {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      color: var(--text-body);
-      padding-left: 24px;
-      position: relative;
-    }
-    .showcase-bullets li::before {
-      content: '\2713';
-      position: absolute;
-      left: 0;
-      color: var(--azure-cyan);
-      font-weight: 700;
-    }
-
-    /* ══════════════════════════════════════════════
-       HOW EXAM IQ WORKS (compact strip, folded into #exam-iq)
-       ══════════════════════════════════════════════ */
-    .how-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      max-width: 960px;
-      margin: 0 auto;
-      counter-reset: step;
-    }
-    .how-step {
-      text-align: center;
-      position: relative;
-    }
-    .how-step-number {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 48px;
-      line-height: 1;
-      background: var(--gradient-cyan-blue);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      opacity: 0.25;
-      margin-bottom: 16px;
-    }
-    .how-step-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      background: rgba(80,230,255,0.08);
-      border: 1px solid rgba(80,230,255,0.15);
-      color: var(--azure-cyan);
-    }
-    .how-step h3 {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-    .how-step p {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      color: var(--text-body);
-      line-height: 1.6;
-    }
-    /* Connector lines between steps */
-    .how-step:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 80px;
-      right: -20px;
-      width: calc(100% - 56px);
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(80,230,255,0.2), transparent);
-      transform: translateX(50%);
-    }
 
     /* ══════════════════════════════════════════════
        METRICS BAR
@@ -2255,16 +2090,12 @@ html, body { overflow-x: clip; }
          bleed visual-only rather than adding horizontal page scroll */
       .section-hero { overflow-x: clip; }
     }
-    .hero-exam-tag { min-height: 36px; display: inline-flex; align-items: center; }
     .roadmap-filter__button { min-height: 44px; }
     .exam-tag { min-height: 36px; display: inline-flex; align-items: center; }
     /* ── :has() fallback (Safari < 15.4): class mirrors the :has() rule ── */
     .nav-links li.nav-item-hide-mobile { }
     @media (max-width: 768px) {
       .nav-links li.nav-item-hide-mobile { display: none; }
-      .hero-exam-group { align-items: center; }
-      .hero-exam-group:nth-of-type(n+2) { display: none; }
-      .hero-exam-tags__more { display: inline-flex; align-items: center; }
     }
     /* Native, progressively-enhanced reveals. Content is visible by default —
        nothing here ever sets opacity:0 on text before it enters the viewport.
@@ -2367,8 +2198,6 @@ html, body { overflow-x: clip; }
          hidden nav links doesn't reserve phantom width and shove the CTA off-screen. */
       .nav-links li:has(.hide-mobile) { display: none; }
       .section-showcase { padding: 80px 24px; }
-      .how-steps { grid-template-columns: 1fr; gap: 48px; max-width: 400px; }
-      .how-step:not(:last-child)::after { display: none; }
       .section-features { padding: 80px 24px; }
       .section-roadmap { padding: 80px 20px; }
       .roadmap-header { margin-bottom: 28px; }

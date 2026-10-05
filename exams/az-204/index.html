@@ -93,7 +93,7 @@
         "description": "AZ-204 retired on 31 July 2026. Review 405 practice questions and learn about AI-200, Microsoft's replacement developer course and current AI cloud route.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-10-05",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -385,7 +385,7 @@
   <link rel="stylesheet" href="/section-nav.css?v=eb08cd369978">
 <!-- search-assets:start -->
 <link rel="stylesheet" href="/search.css?v=dd169dcca956">
-<script src="/search.js?v=ce2d33cba6f7" data-search-index="/data/search-index.json?v=39710f649ed9" defer></script>
+<script src="/search.js?v=ce2d33cba6f7" data-search-index="/data/search-index.json?v=ad48d7db4040" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
 <link rel="stylesheet" href="/conversion.css?v=5de87c15ca77">
@@ -559,7 +559,7 @@
               <li><span class="qt__viz-checkbox"></span><span class="qt__option-text">Scheduled</span><span class="qt__rationale" hidden>Scheduled is not an ACI restart policy. Restart policy controls what happens after the container process exits, not when a container should run.</span></li>
             </ul>
           </div>
-          <noscript><details class="qt__answer-fallback"><summary>Read the answer and explanation</summary><p><strong>Never, Always</strong> — Azure Container Instances supports three restart policies that govern container behavior after the process exits. Always is the default and continuously restarts containers, making it appropriate for long-running services. OnFailure restarts only when the container terminates with a non-zero exit code, ideal for run-once tasks that should be retried on failure. Never runs the container at most once and leaves it stopped on exit, which is the typical choice for batch and scheduled workloads.</p></details></noscript>
+          <noscript><details class="qt__answer-fallback"><summary>Read the answer and explanation</summary><p><strong>Never, Always</strong> — ACI offers Always, OnFailure and Never restart policies. Always is the default and restarts after process exit. OnFailure restarts after a nonzero exit and stops after success. Never prevents restart after a successful zero exit, but the platform may still restart a failed container. It therefore does not guarantee exactly-once execution under every failure. Manual, OnCrash and Scheduled are not the documented policy names.</p></details></noscript>
           <h3>Multi-select</h3>
           <p>An original AZ-204 multi-select question. Select all the correct options to earn the mark.</p>
           <span class="qt__hint">All-or-nothing</span>
@@ -1103,7 +1103,7 @@
         <a class="related-card" href="/exams/az-305/">
           <span class="related-card__code">AZ-305</span>
           <span class="related-card__name">Designing Microsoft Azure Infrastructure Solutions</span>
-          <span class="related-card__hint">Expert-tier solution architect cert. Recommends Azure Administrator Associate (AZ-104) — AZ-204 is not an accepted alternative. 439 practice questions.</span>
+          <span class="related-card__hint">Expert-tier solution architect cert. Recommends Azure Administrator Associate (AZ-104) — AZ-204 is not an accepted alternative. 459 practice questions.</span>
         </a>
         <a class="related-card" href="/exams/az-400/">
           <span class="related-card__code">AZ-400</span>

@@ -147,15 +147,15 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 1;
-      color: #050810;
-      background: linear-gradient(135deg, var(--amh-accent) 0%, color-mix(in srgb, var(--amh-accent-2) 75%, #fff) 100%);
+      color: #fff;
+      background: linear-gradient(135deg, #006b91, #185bc4);
       text-decoration: none;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.32), 0 0 0 1px rgba(80,230,255,0.4) inset;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.16);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .am-cert-hero__cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.38), 0 0 0 1px rgba(80,230,255,0.6) inset;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.36), inset 0 1px 0 rgba(255,255,255,0.22);
     }
     .am-cert-hero__cta-icon { flex-shrink: 0; }
     .am-cert-hero__small { font-size: 12px; color: var(--amh-muted); }

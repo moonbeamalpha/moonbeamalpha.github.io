@@ -851,17 +851,15 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
       font-size: 17px;
-      color: #050810;
-      background: var(--gradient-cyan-blue);
+      color: #fff;
+      background: linear-gradient(135deg, #006b91, #185bc4);
       text-decoration: none;
-      box-shadow:
-        0 12px 28px rgba(43,136,216,0.40),
-        0 0 0 1px rgba(80,230,255,0.45) inset;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.16);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.36), inset 0 1px 0 rgba(255,255,255,0.22);
     }
     .cta-small {
       display: block;

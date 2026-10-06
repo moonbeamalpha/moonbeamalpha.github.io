@@ -139,7 +139,8 @@ assert(!counters.observed.has(first), 'Only animate once per visit');
 counters.frames.shift()(0);
 assert.equal(first.children[1].textContent, '0');
 counters.frames.shift()(600);
-assert(Number(first.children[1].textContent) > 0 && Number(first.children[1].textContent) < Number(metricValues[0]));
+const asNumber = text => Number(String(text).replace(/,/g, ''));   // totals use thousands separators
+assert(asNumber(first.children[1].textContent) > 0 && asNumber(first.children[1].textContent) < asNumber(metricValues[0]));
 counters.frames.shift()(1200);
 assert.equal(first.children[1].textContent, metricValues[0]);
 assert.equal(first.children[0].textContent, metricValues[0], 'Accessible total must stay stable');

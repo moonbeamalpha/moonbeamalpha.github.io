@@ -1505,6 +1505,27 @@
       height: 48px;
       background: var(--border-subtle);
     }
+    /* One gradient for every figure (it was four unrelated colours) on a lit card. */
+    .metrics-inner {
+      padding: 36px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      background:
+        radial-gradient(80% 140% at 50% 0%, rgba(43, 136, 216, 0.14), transparent 70%),
+        linear-gradient(165deg, #151E33 0%, #0F1627 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 34px rgba(0, 0, 0, 0.28);
+    }
+    .metric-number {
+      background: linear-gradient(135deg, #86D6EC 0%, #6FA8F5 55%, #A895F0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-variant-numeric: tabular-nums;
+    }
+    @media (max-width: 600px) {
+      .metrics-inner { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 16px; padding: 28px 18px; }
+      .metric-divider { display: none; }
+    }
 
     /* ══════════════════════════════════════════════
        SCREENSHOTS STRIP
@@ -2034,7 +2055,7 @@
     /* ── Mid-page CTA band ── */
     .cta-band { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 28px 24px; margin: 0 auto; max-width: 900px; }
     .cta-band__text { font-size: 17px; font-weight: 600; color: var(--text-primary); text-align: center; }
-    .cta-band__btn { min-height: 44px; display: inline-flex; align-items: center; padding: 0 26px; border-radius: 999px; background: linear-gradient(120deg, var(--azure-cyan), #2E7CEE); color: #041018; font-weight: 700; text-decoration: none; }
+    .cta-band__btn { min-height: 44px; display: inline-flex; align-items: center; padding: 0 26px; border-radius: 999px; background: linear-gradient(135deg, #006b91, #185bc4); color: #fff; font-weight: 700; text-decoration: none; }
     /* ── Desktop QR bridge (81% of search impressions are desktop) ── */
     .hero-qr { display: none; }
     @media (min-width: 900px) and (pointer: fine) {
@@ -2071,8 +2092,8 @@ html, body { overflow-x: clip; }
       display: inline-flex; align-items: center;
       padding: 0 22px;
       border-radius: 999px;
-      background: linear-gradient(120deg, var(--azure-cyan), var(--azure-blue, #2E7CEE));
-      color: #041018; font-weight: 700; font-size: 15px; text-decoration: none;
+      background: linear-gradient(135deg, #006b91, #185bc4);
+      color: #fff; font-weight: 700; font-size: 15px; text-decoration: none;
     }
     /* ── 44pt tap targets (Apple HIG) ── */
     .btn-nav-cta { min-height: 44px; display: inline-flex; align-items: center; }

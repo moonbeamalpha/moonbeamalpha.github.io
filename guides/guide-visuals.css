@@ -399,3 +399,79 @@ html[data-theme="light"] .guide-table tbody tr:nth-child(even) {
     transition: none;
   }
 }
+
+/* ── Key facts under a visual hero (About) ── */
+.hero-facts {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+  margin: 22px 0 0; padding: 0; list-style: none; max-width: none;
+}
+.hero-facts li {
+  position: relative; padding: 12px 14px 12px 38px;
+  border: 1px solid var(--border-subtle); border-radius: 14px;
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  color: var(--text-body); font-size: 14px; line-height: 1.45;
+}
+.hero-facts li::before {
+  content: ''; position: absolute; left: 15px; top: 18px; width: 10px; height: 5px;
+  border-left: 2px solid var(--accent-text); border-bottom: 2px solid var(--accent-text); transform: rotate(-45deg);
+}
+@media (max-width: 539px) { .hero-facts { grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 900px) {
+  .guide-hero--visual > .hero-facts { grid-column: 1; grid-row: 4; align-self: start; }
+}
+
+/* ── Diagram panels in the hero frame (Exam IQ, methodology) ── */
+.guide-visual--diagram > :first-child {
+  background:
+    radial-gradient(90% 70% at 0% 0%, rgba(80, 230, 255, 0.08), transparent 60%),
+    radial-gradient(70% 60% at 100% 100%, rgba(149, 120, 224, 0.10), transparent 60%),
+    linear-gradient(165deg, #151E33 0%, #10172A 100%);
+}
+.iq-diagram { padding: clamp(28px, 4vw, 44px) clamp(22px, 4vw, 40px) clamp(24px, 3vw, 32px); }
+.iq-diagram p { max-width: none; margin: 0; }
+.iq-diagram__score { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.iq-diagram__value {
+  font: 650 clamp(56px, 7vw, 76px)/1 'Outfit', sans-serif; letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #86D6EC 0%, #6FA8F5 60%, #A895F0 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.iq-diagram__unit { color: var(--text-secondary); font-size: 15px; }
+.iq-diagram__scale {
+  position: relative; height: 14px; margin: 54px 0 10px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07); box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.iq-diagram__range {
+  position: absolute; top: 0; bottom: 0; left: var(--from); width: calc(var(--to) - var(--from));
+  border-radius: 999px; background: linear-gradient(90deg, rgba(134, 214, 236, 0.45), rgba(168, 149, 240, 0.55));
+}
+.iq-diagram__marker {
+  position: absolute; top: 50%; left: var(--at); width: 22px; height: 22px; transform: translate(-50%, -50%);
+  border: 3px solid #DDE3EB; border-radius: 50%; background: #6FA8F5; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+.iq-diagram__pass { position: absolute; top: -10px; bottom: -10px; left: var(--at); width: 2px; background: var(--success-green); }
+.iq-diagram__pass b {
+  position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); white-space: nowrap;
+  padding: 3px 9px; border-radius: 999px; font: 650 12px/1.4 'Outfit', sans-serif; color: var(--success-green);
+  background: color-mix(in srgb, var(--success-green) 14%, transparent); border: 1px solid color-mix(in srgb, var(--success-green) 40%, transparent);
+}
+.iq-diagram__ticks { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.iq-diagram__note { margin-top: 18px !important; color: var(--text-body); font-size: 14px; }
+
+.method-flow { margin: 0; padding: clamp(24px, 3.5vw, 36px) clamp(22px, 3.5vw, 36px); list-style: none; counter-reset: step; max-width: none; }
+.method-flow li {
+  position: relative; counter-increment: step; display: grid; gap: 3px;
+  padding: 0 0 18px 50px; max-width: none;
+}
+.method-flow li:last-child { padding-bottom: 0; }
+.method-flow li::before {
+  content: counter(step); position: absolute; left: 0; top: -2px; width: 32px; height: 32px;
+  display: grid; place-items: center; border-radius: 50%;
+  border: 1px solid rgba(80, 230, 255, 0.35); background: rgba(80, 230, 255, 0.10);
+  color: var(--accent-text); font: 650 14px/1 'Outfit', sans-serif;
+}
+.method-flow li:not(:last-child)::after {
+  content: ''; position: absolute; left: 16px; top: 34px; bottom: 2px; width: 1px;
+  background: linear-gradient(180deg, rgba(80, 230, 255, 0.35), rgba(80, 230, 255, 0.05));
+}
+.method-flow strong { color: var(--text-primary); font: 600 16px/1.35 'Outfit', sans-serif; }
+.method-flow span { color: var(--text-body); font-size: 14px; line-height: 1.5; }

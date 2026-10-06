@@ -441,6 +441,41 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
 }
 .conversion-terms, .conversion-proof, .hero-visual figcaption { font-size: 14px; }
 .conversion-browse a, .conversion-proof a, .study-step__copy a, .practice-source a, .feature-story-grid a { display: inline-flex; align-items: center; min-height: 44px; }
+/* Study tools and comparison table share the pricing cards' layered surfaces. */
+.study-tools {
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(70% 50% at 0% 0%, rgba(80, 230, 255, 0.07), transparent 65%),
+    linear-gradient(165deg, #151E33 0%, #10172A 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 34px rgba(0, 0, 0, 0.26);
+}
+.study-tool {
+  border-color: rgba(255, 255, 255, 0.07);
+  background: linear-gradient(165deg, #1B2540 0%, #151D31 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+@media (hover: hover) {
+  .study-tool:hover { transform: translateY(-2px); border-color: rgba(80, 230, 255, 0.22); }
+}
+.study-tool__top svg {
+  box-sizing: border-box; width: 44px; height: 44px; padding: 10px; border-radius: 12px;
+  border: 1px solid rgba(80, 230, 255, 0.22); background: rgba(80, 230, 255, 0.09);
+}
+.study-tool__pro { border-color: rgba(149, 120, 224, 0.35); background: rgba(149, 120, 224, 0.12); color: #C5B1FF; }
+.access-comparison-scroll {
+  margin-top: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: linear-gradient(165deg, #151E33 0%, #10172A 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 34px rgba(0, 0, 0, 0.24);
+}
+.access-comparison caption { padding: 16px 18px 12px; }
+.access-comparison thead th { background: rgba(255, 255, 255, 0.035); font-family: 'Outfit', sans-serif; }
+.access-comparison th:first-child, .access-comparison td:first-child { padding-left: 18px; }
+.access-comparison tr > :last-child { background: rgba(149, 120, 224, 0.07); }
+.access-comparison thead th:last-child { background: rgba(149, 120, 224, 0.14); color: #C5B1FF; }
+.access-comparison tbody tr:last-child > * { border-bottom: 0; }
 .study-step__image:focus-visible, .aura-preview figure a:focus-visible, .access-comparison-scroll:focus-visible { outline: 3px solid var(--azure-cyan); outline-offset: 4px; }
 .practice-preview__sample, .practice-preview__topic { font-size: 14px; }
 .exam-finder__meta { font-size: 13px; }
@@ -513,3 +548,41 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
   .study-tools__grid > .study-tool { flex: 0 0 82%; scroll-snap-align: start; }
 }
 .study-tools__grid:focus-visible { outline: 3px solid var(--azure-cyan); outline-offset: 4px; }
+
+/* ── Exams hub hero: a fan of certification badges beside the heading ── */
+.hub-hero__badges { position: relative; display: flex; justify-content: center; align-items: center; height: 190px; margin-top: 28px; }
+.hub-hero__badges::before {
+  content: ''; position: absolute; inset: 10% 15%; border-radius: 50%; z-index: -1;
+  background: radial-gradient(closest-side, rgba(43, 136, 216, 0.22), transparent);
+}
+.hub-hero__badges .certification-badge { width: 118px; height: 118px; margin: 0 -14px; filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.35)); }
+.hub-hero__badges .certification-badge:nth-child(1) { transform: rotate(-14deg) translateY(18px) scale(0.86); }
+.hub-hero__badges .certification-badge:nth-child(2) { transform: rotate(-7deg) translateY(4px) scale(0.94); z-index: 1; }
+.hub-hero__badges .certification-badge:nth-child(3) { transform: translateY(-6px) scale(1.06); z-index: 2; }
+.hub-hero__badges .certification-badge:nth-child(4) { transform: rotate(7deg) translateY(4px) scale(0.94); z-index: 1; }
+.hub-hero__badges .certification-badge:nth-child(5) { transform: rotate(14deg) translateY(18px) scale(0.86); }
+@media (min-width: 900px) {
+  .hub-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); column-gap: 32px; align-items: center; }
+  .hub-hero > :not(.hub-hero__badges) { grid-column: 1; }
+  .hub-hero__badges { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; height: 240px; }
+  .hub-hero__badges .certification-badge { width: 132px; height: 132px; margin: 0 -18px; }
+}
+@media (max-width: 479px) { .hub-hero__badges .certification-badge { width: 88px; height: 88px; margin: 0 -12px; } .hub-hero__badges { height: 150px; } }
+
+/* ── Homepage devices: iPad, iPhone and Watch lineup ── */
+/* Bezels are sized from the lineup height, not with % padding: % padding resolves
+   against the row's width, which made frames ~35-55px thick and cropped the screens.
+   Each <img> keeps its capture's aspect ratio; the frame shrink-wraps it. */
+.device-lineup { --lineup-h: clamp(250px, 34vw, 380px); position: relative; display: flex; justify-content: center; align-items: flex-end; height: var(--lineup-h); margin: 28px auto 8px; }
+.device-lineup::before {
+  content: ''; position: absolute; inset: 15% 20% 0; z-index: -1; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(43, 136, 216, 0.18), transparent);
+}
+.device-lineup > span { display: block; flex: none; padding: var(--bezel); border-radius: calc(var(--screen-r) + var(--bezel)); background: #05070D; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.05); }
+.device-lineup img { display: block; width: auto; height: calc(var(--device-h) - 2 * var(--bezel) - 2px); border-radius: var(--screen-r); }
+.device-lineup__ipad { --device-h: var(--lineup-h); --bezel: calc(var(--lineup-h) * 0.024); --screen-r: calc(var(--lineup-h) * 0.035); }
+.device-lineup__phone { --device-h: calc(var(--lineup-h) * 0.82); --bezel: calc(var(--lineup-h) * 0.015); --screen-r: calc(var(--lineup-h) * 0.08); margin-left: calc(var(--lineup-h) * -0.1); position: relative; z-index: 1; }
+.device-lineup__watch { --device-h: calc(var(--lineup-h) * 0.34); --bezel: calc(var(--lineup-h) * 0.02); --screen-r: calc(var(--lineup-h) * 0.05); margin-left: calc(var(--lineup-h) * -0.03); position: relative; z-index: 2; }
+.device-lineup__ipad img { aspect-ratio: 1668 / 2420; }
+.device-lineup__phone img { aspect-ratio: 1320 / 2868; }
+.device-lineup__watch img { aspect-ratio: 416 / 496; }

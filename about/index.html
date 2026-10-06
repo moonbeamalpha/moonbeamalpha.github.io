@@ -117,27 +117,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/article.css?v=1237df7e2eca">
-  <link rel="stylesheet" href="/theme-light.css?v=7059485ec73b">
-  <link rel="stylesheet" href="/guides/guide-visuals.css?v=b653131d96fb">
+  <link rel="stylesheet" href="/article.css?v=0866272cf583">
+  <link rel="stylesheet" href="/theme-light.css?v=ba1b15b23dcd">
+  <link rel="stylesheet" href="/guides/guide-visuals.css?v=606d69a65fce">
   <link rel="stylesheet" href="/social-follow.css?v=1eb2212bb94b">
-  <style>
-    /* This page has no visual hero (dropped per Track B scope), so the
-       1280-1539px TOC suppression in /guides/guide-visuals.css -- added for
-       pages with the wide visual hero, which need the room -- does not apply
-       here. Restore the rail in that range; same specificity, so this must
-       come after the guide-visuals.css link to win the cascade. */
-    @media (min-width: 1280px) and (max-width: 1539px) {
-      .page-toc { display: block; }
-    }
-  </style>
   <link rel="stylesheet" href="/section-nav.css?v=00d690856755">
 <!-- search-assets:start -->
 <link rel="stylesheet" href="/search.css?v=54f0851d7812">
-<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=6bf6f65bbcd4" defer></script>
+<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=30032b8612ac" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
-<link rel="stylesheet" href="/conversion.css?v=548f58dd809e">
+<link rel="stylesheet" href="/conversion.css?v=5d1deb88cea6">
 <script src="/conversion.js?v=435d272a3d41" defer></script>
 <script src="/app-store-links.js?v=22d2db6ebc11" defer></script>
 <!-- conversion-assets:end -->
@@ -177,7 +167,7 @@
     </nav>
 
     <!-- HERO — no product image; a profile page, not an article -->
-    <section class="guide-hero container">
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">About</p>
       <h1 class="display-large guide-hero__title">
         About <span class="headline-accent">Azure Mastery</span>
@@ -185,6 +175,26 @@
       <p class="guide-hero__dek">
         Who makes Azure Mastery, what the app does, and how it's built.
       </p>
+      <ul class="hero-facts">
+        <li>Native app for iPhone, iPad and Apple Watch</li>
+        <li>An explanation with every question</li>
+        <li>Score prediction runs on your device</li>
+        <li>No account and no study-data server</li>
+      </ul>
+      <figure class="guide-visual">
+        <img
+          src="/guides/images/study-loop-dark.webp"
+          data-theme-src-light="/guides/images/study-loop-light.webp"
+          alt="Aura presents a four-step visual study cycle: learn, connect, practise, and prove readiness."
+          width="1400"
+          height="788"
+          loading="eager"
+          fetchpriority="high">
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">How the app works</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Learn</span><span>Connect</span><span>Practise</span><span>Prove</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- Who makes it -->

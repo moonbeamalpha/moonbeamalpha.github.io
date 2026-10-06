@@ -184,27 +184,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/article.css?v=1237df7e2eca">
-  <link rel="stylesheet" href="/theme-light.css?v=7059485ec73b">
-  <link rel="stylesheet" href="/guides/guide-visuals.css?v=b653131d96fb">
+  <link rel="stylesheet" href="/article.css?v=0866272cf583">
+  <link rel="stylesheet" href="/theme-light.css?v=ba1b15b23dcd">
+  <link rel="stylesheet" href="/guides/guide-visuals.css?v=606d69a65fce">
   <link rel="stylesheet" href="/social-follow.css?v=1eb2212bb94b">
-  <style>
-    /* This page has no visual hero (dropped per Track B scope), so the
-       1280-1539px TOC suppression in /guides/guide-visuals.css -- added for
-       pages with the wide visual hero, which need the room -- does not apply
-       here. Restore the rail in that range; same specificity, so this must
-       come after the guide-visuals.css link to win the cascade. */
-    @media (min-width: 1280px) and (max-width: 1539px) {
-      .page-toc { display: block; }
-    }
-  </style>
   <link rel="stylesheet" href="/section-nav.css?v=00d690856755">
 <!-- search-assets:start -->
 <link rel="stylesheet" href="/search.css?v=54f0851d7812">
-<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=6bf6f65bbcd4" defer></script>
+<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=30032b8612ac" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
-<link rel="stylesheet" href="/conversion.css?v=548f58dd809e">
+<link rel="stylesheet" href="/conversion.css?v=5d1deb88cea6">
 <script src="/conversion.js?v=435d272a3d41" defer></script>
 <script src="/app-store-links.js?v=22d2db6ebc11" defer></script>
 <!-- conversion-assets:end -->
@@ -244,12 +234,29 @@
     </nav>
 
     <!-- HERO — no product image -->
-    <section class="guide-hero container">
+    <section class="guide-hero container guide-hero--visual">
       <p class="label-eyebrow guide-hero__eyebrow">Exam IQ</p>
       <h1 class="display-large guide-hero__title">
         How <span class="headline-accent">Exam IQ</span> predicts your score
       </h1>
       <p class="guide-hero__dek">Exam IQ estimates your certification exam score from your practice answers, on-device, with a confidence range that narrows the more it learns about you.</p>
+    
+      <figure class="guide-visual guide-visual--diagram">
+        <div class="iq-diagram" role="img" aria-label="Example forecast: a predicted score of 786 out of 1000, with a likely range of 749 to 823, above the 700 pass mark.">
+          <p class="iq-diagram__score" aria-hidden="true"><span class="iq-diagram__value">786</span><span class="iq-diagram__unit">predicted, out of 1000</span></p>
+          <div class="iq-diagram__scale" aria-hidden="true">
+            <span class="iq-diagram__range" style="--from: 49.8%; --to: 64.6%;"></span>
+            <span class="iq-diagram__pass" style="--at: 40.0%;"><b>Pass 700</b></span>
+            <span class="iq-diagram__marker" style="--at: 57.2%;"></span>
+          </div>
+          <p class="iq-diagram__ticks" aria-hidden="true"><span>500</span><span>750</span><span>1000</span></p>
+          <p class="iq-diagram__note" aria-hidden="true">Likely range 749–823. It narrows as you answer more questions.</p>
+        </div>
+        <figcaption class="guide-visual__caption">
+          <span class="guide-visual__title">Example forecast</span>
+          <span class="guide-visual__legend" aria-hidden="true"><span>Predicted</span><span>Likely range</span><span>Pass mark</span></span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- What Exam IQ is -->

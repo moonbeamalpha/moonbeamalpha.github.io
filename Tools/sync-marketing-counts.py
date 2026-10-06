@@ -42,9 +42,8 @@ summing.
 
 Aggregates shown on the homepage use the current App Store marketing rule:
 round the total DOWN to the nearest 100 and append "+".  e.g. 11,728 ->
-"11,700+".  The animated metric counter
-parses leading digits only (regex ^(\\d+)(.*)), so commas would break it — the
-metric stays comma-less ("10000") while prose uses the formatted "10,000+".
+"11,700+".  The animated metric counter accepts thousands separators
+(regex ^([\\d,]+...)), so the metric uses the same grouping without the "+" ("10,000").
 
 Two standalone social images (the LinkedIn banner and the OpenGraph card) bake
 those same aggregates into pixels, so text-patching their HTML is not enough —
@@ -497,7 +496,7 @@ def homepage_edits(total_label: str, metric_total: str, exam_count: int,
         # keyword commas ("exam prep, practice questions") — both must stay untouched.
         (r'(?<![\d,])\d{1,3}(?:,\d{3})+\+?(\s+(?:practice\s+)?[Qq]uestions)', total_label + r'\1'),
         # ── metric counters (anchored on the adjacent metric-label) ──
-        (r'(class="metric-number[^"]*"[^>]*>)\d+\+?(</span>\s*<span class="metric-label">Questions)',
+        (r'(class="metric-number[^"]*"[^>]*>)[\d,]+\+?(</span>\s*<span class="metric-label">Questions)',
          r'\g<1>' + metric_total + r'\2'),
         (r'(class="metric-number[^"]*"[^>]*>)\d+(</span>\s*<span class="metric-label">Exams)',
          r'\g<1>' + ec + r'\2'),
@@ -988,7 +987,7 @@ def main() -> None:
     total = totals["questionCount"]
     exam_count = totals["examCount"]
     total_label = totals["questionCountLabel"]      # prose, e.g. "10,300+"
-    metric_total = str((total // 100) * 100)        # comma-less for the count-up
+    metric_total = f"{(total // 100) * 100:,}"       # grouped; the count-up parses commas
     cert_paths = data.get("cert_path_count") or 0
 
     if exam_count != len(active):

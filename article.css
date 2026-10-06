@@ -404,15 +404,15 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
       font-size: 15px;
-      color: #050810;
-      background: var(--gradient-cyan-blue);
+      color: #fff;
+      background: linear-gradient(135deg, #006b91, #185bc4);
       text-decoration: none;
-      box-shadow: 0 12px 28px rgba(43,136,216,0.35), 0 0 0 1px rgba(80,230,255,0.45) inset;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.16);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 16px 36px rgba(43,136,216,0.50), 0 0 0 1px rgba(80,230,255,0.65) inset;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.36), inset 0 1px 0 rgba(255,255,255,0.22);
     }
 
     /* FAQ items */
@@ -501,7 +501,7 @@
 
     .guide-inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; max-width: 720px; margin: 40px auto 0; padding: 18px 22px; border: 1px solid rgba(80,230,255,0.3); border-radius: 14px; background: rgba(80,230,255,0.05); }
     .guide-inline-cta__text { font-size: 15px; line-height: 1.5; color: var(--text-primary); }
-    .guide-inline-cta__btn { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; background: linear-gradient(120deg, #50E6FF, #2E7CEE); color: #041018; font-weight: 700; font-size: 14px; text-decoration: none; }
+    .guide-inline-cta__btn { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; background: linear-gradient(135deg, #006b91, #185bc4); color: #fff; font-weight: 700; font-size: 14px; text-decoration: none; }
 
 
 /* Shared polish: canonical CTA sizing, mobile tables, and narrow navigation. */

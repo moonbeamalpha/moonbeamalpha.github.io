@@ -190,10 +190,10 @@
       "pl900-powerautomate": 74
     },
     "SC-100": {
-      "sc100-appsdata": 108,
+      "sc100-appsdata": 107,
       "sc100-bp": 98,
-      "sc100-infra": 127,
-      "sc100-secops": 139
+      "sc100-infra": 126,
+      "sc100-secops": 141
     },
     "SC-200": {
       "sc200-hunt": 80,

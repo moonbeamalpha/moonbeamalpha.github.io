@@ -1050,7 +1050,7 @@ Q: Which retired exam maps to which successor?
 A: AI-900 to AI-901, AI-102 to AI-103, DP-100 to AI-300, AZ-204 to AI-200, and AZ-500 to SC-500. The table above lists each one with its retirement date.
 
 ## /exams/sc-100/ — SC-100 Practice Questions — 472 Qs for Cyber Architect (2026)
-Page last modified: 2026-10-05
+Page last modified: 2026-10-07
 Exam domains:
   - Design solutions that align with security best practices and priorities (20–25%)
   - Design security operations, identity, and compliance capabilities (25–30%)

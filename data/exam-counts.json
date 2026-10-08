@@ -33,7 +33,7 @@
     "SC-100": 478,
     "SC-200": 377,
     "SC-300": 468,
-    "SC-500": 494,
+    "SC-500": 514,
     "SC-900": 409
   },
   "cert_path_count": 29,
@@ -207,9 +207,9 @@
       "sc300-workload": 107
     },
     "SC-500": {
-      "sc500-compute": 113,
-      "sc500-datanet": 116,
-      "sc500-identity": 110,
+      "sc500-compute": 118,
+      "sc500-datanet": 123,
+      "sc500-identity": 118,
       "sc500-posture": 113
     },
     "SC-900": {
@@ -253,7 +253,7 @@
     "SC-100": 472,
     "SC-200": 374,
     "SC-300": 448,
-    "SC-500": 452,
+    "SC-500": 472,
     "SC-900": 397
   },
   "names": {
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12798,
-    "questionCountLabel": "12,700+"
+    "questionCount": 12818,
+    "questionCountLabel": "12,800+"
   }
 }

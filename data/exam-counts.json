@@ -18,7 +18,7 @@
     "AZ-305": 468,
     "AZ-400": 536,
     "AZ-500": 346,
-    "AZ-700": 639,
+    "AZ-700": 659,
     "AZ-900": 453,
     "DP-100": 350,
     "DP-300": 435,
@@ -31,7 +31,7 @@
     "PL-300": 430,
     "PL-900": 376,
     "SC-100": 478,
-    "SC-200": 377,
+    "SC-200": 379,
     "SC-300": 468,
     "SC-500": 514,
     "SC-900": 409
@@ -119,8 +119,8 @@
       "az400-sourcecontrol": 67
     },
     "AZ-700": {
-      "az700-access": 64,
-      "az700-connectivity": 137,
+      "az700-access": 65,
+      "az700-connectivity": 156,
       "az700-core": 187,
       "az700-delivery": 125,
       "az700-security": 116
@@ -198,7 +198,7 @@
     "SC-200": {
       "sc200-hunt": 80,
       "sc200-incident": 132,
-      "sc200-ops": 162
+      "sc200-ops": 161
     },
     "SC-300": {
       "sc300-access": 127,
@@ -215,7 +215,7 @@
     "SC-900": {
       "sc900-compliance": 84,
       "sc900-concepts": 51,
-      "sc900-entra": 112,
+      "sc900-entra": 108,
       "sc900-security": 150
     }
   },
@@ -238,7 +238,7 @@
     "AZ-305": 459,
     "AZ-400": 527,
     "AZ-500": 346,
-    "AZ-700": 629,
+    "AZ-700": 649,
     "AZ-900": 404,
     "DP-100": 350,
     "DP-300": 425,
@@ -251,10 +251,10 @@
     "PL-300": 418,
     "PL-900": 348,
     "SC-100": 472,
-    "SC-200": 374,
+    "SC-200": 373,
     "SC-300": 448,
     "SC-500": 472,
-    "SC-900": 397
+    "SC-900": 393
   },
   "names": {
     "AB-100": "Agentic AI Business Solutions Architect",
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12838,
+    "questionCount": 12853,
     "questionCountLabel": "12,800+"
   }
 }

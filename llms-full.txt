@@ -40,7 +40,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Microsoft retired AZ-500 on 31 August 2026** — it can no longer be scheduled; the successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
-- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 629 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills measured as of 27 July 2026.
+- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 649 in-app practice questions. Specialty-tier network engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills measured as of 27 July 2026.
 
 ### AI, Machine Learning & Copilot Agents (11)
 
@@ -86,11 +86,11 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### Security, Compliance & Identity (5)
 
-- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 397 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills measured as of 28 July 2026.
+- [SC-900 — Microsoft Security, Compliance, and Identity Fundamentals](https://azuremastery.app/exams/sc-900/): 393 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates security, compliance, and identity concepts; Microsoft Entra ID capabilities; Microsoft Defender XDR security solutions; and Microsoft Purview compliance solutions. Skills measured as of 28 July 2026.
 
 - [SC-100 — Microsoft Cybersecurity Architect Expert](https://azuremastery.app/exams/sc-100/): 472 in-app practice questions. Expert-tier cybersecurity architect cert (single exam earns the credential, with prerequisite Associate cert). Renews annually, USD $165 voucher. 120-min duration, 40–60 questions, pass score 700/1000. Validates designing Zero Trust strategy and architecture, evaluating governance/risk/compliance technical strategies, designing security for infrastructure, and designing security for data and applications. Skills measured as of 28 July 2026.
 
-- [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 374 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills measured as of 28 July 2026.
+- [SC-200 — Microsoft Security Operations Analyst](https://azuremastery.app/exams/sc-200/): 373 in-app practice questions. Associate-tier SOC analyst cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates mitigating threats with Microsoft Defender XDR (Defender for Endpoint, Office 365, Identity, Cloud Apps), mitigating threats with Microsoft Sentinel (KQL, analytics rules, watchlists, hunting), and managing security operations across the Microsoft security stack. Skills measured as of 28 July 2026.
 
 - [SC-300 — Microsoft Identity and Access Administrator](https://azuremastery.app/exams/sc-300/): 448 in-app practice questions. Associate-tier identity admin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates implementing identities in Microsoft Entra ID, implementing authentication and access management (conditional access, MFA, PIM, passwordless), implementing access management for apps, and planning/implementing identity governance. Skills outline updated 27 April 2026.
 - [SC-500 — Microsoft Cloud and AI Security Engineer](https://azuremastery.app/exams/sc-500/): 472 in-app practice questions. Associate-tier cloud and AI security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. The current successor to retired AZ-500. Validates managing identity, access, and governance (Entra ID, PIM, Key Vault, Azure Policy, RBAC); securing storage, databases, and networking (Defender for Storage, Azure SQL, NSGs, Azure Firewall, Private Link); securing compute and AI workloads (Defender for Servers/Containers, plus securing AI — Entra Agent ID, Defender for AI, AI Gateway for Foundry, Purview DSPM for Copilot); and managing and monitoring security posture (Defender for Cloud, Microsoft Sentinel, Security Copilot). Study guide updated 13 May 2026.
@@ -705,7 +705,7 @@ A: Yes. Question practice, scoring, and the readiness prediction all run on-devi
 Q: Is there an AZ-500 practice test mode?
 A: Yes — timed practice sessions use original, blueprint-aligned questions, published timing guidance, and supported interactive item types. Adaptive study sessions and Focus Weak Spots then target the domains where your accuracy is lowest.
 
-## /exams/az-700/ — AZ-700 Practice Questions — 629 Qs for Network Engineer (2026)
+## /exams/az-700/ — AZ-700 Practice Questions — 649 Qs for Network Engineer (2026)
 Page last modified: 2026-10-09
 Exam domains:
   - Design and implement core networking infrastructure (25–30%)
@@ -730,7 +730,7 @@ A: Not immediately, and each attempt needs its own voucher. First retake: after 
 Q: How many weeks of AZ-700 prep is realistic?
 A: Most candidates plan four to eight weeks with prior Azure networking experience. Build and troubleshoot virtual networks, hybrid connectivity, routing, private access, application delivery, and network security in a lab. Azure Mastery's readiness gauge tells you when you're exam-ready.
 Q: Can I test-drive Azure Mastery's AZ-700 content for free?
-A: Yes. The app is free to download, with 50+ free AZ-700 questions and written explanations. The full bank of 629 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
+A: Yes. The app is free to download, with 50+ free AZ-700 questions and written explanations. The full bank of 649 AZ-700 practice questions unlocks with a one-time exam-pack purchase, or unlock every exam with a subscription or lifetime upgrade. Advanced study tools require Pro.
 
 ## /exams/az-900/ — AZ-900 Practice Questions — 404 Qs for Fundamentals (2026)
 Page last modified: 2026-10-09
@@ -1077,7 +1077,7 @@ A: Yes. The app is free to download with 50+ free SC-100 questions and written e
 Q: Can I rehearse SC-100 scenarios with no internet connection?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device, working with no connection at all. No account is required, and iCloud sync stays optional and private if you want it.
 
-## /exams/sc-200/ — SC-200 Practice Questions — 374 Qs for SOC Analyst (2026)
+## /exams/sc-200/ — SC-200 Practice Questions — 373 Qs for SOC Analyst (2026)
 Page last modified: 2026-10-05
 Exam domains:
   - Manage a security operations environment (40–45%)
@@ -1098,7 +1098,7 @@ A: SC-200 scenarios give you an incident that could plausibly be handled either 
 Q: I need to retake SC-200 — what's the wait?
 A: 24 hours covers the wait before your first retake. First retake: 24-hour wait. Second and third retakes: 14-day wait each. Microsoft limits you to five attempts in any rolling 12-month window, a new voucher required each time.
 Q: Can I try Azure Mastery's SC-200 bank before paying?
-A: Yes. The app is free to download with 50+ free SC-200 questions and written explanations. The full 374-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
+A: Yes. The app is free to download with 50+ free SC-200 questions and written explanations. The full 373-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Can I hunt through SC-200 practice scenarios with no connection?
 A: Yes. Practice sessions, scoring, and the readiness prediction all run on-device, so they work with no connection at all. There's no account to sign into, and data stays local unless you turn on optional, private iCloud sync.
 
@@ -1158,7 +1158,7 @@ A: Yes — every question, score, and readiness read happens on-device, so SC-50
 Q: Is there an SC-500 practice test mode?
 A: Yes. Timed practice sessions draw on original, blueprint-weighted SC-500 questions with published timing and the interactive formats this exam uses. Adaptive study and Focus Weak Spots then push you back toward the domains dragging your accuracy down.
 
-## /exams/sc-900/ — SC-900 Practice Questions — 397 Qs for Security Basics (2026)
+## /exams/sc-900/ — SC-900 Practice Questions — 393 Qs for Security Basics (2026)
 Page last modified: 2026-10-05
 Exam domains:
   - Describe the concepts of security, compliance, and identity (10–15%)
@@ -1182,7 +1182,7 @@ A: The wait before your first retake is 24 hours. First retake: 24-hour wait. Se
 Q: Is SC-900 worth taking if I'm not technical?
 A: Yes. SC-900 targets a broad audience on purpose: business stakeholders weighing security procurement, IT generalists working near security, and students entering the field all sit it. You won't configure Conditional Access or write KQL, just pick which Defender product covers a described surface.
 Q: Can I try Azure Mastery's SC-900 bank before paying?
-A: Yes. The app is free to download with 50+ free SC-900 questions and written explanations. The full 397-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
+A: Yes. The app is free to download with 50+ free SC-900 questions and written explanations. The full 393-question bank unlocks with a one-time exam-pack purchase, or a subscription unlocks every exam in the catalogue. Advanced study tools require Pro.
 Q: Does SC-900 revision work with no signal?
 A: Yes. Practice, scoring, and the readiness prediction all run on-device rather than through a server, so a train tunnel or aeroplane mode works fine. No account is needed, and iCloud sync stays optional and private.
 

@@ -9,7 +9,7 @@
     "AI-102": 334,
     "AI-103": 573,
     "AI-200": 520,
-    "AI-300": 405,
+    "AI-300": 425,
     "AI-500": 455,
     "AI-900": 340,
     "AI-901": 604,
@@ -31,7 +31,7 @@
     "PL-300": 430,
     "PL-900": 376,
     "SC-100": 478,
-    "SC-200": 377,
+    "SC-200": 379,
     "SC-300": 468,
     "SC-500": 514,
     "SC-900": 409
@@ -82,11 +82,11 @@
       "ai200-operations": 63
     },
     "AI-300": {
-      "ai300-genaiops": 84,
-      "ai300-lifecycle": 102,
-      "ai300-mlops": 70,
-      "ai300-optimize": 54,
-      "ai300-quality": 52
+      "ai300-genaiops": 88,
+      "ai300-lifecycle": 110,
+      "ai300-mlops": 74,
+      "ai300-optimize": 56,
+      "ai300-quality": 54
     },
     "AI-500": {
       "ai500-architect": 84,
@@ -198,7 +198,7 @@
     "SC-200": {
       "sc200-hunt": 80,
       "sc200-incident": 132,
-      "sc200-ops": 162
+      "sc200-ops": 161
     },
     "SC-300": {
       "sc300-access": 127,
@@ -215,7 +215,7 @@
     "SC-900": {
       "sc900-compliance": 84,
       "sc900-concepts": 51,
-      "sc900-entra": 112,
+      "sc900-entra": 108,
       "sc900-security": 150
     }
   },
@@ -229,7 +229,7 @@
     "AI-102": 334,
     "AI-103": 557,
     "AI-200": 280,
-    "AI-300": 362,
+    "AI-300": 382,
     "AI-500": 452,
     "AI-900": 340,
     "AI-901": 572,
@@ -251,10 +251,10 @@
     "PL-300": 418,
     "PL-900": 348,
     "SC-100": 472,
-    "SC-200": 374,
+    "SC-200": 373,
     "SC-300": 448,
     "SC-500": 472,
-    "SC-900": 397
+    "SC-900": 393
   },
   "names": {
     "AB-100": "Agentic AI Business Solutions Architect",
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12838,
+    "questionCount": 12853,
     "questionCountLabel": "12,800+"
   }
 }

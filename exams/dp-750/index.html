@@ -93,7 +93,7 @@
         "description": "441 DP-750 practice questions for Azure Databricks Data Engineer. Spark, Delta Lake, pipelines, and governance — updated for the 2026 exam.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-08",
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-12",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -246,7 +246,7 @@
             "name": "I need to resit DP-750 — what's the wait?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "How long you wait scales with your attempt count, and each one needs its own voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
+              "text": "How long you wait scales with your attempt count, and each one needs its own voucher. First retake: after 24 hours. All subsequent retakes: a 14-day wait each. Cap: five total attempts within 12 months of the first attempt."
             }
           },
           {
@@ -326,7 +326,7 @@
             "@type": "HowToStep",
             "position": 7,
             "name": "Final review: Rehearse and consolidate",
-            "text": "Use Focus Weak Spots to revisit weaker topics. Complete a timed simulator session of about 100 minutes. Review mistakes and decide whether you need more practice.",
+            "text": "Use Focus Weak Spots to revisit weaker topics. Complete a 120-minute study block and review a timed practice session. Review mistakes and decide whether you need more practice.",
             "url": "https://azuremastery.app/exams/dp-750/#study-plan"
           }
         ],
@@ -350,7 +350,7 @@
   <link rel="stylesheet" href="/section-nav.css?v=00d690856755">
 <!-- search-assets:start -->
 <link rel="stylesheet" href="/search.css?v=54f0851d7812">
-<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=6968f85c290f" defer></script>
+<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=383a497c915b" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
 <link rel="stylesheet" href="/conversion.css?v=5d1deb88cea6">
@@ -627,12 +627,12 @@
         <li>Building <strong>Lakeflow Jobs and Declarative Pipelines</strong> with Databricks Asset Bundles</li>
         <li>Optimising Spark workloads with <strong>OPTIMIZE, VACUUM, and the Spark UI</strong></li>
       </ul>
-      <p>
-        Microsoft's DP-750 skills outline is current as of <strong>11 March 2026</strong>. Every question in Azure Mastery's DP-750 bank is mapped to the current outline — no leftover questions on retired features. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">learn.microsoft.com</a>.
+      <p id="blueprint-notice" data-blueprint-effective="2026-10-19">
+        <strong>DP-750: English revision effective 19 October 2026.</strong> For Databricks, the revision targets Unity Catalog data modeling and development lifecycle processes. Focus on those engineering tasks when comparing versions. Earlier sittings use the preceding outline. See the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">official version and change log</a> for your exam language. Its document update is 18 September 2026; that is not the effective date.
       </p>
       <ul class="exam-format" aria-label="DP-750 exam format facts">
         <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 (mixed formats)</span></li>
-        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">~100 minutes</span></li>
+        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">120 minutes</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £113 UK)</span></li>
         <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew yearly (Associate)</span></li>
@@ -642,10 +642,10 @@
 
     <!-- DP-750 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · 11 March 2026</p>
+      <p class="label-eyebrow section-eyebrow">Published domains · English revision 19 October 2026</p>
       <h2 class="display-small section-title">DP-750 exam objectives</h2>
       <p class="section-lede">
-        Four domains, skills measured as of <strong>11 March 2026</strong> — the two data domains carry the most weight (30–35% each), with environment setup and Unity Catalog governance at 15–20% each. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
+        Databricks work combines compute setup, Unity Catalog governance, data preparation, and pipeline delivery. Preparation and workload maintenance each account for 30–35%; environment and catalog responsibilities each carry 15–20%. Trace a dataset through its ownership, transformations, and release lifecycle. See the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750" rel="noopener">published outline</a>; the revision notice above explains which date applies.
       </p>
       <figure class="exam-family-visual exam-family-visual--data">
         <div class="exam-family-visual__media">
@@ -795,7 +795,7 @@
       <article class="exam-benefit">
         <h3>Exam-specific practice</h3>
         <ul>
-          <li><strong>441 DP-750 practice questions</strong>, each written against the current 11 March 2026 skills outline.</li>
+          <li><strong>441 DP-750 practice questions</strong>, with exam-scoped domain counts shown above.</li>
           <li>Every question is tagged to one of DP-750's four official domains.</li>
           <li>Practise reading Unity Catalog grants, Spark config, and pipeline YAML, the exam's actual scenario style.</li>
         </ul>
@@ -827,7 +827,7 @@
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>The simulator runs a full 100-minute session with no backtracking, matching the real sitting.</li>
+          <li>Practise pacing. Microsoft allows marking and review; breaks and some section transitions restrict returning to earlier questions.</li>
           <li>It draws original questions only, weighted to the outline's own domain split.</li>
           <li>The live DP-750 interface and question mix are Microsoft's to control, not ours.</li>
         </ul>
@@ -919,7 +919,7 @@
           <h3>Rehearse and consolidate</h3>
           <ul>
             <li>Use Focus Weak Spots to revisit weaker topics.</li>
-            <li>Complete a timed simulator session of about 100 minutes.</li>
+            <li>Complete a 120-minute study block and review a timed practice session.</li>
             <li>Review mistakes and decide whether you need more practice.</li>
           </ul>
         </li>
@@ -986,8 +986,8 @@
             <p>How long you wait scales with your attempt count, and each one needs its own voucher.</p>
             <ul>
               <li>First retake: after 24 hours.</li>
-              <li>Second and third retakes: a 14-day wait each.</li>
-              <li>Cap: five attempts per rolling 12 months.</li>
+              <li>All subsequent retakes: a 14-day wait each.</li>
+              <li>Cap: five total attempts within 12 months of the first attempt.</li>
             </ul>
           </div>
         </details>

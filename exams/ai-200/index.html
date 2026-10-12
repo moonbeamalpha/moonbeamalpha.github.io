@@ -93,7 +93,7 @@
         "description": "280 AI-200 practice questions for Azure AI Cloud Developer. Cloud-native AI apps, embeddings, and agent integration — exam-style prep on iPhone and iPad.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-12",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -206,7 +206,7 @@
             "name": "What is the AI-200 retake policy if I fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Waiting times step up after each fail, and every attempt needs a fresh voucher. First retake: after 24 hours. Second and third retakes: a 14-day wait each. Cap: five attempts per rolling 12 months."
+              "text": "Waiting times step up after each fail, and every attempt needs a fresh voucher. First retake: after 24 hours. All subsequent retakes: a 14-day wait each. Cap: five total attempts within 12 months of the first attempt."
             }
           },
           {
@@ -262,7 +262,7 @@
             "name": "Is there an AI-200 practice test mode?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Exam Simulator runs a timed, blueprint-weighted AI-200 session built from the app's own questions, with the clock running and no jumping back to review. It is original practice content, so treat it as rehearsal for the pressure rather than a copy of Microsoft's paper."
+              "text": "Yes. Exam Simulator runs a timed, blueprint-weighted AI-200 session built from the app's own questions, with the clock running; app navigation settings may differ from Microsoft's exam review controls. It is original practice content, so treat it as rehearsal for the pressure rather than a copy of Microsoft's paper."
             }
           }
         ]
@@ -317,7 +317,7 @@
             "@type": "HowToStep",
             "position": 6,
             "name": "Week 6: Review and rehearse",
-            "text": "Use Focus Weak Spots to revisit weaker topics. Complete two timed, 100-minute Exam Simulator sessions. Review mistakes and repeat difficult scenarios.",
+            "text": "Use Focus Weak Spots to revisit weaker topics. Complete two timed practice sessions, plus a 120-minute study block for exam pacing. Review mistakes and repeat difficult scenarios.",
             "url": "https://azuremastery.app/exams/ai-200/#study-plan"
           }
         ],
@@ -341,7 +341,7 @@
   <link rel="stylesheet" href="/section-nav.css?v=00d690856755">
 <!-- search-assets:start -->
 <link rel="stylesheet" href="/search.css?v=54f0851d7812">
-<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=6968f85c290f" defer></script>
+<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=383a497c915b" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
 <link rel="stylesheet" href="/conversion.css?v=5d1deb88cea6">
@@ -608,21 +608,20 @@
         AI-200 is <strong>hands-on and infrastructure-aware</strong>. It covers:
       </p>
       <ul>
-        <li>Develop AI-powered <em>compute solutions</em> — Azure Functions, Container Apps, AKS for AI workloads</li>
-        <li>Develop for <em>vector-enabled storage and data</em> — Azure Cosmos DB vector search, Azure SQL vector capabilities, Azure AI Search vector indexes</li>
-        <li>Implement <em>AI pipelines and integration</em> — Azure Data Factory, Logic Apps, event-driven patterns</li>
-        <li>Implement <em>security and identity for AI</em> — managed identities, Microsoft Entra, Private Link, content filters</li>
-        <li>Monitor and optimise AI solutions — Application Insights, cost controls, performance tuning</li>
+        <li>Implement containerized solutions — container images, Azure Container Apps, and Azure Kubernetes Service</li>
+        <li>Implement AI cloud data services — Azure Cosmos DB, PostgreSQL, and Azure Managed Redis</li>
+        <li>Implement messaging and event-driven solutions — Service Bus, Event Grid, Event Hubs, and Azure Functions</li>
+        <li>Monitor, troubleshoot, and optimize solutions — authentication, authorization, secure configuration, and operational monitoring</li>
       </ul>
       <p>
         Expect scenario questions that combine compute, data, and identity choices.
       </p>
       <p>
-        Microsoft updated the AI-200 skills outline on <strong>5 May 2026</strong>, consolidating the previous five-domain structure into four. Every question in Azure Mastery's AI-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200" rel="noopener">learn.microsoft.com</a>.
+        The AI-200 study guide was last updated on <strong>5 May 2026</strong> and lists four domains. It does not state a dated skills-effective heading. Every question in Azure Mastery's AI-200 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200" rel="noopener">learn.microsoft.com</a>.
       </p>
       <ul class="exam-format" aria-label="AI-200 exam format facts">
         <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 questions, mixed formats</span></li>
-        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">100 minutes (120 min seat)</span></li>
+        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">120 minutes</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
         <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew annually (Associate)</span></li>
@@ -632,10 +631,10 @@
 
     <!-- AI-200 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · 5 May 2026</p>
+      <p class="label-eyebrow section-eyebrow">Published skills outline · guide updated 5 May 2026</p>
       <h2 class="display-small section-title">AI-200 exam objectives</h2>
       <p class="section-lede">
-        Four domains, with weights set by Microsoft's <strong>5 May 2026</strong> update. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
+        Four domains, with weights listed in the published study guide. Every domain below lists Microsoft's own skill groups verbatim from the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200" rel="noopener">official skills outline</a>, so you always know which domain you're being tested on and where your weak spots cluster.
       </p>
       <figure class="exam-family-visual exam-family-visual--ai">
         <div class="exam-family-visual__media">
@@ -819,7 +818,7 @@
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Practise holding focus through a full 100-minute session, matching AI-200's real length.</li>
+          <li>Practise holding focus through a 120-minute study block for AI-200 exam pacing. Check your booking for the assessment time and any accommodations.</li>
           <li>Every rehearsal session mixes the four domains at their published weights, built entirely from original questions.</li>
           <li>The real exam's screen layout and question order are set by Microsoft, not this app.</li>
         </ul>
@@ -903,7 +902,7 @@
           <h3>Review and rehearse</h3>
           <ul>
             <li>Use Focus Weak Spots to revisit weaker topics.</li>
-            <li>Complete two timed, 100-minute Exam Simulator sessions.</li>
+            <li>Complete two timed practice sessions, plus a 120-minute study block for exam pacing.</li>
             <li>Review mistakes and repeat difficult scenarios.</li>
           </ul>
         </li>
@@ -940,8 +939,8 @@
             <p>Waiting times step up after each fail, and every attempt needs a fresh voucher.</p>
             <ul>
               <li>First retake: after 24 hours.</li>
-              <li>Second and third retakes: a 14-day wait each.</li>
-              <li>Cap: five attempts per rolling 12 months.</li>
+              <li>All subsequent retakes: a 14-day wait each.</li>
+              <li>Cap: five total attempts within 12 months of the first attempt.</li>
             </ul>
           </div>
         </details>
@@ -984,7 +983,7 @@
         <details class="faq">
           <summary>Is there an AI-200 practice test mode?</summary>
           <div class="faq__answer">
-            <p>Yes. Exam Simulator runs a timed, blueprint-weighted AI-200 session built from the app's own questions, with the clock running and no jumping back to review. It is original practice content, so treat it as rehearsal for the pressure rather than a copy of Microsoft's paper.</p>
+            <p>Yes. Exam Simulator runs a timed, blueprint-weighted AI-200 session built from the app's own questions, with the clock running; app navigation settings may differ from Microsoft's exam review controls. It is original practice content, so treat it as rehearsal for the pressure rather than a copy of Microsoft's paper.</p>
           </div>
         </details>
       </div>

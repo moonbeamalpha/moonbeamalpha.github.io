@@ -93,7 +93,7 @@
         "description": "472 SC-100 practice questions for Microsoft Cybersecurity Architect. Zero Trust strategy, GRC, and security operations design — updated for the 2026 exam.",
         "inLanguage": "en-GB",
         "datePublished": "2026-05-09",
-        "dateModified": "2026-10-07",
+        "dateModified": "2026-10-12",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Azure Mastery",
@@ -198,7 +198,7 @@
             "name": "What's the SC-100 prerequisite?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can sit SC-100 with no prior certification. To earn the Cybersecurity Architect Expert credential, you must also hold an active SC-200, SC-300, or SC-500 Associate certification. Microsoft replaced the retired AZ-500 route with SC-500 in the current prerequisite list. An exam pass alone is not the prerequisite; the Associate credential must be active on your profile."
+              "text": "An active Associate credential is required to earn Cybersecurity Architect Expert, alongside the SC-100 exam pass. Microsoft currently accepts Cloud and AI Security Engineer Associate, Security Operations Analyst Associate, or Identity and Access Administrator Associate. Choose one of those routes; they are alternatives. AZ-500 is absent from the current list. You can take SC-100 before finishing the qualifying credential, but an earlier Associate exam pass by itself is insufficient."
             }
           },
           {
@@ -238,7 +238,7 @@
             "name": "How soon can I resit SC-100 after a fail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A first retake is available after 24 hours. First retake: 24-hour wait. Second and third retakes: 14-day wait each. Five attempts maximum per rolling 12 months, a fresh voucher required each sitting."
+              "text": "A first retake is available after 24 hours. First retake: 24-hour wait. All subsequent retakes: 14-day wait each. Five total attempts maximum within 12 months of the first attempt, a fresh voucher required each sitting."
             }
           },
           {
@@ -383,7 +383,7 @@
   <link rel="stylesheet" href="/section-nav.css?v=00d690856755">
 <!-- search-assets:start -->
 <link rel="stylesheet" href="/search.css?v=54f0851d7812">
-<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=6968f85c290f" defer></script>
+<script src="/search.js?v=7701f03b83e7" data-search-index="/data/search-index.json?v=383a497c915b" defer></script>
 <!-- search-assets:end -->
 <!-- conversion-assets:start -->
 <link rel="stylesheet" href="/conversion.css?v=5d1deb88cea6">
@@ -666,12 +666,12 @@
       <p>
         Architectural questions often turn on where a control operates: tenant, management plane, workload edge, or external attack surface. Sketch the trust boundary and ownership model before comparing products; a technically capable service can still be wrong when it leaves the required control plane or evidence source untouched.
       </p>
-      <p>
-        Microsoft updated the SC-100 skills outline on <strong>28 July 2026</strong>. Every question in Azure Mastery's SC-100 bank is mapped to the current outline — no leftover questions on retired services. Read the official outline at <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-100" rel="noopener">learn.microsoft.com</a>.
+      <p id="blueprint-notice" data-blueprint-effective="2026-10-21">
+        <strong>SC-100: English revision effective 21 October 2026.</strong> Architecture candidates should revisit security-operations design and evaluation of Microsoft 365 protection. Both groups have minor revisions in the published change log. Earlier sittings use the preceding outline. See the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-100" rel="noopener">official version and change log</a> for your exam language. Its document update is 21 September 2026; that is not the effective date.
       </p>
       <ul class="exam-format" aria-label="SC-100 exam format facts">
-        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">40–60 multiple choice</span></li>
-        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">120 minutes (140 min seat)</span></li>
+        <li><span class="exam-format__label">Questions</span><span class="exam-format__value">Typically 40–60; formats vary</span></li>
+        <li><span class="exam-format__label">Duration</span><span class="exam-format__value">120 minutes</span></li>
         <li><span class="exam-format__label">Pass score</span><span class="exam-format__value">700 / 1000</span></li>
         <li><span class="exam-format__label">Cost</span><span class="exam-format__value">USD $165 (≈ £128 UK)</span></li>
         <li><span class="exam-format__label">Validity</span><span class="exam-format__value">Renew annually (Expert)</span></li>
@@ -681,10 +681,10 @@
 
     <!-- SC-100 exam objectives -->
     <section id="objectives" class="container">
-      <p class="label-eyebrow section-eyebrow">Skills measured · 28 July 2026</p>
+      <p class="label-eyebrow section-eyebrow">Published domains · English revision 21 October 2026</p>
       <h2 class="display-small section-title">SC-100 exam objectives</h2>
       <p class="section-lede">
-        SC-100 has four domains, and Microsoft's <strong>28 July 2026</strong> refresh set the weights. Each summary below follows the <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-100" rel="noopener">official skills outline</a>; the counts are the questions in the app tagged to that domain.
+        Cybersecurity architecture begins with business security priorities and connects operations, identity, infrastructure, applications, and data. Compare control coverage, ownership boundaries, and the evidence needed to support a design choice. These four groups frame the Expert-level architecture work. See the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-100" rel="noopener">published outline</a>; the revision notice above explains which date applies.
       </p>
       <figure class="exam-family-visual exam-family-visual--security">
         <div class="exam-family-visual__media">
@@ -873,7 +873,7 @@
       <article class="exam-benefit">
         <h3>Exam rehearsal</h3>
         <ul>
-          <li>Rehearse a full 120-minute session with no jumping back to flag-and-review, like the real booking.</li>
+          <li>Practise pacing. Microsoft allows marking and review; breaks and some section transitions restrict returning to earlier questions.</li>
           <li>The four-domain split matches the published weighting, drawn entirely from Azure Mastery's own bank.</li>
           <li>Microsoft alone sets the live SC-100 interface and its exact question order.</li>
         </ul>
@@ -1033,7 +1033,7 @@
         <details class="faq">
           <summary>What's the SC-100 prerequisite?</summary>
           <div class="faq__answer">
-            <p>You can sit SC-100 with no prior certification. To earn the Cybersecurity Architect Expert credential, you must also hold an active SC-200, SC-300, or SC-500 Associate certification. Microsoft replaced the retired AZ-500 route with SC-500 in the current prerequisite list. An exam pass alone is not the prerequisite; the Associate credential must be active on your profile.</p>
+            <p>An active Associate credential is required to earn Cybersecurity Architect Expert, alongside the SC-100 exam pass. Microsoft currently accepts <a href="/exams/sc-500/">Cloud and AI Security Engineer Associate</a>, <a href="/exams/sc-200/">Security Operations Analyst Associate</a>, or <a href="/exams/sc-300/">Identity and Access Administrator Associate</a>. Choose one of those routes; they are alternatives. AZ-500 is absent from the current list. You can take SC-100 before finishing the qualifying credential, but an earlier Associate exam pass by itself is insufficient.</p>
           </div>
         </details>
         <details class="faq">
@@ -1066,8 +1066,8 @@
             <p>A first retake is available after 24 hours.</p>
             <ul>
               <li>First retake: 24-hour wait.</li>
-              <li>Second and third retakes: 14-day wait each.</li>
-              <li>Five attempts maximum per rolling 12 months, a fresh voucher required each sitting.</li>
+              <li>All subsequent retakes: 14-day wait each.</li>
+              <li>Five total attempts maximum within 12 months of the first attempt, a fresh voucher required each sitting.</li>
             </ul>
           </div>
         </details>
@@ -1114,7 +1114,7 @@
       <p class="label-eyebrow section-eyebrow">Where SC-100 fits</p>
       <h2 class="display-small section-title">Certification paths that include SC-100</h2>
       <p class="section-lede">
-        SC-100 is the exam for Microsoft Cybersecurity Architect Expert — the senior credential in the security track. The clearest current routes use SC-200 or SC-300 as the accepted Associate prerequisite; an already-earned Azure Security Engineer Associate credential is also accepted, though its AZ-500 exam was retired by Microsoft on 31 August 2026 and is no longer bookable. Tap any linked exam below to see its dedicated study app page.
+        SC-100 is the exam for Microsoft Cybersecurity Architect Expert — the senior credential in the security track. The current qualifying Associate credentials are SC-500, SC-200, or SC-300. AZ-500 is a retired reference route and is not in Microsoft's current prerequisite list. Tap any linked exam below to see its dedicated study app page.
       </p>
       <div class="cert-paths">
 
@@ -1130,6 +1130,7 @@
                 <span class="cert-path__chip-role">Fundamentals (optional)</span>
               </a>
             </li>
+            <li class="cert-path__station"><a class="cert-path__chip" href="/exams/sc-500/" data-cert-level="associate"><span class="cert-path__chip-tier" data-tier="ASSOCIATE" aria-hidden="true"></span><span class="cert-path__chip-code">SC-500</span><span class="cert-path__chip-role">qualifying Associate prerequisite</span></a></li>
             <li class="cert-path__station">
               <span class="cert-path__chip cert-path__chip--current" data-cert-level="expert"><span class="cert-path__chip-tier" data-tier="EXPERT" aria-hidden="true"></span>
                 <span class="cert-path__chip-code">SC-100</span>
@@ -1219,13 +1220,13 @@
       <p class="label-eyebrow section-eyebrow">Before / after SC-100</p>
       <h2 class="display-small section-title">Related certifications</h2>
       <p class="section-lede">
-        SC-100 is the senior security exam. SC-200 and SC-300 are current prerequisite routes; an already-earned Azure Security Engineer Associate credential also qualifies, though its AZ-500 exam was retired by Microsoft on 31 August 2026. SC-900 builds the cross-cutting Microsoft security vocabulary if security is new to you.
+        SC-100 is the senior security exam. SC-500, SC-200, and SC-300 are current qualifying Associate routes. AZ-500 is retired and is no longer in the current prerequisite list. SC-900 builds the cross-cutting Microsoft security vocabulary if security is new to you.
       </p>
       <nav class="related-grid" aria-label="Related certifications">
-        <a class="related-card" data-certification-card data-exam-tone="retired" href="/exams/retired/"><!-- related-certification-badge:start --><span class="certification-badge" aria-hidden="true"><img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="certification-badge__code" data-code="AZ-500"></span><span class="certification-badge__stars" data-stars="0"></span></span><!-- related-certification-badge:end -->
-          <span class="related-card__code">AZ-500</span>
-          <span class="related-card__name">Microsoft Azure Security Engineer</span>
-          <span class="related-card__hint">Retired exam that once granted an accepted prerequisite credential. AZ-500 was retired by Microsoft on 31 August 2026; already-earned credentials remain accepted — check Microsoft's SC-100 page for current details.</span>
+        <a class="related-card" data-certification-card data-exam-tone="security" href="/exams/sc-500/"><!-- related-certification-badge:start --><span class="certification-badge" aria-hidden="true"><img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="certification-badge__code" data-code="SC-500"></span><span class="certification-badge__tier" data-tier="ASSOCIATE"></span><span class="certification-badge__stars" data-stars="2"><img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy"><img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy"></span></span><!-- related-certification-badge:end -->
+          <span class="related-card__code">SC-500</span>
+          <span class="related-card__name">Cloud and AI Security Engineer Associate</span>
+          <span class="related-card__hint">Qualifying Associate prerequisite for Cybersecurity Architect Expert. Practise implementing the cloud and AI security controls you will later architect.</span>
         </a>
         <a class="related-card" data-certification-card data-exam-tone="security" href="/exams/sc-900/"><!-- related-certification-badge:start --><span class="certification-badge" aria-hidden="true"><img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="certification-badge__code" data-code="SC-900"></span><span class="certification-badge__stars" data-stars="1"><img src="/exams/images/fluent-star-24-filled.svg" alt="" width="24" height="24" loading="lazy"></span></span><!-- related-certification-badge:end -->
           <span class="related-card__code">SC-900</span>

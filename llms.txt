@@ -72,7 +72,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### Data (5)
 
-- [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 346 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills measured as of 21 July 2026.
+- [DP-900 — Microsoft Azure Data Fundamentals](https://azuremastery.app/exams/dp-900/): 366 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Validates core data concepts (relational vs non-relational, OLTP vs OLAP), relational data on Azure (Azure SQL family), non-relational data on Azure (Cosmos DB, blob/file/table), and analytics workloads (Synapse, Microsoft Fabric, Power BI fundamentals). Skills measured as of 21 July 2026.
 
 - [DP-100 — Designing and Implementing a Data Science Solution on Azure (retired)](https://azuremastery.app/exams/dp-100/): 350 in-app practice questions retained for reference. Microsoft retired DP-100 on 1 June 2026; it can no longer be scheduled.
 

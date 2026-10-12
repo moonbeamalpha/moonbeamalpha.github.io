@@ -25,7 +25,7 @@
     "DP-700": 385,
     "DP-750": 446,
     "DP-800": 419,
-    "DP-900": 360,
+    "DP-900": 380,
     "GH-300": 367,
     "GH-900": 370,
     "PL-300": 430,
@@ -154,8 +154,8 @@
       "dp800-secure": 154
     },
     "DP-900": {
-      "dp900-analytics": 103,
-      "dp900-coredata": 89,
+      "dp900-analytics": 109,
+      "dp900-coredata": 103,
       "dp900-nonrelational": 68,
       "dp900-relational": 86
     },
@@ -245,7 +245,7 @@
     "DP-700": 340,
     "DP-750": 441,
     "DP-800": 413,
-    "DP-900": 346,
+    "DP-900": 366,
     "GH-300": 356,
     "GH-900": 347,
     "PL-300": 418,
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12873,
+    "questionCount": 12893,
     "questionCountLabel": "12,800+"
   }
 }

@@ -57,6 +57,8 @@ def exam_metadata(home):
             continue
         if 'roadmap-level' in node.attrs.get('class', '').split():
             level = clean(node.text())
+            if level == 'Associate / Intermediate':
+                level = 'Associate'
         if level and 'roadmap-cell' in node.attrs.get('class', '').split():
             for link in node.all(lambda n: n.tag == 'a'):
                 code = clean(link.text())
@@ -82,13 +84,18 @@ def exam_tier(code, snapshot, metadata):
         return 'retired', 'Retired reference', 0
     name = snapshot['names'][code]
     level, category = metadata[code]
+    if code == 'GH-300':
+        # GitHub uses Intermediate, not Microsoft's Associate credential title.
+        level = 'Intermediate'
     if 'Fundamentals' in name or 'Foundations' in name:
         level = 'Fundamentals'
-    return category, level, {'Fundamentals': 1, 'Associate': 2, 'Expert': 3}[level]
+    return category, level, {'Fundamentals': 1, 'Associate': 2, 'Intermediate': 2, 'Expert': 3}[level]
 
 
 def certification_badge(code, stars):
     tier = {2: 'ASSOCIATE', 3: 'EXPERT'}.get(stars)
+    if code == 'GH-300' and stars == 2:
+        tier = 'INTERMEDIATE'
     return ('<span class="certification-badge" aria-hidden="true">'
             '<img class="certification-badge__shield" src="/exams/images/certification-badge-shield-v3.webp" '
             'alt="" width="300" height="300" loading="lazy" decoding="async">'

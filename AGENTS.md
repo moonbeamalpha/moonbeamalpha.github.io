@@ -6,6 +6,19 @@ anyone driving them.
 **Pushing `main` publishes immediately.** GitHub Pages serves this branch. Do not
 merge or push to `main` without the owner asking for it.
 
+## Publication count freeze — 12 October 2026
+
+Chris requires the published question counts to remain unchanged until the next
+app release is approved in the App Store and he authorizes the count update.
+Content corrections may be published with the current production snapshot:
+12,758 exam-scoped questions, 12,700+ label, 30 current exams and 29 paths.
+Do not run `sync-marketing-counts.py --refresh` from unreleased app exports for
+publication. `--check` and count synchronization from the existing website
+snapshot are allowed. The regression receipt in
+`Tools/production-count-freeze-20261012.json` protects that snapshot, all exam
+counts, practice-preview sources and social images. Update that receipt only
+with the owner's approved-release count authorization.
+
 ---
 
 ## Never hand-edit an exam or question count

@@ -1,0 +1,134 @@
+{
+  "verifiedOn": "2026-10-12",
+  "purpose": "Reviewed public-copy facts only; app catalogue and marketing counts remain separate sources of truth. Recheck official sources before updating this receipt.",
+  "assessmentDurations": {
+    "AB-410": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/intelligent-applications-builder-associate/",
+      "sourceSHA256": "210d13b1f94f81e91fb603955c5fc75fc449e64a39762c2f76c2c0f34b8a478a"
+    },
+    "AB-620": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/ai-agent-builder-associate/",
+      "sourceSHA256": "ed7f3d160cf9e8282c51fa0b17f1ad3d52a7192af4ee8a3a05c335de55e8e52f"
+    },
+    "AI-103": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/",
+      "sourceSHA256": "fcfc7e0d9f51a4cf692be8a954c744b4b89fe6add29ea343bda6843e5ee590bd"
+    },
+    "AI-200": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-cloud-developer-associate/",
+      "sourceSHA256": "00663ef83385ab3c59dba5b01387d45b7633d3c764f5a46407f44ed9aab1d6c7"
+    },
+    "AI-300": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/operationalizing-machine-learning-and-generative-ai-solutions/",
+      "sourceSHA256": "c3d6e5a68f35cdedaa529722308cb7cfd80c8f95ed4ba9bb2b1810e756bca5a2"
+    },
+    "DP-750": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/implementing-data-engineering-solutions-using-azure-databricks/",
+      "sourceSHA256": "92e1251b63f77593d83c5c5a49529533c856d7ef6d7829c98e0d623957b4c709"
+    },
+    "DP-800": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/developing-ai-enabled-database-solutions/",
+      "sourceSHA256": "cf9a21593d0d36aca555f34d83d37d9c725d477edac39e9f918cb799072ed646"
+    },
+    "SC-500": {
+      "minutes": 120,
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/cloud-and-ai-security-engineer-associate/",
+      "sourceSHA256": "b2b3703089677a77a4d962de42ae58d7c0b9a13b50e20af3b38f2eae49b77423"
+    }
+  },
+  "futureEnglishOutlines": {
+    "AB-100": {
+      "effectiveDate": "2026-10-14",
+      "documentUpdated": "2026-08-16",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-100",
+      "sourceSHA256": "f96c4a5eb29f4be8040d8beba0d3f30b6bdf6dd21f3aff4e09f22844b6428b3f"
+    },
+    "AB-900": {
+      "effectiveDate": "2026-10-14",
+      "documentUpdated": "2026-09-14",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-900",
+      "sourceSHA256": "513c29b5377c2c082e5cde5d7c513e4163359cfe686115cee4073ea9f4f57e85"
+    },
+    "DP-300": {
+      "effectiveDate": "2026-10-27",
+      "documentUpdated": "2026-09-25",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-300",
+      "sourceSHA256": "206d51802f63a2a86759a4a3cd01a1b687647403251e0445746f227275d16ac8"
+    },
+    "DP-700": {
+      "effectiveDate": "2026-10-19",
+      "documentUpdated": "2026-08-16",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-700",
+      "sourceSHA256": "92fb227e96e495fb9af0f10b07f753e4fcb909e24039d1e78c03e1a0b1528220"
+    },
+    "DP-750": {
+      "effectiveDate": "2026-10-19",
+      "documentUpdated": "2026-09-18",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-750",
+      "sourceSHA256": "705a06bc17d1465abe30b650019ccd299bfa41c7c969624990f7bd9f4c8f9bc8"
+    },
+    "DP-800": {
+      "effectiveDate": "2026-10-19",
+      "documentUpdated": "2026-09-18",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-800",
+      "sourceSHA256": "2b718e15cafa7167afdcd1b31abeedf9e4ef6dd292905afedada52062c7fe322"
+    },
+    "SC-100": {
+      "effectiveDate": "2026-10-21",
+      "documentUpdated": "2026-09-21",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-100",
+      "sourceSHA256": "29217c6d6e8acde4ed205cccc2448cc3245fa42b1f914f1bf37c679e0734eae7"
+    },
+    "SC-200": {
+      "effectiveDate": "2026-10-21",
+      "documentUpdated": "2026-09-21",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-200",
+      "sourceSHA256": "1ef633db14f701c6b89c874485d2603820354642c1120d3e3197e59f636d5c45"
+    },
+    "SC-300": {
+      "effectiveDate": "2026-10-28",
+      "documentUpdated": "2026-08-16",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-300",
+      "sourceSHA256": "3e49eb82e877f95165560e73b58b2db58f186285b3b4521cb44847561f7112e9"
+    },
+    "SC-900": {
+      "effectiveDate": "2026-10-21",
+      "documentUpdated": "2026-09-21",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-900",
+      "sourceSHA256": "c7f90aa2fb024ba2985feacc4eba7f7f05172d247c8d717bc1ff614342199295"
+    }
+  },
+  "undatedSkillsGuides": {
+    "AB-410": {
+      "documentUpdated": "2026-05-15",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-410"
+    },
+    "AB-650": {
+      "documentUpdated": "2026-07-27",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-650"
+    },
+    "AI-200": {
+      "documentUpdated": "2026-05-05",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200"
+    },
+    "AI-300": {
+      "documentUpdated": "2026-03-05",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-300"
+    },
+    "AI-500": {
+      "documentUpdated": "2026-07-16",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500"
+    },
+    "SC-500": {
+      "documentUpdated": "2026-05-13",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-500"
+    }
+  }
+}

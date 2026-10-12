@@ -39,6 +39,12 @@ jobs:
       - name: Domain-count patcher self-test
         run: python3 Tools/test-domain-counts.py
 
+      - name: Reviewed public exam facts and navigation
+        run: python3 Tools/test-public-exam-facts.py
+
+      - name: Published counts remain frozen until the approved app release
+        run: python3 Tools/test-production-count-freeze.py
+
       # Ratchets the current exam pages against reading as one templated skeleton
       # (see Tools/check-page-similarity.py's docstring and the task-B3 brief) --
       # fails if any shared pair, the highest-similarity pair, or the corpus

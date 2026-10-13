@@ -2118,30 +2118,33 @@ html, body { overflow-x: clip; }
     @media (max-width: 768px) {
       .nav-links li.nav-item-hide-mobile { display: none; }
     }
-    /* Native, progressively-enhanced reveals. Content is visible by default —
-       nothing here ever sets opacity:0 on text before it enters the viewport.
-       JavaScript adds `reveal-in` only when an element is about to be seen,
-       which plays a one-shot additive animation; without JS, or before the
-       class is added, the content is already fully visible. */
+    /* One-shot entrances use independent transforms, preserving the existing
+       layout, device angles and hover states. JS removes each class on finish. */
     @keyframes am-reveal {
-      from { opacity: 0; transform: translateY(28px); }
-      to { opacity: 1; transform: none; }
+      from { opacity: 0; translate: 0 20px; }
+      to { opacity: 1; translate: 0 0; }
     }
-    @keyframes am-reveal-from-left {
-      from { opacity: 0; transform: translateX(-36px); }
-      to { opacity: 1; transform: none; }
+    @keyframes am-reveal-card {
+      from { opacity: 0; translate: 0 24px; scale: 0.985; }
+      to { opacity: 1; translate: 0 0; scale: 1; }
     }
-    @keyframes am-reveal-from-right {
-      from { opacity: 0; transform: translateX(36px); }
-      to { opacity: 1; transform: none; }
+    @keyframes am-reveal-device {
+      from { opacity: 0; translate: 0 32px; scale: 0.97; }
+      to { opacity: 1; translate: 0 0; scale: 1; }
     }
     .reveal-in {
-      animation: am-reveal 0.55s ease both;
-      animation-delay: var(--delay, 0s);
+      animation: am-reveal 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation-delay: var(--reveal-delay, 0ms);
     }
-    .reveal-in.reveal-from-left { animation-name: am-reveal-from-left; }
-    .reveal-in.reveal-from-right { animation-name: am-reveal-from-right; }
-    .reveal-in.reveal-after-device { animation-delay: 160ms; }
+    .reveal-in.reveal-card { animation-name: am-reveal-card; }
+    .reveal-in.reveal-device { animation-name: am-reveal-device; animation-duration: 780ms; }
+    @media (max-width: 768px) {
+      .reveal-in { animation-duration: 480ms; }
+      .reveal-in.reveal-device { animation-duration: 620ms; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      html.am-smooth-scroll { scroll-behavior: smooth; }
+    }
 
     /* ══════════════════════════════════════════════
        ACCESSIBILITY — Reduced Motion
@@ -2150,7 +2153,7 @@ html, body { overflow-x: clip; }
       ::view-transition-old(hero-phone-composition),
       ::view-transition-new(hero-phone-composition) { animation-duration: 0.01ms; }
       .hero-phone-enter { animation: none !important; translate: none !important; }
-      .reveal-in { animation: none !important; opacity: 1 !important; transform: none !important; }
+      .reveal-in { animation: none !important; opacity: 1 !important; translate: none !important; scale: none !important; }
       .screenshots-strip { transform: none !important; }
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }

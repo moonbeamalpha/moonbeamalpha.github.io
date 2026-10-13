@@ -60,7 +60,7 @@ assert(actionGradient, 'Primary actions and new-feature badges share the accessi
 for (const color of actionGradient.slice(1)) assert(contrastRatio('#ffffff', color) >= 4.5, 'White action labels must meet AA across the gradient');
 const entranceScript = home.match(/\(function initEntranceAnimations\(\) \{[\s\S]*?\n        \}\)\(\);/)?.[0];
 assert(entranceScript, 'Native entrance animations are missing');
-assert(entranceScript.includes("'.hero-devices > .phone-wrap'"), 'Only decorative hero phones should animate');
+assert(entranceScript.includes("'.hero-devices > .phone-wrap, .hero-devices > .hero-device'"), 'Only decorative hero devices should animate');
 assert(!/hero-text|hero-ctas|hero-app-title/.test(entranceScript), 'Never gate hero copy on an entrance');
 assert(entranceScript.includes('motionPreference.matches'), 'Entrance animations must respect reduced motion');
 assert(entranceScript.includes('heroObserver.unobserve(entry.target)'), 'Hero entrance must run once');
@@ -77,7 +77,7 @@ assert(
     /::view-transition-new\(hero-phone-composition\)/.test(read('home.css')),
   'The isolated hero phone snapshot must follow the theme cross-fade contract'
 );
-assert(/\.reveal-in\.reveal-after-device\s*\{\s*animation-delay: 160ms;/.test(read('home.css')));
+assert(entranceScript.includes('Math.min(index, 3) * 65'), 'Entrance staggers must stay short and bounded');
 assert(!/\.reveal-pending\s*\{[^}]*opacity:\s*0/.test(read('home.css')), 'Reveals must be additive, not opacity:0 by default');
 assert(
   !/color-mix\(in srgb,\s*var\(--amh-accent(?:-2)?\)[^)]*#000/i.test(lightTheme),

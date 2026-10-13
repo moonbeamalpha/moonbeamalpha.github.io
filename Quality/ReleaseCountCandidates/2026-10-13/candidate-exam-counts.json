@@ -1,0 +1,315 @@
+{
+  "bank_totals": {
+    "AB-100": 456,
+    "AB-410": 446,
+    "AB-620": 455,
+    "AB-650": 510,
+    "AB-731": 356,
+    "AB-900": 375,
+    "AI-102": 334,
+    "AI-103": 573,
+    "AI-200": 520,
+    "AI-300": 425,
+    "AI-500": 455,
+    "AI-900": 340,
+    "AI-901": 604,
+    "AZ-104": 731,
+    "AZ-204": 405,
+    "AZ-305": 468,
+    "AZ-400": 556,
+    "AZ-500": 346,
+    "AZ-700": 659,
+    "AZ-900": 453,
+    "DP-100": 350,
+    "DP-300": 435,
+    "DP-700": 385,
+    "DP-750": 446,
+    "DP-800": 419,
+    "DP-900": 380,
+    "GH-300": 367,
+    "GH-900": 370,
+    "PL-300": 430,
+    "PL-900": 376,
+    "SC-100": 478,
+    "SC-200": 379,
+    "SC-300": 468,
+    "SC-500": 514,
+    "SC-900": 409
+  },
+  "cert_path_count": 29,
+  "domain_counts": {
+    "AB-100": {
+      "ab100-deploy": 188,
+      "ab100-design": 131,
+      "ab100-plan": 124
+    },
+    "AB-410": {
+      "ab410-apps": 138,
+      "ab410-foundation": 123,
+      "ab410-logic": 183
+    },
+    "AB-620": {
+      "ab620-integrate": 170,
+      "ab620-manage": 82,
+      "ab620-plan": 135
+    },
+    "AB-650": {
+      "ab650-aiservices": 196,
+      "ab650-govern": 207,
+      "ab650-tenant": 103
+    },
+    "AB-731": {
+      "ab731-microsoft": 131,
+      "ab731-strategy": 78,
+      "ab731-value": 126
+    },
+    "AB-900": {
+      "ab900-admin": 83,
+      "ab900-core": 113,
+      "ab900-protect": 127
+    },
+    "AI-103": {
+      "ai103-extraction": 64,
+      "ai103-genagentic": 189,
+      "ai103-plan": 150,
+      "ai103-textspeech": 74,
+      "ai103-vision": 80
+    },
+    "AI-200": {
+      "ai200-compute": 68,
+      "ai200-data": 84,
+      "ai200-integration": 65,
+      "ai200-operations": 63
+    },
+    "AI-300": {
+      "ai300-genaiops": 88,
+      "ai300-lifecycle": 110,
+      "ai300-mlops": 74,
+      "ai300-optimize": 56,
+      "ai300-quality": 54
+    },
+    "AI-500": {
+      "ai500-architect": 84,
+      "ai500-develop": 158,
+      "ai500-evaluate": 104,
+      "ai500-secure": 106
+    },
+    "AI-901": {
+      "ai901-concepts": 252,
+      "ai901-implement": 320
+    },
+    "AZ-104": {
+      "az104-compute": 137,
+      "az104-identity": 125,
+      "az104-monitoring": 83,
+      "az104-networking": 104,
+      "az104-storage": 112
+    },
+    "AZ-305": {
+      "az305-continuity": 85,
+      "az305-identity": 117,
+      "az305-infra": 156,
+      "az305-storage": 101
+    },
+    "AZ-400": {
+      "az400-monitoring": 45,
+      "az400-pipelines": 291,
+      "az400-processes": 76,
+      "az400-security": 68,
+      "az400-sourcecontrol": 67
+    },
+    "AZ-700": {
+      "az700-access": 65,
+      "az700-connectivity": 156,
+      "az700-core": 187,
+      "az700-delivery": 125,
+      "az700-security": 116
+    },
+    "AZ-900": {
+      "az900-concepts": 113,
+      "az900-governance": 130,
+      "az900-services": 161
+    },
+    "DP-300": {
+      "dp300-automation": 72,
+      "dp300-hadr": 88,
+      "dp300-monitoring": 92,
+      "dp300-platform": 77,
+      "dp300-security": 96
+    },
+    "DP-700": {
+      "dp700-implement": 108,
+      "dp700-ingest": 114,
+      "dp700-monitor": 118
+    },
+    "DP-750": {
+      "dp750-environment": 79,
+      "dp750-governance": 80,
+      "dp750-pipelines": 144,
+      "dp750-process": 138
+    },
+    "DP-800": {
+      "dp800-ai": 113,
+      "dp800-design": 146,
+      "dp800-secure": 154
+    },
+    "DP-900": {
+      "dp900-analytics": 109,
+      "dp900-coredata": 103,
+      "dp900-nonrelational": 68,
+      "dp900-relational": 86
+    },
+    "GH-300": {
+      "gh300-architecture": 47,
+      "gh300-features": 102,
+      "gh300-privacy": 49,
+      "gh300-productivity": 46,
+      "gh300-prompt": 48,
+      "gh300-responsible": 64
+    },
+    "GH-900": {
+      "gh900-basics": 91,
+      "gh900-collaborate": 49,
+      "gh900-community": 28,
+      "gh900-practices": 52,
+      "gh900-projects": 33,
+      "gh900-repositories": 46,
+      "gh900-security": 48
+    },
+    "PL-300": {
+      "pl300-manage": 79,
+      "pl300-model": 109,
+      "pl300-prepare": 112,
+      "pl300-visualize": 118
+    },
+    "PL-900": {
+      "pl900-agents": 80,
+      "pl900-business": 30,
+      "pl900-environment": 84,
+      "pl900-powerapps": 80,
+      "pl900-powerautomate": 74
+    },
+    "SC-100": {
+      "sc100-appsdata": 107,
+      "sc100-bp": 98,
+      "sc100-infra": 126,
+      "sc100-secops": 141
+    },
+    "SC-200": {
+      "sc200-hunt": 80,
+      "sc200-incident": 132,
+      "sc200-ops": 161
+    },
+    "SC-300": {
+      "sc300-access": 127,
+      "sc300-governance": 108,
+      "sc300-identities": 106,
+      "sc300-workload": 107
+    },
+    "SC-500": {
+      "sc500-compute": 118,
+      "sc500-datanet": 123,
+      "sc500-identity": 118,
+      "sc500-posture": 113
+    },
+    "SC-900": {
+      "sc900-compliance": 84,
+      "sc900-concepts": 51,
+      "sc900-entra": 108,
+      "sc900-security": 150
+    }
+  },
+  "exams": {
+    "AB-100": 443,
+    "AB-410": 444,
+    "AB-620": 387,
+    "AB-650": 506,
+    "AB-731": 335,
+    "AB-900": 323,
+    "AI-102": 334,
+    "AI-103": 557,
+    "AI-200": 280,
+    "AI-300": 382,
+    "AI-500": 452,
+    "AI-900": 340,
+    "AI-901": 572,
+    "AZ-104": 561,
+    "AZ-204": 405,
+    "AZ-305": 459,
+    "AZ-400": 547,
+    "AZ-500": 346,
+    "AZ-700": 649,
+    "AZ-900": 404,
+    "DP-100": 350,
+    "DP-300": 425,
+    "DP-700": 340,
+    "DP-750": 441,
+    "DP-800": 413,
+    "DP-900": 366,
+    "GH-300": 356,
+    "GH-900": 347,
+    "PL-300": 418,
+    "PL-900": 348,
+    "SC-100": 472,
+    "SC-200": 373,
+    "SC-300": 448,
+    "SC-500": 472,
+    "SC-900": 393
+  },
+  "names": {
+    "AB-100": "Agentic AI Business Solutions Architect",
+    "AB-410": "Intelligent Applications Builder Associate",
+    "AB-620": "AI Agent Builder Associate",
+    "AB-650": "AI Services Administrator Associate",
+    "AB-731": "AI Transformation Leader",
+    "AB-900": "Microsoft 365 Copilot and Agent Administration Fundamentals",
+    "AI-102": "Microsoft Azure AI Engineer Associate",
+    "AI-103": "Microsoft Azure AI App & Agent Developer Associate",
+    "AI-200": "Azure AI Cloud Developer",
+    "AI-300": "Operationalizing Machine Learning and Generative AI Solutions",
+    "AI-500": "Multi-Agent AI Solutions Expert",
+    "AI-900": "Microsoft Azure AI Fundamentals",
+    "AI-901": "Microsoft Azure AI Fundamentals",
+    "AZ-104": "Microsoft Azure Administrator",
+    "AZ-204": "Azure Developer Associate",
+    "AZ-305": "Azure Solutions Architect Expert",
+    "AZ-400": "Microsoft DevOps Engineer Expert",
+    "AZ-500": "Microsoft Azure Security Engineer",
+    "AZ-700": "Azure Network Engineer Associate",
+    "AZ-900": "Microsoft Azure Fundamentals",
+    "DP-100": "Designing and Implementing a Data Science Solution on Azure",
+    "DP-300": "Azure Database Administrator Associate",
+    "DP-700": "Fabric Data Engineer",
+    "DP-750": "Azure Databricks Data Engineer",
+    "DP-800": "SQL AI Developer",
+    "DP-900": "Microsoft Azure Data Fundamentals",
+    "GH-300": "GitHub Copilot",
+    "GH-900": "GitHub Foundations",
+    "PL-300": "Power BI Data Analyst Associate",
+    "PL-900": "Power Platform Fundamentals",
+    "SC-100": "Microsoft Cybersecurity Architect",
+    "SC-200": "Microsoft Security Operations Analyst",
+    "SC-300": "Microsoft Identity and Access Administrator",
+    "SC-500": "Cloud and AI Security Engineer",
+    "SC-900": "Microsoft Security, Compliance, and Identity Fundamentals"
+  },
+  "retired": [
+    "AI-102",
+    "AI-900",
+    "AZ-204",
+    "AZ-500",
+    "DP-100"
+  ],
+  "retirement_dates": {
+    "AI-102": "2026-06-30",
+    "AI-900": "2026-06-30",
+    "AZ-204": "2026-07-31",
+    "AZ-500": "2026-08-31",
+    "DP-100": "2026-06-01"
+  },
+  "totals": {
+    "examCount": 30,
+    "questionCount": 12913,
+    "questionCountLabel": "12,900+"
+  }
+}

@@ -5,150 +5,151 @@
     {
       "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
       "exitCode": 0,
-      "seconds": 0.55,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/00.log"
+      "seconds": 0.61,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/00.log"
     },
     {
       "command": "python3 Tools/test-domain-counts.py",
       "exitCode": 0,
       "seconds": 0.07,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/01.log"
+      "log": "/private/tmp/pr901-review/site-candidate-gates/01.log"
     },
     {
       "command": "python3 Tools/test-public-exam-facts.py",
       "exitCode": 0,
-      "seconds": 0.78,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/02.log"
+      "seconds": 0.81,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/02.log"
     },
     {
       "command": "python3 Tools/check-page-similarity.py --check",
       "exitCode": 0,
-      "seconds": 2.65,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/03.log"
+      "seconds": 3.28,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/03.log"
     },
     {
       "command": "python3 Tools/update-sitemap-lastmod.py --check",
       "exitCode": 0,
-      "seconds": 0.83,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/04.log"
+      "seconds": 0.95,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/04.log"
     },
     {
       "command": "python3 Tools/add-exam-page-cta.py --check",
       "exitCode": 0,
-      "seconds": 0.05,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/05.log"
+      "seconds": 0.06,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/05.log"
     },
     {
       "command": "python3 Tools/check-marketing-ui.py",
       "exitCode": 0,
-      "seconds": 0.05,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/06.log"
+      "seconds": 0.06,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/06.log"
     },
     {
       "command": "python3 Tools/build-search-index.py --check",
       "exitCode": 0,
-      "seconds": 0.3,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/07.log"
+      "seconds": 0.38,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/07.log"
     },
     {
       "command": "python3 Tools/sync-search-ui.py --check",
       "exitCode": 0,
-      "seconds": 0.08,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/08.log"
+      "seconds": 0.12,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/08.log"
     },
     {
       "command": "python3 Tools/test-search-index.py",
       "exitCode": 0,
-      "seconds": 1.61,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/09.log"
+      "seconds": 2.52,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/09.log"
     },
     {
       "command": "python3 Tools/version-static-assets.py --check",
       "exitCode": 0,
-      "seconds": 0.2,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/10.log"
+      "seconds": 0.4,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/10.log"
     },
     {
       "command": "python3 Tools/sync-conversion-ui.py --check",
       "exitCode": 0,
-      "seconds": 0.18,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/11.log"
+      "seconds": 0.26,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/11.log"
     },
     {
       "command": "python3 Tools/check-conversion-ui.py",
       "exitCode": 0,
-      "seconds": 1.33,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/12.log"
+      "seconds": 2.33,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/12.log"
     },
     {
       "command": "python3 Tools/build-download-qr.py --check",
       "exitCode": 0,
-      "seconds": 0.2,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/13.log"
+      "seconds": 0.28,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/13.log"
     },
     {
       "command": "python3 Tools/sync-exam-faq-schema.py --check",
       "exitCode": 0,
       "seconds": 0.06,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/14.log"
+      "log": "/private/tmp/pr901-review/site-candidate-gates/14.log"
     },
     {
       "command": "python3 Tools/add-ga-internal-flag.py --check",
       "exitCode": 0,
-      "seconds": 0.06,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/15.log"
+      "seconds": 0.15,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/15.log"
     },
     {
       "command": "python3 Tools/add-footer-links.py --check",
       "exitCode": 0,
-      "seconds": 0.04,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/16.log"
+      "seconds": 0.09,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/16.log"
     },
     {
       "command": "python3 Tools/validate-marketing-seo.py",
       "exitCode": 0,
-      "seconds": 1.32,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/17.log"
+      "seconds": 2.79,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/17.log"
     },
     {
       "command": "python3 Tools/validate-aura-help.py",
       "exitCode": 0,
-      "seconds": 0.04,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/18.log"
+      "seconds": 0.05,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/18.log"
     },
     {
       "command": "bash Tools/build-home-css.sh --check",
       "exitCode": 0,
-      "seconds": 6.8,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/19.log"
+      "seconds": 70.71,
+      "log": "/private/tmp/pr901-review/site-css-retry.log",
+      "initialEnvironmentalFailure": "Sandbox npm registry DNS/cache access; same exact command outside sandbox subsequently verified successful."
     },
     {
       "command": "node Tools/check-marketing-performance.mjs",
       "exitCode": 0,
-      "seconds": 0.1,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/20.log"
+      "seconds": 0.15,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/20.log"
     },
     {
       "command": "node Tools/test-app-store-links.mjs",
       "exitCode": 0,
-      "seconds": 0.04,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/21.log"
+      "seconds": 0.05,
+      "log": "/private/tmp/pr901-review/site-candidate-gates/21.log"
     },
     {
       "command": "node Tools/test-search.mjs",
       "exitCode": 0,
       "seconds": 0.13,
-      "log": "/private/tmp/bp20261014-site-candidate-gates/22.log"
+      "log": "/private/tmp/pr901-review/site-candidate-gates/22.log"
     }
   ],
-  "baseCommit": "6f8e58737a365c8ea75aa693e0814f0eb56a3293",
-  "appBaseCommit": "f4d627e04b9a947180a15ea6d972d23041a15cf3",
-  "appBankSHA256": "485ec1221a52ddc5613dba12bfd934ea8295bc04faeb5b15cc0e8fa8ed0bb14c",
-  "candidateDiffSHA256": "a4b0667dc436e76a273ccb3879f082e2ff593ce042df4542d779411f2fee7abb",
+  "baseCommit": "090b388ebac0caa3ce078dbed908ab597e95c30e",
+  "appBaseCommit": "1b3eb6e69e693a26c9c47ecd04b9cc007dcd6b58",
+  "appBankSHA256": "14329ea78f5c402488600b06bdc97237b02f4a870f94cab75c7e0a92f8cf187e",
+  "candidateDiffSHA256": "7bc8d77e291772d87aa7aa5040cc4f77f93ab687c3dfaa994a69272924a16821",
   "candidateFileHashes": [
     {
       "path": "about/index.html",
-      "sha256": "b144005bd51fe55a85ae2f7bc07a2abda637bfc66cbeda8d201b84ef417d7964"
+      "sha256": "97e1bb0e08de9e96478e767a3b65d96229f9f894065d1908d68ec4f9e63cd9b2"
     },
     {
       "path": "apps/AzureMastery/linkedin-banner.html",
@@ -160,255 +161,255 @@
     },
     {
       "path": "apps/AzureMastery/privacy.html",
-      "sha256": "df2df76f0848c029c8003caa413113654071868b87434d05ade62c1335849fdd"
+      "sha256": "3a326c9b889e0b82fb803d88050299d6b9aaebe10fd5eaa24716ac4dec348b79"
     },
     {
       "path": "apps/AzureMastery/support.html",
-      "sha256": "7b7f76d9e5894dc4f2a0db97ed194c6cf0cb225fee22ef22241fcd12a3197f34"
+      "sha256": "9c5ad47f4c02f20da7e206e59b5117b28409b50a6c26b96564a3230e80de5cd2"
     },
     {
       "path": "apps/AzureMastery/terms.html",
-      "sha256": "7077e38be681ccd06ed916dfa89987a25250c00be3d968a9ee78b7715650fb41"
+      "sha256": "b207f21df65768dbcfd797989151dcdc566c36efa9a1db38c22e942d74c99b5c"
     },
     {
       "path": "ask-aura/index.html",
-      "sha256": "33b19759b93c5aea85d9c8492a83631693a6e7cfcdb534382a264de449d7fd7c"
+      "sha256": "59a8f9ab22b12f746f82a552e10a3bae5b2bfb95c133b930c4082e16ab8bc9f2"
     },
     {
       "path": "data/exam-counts.json",
-      "sha256": "d392e982b44dd1bf4e8eac2e920bfe3700845c78bac572b4900aa803c44b70ff"
+      "sha256": "252ab57527739aa0f28e5708533b60ced7e5c9f686bff85a5d43c2aadee60d67"
     },
     {
       "path": "data/search-index.json",
-      "sha256": "fde2c64983694a36ed9335f0a03c7621a84a5e51b88c3c1502d90fda8377a51f"
+      "sha256": "0d389063009f107e3abbe672e5abbbf5ec1bc5c1b20df589d5ffb63a80985b33"
     },
     {
       "path": "exams/_template.html",
-      "sha256": "413747b2edb9a6b13aa61864679adb1793a2247422d0386a800bbd394723dc02"
+      "sha256": "ff062d57392218228c0dccd84431462ea39d591613b79638971f497400366358"
     },
     {
       "path": "exams/ab-100/index.html",
-      "sha256": "15a0a7640aaa5380d279dce9572956cd0043feb65cfc60c49bcd8860d2792d4a"
+      "sha256": "ec654be35c2a5ef2b9d9927d749908b44707bde5d292a0b51e44018589f214c5"
     },
     {
       "path": "exams/ab-410/index.html",
-      "sha256": "052e153a619b4257d950d05f8330625db359db918c9edba5b2203bdced1c7e4b"
+      "sha256": "c5ab7e1b03d2c7ff8f862f9c0b1689182b81d0d35e288fafac5e64e7de9fb8eb"
     },
     {
       "path": "exams/ab-620/index.html",
-      "sha256": "195ed57f1658c74288392ba9bd6013bd43367eebfe08e4cae5b4137ed9a014c3"
+      "sha256": "4cb33a488f4692fb9e6cc509f00b6d3b9350331d3789d144a485fe4af12aea3d"
     },
     {
       "path": "exams/ab-650/index.html",
-      "sha256": "4c450763d1b2fa041fe02e6101a7de094ce62f2e2129080635a5ec7748546d70"
+      "sha256": "099c4acf34aef7248b87b34dcfe4f994f0db33410d9544d7a83e647290899897"
     },
     {
       "path": "exams/ab-731/index.html",
-      "sha256": "a58344b0779cfe79b8bf0ec57dd3a50d66633a9a22709504fa4a994f1a8a1713"
+      "sha256": "87c280760a480474c35a3e22276b44900534b20efd4cc0983f55a52bc52d9652"
     },
     {
       "path": "exams/ab-900/index.html",
-      "sha256": "151548daa524f821c9630d2a44e7ad49dc618e2738d06cffa6bdf7704beef613"
+      "sha256": "55a2261d1f6f2f148c7436ae0eaa9679fbc2defbf7a45ef19feabeb99214cb02"
     },
     {
       "path": "exams/ai-102/index.html",
-      "sha256": "74e1deb92db83bf2e2f6dd58d7fd909836af1d70780be4d21ac05e70d963430a"
+      "sha256": "8b42012a499482869c620bdcdbafe391afabbf834fdf4e6566c6c4e69de7073d"
     },
     {
       "path": "exams/ai-103/index.html",
-      "sha256": "f3f9d017e3924b8f87d1f6148e9fd5384c670500829012cd6ca047f7995935b8"
+      "sha256": "bb276da6a152c290bcfe5ae86ca455d4cd09d754696c0742ac3e786f6625193d"
     },
     {
       "path": "exams/ai-200/index.html",
-      "sha256": "c324c23be9ad14787585f2a3bbde22ee550de07368e4477eaa70f25ca1713b34"
+      "sha256": "598aefe836035691e0f531e997ecf5cd1d6d5693cf0a9658e8b937578d3f1a0c"
     },
     {
       "path": "exams/ai-300/index.html",
-      "sha256": "0a090545056b739ebf9ca4515b5292acdc354bbad345317cedc53dfbaa230def"
+      "sha256": "27248c7b1c04fbfc759329e16b0ba583757ee7bc68e7b3a3a2711264e7df1de6"
     },
     {
       "path": "exams/ai-500/index.html",
-      "sha256": "4a52796c341216e7295adc14b89478856ca3869c0462bc93c3751b847c8381d4"
+      "sha256": "878b31fc8c73a04f0d8cb3df6a918046df66197b08b165dda097c34138d488f8"
     },
     {
       "path": "exams/ai-900/index.html",
-      "sha256": "580c3eb431a90252b9a8a9733fbbc061206d3c21ab4f1a77f7494a97199f103d"
+      "sha256": "cd5b9f5a9b928c696816425916fd0e1ebab02f58e14711c8cca8e2fdcc47ac0b"
     },
     {
       "path": "exams/ai-901/index.html",
-      "sha256": "034a4b930f33ef49dce353ba60ef6983281e22d2307904d9c243fb734e87d231"
+      "sha256": "12443b93e83fb88cda5f0e75e951bd6b906f34afe2986d4aff64dbd970c1c8b1"
     },
     {
       "path": "exams/az-104/index.html",
-      "sha256": "7ed49df32dc64cdb7bcc083bce74ae0100591a3943a769252b4bbee2c64e191c"
+      "sha256": "77836880959ee83235ce515bd3f7e051f70e8d0336c7b5e746531e6afec22e1b"
     },
     {
       "path": "exams/az-204/index.html",
-      "sha256": "c430585e1569947f35a15b46df186b647243953868e3a69a1f0fa3559e78f027"
+      "sha256": "178fd9e8fd36834dbf6c378772c786a943460cde7e4f90fac5d9afbb72cd85bb"
     },
     {
       "path": "exams/az-305/index.html",
-      "sha256": "7ca5945ed826c998a6aa79d52c794f29450e10125a63a8f70b8622c4f55857cc"
+      "sha256": "b6d3c2294ae32daff210651b5b18110006f690adaa7eb995ded7d5d1727584a4"
     },
     {
       "path": "exams/az-400/index.html",
-      "sha256": "00fe44935f7691740951b67de92cc03aaf3a7ca94f048675f3c20aa26c979dbc"
+      "sha256": "33342cfac3cab69355cbc56ea2d213701230bf77f45a15f672ab02f3525a3c06"
     },
     {
       "path": "exams/az-500/index.html",
-      "sha256": "9b585c77afa00f83206e57356e735d8913033afdd58cf831e952d95e7ffdebc8"
+      "sha256": "a0c1ffe0f56367e73559aa6b12dd64de8c73ae0015fc79fae082a0b92aa0367b"
     },
     {
       "path": "exams/az-700/index.html",
-      "sha256": "9cb4231eb0194d2895d6ea5ab96e03933808daaadd9d2720dfc3d4086a0bf9f9"
+      "sha256": "3db9f0b9d222ffd2efd52ac8cd478c4ec32aed8fb9761b326677200f7be6d0ba"
     },
     {
       "path": "exams/az-900/index.html",
-      "sha256": "0ff34db772a86beb0c9ac34d62c41f1534706450424b01cd3b6552929d012496"
+      "sha256": "fce9c601bd15d8c5410b65d4bafa2c6b89d1cfd1121105d610c69b253a5c3db7"
     },
     {
       "path": "exams/dp-100/index.html",
-      "sha256": "d81607aedc6ec2e22a9f1bb2edec15345ad7146588e4e2a85045a5610b255377"
+      "sha256": "4bbc7c150b16070f5590d0f86c6973016bfa6e476b7c64da51aa65e625e07eba"
     },
     {
       "path": "exams/dp-300/index.html",
-      "sha256": "cb0060809cf21a83ac088df68640bfd6db2cd37843772dfe9b779a9ee5830b58"
+      "sha256": "48849fb38aeb87ba211e9fa9c4ef8f5da3d1ca55599157ad9bdc60e3827b1402"
     },
     {
       "path": "exams/dp-700/index.html",
-      "sha256": "6055fb29d6849bbd3c4962ea6cb88a1dd6fee161cc21250b02998c252dcbbd95"
+      "sha256": "8ec0d9128ec3dd6f7beebe2166c86087642de25168fbd29c52cd9f0dc3b16fb5"
     },
     {
       "path": "exams/dp-750/index.html",
-      "sha256": "d08f4f471d04f2d919bddb246b89e8632bcd6cafd8c13ffc31b87f7d2c2e3d36"
+      "sha256": "6e8c66ed70e863c39a9e2762183097b28456acb20780882665e98fa4e3de1d29"
     },
     {
       "path": "exams/dp-800/index.html",
-      "sha256": "7f8330b337f074127d5f8e3e17e293eff01cad5f0be2ea99e88c1213fdb9e4ff"
+      "sha256": "74a3b3f6bdc0f2eb70862d4bc70eb40a0c9b1968010cef46c76f7a74551739e1"
     },
     {
       "path": "exams/dp-900/index.html",
-      "sha256": "f16ad31c0e0d77e5c2de5b0a7458db9bd32a7b1f157f1408f3b5c58b96cb135c"
+      "sha256": "ba0bc05b84e9403ef34fd4cd63d939bfe568c1f0aafb1fadcb6f924f76759ec5"
     },
     {
       "path": "exams/gh-300/index.html",
-      "sha256": "1f730bb1e0da1b134b34037891d441b0785cc35573553a23e7aef8982c07bcce"
+      "sha256": "9f6b95a524e8284a17f91bc05ec66bdf8511a67ff807b7d152cdf81ac5a39c9c"
     },
     {
       "path": "exams/gh-900/index.html",
-      "sha256": "667ac8c6059552d2a58825012213646f6e0797a502eb748a3d43fbe8052fdcac"
+      "sha256": "fe0f3a806a0f558597dcf9529518d8e99a424ed52fbddd9bf829912e2d793135"
     },
     {
       "path": "exams/index.html",
-      "sha256": "ce9cf2c72d6e0cf5f6e391c793413ae7e57e3979df137930ebb6f5344f2c79fa"
+      "sha256": "d7d0175ed4fa45adb4dcb684209e4be5c695b6cb3b5268273dcdd6ac2edc2a1b"
     },
     {
       "path": "exams/pl-300/index.html",
-      "sha256": "d44e03bcb9a9a070b6ea2940fdebf91c87e85682e325dbaeece4e3400aa00579"
+      "sha256": "999733a0bd2898c3d70e6820cd88b2dc75e7163d9477ccab4c3faf6ea8ec7cf0"
     },
     {
       "path": "exams/pl-900/index.html",
-      "sha256": "2926f047e65d3dbc7a6c90f9f6f85c227aba24da0dac18d1305ba5351785559f"
+      "sha256": "cff4e80a30cf595fe31031e9c415a1c034ce95ebefd31b0ef05a2493cff3f2ff"
     },
     {
       "path": "exams/retired/index.html",
-      "sha256": "711060778c29c21ea6f05ca171c440a22b6bb04424145fc7b343c4d52ebb2cf0"
+      "sha256": "456f9bffd0898f33a35f7be63d1ee02bf1f9ad6d77fcec648005b6e38389007e"
     },
     {
       "path": "exams/sc-100/index.html",
-      "sha256": "2d0d894639fb217f809341600e035899366a42198a0e1009daa883d452dbeb8b"
+      "sha256": "67a6b49071043fe396fd15e0224605612be91adab34912778979b485060b897c"
     },
     {
       "path": "exams/sc-200/index.html",
-      "sha256": "a1a364b66cbc65206d83b75751be092faf55b2f6ec69e19b7566869dac820fba"
+      "sha256": "153522839391ecaf17ea0ab9a4f9b8696732b30cb9b2bad2e31e4aa8b1539ccb"
     },
     {
       "path": "exams/sc-300/index.html",
-      "sha256": "53c144e911e08cd7ccb8798a90ec7678499a381a4256a99fce7921383f1077fb"
+      "sha256": "743ccbdbef67c7d1a95d7be394bbb685b4113e2349998bddb3f81c77ab25eefc"
     },
     {
       "path": "exams/sc-500/index.html",
-      "sha256": "ad80cb033073ecdb70b78fd792c866b7d55cd3bc5cb1c9dfea803b7838774551"
+      "sha256": "86e0a90dd3e9f6704ef6a499159a8bad90a0e5933c1b72c677fa1921d061eb97"
     },
     {
       "path": "exams/sc-900/index.html",
-      "sha256": "9c0febe9d5f0a8d8e646d2f5084740546a229de6dca21fc6fb4f157b9894cce1"
+      "sha256": "8789a03e631e0b9efc8c3cda836a4acbc5ba059b2a1baf8491042e5c1d8e928a"
     },
     {
       "path": "guides/ab-620-vs-ab-410/index.html",
-      "sha256": "4fcd051fe981ddce07c59d3003f743a81990c9884eda14ec4594a233538a6555"
+      "sha256": "64d64495efe42d2b5728bd5fa4ea5fc8cde11196c41fccbe99ca9814344c8a60"
     },
     {
       "path": "guides/ai-103-vs-ai-200/index.html",
-      "sha256": "207ae916119381f8a6b68f937cd1fdff49f3711f5e198a550693723d03ff0d48"
+      "sha256": "9b900d1a1b723d6443a4c3e8501ad21299bddc73ca1cac0113eb5184a9b02a67"
     },
     {
       "path": "guides/az-900-vs-az-104/index.html",
-      "sha256": "e0ff395ed89fbd0bd75c1c71b03430e79057d5977c4a1c251256881a435593ad"
+      "sha256": "b02055eda27205cc84b61b175c5210e912a7570d96c478e847c5f86d1ced5da6"
     },
     {
       "path": "guides/how-to-pass-ab-100/index.html",
-      "sha256": "3463dd8ebb58ad8945522141de44416182a3036c7e991d5d045c04ff3a6f74e4"
+      "sha256": "31a93a05db976ce76ea980bcf267ef61d4d368c6361cb0455736f04ee7f8057a"
     },
     {
       "path": "guides/how-to-pass-ab-620/index.html",
-      "sha256": "900b7781e4abe686f84fac51addf8b9062e1884f53d6ed0881c1eda17a19318b"
+      "sha256": "72e6537943433d3e5b084ce403809f3265d581fdbb42d3310094781287e2122f"
     },
     {
       "path": "guides/how-to-pass-ai-103/index.html",
-      "sha256": "2cdb45cc20b0678b78931ddbc3269f39d786b614de9c609d5761dbe31669734c"
+      "sha256": "a2ee65d6a24e5eebec59754306f591438a63ff0d907e31f34c786c27cb4c4f30"
     },
     {
       "path": "guides/how-to-pass-ai-200/index.html",
-      "sha256": "484e524397658dc7258460d1fb522d027f8b2f8643a4d022db8415a6a0bf48f6"
+      "sha256": "8cef6eab93228051955608e267d65a9c55b2ca42be5e5a2a4ff859280ea500bf"
     },
     {
       "path": "guides/how-to-pass-ai-901/index.html",
-      "sha256": "a0a419d73bd3ca1657cb27571824ba00941758227bda5a4a2c318babf4ce68cd"
+      "sha256": "082c98ae5bc435440b41aac883b06b111ad82966061e04b40069bcfbe3a6e0aa"
     },
     {
       "path": "guides/how-to-pass-az-104/index.html",
-      "sha256": "32ced85d0f25c1c476cec08574e2228a7d4c171efcd7f03b06e149599e6d1663"
+      "sha256": "c3792d95dfb3a7b66e8addba825f28b79abb28a5a040bbdffc23a3e8c2985713"
     },
     {
       "path": "guides/how-to-pass-az-900/index.html",
-      "sha256": "5fe2085eceba90a5493b60e0450f2fe78d796ad820442e20135526c19697563b"
+      "sha256": "f5932257c9a1b9bd65402353cf7ea1665a6d655213a1d9124b0a8bd966bdd2d3"
     },
     {
       "path": "guides/how-to-pass-dp-900/index.html",
-      "sha256": "4c6c1b889e658e76d73ffb141a2965b72738eabc301bf05d950586da40089cf8"
+      "sha256": "24fa355cb8aead9ad4d0d7551037d81c6f41ca4789f4d36620eac7f1962ee84e"
     },
     {
       "path": "guides/how-to-pass-sc-500/index.html",
-      "sha256": "e0ab862765d054890ec3600ab439f2443870507e3a8c154dd0768181cee1062f"
+      "sha256": "3587e1f7653738ff370157fd63de59ae06cf774cd6b0cae7784430f0f56f9f97"
     },
     {
       "path": "guides/how-to-pass-sc-900/index.html",
-      "sha256": "9aec0ef1d81d8ecf36d8da36d004e507992492588915fc8b9cebd9a4f2a7df27"
+      "sha256": "f9712e3577b58ebfc8f201e32832798f1b68be2f9c287a22433e0c364c0f5282"
     },
     {
       "path": "guides/index.html",
-      "sha256": "914f9058918f16382e637467859d65e917accbcd1076a721ccc579a488a6b023"
+      "sha256": "96f84d175c151d1814206626167d248f7e7b3d90ee2972091b954f55aaadd126"
     },
     {
       "path": "guides/sc-500-vs-az-500/index.html",
-      "sha256": "fad1023525bcb93945b6f4f1ed9b26c57a5cb3dfd2c1546595da663ccda23155"
+      "sha256": "268fa1ca39395faebbb0c87b0d89dc3f835f3b4980315d7a69f8b680184b9d6b"
     },
     {
       "path": "guides/sc-900-vs-az-900/index.html",
-      "sha256": "d514d63294e66fec0e0df3d2ba49ecfbe5439f2a8a0dddf0ffb5df465bb0a0ea"
+      "sha256": "378af8dda4a5121c9ded55a4a8e5a703406e1f8b38cbac461f361e47187240fb"
     },
     {
       "path": "guides/which-azure-certification-first/index.html",
-      "sha256": "b1eb860d4497016f0b919542607936ee3025b11ff0af10d6e3a24624765d0759"
+      "sha256": "77577ddf60a5b62bc8f726198620c8c5124cf87c4cf0e2342a9791e6b1e28cdb"
     },
     {
       "path": "how-exam-iq-works/index.html",
-      "sha256": "7720c255ae6f6a85c94e6be7cfd3016a71dafa3d792689ce4d9dd24b73d77c9c"
+      "sha256": "863fb88280e8c26465701897f055eb5067bfb651500cb74668a725e9ce4be2c5"
     },
     {
       "path": "how-we-write-questions/index.html",
-      "sha256": "a63c060aa5fee53e26dd3cca1674e57de8b4b20e2d39e613066d8666d18a51cc"
+      "sha256": "ecdbe42b4d3346847f7697e7061c4f632211d968e968b134894a38d519f2098b"
     },
     {
       "path": "images/linkedin-banner.png",
@@ -472,7 +473,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "302882304f10ecb9562430c3da3c5c26cbcf5d6001769569447d1487f755dabb"
+      "sha256": "8a33b60d8d5819c90a34ccc87ee793288bdfbadc27a459f5b75d2c5322da8a33"
     },
     {
       "path": "llms-full.txt",
@@ -488,6 +489,6 @@
     }
   ],
   "preview": "PL300438 card rendered2400x1260 and visually inspected; not promoted.",
-  "environmentalRetries": "Initial whole-card renders interrupted by disk pressure; run-owned failed bundle locks removed and verified recovery copies moved to external drive. Final missing SC500/SC900 cards regenerated by the unchanged source-derived renderer. All JPGs readable.",
+  "environmentalRetries": "CSS check required npm network/cache access outside sandbox; success asserted before receipt update. Prior rendered cards retained because aggregate and per-exam counts did not change during PR901 review; only PL300 model114/visualize127 domain counts changed.",
   "publicationBoundary": "Production12758/12700+ remains unchanged; candidate12943/12900+ waits approved release and explicit count authority."
 }

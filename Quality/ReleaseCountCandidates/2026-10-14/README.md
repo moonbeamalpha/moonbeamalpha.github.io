@@ -9,3 +9,7 @@ This staging PR changes only this candidate folder. Published pages, production 
 Do not apply the patch before an App Store-approved release and Chris’s explicit count authorization. Regenerate against then-current approved app exports and website state, reconcile older staging PRs, and rerun all gates. The patch is review evidence for this dated source state, not a deployment instruction.
 
 The corresponding app PR and exact CI heads are linked in the PR description after creation. Native content/format and full blueprint evidence live in the app PR.
+
+## PR901 review refresh
+
+Owner-requested review retained all20 additions, repaired five existing app records, and remapped the key-column item to model properties. The app PL300 content version is1.58, and candidate domain counts now read prepare117/model114/visualize127/manage80. Candidate totals and per-exam438 count are unchanged from initial staging; rendered social assets are retained byte-for-byte. The candidate was applied locally, refreshed from the final reviewed app exports, and passed23 non-freeze gates; production files were then restored before the24 staging gates. Website PR67 stays draft, unmerged and unpublished.

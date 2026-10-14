@@ -178,9 +178,9 @@
     },
     "PL-300": {
       "pl300-manage": 80,
-      "pl300-model": 113,
+      "pl300-model": 114,
       "pl300-prepare": 117,
-      "pl300-visualize": 128
+      "pl300-visualize": 127
     },
     "PL-900": {
       "pl900-agents": 80,

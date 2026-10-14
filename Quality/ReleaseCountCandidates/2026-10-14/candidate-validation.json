@@ -1,0 +1,493 @@
+{
+  "date": "2026-10-14",
+  "scope": "Unreleased app-count candidate before staging; production freeze deliberately unpromoted. All23 other workflow commands passed.",
+  "checks": [
+    {
+      "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
+      "exitCode": 0,
+      "seconds": 0.55,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/00.log"
+    },
+    {
+      "command": "python3 Tools/test-domain-counts.py",
+      "exitCode": 0,
+      "seconds": 0.07,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/01.log"
+    },
+    {
+      "command": "python3 Tools/test-public-exam-facts.py",
+      "exitCode": 0,
+      "seconds": 0.78,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/02.log"
+    },
+    {
+      "command": "python3 Tools/check-page-similarity.py --check",
+      "exitCode": 0,
+      "seconds": 2.65,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/03.log"
+    },
+    {
+      "command": "python3 Tools/update-sitemap-lastmod.py --check",
+      "exitCode": 0,
+      "seconds": 0.83,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/04.log"
+    },
+    {
+      "command": "python3 Tools/add-exam-page-cta.py --check",
+      "exitCode": 0,
+      "seconds": 0.05,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/05.log"
+    },
+    {
+      "command": "python3 Tools/check-marketing-ui.py",
+      "exitCode": 0,
+      "seconds": 0.05,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/06.log"
+    },
+    {
+      "command": "python3 Tools/build-search-index.py --check",
+      "exitCode": 0,
+      "seconds": 0.3,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/07.log"
+    },
+    {
+      "command": "python3 Tools/sync-search-ui.py --check",
+      "exitCode": 0,
+      "seconds": 0.08,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/08.log"
+    },
+    {
+      "command": "python3 Tools/test-search-index.py",
+      "exitCode": 0,
+      "seconds": 1.61,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/09.log"
+    },
+    {
+      "command": "python3 Tools/version-static-assets.py --check",
+      "exitCode": 0,
+      "seconds": 0.2,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/10.log"
+    },
+    {
+      "command": "python3 Tools/sync-conversion-ui.py --check",
+      "exitCode": 0,
+      "seconds": 0.18,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/11.log"
+    },
+    {
+      "command": "python3 Tools/check-conversion-ui.py",
+      "exitCode": 0,
+      "seconds": 1.33,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/12.log"
+    },
+    {
+      "command": "python3 Tools/build-download-qr.py --check",
+      "exitCode": 0,
+      "seconds": 0.2,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/13.log"
+    },
+    {
+      "command": "python3 Tools/sync-exam-faq-schema.py --check",
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/14.log"
+    },
+    {
+      "command": "python3 Tools/add-ga-internal-flag.py --check",
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/15.log"
+    },
+    {
+      "command": "python3 Tools/add-footer-links.py --check",
+      "exitCode": 0,
+      "seconds": 0.04,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/16.log"
+    },
+    {
+      "command": "python3 Tools/validate-marketing-seo.py",
+      "exitCode": 0,
+      "seconds": 1.32,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/17.log"
+    },
+    {
+      "command": "python3 Tools/validate-aura-help.py",
+      "exitCode": 0,
+      "seconds": 0.04,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/18.log"
+    },
+    {
+      "command": "bash Tools/build-home-css.sh --check",
+      "exitCode": 0,
+      "seconds": 6.8,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/19.log"
+    },
+    {
+      "command": "node Tools/check-marketing-performance.mjs",
+      "exitCode": 0,
+      "seconds": 0.1,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/20.log"
+    },
+    {
+      "command": "node Tools/test-app-store-links.mjs",
+      "exitCode": 0,
+      "seconds": 0.04,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/21.log"
+    },
+    {
+      "command": "node Tools/test-search.mjs",
+      "exitCode": 0,
+      "seconds": 0.13,
+      "log": "/private/tmp/bp20261014-site-candidate-gates/22.log"
+    }
+  ],
+  "baseCommit": "6f8e58737a365c8ea75aa693e0814f0eb56a3293",
+  "appBaseCommit": "f4d627e04b9a947180a15ea6d972d23041a15cf3",
+  "appBankSHA256": "485ec1221a52ddc5613dba12bfd934ea8295bc04faeb5b15cc0e8fa8ed0bb14c",
+  "candidateDiffSHA256": "a4b0667dc436e76a273ccb3879f082e2ff593ce042df4542d779411f2fee7abb",
+  "candidateFileHashes": [
+    {
+      "path": "about/index.html",
+      "sha256": "b144005bd51fe55a85ae2f7bc07a2abda637bfc66cbeda8d201b84ef417d7964"
+    },
+    {
+      "path": "apps/AzureMastery/linkedin-banner.html",
+      "sha256": "b9b0770d9cdf0c14a2ca86824cd39ef8e576cf8f4af2a9240ec80131ce16e14a"
+    },
+    {
+      "path": "apps/AzureMastery/og-image.html",
+      "sha256": "563090294566b91e6a5307a4a7ccd2d12a3e967438eec9a527f9c9e8bf5e4a5c"
+    },
+    {
+      "path": "apps/AzureMastery/privacy.html",
+      "sha256": "df2df76f0848c029c8003caa413113654071868b87434d05ade62c1335849fdd"
+    },
+    {
+      "path": "apps/AzureMastery/support.html",
+      "sha256": "7b7f76d9e5894dc4f2a0db97ed194c6cf0cb225fee22ef22241fcd12a3197f34"
+    },
+    {
+      "path": "apps/AzureMastery/terms.html",
+      "sha256": "7077e38be681ccd06ed916dfa89987a25250c00be3d968a9ee78b7715650fb41"
+    },
+    {
+      "path": "ask-aura/index.html",
+      "sha256": "33b19759b93c5aea85d9c8492a83631693a6e7cfcdb534382a264de449d7fd7c"
+    },
+    {
+      "path": "data/exam-counts.json",
+      "sha256": "d392e982b44dd1bf4e8eac2e920bfe3700845c78bac572b4900aa803c44b70ff"
+    },
+    {
+      "path": "data/search-index.json",
+      "sha256": "fde2c64983694a36ed9335f0a03c7621a84a5e51b88c3c1502d90fda8377a51f"
+    },
+    {
+      "path": "exams/_template.html",
+      "sha256": "413747b2edb9a6b13aa61864679adb1793a2247422d0386a800bbd394723dc02"
+    },
+    {
+      "path": "exams/ab-100/index.html",
+      "sha256": "15a0a7640aaa5380d279dce9572956cd0043feb65cfc60c49bcd8860d2792d4a"
+    },
+    {
+      "path": "exams/ab-410/index.html",
+      "sha256": "052e153a619b4257d950d05f8330625db359db918c9edba5b2203bdced1c7e4b"
+    },
+    {
+      "path": "exams/ab-620/index.html",
+      "sha256": "195ed57f1658c74288392ba9bd6013bd43367eebfe08e4cae5b4137ed9a014c3"
+    },
+    {
+      "path": "exams/ab-650/index.html",
+      "sha256": "4c450763d1b2fa041fe02e6101a7de094ce62f2e2129080635a5ec7748546d70"
+    },
+    {
+      "path": "exams/ab-731/index.html",
+      "sha256": "a58344b0779cfe79b8bf0ec57dd3a50d66633a9a22709504fa4a994f1a8a1713"
+    },
+    {
+      "path": "exams/ab-900/index.html",
+      "sha256": "151548daa524f821c9630d2a44e7ad49dc618e2738d06cffa6bdf7704beef613"
+    },
+    {
+      "path": "exams/ai-102/index.html",
+      "sha256": "74e1deb92db83bf2e2f6dd58d7fd909836af1d70780be4d21ac05e70d963430a"
+    },
+    {
+      "path": "exams/ai-103/index.html",
+      "sha256": "f3f9d017e3924b8f87d1f6148e9fd5384c670500829012cd6ca047f7995935b8"
+    },
+    {
+      "path": "exams/ai-200/index.html",
+      "sha256": "c324c23be9ad14787585f2a3bbde22ee550de07368e4477eaa70f25ca1713b34"
+    },
+    {
+      "path": "exams/ai-300/index.html",
+      "sha256": "0a090545056b739ebf9ca4515b5292acdc354bbad345317cedc53dfbaa230def"
+    },
+    {
+      "path": "exams/ai-500/index.html",
+      "sha256": "4a52796c341216e7295adc14b89478856ca3869c0462bc93c3751b847c8381d4"
+    },
+    {
+      "path": "exams/ai-900/index.html",
+      "sha256": "580c3eb431a90252b9a8a9733fbbc061206d3c21ab4f1a77f7494a97199f103d"
+    },
+    {
+      "path": "exams/ai-901/index.html",
+      "sha256": "034a4b930f33ef49dce353ba60ef6983281e22d2307904d9c243fb734e87d231"
+    },
+    {
+      "path": "exams/az-104/index.html",
+      "sha256": "7ed49df32dc64cdb7bcc083bce74ae0100591a3943a769252b4bbee2c64e191c"
+    },
+    {
+      "path": "exams/az-204/index.html",
+      "sha256": "c430585e1569947f35a15b46df186b647243953868e3a69a1f0fa3559e78f027"
+    },
+    {
+      "path": "exams/az-305/index.html",
+      "sha256": "7ca5945ed826c998a6aa79d52c794f29450e10125a63a8f70b8622c4f55857cc"
+    },
+    {
+      "path": "exams/az-400/index.html",
+      "sha256": "00fe44935f7691740951b67de92cc03aaf3a7ca94f048675f3c20aa26c979dbc"
+    },
+    {
+      "path": "exams/az-500/index.html",
+      "sha256": "9b585c77afa00f83206e57356e735d8913033afdd58cf831e952d95e7ffdebc8"
+    },
+    {
+      "path": "exams/az-700/index.html",
+      "sha256": "9cb4231eb0194d2895d6ea5ab96e03933808daaadd9d2720dfc3d4086a0bf9f9"
+    },
+    {
+      "path": "exams/az-900/index.html",
+      "sha256": "0ff34db772a86beb0c9ac34d62c41f1534706450424b01cd3b6552929d012496"
+    },
+    {
+      "path": "exams/dp-100/index.html",
+      "sha256": "d81607aedc6ec2e22a9f1bb2edec15345ad7146588e4e2a85045a5610b255377"
+    },
+    {
+      "path": "exams/dp-300/index.html",
+      "sha256": "cb0060809cf21a83ac088df68640bfd6db2cd37843772dfe9b779a9ee5830b58"
+    },
+    {
+      "path": "exams/dp-700/index.html",
+      "sha256": "6055fb29d6849bbd3c4962ea6cb88a1dd6fee161cc21250b02998c252dcbbd95"
+    },
+    {
+      "path": "exams/dp-750/index.html",
+      "sha256": "d08f4f471d04f2d919bddb246b89e8632bcd6cafd8c13ffc31b87f7d2c2e3d36"
+    },
+    {
+      "path": "exams/dp-800/index.html",
+      "sha256": "7f8330b337f074127d5f8e3e17e293eff01cad5f0be2ea99e88c1213fdb9e4ff"
+    },
+    {
+      "path": "exams/dp-900/index.html",
+      "sha256": "f16ad31c0e0d77e5c2de5b0a7458db9bd32a7b1f157f1408f3b5c58b96cb135c"
+    },
+    {
+      "path": "exams/gh-300/index.html",
+      "sha256": "1f730bb1e0da1b134b34037891d441b0785cc35573553a23e7aef8982c07bcce"
+    },
+    {
+      "path": "exams/gh-900/index.html",
+      "sha256": "667ac8c6059552d2a58825012213646f6e0797a502eb748a3d43fbe8052fdcac"
+    },
+    {
+      "path": "exams/index.html",
+      "sha256": "ce9cf2c72d6e0cf5f6e391c793413ae7e57e3979df137930ebb6f5344f2c79fa"
+    },
+    {
+      "path": "exams/pl-300/index.html",
+      "sha256": "d44e03bcb9a9a070b6ea2940fdebf91c87e85682e325dbaeece4e3400aa00579"
+    },
+    {
+      "path": "exams/pl-900/index.html",
+      "sha256": "2926f047e65d3dbc7a6c90f9f6f85c227aba24da0dac18d1305ba5351785559f"
+    },
+    {
+      "path": "exams/retired/index.html",
+      "sha256": "711060778c29c21ea6f05ca171c440a22b6bb04424145fc7b343c4d52ebb2cf0"
+    },
+    {
+      "path": "exams/sc-100/index.html",
+      "sha256": "2d0d894639fb217f809341600e035899366a42198a0e1009daa883d452dbeb8b"
+    },
+    {
+      "path": "exams/sc-200/index.html",
+      "sha256": "a1a364b66cbc65206d83b75751be092faf55b2f6ec69e19b7566869dac820fba"
+    },
+    {
+      "path": "exams/sc-300/index.html",
+      "sha256": "53c144e911e08cd7ccb8798a90ec7678499a381a4256a99fce7921383f1077fb"
+    },
+    {
+      "path": "exams/sc-500/index.html",
+      "sha256": "ad80cb033073ecdb70b78fd792c866b7d55cd3bc5cb1c9dfea803b7838774551"
+    },
+    {
+      "path": "exams/sc-900/index.html",
+      "sha256": "9c0febe9d5f0a8d8e646d2f5084740546a229de6dca21fc6fb4f157b9894cce1"
+    },
+    {
+      "path": "guides/ab-620-vs-ab-410/index.html",
+      "sha256": "4fcd051fe981ddce07c59d3003f743a81990c9884eda14ec4594a233538a6555"
+    },
+    {
+      "path": "guides/ai-103-vs-ai-200/index.html",
+      "sha256": "207ae916119381f8a6b68f937cd1fdff49f3711f5e198a550693723d03ff0d48"
+    },
+    {
+      "path": "guides/az-900-vs-az-104/index.html",
+      "sha256": "e0ff395ed89fbd0bd75c1c71b03430e79057d5977c4a1c251256881a435593ad"
+    },
+    {
+      "path": "guides/how-to-pass-ab-100/index.html",
+      "sha256": "3463dd8ebb58ad8945522141de44416182a3036c7e991d5d045c04ff3a6f74e4"
+    },
+    {
+      "path": "guides/how-to-pass-ab-620/index.html",
+      "sha256": "900b7781e4abe686f84fac51addf8b9062e1884f53d6ed0881c1eda17a19318b"
+    },
+    {
+      "path": "guides/how-to-pass-ai-103/index.html",
+      "sha256": "2cdb45cc20b0678b78931ddbc3269f39d786b614de9c609d5761dbe31669734c"
+    },
+    {
+      "path": "guides/how-to-pass-ai-200/index.html",
+      "sha256": "484e524397658dc7258460d1fb522d027f8b2f8643a4d022db8415a6a0bf48f6"
+    },
+    {
+      "path": "guides/how-to-pass-ai-901/index.html",
+      "sha256": "a0a419d73bd3ca1657cb27571824ba00941758227bda5a4a2c318babf4ce68cd"
+    },
+    {
+      "path": "guides/how-to-pass-az-104/index.html",
+      "sha256": "32ced85d0f25c1c476cec08574e2228a7d4c171efcd7f03b06e149599e6d1663"
+    },
+    {
+      "path": "guides/how-to-pass-az-900/index.html",
+      "sha256": "5fe2085eceba90a5493b60e0450f2fe78d796ad820442e20135526c19697563b"
+    },
+    {
+      "path": "guides/how-to-pass-dp-900/index.html",
+      "sha256": "4c6c1b889e658e76d73ffb141a2965b72738eabc301bf05d950586da40089cf8"
+    },
+    {
+      "path": "guides/how-to-pass-sc-500/index.html",
+      "sha256": "e0ab862765d054890ec3600ab439f2443870507e3a8c154dd0768181cee1062f"
+    },
+    {
+      "path": "guides/how-to-pass-sc-900/index.html",
+      "sha256": "9aec0ef1d81d8ecf36d8da36d004e507992492588915fc8b9cebd9a4f2a7df27"
+    },
+    {
+      "path": "guides/index.html",
+      "sha256": "914f9058918f16382e637467859d65e917accbcd1076a721ccc579a488a6b023"
+    },
+    {
+      "path": "guides/sc-500-vs-az-500/index.html",
+      "sha256": "fad1023525bcb93945b6f4f1ed9b26c57a5cb3dfd2c1546595da663ccda23155"
+    },
+    {
+      "path": "guides/sc-900-vs-az-900/index.html",
+      "sha256": "d514d63294e66fec0e0df3d2ba49ecfbe5439f2a8a0dddf0ffb5df465bb0a0ea"
+    },
+    {
+      "path": "guides/which-azure-certification-first/index.html",
+      "sha256": "b1eb860d4497016f0b919542607936ee3025b11ff0af10d6e3a24624765d0759"
+    },
+    {
+      "path": "how-exam-iq-works/index.html",
+      "sha256": "7720c255ae6f6a85c94e6be7cfd3016a71dafa3d792689ce4d9dd24b73d77c9c"
+    },
+    {
+      "path": "how-we-write-questions/index.html",
+      "sha256": "a63c060aa5fee53e26dd3cca1674e57de8b4b20e2d39e613066d8666d18a51cc"
+    },
+    {
+      "path": "images/linkedin-banner.png",
+      "sha256": "d7a1517585b337e046541a963229362ef52bef6865d2bb9f54af9c495f4ebae6"
+    },
+    {
+      "path": "images/og-image.png",
+      "sha256": "b9a2951a4a761da4dd51bd04dac5bc5b355567f6c925a17034c3863b8dedc0ac"
+    },
+    {
+      "path": "images/og/ai-300.jpg",
+      "sha256": "b1d6b113e3ba86956c2570f0370352813d0e7381ec27ff59d33cdd2b1ed77f36"
+    },
+    {
+      "path": "images/og/az-104.jpg",
+      "sha256": "bfd867976716d27e682b7c59b837c951916cd042d7b562ed6a59538cbb218535"
+    },
+    {
+      "path": "images/og/az-400.jpg",
+      "sha256": "85578aba6729aefa37b42f7cafdeaa89df7227686a315574d47d0a9f42a71f03"
+    },
+    {
+      "path": "images/og/az-700.jpg",
+      "sha256": "c1c256bc117c6a75411e5431dda4f55285fd8eba13fcd6107ae5ccefd2d48dc9"
+    },
+    {
+      "path": "images/og/dp-300.jpg",
+      "sha256": "a63fb4eefe26c08cac03d36db66871f2e1486c0f1774c5968fc9c515c82e9b45"
+    },
+    {
+      "path": "images/og/dp-750.jpg",
+      "sha256": "06cdc66739ff3a3507bdad5399b8f016c79328e633fc28953edb69641f942f6e"
+    },
+    {
+      "path": "images/og/dp-900.jpg",
+      "sha256": "47126a4e9372e4fbd6105c423fdbb86a9b4f84a202116045eb29bb41b6b14e7d"
+    },
+    {
+      "path": "images/og/gh-900.jpg",
+      "sha256": "5ab35af557bb8e76ed6c6529387bc54835995bbd565198c39e86638c22cfada9"
+    },
+    {
+      "path": "images/og/pl-300.jpg",
+      "sha256": "444f4544573fa225cc55f6ad27fdc96bd0023b9a822d86faf06e06c42c8147cd"
+    },
+    {
+      "path": "images/og/sc-200.jpg",
+      "sha256": "4d6ecb5f36a3e815f563bfc238684e75bf9313733af138a6151ad2d04ad3d620"
+    },
+    {
+      "path": "images/og/sc-300.jpg",
+      "sha256": "7f83e6baf66fec5af956f9c0c36b8ba52a96f3afe03b194a466bfe84f641cece"
+    },
+    {
+      "path": "images/og/sc-500.jpg",
+      "sha256": "2b8a3c548c1cce841f51305ca01267fb539f0f76ab7c0c2696b5b1af150ac7fd"
+    },
+    {
+      "path": "images/og/sc-900.jpg",
+      "sha256": "0f34c030c26cc225b56747110f835d5ba0dca1f8863f7748b40dc46acb6722a4"
+    },
+    {
+      "path": "index.html",
+      "sha256": "302882304f10ecb9562430c3da3c5c26cbcf5d6001769569447d1487f755dabb"
+    },
+    {
+      "path": "llms-full.txt",
+      "sha256": "94c46226dbad1c3f7d2fda4cbd6ea900432bb071a2ac205a0f2327aafcbba0c2"
+    },
+    {
+      "path": "llms.txt",
+      "sha256": "dae7587a0f5af1880c4262f5eda9f0d0b981b2687734c2b7b39d683f91cf4cc1"
+    },
+    {
+      "path": "sitemap.xml",
+      "sha256": "2b48f70635c142445c63b70f61424948d2fd341dae48dd39d8758d6e798adec8"
+    }
+  ],
+  "preview": "PL300438 card rendered2400x1260 and visually inspected; not promoted.",
+  "environmentalRetries": "Initial whole-card renders interrupted by disk pressure; run-owned failed bundle locks removed and verified recovery copies moved to external drive. Final missing SC500/SC900 cards regenerated by the unchanged source-derived renderer. All JPGs readable.",
+  "publicationBoundary": "Production12758/12700+ remains unchanged; candidate12943/12900+ waits approved release and explicit count authority."
+}

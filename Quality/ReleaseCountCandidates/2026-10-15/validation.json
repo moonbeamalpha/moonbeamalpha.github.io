@@ -1,0 +1,151 @@
+{
+  "candidateChecks": [
+    {
+      "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
+      "exitCode": 0,
+      "seconds": 0.52,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/test-domain-counts.py",
+      "exitCode": 0,
+      "seconds": 0.07,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/test-public-exam-facts.py",
+      "exitCode": 0,
+      "seconds": 0.69,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/check-page-similarity.py --check",
+      "exitCode": 0,
+      "seconds": 2.56,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/update-sitemap-lastmod.py --check",
+      "exitCode": 0,
+      "seconds": 0.68,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/add-exam-page-cta.py --check",
+      "exitCode": 0,
+      "seconds": 0.04,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/check-marketing-ui.py",
+      "exitCode": 0,
+      "seconds": 0.04,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/build-search-index.py --check",
+      "exitCode": 0,
+      "seconds": 0.28,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/sync-search-ui.py --check",
+      "exitCode": 0,
+      "seconds": 0.07,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/test-search-index.py",
+      "exitCode": 0,
+      "seconds": 1.61,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/version-static-assets.py --check",
+      "exitCode": 0,
+      "seconds": 0.16,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/sync-conversion-ui.py --check",
+      "exitCode": 0,
+      "seconds": 0.17,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/check-conversion-ui.py",
+      "exitCode": 0,
+      "seconds": 1.35,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/build-download-qr.py --check",
+      "exitCode": 0,
+      "seconds": 0.27,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/sync-exam-faq-schema.py --check",
+      "exitCode": 0,
+      "seconds": 0.06,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/add-ga-internal-flag.py --check",
+      "exitCode": 0,
+      "seconds": 0.06,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/add-footer-links.py --check",
+      "exitCode": 0,
+      "seconds": 0.05,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/validate-marketing-seo.py",
+      "exitCode": 0,
+      "seconds": 1.16,
+      "tail": ""
+    },
+    {
+      "command": "python3 Tools/validate-aura-help.py",
+      "exitCode": 0,
+      "seconds": 0.03,
+      "tail": ""
+    },
+    {
+      "command": "bash Tools/build-home-css.sh --check",
+      "exitCode": 0,
+      "seconds": 70.51,
+      "tail": "",
+      "environmentalRetry": "Passed with network access and isolated /private/tmp/bp20261015-npm-cache after sandbox DNS/cache failure"
+    },
+    {
+      "command": "node Tools/check-marketing-performance.mjs",
+      "exitCode": 0,
+      "seconds": 0.12,
+      "tail": ""
+    },
+    {
+      "command": "node Tools/test-app-store-links.mjs",
+      "exitCode": 0,
+      "seconds": 0.03,
+      "tail": ""
+    },
+    {
+      "command": "node Tools/test-search.mjs",
+      "exitCode": 0,
+      "seconds": 0.12,
+      "tail": ""
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "seconds": 0.17,
+      "tail": ""
+    }
+  ],
+  "countFreeze": "Candidate intentionally not a publication tree; production snapshot restored after patch capture.",
+  "image": "2400x1260 AZ900424 card rendered and visually reviewed."
+}

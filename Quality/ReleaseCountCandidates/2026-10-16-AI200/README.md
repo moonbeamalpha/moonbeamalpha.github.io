@@ -1,6 +1,6 @@
 # Unpublished AI-200 release candidate — 16 October 2026
 
-This candidate accompanies [app PR #919](https://github.com/moonbeamalpha/AZ-104-Mastery/pull/919) at `039f69d8cc3c41fe0082af753536620bbc60eed0`: twenty original AI-200 questions, increasing its
+This candidate accompanies [app PR #919](https://github.com/moonbeamalpha/AZ-104-Mastery/pull/919) at `d492238fb3aca10104ddc0823527009692dd4fb5`: twenty original AI-200 questions, increasing its
 exam-scoped count from 280 to 300. App exports contain 13,003 exam-scoped
 questions / 13,000+ across 30 current exams and 29 paths. The app uses the
 October 7 guide and 30–35% data allocation, preserving merged PR #918.

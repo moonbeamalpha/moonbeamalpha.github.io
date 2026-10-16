@@ -247,5 +247,7 @@
   "scope": "Catalogue count/domain synchronization only. Existing public AI200 editorial guide copy still describes the May outline and is not certified current by these count checks. App October guide adoption is preserved from merged PR918.",
   "integratedRefreshSnapshotUnchanged": true,
   "appPullRequest": "https://github.com/moonbeamalpha/AZ-104-Mastery/pull/919",
-  "appHead": "039f69d8cc3c41fe0082af753536620bbc60eed0"
+  "appHead": "d492238fb3aca10104ddc0823527009692dd4fb5",
+  "candidateAppHeadBeforeMarketingLabelRepair": "039f69d8cc3c41fe0082af753536620bbc60eed0",
+  "appHeadUpdateNote": "Only the App Store preview video count label and repair documentation changed; all site-consumed catalogue data and the AI200 bank remain exact."
 }

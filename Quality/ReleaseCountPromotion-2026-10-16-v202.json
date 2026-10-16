@@ -1,0 +1,223 @@
+{
+  "reviewedOn": "2026-10-16",
+  "approvedRelease": {
+    "checkedOn": "2026-10-16",
+    "version": "2.0.2",
+    "state": "READY_FOR_SALE",
+    "build": "49",
+    "buildId": "1dec275d-abfd-4d6b-a48f-df9d3f4ca753",
+    "uploadedDate": "2026-10-15T02:04:20-07:00"
+  },
+  "appSourceCommit": "9b1adff05f2bffc106a02f5a3fb86fb1d3848176",
+  "websiteBaseCommit": "6f8e58737a365c8ea75aa693e0814f0eb56a3293",
+  "candidatePR": 67,
+  "candidateHead": "db843892c63e162445f6ba0a74b98caf8ad47963",
+  "totals": {
+    "examCount": 30,
+    "questionCount": 12943,
+    "questionCountLabel": "12,900+"
+  },
+  "certPathCount": 29,
+  "sourceVerification": {
+    "archiveVersion": "2.0.2",
+    "archiveBuild": "49",
+    "matchingArchiveResources": 36,
+    "archiveResourceSHA256": {
+      "exam-catalog.json": "c2f3442d7af581e029da98a0275a56c41c35b1724f89973e1a54486042fc41bc",
+      "ab100-questions.json": "84ecbaf7cc4974bd6c44fbebaac06785fe109920d2088702a88eb39f12f79016",
+      "ab410-questions.json": "5b6a419a17ea279a80c6be3aa83b8650c9c90c8ac27aebb5fd799cebb14ce50d",
+      "ab620-questions.json": "157b929243b30da88784586975f4dab5e0c9a05f1569132cedc1b772ba45c296",
+      "ab650-questions.json": "e3e4caf435d72c52de5aba38efc482fd9a8c30525029281f80ef89b06aa39720",
+      "ab731-questions.json": "774d919a72eb0ca66e6c48668602c63874f8a27bf0a09921fe6a01ef23852aba",
+      "ab900-questions.json": "bd6aae3c0622bf7c51cf6b936ebfe318fd1e784e7d0f94978c62fefa37c53398",
+      "ai102-questions.json": "34b5026931f10ecc2e8647eb8133da8fa0a1083f8cd8faf4a4c3a25a3d239ac3",
+      "ai103-questions.json": "11ea704c42a707c4614badc09d68c3b8bbb7ed0a0bfb1dd46bfdc10eac4a70b5",
+      "ai200-questions.json": "160b1273602863eba2159a394335eeb79993e9b4f2729767d210fd982e15a057",
+      "ai300-questions.json": "e995e010f92ce0609827487d1d6e047932b73b830febd270cc19f39331d0efc0",
+      "ai500-questions.json": "7b197bcec5696cac0e349f1871e61d6805341ebb725e0484716bcc6ec5f7e83b",
+      "ai900-questions.json": "44ef7a91acbbf09ba77e26715c7166aabd498fc2894d44da071a09ce64dcc240",
+      "ai901-questions.json": "8c721ce2117e176fd25e2003b7bf571bb5df2d8c641ae8ce51e211cecec9383f",
+      "az104-questions.json": "5b1fe5ae7c1d2c6759da7fe6b469682691d8fc67ee474cab4d98d200fd3526c3",
+      "az204-questions.json": "4881435169a3a11caa1471bfad464df13da7666981adf1f7a6ffdfd2aeebd746",
+      "az305-questions.json": "903f93a96dbaa779a1e196bbb00f7ebef441598b7bf50883577905812521b137",
+      "az400-questions.json": "1cea228456a8bc6ca0b931ee4883ccaa9dee1e5de1def1a7b11bac6ab0e8b663",
+      "az500-questions.json": "73e37305128f54594a39f8817187e7df1f4c534e5e198e16e2194c533522a2a3",
+      "az700-questions.json": "e0ea6fe1394e9c7ce37e88f7c6a463508afe6a595e39168030ceeae7604932e3",
+      "az900-questions.json": "3af099a913b9d52151ba83ab09186d36dc11ec83cae02ee3c1c261adda197e29",
+      "dp100-questions.json": "357bdd7e19bc79916dd00f9541e5da26bdfe7aeda188ae58717d38f242bb7397",
+      "dp300-questions.json": "9f4cca57185c710b53fc52adc6644a2dd57684d940c85427fa89092a3a07dc61",
+      "dp700-questions.json": "b4a51309f2cec02c8ecd608e56c25f7100e86f7e70be208863b2f2ba01a07636",
+      "dp750-questions.json": "0cf4b6f4b7401dd7d3e5ca73071d356e58811b173983951b521689ed0cf776cc",
+      "dp800-questions.json": "15b854527e298e1a7d18227d4d79674a71af4da88e5a0b4acdffac2d15942531",
+      "dp900-questions.json": "93b904de2209266833dca02781382eac6d19f9c3e387fc8a3ead1d1d06b308e4",
+      "gh300-questions.json": "e76bea83c26bf4fa152e07125cb5522931f0dea3063ed684311f3fef2bfd8bab",
+      "gh900-questions.json": "e8ebf85efb440a96e571722b11bf44e5d4841e0fc44bb137cae24443cf7e01da",
+      "pl300-questions.json": "1617fd25ab8d03df721d6dda0d4838e348949260d58111d72392a13bb74a668f",
+      "pl900-questions.json": "7818558808e326fb5e248da72067185ce147e9ad77b818f521b05643e51911c2",
+      "sc100-questions.json": "370118bb80d8f240d7517ee5f5c431101b2a1bf2f35bf834113ead28517197df",
+      "sc200-questions.json": "bc96eb42bbece04effe6f554517a2edbe3bd25b9176f4e35d2c968d27c5a9eba",
+      "sc300-questions.json": "15acb9ebb4e333f4e1775fe14d8a912441ccbb569229923676be118e67a5bfcb",
+      "sc500-questions.json": "3f87bfea207ace114611db609319e287f6887ed810b9e63e522d6024c55c729e",
+      "sc900-questions.json": "44fad3e2f00079d4431cd1f64f0192d929745652db2b8d7a1adbf9143421668d"
+    },
+    "fullCandidateSnapshotMatchesRelease": true
+  },
+  "excludedFutureCandidates": [
+    {
+      "pr": 68,
+      "questionCount": 12963,
+      "reason": "Includes 20 AZ-900 questions absent from build 49."
+    },
+    {
+      "pr": 69,
+      "questionCount": 12983,
+      "reason": "Includes the later AZ-900 questions and 20 AZ-700 questions absent from build 49."
+    }
+  ],
+  "supersedesPRs": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    66,
+    67
+  ],
+  "socialAssetSource": "Retained the generated and reviewed PR67 assets; count, template and styling inputs match the release snapshot and current site.",
+  "publication": "PR preparation only; no merge or site deployment authorized.",
+  "validation": {
+    "localCommandsPassed": 25,
+    "commands": [
+      {
+        "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
+        "exitCode": 0,
+        "seconds": 0.53
+      },
+      {
+        "command": "python3 Tools/test-domain-counts.py",
+        "exitCode": 0,
+        "seconds": 0.06
+      },
+      {
+        "command": "python3 Tools/test-public-exam-facts.py",
+        "exitCode": 0,
+        "seconds": 0.72
+      },
+      {
+        "command": "python3 Tools/test-production-count-freeze.py",
+        "exitCode": 0,
+        "seconds": 0.07
+      },
+      {
+        "command": "python3 Tools/check-page-similarity.py --check",
+        "exitCode": 0,
+        "seconds": 2.48
+      },
+      {
+        "command": "python3 Tools/update-sitemap-lastmod.py --check",
+        "exitCode": 0,
+        "seconds": 0.75
+      },
+      {
+        "command": "python3 Tools/add-exam-page-cta.py --check",
+        "exitCode": 0,
+        "seconds": 0.04
+      },
+      {
+        "command": "python3 Tools/check-marketing-ui.py",
+        "exitCode": 0,
+        "seconds": 0.04
+      },
+      {
+        "command": "python3 Tools/build-search-index.py --check",
+        "exitCode": 0,
+        "seconds": 0.29
+      },
+      {
+        "command": "python3 Tools/sync-search-ui.py --check",
+        "exitCode": 0,
+        "seconds": 0.08
+      },
+      {
+        "command": "python3 Tools/test-search-index.py",
+        "exitCode": 0,
+        "seconds": 1.53
+      },
+      {
+        "command": "python3 Tools/version-static-assets.py --check",
+        "exitCode": 0,
+        "seconds": 0.16
+      },
+      {
+        "command": "python3 Tools/sync-conversion-ui.py --check",
+        "exitCode": 0,
+        "seconds": 0.16
+      },
+      {
+        "command": "python3 Tools/check-conversion-ui.py",
+        "exitCode": 0,
+        "seconds": 1.2
+      },
+      {
+        "command": "python3 Tools/build-download-qr.py --check",
+        "exitCode": 0,
+        "seconds": 0.2
+      },
+      {
+        "command": "python3 Tools/sync-exam-faq-schema.py --check",
+        "exitCode": 0,
+        "seconds": 0.04
+      },
+      {
+        "command": "python3 Tools/add-ga-internal-flag.py --check",
+        "exitCode": 0,
+        "seconds": 0.05
+      },
+      {
+        "command": "python3 Tools/add-footer-links.py --check",
+        "exitCode": 0,
+        "seconds": 0.03
+      },
+      {
+        "command": "python3 Tools/validate-marketing-seo.py",
+        "exitCode": 0,
+        "seconds": 1.14
+      },
+      {
+        "command": "python3 Tools/validate-aura-help.py",
+        "exitCode": 0,
+        "seconds": 0.03
+      },
+      {
+        "command": "node Tools/check-marketing-performance.mjs",
+        "exitCode": 0,
+        "seconds": 0.09
+      },
+      {
+        "command": "node Tools/test-app-store-links.mjs",
+        "exitCode": 0,
+        "seconds": 0.04
+      },
+      {
+        "command": "node Tools/test-search.mjs",
+        "exitCode": 0,
+        "seconds": 0.13
+      },
+      {
+        "command": "git diff --check",
+        "exitCode": 0,
+        "seconds": 0.18
+      },
+      {
+        "command": "bash Tools/build-home-css.sh --check",
+        "exitCode": 0
+      }
+    ],
+    "segnoVersion": "1.6.6",
+    "changedSocialImagesVisuallyReviewed": 15,
+    "countSyncIdempotentAfterRefresh": true,
+    "candidatePatchAppliedToCurrentMain": true
+  }
+}

@@ -6,18 +6,21 @@ anyone driving them.
 **Pushing `main` publishes immediately.** GitHub Pages serves this branch. Do not
 merge or push to `main` without the owner asking for it.
 
-## Publication count freeze — 12 October 2026
+## Approved-release count baseline — 16 October 2026
 
-Chris requires the published question counts to remain unchanged until the next
-app release is approved in the App Store and he authorizes the count update.
-Content corrections may be published with the current production snapshot:
-12,758 exam-scoped questions, 12,700+ label, 30 current exams and 29 paths.
-Do not run `sync-marketing-counts.py --refresh` from unreleased app exports for
-publication. `--check` and count synchronization from the existing website
-snapshot are allowed. The regression receipt in
-`Tools/production-count-freeze-20261012.json` protects that snapshot, all exam
-counts, practice-preview sources and social images. Update that receipt only
-with the owner's approved-release count authorization.
+Chris authorized the v2.0.2 count update after App Store approval. The approved
+release is **v2.0.2 build 49**: 12,943 exam-scoped questions, 12,900+ label,
+30 current exams and 29 paths. Its catalogue and all 35 bundled banks match app
+source revision `9b1adff05f2bffc106a02f5a3fb86fb1d3848176` byte-for-byte.
+
+Keep this baseline until a later app release is approved in the App Store and
+Chris authorizes its count update. Do not refresh publication counts from newer
+app main exports: the later AZ-900 and AZ-700 additions are outside build 49.
+`--check` and synchronization from the committed website snapshot are allowed.
+The regression receipt in `Tools/production-count-freeze-20261012.json` retains
+its stable path and protects the approved snapshot, all exam counts,
+practice-preview sources and social images. Update it only with the owner's
+next approved-release count authorization.
 
 ---
 

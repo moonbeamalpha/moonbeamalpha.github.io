@@ -9,39 +9,39 @@
     "AI-102": 334,
     "AI-103": 573,
     "AI-200": 520,
-    "AI-300": 405,
+    "AI-300": 425,
     "AI-500": 455,
     "AI-900": 340,
     "AI-901": 604,
-    "AZ-104": 711,
+    "AZ-104": 731,
     "AZ-204": 405,
     "AZ-305": 468,
-    "AZ-400": 516,
+    "AZ-400": 556,
     "AZ-500": 346,
-    "AZ-700": 639,
+    "AZ-700": 659,
     "AZ-900": 453,
     "DP-100": 350,
-    "DP-300": 435,
+    "DP-300": 438,
     "DP-700": 385,
-    "DP-750": 446,
+    "DP-750": 449,
     "DP-800": 419,
-    "DP-900": 360,
+    "DP-900": 380,
     "GH-300": 367,
     "GH-900": 370,
-    "PL-300": 410,
+    "PL-300": 450,
     "PL-900": 376,
     "SC-100": 478,
-    "SC-200": 377,
-    "SC-300": 468,
-    "SC-500": 494,
+    "SC-200": 379,
+    "SC-300": 469,
+    "SC-500": 514,
     "SC-900": 409
   },
   "cert_path_count": 29,
   "domain_counts": {
     "AB-100": {
       "ab100-deploy": 188,
-      "ab100-design": 131,
-      "ab100-plan": 124
+      "ab100-design": 130,
+      "ab100-plan": 125
     },
     "AB-410": {
       "ab410-apps": 138,
@@ -82,11 +82,11 @@
       "ai200-operations": 63
     },
     "AI-300": {
-      "ai300-genaiops": 84,
-      "ai300-lifecycle": 102,
-      "ai300-mlops": 70,
-      "ai300-optimize": 54,
-      "ai300-quality": 52
+      "ai300-genaiops": 88,
+      "ai300-lifecycle": 110,
+      "ai300-mlops": 74,
+      "ai300-optimize": 56,
+      "ai300-quality": 54
     },
     "AI-500": {
       "ai500-architect": 84,
@@ -99,28 +99,28 @@
       "ai901-implement": 320
     },
     "AZ-104": {
-      "az104-compute": 133,
+      "az104-compute": 137,
       "az104-identity": 125,
-      "az104-monitoring": 75,
+      "az104-monitoring": 83,
       "az104-networking": 104,
-      "az104-storage": 104
+      "az104-storage": 112
     },
     "AZ-305": {
       "az305-continuity": 85,
       "az305-identity": 117,
-      "az305-infra": 156,
-      "az305-storage": 101
+      "az305-infra": 157,
+      "az305-storage": 100
     },
     "AZ-400": {
       "az400-monitoring": 45,
-      "az400-pipelines": 271,
-      "az400-processes": 68,
-      "az400-security": 60,
-      "az400-sourcecontrol": 63
+      "az400-pipelines": 291,
+      "az400-processes": 76,
+      "az400-security": 68,
+      "az400-sourcecontrol": 67
     },
     "AZ-700": {
-      "az700-access": 64,
-      "az700-connectivity": 137,
+      "az700-access": 65,
+      "az700-connectivity": 156,
       "az700-core": 187,
       "az700-delivery": 125,
       "az700-security": 116
@@ -135,7 +135,7 @@
       "dp300-hadr": 88,
       "dp300-monitoring": 92,
       "dp300-platform": 77,
-      "dp300-security": 96
+      "dp300-security": 99
     },
     "DP-700": {
       "dp700-implement": 108,
@@ -145,7 +145,7 @@
     "DP-750": {
       "dp750-environment": 79,
       "dp750-governance": 80,
-      "dp750-pipelines": 144,
+      "dp750-pipelines": 147,
       "dp750-process": 138
     },
     "DP-800": {
@@ -154,8 +154,8 @@
       "dp800-secure": 154
     },
     "DP-900": {
-      "dp900-analytics": 103,
-      "dp900-coredata": 89,
+      "dp900-analytics": 109,
+      "dp900-coredata": 103,
       "dp900-nonrelational": 68,
       "dp900-relational": 86
     },
@@ -168,19 +168,19 @@
       "gh300-responsible": 64
     },
     "GH-900": {
-      "gh900-basics": 91,
-      "gh900-collaborate": 49,
-      "gh900-community": 28,
+      "gh900-basics": 89,
+      "gh900-collaborate": 50,
+      "gh900-community": 33,
       "gh900-practices": 52,
-      "gh900-projects": 33,
-      "gh900-repositories": 46,
-      "gh900-security": 48
+      "gh900-projects": 34,
+      "gh900-repositories": 45,
+      "gh900-security": 47
     },
     "PL-300": {
-      "pl300-manage": 79,
-      "pl300-model": 101,
-      "pl300-prepare": 100,
-      "pl300-visualize": 118
+      "pl300-manage": 80,
+      "pl300-model": 114,
+      "pl300-prepare": 117,
+      "pl300-visualize": 127
     },
     "PL-900": {
       "pl900-agents": 80,
@@ -190,32 +190,32 @@
       "pl900-powerautomate": 74
     },
     "SC-100": {
-      "sc100-appsdata": 108,
+      "sc100-appsdata": 107,
       "sc100-bp": 98,
-      "sc100-infra": 127,
-      "sc100-secops": 139
+      "sc100-infra": 126,
+      "sc100-secops": 141
     },
     "SC-200": {
       "sc200-hunt": 80,
       "sc200-incident": 132,
-      "sc200-ops": 162
+      "sc200-ops": 161
     },
     "SC-300": {
-      "sc300-access": 127,
+      "sc300-access": 128,
       "sc300-governance": 108,
       "sc300-identities": 106,
       "sc300-workload": 107
     },
     "SC-500": {
-      "sc500-compute": 113,
-      "sc500-datanet": 116,
-      "sc500-identity": 110,
+      "sc500-compute": 118,
+      "sc500-datanet": 123,
+      "sc500-identity": 118,
       "sc500-posture": 113
     },
     "SC-900": {
       "sc900-compliance": 84,
       "sc900-concepts": 51,
-      "sc900-entra": 112,
+      "sc900-entra": 108,
       "sc900-security": 150
     }
   },
@@ -229,32 +229,32 @@
     "AI-102": 334,
     "AI-103": 557,
     "AI-200": 280,
-    "AI-300": 362,
+    "AI-300": 382,
     "AI-500": 452,
     "AI-900": 340,
     "AI-901": 572,
-    "AZ-104": 541,
+    "AZ-104": 561,
     "AZ-204": 405,
     "AZ-305": 459,
-    "AZ-400": 507,
+    "AZ-400": 547,
     "AZ-500": 346,
-    "AZ-700": 629,
+    "AZ-700": 649,
     "AZ-900": 404,
     "DP-100": 350,
-    "DP-300": 425,
+    "DP-300": 428,
     "DP-700": 340,
-    "DP-750": 441,
+    "DP-750": 444,
     "DP-800": 413,
-    "DP-900": 346,
+    "DP-900": 366,
     "GH-300": 356,
-    "GH-900": 347,
-    "PL-300": 398,
+    "GH-900": 350,
+    "PL-300": 438,
     "PL-900": 348,
     "SC-100": 472,
-    "SC-200": 374,
-    "SC-300": 448,
-    "SC-500": 452,
-    "SC-900": 397
+    "SC-200": 373,
+    "SC-300": 449,
+    "SC-500": 472,
+    "SC-900": 393
   },
   "names": {
     "AB-100": "Agentic AI Business Solutions Architect",
@@ -309,7 +309,7 @@
   },
   "totals": {
     "examCount": 30,
-    "questionCount": 12758,
-    "questionCountLabel": "12,700+"
+    "questionCount": 12943,
+    "questionCountLabel": "12,900+"
   }
 }

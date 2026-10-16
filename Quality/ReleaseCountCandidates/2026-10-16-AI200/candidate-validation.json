@@ -1,0 +1,149 @@
+{
+  "scope": "Unpublished generated catalogue candidate. Production baseline checked after restoring all production files. Editorial guide changes outside this count-sync package require review before future publication.",
+  "commands": [
+    {
+      "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/00.log",
+      "sha256": "69e2579d3d71b13593978681b312b4633a72e8e95e49b84647b31f93d57d94e8"
+    },
+    {
+      "command": "python3 Tools/test-domain-counts.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/01.log",
+      "sha256": "071009023e10045a32952a80d4aca07a813b8515864b0b29162673ff2fdaa51e"
+    },
+    {
+      "command": "python3 Tools/test-public-exam-facts.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/02.log",
+      "sha256": "7ad730ae2c589e032a96197197db01d5e34210a6dd3399911cfe763c745e6c82"
+    },
+    {
+      "command": "python3 Tools/check-page-similarity.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/03.log",
+      "sha256": "731080fc93e180ad377ee8b9cbb67d3667912147ad00a81bb8640149a9a349ef"
+    },
+    {
+      "command": "python3 Tools/update-sitemap-lastmod.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/04.log",
+      "sha256": "873002e7f14de53991ef0523781870363c4b98e8dee894fd922fdea43ed8f3c8"
+    },
+    {
+      "command": "python3 Tools/add-exam-page-cta.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/05.log",
+      "sha256": "53bae4fde0872edf095e2c9726877fee6c23b034bb1c076cac4bb8222b99eb4e"
+    },
+    {
+      "command": "python3 Tools/check-marketing-ui.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/06.log",
+      "sha256": "0c789489e69fb56c3ee129ab4c7807caab83e3749746bbee5f55c21edfc52fb1"
+    },
+    {
+      "command": "python3 Tools/build-search-index.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/07.log",
+      "sha256": "9b1812b521b72414685c6be4d77b86333c5da4ded7aa6d6390e3efd925cdfcd3"
+    },
+    {
+      "command": "python3 Tools/sync-search-ui.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/08.log",
+      "sha256": "6370693dd07dbbabddbbbd8bf894b31961ee0beaed58c005c4841bc09010a739"
+    },
+    {
+      "command": "python3 Tools/test-search-index.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/09.log",
+      "sha256": "22ca0f69c3431551a5b52dfadd70614661de5f828cf9b4fbaa7c0fba29a85a0d"
+    },
+    {
+      "command": "python3 Tools/version-static-assets.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/10.log",
+      "sha256": "bd705d81fbdf0c0bcb963af3134a7196e637d978027a7e8906d7590bc9a25ccd"
+    },
+    {
+      "command": "python3 Tools/sync-conversion-ui.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/11.log",
+      "sha256": "f12ea706b03c8da9abbbee645df2b449191e8db6edd8333e019148955aa22ad2"
+    },
+    {
+      "command": "python3 Tools/check-conversion-ui.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/12.log",
+      "sha256": "9f87cf7d6ecb30c90d5d21a97567c66ce22285f1f54c2f58be3ccf8be97abef3"
+    },
+    {
+      "command": "python3 Tools/build-download-qr.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/13.log",
+      "sha256": "6f60af9c8b4968e018f550fd5de228671b7d2ea1400fe16f0dea545296cc3ee7"
+    },
+    {
+      "command": "python3 Tools/sync-exam-faq-schema.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/14.log",
+      "sha256": "0a769cf86d7949f3bee969952fd8e9a1760dd7edb44918c1d389ee1e5e3cbd5b"
+    },
+    {
+      "command": "python3 Tools/add-ga-internal-flag.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/15.log",
+      "sha256": "6d0df52361ccf58b486b2cccae6f52efda01a437d1f343208c2600d61f015446"
+    },
+    {
+      "command": "python3 Tools/add-footer-links.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/16.log",
+      "sha256": "22b0d4bf09a456abc52c684258b2dc86f5177b3bb02b5c6812ffc0cfc0838a79"
+    },
+    {
+      "command": "python3 Tools/validate-marketing-seo.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/17.log",
+      "sha256": "232f990f405c7669f19999ac0a17e7c4c7ce437ec8df3389ab8b88c2b541e8f5"
+    },
+    {
+      "command": "python3 Tools/validate-aura-help.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/18.log",
+      "sha256": "dc57c0bd51d58fc9b2b41da3ad97b9354db68470c90f54b5e3cf649ef9b96cc2"
+    },
+    {
+      "command": "bash Tools/build-home-css.sh --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/19.log",
+      "sha256": "1b0eb5238796022a70bca92857446f38fcbfa1e92360ed0ddbacc65f6bfcb2c7"
+    },
+    {
+      "command": "node Tools/check-marketing-performance.mjs",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/20.log",
+      "sha256": "a06fdf26b22103f0e509382677a69b58b666f12552cb9fe0c3c663140507176f"
+    },
+    {
+      "command": "node Tools/test-app-store-links.mjs",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/21.log",
+      "sha256": "5df49a931e95acfe866aa9523eaa07b4506ef1c1290590c3bbfdf150d5828059"
+    },
+    {
+      "command": "node Tools/test-search.mjs",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/22.log",
+      "sha256": "84017cbe39be759660aafbfcbc3e4753640ba8ff595963cebcfcc946b87bd88e"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/ai200-20261016/site-candidate-logs/23.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

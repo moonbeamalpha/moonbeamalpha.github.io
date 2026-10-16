@@ -9,7 +9,7 @@
     "questionCountLabel": "13,000+"
   },
   "ai200ExamQuestions": 300,
-  "appBankSHA256": "b4279ac923d899a7d285ec11bb1e44bd324e9aaa26299df77195b18883dbe8e4",
+  "appBankSHA256": "068780473c00456ca6457bb8f61ebee1302c5da722387f44f20a4a2f92379214",
   "patchSHA256": "01acdea81fe6ace8a2d4bb27be6f3da19d7095e4de9533d7afa37e0b009431fb",
   "compressedPatchSHA256": "4097c3a2bea37491aed3c31774c6d0728df4b15687dc3c85c117df0c2ddb1fe1",
   "pathCount": 74,
@@ -247,7 +247,9 @@
   "scope": "Catalogue count/domain synchronization only. Existing public AI200 editorial guide copy still describes the May outline and is not certified current by these count checks. App October guide adoption is preserved from merged PR918.",
   "integratedRefreshSnapshotUnchanged": true,
   "appPullRequest": "https://github.com/moonbeamalpha/AZ-104-Mastery/pull/919",
-  "appHead": "d492238fb3aca10104ddc0823527009692dd4fb5",
+  "appHead": "5843715cac83fe92040bcc9188933d1b4c1930f9",
   "candidateAppHeadBeforeMarketingLabelRepair": "039f69d8cc3c41fe0082af753536620bbc60eed0",
-  "appHeadUpdateNote": "Only the App Store preview video count label and repair documentation changed; all site-consumed catalogue data and the AI200 bank remain exact."
+  "appHeadUpdateNote": "Final wording refinements in003/004/013/017 change the question-bank hash; all site-consumed catalogue exports, path definitions and domain distributions are byte-identical or semantically identical to the preceding candidate sources. The generated site snapshot/patch is unchanged.",
+  "appBankSHA256AtCandidateGeneration": "b4279ac923d899a7d285ec11bb1e44bd324e9aaa26299df77195b18883dbe8e4",
+  "unchangedSiteConsumedSourcesVerified": true
 }

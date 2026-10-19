@@ -442,6 +442,11 @@ html[data-theme="light"] .method-flow li::before { border-color: rgba(0, 115, 14
 html[data-theme="light"] .method-flow li:not(:last-child)::after { background: linear-gradient(180deg, rgba(0, 115, 143, 0.35), rgba(0, 115, 143, 0.05)); }
 html[data-theme="light"] .hero-facts li { background: linear-gradient(165deg, #FFFFFF, #F5F9FF); box-shadow: var(--shadow-flat); }
 html[data-theme="light"] .device-lineup > span { box-shadow: 0 18px 36px rgba(15, 30, 60, 0.20), inset 0 0 0 1px rgba(255, 255, 255, 0.05); }
+html[data-theme="light"] .duo-book__half { box-shadow: 0 24px 48px rgba(15, 30, 60, 0.22); }
+html[data-theme="light"] .duo-book::before { background: radial-gradient(closest-side, rgba(0, 110, 168, 0.14), transparent); }
+html[data-theme="light"] .duo-book__half--left::after { background: linear-gradient(90deg, transparent 75%, rgba(15, 30, 60, 0.08)); }
+html[data-theme="light"] .duo-screen { box-shadow: 0 12px 26px rgba(15, 30, 60, 0.18); }
+html[data-theme="light"] .duo-feature { border-color: rgba(13, 30, 55, 0.08); background: linear-gradient(165deg, #FFFFFF 0%, #F3F7FD 100%); box-shadow: var(--shadow-flat); }
 html[data-theme="light"] .hub-hero__badges .certification-badge { filter: drop-shadow(0 10px 14px rgba(15, 30, 60, 0.18)); }
 
 /* Study tools and comparison table on light surfaces. */

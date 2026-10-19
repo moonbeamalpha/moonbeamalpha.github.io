@@ -186,7 +186,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 - **Question types**: Nine interactive formats for exam-style rehearsal, including multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies.
 - **Answer Coach**: See why the answer is correct and, where available, why each option is right or wrong. Review explanations after each question or at the end of a practice test, then return to missed answers and saved session notes. Written guidance is always available. On supported devices, optional AI can reword a note on the device after checking it against that guidance.
 - **Offline-first**: Works fully without a network. No telemetry, no analytics on user behavior, no account required.
-- **Apple ecosystem**: Native SwiftUI on iPhone and iPad; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
+- **Apple ecosystem**: Native SwiftUI on iPhone and iPad; side-by-side panes and tabletop-pose flashcards on iPhone Duo; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
 
 ## Differentiation
 

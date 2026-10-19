@@ -17,6 +17,7 @@ FEATURES = {
     'features': 'Azure Mastery study features',
     'exam-simulator': 'Exam simulator and certification paths',
     'devices': 'Azure Mastery on iPhone, iPad, Mac and Apple Watch',
+    'iphone-duo': 'Azure Mastery on iPhone Duo — side-by-side panes and tabletop flashcards',
     'screenshots': 'Azure Mastery screenshots',
     'faq': 'Azure Mastery frequently asked questions',
 }

@@ -1,10 +1,10 @@
 {
-  "verifiedOn": "2026-10-16",
+  "verifiedOn": "2026-10-20",
   "releasePolicy": "Keep this approved-release count baseline until Chris authorizes counts from a later App Store-approved release.",
   "totals": {
     "examCount": 30,
-    "questionCount": 12943,
-    "questionCountLabel": "12,900+"
+    "questionCount": 13003,
+    "questionCountLabel": "13,000+"
   },
   "certPathCount": 29,
   "examCounts": {
@@ -16,7 +16,7 @@
     "AB-900": 323,
     "AI-102": 334,
     "AI-103": 557,
-    "AI-200": 280,
+    "AI-200": 300,
     "AI-300": 382,
     "AI-500": 452,
     "AI-900": 340,
@@ -26,8 +26,8 @@
     "AZ-305": 459,
     "AZ-400": 547,
     "AZ-500": 346,
-    "AZ-700": 649,
-    "AZ-900": 404,
+    "AZ-700": 669,
+    "AZ-900": 424,
     "DP-100": 350,
     "DP-300": 428,
     "DP-700": 340,
@@ -45,11 +45,11 @@
     "SC-900": 393
   },
   "protectedSHA256": {
-    "data/exam-counts.json": "252ab57527739aa0f28e5708533b60ced7e5c9f686bff85a5d43c2aadee60d67",
+    "data/exam-counts.json": "d45bc5490459451cc96a49066f3ce8234dbb0aed9a5d82693feffc9467d15300",
     "data/practice-previews.json": "d50ee4ba70dcd1e15b8175f14b2133f0e64a4cfa1409231f12f427006523ac90",
     "data/home-practice.json": "619961df5711a1c08dd89c342ecc36713e43c78e59f751eeb5ba23bbcfd1c75b",
-    "images/og-image.png": "b9a2951a4a761da4dd51bd04dac5bc5b355567f6c925a17034c3863b8dedc0ac",
-    "images/linkedin-banner.png": "d7a1517585b337e046541a963229362ef52bef6865d2bb9f54af9c495f4ebae6",
+    "images/og-image.png": "2c1bb739c1607730ebb48ef590939c7ae1ad4bf87d4c6216d39a43047b7ba32e",
+    "images/linkedin-banner.png": "1db24175ed5ec470eb004a1a53619605c32d260fcac233b1556b37885ae27c2b",
     "images/og/ab-100.jpg": "00b22d394fab58a20821eddeea3ba6ba3ba796b6d8b5f09905e1027a543d24ce",
     "images/og/ab-410.jpg": "86da5481038f99521a1cb92509726f40f3a42b6cbb136a4bbcb67dbb5523e1a2",
     "images/og/ab-620.jpg": "0d18e283b143539b016dfbdc9aa6bf8de2554e1b1f69fd3d838f72e4bd43d80e",
@@ -58,7 +58,7 @@
     "images/og/ab-900.jpg": "97d8ad2d544a32c43eec4cc4db462bb413acc9fdf5ea2c56b053d384ba74db1a",
     "images/og/ai-102.jpg": "d9eb39f08f0a61bd8da282344cd858a5facf61cb4bc3f2e0adc6001d69c14ffb",
     "images/og/ai-103.jpg": "08e8684b6b7fc30f460a9625e5a89089e88614e3205d21319d326dd1c36a6a1f",
-    "images/og/ai-200.jpg": "4429fc31d9ccb416791a7838a2a7c3221048eb32c86f12c1793e7f9e61b3a832",
+    "images/og/ai-200.jpg": "7bca41375bc242054db155eb808cb07a51ca1b346cf9f65a46e25b40b1d4e84d",
     "images/og/ai-300.jpg": "b1d6b113e3ba86956c2570f0370352813d0e7381ec27ff59d33cdd2b1ed77f36",
     "images/og/ai-500.jpg": "7e9b76603e20448405dff20b892dbfedd8d87ee13d78fd636c75fc0c9e37425a",
     "images/og/ai-900.jpg": "0f2beb794d06ff81f1484332646445111acaf75d9ee36917757483141ec93d67",
@@ -68,8 +68,8 @@
     "images/og/az-305.jpg": "b0a68af41e0546d7c46386f95194ee7d1f70e97c7594bd86f4dacaa10857d996",
     "images/og/az-400.jpg": "85578aba6729aefa37b42f7cafdeaa89df7227686a315574d47d0a9f42a71f03",
     "images/og/az-500.jpg": "ee52bc767c9209eda92e040ee806e662c40778487d58a608835e158c107705fe",
-    "images/og/az-700.jpg": "c1c256bc117c6a75411e5431dda4f55285fd8eba13fcd6107ae5ccefd2d48dc9",
-    "images/og/az-900.jpg": "5f6cefc9516a087bdb184fbaa3d13c6aab169740666a9ec44e42ebfd679f804e",
+    "images/og/az-700.jpg": "b4bd1fa7c37d04b775bd0974adf3bcc5ddd9d729e3bad542b0ea5f0bfae85a7d",
+    "images/og/az-900.jpg": "2c0dd5c00247b8afb78ec8cc22b5fca8b46d3d5d8636e3b5e6d367317ffd05b3",
     "images/og/dp-100.jpg": "513eeaca51bd4bdba1cfc80add803bacbf3cedb9c51d389f55efb568d93afff5",
     "images/og/dp-300.jpg": "a63fb4eefe26c08cac03d36db66871f2e1486c0f1774c5968fc9c515c82e9b45",
     "images/og/dp-700.jpg": "ff1f8c71cfde829891da9de75e9b347f040726e5f1562222a90fdc47c243a631",
@@ -86,17 +86,17 @@
     "images/og/sc-500.jpg": "2b8a3c548c1cce841f51305ca01267fb539f0f76ab7c0c2696b5b1af150ac7fd",
     "images/og/sc-900.jpg": "0f34c030c26cc225b56747110f835d5ba0dca1f8863f7748b40dc46acb6722a4"
   },
-  "previousProductionCommit": "6f8e58737a365c8ea75aa693e0814f0eb56a3293",
+  "previousProductionCommit": "9cb686a10b258e62a8aabe429561c91ed5bb5f35",
   "approvedRelease": {
-    "checkedOn": "2026-10-16",
-    "version": "2.0.2",
+    "checkedOn": "2026-10-20",
+    "version": "2.1.0",
     "state": "READY_FOR_SALE",
-    "build": "49",
-    "buildId": "1dec275d-abfd-4d6b-a48f-df9d3f4ca753",
-    "uploadedDate": "2026-10-15T02:04:20-07:00",
-    "appSourceCommit": "9b1adff05f2bffc106a02f5a3fb86fb1d3848176",
-    "catalogueSHA256": "c2f3442d7af581e029da98a0275a56c41c35b1724f89973e1a54486042fc41bc",
-    "ownerAuthorization": "Create the consolidated v2.0.2 marketing PR using #67 release-matched counts and update the freeze receipt."
+    "build": "50",
+    "buildId": "050e1477-63b7-4361-9997-33458635556a",
+    "uploadedDate": "2026-10-18T16:05:13-07:00",
+    "appSourceCommit": "f873162b6f28d161ad4a90a0cd7466ce8b48c55a",
+    "catalogueSHA256": "dfa80bf8729a1093edc64eada3c4ab35c5dd9f10f79e96ddc5e71856804e4fa5",
+    "ownerAuthorization": "Update the marketing site with PRs and question counts relevant to 2.1.0, include Duo mockups in both themes, and update screenshots with the latest captures."
   },
   "publicationURL": "https://azuremastery.app/llms.txt"
 }

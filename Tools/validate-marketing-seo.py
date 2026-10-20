@@ -70,8 +70,8 @@ if set(RETIRED) | set(RETIRING) != NON_CURRENT:
         f"Tools/optimise-marketing-seo.py."
     )
 
-GUIDE_UPDATED = "2026-10-12"
-GUIDE_UPDATED_LABEL = "Updated 12 October 2026"
+GUIDE_UPDATED = "2026-10-20"
+GUIDE_UPDATED_LABEL = "Updated 20 October 2026"
 GUIDE_SLUGS = (
     "which-azure-certification-first",
     "how-to-pass-az-900",

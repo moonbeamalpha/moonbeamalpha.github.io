@@ -1,0 +1,122 @@
+{
+  "checkedOn": "2026-10-20",
+  "checks": [
+    {
+      "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/test-domain-counts.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/test-public-exam-facts.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/test-production-count-freeze.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/check-marketing-ui.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/test-search-index.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/check-conversion-ui.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/validate-marketing-seo.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/validate-aura-help.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/check-page-similarity.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/update-sitemap-lastmod.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/add-exam-page-cta.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/build-search-index.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/sync-search-ui.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/version-static-assets.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/sync-conversion-ui.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/build-download-qr.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/sync-exam-faq-schema.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/add-ga-internal-flag.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python3 Tools/add-footer-links.py --check",
+      "exit": 0
+    },
+    {
+      "command": "node Tools/check-marketing-performance.mjs",
+      "exit": 0
+    },
+    {
+      "command": "node Tools/test-app-store-links.mjs",
+      "exit": 0
+    },
+    {
+      "command": "node Tools/test-search.mjs",
+      "exit": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "cssBundle": "bash Tools/build-home-css.sh --check passed",
+  "browser": {
+    "viewports": [
+      [
+        1440,
+        1100
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "mockupThemeSwap": "passed",
+    "brokenVisibleImages": 0,
+    "DuoContentFitsViewport": true,
+    "notes": "Root scrollWidth includes clipped visual overflow; body and Duo section both fit 390px."
+  }
+}

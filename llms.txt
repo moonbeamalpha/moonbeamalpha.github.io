@@ -1,6 +1,6 @@
 # Azure Mastery
 
-> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). Version 2.0 introduces Ask Aura Preview, a private Pro study companion grounded in reviewed exam material. It also uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 12,900+ practice questions cover 30 Microsoft certification exams, with no tracking or data collection.
+> Azure Mastery is an iOS and iPadOS app for Microsoft certification exam preparation (Azure, AI, Data, Security, Power Platform, and GitHub). Version 2.1.0 adds adaptive iPhone Duo layouts, clearer answer review and Exam IQ milestones. Ask Aura Preview is a private Pro study companion grounded in reviewed exam material. It also uses on-device CoreML to predict your exam score (Exam IQ), build adaptive study plans, and track knowledge decay before exam day. 13,000+ practice questions cover 30 Microsoft certification exams, with no tracking or data collection.
 
 Publisher: Moonbeam Alpha Ltd
 Platform: iOS 18+, iPadOS 18+
@@ -10,7 +10,7 @@ Last updated: 2026-09-30
 
 ## Primary pages
 
-- [Ask Aura — private study companion](https://azuremastery.app/ask-aura/): Version 2.0 Pro preview, reviewed exam material, quizzes, focused sessions, device-local conversation storage, and the preview video. Generative explanations are not enabled in this preview.
+- [Ask Aura — private study companion](https://azuremastery.app/ask-aura/): Private Pro preview, reviewed exam material, quizzes, focused sessions, device-local conversation storage, and the preview video. Generative explanations are not enabled in this preview.
 
 - [Home — Azure Mastery](https://azuremastery.app/): Product overview, feature list, screenshots, and App Store link. Canonical entry point.
 - [All exam pages](https://azuremastery.app/exams/): Hub listing every covered exam by family with links to each practice page.
@@ -28,7 +28,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 ### Azure infrastructure & solutions (5)
 
-- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 404 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills measured as of 20 July 2026.
+- [AZ-900 — Microsoft Azure Fundamentals](https://azuremastery.app/exams/az-900/): 424 in-app practice questions. Foundational exam, doesn't expire, USD $99 voucher. 45-min duration; most Fundamentals sittings contain 35–50 questions, but the exact count varies. Pass score 700/1000. Three domains: cloud concepts (25–30%), Azure architecture and services (35–40%), Azure management and governance (30–35%). Skills measured as of 20 July 2026.
 
 - [AZ-104 — Microsoft Azure Administrator](https://azuremastery.app/exams/az-104/): 561 in-app practice questions. Associate-tier sysadmin cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions. Five domains: identities and governance (20–25%), storage (15–20%), compute (20–25%), virtual networking (15–20%), monitoring (10–15%). Skills outline updated 17 April 2026.
 
@@ -40,7 +40,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AZ-500 — Microsoft Azure Security Engineer](https://azuremastery.app/exams/az-500/): 346 in-app practice questions. **⚠ Microsoft retired AZ-500 on 31 August 2026** — it can no longer be scheduled; the successor is SC-500 (Cloud and AI Security Engineer). Associate-tier security engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates managing identity and access (Entra, conditional access, PIM), securing networking (NSGs, Azure Firewall, Private Link, DDoS), securing compute/storage/databases, and managing security operations (Defender for Cloud, Sentinel, Key Vault). Skills outline updated 22 January 2026.
 
-- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 649 in-app practice questions. Associate-tier Azure Network Engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills measured as of 27 July 2026.
+- [AZ-700 — Designing and Implementing Microsoft Azure Networking Solutions](https://azuremastery.app/exams/az-700/): 669 in-app practice questions. Associate-tier Azure Network Engineer cert, renews annually, USD $165 voucher. 100-min duration, 40–60 questions, pass score 700/1000. Validates designing/implementing core networking (VNets, peering, hybrid), private access (Private Link, ExpressRoute, VPN), routing and load balancing (Application Gateway, Load Balancer, Front Door, Traffic Manager), and securing/monitoring networks. Skills measured as of 27 July 2026.
 
 ### AI, Machine Learning & Copilot Agents (11)
 
@@ -52,7 +52,7 @@ Every exam covered by the app has a dedicated landing page describing the exam, 
 
 - [AI-103 — Developing AI Apps and Agents on Azure](https://azuremastery.app/exams/ai-103/): 557 in-app practice questions for the Azure AI Apps and Agents Developer Associate credential. 120-min assessment, pass score 700/1000. Five domains: plan/manage an Azure AI solution (25–30%), generative and agentic solutions (30–35%), computer vision (10–15%), text analysis (10–15%), and information extraction (10–15%). Requires Python and Microsoft Foundry experience. Skills measured as of 16 April 2026.
 
-- [AI-200 — Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 280 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 120-min assessment, 40–60 questions, pass score 700/1000. Validates designing cloud-native AI applications, embedding LLMs into Azure-hosted apps, integrating with Azure AI Search and storage, and operationalising AI workloads. Study guide document updated 5 May 2026; no dated skills-effective heading is published.
+- [AI-200 — Azure AI Cloud Developer](https://azuremastery.app/exams/ai-200/): 300 in-app practice questions. Associate-tier AI cloud developer cert, renews annually, USD $165 voucher. 120-min assessment, 40–60 questions, pass score 700/1000. Covers container hosting, vector-capable Azure data services, messaging, security and monitoring. Skills outline effective 7 October 2026; the summary increases AI data management to 30–35%, although its detailed heading retains 25–30%.
 
 - [AI-300 — Microsoft Azure ML Operations Engineer](https://azuremastery.app/exams/ai-300/): 382 in-app practice questions (covers the ML Operations Engineer role). Associate-tier cert, renews annually, USD $165 voucher. 120-min assessment, 40–60 questions, pass score 700/1000. Validates managing the ML lifecycle on Azure ML — model training pipelines, registries, deployment to managed and Kubernetes endpoints, monitoring drift, and responsible-AI evaluation in production. Study guide document updated 5 March 2026; no dated skills-effective heading is published.
 
@@ -186,7 +186,7 @@ The app covers the following Microsoft certification exams. All are taught with 
 - **Question types**: Nine interactive formats for exam-style rehearsal, including multiple choice, multi-select, drag-and-drop ordering, hotspot, and case studies.
 - **Answer Coach**: See why the answer is correct and, where available, why each option is right or wrong. Review explanations after each question or at the end of a practice test, then return to missed answers and saved session notes. Written guidance is always available. On supported devices, optional AI can reword a note on the device after checking it against that guidance.
 - **Offline-first**: Works fully without a network. No telemetry, no analytics on user behavior, no account required.
-- **Apple ecosystem**: Native SwiftUI on iPhone and iPad; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
+- **Apple ecosystem**: Native SwiftUI on iPhone and iPad; side-by-side panes and tabletop-pose flashcards on iPhone Duo; Live Activities for active study sessions; Apple Watch glance for streaks and XP.
 
 ## Differentiation
 

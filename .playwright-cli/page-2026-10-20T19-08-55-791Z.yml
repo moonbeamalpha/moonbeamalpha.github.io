@@ -1,0 +1,711 @@
+- generic [active] [ref=f2e1]:
+  - link "Skip to content" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link "Azure Mastery home" [ref=f2e5] [cursor=pointer]:
+        - /url: https://azuremastery.app/
+        - img "Azure Mastery app icon" [ref=f2e6]
+        - generic [ref=f2e7]: Azure Mastery
+      - list [ref=f2e8]:
+        - listitem [ref=f2e19]:
+          - button "Search exams, guides and topics" [ref=f2e20] [cursor=pointer]
+        - listitem [ref=f2e26]:
+          - button "Switch to dark theme" [pressed] [ref=f2e27] [cursor=pointer]
+  - main [ref=f2e32]:
+    - generic [ref=f2e34]:
+      - generic [ref=f2e35]:
+        - paragraph [ref=f2e38]: Microsoft certification prep · iPhone & iPad
+        - heading "Know when you're ready." [level=1] [ref=f2e39]: Know whenyou're ready.
+        - paragraph [ref=f2e40]: Practise with exam-style questions, learn why every option is right or wrong, and see how close you are to the pass mark. The app tells you which topic to study next.
+        - generic [ref=f2e41]:
+          - link "Download Azure Mastery free on the App Store" [ref=f2e42] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-home-hero&pt=128558698&mt=8
+            - text: Download free
+          - link "Try a question" [ref=f2e45] [cursor=pointer]:
+            - /url: "#try-a-question"
+            - text: Try a question →
+        - paragraph [ref=f2e49]:
+          - text: 50+ free questions per exam · No account needed.Full banks are a one-time purchase.
+          - link "See free and Pro options" [ref=f2e50] [cursor=pointer]:
+            - /url: "#pricing"
+          - text: .
+        - navigation [ref=f2e51]:
+          - paragraph [ref=f2e52]: Which exam are you taking?
+          - list [ref=f2e53]:
+            - listitem [ref=f2e54]:
+              - link "AZ-900 Azure Fundamentals" [ref=f2e55] [cursor=pointer]:
+                - /url: /exams/az-900/
+                - text: AZ-900
+                - generic [ref=f2e56]: Azure Fundamentals
+            - listitem [ref=f2e57]:
+              - link "AZ-104 Azure Administrator" [ref=f2e58] [cursor=pointer]:
+                - /url: /exams/az-104/
+                - text: AZ-104
+                - generic [ref=f2e59]: Azure Administrator
+            - listitem [ref=f2e60]:
+              - link "AI-901 Azure AI Fundamentals" [ref=f2e61] [cursor=pointer]:
+                - /url: /exams/ai-901/
+                - text: AI-901
+                - generic [ref=f2e62]: Azure AI Fundamentals
+            - listitem [ref=f2e63]:
+              - link "DP-700 Fabric Data Engineer" [ref=f2e64] [cursor=pointer]:
+                - /url: /exams/dp-700/
+                - text: DP-700
+                - generic [ref=f2e65]: Fabric Data Engineer
+            - listitem [ref=f2e66]:
+              - link "PL-300 Power BI Data Analyst Associate" [ref=f2e67] [cursor=pointer]:
+                - /url: /exams/pl-300/
+                - text: PL-300
+                - generic [ref=f2e68]: Power BI Data Analyst Associate
+            - listitem [ref=f2e69]:
+              - link "SC-900 Security, Compliance, and Identity Fundamentals" [ref=f2e70] [cursor=pointer]:
+                - /url: /exams/sc-900/
+                - text: SC-900
+                - generic [ref=f2e71]: Security, Compliance, and Identity Fundamentals
+            - listitem [ref=f2e72]:
+              - link "All exams" [ref=f2e73] [cursor=pointer]:
+                - /url: "#exam-roadmap"
+                - text: All exams
+                - generic [aria-hidden] [ref=f2e74]: →
+        - generic [ref=f2e75]:
+          - generic [ref=f2e76]: Works offline
+          - generic [ref=f2e78]: No in-app tracking
+          - generic [ref=f2e80]: Private, on-device scoring
+      - figure "See your progress. Choose your next step." [ref=f2e799]:
+        - img "Exam IQ showing a readiness estimate and a score trend in Azure Mastery" [ref=f2e92]
+    - region [ref=f2e97]:
+      - generic [ref=f2e98]:
+        - paragraph [ref=f2e99]: Inside Azure Mastery
+        - heading "Practise. Understand. Choose your next step." [level=2] [ref=f2e100]
+        - paragraph [ref=f2e101]: Practice questions, recall and readiness coaching work together to guide your revision.
+      - generic [ref=f2e102]:
+        - article [ref=f2e103]:
+          - generic [ref=f2e104]:
+            - heading "1 Practise a decision." [level=3] [ref=f2e105]:
+              - generic [ref=f2e106]: "1"
+              - text: Practise a decision.
+            - paragraph [ref=f2e107]: Work through original questions and scenarios at your own pace. Start with 50+ free questions per exam.
+            - link "Try a short sample →" [ref=f2e108] [cursor=pointer]:
+              - /url: "#try-a-question"
+          - link "Open the full practice-question screenshot" [ref=f2e109] [cursor=pointer]:
+            - /url: /images/cap-practice-question-v210-light.webp
+            - img "An Azure storage practice question in the Azure Mastery app" [ref=f2e110]
+        - article [ref=f2e111]:
+          - generic [ref=f2e112]:
+            - heading "2 Understand your result." [level=3] [ref=f2e113]:
+              - generic [ref=f2e114]: "2"
+              - text: Understand your result.
+            - paragraph [ref=f2e115]: See which topics need another pass. Written explanations help you compare the options. Pro adds a coach that explains the trap behind each miss, plus your full answer history.
+            - link "Compare free and Pro →" [ref=f2e116] [cursor=pointer]:
+              - /url: "#pricing"
+          - link "Open the full answer-review screenshot" [ref=f2e117] [cursor=pointer]:
+            - /url: /images/cap-answer-review-v210-light.webp
+            - img "Answer review showing the selected answer and its written explanation" [ref=f2e118]
+        - article [ref=f2e119]:
+          - generic [ref=f2e120]:
+            - heading "3 Focus your next session." [level=3] [ref=f2e121]:
+              - generic [ref=f2e122]: "3"
+              - text: Focus your next session.
+            - paragraph [ref=f2e123]: See your predicted score against the pass mark and the topic that would lift it most. Due reviews bring back what you are starting to forget. Pro shows the full breakdown.
+            - link "How the score works →" [ref=f2e124] [cursor=pointer]:
+              - /url: /how-exam-iq-works/
+          - link "Open the full Today dashboard screenshot" [ref=f2e125] [cursor=pointer]:
+            - /url: /images/cap-home-dashboard-v210-light.webp
+            - img "Today dashboard showing a focused next session and Exam IQ readiness" [ref=f2e126]
+      - generic [ref=f2e127]:
+        - heading "Everything in the app Practice tests, score coaching, flashcards and more" [level=3] [ref=f2e129]:
+          - generic [ref=f2e130]: Everything in the app
+          - generic [ref=f2e131]: Practice tests, score coaching, flashcards and more
+        - generic [ref=f2e132]:
+          - region "Study tools" [ref=f2e133]:
+            - article [ref=f2e134]:
+              - generic [ref=f2e135]: Pro
+              - heading "Practice tests" [level=3] [ref=f2e140]
+              - paragraph [ref=f2e141]: Rehearse under time pressure with the exam simulator. Flag questions, review them before submitting, then use your results to spot topics that need work.
+            - article [ref=f2e142]:
+              - generic [ref=f2e143]: Pro
+              - heading "Predicted score (Exam IQ)" [level=3] [ref=f2e147]
+              - paragraph [ref=f2e148]: See your predicted score, its trend and your next focus. Exam IQ weighs what you retain, topic coverage and practice-test consistency to guide your next session.
+              - link "How Exam IQ works" [ref=f2e149] [cursor=pointer]:
+                - /url: /how-exam-iq-works/
+                - text: How Exam IQ works
+                - generic [aria-hidden] [ref=f2e150]: →
+            - article [ref=f2e151]:
+              - heading "Spaced-repetition flashcards" [level=3] [ref=f2e156]
+              - paragraph [ref=f2e157]: Recall a term or answer before you reveal it, then rate how well you knew it. Due reviews bring material back as your memory fades.
+            - article [ref=f2e158]:
+              - generic [ref=f2e159]: Pro
+              - heading "Answer Coach & mistake review" [level=3] [ref=f2e163]
+              - paragraph [ref=f2e164]: Turn a missed answer into a focused lesson with private coaching based on written explanations. Revisit saved practice results to work through mistakes again.
+            - article [ref=f2e165]:
+              - heading "Focused study sessions" [level=3] [ref=f2e171]
+              - paragraph [ref=f2e172]: Choose a topic and a set that fits your time. Practise new questions, revisit mistakes or tackle due reviews, with written explanations to help each decision make sense.
+            - article [ref=f2e173]:
+              - heading "A plan for your exam date" [level=3] [ref=f2e178]
+              - paragraph [ref=f2e179]: Set your target date and follow a week-by-week revision plan. Daily goals, challenges and certification path tracking help you keep moving towards your next credential.
+          - generic [ref=f2e180]:
+            - paragraph [ref=f2e181]: Practise offline. Keep your learning private. Your score is calculated on your device.
+            - link "Compare free, exam packs and Pro" [ref=f2e182] [cursor=pointer]:
+              - /url: "#pricing"
+              - text: Compare free, exam packs and Pro
+              - generic [aria-hidden] [ref=f2e183]: →
+      - article [ref=f2e184]:
+        - generic [ref=f2e185]:
+          - link "INCLUDED WITH PRO ASK AURA PREVIEW" [ref=f2e186] [cursor=pointer]:
+            - /url: /ask-aura/
+            - generic [ref=f2e187]: INCLUDED WITH PRO
+            - text: ASK AURA PREVIEW
+          - heading "Make the concept click." [level=3] [ref=f2e188]
+          - paragraph [ref=f2e189]: Ask Aura, the app’s private study companion, helps you revisit reviewed explanations. Here it explains Azure role-based access control, with a source card and a follow-up example.
+          - paragraph [ref=f2e190]: Included with Pro.
+          - link "Explore Ask Aura →" [ref=f2e191] [cursor=pointer]:
+            - /url: /ask-aura/
+        - figure [ref=f2e192]:
+          - link "Open the full Ask Aura study-session screenshot" [ref=f2e193] [cursor=pointer]:
+            - /url: /images/cap-ask-aura-response-v210.webp
+            - img "Ask Aura explains Azure role-based access control and offers an example and source card" [ref=f2e194]
+    - generic [ref=f2e195]:
+      - generic [ref=f2e196]:
+        - paragraph [ref=f2e197]: Your next certification
+        - heading "Find your exam." [level=2] [ref=f2e198]
+        - paragraph [ref=f2e199]: Search by code, title or subject. Or choose an exam below.
+      - generic [ref=f2e200]:
+        - generic [ref=f2e201]:
+          - generic [ref=f2e202]: Find an exam, guide or topic
+          - search "Browse search" [ref=f2e203]:
+            - searchbox "Find an exam, guide or topic" [ref=f2e207]
+        - generic [ref=f2e208]:
+          - group "Try a search" [ref=f2e209]:
+            - button "AZ-104" [ref=f2e210] [cursor=pointer]
+            - button "Security" [ref=f2e211] [cursor=pointer]
+            - button "Copilot" [ref=f2e212] [cursor=pointer]
+            - button "Fabric" [ref=f2e213] [cursor=pointer]
+          - list "Search results"
+      - group "Filter exams by subject" [ref=f2e214]:
+        - button "All" [pressed] [ref=f2e215] [cursor=pointer]
+        - button "Azure" [ref=f2e218] [cursor=pointer]
+        - button "Data & AI" [ref=f2e221] [cursor=pointer]
+        - button "Apps & DevOps" [ref=f2e224] [cursor=pointer]
+        - button "Business & Copilot" [ref=f2e227] [cursor=pointer]
+        - button "Security" [ref=f2e230] [cursor=pointer]
+        - button "GitHub" [ref=f2e233] [cursor=pointer]
+      - status [ref=f2e236]
+      - generic [ref=f2e237]:
+        - link "AZ-900 Azure Fundamentals" [ref=f2e800] [cursor=pointer]:
+          - /url: /exams/az-900/
+          - text: AZ-900
+          - generic [ref=f2e242]:
+            - text: AZ-900
+            - generic [aria-hidden] [ref=f2e243]: ↗
+          - generic [ref=f2e244]: Azure Fundamentals
+        - link "AZ-104 Azure Administrator" [ref=f2e801] [cursor=pointer]:
+          - /url: /exams/az-104/
+          - text: AZ-104 ASSOCIATE
+          - generic [ref=f2e251]:
+            - text: AZ-104
+            - generic [aria-hidden] [ref=f2e252]: ↗
+          - generic [ref=f2e253]: Azure Administrator
+        - link "AI-901 Azure AI Fundamentals" [ref=f2e802] [cursor=pointer]:
+          - /url: /exams/ai-901/
+          - text: AI-901
+          - generic [ref=f2e259]:
+            - text: AI-901
+            - generic [aria-hidden] [ref=f2e260]: ↗
+          - generic [ref=f2e261]: Azure AI Fundamentals
+        - link "DP-700 Fabric Data Engineer" [ref=f2e803] [cursor=pointer]:
+          - /url: /exams/dp-700/
+          - text: DP-700 ASSOCIATE
+          - generic [ref=f2e268]:
+            - text: DP-700
+            - generic [aria-hidden] [ref=f2e269]: ↗
+          - generic [ref=f2e270]: Fabric Data Engineer
+        - link "PL-300 Power BI Data Analyst Associate" [ref=f2e804] [cursor=pointer]:
+          - /url: /exams/pl-300/
+          - text: PL-300 ASSOCIATE
+          - generic [ref=f2e277]:
+            - text: PL-300
+            - generic [aria-hidden] [ref=f2e278]: ↗
+          - generic [ref=f2e279]: Power BI Data Analyst Associate
+        - link "SC-900 Security, Compliance, and Identity Fundamentals" [ref=f2e805] [cursor=pointer]:
+          - /url: /exams/sc-900/
+          - text: SC-900
+          - generic [ref=f2e285]:
+            - text: SC-900
+            - generic [aria-hidden] [ref=f2e286]: ↗
+          - generic [ref=f2e287]: Security, Compliance, and Identity Fundamentals
+        - link "AB-100 Agentic AI Business Solutions Architect" [ref=f2e806] [cursor=pointer]:
+          - /url: /exams/ab-100/
+          - text: AB-100 EXPERT
+          - generic [ref=f2e294]:
+            - text: AB-100
+            - generic [aria-hidden] [ref=f2e295]: ↗
+          - generic [ref=f2e296]: Agentic AI Business Solutions Architect
+        - link "AB-410 Intelligent Applications Builder Associate" [ref=f2e807] [cursor=pointer]:
+          - /url: /exams/ab-410/
+          - text: AB-410 ASSOCIATE
+          - generic [ref=f2e303]:
+            - text: AB-410
+            - generic [aria-hidden] [ref=f2e304]: ↗
+          - generic [ref=f2e305]: Intelligent Applications Builder Associate
+        - link "AB-620 AI Agent Builder Associate" [ref=f2e808] [cursor=pointer]:
+          - /url: /exams/ab-620/
+          - text: AB-620 ASSOCIATE
+          - generic [ref=f2e312]:
+            - text: AB-620
+            - generic [aria-hidden] [ref=f2e313]: ↗
+          - generic [ref=f2e314]: AI Agent Builder Associate
+        - link "AB-650 AI Services Administrator Associate" [ref=f2e809] [cursor=pointer]:
+          - /url: /exams/ab-650/
+          - text: AB-650 ASSOCIATE
+          - generic [ref=f2e321]:
+            - text: AB-650
+            - generic [aria-hidden] [ref=f2e322]: ↗
+          - generic [ref=f2e323]: AI Services Administrator Associate
+        - link "AB-731 AI Transformation Leader" [ref=f2e810] [cursor=pointer]:
+          - /url: /exams/ab-731/
+          - text: AB-731 ASSOCIATE
+          - generic [ref=f2e330]:
+            - text: AB-731
+            - generic [aria-hidden] [ref=f2e331]: ↗
+          - generic [ref=f2e332]: AI Transformation Leader
+        - link "AB-900 365 Copilot and Agent Administration Fundamentals" [ref=f2e811] [cursor=pointer]:
+          - /url: /exams/ab-900/
+          - text: AB-900
+          - generic [ref=f2e338]:
+            - text: AB-900
+            - generic [aria-hidden] [ref=f2e339]: ↗
+          - generic [ref=f2e340]: 365 Copilot and Agent Administration Fundamentals
+        - link "AI-103 Azure AI App & Agent Developer Associate" [ref=f2e812] [cursor=pointer]:
+          - /url: /exams/ai-103/
+          - text: AI-103 ASSOCIATE
+          - generic [ref=f2e347]:
+            - text: AI-103
+            - generic [aria-hidden] [ref=f2e348]: ↗
+          - generic [ref=f2e349]: Azure AI App & Agent Developer Associate
+        - link "AI-200 Azure AI Cloud Developer" [ref=f2e813] [cursor=pointer]:
+          - /url: /exams/ai-200/
+          - text: AI-200 ASSOCIATE
+          - generic [ref=f2e356]:
+            - text: AI-200
+            - generic [aria-hidden] [ref=f2e357]: ↗
+          - generic [ref=f2e358]: Azure AI Cloud Developer
+        - link "AI-300 Operationalizing Machine Learning and Generative AI Solutions" [ref=f2e814] [cursor=pointer]:
+          - /url: /exams/ai-300/
+          - text: AI-300 ASSOCIATE
+          - generic [ref=f2e365]:
+            - text: AI-300
+            - generic [aria-hidden] [ref=f2e366]: ↗
+          - generic [ref=f2e367]: Operationalizing Machine Learning and Generative AI Solutions
+        - link "AI-500 Multi-Agent AI Solutions Expert" [ref=f2e815] [cursor=pointer]:
+          - /url: /exams/ai-500/
+          - text: AI-500 EXPERT
+          - generic [ref=f2e374]:
+            - text: AI-500
+            - generic [aria-hidden] [ref=f2e375]: ↗
+          - generic [ref=f2e376]: Multi-Agent AI Solutions Expert
+        - link "AZ-305 Azure Solutions Architect Expert" [ref=f2e816] [cursor=pointer]:
+          - /url: /exams/az-305/
+          - text: AZ-305 EXPERT
+          - generic [ref=f2e383]:
+            - text: AZ-305
+            - generic [aria-hidden] [ref=f2e384]: ↗
+          - generic [ref=f2e385]: Azure Solutions Architect Expert
+        - link "AZ-400 DevOps Engineer Expert" [ref=f2e817] [cursor=pointer]:
+          - /url: /exams/az-400/
+          - text: AZ-400 EXPERT
+          - generic [ref=f2e392]:
+            - text: AZ-400
+            - generic [aria-hidden] [ref=f2e393]: ↗
+          - generic [ref=f2e394]: DevOps Engineer Expert
+        - link "AZ-700 Azure Network Engineer Associate" [ref=f2e818] [cursor=pointer]:
+          - /url: /exams/az-700/
+          - text: AZ-700 ASSOCIATE
+          - generic [ref=f2e401]:
+            - text: AZ-700
+            - generic [aria-hidden] [ref=f2e402]: ↗
+          - generic [ref=f2e403]: Azure Network Engineer Associate
+        - link "DP-300 Azure Database Administrator Associate" [ref=f2e819] [cursor=pointer]:
+          - /url: /exams/dp-300/
+          - text: DP-300 ASSOCIATE
+          - generic [ref=f2e410]:
+            - text: DP-300
+            - generic [aria-hidden] [ref=f2e411]: ↗
+          - generic [ref=f2e412]: Azure Database Administrator Associate
+        - link "DP-750 Azure Databricks Data Engineer" [ref=f2e820] [cursor=pointer]:
+          - /url: /exams/dp-750/
+          - text: DP-750 ASSOCIATE
+          - generic [ref=f2e419]:
+            - text: DP-750
+            - generic [aria-hidden] [ref=f2e420]: ↗
+          - generic [ref=f2e421]: Azure Databricks Data Engineer
+        - link "DP-800 SQL AI Developer" [ref=f2e821] [cursor=pointer]:
+          - /url: /exams/dp-800/
+          - text: DP-800 ASSOCIATE
+          - generic [ref=f2e428]:
+            - text: DP-800
+            - generic [aria-hidden] [ref=f2e429]: ↗
+          - generic [ref=f2e430]: SQL AI Developer
+        - link "DP-900 Azure Data Fundamentals" [ref=f2e822] [cursor=pointer]:
+          - /url: /exams/dp-900/
+          - text: DP-900
+          - generic [ref=f2e436]:
+            - text: DP-900
+            - generic [aria-hidden] [ref=f2e437]: ↗
+          - generic [ref=f2e438]: Azure Data Fundamentals
+        - link "GH-300 GitHub Copilot" [ref=f2e823] [cursor=pointer]:
+          - /url: /exams/gh-300/
+          - text: GH-300 INTERMEDIATE
+          - generic [ref=f2e445]:
+            - text: GH-300
+            - generic [aria-hidden] [ref=f2e446]: ↗
+          - generic [ref=f2e447]: GitHub Copilot
+        - link "GH-900 GitHub Foundations" [ref=f2e824] [cursor=pointer]:
+          - /url: /exams/gh-900/
+          - text: GH-900
+          - generic [ref=f2e453]:
+            - text: GH-900
+            - generic [aria-hidden] [ref=f2e454]: ↗
+          - generic [ref=f2e455]: GitHub Foundations
+        - link "PL-900 Power Platform Fundamentals" [ref=f2e825] [cursor=pointer]:
+          - /url: /exams/pl-900/
+          - text: PL-900
+          - generic [ref=f2e461]:
+            - text: PL-900
+            - generic [aria-hidden] [ref=f2e462]: ↗
+          - generic [ref=f2e463]: Power Platform Fundamentals
+        - link "SC-100 Cybersecurity Architect" [ref=f2e826] [cursor=pointer]:
+          - /url: /exams/sc-100/
+          - text: SC-100 EXPERT
+          - generic [ref=f2e470]:
+            - text: SC-100
+            - generic [aria-hidden] [ref=f2e471]: ↗
+          - generic [ref=f2e472]: Cybersecurity Architect
+        - link "SC-200 Security Operations Analyst" [ref=f2e827] [cursor=pointer]:
+          - /url: /exams/sc-200/
+          - text: SC-200 ASSOCIATE
+          - generic [ref=f2e479]:
+            - text: SC-200
+            - generic [aria-hidden] [ref=f2e480]: ↗
+          - generic [ref=f2e481]: Security Operations Analyst
+        - link "SC-300 Identity and Access Administrator" [ref=f2e828] [cursor=pointer]:
+          - /url: /exams/sc-300/
+          - text: SC-300 ASSOCIATE
+          - generic [ref=f2e488]:
+            - text: SC-300
+            - generic [aria-hidden] [ref=f2e489]: ↗
+          - generic [ref=f2e490]: Identity and Access Administrator
+        - link "SC-500 Cloud and AI Security Engineer" [ref=f2e829] [cursor=pointer]:
+          - /url: /exams/sc-500/
+          - text: SC-500 ASSOCIATE
+          - generic [ref=f2e497]:
+            - text: SC-500
+            - generic [aria-hidden] [ref=f2e498]: ↗
+          - generic [ref=f2e499]: Cloud and AI Security Engineer
+      - text: New New New New New New New New
+      - paragraph [ref=f2e503]:
+        - link "Full exam hub →" [ref=f2e504] [cursor=pointer]:
+          - /url: /exams/
+        - link "Study guides →" [ref=f2e505] [cursor=pointer]:
+          - /url: /guides/
+    - region [ref=f2e506]:
+      - generic [ref=f2e507]:
+        - paragraph [ref=f2e508]: Learn from the explanation
+        - heading "Try three real questions." [level=2] [ref=f2e509]
+        - paragraph [ref=f2e510]: Each sample has three original questions from the app, with reasoning for every option. Start with Azure Administrator, or switch to Azure Fundamentals if you are new to Azure.
+      - group "Choose your practice exam" [ref=f2e511]:
+        - button "AZ-104 · Administrator" [pressed] [ref=f2e512] [cursor=pointer]
+        - button "AZ-900 · Fundamentals" [ref=f2e513] [cursor=pointer]
+      - status [ref=f2e514]: AZ-104 · Question 1 of 3 · 0 answered
+      - generic [ref=f2e515]:
+        - article [ref=f2e517]:
+          - generic [ref=f2e518]:
+            - paragraph [ref=f2e519]: AZ-104
+            - generic [ref=f2e520]: Question 1 of 3
+          - paragraph [ref=f2e521]: Virtual Machine Scale Sets · Single answer
+          - group [ref=f2e522]:
+            - paragraph [ref=f2e523]: "A VM scale set is configured with a scale-out rule: when average CPU > 70% for 10 minutes, increase instance count by 20%. The current instance count is 5 and maximum is 10. Average CPU reaches 80% for 12 minutes. How many instances will be running after the scale-out action?"
+            - list [ref=f2e524]:
+              - listitem [ref=f2e525]:
+                - button "5" [ref=f2e526] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f2e527]: A
+              - listitem [ref=f2e529]:
+                - button "6" [ref=f2e530] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f2e531]: B
+              - listitem [ref=f2e533]:
+                - button "10" [ref=f2e534] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f2e535]: C
+              - listitem [ref=f2e537]:
+                - button "7" [ref=f2e538] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f2e539]: D
+            - paragraph [ref=f2e541]: Choose an answer to reveal the reasoning.
+          - paragraph [ref=f2e542]:
+            - link "Microsoft Learn reference (opens a new tab)" [ref=f2e543] [cursor=pointer]:
+              - /url: https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview
+              - text: Microsoft Learn reference
+              - generic [ref=f2e544]: (opens a new tab)
+        - complementary [ref=f2e545]:
+          - heading "Make the explanation click." [level=3] [ref=f2e546]
+          - paragraph [ref=f2e547]: Read why your answer fits, or why another option is a better choice. Your sample answers stay in this browser.
+          - paragraph [ref=f2e548]: Keep going with 50+ free questions per exam in the app. No account needed.
+          - link "Continue practising free" [ref=f2e549] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/id6760594569?pt=128558698&mt=8&ct=site-preview-az-104
+          - link "Explore AZ-104 →" [ref=f2e550] [cursor=pointer]:
+            - /url: /exams/az-104/
+          - button "Restart sample" [ref=f2e551] [cursor=pointer]
+          - paragraph [ref=f2e552]:
+            - link "How we write and review questions" [ref=f2e553] [cursor=pointer]:
+              - /url: /how-we-write-questions/
+    - region [ref=f2e554]:
+      - generic [ref=f2e555]:
+        - paragraph [ref=f2e556]: Start free. Choose what you need.
+        - heading "One exam, or every study tool." [level=2] [ref=f2e557]
+        - paragraph [ref=f2e558]: Practise free first. Buy a single exam bank once, or choose Pro for every bank and advanced tools.
+      - generic [ref=f2e559]:
+        - article [ref=f2e560]:
+          - generic [ref=f2e561]: Free starter
+          - heading "Start practising today." [level=3] [ref=f2e562]
+          - paragraph [ref=f2e563]: Free
+          - list [ref=f2e564]:
+            - listitem [ref=f2e565]: 50+ practice questions per supported exam
+            - listitem [ref=f2e566]: Written explanations for your answers
+            - listitem [ref=f2e567]: Offline practice, with no account needed
+          - link "Download free" [ref=f2e568] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/id6760594569?ct=site-home-free-starter&pt=128558698&mt=8
+        - article [ref=f2e569]:
+          - generic [ref=f2e570]: One-time exam pack
+          - heading "Focus on one certification." [level=3] [ref=f2e571]
+          - paragraph [ref=f2e572]:
+            - strong [ref=f2e573]: £4.99
+            - generic [ref=f2e574]: once, for any exam
+          - list [ref=f2e575]:
+            - listitem [ref=f2e576]: The full bank for your chosen exam
+            - listitem [ref=f2e577]: Written explanations and offline practice
+            - listitem [ref=f2e578]: No subscription required for the bank
+          - link "Choose your exam →" [ref=f2e579] [cursor=pointer]:
+            - /url: /exams/
+        - article [ref=f2e580]:
+          - generic [ref=f2e581]: Azure Mastery Pro
+          - heading "Bring every study tool together." [level=3] [ref=f2e582]
+          - paragraph [ref=f2e583]:
+            - strong [ref=f2e584]: £49.99
+            - text: / year
+            - generic [ref=f2e585]: About £4.17 a month, 58% less than paying monthly
+          - list [ref=f2e586]:
+            - listitem [ref=f2e587]: Every exam question bank
+            - listitem [ref=f2e588]: Full predicted-score insights, Answer Coach and exam simulator
+            - listitem [ref=f2e589]: Ask Aura Preview for Pro members
+          - paragraph [ref=f2e590]: Or £9.99 a month, or £99.99 once for lifetime access. Monthly and annual plans renew automatically until cancelled.
+          - link "See Pro options" [ref=f2e591] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/id6760594569?ct=site-pro-options&pt=128558698&mt=8
+      - paragraph [ref=f2e592]: UK prices shown. Prices vary by country, and the App Store shows yours before you buy.
+      - generic [ref=f2e593]:
+        - heading "Compare what’s included" [level=3] [ref=f2e594]
+        - region "Access options comparison" [ref=f2e595]:
+          - table [ref=f2e596]:
+            - caption [ref=f2e597]: All three options support offline practice without an Azure Mastery account.
+            - rowgroup [ref=f2e598]:
+              - row [ref=f2e599]:
+                - columnheader "Access" [ref=f2e600]
+                - columnheader "Free starter" [ref=f2e601]
+                - columnheader "One-time pack" [ref=f2e602]
+                - columnheader "Pro" [ref=f2e603]
+            - rowgroup [ref=f2e604]:
+              - row [ref=f2e605]:
+                - rowheader "Practice questions" [ref=f2e606]
+                - cell "50+ per exam" [ref=f2e607]
+                - cell "Full chosen bank" [ref=f2e608]
+                - cell "Every full bank" [ref=f2e609]
+              - row [ref=f2e610]:
+                - rowheader "Written explanations" [ref=f2e611]
+                - cell "Included" [ref=f2e612]
+                - cell "Included" [ref=f2e615]
+                - cell "Included" [ref=f2e618]
+              - row [ref=f2e621]:
+                - rowheader "Full insights, Answer Coach and simulator" [ref=f2e622]
+                - cell "Pro required" [ref=f2e623]
+                - cell "Pro required" [ref=f2e624]
+                - cell "Included" [ref=f2e625]
+              - row [ref=f2e628]:
+                - rowheader "Ask Aura Preview" [ref=f2e629]
+                - cell "Pro required" [ref=f2e630]
+                - cell "Pro required" [ref=f2e631]
+                - cell "Included" [ref=f2e632]
+              - row [ref=f2e635]:
+                - rowheader "Payment" [ref=f2e636]
+                - cell "No purchase needed" [ref=f2e637]
+                - cell "One-time purchase" [ref=f2e638]
+                - cell "Monthly, annual or lifetime" [ref=f2e639]
+    - region "App statistics" [ref=f2e640]:
+      - generic [ref=f2e641]:
+        - generic [ref=f2e642]:
+          - generic [ref=f2e643]: 13,000
+          - generic [ref=f2e644]: Questions
+        - generic [ref=f2e646]:
+          - generic [ref=f2e647]: "30"
+          - generic [ref=f2e648]: Exams
+        - generic [ref=f2e650]:
+          - generic [ref=f2e651]: "9"
+          - generic [ref=f2e652]: Question Types
+        - generic [ref=f2e654]:
+          - generic [ref=f2e655]: "100"
+          - generic [ref=f2e656]: "% Core practice offline"
+    - region [ref=f2e657]:
+      - generic [ref=f2e658]:
+        - paragraph [ref=f2e659]: New in version 2.0
+        - heading "See Ask Aura in action" [level=2] [ref=f2e660]
+        - paragraph [ref=f2e661]: See the Pro preview turn reviewed study material into a focused next session.
+      - generic [ref=f2e663]:
+        - generic [aria-hidden] [ref=f2e664]:
+          - text: Ask Aura Preview
+          - generic [ref=f2e665]: Study the hard parts. Together.
+        - button "Play the Ask Aura video advert" [ref=f2e666] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f2e667]: ▶
+          - generic [ref=f2e668]: Watch Ask Aura
+      - paragraph [ref=f2e669]:
+        - text: Plays on YouTube.
+        - link "Watch the Ask Aura advert on YouTube (opens a new tab) ↗" [ref=f2e670] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=rM3rIjQtx4Y
+          - text: Watch the Ask Aura advert on YouTube
+          - generic [ref=f2e671]: (opens a new tab)
+          - text: ↗
+    - region [ref=f2e672]:
+      - generic [ref=f2e673]:
+        - paragraph [ref=f2e674]: New in 2.1.0
+        - heading "Made for iPhone Duo." [level=2] [ref=f2e675]
+        - paragraph [ref=f2e676]: Unfold iPhone Duo and Azure Mastery uses the whole screen. The sidebar stays in reach, long scenarios can sit beside their answers, and Ask Aura can keep your study material next to the conversation.
+      - figure "Azure Mastery on iPhone Duo. Illustrative device mockup; app screenshots below were captured in the simulator." [ref=f2e677]:
+        - img "Illustrative 3D mockup of a semi-folded iPhone Duo displaying the Azure Mastery Today dashboard" [ref=f2e678]
+      - generic [ref=f2e680]:
+        - article [ref=f2e681]:
+          - link "Open the full iPhone Duo screenshot" [ref=f2e682] [cursor=pointer]:
+            - /url: /images/cap-duo-ask-aura-v210.webp
+            - img "Ask Aura on iPhone Duo, with the Azure RBAC study material on the left and Aura's definition on the right" [ref=f2e683]
+          - heading "Read the source as you ask." [level=3] [ref=f2e684]
+          - paragraph [ref=f2e685]: With sources open and enough room, Ask Aura shows your study material beside the conversation. Check the passage behind an answer without losing your place. Included with Pro.
+        - article [ref=f2e686]:
+          - link "Open the full iPhone Duo screenshot" [ref=f2e687] [cursor=pointer]:
+            - /url: /images/cap-duo-exam-v210.webp
+            - img "A timed exam simulator question on iPhone Duo, with a countdown, four options and the question navigator" [ref=f2e688]
+          - heading "Scenarios beside their answers." [level=3] [ref=f2e689]
+          - paragraph [ref=f2e690]: At standard text sizes, when there is room, long scenarios and case studies can show the question next to the answers, and each pane scrolls on its own. Short questions like this one stay in a single column.
+        - article [ref=f2e691]:
+          - link "Open the full iPhone Duo screenshot" [ref=f2e692] [cursor=pointer]:
+            - /url: /images/cap-duo-insights-v210.webp
+            - img "Insights on iPhone Duo, with the sidebar open beside an Exam IQ predicted score of 786 and its trend" [ref=f2e693]
+          - heading "Your forecast, a tap from practice." [level=3] [ref=f2e694]
+          - paragraph [ref=f2e695]: The sidebar button stays in reach on Today, Study, Practice and Insights. Go from your Exam IQ forecast to the topic that needs work without hunting for a menu.
+        - article [ref=f2e696]:
+          - link "Open the full iPhone Duo answer-review screenshot" [ref=f2e697] [cursor=pointer]:
+            - /url: /images/cap-duo-answer-review-v210.webp
+            - img "Answer review on iPhone Duo showing an Azure storage question, the selected answer and written explanation" [ref=f2e698]
+          - heading "Work back through an answer." [level=3] [ref=f2e699]
+          - paragraph [ref=f2e700]: Keep the question in view while you check the selected option and its explanation. A clearer review makes it easier to understand what decided the answer.
+      - list "More iPhone Duo details" [ref=f2e701]:
+        - listitem [ref=f2e702]:
+          - strong [ref=f2e703]: Tabletop flashcards.
+          - text: Half-fold the phone and the card sits on the top half, with the flip and rating controls on the bottom.
+        - listitem [ref=f2e704]:
+          - strong [ref=f2e705]: Messages stay clear of the fold.
+          - text: Celebrations, confirmations and toasts stay within one half of the screen.
+        - listitem [ref=f2e706]:
+          - strong [ref=f2e707]: Clear of the cameras.
+          - text: Screen headers avoid the camera area, and toolbar controls fit the side bars with labels and icons.
+    - region [ref=f2e708]:
+      - generic [ref=f2e709]:
+        - paragraph [ref=f2e710]: Also in version 2.1.0
+        - heading "More room to learn. A clearer next step." [level=2] [ref=f2e711]
+        - paragraph [ref=f2e712]: The details that make a study session feel easier, from your first answer to your next milestone.
+      - generic [ref=f2e713]:
+        - article [ref=f2e714]:
+          - heading "Review the whole scenario." [level=3] [ref=f2e715]
+          - paragraph [ref=f2e716]: Case studies show every authored section in order. Clearer answer reviews help you work back through a result, and finished practice stays in place after you close an upgrade offer.
+        - article [ref=f2e717]:
+          - heading "See your progress land." [level=3] [ref=f2e718]
+          - paragraph [ref=f2e719]: Exam IQ marks the first time your forecast crosses the pass mark or reaches Exam Ready. Celebrations and transitions follow your Reduce Motion setting.
+        - article [ref=f2e720]:
+          - heading "Keep the conversation in view." [level=3] [ref=f2e721]
+          - paragraph [ref=f2e722]: Landscape layouts give questions and Ask Aura more space. Preview keeps its reviewed study routes, with clearer Explain simply wording. Generative explanations remain off.
+    - generic [ref=f2e723]:
+      - heading "Study on the screen that suits you." [level=2] [ref=f2e724]
+      - paragraph [ref=f2e729]: Practise on iPhone, iPhone Duo and iPad, and keep your streak going with the Apple Watch companion. Core practice works offline, on the train or on a plane. Azure Mastery is built for Apple devices, and there is no Android version yet.
+      - paragraph [ref=f2e730]:
+        - link "Mac compatibility on the App Store →" [ref=f2e731] [cursor=pointer]:
+          - /url: https://apps.apple.com/app/id6760594569?ct=site-device-compatibility&pt=128558698&mt=8
+        - text: ·
+        - link "Device support →" [ref=f2e732] [cursor=pointer]:
+          - /url: /apps/AzureMastery/support.html
+        - text: ·
+        - link "Privacy details →" [ref=f2e733] [cursor=pointer]:
+          - /url: /apps/AzureMastery/privacy.html
+    - region [ref=f2e734]:
+      - generic [ref=f2e735]:
+        - paragraph [ref=f2e736]: Frequently asked
+        - heading "Questions, answered" [level=2] [ref=f2e737]
+        - generic [ref=f2e738]:
+          - group [ref=f2e739]:
+            - generic "Is Azure Mastery free? +" [ref=f2e740] [cursor=pointer]
+          - group [ref=f2e741]:
+            - generic "Which Microsoft certifications does Azure Mastery cover? +" [ref=f2e742] [cursor=pointer]
+          - group [ref=f2e743]:
+            - generic "How does the Exam IQ score work? +" [ref=f2e744] [cursor=pointer]
+          - group [ref=f2e745]:
+            - generic "More questions about the app" [ref=f2e746] [cursor=pointer]
+            - text: + + + + + +
+    - generic [ref=f2e748]:
+      - generic [ref=f2e750]:
+        - text: Let's get you
+        - strong [ref=f2e751]: certified.
+      - paragraph [ref=f2e752]: Start for Free Today
+      - heading "Your Microsoft certification starts here." [level=2] [ref=f2e753]
+      - paragraph [ref=f2e754]: Download Azure Mastery free on iPhone and iPad. No credit card required. Upgrade when you're ready for the full question bank.
+      - link "Download Azure Mastery free on the App Store" [ref=f2e755] [cursor=pointer]:
+        - /url: https://apps.apple.com/app/id6760594569?itscg=30200&itsct=apps_box_link&mttnsubad=6760594569&ct=site-home-footer&pt=128558698&mt=8
+        - img "Azure Mastery" [ref=f2e756]
+        - img "Download on the App Store" [ref=f2e757]
+      - paragraph [ref=f2e758]:
+        - link "Find your exam →" [ref=f2e759] [cursor=pointer]:
+          - /url: "#exam-roadmap"
+  - contentinfo [ref=f2e760]:
+    - region [ref=f2e761]:
+      - generic [ref=f2e762]:
+        - generic [ref=f2e763]: Stay current
+        - heading "Follow Azure Mastery" [level=2] [ref=f2e764]
+        - paragraph [ref=f2e765]: Exam updates, bite-sized study tips, and new guide alerts.
+      - navigation "Follow Azure Mastery on social media" [ref=f2e766]:
+        - link "Azure Mastery on Instagram" [ref=f2e767] [cursor=pointer]:
+          - /url: https://www.instagram.com/azuremastery.app
+          - generic [ref=f2e771]: Instagram
+        - link "Azure Mastery on X" [ref=f2e772] [cursor=pointer]:
+          - /url: https://x.com/AzureMastery
+          - generic [ref=f2e775]: X
+        - link "Azure Mastery on TikTok" [ref=f2e776] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@azuremastery
+          - generic [ref=f2e779]: TikTok
+        - link "Azure Mastery on YouTube" [ref=f2e780] [cursor=pointer]:
+          - /url: https://www.youtube.com/channel/UCWhAwI2URaSg-5z2SQoaKYg
+          - generic [ref=f2e783]: YouTube
+        - link "Azure Mastery on Facebook" [ref=f2e784] [cursor=pointer]:
+          - /url: https://www.facebook.com/profile.php?id=61578421530035
+          - generic [ref=f2e787]: Facebook
+    - generic [ref=f2e788]:
+      - generic [ref=f2e789]: Azure Mastery
+      - generic [ref=f2e790]: © 2026 Moonbeam Alpha Ltd. Azure Mastery is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Microsoft, Azure, and related certification names are trademarks of Microsoft Corporation.
+      - navigation "Footer links" [ref=f2e791]:
+        - link "All exams" [ref=f2e792] [cursor=pointer]:
+          - /url: /exams/
+        - link "Guides" [ref=f2e793] [cursor=pointer]:
+          - /url: /guides/
+        - link "About" [ref=f2e794] [cursor=pointer]:
+          - /url: /about/
+        - link "How we write questions" [ref=f2e795] [cursor=pointer]:
+          - /url: /how-we-write-questions/
+        - link "Privacy" [ref=f2e796] [cursor=pointer]:
+          - /url: apps/AzureMastery/privacy.html
+        - link "Support" [ref=f2e797] [cursor=pointer]:
+          - /url: apps/AzureMastery/support.html
+        - link "Terms" [ref=f2e798] [cursor=pointer]:
+          - /url: apps/AzureMastery/terms.html
+  - navigation "Page sections" [ref=f2e830]:
+    - button "Contents" [ref=f2e831] [cursor=pointer]
+    - generic [ref=f2e832]: Overview

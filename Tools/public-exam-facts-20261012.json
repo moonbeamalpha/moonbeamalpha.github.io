@@ -114,10 +114,6 @@
       "documentUpdated": "2026-07-27",
       "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-650"
     },
-    "AI-200": {
-      "documentUpdated": "2026-05-05",
-      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200"
-    },
     "AI-300": {
       "documentUpdated": "2026-03-05",
       "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-300"
@@ -129,6 +125,16 @@
     "SC-500": {
       "documentUpdated": "2026-05-13",
       "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-500"
+    }
+  },
+  "reviewedCurrentOutlines": {
+    "AI-200": {
+      "reviewedOn": "2026-10-20",
+      "effectiveDate": "2026-10-07",
+      "documentUpdated": "2026-10-16",
+      "sourceURL": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200",
+      "dataDomainSummaryWeight": "30\u201335%",
+      "sourceDiscrepancy": "Detailed heading retains 25\u201330%; skills summary and change log confirm the increased domain weight."
     }
   }
 }

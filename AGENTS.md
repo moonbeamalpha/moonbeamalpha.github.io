@@ -6,21 +6,21 @@ anyone driving them.
 **Pushing `main` publishes immediately.** GitHub Pages serves this branch. Do not
 merge or push to `main` without the owner asking for it.
 
-## Approved-release count baseline — 16 October 2026
+## Approved-release count baseline — 20 October 2026
 
-Chris authorized the v2.0.2 count update after App Store approval. The approved
-release is **v2.0.2 build 49**: 12,943 exam-scoped questions, 12,900+ label,
-30 current exams and 29 paths. Its catalogue and all 35 bundled banks match app
-source revision `9b1adff05f2bffc106a02f5a3fb86fb1d3848176` byte-for-byte.
+Chris requested the marketing-site update for the approved **v2.1.0 build 50**:
+13,003 exam-scoped questions, 13,000+ label, 30 current exams and 29 paths.
+App Store Connect reports READY_FOR_SALE. The archived catalogue and all 35
+bundled banks match source revision `f873162b6f28d161ad4a90a0cd7466ce8b48c55a`
+byte-for-byte; see `docs/marketing-v210-archive-parity.json`.
 
-Keep this baseline until a later app release is approved in the App Store and
-Chris authorizes its count update. Do not refresh publication counts from newer
-app main exports: the later AZ-900 and AZ-700 additions are outside build 49.
-`--check` and synchronization from the committed website snapshot are allowed.
-The regression receipt in `Tools/production-count-freeze-20261012.json` retains
-its stable path and protects the approved snapshot, all exam counts,
-practice-preview sources and social images. Update it only with the owner's
-next approved-release count authorization.
+Keep this baseline until a later app release is approved and Chris authorizes
+its count update. Do not refresh publication counts from newer app main exports
+or still-open content PRs. `--check` and synchronization from the committed
+website snapshot are allowed. The regression receipt at
+`Tools/production-count-freeze-20261012.json` retains its stable path and protects
+the approved snapshot, per-exam counts, practice-preview sources and social images.
+Update it only with the owner's next approved-release count authorization.
 
 ---
 

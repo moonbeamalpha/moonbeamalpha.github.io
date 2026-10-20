@@ -1,0 +1,369 @@
+{
+  "version": "2.1.0",
+  "build": "50",
+  "sourceCommit": "f873162b6f28d161ad4a90a0cd7466ce8b48c55a",
+  "processing": "Proportional downscale and WebP encoding only; no UI alteration.",
+  "captures": [
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-today.png",
+      "sourceSHA256": "10f8b8243996c3ed954d1f13054fbe13975564ad232e1cea5a4adaae7885d9e3",
+      "output": "images/cap-home-dashboard-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "488d5507d0f1f8e22b7f896dd2c0c04e86ba9358c12db825a6028c67544f52ad"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-today.png",
+      "sourceSHA256": "cf8c391e3bfaebe2608ec845620ceee220083a157416f87ccc1d795eeb2b55b4",
+      "output": "images/cap-home-dashboard-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "6a83b647d438058c1b3bc15710c3f38e94b967d412dc0d2baf5d0c2378b41eea"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-insights.png",
+      "sourceSHA256": "a71822c6ae38d0cb6047080d74cb3e54f00d3cf071103509fe20a1af417c40f9",
+      "output": "images/cap-exam-iq-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "9b99a536f2a01e26700ba714e4b7959f2be940d9c080641b13f98e4278ae805b"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-insights.png",
+      "sourceSHA256": "fa81f80f65b1085423dda27820955d546406416ee7a3659fc98fb1ecc2926bf4",
+      "output": "images/cap-exam-iq-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "6788b28d75c2225e5af6930fc18ce628389fd945fcd49176a98df5f5d22b7479"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-plan.png",
+      "sourceSHA256": "3f03dc410d3fa8fa247f5011271fab8493fc81eff05287d75cbe998127c25674",
+      "output": "images/cap-study-plan-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "6a781b567ec1287e04f7f21671e48c54fbb23fc671682276a0f3b9a233ef432b"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-plan.png",
+      "sourceSHA256": "df6099dc891a478123e19fa5260a9b44aee6d421cba536f79e8be4c4f71125dc",
+      "output": "images/cap-study-plan-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "3c21894f3253f87f78d3d9b331383cf3a5d686fde3990b30d9d44fea0bf64af2"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-you.png",
+      "sourceSHA256": "d46ab41b785b9f06be28b430ce3b8995d858ac76549a1ed4fae1271d63dd98f5",
+      "output": "images/cap-goals-profile-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "ca5e777598563791f990060d37ff1eae674a5440e7057837057b4e6450816f3c"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-you.png",
+      "sourceSHA256": "ddaa1f3eacda315afbb086cbaee5307d884c41b9de46cadba163c8e95fd09e1b",
+      "output": "images/cap-goals-profile-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "e540a797025046880537314d1ca1255f7a3ecbaff32e20a32a26437349085422"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-question.png",
+      "sourceSHA256": "6ca37eceae7601539b6b3fd026b3fcdfdcad2ec7499777e935bd009bfbf7cc47",
+      "output": "images/cap-practice-question-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "9ddb409773c3bc8b9086623a8e7b43f3778c9400833fb9b3223481cb9d40352b"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-question.png",
+      "sourceSHA256": "e04d3d1880d97dcf9c32833b1f83d60f782656bdd5d1ab5133d2fd689d8cb0e2",
+      "output": "images/cap-practice-question-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "2a71076c36aa6666b11526c131ec65712882196a0156f52fb8d80d8223defc96"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-answer-review.png",
+      "sourceSHA256": "69c6fb7756bdecefc719e6afc28d96a0ad3e17aeb6748e4357f90ba1d204b20f",
+      "output": "images/cap-answer-review-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "e3bb6b210aece6c3ae3c62533739387d28cfb0d4fef5680f9f8f0b85d31b33d0"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-answer-review.png",
+      "sourceSHA256": "3736f4fea7f174e6ab0feb1feeae15ae39b553f9f86c35924f623b88ff382d06",
+      "output": "images/cap-answer-review-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "136f5424e60f79e12ff9835de99cf26b748c8fdbda348afac2d7a10f6da92143"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-aura-welcome.png",
+      "sourceSHA256": "b086fa4b3aab6f323ecbf2f62c83c072784b20dca532a239a786f8c23adc4da3",
+      "output": "images/cap-ask-aura-welcome-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "1d4786f3843dbe2c7708ea071d6757254371fc00836c9be4472e7bfd3cafd866"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-aura-welcome.png",
+      "sourceSHA256": "febc35a0ff30c43b741919b24a749fbaf4ec00609ae950d2ec8c389af8564abf",
+      "output": "images/cap-ask-aura-welcome-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "76e748e57d2c3cadafcc922abc760c0ec2a2dce556c78dcafe6c6362f11913b8"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/dark-aura-response.png",
+      "sourceSHA256": "c0997fe9118c895631a3ef69aa41349340441eea5b2f9d63e44b08552a21cfe8",
+      "output": "images/cap-ask-aura-response-v210.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "ee9916ef81894f29475556ef973cfa7a2bb3594a3138636961283ce8680f1642"
+    },
+    {
+      "source": "App/AppStoreAssets/captures/v2.1.0/light-aura-response.png",
+      "sourceSHA256": "c7f2a6d4f2d63e1ac9b348222703f08d191d39e46676e4430b4f085062e5c924",
+      "output": "images/cap-ask-aura-response-v210-light.webp",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "outputSHA256": "76f350ab86db23ebeb7156af08115e74e80e676eb3ce5026712ce95406f0e8d1"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/dark-today.png",
+      "sourceSHA256": "1993e230ea7fd3e5e1d40a534ac4f3b8fce5a59c450fa36043141114ab6f75fb",
+      "output": "images/cap-ipad-today-v210.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "0e46fb3b848591f5680f089de54e925e8b6d6b541fa53a69a628e7ace6d4bd21"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/light-today.png",
+      "sourceSHA256": "f6fe0b17f0284056ad5c5eda6387306165af89d2c63dabfe1b294b435554c452",
+      "output": "images/cap-ipad-today-v210-light.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "478a3d2ed3f34b94691a8310ddc89edc10a5873b7e34bc58e70ffce9f47f6aa0"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/dark-insights.png",
+      "sourceSHA256": "e17a8338ccf7f664c9d020ea8da64f8c71a2662af25b025870d1ddaf0ffaee11",
+      "output": "images/cap-ipad-insights-v210.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "197a54e8e15900d64180ef224b1b94c2a5787bbcdab7f2a2cb176a0424b943b8"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/light-insights.png",
+      "sourceSHA256": "d0976cbde82a3459755fc0b645996585f3e3f7e649e75512594d2b6ea845334c",
+      "output": "images/cap-ipad-insights-v210-light.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "5993241f17fcbfbc78b8ee946eed7609bc5145fae3108188f08272e1feb6c9d0"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/dark-answer-review.png",
+      "sourceSHA256": "e9bea9b94bf692c2ac6a6a1841793ac93b1fdd5fe2b9fd397297922fbde65224",
+      "output": "images/cap-ipad-answer-review-v210.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "50732cdbd41e7772fe0f68cc1d8b0acbb93d61ccf4e7e9efc2e4667b7213e80d"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/light-answer-review.png",
+      "sourceSHA256": "d4f7ec12c5ab2ad03a1e984043df488d1cd7793a37122e5a8e6f859f8491a92a",
+      "output": "images/cap-ipad-answer-review-v210-light.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "6fd5339d7644d0e72ca868b7e1a8b9d34a3312d35d7ab90bd767985ae732dc74"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/dark-practice.png",
+      "sourceSHA256": "04e2b3fbbc4b8ac2a1157fa3b201c79409092a77873a9a9e8a29f8202d59dd3b",
+      "output": "images/cap-ipad-exams-v210.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "9e87bf5e715d1a86f81fda6dbde3782bfecf0405663a359abde80c3cc25662da"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/light-practice.png",
+      "sourceSHA256": "10e8e3750d510448264cdda67d47c340a00a820e170d960dc3d836126e5afd59",
+      "output": "images/cap-ipad-exams-v210-light.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "0a02acf8329efb0e468ff1166aae5ffd4558e9b7c9dc96b5644c0d1f0a069d7d"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/dark-study.png",
+      "sourceSHA256": "7dfce371ad79eed4947320764f9881e3b32673dfef190b15e3d8a7a941de9fb3",
+      "output": "images/cap-ipad-study-session-v210.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "9bcebf33afdeeadde019b882943355b811f7eb7ec2e4d974080f0c520c57c992"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/light-study.png",
+      "sourceSHA256": "ef220b0ebab52b65edee590b9ef8bfac698e23ba755f68409a8143df9a985636",
+      "output": "images/cap-ipad-study-session-v210-light.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "72c60e513169d713faa772a1a0df5a4912b078607e9814b160d72099660f05cf"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/dark-you.png",
+      "sourceSHA256": "5aeb0598c4b49e8851fe54eff22fa4e8c5cca20a4c72ef27add8b1f448b8086c",
+      "output": "images/cap-ipad-goals-v210.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "3e580aace9137061d873b7c4839c58421741dfe8dfd57035e42cbfc086cf98bc"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_ipados/v2.1.0/light-you.png",
+      "sourceSHA256": "295c07f4e6e442b1c218f369a7782f74945bda0ac3a0aa9f65c97c1c900a4de0",
+      "output": "images/cap-ipad-goals-v210-light.webp",
+      "dimensions": [
+        1320,
+        1760
+      ],
+      "outputSHA256": "20d1979c68d399a4851a2dc04a3e97e2893fe3428790a76f3ca80173085b2a19"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_watchos/v2.1.0/02-today.png",
+      "sourceSHA256": "2558718d7faf2a0e4ffb7ae4650c50673b844afd2151a0dab93759714643bf82",
+      "output": "images/cap-watch-dashboard-v210.webp",
+      "dimensions": [
+        422,
+        514
+      ],
+      "outputSHA256": "ea221afa1fe272f7cb73dfc6141f42921574bf4504639546805cbe28742c9d9b"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_watchos/v2.1.0/01-readiness.png",
+      "sourceSHA256": "86b8e7aa1208e052c0a6addedc6f1478b94507a4680c1e50c8f5fcc5aee14af9",
+      "output": "images/cap-watch-v210.webp",
+      "dimensions": [
+        422,
+        514
+      ],
+      "outputSHA256": "3dea3d1a950ea0d103d09b20ed36645960bff370dc030fd2ca8b25f7855c02bb"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_iphoneDuo/v2.1.0/light-aura-response.png",
+      "sourceSHA256": "d4bb1100342c436980a214373775f5fd782becd5756f5786ae7d3cfb8dd24610",
+      "output": "images/cap-duo-ask-aura-v210.webp",
+      "dimensions": [
+        1600,
+        1126
+      ],
+      "outputSHA256": "2551ee1b0efde9b675f1b2abfddd88bd00e55185add27acdcf5cc934e214b1be"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_iphoneDuo/v2.1.0/dark-timed-question.png",
+      "sourceSHA256": "eebe181c3d485b28a1c0583814a2856f13ea655fb25eef799b75721831ebfed1",
+      "output": "images/cap-duo-exam-v210.webp",
+      "dimensions": [
+        1600,
+        1126
+      ],
+      "outputSHA256": "84e5ea31710c2ed87b559ade1afb0a793e1f6536e8ed13ff2d83019658fcc6cd"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_iphoneDuo/v2.1.0/dark-insights.png",
+      "sourceSHA256": "e0b69b38659d6e124fb3efe5497edbd1988558baac1265f9d558b04e1644d685",
+      "output": "images/cap-duo-insights-v210.webp",
+      "dimensions": [
+        1600,
+        1126
+      ],
+      "outputSHA256": "3754ce3e89cc19ac8c61a6e4626fe03d0ab0d08554607039716925ea1d725a6b"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_iphoneDuo/v2.1.0/light-answer-review.png",
+      "sourceSHA256": "c4121313df83e3a77221a4fd68ebe43d4fb3358f9607b07295a1a84bc883e32e",
+      "output": "images/cap-duo-answer-review-v210.webp",
+      "dimensions": [
+        1600,
+        1126
+      ],
+      "outputSHA256": "bcf24e0d64093a1a192bf44f0f400c00b3f50627c6deea180c819798db144af3"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_iphoneDuo/v2.1.0/dark-today.png",
+      "sourceSHA256": "54920540587989af0dff5c8cdbf5940323fdd92c8ab90070f4cd6880629fc980",
+      "output": "images/cap-duo-today-v210.webp",
+      "dimensions": [
+        1600,
+        1126
+      ],
+      "outputSHA256": "7eeb71d2377b96d24aa219124d0ffc078a76d53e0841cedba3170f50b8a8bc82"
+    },
+    {
+      "source": "App/AppStoreAssets/captures_iphoneDuo/v2.1.0/light-today.png",
+      "sourceSHA256": "60b4e1a6ff21e5ffc726b46ccea1a98f83d9162c594c864b565a041bd55dea2a",
+      "output": "images/cap-duo-today-light-v210.webp",
+      "dimensions": [
+        1600,
+        1126
+      ],
+      "outputSHA256": "4a9f82a14c5b23303047e2a72c29487803e110928f472226bd395184a3f69954"
+    }
+  ],
+  "macOS": "Existing captures_macos is still the latest available; unchanged."
+}

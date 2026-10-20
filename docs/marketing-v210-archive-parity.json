@@ -1,0 +1,188 @@
+{
+  "appSourceCommit": "f873162b6f28d161ad4a90a0cd7466ce8b48c55a",
+  "archive": "/Users/chris/Library/Developer/Xcode/Archives/2026-10-18/AzureMastery 18-10-2026, 23.57.xcarchive",
+  "version": "2.1.0",
+  "build": "50",
+  "checks": [
+    {
+      "file": "App/AzureMastery/Resources/ab100-questions.json",
+      "sha256": "84ecbaf7cc4974bd6c44fbebaac06785fe109920d2088702a88eb39f12f79016",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ab410-questions.json",
+      "sha256": "5b6a419a17ea279a80c6be3aa83b8650c9c90c8ac27aebb5fd799cebb14ce50d",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ab620-questions.json",
+      "sha256": "157b929243b30da88784586975f4dab5e0c9a05f1569132cedc1b772ba45c296",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ab650-questions.json",
+      "sha256": "e3e4caf435d72c52de5aba38efc482fd9a8c30525029281f80ef89b06aa39720",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ab731-questions.json",
+      "sha256": "774d919a72eb0ca66e6c48668602c63874f8a27bf0a09921fe6a01ef23852aba",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ab900-questions.json",
+      "sha256": "bd6aae3c0622bf7c51cf6b936ebfe318fd1e784e7d0f94978c62fefa37c53398",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ai102-questions.json",
+      "sha256": "34b5026931f10ecc2e8647eb8133da8fa0a1083f8cd8faf4a4c3a25a3d239ac3",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ai103-questions.json",
+      "sha256": "11ea704c42a707c4614badc09d68c3b8bbb7ed0a0bfb1dd46bfdc10eac4a70b5",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ai200-questions.json",
+      "sha256": "effc2f42c27766b543b04727d0afe52701c42925530c29f8d9181aaeb2440ad4",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ai300-questions.json",
+      "sha256": "e995e010f92ce0609827487d1d6e047932b73b830febd270cc19f39331d0efc0",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ai500-questions.json",
+      "sha256": "7b197bcec5696cac0e349f1871e61d6805341ebb725e0484716bcc6ec5f7e83b",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ai900-questions.json",
+      "sha256": "44ef7a91acbbf09ba77e26715c7166aabd498fc2894d44da071a09ce64dcc240",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/ai901-questions.json",
+      "sha256": "8c721ce2117e176fd25e2003b7bf571bb5df2d8c641ae8ce51e211cecec9383f",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/az104-questions.json",
+      "sha256": "0a3d288804c978cc1d6fdeafaea4bc9b65358018021a88ab9de46f1fa06c2b04",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/az204-questions.json",
+      "sha256": "4881435169a3a11caa1471bfad464df13da7666981adf1f7a6ffdfd2aeebd746",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/az305-questions.json",
+      "sha256": "903f93a96dbaa779a1e196bbb00f7ebef441598b7bf50883577905812521b137",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/az400-questions.json",
+      "sha256": "1cea228456a8bc6ca0b931ee4883ccaa9dee1e5de1def1a7b11bac6ab0e8b663",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/az500-questions.json",
+      "sha256": "73e37305128f54594a39f8817187e7df1f4c534e5e198e16e2194c533522a2a3",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/az700-questions.json",
+      "sha256": "7bc655fef55243deb620e4e4a57b15097b9b71f493696fac92721c730b59e797",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/az900-questions.json",
+      "sha256": "07aeba3049a9966210430cf4305eaf5e6ee4f16e1cf47b4505c90813ee0645a4",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/dp100-questions.json",
+      "sha256": "357bdd7e19bc79916dd00f9541e5da26bdfe7aeda188ae58717d38f242bb7397",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/dp300-questions.json",
+      "sha256": "9f4cca57185c710b53fc52adc6644a2dd57684d940c85427fa89092a3a07dc61",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/dp700-questions.json",
+      "sha256": "b4a51309f2cec02c8ecd608e56c25f7100e86f7e70be208863b2f2ba01a07636",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/dp750-questions.json",
+      "sha256": "0cf4b6f4b7401dd7d3e5ca73071d356e58811b173983951b521689ed0cf776cc",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/dp800-questions.json",
+      "sha256": "15b854527e298e1a7d18227d4d79674a71af4da88e5a0b4acdffac2d15942531",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/dp900-questions.json",
+      "sha256": "93b904de2209266833dca02781382eac6d19f9c3e387fc8a3ead1d1d06b308e4",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/exam-catalog.json",
+      "sha256": "dfa80bf8729a1093edc64eada3c4ab35c5dd9f10f79e96ddc5e71856804e4fa5",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/gh300-questions.json",
+      "sha256": "e76bea83c26bf4fa152e07125cb5522931f0dea3063ed684311f3fef2bfd8bab",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/gh900-questions.json",
+      "sha256": "e8ebf85efb440a96e571722b11bf44e5d4841e0fc44bb137cae24443cf7e01da",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/pl300-questions.json",
+      "sha256": "1617fd25ab8d03df721d6dda0d4838e348949260d58111d72392a13bb74a668f",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/pl900-questions.json",
+      "sha256": "7818558808e326fb5e248da72067185ce147e9ad77b818f521b05643e51911c2",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/sc100-questions.json",
+      "sha256": "370118bb80d8f240d7517ee5f5c431101b2a1bf2f35bf834113ead28517197df",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/sc200-questions.json",
+      "sha256": "bc96eb42bbece04effe6f554517a2edbe3bd25b9176f4e35d2c968d27c5a9eba",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/sc300-questions.json",
+      "sha256": "0cb956049f0b3ebf2f09d95bdd011a47f41ab4a93d4386e1f86aba529348fedc",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/sc500-questions.json",
+      "sha256": "3f87bfea207ace114611db609319e287f6887ed810b9e63e522d6024c55c729e",
+      "archiveMatch": true
+    },
+    {
+      "file": "App/AzureMastery/Resources/sc900-questions.json",
+      "sha256": "44fad3e2f00079d4431cd1f64f0192d929745652db2b8d7a1adbf9143421668d",
+      "archiveMatch": true
+    }
+  ]
+}

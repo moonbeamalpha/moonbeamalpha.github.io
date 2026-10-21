@@ -1358,11 +1358,13 @@
             sequence(grid, '.study-step__copy', 'reveal-copy');
             sequence(grid, '.study-step__image', 'reveal-device');
           });
-          document.querySelectorAll('.study-tools__grid, .exam-finder__grid, .access-grid').forEach(function(grid) {
+          document.querySelectorAll('.study-tools__grid, .exam-finder__grid, .access-grid, .duo-features').forEach(function(grid) {
             sequence(grid, ':scope > *', 'reveal-card');
           });
           sequence(document, '.study-tools__header, .study-tools__footer, .aura-preview > div', 'reveal-copy');
           sequence(document, '.aura-preview > figure, .video-overview__player', 'reveal-device');
+          sequence(document, '.duo-showcase__hero', 'reveal-device');
+          sequence(document, '.duo-details > li', 'reveal-copy');
           sequence(document, '.practice-preview > *, .access-details', 'reveal-copy');
           document.querySelectorAll('.device-lineup').forEach(function(lineup) {
             sequence(lineup, ':scope > span', 'reveal-device');

@@ -1,0 +1,414 @@
+{
+  "createdAt": "2026-10-17T08:27:46.054711+00:00",
+  "siteBaseCommit": "9cb686a10b258e62a8aabe429561c91ed5bb5f35",
+  "appHead": "33037847b3c3e962cae0de4b8db251be73d7fc8f",
+  "appBranch": "codex/blueprint-coverage-20261017",
+  "appExportSHA256": {
+    "App/AppStoreAssets/catalog-totals.json": "96a5b915929b9cab8e508eb9e04ef829164c11f0e33bb535c1fe0e95acb8cda7",
+    "App/AzureMastery/Resources/exam-catalog.json": "1208243e0c2d56a85c175921f8bdd9a9ab49f25ea63931fe01a479ead34153eb",
+    "Quality/BlueprintScorecards/az-104.json": "c04698090b5619f79fc7062f2ebf129a3c8d737a3ff71bcd3ae51ee168433e64",
+    "App/AzureMastery/Data/CertPathRegistry.swift": "df382d55929cf9f24016c4c26e4c111d26d19a430bb019cfa4bb88b86052529d"
+  },
+  "appBankSHA256": "c3c539bd5c03282708a1d6ec70303cd042c13cd6834ee663d4e23e66b861a7de",
+  "generatedPatchSHA256": "53a07017fcabcbeac82d7a983062ab50a220897dc2de29b2618691b4e23fd9e1",
+  "generatedPaths": [
+    {
+      "path": "about/index.html",
+      "beforeSHA256": "97e1bb0e08de9e96478e767a3b65d96229f9f894065d1908d68ec4f9e63cd9b2",
+      "afterSHA256": "801e8c09bb02a5b6886464271f6fffa35a84f8f85e38a1d61ae212ed71b102da"
+    },
+    {
+      "path": "apps/AzureMastery/linkedin-banner.html",
+      "beforeSHA256": "b9b0770d9cdf0c14a2ca86824cd39ef8e576cf8f4af2a9240ec80131ce16e14a",
+      "afterSHA256": "b70c04436b0364fe70dc2ed418c7155e2431d9bae69f2c9124f3083afdee779e"
+    },
+    {
+      "path": "apps/AzureMastery/og-image.html",
+      "beforeSHA256": "563090294566b91e6a5307a4a7ccd2d12a3e967438eec9a527f9c9e8bf5e4a5c",
+      "afterSHA256": "8ecf75a4e233305b9595fdf858dad3a553c27358986d2cbf1bbd20ace286f8d8"
+    },
+    {
+      "path": "apps/AzureMastery/privacy.html",
+      "beforeSHA256": "3a326c9b889e0b82fb803d88050299d6b9aaebe10fd5eaa24716ac4dec348b79",
+      "afterSHA256": "b9871df01c5219bed773d39112c5af0e75b7a960588a4c17fff3a3aa69a7ec38"
+    },
+    {
+      "path": "apps/AzureMastery/support.html",
+      "beforeSHA256": "9c5ad47f4c02f20da7e206e59b5117b28409b50a6c26b96564a3230e80de5cd2",
+      "afterSHA256": "d7fae86341b04ca007ae46703956f862aeaae5004ee86041b68757a6cf7dd3d2"
+    },
+    {
+      "path": "apps/AzureMastery/terms.html",
+      "beforeSHA256": "b207f21df65768dbcfd797989151dcdc566c36efa9a1db38c22e942d74c99b5c",
+      "afterSHA256": "4fe0f7a5f99c89e666e13b3a59e6339a82be4e03619f891dfa134405aed9b37d"
+    },
+    {
+      "path": "ask-aura/index.html",
+      "beforeSHA256": "59a8f9ab22b12f746f82a552e10a3bae5b2bfb95c133b930c4082e16ab8bc9f2",
+      "afterSHA256": "a4c43504aebebb140f16c47cb1cd1916b891775c047c132ffd04f6da7865f467"
+    },
+    {
+      "path": "data/exam-counts.json",
+      "beforeSHA256": "252ab57527739aa0f28e5708533b60ced7e5c9f686bff85a5d43c2aadee60d67",
+      "afterSHA256": "46f7a6570c8de7f932f739bc5a40303cb4b953e21232c5935131a7eef7a4b59d"
+    },
+    {
+      "path": "data/practice-previews.json",
+      "beforeSHA256": "d50ee4ba70dcd1e15b8175f14b2133f0e64a4cfa1409231f12f427006523ac90",
+      "afterSHA256": "e543753abc96f8aaf61a15727b869e097254b3b451dd151a6e252f4e69f6f8e1"
+    },
+    {
+      "path": "data/search-index.json",
+      "beforeSHA256": "0d389063009f107e3abbe672e5abbbf5ec1bc5c1b20df589d5ffb63a80985b33",
+      "afterSHA256": "2d9d4db4ba3fa448bc2714d86aa8992625ebeba5b2a81f24d151a2a4a2b79e44"
+    },
+    {
+      "path": "exams/_template.html",
+      "beforeSHA256": "ff062d57392218228c0dccd84431462ea39d591613b79638971f497400366358",
+      "afterSHA256": "22280bcef399929f044997963141587cf79beb78d8e324fbf97d598714b7ba2b"
+    },
+    {
+      "path": "exams/ab-100/index.html",
+      "beforeSHA256": "ec654be35c2a5ef2b9d9927d749908b44707bde5d292a0b51e44018589f214c5",
+      "afterSHA256": "d3f3fe27fdc5f5bc7e707e68d16b3b6b2cf326d5d2672f7e386e38bac95b15b1"
+    },
+    {
+      "path": "exams/ab-410/index.html",
+      "beforeSHA256": "c5ab7e1b03d2c7ff8f862f9c0b1689182b81d0d35e288fafac5e64e7de9fb8eb",
+      "afterSHA256": "34682e380f3f299899c0780e5d7f98e075489af9d6c4dcfa0fb429c6ad70be5d"
+    },
+    {
+      "path": "exams/ab-620/index.html",
+      "beforeSHA256": "4cb33a488f4692fb9e6cc509f00b6d3b9350331d3789d144a485fe4af12aea3d",
+      "afterSHA256": "c467d704678cf4a5cf0e6851ad76d870c4990bb555c074dbdc2e2d16315f8b23"
+    },
+    {
+      "path": "exams/ab-650/index.html",
+      "beforeSHA256": "099c4acf34aef7248b87b34dcfe4f994f0db33410d9544d7a83e647290899897",
+      "afterSHA256": "27b919c09d33b639b01cc289e1460d2da73e64d0841f638d4cb4bab26459b746"
+    },
+    {
+      "path": "exams/ab-731/index.html",
+      "beforeSHA256": "87c280760a480474c35a3e22276b44900534b20efd4cc0983f55a52bc52d9652",
+      "afterSHA256": "170571b5bde5e1ddc2b5201471984c432d183420e2985f6503e92f02f8f45a05"
+    },
+    {
+      "path": "exams/ab-900/index.html",
+      "beforeSHA256": "55a2261d1f6f2f148c7436ae0eaa9679fbc2defbf7a45ef19feabeb99214cb02",
+      "afterSHA256": "425204a3e433c0be9c80ef1a594de24fcf267f44d8f5fc2ac4d925352a846350"
+    },
+    {
+      "path": "exams/ai-102/index.html",
+      "beforeSHA256": "8b42012a499482869c620bdcdbafe391afabbf834fdf4e6566c6c4e69de7073d",
+      "afterSHA256": "52fb0fc3a3e33ec040a117a0e4a26e9a7695054c6e79d161c29c1231cadd7630"
+    },
+    {
+      "path": "exams/ai-103/index.html",
+      "beforeSHA256": "bb276da6a152c290bcfe5ae86ca455d4cd09d754696c0742ac3e786f6625193d",
+      "afterSHA256": "aec186b6d821d52832a7802ebf8f6db310b32eeeb9cf9cd47af6bdfabc47b5a6"
+    },
+    {
+      "path": "exams/ai-200/index.html",
+      "beforeSHA256": "598aefe836035691e0f531e997ecf5cd1d6d5693cf0a9658e8b937578d3f1a0c",
+      "afterSHA256": "83d0fe0233be3d7160b2036c54fd3d34a6f67fc045b0e259f8a3796918ad7adb"
+    },
+    {
+      "path": "exams/ai-300/index.html",
+      "beforeSHA256": "27248c7b1c04fbfc759329e16b0ba583757ee7bc68e7b3a3a2711264e7df1de6",
+      "afterSHA256": "c4383cc503d183db7f18af86577c85aa17988337d3a5288b6c427f0a822c0fe9"
+    },
+    {
+      "path": "exams/ai-500/index.html",
+      "beforeSHA256": "878b31fc8c73a04f0d8cb3df6a918046df66197b08b165dda097c34138d488f8",
+      "afterSHA256": "ef5882cbd63dbcbfbaf2924d9800c9018b0616262b22d6300e9504788d2d191d"
+    },
+    {
+      "path": "exams/ai-900/index.html",
+      "beforeSHA256": "cd5b9f5a9b928c696816425916fd0e1ebab02f58e14711c8cca8e2fdcc47ac0b",
+      "afterSHA256": "e919b95e5745707ef36c5f62c78a654c9fde841a9af4fbc6d31d30afc14f21a5"
+    },
+    {
+      "path": "exams/ai-901/index.html",
+      "beforeSHA256": "12443b93e83fb88cda5f0e75e951bd6b906f34afe2986d4aff64dbd970c1c8b1",
+      "afterSHA256": "efd9b7d98a32ff950304fb0bd57c9aa7050a63d60254250cd5b5cd8886ad6491"
+    },
+    {
+      "path": "exams/az-104/index.html",
+      "beforeSHA256": "77836880959ee83235ce515bd3f7e051f70e8d0336c7b5e746531e6afec22e1b",
+      "afterSHA256": "1c6c208ba7fd42015d3fad7dd25fc245eead110d29deab9db8144e186d8e9a18"
+    },
+    {
+      "path": "exams/az-204/index.html",
+      "beforeSHA256": "178fd9e8fd36834dbf6c378772c786a943460cde7e4f90fac5d9afbb72cd85bb",
+      "afterSHA256": "8dd29ac31ec1b965c13740af5d3aa36b357cb91bf0f54bc140c74187cc60e413"
+    },
+    {
+      "path": "exams/az-305/index.html",
+      "beforeSHA256": "b6d3c2294ae32daff210651b5b18110006f690adaa7eb995ded7d5d1727584a4",
+      "afterSHA256": "451183c3d7c6ec734c7542aa99bde43bed9bb0114c35030ee38f14eca3d1942e"
+    },
+    {
+      "path": "exams/az-400/index.html",
+      "beforeSHA256": "33342cfac3cab69355cbc56ea2d213701230bf77f45a15f672ab02f3525a3c06",
+      "afterSHA256": "7a22abc9f32b6a8538d4cfa268c6bbc9bd8f74309dc26828175a7569324a6143"
+    },
+    {
+      "path": "exams/az-500/index.html",
+      "beforeSHA256": "a0c1ffe0f56367e73559aa6b12dd64de8c73ae0015fc79fae082a0b92aa0367b",
+      "afterSHA256": "20ccfe74faaaa5d8b4d5459e4f7cd63d5c10c811f6875607d513b023d927c3f2"
+    },
+    {
+      "path": "exams/az-700/index.html",
+      "beforeSHA256": "3db9f0b9d222ffd2efd52ac8cd478c4ec32aed8fb9761b326677200f7be6d0ba",
+      "afterSHA256": "19f5287dee0fda9a784f0a03d461d304e98ebc4eba223be20e84c8b65d8991d0"
+    },
+    {
+      "path": "exams/az-900/index.html",
+      "beforeSHA256": "fce9c601bd15d8c5410b65d4bafa2c6b89d1cfd1121105d610c69b253a5c3db7",
+      "afterSHA256": "4a0cc5d104644d7a63be6324b1993d06dd35acba70ec250bbb5543ebfec1d8a7"
+    },
+    {
+      "path": "exams/dp-100/index.html",
+      "beforeSHA256": "4bbc7c150b16070f5590d0f86c6973016bfa6e476b7c64da51aa65e625e07eba",
+      "afterSHA256": "13c8dfbf69219315f58afe1783330668c1bb893a58b069e81cd72236f33e8346"
+    },
+    {
+      "path": "exams/dp-300/index.html",
+      "beforeSHA256": "48849fb38aeb87ba211e9fa9c4ef8f5da3d1ca55599157ad9bdc60e3827b1402",
+      "afterSHA256": "da41f79a272f9ded78b495f3878403c03dfdb097d064551eaa6f6e274c6b152e"
+    },
+    {
+      "path": "exams/dp-700/index.html",
+      "beforeSHA256": "8ec0d9128ec3dd6f7beebe2166c86087642de25168fbd29c52cd9f0dc3b16fb5",
+      "afterSHA256": "3ccaa8950011436b602113ee71ea8d723d6c8d932af5be0223e6d3e95b4132f1"
+    },
+    {
+      "path": "exams/dp-750/index.html",
+      "beforeSHA256": "6e8c66ed70e863c39a9e2762183097b28456acb20780882665e98fa4e3de1d29",
+      "afterSHA256": "84ffefc8f83b5cd63d2460ca5b2bb2ce116339710fd96eec57f5f98de4d7b6c6"
+    },
+    {
+      "path": "exams/dp-800/index.html",
+      "beforeSHA256": "74a3b3f6bdc0f2eb70862d4bc70eb40a0c9b1968010cef46c76f7a74551739e1",
+      "afterSHA256": "f4baf9e868703b41c3475a2d6230923048be59797c13c234ccfb29ebefe551a9"
+    },
+    {
+      "path": "exams/dp-900/index.html",
+      "beforeSHA256": "ba0bc05b84e9403ef34fd4cd63d939bfe568c1f0aafb1fadcb6f924f76759ec5",
+      "afterSHA256": "5983a9bade09b9abb9e46d3d64aa08a67c861b016eb2b1d8cfad6dfbed33980b"
+    },
+    {
+      "path": "exams/gh-300/index.html",
+      "beforeSHA256": "9f6b95a524e8284a17f91bc05ec66bdf8511a67ff807b7d152cdf81ac5a39c9c",
+      "afterSHA256": "a41d472e4e3e8ccadd72e2ce3555fd833d14fc68191c13ae2239c880080bbcea"
+    },
+    {
+      "path": "exams/gh-900/index.html",
+      "beforeSHA256": "fe0f3a806a0f558597dcf9529518d8e99a424ed52fbddd9bf829912e2d793135",
+      "afterSHA256": "7dec6f2b0d2951dcf6ecd5ec6127269a670561e7ef7944a721f914e76d9aca0f"
+    },
+    {
+      "path": "exams/index.html",
+      "beforeSHA256": "d7d0175ed4fa45adb4dcb684209e4be5c695b6cb3b5268273dcdd6ac2edc2a1b",
+      "afterSHA256": "6025ada85dae9230dbe55443bfdbb2e443b82632df31cb8ce3896c41d4e3a392"
+    },
+    {
+      "path": "exams/pl-300/index.html",
+      "beforeSHA256": "999733a0bd2898c3d70e6820cd88b2dc75e7163d9477ccab4c3faf6ea8ec7cf0",
+      "afterSHA256": "cd0f9aaa562f159f453767b8ec9564b5bfec08569f5b922ecdf2b40fad697a76"
+    },
+    {
+      "path": "exams/pl-900/index.html",
+      "beforeSHA256": "cff4e80a30cf595fe31031e9c415a1c034ce95ebefd31b0ef05a2493cff3f2ff",
+      "afterSHA256": "04f1358fc1b37c0f3816dcaac19d2b4c91a2b34936dd6bad4cf55924142140ed"
+    },
+    {
+      "path": "exams/retired/index.html",
+      "beforeSHA256": "456f9bffd0898f33a35f7be63d1ee02bf1f9ad6d77fcec648005b6e38389007e",
+      "afterSHA256": "90f1066d2302245296664248315b12fee8cf1a36e8f302d5b4a9802b26269fab"
+    },
+    {
+      "path": "exams/sc-100/index.html",
+      "beforeSHA256": "67a6b49071043fe396fd15e0224605612be91adab34912778979b485060b897c",
+      "afterSHA256": "72e2c4dc2dbb703efcaaca08eae239213e970689cba030ed9bd8a68ad3a75557"
+    },
+    {
+      "path": "exams/sc-200/index.html",
+      "beforeSHA256": "153522839391ecaf17ea0ab9a4f9b8696732b30cb9b2bad2e31e4aa8b1539ccb",
+      "afterSHA256": "f0027e56f679ec525a5a2c3319d156007ff16ce63f900b10cec014f99a92c3ed"
+    },
+    {
+      "path": "exams/sc-300/index.html",
+      "beforeSHA256": "743ccbdbef67c7d1a95d7be394bbb685b4113e2349998bddb3f81c77ab25eefc",
+      "afterSHA256": "de3ace5931fcd2cd9d0b25b21bde60a2be6d903911d2e7f1273c7e9cfd0e6394"
+    },
+    {
+      "path": "exams/sc-500/index.html",
+      "beforeSHA256": "86e0a90dd3e9f6704ef6a499159a8bad90a0e5933c1b72c677fa1921d061eb97",
+      "afterSHA256": "aec966f493237313cb14e4954bbb12dbee7fa24b9986ac132bc73fc7c79ea83c"
+    },
+    {
+      "path": "exams/sc-900/index.html",
+      "beforeSHA256": "8789a03e631e0b9efc8c3cda836a4acbc5ba059b2a1baf8491042e5c1d8e928a",
+      "afterSHA256": "c49c45cc19f1e70436f6e6db5cafd3bb252fe780ffa4dd1c457e32e89a6c124b"
+    },
+    {
+      "path": "guides/ab-620-vs-ab-410/index.html",
+      "beforeSHA256": "64d64495efe42d2b5728bd5fa4ea5fc8cde11196c41fccbe99ca9814344c8a60",
+      "afterSHA256": "29ebc4a16e861a2b9dd1ad83756d4bd7aedcf76171a4c235f8d3121d3eb4e7ec"
+    },
+    {
+      "path": "guides/ai-103-vs-ai-200/index.html",
+      "beforeSHA256": "9b900d1a1b723d6443a4c3e8501ad21299bddc73ca1cac0113eb5184a9b02a67",
+      "afterSHA256": "47720d068d9fe395c64dfe3238091e3f74383230d99da7bd88f6614943995b9c"
+    },
+    {
+      "path": "guides/az-900-vs-az-104/index.html",
+      "beforeSHA256": "b02055eda27205cc84b61b175c5210e912a7570d96c478e847c5f86d1ced5da6",
+      "afterSHA256": "73fd1fe09926ff41d95ee4719d3851cc37db99b87f6e33aac275bef7fda1a9cc"
+    },
+    {
+      "path": "guides/how-to-pass-ab-100/index.html",
+      "beforeSHA256": "31a93a05db976ce76ea980bcf267ef61d4d368c6361cb0455736f04ee7f8057a",
+      "afterSHA256": "d87ff9a9e1940e0230ba51342e84a573bad63b5e9cb5a8ed1bd543a54ecee853"
+    },
+    {
+      "path": "guides/how-to-pass-ab-620/index.html",
+      "beforeSHA256": "72e6537943433d3e5b084ce403809f3265d581fdbb42d3310094781287e2122f",
+      "afterSHA256": "2c82a9ef902d32c0cc7931c838390283180da2481a1b3495286b45b4c9c32166"
+    },
+    {
+      "path": "guides/how-to-pass-ai-103/index.html",
+      "beforeSHA256": "a2ee65d6a24e5eebec59754306f591438a63ff0d907e31f34c786c27cb4c4f30",
+      "afterSHA256": "03ce99bfe91290b366eaa0d2120bddff41909517af50b8db61a2f5cd3f723360"
+    },
+    {
+      "path": "guides/how-to-pass-ai-200/index.html",
+      "beforeSHA256": "8cef6eab93228051955608e267d65a9c55b2ca42be5e5a2a4ff859280ea500bf",
+      "afterSHA256": "3c452e63a60d8f8a5b716afac284926dd77586a2608aea8b041a9ef3e8dcb49e"
+    },
+    {
+      "path": "guides/how-to-pass-ai-901/index.html",
+      "beforeSHA256": "082c98ae5bc435440b41aac883b06b111ad82966061e04b40069bcfbe3a6e0aa",
+      "afterSHA256": "7514ff3ce8f031f88baab006b9faa87e32bfe6e98407b8b0191c817622557c19"
+    },
+    {
+      "path": "guides/how-to-pass-az-104/index.html",
+      "beforeSHA256": "c3792d95dfb3a7b66e8addba825f28b79abb28a5a040bbdffc23a3e8c2985713",
+      "afterSHA256": "4e16a4cddb0ee6129934470220ffba77f6deb1480f57bb33f226040c19d321a7"
+    },
+    {
+      "path": "guides/how-to-pass-az-900/index.html",
+      "beforeSHA256": "f5932257c9a1b9bd65402353cf7ea1665a6d655213a1d9124b0a8bd966bdd2d3",
+      "afterSHA256": "0264c7d3637a9643a8ad15e08fcfae5c5e6b72db2491445d1f16d746e3f3a96d"
+    },
+    {
+      "path": "guides/how-to-pass-dp-900/index.html",
+      "beforeSHA256": "24fa355cb8aead9ad4d0d7551037d81c6f41ca4789f4d36620eac7f1962ee84e",
+      "afterSHA256": "ca00888bf304a62c3f860b38a3fa516af5c01be13acf4f5880fccce7dd9b2083"
+    },
+    {
+      "path": "guides/how-to-pass-sc-500/index.html",
+      "beforeSHA256": "3587e1f7653738ff370157fd63de59ae06cf774cd6b0cae7784430f0f56f9f97",
+      "afterSHA256": "18628f698338b9629a8fb8b8ec47ca3960bdd781cddb79a7e9c15ad15a208af3"
+    },
+    {
+      "path": "guides/how-to-pass-sc-900/index.html",
+      "beforeSHA256": "f9712e3577b58ebfc8f201e32832798f1b68be2f9c287a22433e0c364c0f5282",
+      "afterSHA256": "38e2e9cf633cb610f83a3f38b44f1eb274b3ac868a1dba1742935e5c9b99bbe6"
+    },
+    {
+      "path": "guides/index.html",
+      "beforeSHA256": "96f84d175c151d1814206626167d248f7e7b3d90ee2972091b954f55aaadd126",
+      "afterSHA256": "9c8651af7a2f978efed2a1bf31f71d44980c49eca2ee006567c7ba5862c79180"
+    },
+    {
+      "path": "guides/sc-500-vs-az-500/index.html",
+      "beforeSHA256": "268fa1ca39395faebbb0c87b0d89dc3f835f3b4980315d7a69f8b680184b9d6b",
+      "afterSHA256": "71f06bf70fa55376d0b09e307a4bcc10d652c9432b3b435f581f6e95310f9e8d"
+    },
+    {
+      "path": "guides/sc-900-vs-az-900/index.html",
+      "beforeSHA256": "378af8dda4a5121c9ded55a4a8e5a703406e1f8b38cbac461f361e47187240fb",
+      "afterSHA256": "f1aa94d619985e5de37213a606548edd7b60a9ac8600a839b8ccfd4ec86d07db"
+    },
+    {
+      "path": "guides/which-azure-certification-first/index.html",
+      "beforeSHA256": "77577ddf60a5b62bc8f726198620c8c5124cf87c4cf0e2342a9791e6b1e28cdb",
+      "afterSHA256": "16e4e64bc986d2255ea69facf9a82a0e5b1c421e59342369563bff4d3266250d"
+    },
+    {
+      "path": "how-exam-iq-works/index.html",
+      "beforeSHA256": "863fb88280e8c26465701897f055eb5067bfb651500cb74668a725e9ce4be2c5",
+      "afterSHA256": "d6e0473b89a86158983491d57a52d587893eb39f412056f525d94b2af590fc53"
+    },
+    {
+      "path": "how-we-write-questions/index.html",
+      "beforeSHA256": "ecdbe42b4d3346847f7697e7061c4f632211d968e968b134894a38d519f2098b",
+      "afterSHA256": "701ba65ad24aaeda5978e6b1c18ab47173080236cbf7e8f3a5babd9758b57f66"
+    },
+    {
+      "path": "images/linkedin-banner.png",
+      "beforeSHA256": "d7a1517585b337e046541a963229362ef52bef6865d2bb9f54af9c495f4ebae6",
+      "afterSHA256": "1db24175ed5ec470eb004a1a53619605c32d260fcac233b1556b37885ae27c2b"
+    },
+    {
+      "path": "images/og-image.png",
+      "beforeSHA256": "b9a2951a4a761da4dd51bd04dac5bc5b355567f6c925a17034c3863b8dedc0ac",
+      "afterSHA256": "2c1bb739c1607730ebb48ef590939c7ae1ad4bf87d4c6216d39a43047b7ba32e"
+    },
+    {
+      "path": "images/og/ai-200.jpg",
+      "beforeSHA256": "4429fc31d9ccb416791a7838a2a7c3221048eb32c86f12c1793e7f9e61b3a832",
+      "afterSHA256": "7bca41375bc242054db155eb808cb07a51ca1b346cf9f65a46e25b40b1d4e84d"
+    },
+    {
+      "path": "images/og/az-104.jpg",
+      "beforeSHA256": "bfd867976716d27e682b7c59b837c951916cd042d7b562ed6a59538cbb218535",
+      "afterSHA256": "70d227ffdcdcd3e80a2c0a1c091ea4aaa45e1b61a51995427c9cc527faf11200"
+    },
+    {
+      "path": "images/og/az-700.jpg",
+      "beforeSHA256": "c1c256bc117c6a75411e5431dda4f55285fd8eba13fcd6107ae5ccefd2d48dc9",
+      "afterSHA256": "b4bd1fa7c37d04b775bd0974adf3bcc5ddd9d729e3bad542b0ea5f0bfae85a7d"
+    },
+    {
+      "path": "images/og/az-900.jpg",
+      "beforeSHA256": "5f6cefc9516a087bdb184fbaa3d13c6aab169740666a9ec44e42ebfd679f804e",
+      "afterSHA256": "2c0dd5c00247b8afb78ec8cc22b5fca8b46d3d5d8636e3b5e6d367317ffd05b3"
+    },
+    {
+      "path": "index.html",
+      "beforeSHA256": "8a33b60d8d5819c90a34ccc87ee793288bdfbadc27a459f5b75d2c5322da8a33",
+      "afterSHA256": "d1d35e7df09b1426c6f31c91185468ef66e364f2fb6eef37bb9c453c43408730"
+    },
+    {
+      "path": "llms-full.txt",
+      "beforeSHA256": "94c46226dbad1c3f7d2fda4cbd6ea900432bb071a2ac205a0f2327aafcbba0c2",
+      "afterSHA256": "74287553bab47b3ace2073c7e2b4cef3dac9d32ca16b21a70d2a94816a7e7cc7"
+    },
+    {
+      "path": "llms.txt",
+      "beforeSHA256": "dae7587a0f5af1880c4262f5eda9f0d0b981b2687734c2b7b39d683f91cf4cc1",
+      "afterSHA256": "18cfb202c19e4a54988e7cf998de95433e1b42065c9f50a32a92927012472ede"
+    },
+    {
+      "path": "sitemap.xml",
+      "beforeSHA256": "1e4659e57ceaf76e9b72e1ee53a0f51c3faac5d60b119a99d4608dcc105f7a76",
+      "afterSHA256": "7b0c140ef33e55f71710fc205fe912d7fe3b330f75f631fb0675c5b04cacbc92"
+    }
+  ],
+  "productionCounts": {
+    "total": 12943,
+    "label": "12,900+",
+    "approvedRelease": "v2.0.2 build49"
+  },
+  "candidateCounts": {
+    "total": 13023,
+    "label": "13,000+",
+    "az104": 581
+  },
+  "previewReview": "AZ-104 581-question card rendered and visually inspected; readable, unclipped.",
+  "publication": "Candidate only; no approved later release/count authority. Regenerate and review before promotion.",
+  "appPR": "https://github.com/moonbeamalpha/AZ-104-Mastery/pull/923"
+}

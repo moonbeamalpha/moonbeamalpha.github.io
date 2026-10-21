@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-10-17T08:26:00.517268+00:00",
+  "phase": "candidate",
+  "commands": [
+    {
+      "command": "python3 Tools/sync-marketing-counts.py --check --no-render",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/00.log"
+    },
+    {
+      "command": "python3 Tools/test-domain-counts.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/01.log"
+    },
+    {
+      "command": "python3 Tools/test-public-exam-facts.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/02.log"
+    },
+    {
+      "command": "python3 Tools/check-page-similarity.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/03.log"
+    },
+    {
+      "command": "python3 Tools/update-sitemap-lastmod.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/04.log"
+    },
+    {
+      "command": "python3 Tools/add-exam-page-cta.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/05.log"
+    },
+    {
+      "command": "python3 Tools/check-marketing-ui.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/06.log"
+    },
+    {
+      "command": "python3 Tools/build-search-index.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/07.log"
+    },
+    {
+      "command": "python3 Tools/sync-search-ui.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/08.log"
+    },
+    {
+      "command": "python3 Tools/test-search-index.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/09.log"
+    },
+    {
+      "command": "python3 Tools/version-static-assets.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/10.log"
+    },
+    {
+      "command": "python3 Tools/sync-conversion-ui.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/11.log"
+    },
+    {
+      "command": "python3 Tools/check-conversion-ui.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/12.log"
+    },
+    {
+      "command": "python3 Tools/build-download-qr.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/13.log"
+    },
+    {
+      "command": "python3 Tools/sync-exam-faq-schema.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/14.log"
+    },
+    {
+      "command": "python3 Tools/add-ga-internal-flag.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/15.log"
+    },
+    {
+      "command": "python3 Tools/add-footer-links.py --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/16.log"
+    },
+    {
+      "command": "python3 Tools/validate-marketing-seo.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/17.log"
+    },
+    {
+      "command": "python3 Tools/validate-aura-help.py",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/18.log"
+    },
+    {
+      "command": "bash Tools/build-home-css.sh --check",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/19.log",
+      "initialExitCode": 1,
+      "repair": "Network-enabled retry obtained pinned clean-css compiler; no source/baseline change."
+    },
+    {
+      "command": "node Tools/check-marketing-performance.mjs",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/20.log"
+    },
+    {
+      "command": "node Tools/test-app-store-links.mjs",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/21.log"
+    },
+    {
+      "command": "node Tools/test-search.mjs",
+      "exitCode": 0,
+      "log": "/Users/chris/Documents/Github/AZ-104 Mastery/.worktrees/rescue-snapshots/blueprint-20261017/site-candidate-logs/22.log"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ]
+}

@@ -589,11 +589,11 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
 }
 @media (max-width: 479px) { .hub-hero__badges .certification-badge { width: 88px; height: 88px; margin: 0 -12px; } .hub-hero__badges { height: 150px; } }
 
-/* ── Homepage devices: iPad, iPhone and Watch lineup ── */
+/* ── Homepage devices: iPad, iPhone Duo, iPhone and Watch lineup ── */
 /* Bezels are sized from the lineup height, not with % padding: % padding resolves
    against the row's width, which made frames ~35-55px thick and cropped the screens.
    Each <img> keeps its capture's aspect ratio; the frame shrink-wraps it. */
-.device-lineup { --lineup-h: clamp(250px, 34vw, 380px); position: relative; display: flex; justify-content: center; align-items: flex-end; height: var(--lineup-h); margin: 28px auto 8px; }
+.device-lineup { --lineup-h: clamp(125px, 38vw, 360px); position: relative; display: flex; justify-content: center; align-items: flex-end; height: var(--lineup-h); margin: 28px auto 8px; }
 .device-lineup::before {
   content: ''; position: absolute; inset: 15% 20% 0; z-index: -1; border-radius: 50%;
   background: radial-gradient(closest-side, rgba(43, 136, 216, 0.18), transparent);
@@ -601,9 +601,12 @@ html[data-theme="light"] .btn-primary, html[data-theme="light"] .badge-ask-aura 
 .device-lineup > span { display: block; flex: none; padding: var(--bezel); border-radius: calc(var(--screen-r) + var(--bezel)); background: #05070D; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.05); }
 .device-lineup img { display: block; width: auto; height: calc(var(--device-h) - 2 * var(--bezel) - 2px); border-radius: var(--screen-r); }
 .device-lineup__ipad { --device-h: var(--lineup-h); --bezel: calc(var(--lineup-h) * 0.024); --screen-r: calc(var(--lineup-h) * 0.035); }
+.device-lineup__duo { --device-h: calc(var(--lineup-h) * 0.62); --bezel: calc(var(--lineup-h) * 0.016); --screen-r: calc(var(--lineup-h) * 0.04); margin-left: calc(var(--lineup-h) * -0.18); position: relative; z-index: 1; }
+.device-lineup__duo::after { content: ""; position: absolute; top: var(--bezel); bottom: var(--bezel); left: 50%; width: 6px; transform: translateX(-50%); pointer-events: none; background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.06), transparent); }
 .device-lineup__phone { --device-h: calc(var(--lineup-h) * 0.82); --bezel: calc(var(--lineup-h) * 0.015); --screen-r: calc(var(--lineup-h) * 0.08); margin-left: calc(var(--lineup-h) * -0.1); position: relative; z-index: 1; }
 .device-lineup__watch { --device-h: calc(var(--lineup-h) * 0.34); --bezel: calc(var(--lineup-h) * 0.02); --screen-r: calc(var(--lineup-h) * 0.05); margin-left: calc(var(--lineup-h) * -0.03); position: relative; z-index: 2; }
 .device-lineup__ipad img { aspect-ratio: 3 / 4; }
+.device-lineup__duo img { aspect-ratio: 1600 / 1126; }
 .device-lineup__phone img { aspect-ratio: 1320 / 2868; }
 .device-lineup__watch img { aspect-ratio: 422 / 514; }
 

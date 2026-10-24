@@ -7,7 +7,7 @@
   "sourceInputs": {
     "App/AppStoreAssets/catalog-totals.json": "c1f4225a84bd1a26df10b84b7df97da4cabd64890777836d5f11360b64a5994e",
     "App/AzureMastery/Resources/exam-catalog.json": "25559b5f484e33c76a5bb455e725f64641b7aa1960780dff80483dbd7eccc103",
-    "Quality/BlueprintScorecards/sc-200.json": "e25e08d4d4a37bc22be78e528cb93cccf11f92331aff8a5ab2b90fcc7e6b9ad2"
+    "Quality/BlueprintScorecards/sc-200.json": "b19d1f58822cb6dc5d285eb40b5324934086925319f88b5d70f568e1b5416529"
   },
   "candidateTotals": {
     "examCount": 30,
@@ -47,7 +47,8 @@
     "cssInitialFailure": "Sandbox DNS prevented fetching clean-css-cli; verified outside-sandbox retry passed without file changes.",
     "remainingChecks": "Homepage CSS, performance contracts, App Store placement measurement and search tests passed on verified retry.",
     "countFreeze": "passed; public13003 /13000+ unchanged",
-    "publication": "not authorized or performed"
+    "publication": "not authorized or performed",
+    "finalRefresh": "Regenerated against final app87e5074c4 after003 distractor correction; candidate bytes unchanged; all16 public files restored."
   },
-  "sourceAppHead": "c9d415a6ef9f1dba486c01d53f0bed8a86351502"
+  "sourceAppHead": "87e5074c491661686f1c9ae4b64645151f1912cf"
 }

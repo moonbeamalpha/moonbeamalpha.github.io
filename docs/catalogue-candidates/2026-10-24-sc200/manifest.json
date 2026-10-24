@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "state": "inert-unpublished-candidate",
+  "generatedOn": "2026-10-24",
+  "sourceAppBranch": "codex/blueprint-coverage-20261024",
+  "appPR": "https://github.com/moonbeamalpha/AZ-104-Mastery/pull/956",
+  "sourceInputs": {
+    "App/AppStoreAssets/catalog-totals.json": "c1f4225a84bd1a26df10b84b7df97da4cabd64890777836d5f11360b64a5994e",
+    "App/AzureMastery/Resources/exam-catalog.json": "25559b5f484e33c76a5bb455e725f64641b7aa1960780dff80483dbd7eccc103",
+    "Quality/BlueprintScorecards/sc-200.json": "e25e08d4d4a37bc22be78e528cb93cccf11f92331aff8a5ab2b90fcc7e6b9ad2"
+  },
+  "candidateTotals": {
+    "examCount": 30,
+    "questionCount": 13103,
+    "questionCountLabel": "13,100+"
+  },
+  "sc200ExamScoped": 393,
+  "sc200Domains": {
+    "sc200-hunt": 84,
+    "sc200-incident": 139,
+    "sc200-ops": 170
+  },
+  "restoredPublicFiles": [
+    "apps/AzureMastery/linkedin-banner.html",
+    "apps/AzureMastery/og-image.html",
+    "data/exam-counts.json",
+    "exams/ab-650/index.html",
+    "exams/ab-900/index.html",
+    "exams/az-104/index.html",
+    "exams/az-305/index.html",
+    "exams/az-500/index.html",
+    "exams/az-700/index.html",
+    "exams/az-900/index.html",
+    "exams/dp-700/index.html",
+    "exams/dp-750/index.html",
+    "exams/sc-200/index.html",
+    "exams/sc-500/index.html",
+    "index.html",
+    "llms.txt"
+  ],
+  "promotionRequires": "Regenerate against the exact next App Store approved release and explicit owner count-publication authorization. Do not promote this open-content candidate directly.",
+  "validation": {
+    "generatorCandidateMatchesAppExport": true,
+    "candidateSC200Count": 393,
+    "productionFilesEqualBase": true,
+    "workflowBlocksPassedBeforeCSS": 17,
+    "cssInitialFailure": "Sandbox DNS prevented fetching clean-css-cli; verified outside-sandbox retry passed without file changes.",
+    "remainingChecks": "Homepage CSS, performance contracts, App Store placement measurement and search tests passed on verified retry.",
+    "countFreeze": "passed; public13003 /13000+ unchanged",
+    "publication": "not authorized or performed"
+  },
+  "sourceAppHead": "c9d415a6ef9f1dba486c01d53f0bed8a86351502"
+}

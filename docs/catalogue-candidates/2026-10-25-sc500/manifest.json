@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-10-25",
+  "state": "INERT_UNAPPROVED_RELEASE_CANDIDATE",
+  "appBaseCommit": "401b0e26f9c24df35fbaa79967055e231e8dfbfb",
+  "siteBaseCommit": "2732db214039d129c6d5bf4cff349f4304b98119",
+  "candidateTotals": {
+    "examCount": 30,
+    "questionCount": 13123,
+    "questionCountLabel": "13,100+"
+  },
+  "candidateSC500ExamScoped": 492,
+  "candidateSC500DomainCounts": {
+    "sc500-compute": 123,
+    "sc500-datanet": 127,
+    "sc500-identity": 123,
+    "sc500-posture": 119
+  },
+  "approvedPublicBaseline": {
+    "examCount": 30,
+    "questionCount": 13003,
+    "questionCountLabel": "13,000+"
+  },
+  "restoredGeneratedPublicPaths": [
+    "apps/AzureMastery/linkedin-banner.html",
+    "apps/AzureMastery/og-image.html",
+    "data/exam-counts.json",
+    "exams/ab-650/index.html",
+    "exams/ab-900/index.html",
+    "exams/az-104/index.html",
+    "exams/az-305/index.html",
+    "exams/az-500/index.html",
+    "exams/az-700/index.html",
+    "exams/az-900/index.html",
+    "exams/dp-700/index.html",
+    "exams/dp-750/index.html",
+    "exams/sc-200/index.html",
+    "exams/sc-500/index.html",
+    "index.html",
+    "llms.txt"
+  ],
+  "exportSHA256": {
+    "App/AppStoreAssets/catalog-totals.json": "df55d8f2cba4830864a4ac172021a103fd305921b55cbc28f4b821737b03cf36",
+    "App/AzureMastery/Resources/exam-catalog.json": "b12d0404443640ab93e83b25bcab65865796f356ae8db49106ccf8558dd705e9",
+    "Quality/BlueprintScorecards/sc-500.json": "86d5768a68ce625819dfb67fa8a15ef2efbe1c7bc60f7da4516585eb43bc35c4"
+  },
+  "promotionRule": "Regenerate from the exact next App Store-approved release and obtain explicit owner authorization before promoting public counts; no merge or publication in this automation.",
+  "generatedCountCheck": "PASS: synchronized candidate pages before restoring production",
+  "productionFreezeCheck": "PASS: all published sources remain approved build50",
+  "localValidation": {
+    "siteWorkflowBlocks": 21,
+    "allPassedAfterEnvironmentalRetry": true,
+    "candidateCountsCheckedBeforeRestoringPublicFiles": true,
+    "productionFreeze": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "appCommit": "368871537f2d95bef60ca911bb077827ce3078b8",
+  "appBranch": "codex/blueprint-coverage-20261025"
+}

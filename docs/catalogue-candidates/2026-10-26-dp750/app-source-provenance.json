@@ -1,0 +1,16 @@
+{
+  "checkedOn": "2026-10-26",
+  "appBranch": "codex/blueprint-coverage-20261026",
+  "sourceSHA256": {
+    "App/AppStoreAssets/catalog-totals.json": "77cfa973bccdf4553738d8d64086e93d72d52e564a9e0c816b7cdf4b786d6293",
+    "App/AzureMastery/Resources/exam-catalog.json": "d5b9ddf007cfef8dc4edaf4fc84a5532d781fd90d2f02c5309f92bbafe42cf4b",
+    "Quality/BlueprintScorecards/dp-750.json": "f14767beb52d58c74fa6285569e76474f7a35add41fcda1a53f412a9d054ea52"
+  },
+  "candidateTotals": {
+    "examCount": 30,
+    "questionCount": 13143,
+    "questionCountLabel": "13,100+"
+  },
+  "dp750ExamCount": 464,
+  "publicationApproved": false
+}

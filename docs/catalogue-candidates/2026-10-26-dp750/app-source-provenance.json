@@ -4,7 +4,7 @@
   "sourceSHA256": {
     "App/AppStoreAssets/catalog-totals.json": "77cfa973bccdf4553738d8d64086e93d72d52e564a9e0c816b7cdf4b786d6293",
     "App/AzureMastery/Resources/exam-catalog.json": "d5b9ddf007cfef8dc4edaf4fc84a5532d781fd90d2f02c5309f92bbafe42cf4b",
-    "Quality/BlueprintScorecards/dp-750.json": "f14767beb52d58c74fa6285569e76474f7a35add41fcda1a53f412a9d054ea52"
+    "Quality/BlueprintScorecards/dp-750.json": "36cc6c08c162f5bbdc6cfe2eaa74c24023d42b0fb2ccfdf7e3a8e99cb80608eb"
   },
   "candidateTotals": {
     "examCount": 30,

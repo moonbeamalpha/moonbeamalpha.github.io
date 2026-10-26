@@ -1,0 +1,18 @@
+counts: 30 current exams, 13143 exam-scoped questions -> label 13,100+ (metric 13,100), 29 current cert paths
+        non-current, excluded from aggregates: AI-102, AI-900, AZ-204, AZ-500, DP-100
+exam pages:
+domain counts:
+  domains ok  every domain__count span matches its exam's snapshot
+guides:
+guide question counts:
+  counts ok  no hand-written question counts found outside the tool's phrase
+homepage:
+llms.txt:
+retired markup:
+  markup ok  retired treatment matches the catalogue
+  itemlist ok  35 entries
+social images:
+  pills ok  apps/AzureMastery/linkedin-banner.html: all 30 exams shown
+  pills ok  apps/AzureMastery/og-image.html: all 30 exams shown
+
+0 file(s) would change.

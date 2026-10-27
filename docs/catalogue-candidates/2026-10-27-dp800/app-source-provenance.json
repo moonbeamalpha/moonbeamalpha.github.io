@@ -1,0 +1,13 @@
+{
+  "generatedOn": "2026-10-27",
+  "candidateOnly": true,
+  "sourceAppBaseCommit": "718d8f07426108453b829517d94246bb475ef6d5",
+  "appBranch": "codex/blueprint-coverage-20261027",
+  "sourceSHA256": {
+    "App/AppStoreAssets/catalog-totals.json": "048abdf3654a85e108e26e22969b919cbd6ba64df09071161984c4b677f304d5",
+    "App/AzureMastery/Resources/exam-catalog.json": "1cf0280aa2efcf789ddb9632ba322848b7c33fba59261fe1bdbeb94a2642ce0a",
+    "Quality/BlueprintScorecards/dp-800.json": "c6a6434b0e0bca90c24f0ac45ad0360ed67a26e34b7c24bb1ca5035854dcb3ea"
+  },
+  "publicReleaseBaseline": "approved v2.1.0 build50; 13003 / 13000+; 30exams/29paths",
+  "promotion": "Regenerate from exact next approved release and obtain owner publication authorization."
+}

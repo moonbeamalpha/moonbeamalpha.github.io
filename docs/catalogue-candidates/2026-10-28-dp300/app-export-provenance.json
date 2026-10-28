@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-10-28",
+  "capturedAtUTC": "2026-10-28T09:38:27.160333+00:00",
+  "status": "INERT_UNAPPROVED_CANDIDATE",
+  "appPullRequest": "https://github.com/moonbeamalpha/AZ-104-Mastery/pull/982",
+  "appHead": "bbde82ba2154eb191872d5450d5c979a5544cbb6",
+  "appBranch": "codex/blueprint-coverage-20261028",
+  "candidateFiles": {
+    "catalog-totals.json": "2c39cba2997ffbcad6132b1f6c7642c2dd3d677e9b06aa811550ee6d2de76d4b",
+    "exam-counts.json": "5d4dcfe5f3016172eb5dfa3fc41252c3363a4a4cf88f7a849f3aed13ef4d689d"
+  },
+  "generationCommand": "python3 Tools/sync-marketing-counts.py --refresh --no-render --app-repo <exact reviewed app worktree>",
+  "sourceSHA256": {
+    "App/AppStoreAssets/catalog-totals.json": "2c39cba2997ffbcad6132b1f6c7642c2dd3d677e9b06aa811550ee6d2de76d4b",
+    "App/AzureMastery/Resources/exam-catalog.json": "bf3f4b4287ef9cf1672e3722933ba45330f8811ef34f506ee91becadebf43f9f",
+    "App/AzureMastery/Data/CertPathRegistry.swift": "df382d55929cf9f24016c4c26e4c111d26d19a430bb019cfa4bb88b86052529d",
+    "Quality/BlueprintScorecards/ab-100.json": "c1332f4405575b31aa15f86b4ac8133180ded7f7e5ec0f2fb3bec243d1f113ed",
+    "Quality/BlueprintScorecards/ab-410.json": "bd889bce517b346841f767d1efc87024442e4cede1240bebaca2763ee28de8c7",
+    "Quality/BlueprintScorecards/ab-620.json": "2dc66d883c47ceb35bc0f3e93dcbfe85ec5f5b50ff09343af8b7bdc43c593af2",
+    "Quality/BlueprintScorecards/ab-650.json": "e6f04c429543efa7ed43963d4cbbcfaa570220711c581991e28d8e461ae14333",
+    "Quality/BlueprintScorecards/ab-731.json": "1966a6a44b1682c872ab71ff014db825f09c7f47492bc3377e94ee85248fbfeb",
+    "Quality/BlueprintScorecards/ab-900.json": "7bbb7a7b70ea735444951170376dbb207b2195e7a6a3e248c9fad93ffc002712",
+    "Quality/BlueprintScorecards/ai-103.json": "1595ebdc7fdd5f8073bc4b10fc1f882394b103a25bb20b2d202810c08519b215",
+    "Quality/BlueprintScorecards/ai-200.json": "c5cb6709ee263e301f7deee83d01c0c6f0f729bef5d39cfa75c0c2fca09f9b2b",
+    "Quality/BlueprintScorecards/ai-300.json": "02064a801d993945bd7b604796475434aec341fcc4d914e130f8c15ceffa502e",
+    "Quality/BlueprintScorecards/ai-500.json": "62146903112776f70c39057ced409faae26b25a2db1baa8bb2b88b6a09f09788",
+    "Quality/BlueprintScorecards/ai-901.json": "9dbfded4b451474d3b1fca0ae106658716eca11f6b2eb72b2159e4e4b420db26",
+    "Quality/BlueprintScorecards/az-104.json": "074348c269e34dc509042499a832cc0cc3dcdd8791d8ec64ad149f8fc0969a8c",
+    "Quality/BlueprintScorecards/az-305.json": "28b430ca9bf8dd48603db2b546ea00fc701c286d429cb1abcea567fcc150a1e5",
+    "Quality/BlueprintScorecards/az-400.json": "4f5fa32acf5af24aa886d69bd8ef698b3befe09e48d5495f8adc4005a9f80b1e",
+    "Quality/BlueprintScorecards/az-700.json": "cd71cdb307def25b8809c5f1e1d72d3ba9bcab46ef99a225723322b39aadae9a",
+    "Quality/BlueprintScorecards/az-900.json": "7e221abbf5e473ebe15811dbdc164181f59524b657e3bf78053921385b7efb8b",
+    "Quality/BlueprintScorecards/dp-300.json": "e662c8e6934536c1c6bac5fd5f983cf16961ed029a6d650062b8eaf36802b98a",
+    "Quality/BlueprintScorecards/dp-700.json": "55215f95938d906c6c5a3af043428b45208e6a60485767d1422786815b2eea9b",
+    "Quality/BlueprintScorecards/dp-750.json": "ebd0a13f68ff35ecd1caf47ace76f3349922a0b28c7f399a8313fca914d915e0",
+    "Quality/BlueprintScorecards/dp-800.json": "d48676869e0d8c5bb8e5be08b2c61fafff34f6c9537828f61a97a980ab0daeee",
+    "Quality/BlueprintScorecards/dp-900.json": "25ccb27555d00784048e2a7907dd6f03980a607a2f8ea0ef1dac0a3c51d7efad",
+    "Quality/BlueprintScorecards/gh-300.json": "96f5dad6d7605d35e0320e7f2255a2d0284978818527feb4778904ea494deed1",
+    "Quality/BlueprintScorecards/gh-900.json": "c566ab177989bbba0a5f8a8664ac59675f547e0e98ae44fa84270de74269ea80",
+    "Quality/BlueprintScorecards/pl-300.json": "7c9c7b78278e928c5f6f245c859f93b2244d427a539e48770a46f237fd172442",
+    "Quality/BlueprintScorecards/pl-900.json": "7d83581ff8c4881c80cbf49f8a82bade01fb8a5b1aa5209370f0f1c7c8a91802",
+    "Quality/BlueprintScorecards/sc-100.json": "a3539e4881a001a1eccd4e71d123b383c13bd969f546429a852f16d74fc22e7a",
+    "Quality/BlueprintScorecards/sc-200.json": "ca4d27d94e1ddb41a12acf63f99be905e160b28ac5811ffdfabb21cdd45d0ac5",
+    "Quality/BlueprintScorecards/sc-300.json": "c158ddcf9a1e34e5fbfea1992b9b0f0e97b171a9b6c254d74fadbf8d0e2f023e",
+    "Quality/BlueprintScorecards/sc-500.json": "da291032ddcbc9cc62a133829f493af564f7ccb5eeda3f2823f42ad9374c942f",
+    "Quality/BlueprintScorecards/sc-900.json": "02437430b826f762594fbadb44daf634e2e050f44def341120311384f06bc5ad"
+  },
+  "publicBaseline": {
+    "approvedVersion": "2.1.0",
+    "approvedBuild": "50",
+    "questionCount": 13003,
+    "questionCountLabel": "13,000+",
+    "examCount": 30,
+    "certPaths": 29,
+    "allExistingTrackedFilesExact": true,
+    "existingTrackedFilesChecked": 366
+  },
+  "candidateSummary": {
+    "questionCount": 13183,
+    "questionCountLabel": "13,100+",
+    "examCount": 30,
+    "dp300ExamScoped": 448
+  },
+  "validation": {
+    "blocksPassed": 21,
+    "allPassed": true,
+    "cssNetworkRetry": "Initial dependency resolution failed in sandbox; the exact pinned command passed with network access, no source change.",
+    "publicCountsCheck": "Committed approved baseline; no rendering or publishing of candidate data."
+  },
+  "promotionRequirements": [
+    "Wait for a later approved App Store release and explicit owner authorization for the count update.",
+    "Regenerate from that exact approved release; this source-bound candidate is not an approved release snapshot.",
+    "Rerun the complete public sync/render/SEO/search/conversion/freeze workflow under that authorization."
+  ],
+  "notPublished": true
+}

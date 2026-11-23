@@ -129,7 +129,11 @@ class PublicExamFacts(unittest.TestCase):
         self.assertNotIn('currently in beta', text)
         self.assertNotIn('scores are released after', text)
         self.assertIn('without a beta label', text)
-        self.assertIn('currently a beta exam', visible(page('AB-650')))
+        ab650 = visible(page('AB-650'))
+        self.assertNotIn('currently a beta exam', ab650)
+        self.assertIn('100 minutes', ab650)
+        self.assertIn('Pearson VUE', ab650)
+        self.assertIn('24-hour wait', ab650)
         self.assertNotIn('Became generally available on', (ROOT / 'guides/how-to-pass-sc-500/index.html').read_text())
 
     def test_review_and_retake_guidance_is_not_universal_one_way(self):
